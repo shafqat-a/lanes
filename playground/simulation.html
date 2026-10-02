@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lanes — Agent field</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="simulation.css"></head>
+<body>
+<header><a class="brand" href="./">≋ Lanes <span>ALPHA</span></a><a href="./">Code playground ↗</a></header>
+<main>
+<p class="eyebrow">AN EXPERIMENT IN PARALLEL COMPUTATION</p>
+<h1>65,536 little decisions.</h1>
+<p class="intro">A field of independent agents. One editable integer function updates every agent. Run it as native JavaScript or compile it to your GPU.</p>
+<div class="simulation-layout">
+<section class="results field"><div class="panel-heading"><h2>Agent field</h2><span id="adapter" class="badge">Initializing</span></div>
+<canvas id="field" width="768" height="768" aria-label="Agent positions in a wrapping square field"></canvas>
+<p id="status" role="status" aria-live="polite">Checking WebGPU…</p>
+<div class="metrics"><div><span>Native compute</span><strong id="cpu-time">—</strong></div><div><span>GPU total</span><strong id="gpu-time">—</strong></div><div><span>Canvas draw</span><strong id="draw-time">—</strong></div></div>
+<p id="comparison" class="hint">Run a step to compare.</p>
+</section>
+<section class="editor"><h2>Steering function</h2>
+<div class="settings"><label>Agents <select id="size"><option>1024</option><option>16384</option><option selected>65536</option></select></label><label>Work per step <select id="work"><option>8</option><option>64</option><option selected>256</option></select></label><label>Display result from <select id="mode"><option value="gpu">Lanes GPU</option><option value="cpu">Native JavaScript</option></select></label></div>
+<label for="source" class="sr-only">Agent update JavaScript</label><textarea id="source" spellcheck="false" autocapitalize="off"></textarea>
+<div class="controls"><button id="step" disabled>Run one step</button><button id="play" disabled>Play</button><button id="reset" disabled>Reset</button></div>
+<p class="hint">Changing work restores the example. Source or count changes reset the field. Each agent packs x/y positions into the lowest 20 bits and a seed into the upper 12. Positions wrap at 1,024; arithmetic wraps as i32. Agents share the function and do not interact.</p>
+<details><summary>Timing & verification</summary><p class="hint">With a GPU, every step runs both paths and checks every output before drawing. Playback includes that verification, so its frame rate is not a backend benchmark. Native compute runs in one worker; its timer excludes messaging. GPU total includes allocation, upload, dispatch, readback, and cleanup. The first call after editing includes pipeline compilation and is labeled cold. Canvas time measures pixel preparation and the draw call, not screen presentation. Timings are individual samples, not stable benchmark medians.</p><p class="hint">For edited code, native JavaScript is generated from validated integer IR inside a worker. It is a native execution comparison, not an independently authored algorithm. Both paths are also checked against the CPU interpreter on 64 sampled inputs after each edit. No source is uploaded.</p></details>
+<details><summary>Generated WGSL</summary><pre id="wgsl">—</pre></details>
+</section></div>
+<footer>Experimental numeric simulation · <a href="https://github.com/shafqat-a/lanes">Source & benchmarks ↗</a></footer>
+</main><script type="module" src="simulation.js"></script></body></html>

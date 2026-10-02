@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-02T01:31:03.353Z",
+  "site": "http://127.0.0.1:4173/simulation.html",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "checks": [
+    "GPU equality at three sizes",
+    "native mode",
+    "play/pause",
+    "reset",
+    "edited function",
+    "invalid source"
+  ],
+  "rows": [
+    {
+      "status": "1,024 outputs matched · Step 1 · Drawing GPU result.",
+      "gpu-time": "3.00 ms",
+      "cpu-time": "0.00 ms",
+      "draw-time": "2.00 ms",
+      "comparison": "Cold GPU call (includes compilation) · Below timer resolution; ratio unavailable."
+    },
+    {
+      "status": "16,384 outputs matched · Step 1 · Drawing GPU result.",
+      "gpu-time": "2.00 ms",
+      "cpu-time": "9.00 ms",
+      "draw-time": "2.00 ms",
+      "comparison": "Cached GPU pipeline · 4.50× faster than native compute this step."
+    },
+    {
+      "status": "65,536 outputs matched · Step 1 · Drawing GPU result.",
+      "gpu-time": "2.00 ms",
+      "cpu-time": "32.00 ms",
+      "draw-time": "6.00 ms",
+      "comparison": "Cached GPU pipeline · 16.00× faster than native compute this step."
+    }
+  ]
+}

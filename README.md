@@ -4,7 +4,7 @@
 
 Lanes is an experimental numeric JIT for applying one function to many independent inputs. It validates a restricted JavaScript subset, lowers it to typed integer IR, generates WGSL, and caches the GPU pipeline. A CPU backend implements the same integer semantics without `eval`.
 
-**v0.1.0-alpha.1** · [Playground](https://shafqat-a.github.io/lanes/) · [Compatibility](docs/compatibility.md) · [API](docs/api.md) · [Benchmarks](docs/performance.md)
+**v0.1.0-alpha.1** · [Agent field demo](https://shafqat-a.github.io/lanes/simulation.html) · [Playground](https://shafqat-a.github.io/lanes/) · [Compatibility](docs/compatibility.md) · [API](docs/api.md) · [Benchmarks](docs/performance.md)
 
 The alpha uses **explicit wrapping signed 32-bit arithmetic**, not general JavaScript `Number` semantics. Objects, closures, floating point, arbitrary function calls, and browser APIs are outside its supported language. Check the compatibility contract before adopting it.
 
@@ -20,6 +20,10 @@ npm run dev
 ```
 
 Open `http://127.0.0.1:4173`. The playground runs locally in your browser and shows source, generated WGSL, timings, and correctness checks. Its CPU comparison is the Lanes fallback, not native JavaScript; the standalone benchmark supplies native/worker baselines.
+
+The [agent field](https://shafqat-a.github.io/lanes/simulation.html) animates up to 65,536 independent agents with an editable steering function, adjustable computation, and native JavaScript/GPU result selection. Every GPU step is checked against native execution before drawing. Timings separate native compute, GPU upload/execution/readback, and canvas drawing; playback includes both execution paths and verification. The demo generates native JS from validated IR in a worker (using `new Function` there); the library's CPU fallback remains eval-free. Edited-code comparisons share the compiler frontend and are not independent proof of correctness.
+
+Safari smoke tests can run on a Mac with Safari remote automation enabled: start `safaridriver -p 4445` and `npm run dev` in separate terminals, then run `npm run test:safari`. This exercises the real Safari WebGPU path, all three agent counts, edits, playback, and reset. Override `LANES_WEBDRIVER_URL` or `LANES_DEMO_URL` to test another driver endpoint or the deployed site.
 
 The installable tarball is attached to the [GitHub alpha release](https://github.com/shafqat-a/lanes/releases/tag/v0.1.0-alpha.1). npm registry publication is pending maintainer authentication. After downloading the release asset:
 

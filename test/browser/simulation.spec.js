@@ -1,0 +1,34 @@
+import { test, expect } from '@playwright/test';
+test('agent field checks GPU results, edits, playback and resets', async ({ page }) => {
+  const errors = []; page.on('pageerror', error => errors.push(error.message));
+  await page.goto('/simulation.html');
+  await expect(page.locator('#adapter')).toHaveText('WebGPU available');
+  await page.selectOption('#size', '1024'); await page.selectOption('#work', '8');
+  const before = await page.locator('canvas').evaluate(c => c.toDataURL());
+  await page.click('#step');
+  await expect(page.locator('#status')).toContainText('1,024 outputs matched · Step 1');
+  expect(await page.locator('canvas').evaluate(c => c.toDataURL())).not.toBe(before);
+  await expect(page.locator('#comparison')).toContainText('Cold GPU call');
+  await page.selectOption('#mode', 'cpu'); await page.click('#step');
+  await expect(page.locator('#status')).toContainText('Drawing native JS result');
+  await expect(page.locator('#comparison')).toContainText('Cached GPU pipeline');
+  await page.click('#play'); await expect(page.locator('#play')).toHaveText('Pause');
+  await page.click('#play'); await expect(page.locator('#step')).toBeEnabled();
+  await page.click('#reset'); await expect(page.locator('#status')).toContainText('Ready');
+  await page.fill('#source', 'function custom(x) { return x * 37 + 1; }');
+  await page.click('#step'); await expect(page.locator('#status')).toContainText('outputs matched');
+  await page.fill('#source', 'function invalid(x) { return x / 2; }');
+  await page.click('#step'); await expect(page.locator('#status')).toContainText('Unsupported operator');
+  await expect(page.locator('#cpu-time')).toHaveText('—');
+  expect(errors).toEqual([]);
+});
+test('agent field supports mobile and missing WebGPU', async ({ page }) => {
+  await page.addInitScript(() => Object.defineProperty(navigator, 'gpu', { value: undefined }));
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/simulation.html'); await expect(page.locator('#adapter')).toHaveText('Native JS only');
+  await page.selectOption('#size', '1024'); await page.selectOption('#work', '8');
+  await page.click('#step'); await expect(page.locator('#status')).toContainText('sample checked');
+  await expect(page.locator('#gpu-time')).toHaveText('Unavailable');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.screenshot({ path: 'results/simulation-mobile.png', fullPage: true });
+});
