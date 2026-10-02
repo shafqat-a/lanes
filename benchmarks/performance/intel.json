@@ -1,0 +1,1108 @@
+{
+  "date": "2026-10-02T00:44:54.288Z",
+  "node": "v22.22.1",
+  "adapter": {
+    "vendor": "intel",
+    "architecture": "gen-9",
+    "device": "intel-r-uhd-graphics-cml-gt2-",
+    "description": "Intel open-source Mesa driver: Mesa 26.0.3-1ubuntu1",
+    "isFallbackAdapter": false
+  },
+  "predicateAssignments": true,
+  "timestampQuery": true,
+  "rows": [
+    {
+      "size": 1024,
+      "ticks": 32,
+      "nativeMs": 0.07041800000024523,
+      "nativeSamples": [
+        0.07709999999997308,
+        0.07395399999995789,
+        0.07064200000013443,
+        0.0697770000001583,
+        0.07041800000024523,
+        0.06959400000005189,
+        0.1251640000000407,
+        0.06947300000001633,
+        0.06920300000001589
+      ],
+      "freshInterpreterMs": 6.055101999999806,
+      "freshSamples": [
+        7.908770999999888,
+        6.055101999999806,
+        6.017471999999998
+      ],
+      "interpreter": {
+        "pipelineMs": 2.459475999999995,
+        "uploadMs": 0.030786000000261993,
+        "medians": {
+          "dispatchWallMs": 5.14247000000023,
+          "readbackMs": 0.1706770000000688,
+          "totalMs": 5.303225000000111,
+          "gpuMs": 4.980736
+        },
+        "residentWallPerDispatchMs": 2.2910249999999905,
+        "residentGpuPerDispatchMs": 2.277376,
+        "uploadedTotalMs": 4.748301000000083,
+        "uploadedSamples": [
+          4.748301000000083,
+          4.645068000000265,
+          4.530889999999999,
+          7.61314799999991,
+          5.090831999999864
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 6.314987000000201,
+            "readbackMs": 0.31736399999999776,
+            "totalMs": 6.633497000000261,
+            "gpuMs": 6.160384,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 5.685910000000149,
+            "readbackMs": 0.17041199999994205,
+            "totalMs": 5.857042000000092,
+            "gpuMs": 5.505024,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 5.14247000000023,
+            "readbackMs": 0.16004200000043056,
+            "totalMs": 5.303225000000111,
+            "gpuMs": 4.980736,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 4.981009999999969,
+            "readbackMs": 0.1706770000000688,
+            "totalMs": 5.1524389999999585,
+            "gpuMs": 4.849664,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 4.847554999999829,
+            "readbackMs": 0.1811640000000807,
+            "totalMs": 5.029453999999987,
+            "gpuMs": 4.718592,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 3.6156599999999344,
+            "gpuPerDispatchMs": 3.571712
+          },
+          {
+            "wallPerDispatchMs": 2.2910249999999905,
+            "gpuPerDispatchMs": 2.277376
+          },
+          {
+            "wallPerDispatchMs": 2.2850414999999202,
+            "gpuPerDispatchMs": 2.260992
+          },
+          {
+            "wallPerDispatchMs": 2.285094500000014,
+            "gpuPerDispatchMs": 2.260992
+          },
+          {
+            "wallPerDispatchMs": 2.31859924999992,
+            "gpuPerDispatchMs": 2.29376
+          }
+        ]
+      },
+      "direct": {
+        "pipelineMs": 8.757884999999987,
+        "uploadMs": 0.04240799999979572,
+        "medians": {
+          "dispatchWallMs": 0.09520699999984572,
+          "readbackMs": 0.12799000000040905,
+          "totalMs": 0.22715699999980643,
+          "gpuMs": 0
+        },
+        "residentWallPerDispatchMs": 0.04394974999991064,
+        "residentGpuPerDispatchMs": 0.016384,
+        "uploadedTotalMs": 0.24637200000006487,
+        "uploadedSamples": [
+          0.241233000000193,
+          0.24637200000006487,
+          0.23918899999989662,
+          1.5669259999999667,
+          0.3296669999999722
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 0.09520699999984572,
+            "readbackMs": 0.15473299999985102,
+            "totalMs": 0.2506209999996827,
+            "gpuMs": 0,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.095506000000114,
+            "readbackMs": 0.12716999999975087,
+            "totalMs": 0.22335400000019945,
+            "gpuMs": 0.065536,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.09499000000005253,
+            "readbackMs": 0.12600800000018353,
+            "totalMs": 0.2216800000001058,
+            "gpuMs": 0,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.1448349999996026,
+            "readbackMs": 0.12799000000040905,
+            "totalMs": 0.27347699999972974,
+            "gpuMs": 0,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.09358399999973699,
+            "readbackMs": 0.13297199999988152,
+            "totalMs": 0.22715699999980643,
+            "gpuMs": 0,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 0.037890749999974105,
+            "gpuPerDispatchMs": 0.016384
+          },
+          {
+            "wallPerDispatchMs": 0.03837925000004816,
+            "gpuPerDispatchMs": 0.016384
+          },
+          {
+            "wallPerDispatchMs": 0.04394974999991064,
+            "gpuPerDispatchMs": 0
+          },
+          {
+            "wallPerDispatchMs": 0.05437749999998687,
+            "gpuPerDispatchMs": 0.016384
+          },
+          {
+            "wallPerDispatchMs": 0.055295499999942876,
+            "gpuPerDispatchMs": 0.016384
+          }
+        ]
+      }
+    },
+    {
+      "size": 16384,
+      "ticks": 32,
+      "nativeMs": 1.3142629999997553,
+      "nativeSamples": [
+        1.3099959999999555,
+        1.3142629999997553,
+        1.5180929999996806,
+        1.314411000000291,
+        1.311811999999918,
+        1.3174260000000686,
+        1.3112409999998818,
+        1.3179750000003878,
+        1.28765199999998
+      ],
+      "freshInterpreterMs": 18.685899000000063,
+      "freshSamples": [
+        19.282302000000072,
+        18.685899000000063,
+        18.26371399999971
+      ],
+      "interpreter": {
+        "pipelineMs": 2.4014259999999013,
+        "uploadMs": 0.03130199999986871,
+        "medians": {
+          "dispatchWallMs": 17.6713850000001,
+          "readbackMs": 0.3155780000001869,
+          "totalMs": 18.137494999999944,
+          "gpuMs": 17.432576
+        },
+        "residentWallPerDispatchMs": 17.37925525000003,
+        "residentGpuPerDispatchMs": 17.350656,
+        "uploadedTotalMs": 18.679172000000108,
+        "uploadedSamples": [
+          22.553439999999682,
+          18.74528999999984,
+          18.392447999999604,
+          18.679172000000108,
+          18.30139199999985
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 17.348957000000155,
+            "readbackMs": 0.7877549999998337,
+            "totalMs": 18.137494999999944,
+            "gpuMs": 17.170432,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 17.35971500000005,
+            "readbackMs": 0.8205050000001393,
+            "totalMs": 18.180937000000085,
+            "gpuMs": 17.235968,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 17.802467999999863,
+            "readbackMs": 0.30367800000021816,
+            "totalMs": 18.10671400000001,
+            "gpuMs": 17.432576,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 18.438366000000315,
+            "readbackMs": 0.3155780000001869,
+            "totalMs": 18.75461800000039,
+            "gpuMs": 18.35008,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 17.6713850000001,
+            "readbackMs": 0.2934340000001612,
+            "totalMs": 17.965327999999772,
+            "gpuMs": 17.563648,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 17.374802749999958,
+            "gpuPerDispatchMs": 17.350656
+          },
+          {
+            "wallPerDispatchMs": 17.478128749999996,
+            "gpuPerDispatchMs": 17.44896
+          },
+          {
+            "wallPerDispatchMs": 17.215443499999992,
+            "gpuPerDispatchMs": 17.170432
+          },
+          {
+            "wallPerDispatchMs": 17.37925525000003,
+            "gpuPerDispatchMs": 17.334272
+          },
+          {
+            "wallPerDispatchMs": 17.39226725000003,
+            "gpuPerDispatchMs": 17.350656
+          }
+        ]
+      },
+      "direct": {
+        "pipelineMs": 1.9712890000000698,
+        "uploadMs": 0.07401200000003882,
+        "medians": {
+          "dispatchWallMs": 0.12396600000010949,
+          "readbackMs": 0.16033100000004197,
+          "totalMs": 0.2826390000000174,
+          "gpuMs": 0
+        },
+        "residentWallPerDispatchMs": 0.1459082500000477,
+        "residentGpuPerDispatchMs": 0.114688,
+        "uploadedTotalMs": 0.3955439999999726,
+        "uploadedSamples": [
+          0.31423899999981586,
+          0.4507760000001326,
+          0.3955439999999726,
+          0.38900599999988117,
+          0.5798129999998309
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 0.15278399999988324,
+            "readbackMs": 0.18014199999970515,
+            "totalMs": 0.33334500000000844,
+            "gpuMs": 0,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.12396600000010949,
+            "readbackMs": 0.15820899999971516,
+            "totalMs": 0.2826390000000174,
+            "gpuMs": 0,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.12216099999977814,
+            "readbackMs": 0.1606669999996484,
+            "totalMs": 0.2832419999999729,
+            "gpuMs": 0,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.12465800000018135,
+            "readbackMs": 0.15334600000005594,
+            "totalMs": 0.2784390000001622,
+            "gpuMs": 0,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.11879499999986365,
+            "readbackMs": 0.16033100000004197,
+            "totalMs": 0.27954399999998714,
+            "gpuMs": 0.065536,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 0.14041950000000725,
+            "gpuPerDispatchMs": 0.114688
+          },
+          {
+            "wallPerDispatchMs": 0.14922549999994317,
+            "gpuPerDispatchMs": 0.114688
+          },
+          {
+            "wallPerDispatchMs": 0.1533817499999941,
+            "gpuPerDispatchMs": 0.114688
+          },
+          {
+            "wallPerDispatchMs": 0.1459082500000477,
+            "gpuPerDispatchMs": 0.098304
+          },
+          {
+            "wallPerDispatchMs": 0.14380774999995083,
+            "gpuPerDispatchMs": 0.114688
+          }
+        ]
+      }
+    },
+    {
+      "size": 65536,
+      "ticks": 32,
+      "nativeMs": 5.207460000000083,
+      "nativeSamples": [
+        5.819977999999992,
+        5.249015999999756,
+        5.323604000000159,
+        5.164148999999725,
+        5.207460000000083,
+        5.154795999999806,
+        5.159231000000091,
+        5.481403000000228,
+        5.205760000000282
+      ],
+      "freshInterpreterMs": 64.06146799999988,
+      "freshSamples": [
+        64.183986,
+        64.06146799999988,
+        63.82090700000026
+      ],
+      "interpreter": {
+        "pipelineMs": 3.6767289999997956,
+        "uploadMs": 0.0459379999997509,
+        "medians": {
+          "dispatchWallMs": 62.89686900000015,
+          "readbackMs": 0.48566200000004756,
+          "totalMs": 63.3196640000001,
+          "gpuMs": 62.652416
+        },
+        "residentWallPerDispatchMs": 63.14685950000012,
+        "residentGpuPerDispatchMs": 63.094784,
+        "uploadedTotalMs": 63.817683000000216,
+        "uploadedSamples": [
+          63.68681699999979,
+          63.817683000000216,
+          64.0483379999996,
+          63.65366399999948,
+          64.33405599999969
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 64.12822599999981,
+            "readbackMs": 0.5101260000001275,
+            "totalMs": 64.6392249999999,
+            "gpuMs": 63.8976,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 62.673101999999744,
+            "readbackMs": 0.48566200000004756,
+            "totalMs": 63.15962099999979,
+            "gpuMs": 62.455808,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 62.89686900000015,
+            "readbackMs": 0.4221149999998488,
+            "totalMs": 63.3196640000001,
+            "gpuMs": 62.652416,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 63.57097299999987,
+            "readbackMs": 0.48923899999999776,
+            "totalMs": 64.06106200000022,
+            "gpuMs": 63.373312,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 62.65207799999962,
+            "readbackMs": 0.45221399999991263,
+            "totalMs": 63.10548699999936,
+            "gpuMs": 62.390272,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 63.854674250000016,
+            "gpuPerDispatchMs": 63.209472
+          },
+          {
+            "wallPerDispatchMs": 62.88314500000001,
+            "gpuPerDispatchMs": 62.83264
+          },
+          {
+            "wallPerDispatchMs": 62.801514750000024,
+            "gpuPerDispatchMs": 62.75072
+          },
+          {
+            "wallPerDispatchMs": 66.89937024999995,
+            "gpuPerDispatchMs": 63.193088
+          },
+          {
+            "wallPerDispatchMs": 63.14685950000012,
+            "gpuPerDispatchMs": 63.094784
+          }
+        ]
+      },
+      "direct": {
+        "pipelineMs": 2.00009399999999,
+        "uploadMs": 0.05960899999990943,
+        "medians": {
+          "dispatchWallMs": 0.36934199999996054,
+          "readbackMs": 0.3560800000004747,
+          "totalMs": 0.7225300000000061,
+          "gpuMs": 0.196608
+        },
+        "residentWallPerDispatchMs": 0.3961269999999786,
+        "residentGpuPerDispatchMs": 0.360448,
+        "uploadedTotalMs": 1.3991009999999733,
+        "uploadedSamples": [
+          1.4023019999995086,
+          1.3721290000003137,
+          1.3991009999999733,
+          1.2670930000003864,
+          1.435355000000527
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 0.20988800000031915,
+            "readbackMs": 0.3414009999996779,
+            "totalMs": 0.5517020000006596,
+            "gpuMs": 0.065536,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.3138340000004973,
+            "readbackMs": 0.3560800000004747,
+            "totalMs": 0.6704520000002958,
+            "gpuMs": 0.131072,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.36934199999996054,
+            "readbackMs": 0.35271800000009534,
+            "totalMs": 0.7225300000000061,
+            "gpuMs": 0.196608,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.4004789999999048,
+            "readbackMs": 0.3963080000003174,
+            "totalMs": 0.7972089999993841,
+            "gpuMs": 0.196608,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.3930350000000544,
+            "readbackMs": 0.41957300000012765,
+            "totalMs": 0.8130190000001676,
+            "gpuMs": 0.196608,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 0.4224667500000123,
+            "gpuPerDispatchMs": 0.360448
+          },
+          {
+            "wallPerDispatchMs": 0.4048637500000041,
+            "gpuPerDispatchMs": 0.360448
+          },
+          {
+            "wallPerDispatchMs": 0.3961269999999786,
+            "gpuPerDispatchMs": 0.360448
+          },
+          {
+            "wallPerDispatchMs": 0.39578199999982644,
+            "gpuPerDispatchMs": 0.360448
+          },
+          {
+            "wallPerDispatchMs": 0.39555700000005345,
+            "gpuPerDispatchMs": 0.360448
+          }
+        ]
+      }
+    },
+    {
+      "size": 1024,
+      "ticks": 256,
+      "nativeMs": 0.585214000000633,
+      "nativeSamples": [
+        0.585214000000633,
+        0.5836460000000443,
+        0.5850760000002992,
+        0.5860860000002504,
+        0.5830030000006445,
+        0.6216720000002169,
+        0.5715809999992416,
+        0.5958419999997204,
+        0.5984849999995276
+      ],
+      "freshInterpreterMs": 20.16467300000022,
+      "freshSamples": [
+        20.4847520000003,
+        20.16467300000022,
+        19.939601999999468
+      ],
+      "interpreter": {
+        "pipelineMs": 3.6918259999993097,
+        "uploadMs": 0.025319000000308733,
+        "medians": {
+          "dispatchWallMs": 20.13059599999997,
+          "readbackMs": 0.13256600000022445,
+          "totalMs": 20.260433999999805,
+          "gpuMs": 19.98848
+        },
+        "residentWallPerDispatchMs": 20.150274499999796,
+        "residentGpuPerDispatchMs": 20.119552,
+        "uploadedTotalMs": 20.158712999999807,
+        "uploadedSamples": [
+          20.075566999999864,
+          20.158712999999807,
+          20.02589799999987,
+          29.873188000000482,
+          20.611605999999483
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 19.908504999999423,
+            "readbackMs": 0.13256600000022445,
+            "totalMs": 20.04153999999926,
+            "gpuMs": 19.791872,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 20.13059599999997,
+            "readbackMs": 0.12938199999916833,
+            "totalMs": 20.260433999999805,
+            "gpuMs": 19.98848,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 20.66497200000049,
+            "readbackMs": 0.22175699999934295,
+            "totalMs": 20.887462000000596,
+            "gpuMs": 20.578304,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 19.8719059999994,
+            "readbackMs": 0.1301049999992756,
+            "totalMs": 20.00250799999958,
+            "gpuMs": 19.726336,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 20.533136000000013,
+            "readbackMs": 0.14826600000014878,
+            "totalMs": 20.681862999999794,
+            "gpuMs": 20.447232,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 19.949232749999965,
+            "gpuPerDispatchMs": 19.90656
+          },
+          {
+            "wallPerDispatchMs": 20.200864249999995,
+            "gpuPerDispatchMs": 20.168704
+          },
+          {
+            "wallPerDispatchMs": 20.118927249999842,
+            "gpuPerDispatchMs": 20.086784
+          },
+          {
+            "wallPerDispatchMs": 20.378862000000026,
+            "gpuPerDispatchMs": 20.332544
+          },
+          {
+            "wallPerDispatchMs": 20.150274499999796,
+            "gpuPerDispatchMs": 20.119552
+          }
+        ]
+      },
+      "direct": {
+        "pipelineMs": 5.9694799999997485,
+        "uploadMs": 0.0894269999998869,
+        "medians": {
+          "dispatchWallMs": 0.1412849999996979,
+          "readbackMs": 0.08831400000053691,
+          "totalMs": 0.2586959999998726,
+          "gpuMs": 0.065536
+        },
+        "residentWallPerDispatchMs": 0.20818774999997913,
+        "residentGpuPerDispatchMs": 0.180224,
+        "uploadedTotalMs": 0.3218479999995907,
+        "uploadedSamples": [
+          0.32704699999976583,
+          0.25372299999980896,
+          0.24974999999994907,
+          0.3218479999995907,
+          0.34106900000006135
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 0.1367550000004485,
+            "readbackMs": 0.15835300000071584,
+            "totalMs": 0.2955920000003971,
+            "gpuMs": 0.065536,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.1700540000001638,
+            "readbackMs": 0.08821700000044075,
+            "totalMs": 0.2586959999998726,
+            "gpuMs": 0.065536,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.1356290000003355,
+            "readbackMs": 0.0873940000001312,
+            "totalMs": 0.22341700000015408,
+            "gpuMs": 0.065536,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.17225299999972776,
+            "readbackMs": 0.08831400000053691,
+            "totalMs": 0.2609409999995478,
+            "gpuMs": 0.131072,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.1412849999996979,
+            "readbackMs": 0.08889599999929487,
+            "totalMs": 0.23058000000037282,
+            "gpuMs": 0.065536,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 0.11465999999995802,
+            "gpuPerDispatchMs": 0.098304
+          },
+          {
+            "wallPerDispatchMs": 0.17815025000004425,
+            "gpuPerDispatchMs": 0.16384
+          },
+          {
+            "wallPerDispatchMs": 0.21804349999979422,
+            "gpuPerDispatchMs": 0.180224
+          },
+          {
+            "wallPerDispatchMs": 0.20894449999991593,
+            "gpuPerDispatchMs": 0.180224
+          },
+          {
+            "wallPerDispatchMs": 0.20818774999997913,
+            "gpuPerDispatchMs": 0.180224
+          }
+        ]
+      }
+    },
+    {
+      "size": 16384,
+      "ticks": 256,
+      "nativeMs": 9.492805000000772,
+      "nativeSamples": [
+        9.36725099999967,
+        9.52970600000026,
+        9.492805000000772,
+        9.4785609999999,
+        9.421680999999808,
+        10.127090999999382,
+        10.125850000000355,
+        9.295757999999296,
+        9.57466099999965
+      ],
+      "freshInterpreterMs": 204.25272100000075,
+      "freshSamples": [
+        202.19816900000023,
+        204.25272100000075,
+        205.62465399999928
+      ],
+      "interpreter": {
+        "pipelineMs": 3.622511999999915,
+        "uploadMs": 0.03143799999998009,
+        "medians": {
+          "dispatchWallMs": 202.27394600000116,
+          "readbackMs": 0.334526000000551,
+          "totalMs": 202.613166000001,
+          "gpuMs": 202.113024
+        },
+        "residentWallPerDispatchMs": 202.46667849999994,
+        "residentGpuPerDispatchMs": 202.407936,
+        "uploadedTotalMs": 201.78772200000094,
+        "uploadedSamples": [
+          201.4677869999996,
+          201.44089499999973,
+          202.32774400000017,
+          201.78772200000094,
+          209.29408700000022
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 202.2971120000002,
+            "readbackMs": 0.341471000000638,
+            "totalMs": 202.6397509999997,
+            "gpuMs": 202.17856,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 201.06167099999948,
+            "readbackMs": 0.27317000000039116,
+            "totalMs": 201.3357190000006,
+            "gpuMs": 200.802304,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 203.492040000001,
+            "readbackMs": 0.334526000000551,
+            "totalMs": 203.8275539999995,
+            "gpuMs": 203.358208,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 202.27394600000116,
+            "readbackMs": 0.338289999999688,
+            "totalMs": 202.613166000001,
+            "gpuMs": 202.113024,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 201.1345739999997,
+            "readbackMs": 0.3280300000005809,
+            "totalMs": 201.46386100000018,
+            "gpuMs": 200.998912,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 202.46667849999994,
+            "gpuPerDispatchMs": 202.407936
+          },
+          {
+            "wallPerDispatchMs": 201.39805399999977,
+            "gpuPerDispatchMs": 201.35936
+          },
+          {
+            "wallPerDispatchMs": 201.74646274999986,
+            "gpuPerDispatchMs": 201.703424
+          },
+          {
+            "wallPerDispatchMs": 202.50243124999997,
+            "gpuPerDispatchMs": 202.457088
+          },
+          {
+            "wallPerDispatchMs": 202.7017287499998,
+            "gpuPerDispatchMs": 202.653696
+          }
+        ]
+      },
+      "direct": {
+        "pipelineMs": 1.354139999999461,
+        "uploadMs": 0.04085299999860581,
+        "medians": {
+          "dispatchWallMs": 0.5609309999999823,
+          "readbackMs": 0.1717239999998128,
+          "totalMs": 0.7334499999997206,
+          "gpuMs": 0.458752
+        },
+        "residentWallPerDispatchMs": 1.2775295000001279,
+        "residentGpuPerDispatchMs": 1.2288,
+        "uploadedTotalMs": 1.7441239999989193,
+        "uploadedSamples": [
+          1.0130769999996119,
+          1.776992999999493,
+          1.7249030000002676,
+          1.7441239999989193,
+          1.7578119999998307
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 0.5609309999999823,
+            "readbackMs": 0.2415499999988242,
+            "totalMs": 0.8029160000005504,
+            "gpuMs": 0.458752,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.5061139999997977,
+            "readbackMs": 0.16190399999868532,
+            "totalMs": 0.6684530000002269,
+            "gpuMs": 0.393216,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.5477080000000569,
+            "readbackMs": 0.1717239999998128,
+            "totalMs": 0.7198790000002191,
+            "gpuMs": 0.458752,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.5708169999998063,
+            "readbackMs": 0.162239999999656,
+            "totalMs": 0.7334499999997206,
+            "gpuMs": 0.524288,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 0.659126999998989,
+            "readbackMs": 0.18802400000095076,
+            "totalMs": 0.847580999999991,
+            "gpuMs": 0.589824,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 1.3080517500002316,
+            "gpuPerDispatchMs": 1.261568
+          },
+          {
+            "wallPerDispatchMs": 1.3273832499999116,
+            "gpuPerDispatchMs": 1.294336
+          },
+          {
+            "wallPerDispatchMs": 1.2775295000001279,
+            "gpuPerDispatchMs": 1.2288
+          },
+          {
+            "wallPerDispatchMs": 1.1958534999998847,
+            "gpuPerDispatchMs": 1.163264
+          },
+          {
+            "wallPerDispatchMs": 1.1568035000000236,
+            "gpuPerDispatchMs": 1.114112
+          }
+        ]
+      }
+    },
+    {
+      "size": 65536,
+      "ticks": 256,
+      "nativeMs": 38.70025100000021,
+      "nativeSamples": [
+        38.3163370000002,
+        38.39160600000105,
+        38.22428299999956,
+        38.71765100000084,
+        39.143041999999696,
+        38.27231500000016,
+        38.72011900000143,
+        38.70025100000021,
+        39.19806900000003
+      ],
+      "freshInterpreterMs": 761.546793999998,
+      "freshSamples": [
+        759.346696999999,
+        761.546793999998,
+        764.8367920000019
+      ],
+      "interpreter": {
+        "pipelineMs": 3.7211889999998675,
+        "uploadMs": 0.048478000000613974,
+        "medians": {
+          "dispatchWallMs": 763.7649839999976,
+          "readbackMs": 0.5181620000003022,
+          "totalMs": 764.3720499999981,
+          "gpuMs": 762.970112
+        },
+        "residentWallPerDispatchMs": 758.6691332499995,
+        "residentGpuPerDispatchMs": 758.611968,
+        "uploadedTotalMs": 763.8194549999971,
+        "uploadedSamples": [
+          766.653749000001,
+          763.4498129999993,
+          761.6339270000026,
+          763.8194549999971,
+          764.4006760000011
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 763.7649839999976,
+            "readbackMs": 0.605267000002641,
+            "totalMs": 764.3720499999981,
+            "gpuMs": 762.970112,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 762.9199770000014,
+            "readbackMs": 0.5181620000003022,
+            "totalMs": 763.4395280000026,
+            "gpuMs": 762.642432,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 775.0842019999982,
+            "readbackMs": 0.42161699999996927,
+            "totalMs": 775.5067959999978,
+            "gpuMs": 774.897664,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 761.680550000001,
+            "readbackMs": 0.589812999998685,
+            "totalMs": 762.2717540000012,
+            "gpuMs": 761.52832,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 765.0172659999989,
+            "readbackMs": 0.470526000000973,
+            "totalMs": 765.4900659999985,
+            "gpuMs": 764.739584,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 762.4570775000002,
+            "gpuPerDispatchMs": 762.396672
+          },
+          {
+            "wallPerDispatchMs": 760.1650112500001,
+            "gpuPerDispatchMs": 760.119296
+          },
+          {
+            "wallPerDispatchMs": 758.6691332499995,
+            "gpuPerDispatchMs": 758.611968
+          },
+          {
+            "wallPerDispatchMs": 757.9405052500006,
+            "gpuPerDispatchMs": 757.907456
+          },
+          {
+            "wallPerDispatchMs": 755.1509294999996,
+            "gpuPerDispatchMs": 755.122176
+          }
+        ]
+      },
+      "direct": {
+        "pipelineMs": 1.4131689999994705,
+        "uploadMs": 0.060236999997869134,
+        "medians": {
+          "dispatchWallMs": 2.7449720000004163,
+          "readbackMs": 0.4136750000034226,
+          "totalMs": 3.171240999996371,
+          "gpuMs": 2.490368
+        },
+        "residentWallPerDispatchMs": 1.5008185000006051,
+        "residentGpuPerDispatchMs": 1.458176,
+        "uploadedTotalMs": 3.6693040000027395,
+        "uploadedSamples": [
+          3.3185709999961546,
+          3.188796000002185,
+          19.75219500000094,
+          3.6693040000027395,
+          3.7445410000000265
+        ],
+        "samples": [
+          {
+            "dispatchWallMs": 1.905456000000413,
+            "readbackMs": 0.37524699999630684,
+            "totalMs": 2.281189000001177,
+            "gpuMs": 1.703936,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 2.7449720000004163,
+            "readbackMs": 0.4257960000031744,
+            "totalMs": 3.171240999996371,
+            "gpuMs": 2.490368,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 2.7351359999956912,
+            "readbackMs": 0.43394399999669986,
+            "totalMs": 3.169583999995666,
+            "gpuMs": 2.490368,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 2.7887640000044485,
+            "readbackMs": 0.3979810000018915,
+            "totalMs": 3.187260000006063,
+            "gpuMs": 2.555904,
+            "repeats": 1
+          },
+          {
+            "dispatchWallMs": 2.8188779999982216,
+            "readbackMs": 0.4136750000034226,
+            "totalMs": 3.2330300000030547,
+            "gpuMs": 2.555904,
+            "repeats": 1
+          }
+        ],
+        "resident": [
+          {
+            "wallPerDispatchMs": 2.692191999998613,
+            "gpuPerDispatchMs": 2.637824
+          },
+          {
+            "wallPerDispatchMs": 1.5008185000006051,
+            "gpuPerDispatchMs": 1.458176
+          },
+          {
+            "wallPerDispatchMs": 1.517459749999034,
+            "gpuPerDispatchMs": 1.490944
+          },
+          {
+            "wallPerDispatchMs": 1.4844910000010714,
+            "gpuPerDispatchMs": 1.458176
+          },
+          {
+            "wallPerDispatchMs": 1.4413897499998711,
+            "gpuPerDispatchMs": 1.409024
+          }
+        ]
+      }
+    }
+  ],
+  "methodology": [
+    "Same synthetic signed-i32 workload and outputs checked against native JS on every readback.",
+    "Fresh interpreter: original API with allocation, upload, execution, readback and cleanup.",
+    "Prepared paths: preallocated buffers and resident bytecode/inputs; upload and pipeline setup reported separately.",
+    "uploadedTotalMs includes a fresh input upload each run with reused allocations and pipeline.",
+    "Zero GPU timestamps are below effective timer resolution, not zero execution cost.",
+    "GPU timestamps bracket the compute pass only. Wall dispatch includes encoding, submit and queue completion.",
+    "Readback uses a separate submission and includes copying, mapAsync, decoding and unmap.",
+    "Prepared total excludes initial upload, allocation, pipeline creation and timestamp extraction.",
+    "Resident measures four identical dispatches per submission, without output readback; not chained simulation steps.",
+    "Five prepared samples, three fresh samples, nine native samples; medians reported, raw samples retained.",
+    "One workload family, one machine, fixed measurement order; no broad speedup claim or worker-pool baseline."
+  ]
+}

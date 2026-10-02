@@ -4,7 +4,7 @@
 
 Lanes explores running many independent instances of one JavaScript program on a GPU. The CPU compiles source once; each GPU invocation interprets shared bytecode with its own registers and program counter.
 
-**Status: research prototype.** The first milestone implements an explicitly opt-in, signed 32-bit integer mode. It is not a complete JavaScript engine, does not preserve general JavaScript Number semantics, and makes no GPU speedup claim.
+**Status: research prototype.** The first milestone implements an explicitly opt-in, signed 32-bit integer mode. It is not a complete JavaScript engine, does not preserve general JavaScript Number semantics, and makes no general GPU speedup claim.
 
 ## Run it
 
@@ -74,6 +74,17 @@ Bytecode uses four 32-bit words per instruction: opcode, destination, operand A,
 GPU totals include buffer allocation, uploads, dispatch, readback, output decoding, and cleanup. Source compilation and pipeline creation are reported separately. These totals are **not kernel-only timings**. Native JavaScript gets explicit warm-up; no worker-pool or Wasm baseline exists yet.
 
 Initial validation used Mesa llvmpipe, a **software adapter**. This proves the shader executes through WebGPU, not that Lanes is faster on physical GPUs. See [the recorded baseline](benchmarks/initial-software.json).
+
+## Performance experiment
+
+The follow-up experiment compares interpreter execution with direct WGSL generation on Intel UHD and RTX 2060 hardware. It separates GPU timestamps from host overhead and measures persistent buffers with and without new input uploads. See [results and limitations](experiments/README.md).
+
+```sh
+npm run test:experiment
+LANES_ADAPTER='NVIDIA GeForce RTX 2060 (NVK TU106)' npm run bench:experiment
+```
+
+The direct compiler is an experiment under `experiments/`, with a smaller supported subset than the interpreter. It does not yet replace the public runtime. A branched shader showed intermittent incorrect results on the RTX/NVK configuration; the report includes a reproducer and the checked branch-free alternative.
 
 ## Next milestones
 

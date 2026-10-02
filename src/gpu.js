@@ -1,6 +1,6 @@
 import { OP, STATUS, MAX_REGISTERS, validateRun } from './bytecode.js';
 
-const shader = `
+export const interpreterShader = `
 @group(0) @binding(0) var<storage, read> code: array<u32>;
 @group(0) @binding(1) var<storage, read> inputs: array<i32>;
 @group(0) @binding(2) var<storage, read_write> output: array<vec2<i32>>;
@@ -46,7 +46,7 @@ fn main(@builtin(global_invocation_id) id: vec3<u32>) {
 
 /** Caller owns device lifetime. Pipeline construction is separate from run timings. */
 export async function createGPU(device) {
-  const module = device.createShaderModule({ code: shader });
+  const module = device.createShaderModule({ code: interpreterShader });
   const info = await module.getCompilationInfo();
   const errors = info.messages.filter(m => m.type === 'error');
   if (errors.length) throw new Error(errors.map(m => m.message).join('\n'));

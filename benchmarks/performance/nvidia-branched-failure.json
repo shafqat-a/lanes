@@ -1,0 +1,927 @@
+{
+  "adapter": "nvidia-geforce-rtx-2060-nvk-tu106-",
+  "runs": [
+    {
+      "trial": 0,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 1,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 2,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 3,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 4,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 5,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 6,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 7,
+      "gpuMs": 0.196608,
+      "mismatchCount": 28,
+      "firstMismatches": [
+        {
+          "lane": 14016,
+          "input": 14017,
+          "actual": 829113946,
+          "expected": 1821673073,
+          "status": 1
+        },
+        {
+          "lane": 14017,
+          "input": 14018,
+          "actual": 2084273367,
+          "expected": -1786526764,
+          "status": 1
+        },
+        {
+          "lane": 14018,
+          "input": 14019,
+          "actual": 740763095,
+          "expected": -1725528779,
+          "status": 1
+        },
+        {
+          "lane": 14019,
+          "input": 14020,
+          "actual": -1186575049,
+          "expected": -2087895987,
+          "status": 1
+        },
+        {
+          "lane": 14020,
+          "input": 14021,
+          "actual": 197505034,
+          "expected": -6366356,
+          "status": 1
+        },
+        {
+          "lane": 14021,
+          "input": 14022,
+          "actual": -650198673,
+          "expected": -592306578,
+          "status": 1
+        },
+        {
+          "lane": 14022,
+          "input": 14023,
+          "actual": -724720997,
+          "expected": -282846602,
+          "status": 1
+        },
+        {
+          "lane": 14023,
+          "input": 14024,
+          "actual": 436965342,
+          "expected": -1608375850,
+          "status": 1
+        },
+        {
+          "lane": 14024,
+          "input": 14025,
+          "actual": 2147121470,
+          "expected": 959799903,
+          "status": 1
+        },
+        {
+          "lane": 14025,
+          "input": 14026,
+          "actual": 1169619521,
+          "expected": 1866352210,
+          "status": 1
+        },
+        {
+          "lane": 14026,
+          "input": 14027,
+          "actual": -1393072953,
+          "expected": 1877618513,
+          "status": 1
+        },
+        {
+          "lane": 14027,
+          "input": 14028,
+          "actual": -2015444005,
+          "expected": 610942559,
+          "status": 1
+        },
+        {
+          "lane": 14028,
+          "input": 14029,
+          "actual": -1685304191,
+          "expected": 1333917434,
+          "status": 1
+        },
+        {
+          "lane": 14029,
+          "input": 14030,
+          "actual": 1586117525,
+          "expected": -1116982079,
+          "status": 1
+        },
+        {
+          "lane": 14030,
+          "input": 14031,
+          "actual": -1728607934,
+          "expected": -725297404,
+          "status": 1
+        },
+        {
+          "lane": 14031,
+          "input": 14032,
+          "actual": 765804679,
+          "expected": 137892106,
+          "status": 1
+        },
+        {
+          "lane": 14032,
+          "input": 14033,
+          "actual": 317240766,
+          "expected": 493918708,
+          "status": 1
+        },
+        {
+          "lane": 14033,
+          "input": 14034,
+          "actual": -1753007689,
+          "expected": -142492573,
+          "status": 1
+        },
+        {
+          "lane": 14034,
+          "input": 14035,
+          "actual": -1516488301,
+          "expected": 1331714513,
+          "status": 1
+        },
+        {
+          "lane": 14035,
+          "input": 14036,
+          "actual": 1276297537,
+          "expected": 1089304431,
+          "status": 1
+        },
+        {
+          "lane": 14037,
+          "input": 14038,
+          "actual": 341520325,
+          "expected": 1775292795,
+          "status": 1
+        },
+        {
+          "lane": 14038,
+          "input": 14039,
+          "actual": -1148385484,
+          "expected": -1639450709,
+          "status": 1
+        },
+        {
+          "lane": 14039,
+          "input": 14040,
+          "actual": -389962402,
+          "expected": 52701922,
+          "status": 1
+        },
+        {
+          "lane": 14040,
+          "input": 14041,
+          "actual": 722260877,
+          "expected": 1634020623,
+          "status": 1
+        },
+        {
+          "lane": 14043,
+          "input": 14044,
+          "actual": 1875208147,
+          "expected": -1898599170,
+          "status": 1
+        },
+        {
+          "lane": 14044,
+          "input": 14045,
+          "actual": 2062280963,
+          "expected": 1733487694,
+          "status": 1
+        },
+        {
+          "lane": 14045,
+          "input": 14046,
+          "actual": -2139450793,
+          "expected": -173547314,
+          "status": 1
+        },
+        {
+          "lane": 14047,
+          "input": 14048,
+          "actual": 1014713290,
+          "expected": 1210298467,
+          "status": 1
+        }
+      ]
+    },
+    {
+      "trial": 8,
+      "gpuMs": 0.262144,
+      "mismatchCount": 27,
+      "firstMismatches": [
+        {
+          "lane": 38208,
+          "input": 38209,
+          "actual": 361235188,
+          "expected": 830469788,
+          "status": 1
+        },
+        {
+          "lane": 38209,
+          "input": 38210,
+          "actual": 305216868,
+          "expected": 470854153,
+          "status": 1
+        },
+        {
+          "lane": 38211,
+          "input": 38212,
+          "actual": 1657286012,
+          "expected": -1884994291,
+          "status": 1
+        },
+        {
+          "lane": 38212,
+          "input": 38213,
+          "actual": -1730195574,
+          "expected": -16556565,
+          "status": 1
+        },
+        {
+          "lane": 38213,
+          "input": 38214,
+          "actual": -761657043,
+          "expected": 1234962442,
+          "status": 1
+        },
+        {
+          "lane": 38214,
+          "input": 38215,
+          "actual": -411383194,
+          "expected": 1125240095,
+          "status": 1
+        },
+        {
+          "lane": 38215,
+          "input": 38216,
+          "actual": 387652809,
+          "expected": -539140137,
+          "status": 1
+        },
+        {
+          "lane": 38216,
+          "input": 38217,
+          "actual": 1017669873,
+          "expected": -861303897,
+          "status": 1
+        },
+        {
+          "lane": 38217,
+          "input": 38218,
+          "actual": -2097804393,
+          "expected": 916582645,
+          "status": 1
+        },
+        {
+          "lane": 38218,
+          "input": 38219,
+          "actual": 104182575,
+          "expected": -151666535,
+          "status": 1
+        },
+        {
+          "lane": 38219,
+          "input": 38220,
+          "actual": 567697031,
+          "expected": 1810967927,
+          "status": 1
+        },
+        {
+          "lane": 38220,
+          "input": 38221,
+          "actual": 1853123458,
+          "expected": -1831986234,
+          "status": 1
+        },
+        {
+          "lane": 38221,
+          "input": 38222,
+          "actual": -1491210374,
+          "expected": -408568201,
+          "status": 1
+        },
+        {
+          "lane": 38222,
+          "input": 38223,
+          "actual": 1276334599,
+          "expected": 1267650182,
+          "status": 1
+        },
+        {
+          "lane": 38223,
+          "input": 38224,
+          "actual": 446708350,
+          "expected": 1086755765,
+          "status": 1
+        },
+        {
+          "lane": 38225,
+          "input": 38226,
+          "actual": -5732644,
+          "expected": -1406695049,
+          "status": 1
+        },
+        {
+          "lane": 38226,
+          "input": 38227,
+          "actual": -1245621785,
+          "expected": 1106519591,
+          "status": 1
+        },
+        {
+          "lane": 38227,
+          "input": 38228,
+          "actual": 226124650,
+          "expected": 1445141015,
+          "status": 1
+        },
+        {
+          "lane": 38229,
+          "input": 38230,
+          "actual": -1363336900,
+          "expected": -1932737380,
+          "status": 1
+        },
+        {
+          "lane": 38231,
+          "input": 38232,
+          "actual": -846717038,
+          "expected": 746791343,
+          "status": 1
+        },
+        {
+          "lane": 38232,
+          "input": 38233,
+          "actual": -595640839,
+          "expected": -1055508793,
+          "status": 1
+        },
+        {
+          "lane": 38233,
+          "input": 38234,
+          "actual": -163829046,
+          "expected": 1846965839,
+          "status": 1
+        },
+        {
+          "lane": 38235,
+          "input": 38236,
+          "actual": 1803545189,
+          "expected": 1110608641,
+          "status": 1
+        },
+        {
+          "lane": 38236,
+          "input": 38237,
+          "actual": 1329825044,
+          "expected": 107398797,
+          "status": 1
+        },
+        {
+          "lane": 38237,
+          "input": 38238,
+          "actual": 659441335,
+          "expected": 846038796,
+          "status": 1
+        },
+        {
+          "lane": 38238,
+          "input": 38239,
+          "actual": -1413117460,
+          "expected": 1357089714,
+          "status": 1
+        },
+        {
+          "lane": 38239,
+          "input": 38240,
+          "actual": -18198138,
+          "expected": 1836698148,
+          "status": 1
+        }
+      ]
+    },
+    {
+      "trial": 9,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 10,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 11,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 12,
+      "gpuMs": 0.262144,
+      "mismatchCount": 30,
+      "firstMismatches": [
+        {
+          "lane": 14304,
+          "input": 14305,
+          "actual": -953768677,
+          "expected": -328923958,
+          "status": 1
+        },
+        {
+          "lane": 14305,
+          "input": 14306,
+          "actual": -862502353,
+          "expected": 373539055,
+          "status": 1
+        },
+        {
+          "lane": 14306,
+          "input": 14307,
+          "actual": -1297033617,
+          "expected": -1713281463,
+          "status": 1
+        },
+        {
+          "lane": 14307,
+          "input": 14308,
+          "actual": 1151963628,
+          "expected": 1088927269,
+          "status": 1
+        },
+        {
+          "lane": 14308,
+          "input": 14309,
+          "actual": -1145197842,
+          "expected": -1178598082,
+          "status": 1
+        },
+        {
+          "lane": 14309,
+          "input": 14310,
+          "actual": -485002468,
+          "expected": -2125860804,
+          "status": 1
+        },
+        {
+          "lane": 14310,
+          "input": 14311,
+          "actual": 637766591,
+          "expected": -387036513,
+          "status": 1
+        },
+        {
+          "lane": 14311,
+          "input": 14312,
+          "actual": -1927667609,
+          "expected": 540214890,
+          "status": 1
+        },
+        {
+          "lane": 14312,
+          "input": 14313,
+          "actual": 1061306547,
+          "expected": -803144770,
+          "status": 1
+        },
+        {
+          "lane": 14313,
+          "input": 14314,
+          "actual": -1574489985,
+          "expected": 2109804237,
+          "status": 1
+        },
+        {
+          "lane": 14314,
+          "input": 14315,
+          "actual": 948670841,
+          "expected": -147343402,
+          "status": 1
+        },
+        {
+          "lane": 14315,
+          "input": 14316,
+          "actual": -792136554,
+          "expected": 600518478,
+          "status": 1
+        },
+        {
+          "lane": 14316,
+          "input": 14317,
+          "actual": 823779154,
+          "expected": 333881186,
+          "status": 1
+        },
+        {
+          "lane": 14317,
+          "input": 14318,
+          "actual": 1011021849,
+          "expected": -1860856137,
+          "status": 1
+        },
+        {
+          "lane": 14318,
+          "input": 14319,
+          "actual": -1152969796,
+          "expected": -366401426,
+          "status": 1
+        },
+        {
+          "lane": 14319,
+          "input": 14320,
+          "actual": -1379963501,
+          "expected": -1877372764,
+          "status": 1
+        },
+        {
+          "lane": 14321,
+          "input": 14322,
+          "actual": 2086714391,
+          "expected": 544281298,
+          "status": 1
+        },
+        {
+          "lane": 14322,
+          "input": 14323,
+          "actual": -1748531601,
+          "expected": 1594278085,
+          "status": 1
+        },
+        {
+          "lane": 14324,
+          "input": 14325,
+          "actual": 333895054,
+          "expected": -1946668805,
+          "status": 1
+        },
+        {
+          "lane": 14325,
+          "input": 14326,
+          "actual": 271992766,
+          "expected": 1220616276,
+          "status": 1
+        },
+        {
+          "lane": 14326,
+          "input": 14327,
+          "actual": 717011303,
+          "expected": 805264956,
+          "status": 1
+        },
+        {
+          "lane": 14327,
+          "input": 14328,
+          "actual": 681968373,
+          "expected": 1102422669,
+          "status": 1
+        },
+        {
+          "lane": 14328,
+          "input": 14329,
+          "actual": 1926668573,
+          "expected": -674832137,
+          "status": 1
+        },
+        {
+          "lane": 14329,
+          "input": 14330,
+          "actual": -2034770149,
+          "expected": 487167545,
+          "status": 1
+        },
+        {
+          "lane": 14330,
+          "input": 14331,
+          "actual": -1207976711,
+          "expected": 1779231605,
+          "status": 1
+        },
+        {
+          "lane": 14331,
+          "input": 14332,
+          "actual": 964606,
+          "expected": -927733970,
+          "status": 1
+        },
+        {
+          "lane": 14332,
+          "input": 14333,
+          "actual": 921017004,
+          "expected": 1110570339,
+          "status": 1
+        },
+        {
+          "lane": 14333,
+          "input": 14334,
+          "actual": 1748616795,
+          "expected": -949980959,
+          "status": 1
+        },
+        {
+          "lane": 14334,
+          "input": 14335,
+          "actual": -1480411859,
+          "expected": -600988862,
+          "status": 1
+        },
+        {
+          "lane": 14335,
+          "input": 14336,
+          "actual": -1921611795,
+          "expected": -1641819910,
+          "status": 1
+        }
+      ]
+    },
+    {
+      "trial": 13,
+      "gpuMs": 0.262144,
+      "mismatchCount": 29,
+      "firstMismatches": [
+        {
+          "lane": 46530,
+          "input": 46531,
+          "actual": -1562844517,
+          "expected": 1598425579,
+          "status": 1
+        },
+        {
+          "lane": 46531,
+          "input": 46532,
+          "actual": 581296821,
+          "expected": 1785140051,
+          "status": 1
+        },
+        {
+          "lane": 46532,
+          "input": 46533,
+          "actual": -1448515094,
+          "expected": 1632110141,
+          "status": 1
+        },
+        {
+          "lane": 46533,
+          "input": 46534,
+          "actual": -354666223,
+          "expected": -318022089,
+          "status": 1
+        },
+        {
+          "lane": 46535,
+          "input": 46536,
+          "actual": -3863108,
+          "expected": 935374137,
+          "status": 1
+        },
+        {
+          "lane": 46536,
+          "input": 46537,
+          "actual": 1059479630,
+          "expected": -1537999311,
+          "status": 1
+        },
+        {
+          "lane": 46537,
+          "input": 46538,
+          "actual": -1178883708,
+          "expected": 155040324,
+          "status": 1
+        },
+        {
+          "lane": 46538,
+          "input": 46539,
+          "actual": 44385572,
+          "expected": 945561115,
+          "status": 1
+        },
+        {
+          "lane": 46539,
+          "input": 46540,
+          "actual": 743153202,
+          "expected": -1601292695,
+          "status": 1
+        },
+        {
+          "lane": 46540,
+          "input": 46541,
+          "actual": -858655275,
+          "expected": 1471849737,
+          "status": 1
+        },
+        {
+          "lane": 46541,
+          "input": 46542,
+          "actual": 959402182,
+          "expected": -1652180517,
+          "status": 1
+        },
+        {
+          "lane": 46542,
+          "input": 46543,
+          "actual": 406042861,
+          "expected": -611239274,
+          "status": 1
+        },
+        {
+          "lane": 46543,
+          "input": 46544,
+          "actual": -404805433,
+          "expected": -969543001,
+          "status": 1
+        },
+        {
+          "lane": 46544,
+          "input": 46545,
+          "actual": 1167575921,
+          "expected": 727188905,
+          "status": 1
+        },
+        {
+          "lane": 46545,
+          "input": 46546,
+          "actual": -1475208505,
+          "expected": -1760328623,
+          "status": 1
+        },
+        {
+          "lane": 46546,
+          "input": 46547,
+          "actual": -553756847,
+          "expected": -465487674,
+          "status": 1
+        },
+        {
+          "lane": 46547,
+          "input": 46548,
+          "actual": -723314129,
+          "expected": 1148557214,
+          "status": 1
+        },
+        {
+          "lane": 46548,
+          "input": 46549,
+          "actual": 194651894,
+          "expected": 1044129487,
+          "status": 1
+        },
+        {
+          "lane": 46549,
+          "input": 46550,
+          "actual": -722720545,
+          "expected": -1870493346,
+          "status": 1
+        },
+        {
+          "lane": 46550,
+          "input": 46551,
+          "actual": 103090149,
+          "expected": -486748266,
+          "status": 1
+        },
+        {
+          "lane": 46551,
+          "input": 46552,
+          "actual": -1604434141,
+          "expected": 2119652695,
+          "status": 1
+        },
+        {
+          "lane": 46552,
+          "input": 46553,
+          "actual": 2135171185,
+          "expected": -304767849,
+          "status": 1
+        },
+        {
+          "lane": 46553,
+          "input": 46554,
+          "actual": -1845628518,
+          "expected": 1150802157,
+          "status": 1
+        },
+        {
+          "lane": 46554,
+          "input": 46555,
+          "actual": -1864079580,
+          "expected": 2046224706,
+          "status": 1
+        },
+        {
+          "lane": 46555,
+          "input": 46556,
+          "actual": -200836060,
+          "expected": -746204586,
+          "status": 1
+        },
+        {
+          "lane": 46556,
+          "input": 46557,
+          "actual": -1466005409,
+          "expected": -2053925721,
+          "status": 1
+        },
+        {
+          "lane": 46557,
+          "input": 46558,
+          "actual": 243712423,
+          "expected": -855172196,
+          "status": 1
+        },
+        {
+          "lane": 46558,
+          "input": 46559,
+          "actual": -1174098529,
+          "expected": 56184897,
+          "status": 1
+        },
+        {
+          "lane": 46559,
+          "input": 46560,
+          "actual": -1083681505,
+          "expected": -1614744807,
+          "status": 1
+        }
+      ]
+    },
+    {
+      "trial": 14,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 15,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 16,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 17,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 18,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 19,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    }
+  ]
+}

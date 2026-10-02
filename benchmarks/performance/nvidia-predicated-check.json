@@ -1,0 +1,606 @@
+{
+  "predicateAssignments": true,
+  "adapter": "nvidia-geforce-rtx-2060-nvk-tu106-",
+  "runs": [
+    {
+      "trial": 0,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 1,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 2,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 3,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 4,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 5,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 6,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 7,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 8,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 9,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 10,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 11,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 12,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 13,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 14,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 15,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 16,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 17,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 18,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 19,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 20,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 21,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 22,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 23,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 24,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 25,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 26,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 27,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 28,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 29,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 30,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 31,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 32,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 33,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 34,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 35,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 36,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 37,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 38,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 39,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 40,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 41,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 42,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 43,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 44,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 45,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 46,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 47,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 48,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 49,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 50,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 51,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 52,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 53,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 54,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 55,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 56,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 57,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 58,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 59,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 60,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 61,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 62,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 63,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 64,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 65,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 66,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 67,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 68,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 69,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 70,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 71,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 72,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 73,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 74,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 75,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 76,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 77,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 78,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 79,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 80,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 81,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 82,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 83,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 84,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 85,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 86,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 87,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 88,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 89,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 90,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 91,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 92,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 93,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 94,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 95,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 96,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 97,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 98,
+      "gpuMs": 0.196608,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    },
+    {
+      "trial": 99,
+      "gpuMs": 0.262144,
+      "mismatchCount": 0,
+      "firstMismatches": []
+    }
+  ]
+}
