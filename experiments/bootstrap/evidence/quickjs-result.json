@@ -1,0 +1,528 @@
+{
+  "experiment": "QuickJS bytecode interpreted inside Lanes; GPU required",
+  "adapter": {
+    "vendor": "mesa",
+    "architecture": "software",
+    "device": "llvmpipe-llvm-21-1-8-256-bits-",
+    "description": "llvmpipe: Mesa 26.0.3-1ubuntu1 (LLVM 21.1.8)"
+  },
+  "programs": 9,
+  "checksPerBackend": 153,
+  "includesNaNInfinitySignedZeroAndSubnormals": true,
+  "limitations": [
+    "numeric opcodes only",
+    "stack depth <= 3",
+    "no locals, objects, closures, branches, constant pool or calls in QuickJS guest",
+    "timings include compilation and are not a benchmark",
+    "not a QuickJS runtime port or full conformance test"
+  ],
+  "results": [
+    {
+      "source": "function f(x) { return x + 7; }",
+      "bytes": [
+        207,
+        186,
+        155,
+        40
+      ],
+      "instructions": [
+        {
+          "pc": 0,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 1,
+          "opcode": 186,
+          "name": "push_7",
+          "size": 1
+        },
+        {
+          "pc": 2,
+          "opcode": 155,
+          "name": "add",
+          "size": 1
+        },
+        {
+          "pc": 3,
+          "opcode": 40,
+          "name": "return",
+          "size": 1
+        }
+      ],
+      "stackSize": 2,
+      "cpu": {
+        "checked": 17,
+        "coldWallMs": 5.113461999999998,
+        "maxSteps": 203
+      },
+      "gpu": {
+        "checked": 17,
+        "coldWallMs": 378.683705,
+        "maxSteps": 203
+      }
+    },
+    {
+      "source": "function f(x) { return x * 3 + 1; }",
+      "bytes": [
+        207,
+        182,
+        152,
+        180,
+        155,
+        40
+      ],
+      "instructions": [
+        {
+          "pc": 0,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 1,
+          "opcode": 182,
+          "name": "push_3",
+          "size": 1
+        },
+        {
+          "pc": 2,
+          "opcode": 152,
+          "name": "mul",
+          "size": 1
+        },
+        {
+          "pc": 3,
+          "opcode": 180,
+          "name": "push_1",
+          "size": 1
+        },
+        {
+          "pc": 4,
+          "opcode": 155,
+          "name": "add",
+          "size": 1
+        },
+        {
+          "pc": 5,
+          "opcode": 40,
+          "name": "return",
+          "size": 1
+        }
+      ],
+      "stackSize": 2,
+      "cpu": {
+        "checked": 17,
+        "coldWallMs": 3.9832040000000006,
+        "maxSteps": 319
+      },
+      "gpu": {
+        "checked": 17,
+        "coldWallMs": 9.638964999999985,
+        "maxSteps": 319
+      }
+    },
+    {
+      "source": "function f(x) { return -(x - 2); }",
+      "bytes": [
+        207,
+        181,
+        156,
+        138,
+        40
+      ],
+      "instructions": [
+        {
+          "pc": 0,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 1,
+          "opcode": 181,
+          "name": "push_2",
+          "size": 1
+        },
+        {
+          "pc": 2,
+          "opcode": 156,
+          "name": "sub",
+          "size": 1
+        },
+        {
+          "pc": 3,
+          "opcode": 138,
+          "name": "neg",
+          "size": 1
+        },
+        {
+          "pc": 4,
+          "opcode": 40,
+          "name": "return",
+          "size": 1
+        }
+      ],
+      "stackSize": 2,
+      "cpu": {
+        "checked": 17,
+        "coldWallMs": 3.26079100000004,
+        "maxSteps": 246
+      },
+      "gpu": {
+        "checked": 17,
+        "coldWallMs": 3.264381999999955,
+        "maxSteps": 246
+      }
+    },
+    {
+      "source": "function f(x) { return x * x + 3 * x + 7; }",
+      "bytes": [
+        207,
+        207,
+        152,
+        182,
+        207,
+        152,
+        155,
+        186,
+        155,
+        40
+      ],
+      "instructions": [
+        {
+          "pc": 0,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 1,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 2,
+          "opcode": 152,
+          "name": "mul",
+          "size": 1
+        },
+        {
+          "pc": 3,
+          "opcode": 182,
+          "name": "push_3",
+          "size": 1
+        },
+        {
+          "pc": 4,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 5,
+          "opcode": 152,
+          "name": "mul",
+          "size": 1
+        },
+        {
+          "pc": 6,
+          "opcode": 155,
+          "name": "add",
+          "size": 1
+        },
+        {
+          "pc": 7,
+          "opcode": 186,
+          "name": "push_7",
+          "size": 1
+        },
+        {
+          "pc": 8,
+          "opcode": 155,
+          "name": "add",
+          "size": 1
+        },
+        {
+          "pc": 9,
+          "opcode": 40,
+          "name": "return",
+          "size": 1
+        }
+      ],
+      "stackSize": 3,
+      "cpu": {
+        "checked": 17,
+        "coldWallMs": 1.5761509999999817,
+        "maxSteps": 519
+      },
+      "gpu": {
+        "checked": 17,
+        "coldWallMs": 4.545984999999973,
+        "maxSteps": 519
+      }
+    },
+    {
+      "source": "function f(x) { return x / 5; }",
+      "bytes": [
+        207,
+        184,
+        153,
+        40
+      ],
+      "instructions": [
+        {
+          "pc": 0,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 1,
+          "opcode": 184,
+          "name": "push_5",
+          "size": 1
+        },
+        {
+          "pc": 2,
+          "opcode": 153,
+          "name": "div",
+          "size": 1
+        },
+        {
+          "pc": 3,
+          "opcode": 40,
+          "name": "return",
+          "size": 1
+        }
+      ],
+      "stackSize": 2,
+      "cpu": {
+        "checked": 17,
+        "coldWallMs": 3.0406399999999394,
+        "maxSteps": 215
+      },
+      "gpu": {
+        "checked": 17,
+        "coldWallMs": 3.0143489999999247,
+        "maxSteps": 215
+      }
+    },
+    {
+      "source": "function f(x) { return x + 17; }",
+      "bytes": [
+        207,
+        187,
+        17,
+        155,
+        40
+      ],
+      "instructions": [
+        {
+          "pc": 0,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 1,
+          "opcode": 187,
+          "name": "push_i8",
+          "size": 2
+        },
+        {
+          "pc": 3,
+          "opcode": 155,
+          "name": "add",
+          "size": 1
+        },
+        {
+          "pc": 4,
+          "opcode": 40,
+          "name": "return",
+          "size": 1
+        }
+      ],
+      "stackSize": 2,
+      "cpu": {
+        "checked": 17,
+        "coldWallMs": 3.0347860000000537,
+        "maxSteps": 216
+      },
+      "gpu": {
+        "checked": 17,
+        "coldWallMs": 3.6620400000000473,
+        "maxSteps": 216
+      }
+    },
+    {
+      "source": "function f(x) { return x - 100; }",
+      "bytes": [
+        207,
+        187,
+        100,
+        156,
+        40
+      ],
+      "instructions": [
+        {
+          "pc": 0,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 1,
+          "opcode": 187,
+          "name": "push_i8",
+          "size": 2
+        },
+        {
+          "pc": 3,
+          "opcode": 156,
+          "name": "sub",
+          "size": 1
+        },
+        {
+          "pc": 4,
+          "opcode": 40,
+          "name": "return",
+          "size": 1
+        }
+      ],
+      "stackSize": 2,
+      "cpu": {
+        "checked": 17,
+        "coldWallMs": 0.7448080000000346,
+        "maxSteps": 220
+      },
+      "gpu": {
+        "checked": 17,
+        "coldWallMs": 2.8646329999999125,
+        "maxSteps": 220
+      }
+    },
+    {
+      "source": "function f(x) { return (x + 4) * (x - 6); }",
+      "bytes": [
+        207,
+        183,
+        155,
+        207,
+        185,
+        156,
+        152,
+        40
+      ],
+      "instructions": [
+        {
+          "pc": 0,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 1,
+          "opcode": 183,
+          "name": "push_4",
+          "size": 1
+        },
+        {
+          "pc": 2,
+          "opcode": 155,
+          "name": "add",
+          "size": 1
+        },
+        {
+          "pc": 3,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 4,
+          "opcode": 185,
+          "name": "push_6",
+          "size": 1
+        },
+        {
+          "pc": 5,
+          "opcode": 156,
+          "name": "sub",
+          "size": 1
+        },
+        {
+          "pc": 6,
+          "opcode": 152,
+          "name": "mul",
+          "size": 1
+        },
+        {
+          "pc": 7,
+          "opcode": 40,
+          "name": "return",
+          "size": 1
+        }
+      ],
+      "stackSize": 3,
+      "cpu": {
+        "checked": 17,
+        "coldWallMs": 1.3766960000000381,
+        "maxSteps": 419
+      },
+      "gpu": {
+        "checked": 17,
+        "coldWallMs": 3.665966000000026,
+        "maxSteps": 419
+      }
+    },
+    {
+      "source": "function f(x) { return x * 0; }",
+      "bytes": [
+        207,
+        179,
+        152,
+        40
+      ],
+      "instructions": [
+        {
+          "pc": 0,
+          "opcode": 207,
+          "name": "get_arg0",
+          "size": 1
+        },
+        {
+          "pc": 1,
+          "opcode": 179,
+          "name": "push_0",
+          "size": 1
+        },
+        {
+          "pc": 2,
+          "opcode": 152,
+          "name": "mul",
+          "size": 1
+        },
+        {
+          "pc": 3,
+          "opcode": 40,
+          "name": "return",
+          "size": 1
+        }
+      ],
+      "stackSize": 2,
+      "cpu": {
+        "checked": 17,
+        "coldWallMs": 0.6882200000000012,
+        "maxSteps": 211
+      },
+      "gpu": {
+        "checked": 17,
+        "coldWallMs": 2.791640999999913,
+        "maxSteps": 211
+      }
+    }
+  ]
+}

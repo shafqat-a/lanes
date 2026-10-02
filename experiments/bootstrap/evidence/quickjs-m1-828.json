@@ -1,0 +1,564 @@
+{
+  "adapter": {
+    "vendor": "apple",
+    "device": "apple-m1",
+    "description": "Metal driver on macOS Version 26.4 (Build 25E246)"
+  },
+  "programs": 92,
+  "checked": 828,
+  "oneInstructionDispatches": 15,
+  "results": [
+    {
+      "source": "function f(x) { return x + 1; }",
+      "checked": 9,
+      "maxSteps": 4,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { const o = {value:x}; function inc(v) { return v+1; } return inc(o.value); }",
+      "checked": 9,
+      "maxSteps": 15,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { const o = {value:x}; o.value += 2; return o.value; }",
+      "checked": 9,
+      "maxSteps": 13,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o = {a:x}; let alias = o; alias.a = x * 3; return o.a; }",
+      "checked": 9,
+      "maxSteps": 16,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { function twice(v) { return v*2; } return twice(x) + twice(x+1); }",
+      "checked": 9,
+      "maxSteps": 19,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let a = [x, 3, 4]; a[1] = x+2; return a[0] + a[1] + a.length; }",
+      "checked": 9,
+      "maxSteps": 23,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let value=x; function inc() { return ++value; } inc(); return inc(); }",
+      "checked": 9,
+      "maxSteps": 20,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { function make(v) { return function() { return ++v; }; } const c=make(x); c(); return c(); }",
+      "checked": 9,
+      "maxSteps": 22,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let s=x; for (let i=0;i<10;i++) s+=i; return s; }",
+      "checked": 9,
+      "maxSteps": 142,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={x:x}; let i=0; while(i<1000) { o={x:o.x+1}; i++; } return o.x; }",
+      "checked": 9,
+      "maxSteps": 16015,
+      "collections": 1
+    },
+    {
+      "source": "function f(x) { function sum(n) { if(n<=0) return x; return n+sum(n-1); } return sum(5); }",
+      "checked": 9,
+      "maxSteps": 70,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { const o={}; o[\"answer\"]=x; return o.answer; }",
+      "checked": 9,
+      "maxSteps": 10,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { const o={value:x}; return o.missing; }",
+      "checked": 9,
+      "maxSteps": 8,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return x < 0 ? -x : x; }",
+      "checked": 9,
+      "maxSteps": 7,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { const a=[]; for(let i=0;i<3;i++) a[i]=()=>i; return a[0]()+a[1]()+a[2]()+x; }",
+      "checked": 9,
+      "maxSteps": 77,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={v:x}; let y=o.v++; return y+o.v; }",
+      "checked": 9,
+      "maxSteps": 17,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let p={v:x}; let o={__proto__:p}; o.v+=2; return o.v+p.v; }",
+      "checked": 9,
+      "maxSteps": 21,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={v:x, add(n) {return this.v+n;}}; return o.add(3); }",
+      "checked": 9,
+      "maxSteps": 18,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { try { throw x; } catch(e) { return e+1; } finally { x++; } }",
+      "checked": 9,
+      "maxSteps": 15,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={v:x}; function g(){throw o;} try {g();} catch(e){return e.v;} }",
+      "checked": 9,
+      "maxSteps": 18,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { try { return x; } finally { return x+3; } }",
+      "checked": 9,
+      "maxSteps": 8,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { try { x(); } catch(e) { return 17; } }",
+      "checked": 9,
+      "maxSteps": 8,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { try { const a=x; a=3; } catch(e) { return 19; } }",
+      "checked": 9,
+      "maxSteps": 12,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { const o={length:x}; return o.length; }",
+      "checked": 9,
+      "maxSteps": 8,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { function g(a,b=1){return a+b;} return g.length+g(x); }",
+      "checked": 9,
+      "maxSteps": 24,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { if(x>0 && x<20) return 1+f(x-1); return 0; }",
+      "checked": 9,
+      "maxSteps": 38,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { const o={v:x}; o.self=o; const read=()=>o.self.v; let i=0; while(i<1200) {const junk={i:i}; i++;} return read(); }",
+      "checked": 9,
+      "maxSteps": 16825,
+      "collections": 1
+    },
+    {
+      "source": "function f(x) { let o={v:x}; const c=()=>++o.v; let i=0; while(i<1200) {const junk={i:i}; i++;} c(); return c(); }",
+      "checked": 9,
+      "maxSteps": 16833,
+      "collections": 1
+    },
+    {
+      "source": "function f(x) { let a=[x]; a[5]=3; return a.length+a[5]; }",
+      "checked": 9,
+      "maxSteps": 15,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let a=[x,2,3]; a.length=1; return a[1]; }",
+      "checked": 9,
+      "maxSteps": 13,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let a=[x]; a.length=8; return a.length; }",
+      "checked": 9,
+      "maxSteps": 10,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let a=[]; try {a.length=1.5;} catch(e) {return x;} }",
+      "checked": 9,
+      "maxSteps": 12,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={get v(){return x+1;}}; return o.v; }",
+      "checked": 9,
+      "maxSteps": 12,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let value=x;let o={get v(){return value;},set v(n){value=n;}}; o.v+=2;return o.v; }",
+      "checked": 9,
+      "maxSteps": 26,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={value:x,get v(){return this.value;},set v(n){this.value=n;}}; let p={__proto__:o};p.v=x+2;return p.v+o.v; }",
+      "checked": 9,
+      "maxSteps": 41,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={get v(){throw x;}};try {return o.v;}catch(e){return e+1;} }",
+      "checked": 9,
+      "maxSteps": 17,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={set v(n){throw n;}};try {o.v=x;}catch(e){return e+1;} }",
+      "checked": 9,
+      "maxSteps": 18,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { \"use strict\";let o={get v(){return x;}};try {o.v=2;}catch(e){return 31;} }",
+      "checked": 9,
+      "maxSteps": 14,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={get v(){return x;}};o.v=2;return o.v; }",
+      "checked": 9,
+      "maxSteps": 13,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let p={v:x};let o={__proto__:p};return \"v\" in o; }",
+      "checked": 9,
+      "maxSteps": 14,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={v:x};delete o.v;return \"v\" in o; }",
+      "checked": 9,
+      "maxSteps": 13,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let a=[x];delete a[0];return a.length; }",
+      "checked": 9,
+      "maxSteps": 11,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return typeof x; }",
+      "checked": 9,
+      "maxSteps": 3,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return typeof function() {}; }",
+      "checked": 9,
+      "maxSteps": 3,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return typeof {}; }",
+      "checked": 9,
+      "maxSteps": 3,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return typeof \"text\"; }",
+      "checked": 9,
+      "maxSteps": 3,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return \"hello\"+\" \"+\"world\"; }",
+      "checked": 9,
+      "maxSteps": 6,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let s=\"a\";for(let i=0;i<40;i++)s=s+\"b\";return s; }",
+      "checked": 9,
+      "maxSteps": 532,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};let k=\"ans\"+\"wer\";o[k]=x;return o.answer; }",
+      "checked": 9,
+      "maxSteps": 15,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};o[\"ans\"+\"wer\"]=x;return o[\"an\"+\"swer\"]; }",
+      "checked": 9,
+      "maxSteps": 15,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};o[\"ans\"+\"wer\"]=x;let i=0;while(i<1200){let junk={i:i};i++;}return o.answer; }",
+      "checked": 9,
+      "maxSteps": 16819,
+      "collections": 1
+    },
+    {
+      "source": "function f(x) { return (\"a\"+\"b\")===\"ab\"; }",
+      "checked": 9,
+      "maxSteps": 6,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return (\"a\"+\"b\")<\"ac\"; }",
+      "checked": 9,
+      "maxSteps": 6,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return \"😀\".charCodeAt(x); }",
+      "checked": 9,
+      "maxSteps": 4,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return \"hello\".charAt(x); }",
+      "checked": 9,
+      "maxSteps": 4,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return \"hello\".slice(x); }",
+      "checked": 9,
+      "maxSteps": 4,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return \"hello\".slice(x,3); }",
+      "checked": 9,
+      "maxSteps": 5,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return (\"hel\"+\"lo\")[2]; }",
+      "checked": 9,
+      "maxSteps": 6,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return Object.getPrototypeOf({})===Object.prototype; }",
+      "checked": 9,
+      "maxSteps": 8,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let p={v:x};let o=Object.create(p);return o.v; }",
+      "checked": 9,
+      "maxSteps": 14,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o=Object.create(null);return \"toString\" in o; }",
+      "checked": 9,
+      "maxSteps": 10,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};Object.setPrototypeOf(o,{v:x});return o.v; }",
+      "checked": 9,
+      "maxSteps": 14,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};try{Object.setPrototypeOf(o,o);}catch(e){return x;} }",
+      "checked": 9,
+      "maxSteps": 14,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};Object.preventExtensions(o);return Object.isExtensible(o); }",
+      "checked": 9,
+      "maxSteps": 12,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};Object.preventExtensions(o);o.v=x;return Object.hasOwn(o,\"v\"); }",
+      "checked": 9,
+      "maxSteps": 16,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { \"use strict\";let o={};Object.preventExtensions(o);try{o.v=x;}catch(e){return 47;} }",
+      "checked": 9,
+      "maxSteps": 17,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};Object.defineProperty(o,\"v\",{value:x});o.v=3;return o.v; }",
+      "checked": 9,
+      "maxSteps": 18,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};Object.defineProperty(o,\"v\",{value:x,writable:true});o.v=3;return o.v; }",
+      "checked": 9,
+      "maxSteps": 20,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};Object.defineProperty(o,\"v\",{value:x});return delete o.v; }",
+      "checked": 9,
+      "maxSteps": 16,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};Object.defineProperty(o,\"v\",{value:x,configurable:true});return delete o.v; }",
+      "checked": 9,
+      "maxSteps": 18,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={v:x};let d=Object.getOwnPropertyDescriptor(o,\"v\");return d.value; }",
+      "checked": 9,
+      "maxSteps": 15,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};Object.defineProperty(o,\"v\",{value:x});let d=Object.getOwnPropertyDescriptor(o,\"v\");return d.writable===false&&d.enumerable===false&&d.configurable===false; }",
+      "checked": 9,
+      "maxSteps": 38,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};Object.defineProperty(o,\"v\",{value:x});try{Object.defineProperty(o,\"v\",{writable:true});}catch(e){return 53;} }",
+      "checked": 9,
+      "maxSteps": 26,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let v=x;let o={};Object.defineProperty(o,\"v\",{get:function(){return v;},set:function(n){v=n;}});o.v=x+1;return o.v; }",
+      "checked": 9,
+      "maxSteps": 33,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};Object.defineProperty(o,\"v\",{value:x});let i=0;while(i<1200){let junk={i:i};i++;}o.v=3;return o.v; }",
+      "checked": 9,
+      "maxSteps": 16825,
+      "collections": 1
+    },
+    {
+      "source": "function f(x) { return Object.is(x,x); }",
+      "checked": 9,
+      "maxSteps": 5,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return Object.is(-0,0); }",
+      "checked": 9,
+      "maxSteps": 6,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return typeof ({}).toString; }",
+      "checked": 9,
+      "maxSteps": 4,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return Object.hasOwn(Object.prototype,\"toString\"); }",
+      "checked": 9,
+      "maxSteps": 6,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { delete Object.prototype.toString;return \"toString\" in {}; }",
+      "checked": 9,
+      "maxSteps": 9,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let p={v:x};let o={};o.__proto__=p;return o.v; }",
+      "checked": 9,
+      "maxSteps": 14,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return [].constructor===Object; }",
+      "checked": 9,
+      "maxSteps": 5,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return Object.getOwnPropertyDescriptor(Object.prototype,\"toString\").enumerable; }",
+      "checked": 9,
+      "maxSteps": 8,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let a=[x];Object.preventExtensions(a);a[5]=3;return a.length; }",
+      "checked": 9,
+      "maxSteps": 16,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return Object.is(NaN,NaN); }",
+      "checked": 9,
+      "maxSteps": 5,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return Infinity; }",
+      "checked": 9,
+      "maxSteps": 2,
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return x+\"!\"; }",
+      "checked": 9,
+      "inputs": "strings",
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return x.charCodeAt(0); }",
+      "checked": 9,
+      "inputs": "strings",
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return x.charAt(0); }",
+      "checked": 9,
+      "inputs": "strings",
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { return x.slice(-2); }",
+      "checked": 9,
+      "inputs": "strings",
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { const o={};o[x]=3;return o[x]; }",
+      "checked": 9,
+      "inputs": "strings",
+      "collections": 0
+    },
+    {
+      "source": "function f(x) { let o={};o[x]=3;let i=0;while(i<1200){let junk={a:i};i++;}return o[x]; }",
+      "checked": 9,
+      "inputs": "strings",
+      "collections": 1
+    }
+  ]
+}

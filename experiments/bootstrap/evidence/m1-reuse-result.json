@@ -1,0 +1,29 @@
+{
+  "experiment": "Unmodified type-stripped engine262 functions executed on Lanes GPU",
+  "engine262Commit": "a600354c2954300d62d108bf9ed3459a8e4a289b",
+  "adapter": {
+    "vendor": "apple",
+    "architecture": "metal-3",
+    "device": "apple-m1",
+    "description": "Metal driver on macOS Version 26.4 (Build 25E246)"
+  },
+  "checked": 148,
+  "results": [
+    {
+      "name": "digitToNumber",
+      "file": "src/intrinsics/parseInt.mts",
+      "checked": 131
+    },
+    {
+      "name": "abs",
+      "file": "src/abstract-ops/math.mts",
+      "checked": 11
+    },
+    {
+      "name": "IsBigIntElementType",
+      "file": "src/abstract-ops/arraybuffer-objects.mts",
+      "checked": 6
+    }
+  ],
+  "caveat": "Three standalone helper functions, not execution of the engine262 interpreter or full built-ins."
+}

@@ -1,0 +1,18 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "6aad50e13b9a713729e0b7bb5a002756ef3512f5876391527af18dfa37e1f30d",
+    "experiments/quickjs-runtime/compiler.js": "d0d0ea76d8974b77252055ce5c6da2d32d3d99ec9a91700dc266135ba2babfda",
+    "experiments/quickjs-runtime/program.js": "08fd42d66c740d96adb2d250a7fcd6e3af807bc65c63bd16927edbc6ee2be762",
+    "experiments/quickjs-runtime/shader.js": "5d343b4a9d1721d941dcf24ca4b98dc4d9bf9f80ff2dd668796ea9c8096a5c78",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "5e28dbebc5e775ab811a887cfa2bdbc854dd36da7212e896b419945741e400ce",
+    "experiments/quickjs-runtime/check.mjs": "a89c2268456faf738e79a4e2b5307bca159466ec27ee4a76e0611500a622ad60",
+    "experiments/quickjs-runtime/check-compiler.mjs": "3a9a80471194fe6c38b3b20f0c0b5ef131639c504f6a55d9f57756122bdcfbc8",
+    "experiments/quickjs-runtime/test262-adapted.mjs": "ebbe29dfdf1327cca2395ace68952fa869833fe4967b612e62211fc84eee4093"
+  },
+  "reports": [
+    "quickjs-safari-1161.json",
+    "quickjs-local-1161.json"
+  ],
+  "note": "129 programs / 1161 values pass in Safari and software WebGPU. Native/Wasm packed programs agree. M1 Node/Dawn check stopped after over 9 minutes compiling without a result."
+}

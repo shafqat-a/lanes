@@ -1,0 +1,21 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "a1e3c11ca6de432ef58ec1887c04917f64edf6a242e2d4826dd752925e47154d",
+    "experiments/quickjs-runtime/compiler.js": "d0d0ea76d8974b77252055ce5c6da2d32d3d99ec9a91700dc266135ba2babfda",
+    "experiments/quickjs-runtime/program.js": "8745a201aebee12722fc0859a32fc6476d90a80d789be312abf909e64f74ed84",
+    "experiments/quickjs-runtime/shader.js": "efc7038e4268253ba1e8cd0f0b4fe985a7deb41d00ce41db1e39c8092c0163c3",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "67e3f40c5245aa87b9dada57231d86d061b0d533abebae87c1cbf2af4d0264ec",
+    "experiments/quickjs-runtime/check.mjs": "0d991edf9f8912c15b998af59e5ecaf3e8f80a5e00ce4cc78e56b90afc166aca",
+    "experiments/quickjs-runtime/validation.js": "490309b9c07bfbf24e5a74bfc0faa36d89c81c02fa12a654c762dce29c6f6346",
+    "experiments/quickjs-runtime/browser.js": "a038dde16bbef79ee4606072caa3a9073617fbe7aa837ab5a473974c6288f774",
+    "experiments/quickjs-runtime/test262-harness.js": "fc388ad224ab153522117889955a8de99d7ade24ac5e14673afbc26e6db1396c",
+    "experiments/quickjs-runtime/browser-test262.js": "64e579a4a3baac0bab6fe7fbacb8327bcc6160933436217a8c7a21cd7c1411d9",
+    "experiments/quickjs-runtime/export-test262-browser.mjs": "9d1fbbd3c95b561726cac38ed4ca68b6c46df31d76a43ca97d35b29e1d06f158"
+  },
+  "reports": [
+    "quickjs-safari-1773.json",
+    "quickjs-test262-safari-bind.json"
+  ],
+  "note": "Safari: 197 programs / 1773 values and 13 negative checks; adapted inventory 206 pass / 0 fail / 826 unsupported from 1032 variants. Node/Dawn compilation remains unresolved; local bind checks stopped after over 7 minutes without a result."
+}

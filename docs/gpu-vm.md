@@ -93,10 +93,8 @@ The [M1 measurements](../benchmarks/vm/m1-benchmark.json) compare a small 32-ite
 
 ## Remaining path to ECMAScript 2025
 
-1. General heap objects and arrays, property descriptors, prototypes, and full primitive conversion/string semantics.
-2. Complete function/declaration semantics, this/arguments, destructuring, classes, and iterators.
-3. Standard built-ins, BigInt, symbols, regular expressions, proxies, typed arrays, and shared-memory requirements.
-4. Modules, generators, promises, microtasks, async functions, and a CPU compilation request protocol for dynamic code. Guest execution remains on GPU.
-5. Applicable full ES2025 conformance tests with an explicit host contract, real workloads, memory stress tests, and stable APIs before considering 1.0.
+The full-language track now follows the [QuickJS reuse roadmap](../experiments/quickjs-runtime/ROADMAP.md): a pinned QuickJS compiler in WebAssembly produces instructions for a direct WGSL runtime. The [isolated implementation](../experiments/quickjs-runtime/README.md) has passed the initial object/property/function-call gate on M1/Safari and is expanding its value/object model. This does not replace or expand the existing API documented above yet.
+
+The nine-phase plan covers compiler integration, the initial GPU runtime, complete values/objects, synchronous language semantics, built-ins, suspended execution/jobs, modules/dynamic code, ES2025 conformance, and release qualification. CPU guest execution remains permitted only for an explicitly selected CPU backend or an automatic whole-job fallback when WebGPU is unavailable. Unsupported GPU features and device failures must not trigger fallback. See the roadmap and saved reports for actual completion gates and unresolved issues.
 
 Public workloads such as Acorn from the Web Tooling Benchmark remain future integration targets; this VM cannot execute them yet. There is no claim that general JavaScript will run faster on GPU.

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "6aad50e13b9a713729e0b7bb5a002756ef3512f5876391527af18dfa37e1f30d",
+    "experiments/quickjs-runtime/compiler.js": "d0d0ea76d8974b77252055ce5c6da2d32d3d99ec9a91700dc266135ba2babfda",
+    "experiments/quickjs-runtime/program.js": "265fda6c7c906c3be46c6957b234751a19dd76318390faf5579ae7d7921cb111",
+    "experiments/quickjs-runtime/shader.js": "6db91857a209e0b62c7e2351c4410d3d7f1f59cfd63d25866119f8aadd402c44",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "559c9230103446a8bcfc5040091e0953e4ef04e05be3de7b4aa0e56fef9c699c",
+    "experiments/quickjs-runtime/check.mjs": "a89c2268456faf738e79a4e2b5307bca159466ec27ee4a76e0611500a622ad60",
+    "experiments/quickjs-runtime/check-compiler.mjs": "3a9a80471194fe6c38b3b20f0c0b5ef131639c504f6a55d9f57756122bdcfbc8",
+    "experiments/quickjs-runtime/test262-adapted.mjs": "5611974b1a6ede40d624f10e63cf34902e62087a34ffec86d89c7d989089985a",
+    "experiments/quickjs-runtime/test262-harness.js": "fc388ad224ab153522117889955a8de99d7ade24ac5e14673afbc26e6db1396c",
+    "experiments/quickjs-runtime/export-test262-browser.mjs": "7efe48a491484964953901bc5d6e4c75b688192b6e47abb3e96ae467cf99c941",
+    "experiments/quickjs-runtime/browser-test262.js": "3f592e29ae60c78258cf4f4f751f0c8a055676ea16d96d95162cb128b26af5e2"
+  },
+  "compilerWasmSha256": "fe43917e13d9c3b27d98012741bf80ee0aa4668fbf61e1c36e49ddeb0e071cc8",
+  "reports": [
+    "quickjs-safari-1224.json",
+    "quickjs-local-1224.json",
+    "quickjs-test262-computed.json",
+    "quickjs-test262-safari.json"
+  ],
+  "note": "136 programs / 1224 values pass on Safari and software WebGPU. Adapted variants: 182 pass and 154 runtime unsupported in both. M1 Node/Dawn last completed 114 programs / 1026 values; later name/length suite stopped after over 9 minutes compiling without a result."
+}

@@ -1,0 +1,18 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "251c2efdbec98cb6c6863303a9f713a8f5b9d3faa7a9ef36c198c7c60f6b79e1",
+    "experiments/quickjs-runtime/compiler.js": "d0d0ea76d8974b77252055ce5c6da2d32d3d99ec9a91700dc266135ba2babfda",
+    "experiments/quickjs-runtime/program.js": "33720b4b2fa94bb1a1c6cb3e9ab6fb34e9ee5dd1e689dbef54d3a263e0327331",
+    "experiments/quickjs-runtime/shader.js": "67c98256930d0298efe7dcb930ee1ee360128a8a86ab7621a8753a1286019185",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "76ed17827d74d45151c486960fc0613aa34b1356ce14d98bb1041a7cee9dd933",
+    "experiments/quickjs-runtime/check.mjs": "eb718f4aeae0140b6cc4619cdb8a8830818838719e64abaebfcbc27df3f859c4",
+    "experiments/quickjs-runtime/test262-adapted.mjs": "ebbe29dfdf1327cca2395ace68952fa869833fe4967b612e62211fc84eee4093"
+  },
+  "reports": [
+    "quickjs-safari-981.json",
+    "quickjs-local-981.json",
+    "quickjs-m1-981.json"
+  ],
+  "note": "109 programs / 981 values pass on all three paths."
+}

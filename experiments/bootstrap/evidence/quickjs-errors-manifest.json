@@ -1,0 +1,19 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "a1e3c11ca6de432ef58ec1887c04917f64edf6a242e2d4826dd752925e47154d",
+    "experiments/quickjs-runtime/compiler.js": "d0d0ea76d8974b77252055ce5c6da2d32d3d99ec9a91700dc266135ba2babfda",
+    "experiments/quickjs-runtime/program.js": "e7286661288070980e940d79b9c961b8c30904f9b21d55f30d2a53aebbc3ee4e",
+    "experiments/quickjs-runtime/shader.js": "6211379520b2aba04a3f3f42f11e9d7979b6af77efe7a86358430d6602372383",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "b6d50d5218c0a71d074023091af45d698ac9f19600daef27fc4c7b9f0f634c4b",
+    "experiments/quickjs-runtime/validation.js": "458ffd0776997bd735453155646bc59249b34a5e6c95f5e5002d6da61bff699a",
+    "experiments/quickjs-runtime/browser.js": "a038dde16bbef79ee4606072caa3a9073617fbe7aa837ab5a473974c6288f774",
+    "experiments/quickjs-runtime/test262-harness.js": "fc388ad224ab153522117889955a8de99d7ade24ac5e14673afbc26e6db1396c",
+    "experiments/quickjs-runtime/browser-test262.js": "64e579a4a3baac0bab6fe7fbacb8327bcc6160933436217a8c7a21cd7c1411d9"
+  },
+  "reports": [
+    "quickjs-safari-2394.json",
+    "quickjs-test262-safari-errors.json"
+  ],
+  "note": "Safari: 266 programs / 2394 values / 16 negative checks. Adapted inventory: 296 pass, 0 fail, 736 unsupported among 1032 variants; 925 files excluded. Error constructors, prototypes and native accessors added. Latest Node/Dawn suites have not completed."
+}

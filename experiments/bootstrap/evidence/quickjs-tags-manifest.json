@@ -1,0 +1,19 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "251c2efdbec98cb6c6863303a9f713a8f5b9d3faa7a9ef36c198c7c60f6b79e1",
+    "experiments/quickjs-runtime/compiler.js": "d0d0ea76d8974b77252055ce5c6da2d32d3d99ec9a91700dc266135ba2babfda",
+    "experiments/quickjs-runtime/program.js": "2310b9826878bafe91b231cb16ad6ad7c10fae7f1f25cd02e93a87ec35714138",
+    "experiments/quickjs-runtime/shader.js": "5e31480015d84a4c88b1ea8cb535ea3e1f20d0d9050f7db99f6801ba20d8a412",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "f46f026658801716a732702eac7a0bbdc2921139412a32de8d8947b6103ef1ea",
+    "experiments/quickjs-runtime/check.mjs": "87a57907eaaf78bdaca190007ca0580f8fbbefc14da380326a4d44de515b69d3",
+    "experiments/quickjs-runtime/test262-adapted.mjs": "ebbe29dfdf1327cca2395ace68952fa869833fe4967b612e62211fc84eee4093"
+  },
+  "reports": [
+    "quickjs-safari-1026.json",
+    "quickjs-local-1026.json",
+    "quickjs-m1-1026.json",
+    "quickjs-test262-tags.json"
+  ],
+  "note": "114 programs / 1026 values pass on all three paths. Adapted descriptor variants: 182 pass, 0 fail, 850 unsupported; 925 files excluded."
+}

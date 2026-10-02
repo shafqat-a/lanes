@@ -1,0 +1,2033 @@
+{
+  "date": "2026-10-02T09:15:58.702Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "commit": "7ab7fafa0003f73fc85c1b95d88094d33f7eb8bd",
+    "backend": "gpu",
+    "method": "Original test bodies wrapped in a function with an adapted GPU assert object. Default tests tried in sloppy and strict function modes. Top-level script semantics and the full upstream harness are not reproduced.",
+    "excludedHarnessFiles": 925,
+    "license": "./test262-LICENSE.txt",
+    "fullTest262": false,
+    "omittedReferenceRejectedVariants": 0,
+    "nativeReference": "Fresh Safari iframe realm per adapted variant",
+    "compiler": "QuickJS/Wasm",
+    "omittedCompileUnsupportedVariants": 696,
+    "counts": {
+      "passed": 182,
+      "referenceRejected": 0,
+      "failed": 0,
+      "exportedVariants": 336,
+      "unsupported": 154
+    },
+    "sourceFiles": 1441,
+    "records": [
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-0-1.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-0-1.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-0-2.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-0-2.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-101.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-101.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-107.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-107.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-108.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-108.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-110.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-110.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-111.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-111.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-112.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-112.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-124.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-124.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-126.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-126.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-132.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 26; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-132.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 26; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-139.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-139.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-140.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-140.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-154.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-154.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-158.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 26; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-158.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 26; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-165.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-165.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-166.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-166.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-180.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-180.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-186.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-186.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-187.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-187.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-189.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-189.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-190.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-190.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-191.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-191.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-203.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-203.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-205.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-205.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-207.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-207.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-211.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 26; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-211.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 26; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-218.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-218.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-219.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-219.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-75.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-75.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-79.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 26; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-79.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 26; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-86.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-86.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-87.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-3-87.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-126.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-126.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-127.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-127.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-128.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-128.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-129.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-129.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-130.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-130.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-131.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-131.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-132.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-132.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-137.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-137.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-14.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-14.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-142.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-142.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-143.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-143.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-144.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-144.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-146.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-146.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-147.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-147.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-15.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-15.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-154.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-154.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-155.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-155.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-159.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-159.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-160.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-160.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-161.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-161.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-163.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-163.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-178.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-178.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-179-1.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 20; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-179-1.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 20; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-182.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-182.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-187.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-187.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-19.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-19.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-2.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-2.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-21.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-21.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-274.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-274.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-275.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-275.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-276.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-276.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-3.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-3.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-382.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-382.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-383.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-383.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-384.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-384.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-385.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-385.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-386.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-386.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-390.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-390.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-395.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-395.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-397.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-397.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-398.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-398.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-4.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-4.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-463.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-463.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-481.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-481.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-499.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-499.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-5.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-5.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-535.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-535.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-553.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-553.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-6.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/15.2.3.6-4-6.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/8.12.9-9-c-i_1.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/8.12.9-9-c-i_1.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/defineProperty/8.12.9-9-c-i_2.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/defineProperty/8.12.9-9-c-i_2.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-0-1.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-0-1.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-1-3.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-1-3.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-1-4.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-1-4.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-1.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-1.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-1.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 13; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-1.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 13; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-10.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-10.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-11.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-11.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-12.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-12.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-13.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-13.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-14.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-14.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-15.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-15.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-16.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-16.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-17.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-17.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-18.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-18.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-19.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-19.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-2.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 13; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-2.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 13; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-20.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-20.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-21.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-21.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-22.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-22.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-23.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-23.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-24.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-24.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-25.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-25.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-26.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-26.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-27.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-27.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-28.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-28.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-29.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-29.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-3.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-3.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-31.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-31.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-33.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-33.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-34.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-34.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-35.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-35.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-36.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-36.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-37.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-37.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-38.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-38.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-4.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-4.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-42.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 20; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-42.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 20; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-43.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 22; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-43.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 22; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-45.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 27; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-45.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 27; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-5.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-5.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-6.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-6.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-7.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-7.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 15; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-8.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-8.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-9.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-2-9.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-3-1.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-3-1.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-3-10.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-3-10.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-3-15.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-3-15.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-3-5.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-3-5.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-3-9.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-3-9.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-1.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-1.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-14.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-14.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-15.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-15.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-16.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-16.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-17.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-17.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-18.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-18.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-182.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-182.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-19.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-19.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-2.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-2.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-20.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-20.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-21.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-21.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-22.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-22.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-223.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-223.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-224.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-224.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-227.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-227.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-228.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-228.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-23.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-23.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-231.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-231.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-232.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-232.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-235.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-235.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-236.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-236.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-239.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-239.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-24.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-24.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-240.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-240.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-243.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-243.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-244.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-244.js",
+        "status": "passed"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-25.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-25.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-26.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-26.js",
+        "error": "Unsupported runtime operation in lane 0, instruction 11; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-27.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-27.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-28.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-28.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-29.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-29.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-3.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-3.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-30.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-30.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-31.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-31.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-32.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-32.js",
+        "status": "passed"
+      },
+      {
+        "strict": false,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-33.js",
+        "status": "passed"
+      },
+      {
+        "strict": true,
+        "file": "test/built-ins/Object/getOwnPropertyDescriptor/15.2.3.3-4-33.js",
+        "status": "passed"
+      }
+    ]
+  }
+}

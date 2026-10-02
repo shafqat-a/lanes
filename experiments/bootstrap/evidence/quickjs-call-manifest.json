@@ -1,0 +1,20 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "a1e3c11ca6de432ef58ec1887c04917f64edf6a242e2d4826dd752925e47154d",
+    "experiments/quickjs-runtime/compiler.js": "d0d0ea76d8974b77252055ce5c6da2d32d3d99ec9a91700dc266135ba2babfda",
+    "experiments/quickjs-runtime/program.js": "532c797151c354dccebd5ea2791c50adcae2aef6adbbde2bbe496f2c43ae1bce",
+    "experiments/quickjs-runtime/shader.js": "b8d2efd578fad5bdca7f20cc51b4980e0287cad7bfcb9502f8b6fcc7c2f22060",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "8ade467bea7779f6d3a12459a37753b69df25ae2a85b8cec4076b4babfb7d85d",
+    "experiments/quickjs-runtime/check.mjs": "f803d620c5429b7839e913681fc0f864c06382a053b0a22d7ca4f8fc4212aaaa",
+    "experiments/quickjs-runtime/check-compiler.mjs": "3a9a80471194fe6c38b3b20f0c0b5ef131639c504f6a55d9f57756122bdcfbc8",
+    "experiments/quickjs-runtime/test262-adapted.mjs": "5611974b1a6ede40d624f10e63cf34902e62087a34ffec86d89c7d989089985a",
+    "experiments/quickjs-runtime/test262-harness.js": "fc388ad224ab153522117889955a8de99d7ade24ac5e14673afbc26e6db1396c"
+  },
+  "reports": [
+    "quickjs-safari-1503.json",
+    "quickjs-local-1503.json",
+    "quickjs-test262-call.json"
+  ],
+  "note": "167 programs / 1503 values pass in Safari and software WebGPU; adapted descriptor variants: 200 pass, 0 fail, 832 unsupported; 925 excluded files."
+}

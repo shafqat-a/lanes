@@ -1,0 +1,17 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "251c2efdbec98cb6c6863303a9f713a8f5b9d3faa7a9ef36c198c7c60f6b79e1",
+    "experiments/quickjs-runtime/compiler.js": "d0d0ea76d8974b77252055ce5c6da2d32d3d99ec9a91700dc266135ba2babfda",
+    "experiments/quickjs-runtime/program.js": "33720b4b2fa94bb1a1c6cb3e9ab6fb34e9ee5dd1e689dbef54d3a263e0327331",
+    "experiments/quickjs-runtime/shader.js": "b37d709a146faee4ebdafc1ee01917ab77265c896eecf254536ccfa0c2495e0f",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "b164b31949c4bfa20d5bb1c8470ac3b67899bdde5c375896e83838874c5c6061",
+    "experiments/quickjs-runtime/check.mjs": "eb718f4aeae0140b6cc4619cdb8a8830818838719e64abaebfcbc27df3f859c4"
+  },
+  "reports": [
+    "quickjs-safari-927.json",
+    "quickjs-local-927.json",
+    "quickjs-m1-927.json"
+  ],
+  "note": "103 programs / 927 values pass on all three paths. M1 Node check includes dispatch-budget and unsupported-feature checks."
+}

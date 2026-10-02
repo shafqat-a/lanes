@@ -1,0 +1,29 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "a1e3c11ca6de432ef58ec1887c04917f64edf6a242e2d4826dd752925e47154d",
+    "experiments/quickjs-runtime/compiler.js": "748afa4d2772ad84846a1ecf2bb8c9ed5d1f34d1031f6df4303d0dcd6024699f",
+    "experiments/quickjs-runtime/program.js": "8bfe63ca433df44f2d0484985a6412b5c29c63a76b8cb44919de0da439052083",
+    "experiments/quickjs-runtime/shader.js": "ed7aa01375b1235fff0c78b984018170a3af1b191396ba1696425a9520098d20",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "7d653ff0afd2fd664f363dcbbbbc38e388fa2901e18d1528acd814249840a878",
+    "experiments/quickjs-runtime/validation.js": "e4968724b7f3f4fbdb06bfe89957b60edd4a67d265c2f21b3f744d1625ff1fe3",
+    "experiments/quickjs-runtime/browser.js": "925987c62a4cc6d3bcf377f344553922fbf1b6a083ed690e674e3bfd22e80985",
+    "experiments/quickjs-runtime/test262-harness.js": "fc388ad224ab153522117889955a8de99d7ade24ac5e14673afbc26e6db1396c",
+    "experiments/quickjs-runtime/browser-test262.js": "64e579a4a3baac0bab6fe7fbacb8327bcc6160933436217a8c7a21cd7c1411d9",
+    "experiments/quickjs-runtime/bootstrap.js": "61911fdf371575262f16d372b6b501887426016cb7aefcd7e35e68a3f52fa26c",
+    "experiments/quickjs-runtime/engine262-LICENSE.txt": "171d63abdb8a993e2c2985ac14a509617d0f18dfb1d97108d5641af2bf82e387",
+    "experiments/quickjs-runtime/check-compiler.mjs": "ed50aba750c5b2e4a9e7158ca1312fe98341f75bdc62dff948d9dfc90d8f0eb2"
+  },
+  "reports": [
+    "quickjs-safari-3060.json",
+    "quickjs-test262-safari-arguments.json"
+  ],
+  "note": "Unmapped arguments stage. Safari: 340 programs / 3060 values / 25 negative checks. Native/Wasm parity: 340 programs. Latest Node/Dawn suites have not completed.",
+  "adaptedCounts": {
+    "passed": 395,
+    "referenceRejected": 0,
+    "failed": 0,
+    "exportedVariants": 1032,
+    "unsupported": 637
+  }
+}

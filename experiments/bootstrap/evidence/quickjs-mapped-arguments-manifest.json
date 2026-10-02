@@ -1,0 +1,22 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "a1e3c11ca6de432ef58ec1887c04917f64edf6a242e2d4826dd752925e47154d",
+    "experiments/quickjs-runtime/compiler.js": "748afa4d2772ad84846a1ecf2bb8c9ed5d1f34d1031f6df4303d0dcd6024699f",
+    "experiments/quickjs-runtime/program.js": "479875201c0faa42febffc72367439752f1897dcdfee8d85b7dcf4e8cdda33a6",
+    "experiments/quickjs-runtime/shader.js": "c9fc90c28c22456529c4daa86acff08e3509747d90b9ce59ff6ec0bf148a6684",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "775d0d2d1f2a4775e9370862766ce32bc15a43a9e7d9396d28cda6900b6a462c",
+    "experiments/quickjs-runtime/validation.js": "891f9f0210fa4c162fda9ff356ca126922aca496cb06a6f1bf210133b3ba37d6",
+    "experiments/quickjs-runtime/browser.js": "925987c62a4cc6d3bcf377f344553922fbf1b6a083ed690e674e3bfd22e80985",
+    "experiments/quickjs-runtime/test262-harness.js": "fc388ad224ab153522117889955a8de99d7ade24ac5e14673afbc26e6db1396c",
+    "experiments/quickjs-runtime/browser-test262.js": "64e579a4a3baac0bab6fe7fbacb8327bcc6160933436217a8c7a21cd7c1411d9",
+    "experiments/quickjs-runtime/bootstrap.js": "61911fdf371575262f16d372b6b501887426016cb7aefcd7e35e68a3f52fa26c",
+    "experiments/quickjs-runtime/engine262-LICENSE.txt": "171d63abdb8a993e2c2985ac14a509617d0f18dfb1d97108d5641af2bf82e387",
+    "experiments/quickjs-runtime/check-compiler.mjs": "ed50aba750c5b2e4a9e7158ca1312fe98341f75bdc62dff948d9dfc90d8f0eb2"
+  },
+  "reports": [
+    "quickjs-safari-3258.json",
+    "quickjs-test262-safari-mapped-arguments.json"
+  ],
+  "note": "Safari: 362 programs / 3258 values / 24 negative checks; descriptor resumption 206 single-instruction dispatches. Native/Wasm parity: 362 programs. Adapted inventory: 406 pass, 0 fail, 626 unsupported among 1032 variants; 925 files excluded. Mapped/unmapped arguments, parameter aliasing and descriptor transitions tested. Latest Node/Dawn suites have not completed."
+}

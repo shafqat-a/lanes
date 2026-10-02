@@ -1,0 +1,22 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "a1e3c11ca6de432ef58ec1887c04917f64edf6a242e2d4826dd752925e47154d",
+    "experiments/quickjs-runtime/compiler.js": "748afa4d2772ad84846a1ecf2bb8c9ed5d1f34d1031f6df4303d0dcd6024699f",
+    "experiments/quickjs-runtime/program.js": "78f809b00e112f9d8d38ff26de27eba90ae72ca5950f54a0c4e5e09ff4c93d3b",
+    "experiments/quickjs-runtime/shader.js": "13c683a7f1d6330428c42a5f1331a6f17ec0703c98208988a0a57f46f0d9be78",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "e07d5f98c3e3ac3cd1c7513d23c10a16df4a0cc47fdc42d70f8d79873176cd5c",
+    "experiments/quickjs-runtime/validation.js": "2851fe717f51e4c6f182382c89c0293d38c7ecf9d3aafe823df7fb4805745d9e",
+    "experiments/quickjs-runtime/browser.js": "925987c62a4cc6d3bcf377f344553922fbf1b6a083ed690e674e3bfd22e80985",
+    "experiments/quickjs-runtime/test262-harness.js": "fc388ad224ab153522117889955a8de99d7ade24ac5e14673afbc26e6db1396c",
+    "experiments/quickjs-runtime/browser-test262.js": "64e579a4a3baac0bab6fe7fbacb8327bcc6160933436217a8c7a21cd7c1411d9",
+    "experiments/quickjs-runtime/bootstrap.js": "61911fdf371575262f16d372b6b501887426016cb7aefcd7e35e68a3f52fa26c",
+    "experiments/quickjs-runtime/engine262-LICENSE.txt": "171d63abdb8a993e2c2985ac14a509617d0f18dfb1d97108d5641af2bf82e387",
+    "experiments/quickjs-runtime/check-compiler.mjs": "ed50aba750c5b2e4a9e7158ca1312fe98341f75bdc62dff948d9dfc90d8f0eb2"
+  },
+  "reports": [
+    "quickjs-safari-2835.json",
+    "quickjs-test262-safari-array-fixed.json"
+  ],
+  "note": "Safari: 315 programs / 2835 values / 20 negative checks. Native/Wasm parity: 315 programs. Adapted inventory: 384 pass, 0 fail, 648 unsupported among 1032 variants; 925 files excluded. Fixed four failures from missing Array.prototype own method descriptors. Latest Node/Dawn suites have not completed."
+}

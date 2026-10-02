@@ -1,0 +1,238 @@
+{
+  "commit": "a600354c2954300d62d108bf9ed3459a8e4a289b",
+  "files": 374,
+  "javascriptBytesAfterTypeStripping": 1809330,
+  "features": {
+    "GeneratorFunction": {
+      "count": 1055,
+      "example": "src/abstract-ops/arguments-operations.mts (after type stripping, line 101)"
+    },
+    "YieldExpression": {
+      "count": 2813,
+      "example": "src/abstract-ops/arguments-operations.mts (after type stripping, line 107)"
+    },
+    "ClassDeclaration": {
+      "count": 74,
+      "example": "src/abstract-ops/module-records.mts (after type stripping, line 111)"
+    },
+    "ClassExpression": {
+      "count": 4,
+      "example": "src/completion.mts (after type stripping, line 184)"
+    },
+    "ObjectExpression": {
+      "count": 809,
+      "example": "src/abstract-ops/arguments-operations.mts (after type stripping, line 202)"
+    },
+    "ArrayExpression": {
+      "count": 2005,
+      "example": "src/abstract-ops/arguments-operations.mts (after type stripping, line 154)"
+    },
+    "MemberExpression": {
+      "count": 18907,
+      "example": "src/abstract-ops/arguments-operations.mts (after type stripping, line 197)"
+    },
+    "ForOfStatement": {
+      "count": 305,
+      "example": "src/abstract-ops/array-objects.mts (after type stripping, line 175)"
+    },
+    "ImportDeclaration": {
+      "count": 1532,
+      "example": "src/abstract-ops/arguments-operations.mts (after type stripping, line 1)"
+    },
+    "new Map": {
+      "count": 11,
+      "example": "src/execution-context/Agent.mts (after type stripping, line 193)"
+    },
+    "new Set": {
+      "count": 93,
+      "example": "src/abstract-ops/global-object.mts (after type stripping, line 187)"
+    },
+    "new WeakMap": {
+      "count": 3,
+      "example": "src/execution-context/Agent.mts (after type stripping, line 194)"
+    },
+    "new WeakSet": {
+      "count": 1,
+      "example": "src/execution-context/Agent.mts (after type stripping, line 195)"
+    }
+  },
+  "isolatedSingleParameterFunctions": {
+    "attempted": 542,
+    "compiled": 16,
+    "compiledFunctions": [
+      {
+        "name": "IsBigIntElementType",
+        "file": "src/abstract-ops/arraybuffer-objects.mts",
+        "source": "function IsBigIntElementType(type) {\n  if (type === \"BigUint64\" || type === \"BigInt64\") return true;\n  return false;\n}"
+      },
+      {
+        "name": "IsUnsignedElementType",
+        "file": "src/abstract-ops/arraybuffer-objects.mts",
+        "source": "function IsUnsignedElementType(type) {\n  if (type === \"Uint8\" || type === \"Uint8C\" || type === \"Uint16\" || type === \"Uint32\" || type === \"BigUint64\") return true;\n  return false;\n}"
+      },
+      {
+        "name": "IsSharedArrayBuffer",
+        "file": "src/abstract-ops/arraybuffer-objects.mts",
+        "source": "function IsSharedArrayBuffer(_obj) {\n  return false;\n}"
+      },
+      {
+        "name": "abs",
+        "file": "src/abstract-ops/math.mts",
+        "source": "function abs(x) {\n  if (x < 0) {\n    return -x;\n  }\n  return x;\n}"
+      },
+      {
+        "name": "isAllButDefault",
+        "file": "src/abstract-ops/module-records.mts",
+        "source": "function isAllButDefault(v) {\n  return v === \"all-but-default\";\n}"
+      },
+      {
+        "name": "isAllNames",
+        "file": "src/abstract-ops/module-records.mts",
+        "source": "function isAllNames(v) {\n  return v === \"all\";\n}"
+      },
+      {
+        "name": "IsGrowableSharedArrayBuffer",
+        "file": "src/abstract-ops/shared-arraybuffer.mts",
+        "source": "function IsGrowableSharedArrayBuffer(_object) {\n  return false;\n}"
+      },
+      {
+        "name": "isCalendarUnit",
+        "file": "src/abstract-ops/temporal/temporal.mts",
+        "source": "function isCalendarUnit(unit) {\n  return unit === \"year\" || unit === \"month\" || unit === \"week\";\n}"
+      },
+      {
+        "name": "NegateRoundingMode",
+        "file": "src/abstract-ops/temporal/temporal.mts",
+        "source": "function NegateRoundingMode(roundingMode) {\n  switch (roundingMode) {\n    case \"ceil\":\n      return \"floor\";\n    case \"floor\":\n      return \"ceil\";\n    case \"halfCeil\":\n      return \"halfFloor\";\n    case \"halfFloor\":\n      return \"halfCeil\";\n    default:\n      return roundingMode;\n  }\n}"
+      },
+      {
+        "name": "isDateUnit",
+        "file": "src/abstract-ops/temporal/temporal.mts",
+        "source": "function isDateUnit(unit) {\n  switch (unit) {\n    case \"year\":\n    case \"month\":\n    case \"week\":\n    case \"day\":\n      return true;\n    default:\n      return false;\n  }\n}"
+      },
+      {
+        "name": "isTimeUnit",
+        "file": "src/abstract-ops/temporal/temporal.mts",
+        "source": "function isTimeUnit(unit) {\n  switch (unit) {\n    case \"hour\":\n    case \"minute\":\n    case \"second\":\n    case \"millisecond\":\n    case \"microsecond\":\n    case \"nanosecond\":\n      return true;\n    default:\n      return false;\n  }\n}"
+      },
+      {
+        "name": "utf8Decode",
+        "file": "src/intrinsics/URIHandling.mts",
+        "source": "function utf8Decode(bytes) {\n  let codepoint = 0;\n  let index = 0;\n  let bytes_seen = 0;\n  let bytes_needed = 0;\n  let lower_boundary = 128;\n  let upper_boundary = 191;\n  while (true) {\n    if (!bytes.length) {\n      if (bytes_needed === 0) {\n        return null;\n      }\n      return codepoint;\n    }\n    const byte = bytes[index];\n    if (bytes_needed === 0) {\n      if (byte >= 0 && byte <= 127) {\n        return byte;\n      } else if (byte >= 194 && byte <= 223) {\n        bytes_needed = 1;\n        codepoint = byte & 31;\n      } else if (byte >= 224 && byte <= 239) {\n        if (byte === 224) {\n          lower_boundary = 160;\n        }\n        if (byte === 237) {\n          upper_boundary = 159;\n        }\n        bytes_needed = 2;\n        codepoint = byte & 15;\n      } else if (byte >= 240 && byte <= 244) {\n        if (byte === 240) {\n          lower_boundary = 144;\n        }\n        if (byte === 244) {\n          upper_boundary = 143;\n        }\n        bytes_needed = 3;\n        codepoint = byte & 7;\n      } else {\n        return null;\n      }\n      index += 1;\n      continue;\n    }\n    if (byte < lower_boundary || byte > upper_boundary) {\n      return null;\n    }\n    lower_boundary = 128;\n    upper_boundary = 191;\n    codepoint = codepoint << 6 | byte & 63;\n    bytes_seen += 1;\n    index += 1;\n    if (bytes_seen === bytes_needed) {\n      return codepoint;\n    }\n  }\n}"
+      },
+      {
+        "name": "digitToNumber",
+        "file": "src/intrinsics/parseInt.mts",
+        "source": "function digitToNumber(_digit) {\n  let digit = _digit.charCodeAt(0);\n  if (digit < 48) {\n    return NaN;\n  }\n  if (digit <= 57) {\n    return digit - 48;\n  }\n  digit &= ~32;\n  if (digit < 65) {\n    return NaN;\n  }\n  if (digit <= 90) {\n    return digit - 65 + 10;\n  }\n  return NaN;\n}"
+      },
+      {
+        "name": "DeclarationPart",
+        "file": "src/static-semantics/DeclarationPart.mts",
+        "source": "function DeclarationPart(node) {\n  return node;\n}"
+      },
+      {
+        "name": "IsInTailPosition",
+        "file": "src/static-semantics/IsInTailPosition.mts",
+        "source": "function IsInTailPosition(_node) {\n  return false;\n}"
+      },
+      {
+        "name": "__ts_cast__",
+        "file": "src/utils/language.mts",
+        "source": "function __ts_cast__(_value) {\n}"
+      }
+    ],
+    "failures": {
+      "Unknown variable: OrdinaryObjectCreate": 3,
+      "GPU VM does not support BinaryExpression (in)": 37,
+      "GPU VM does not support FunctionDeclaration": 94,
+      "Unknown variable: ObjectValue": 13,
+      "GPU VM does not support MemberExpression": 74,
+      "Unknown variable: Number": 5,
+      "Unknown variable: JSStringValue": 4,
+      "Unknown variable: Assert": 22,
+      "GPU VM does not support ChainExpression": 3,
+      "Unknown variable: DateParser": 4,
+      "Unknown variable: AvailableNamedTimeZoneIdentifiers": 1,
+      "Unknown variable: SystemTimeZoneIdentifier": 2,
+      "Unknown variable: MakeDay": 1,
+      "Unknown variable: modulo": 6,
+      "Unknown variable: InLeapYear": 2,
+      "Unknown variable: YearFromTime": 1,
+      "Unknown variable: Day": 1,
+      "GPU VM does not support Literal": 6,
+      "Unknown variable: floorDiv": 1,
+      "Unknown variable: X": 12,
+      "GPU VM does not support FunctionExpression": 2,
+      "Unknown variable: Get": 1,
+      "Unknown variable: NumberValue": 3,
+      "GPU VM does not support UnaryExpression (typeof)": 7,
+      "Unknown variable: Math": 3,
+      "Unknown variable: CreateDefaultExportSyntheticModule": 1,
+      "Unknown variable: HostGetSupportedImportAttributes": 1,
+      "Unknown variable: UndefinedValue": 3,
+      "GPU VM does not support ArrayExpression": 10,
+      "GPU VM does not support ObjectExpression": 7,
+      "Unknown variable: Q": 13,
+      "GPU VM does not support NewExpression": 6,
+      "Unknown variable: Value": 5,
+      "Unknown variable: IsDataDescriptor": 1,
+      "Unknown variable: BigIntValue": 2,
+      "Unknown variable: surroundingAgent": 9,
+      "Unknown variable: ISODateToEpochDays": 4,
+      "Unknown variable: DateDurationSign": 1,
+      "GPU VM does not support ForOfStatement": 5,
+      "Unknown variable: MinEpochNanoseconds": 1,
+      "Unknown variable: NanosecondsPerDay": 1,
+      "Unknown variable: RoundNumberToIncrement": 1,
+      "Unknown variable: abs": 1,
+      "Unknown variable: F": 2,
+      "Unknown variable: Z": 1,
+      "Unknown variable: parseFloat": 1,
+      "Unknown variable: isDataViewObject": 1,
+      "Unknown variable: NormalCompletion": 5,
+      "Unknown variable: Completion": 1,
+      "Unknown variable: Q_runtime": 1,
+      "Unknown variable: isEvaluator": 2,
+      "Unknown variable: Object": 3,
+      "Unknown variable: HasSourceTextAvailable": 1,
+      "GPU VM does not support ArrowFunctionExpression": 1,
+      "Unknown variable: NODEJS_PHASES": 1,
+      "Unknown variable: decodeFloatBits": 3,
+      "Unknown variable: bitsToLittleEndianBytes": 3,
+      "Unknown variable: DEFAULT_MIN_MERGE": 1,
+      "Unknown variable: bootstrapPrototype": 48,
+      "Unknown variable: bootstrapConstructor": 24,
+      "Unknown variable: BooleanValue": 1,
+      "Unknown variable: EnsureCompletion": 2,
+      "Unknown variable: FormatTimeString": 1,
+      "Unknown variable: CreateBuiltinFunction": 2,
+      "Unknown variable: MakeBasicObject": 1,
+      "Unknown variable: String": 1,
+      "Unknown variable: StringCreate": 1,
+      "Unknown variable: SymbolValue": 1,
+      "Unknown variable: bootstrapTemporalDurationPrototype": 1,
+      "Unknown variable: bootstrapTemporalInstantPrototype": 1,
+      "Unknown variable: bootstrapTemporalPlainDatePrototype": 1,
+      "Unknown variable: bootstrapTemporalPlainDateTimePrototype": 1,
+      "Unknown variable: bootstrapTemporalPlainMonthDayPrototype": 1,
+      "Unknown variable: bootstrapTemporalPlainTimePrototype": 1,
+      "Unknown variable: bootstrapTemporalPlainYearMonthPrototype": 1,
+      "Unknown variable: bootstrapTemporalZonedDateTimePrototype": 1,
+      "Unknown variable: isArray": 16,
+      "Unknown variable: InstantiateArrowFunctionExpression": 1,
+      "Unknown variable: InstantiateAsyncArrowFunctionExpression": 1,
+      "Unknown variable: InstantiateAsyncFunctionExpression": 1,
+      "Unknown variable: InstantiateAsyncGeneratorFunctionExpression": 1,
+      "Unknown variable: InstantiateOrdinaryFunctionExpression": 1,
+      "Unknown variable: InstantiateGeneratorFunctionExpression": 1,
+      "Unknown variable: CreateForInIterator": 1,
+      "GPU VM does not support ArrayPattern": 1,
+      "Unknown variable: Evaluate_StatementList": 1,
+      "Unknown variable: IsFunctionDefinition": 1,
+      "Unknown variable: ImportedNames": 1,
+      "Unknown variable: isHexDigit": 1,
+      "Unknown variable: isErrorObject": 1
+    }
+  },
+  "caveat": "Static source inventory; no engine262 runtime execution. Isolated function compilation does not establish transitive dependency support. Counts are not a conformance percentage."
+}

@@ -1,0 +1,16 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "a1e3c11ca6de432ef58ec1887c04917f64edf6a242e2d4826dd752925e47154d",
+    "experiments/quickjs-runtime/compiler.js": "d0d0ea76d8974b77252055ce5c6da2d32d3d99ec9a91700dc266135ba2babfda",
+    "experiments/quickjs-runtime/program.js": "532c797151c354dccebd5ea2791c50adcae2aef6adbbde2bbe496f2c43ae1bce",
+    "experiments/quickjs-runtime/shader.js": "5b45b8df940ab3b61aa0fb58788b730d5fb6ec7a025d79755d9795e1c2dc4c5d",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "3e87f401ef53825638da006c2f7be6527d6af1169110a200f299d8ae8ab6ac86",
+    "experiments/quickjs-runtime/check.mjs": "8aef6f82f46b9b27887294c473c318bc61d42b1da80f06d5dd091678ab7f50eb"
+  },
+  "reports": [
+    "quickjs-safari-1611.json",
+    "quickjs-local-1611.json"
+  ],
+  "note": "179 programs / 1611 values pass in Safari and software WebGPU. Getter-dependent apply lists remain unsupported."
+}
