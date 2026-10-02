@@ -2,8 +2,9 @@
 <header><a class="brand" href="./">≋ Lanes <span>VM LAB</span></a><a href="simulation.html">Agent field ↗</a></header>
 <main><p class="eyebrow">TOWARD ECMASCRIPT 2025 ON THE GPU</p><h1>JavaScript numbers.<br>GPU execution.</h1>
 <p class="intro">An experimental bytecode VM with software double-precision arithmetic. CPU compilation, GPU instruction execution, and CPU execution only when WebGPU is unavailable.</p>
-<div class="notice"><strong>Foundation, not full JavaScript yet.</strong> Supports number, boolean, null, undefined, arithmetic (+ − × ÷), bitwise operations, comparisons, local variables, if, for, while, and return. Strings, objects, arrays, function calls, exceptions, and async are not implemented. Unsupported features produce errors on either backend.</div>
+<div class="notice"><strong>Experimental ES2025 runtime.</strong> Supports numeric primitives, basic UTF-16 string operations, nested functions, recursion, closures, throw/catch/finally, and garbage collection for strings and lexical environments. General objects, arrays, and async remain unimplemented. Unsupported features produce errors on either backend.</div>
 <div class="workspace"><section class="editor"><div class="panel-heading"><h2>Function</h2><span id="adapter" class="badge">Initializing</span></div>
+<p><label>Example <select id="example"><option value="numeric">Number arithmetic</option><option value="closure">Mutable closure</option><option value="recursion">Recursion</option><option value="finally">Exception & finally</option><option value="gc">Garbage collection</option><option value="strings">Strings & closures</option></select></label></p>
 <label for="source" class="sr-only">JavaScript source</label><textarea id="source" spellcheck="false">function accumulate(x) {
   let result = x;
   for (let i = 0; i &lt; 10; i++) {
@@ -11,8 +12,8 @@
   }
   return result;
 }</textarea>
-<label for="inputs">Inputs (comma separated; numbers, true, false, null, undefined)</label><textarea id="inputs" style="min-height:60px;height:75px">0, -0, 1, 0.1, 5e-324, Infinity, NaN, null, undefined</textarea>
+<label for="inputs">Inputs (comma-separated primitives; use a JSON array for strings)</label><textarea id="inputs" style="min-height:60px;height:75px">0, -0, 1, 0.1, 5e-324, Infinity, NaN, null, undefined</textarea>
 <div class="controls"><button id="run" disabled>Run VM</button><button id="check" disabled>Run conformance checks</button><button id="cancel" disabled>Cancel</button></div>
 <p class="hint">Each GPU dispatch executes a bounded number of instructions, preserving VM state for the next dispatch. Cancellation takes effect between dispatches. Device loss stops execution; it never replays work on CPU.</p></section>
-<section class="results"><h2>Results</h2><p id="status" role="status" aria-live="polite">Checking WebGPU…</p><pre id="output">—</pre><p class="hint">The conformance runner compares the supported subset with native JavaScript using Object.is, including NaN and signed zero. It covers seeded binary64 bit patterns and numeric edge cases. These targeted tests do not establish full ECMAScript conformance.</p><pre id="report">—</pre></section></div>
+<section class="results"><h2>Results</h2><p id="status" role="status" aria-live="polite">Checking WebGPU…</p><pre id="output">—</pre><p class="hint">The conformance runner compares the supported subset with native JavaScript using Object.is, including NaN and signed zero. It covers seeded binary64 bit patterns, numeric edge cases, recursion, closures, exceptions, strings, and collection of unreachable heap values. These targeted tests do not establish full ECMAScript conformance.</p><pre id="report">—</pre></section></div>
 <footer><a href="https://github.com/shafqat-a/lanes/blob/main/docs/gpu-vm.md">Architecture, supported features, and remaining work ↗</a> · Includes adapted Test262 numeric checks, <a href="test262-LICENSE.txt">BSD license</a></footer></main><script type="module" src="vm.js"></script></body></html>

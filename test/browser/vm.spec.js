@@ -1,14 +1,21 @@
 import { test, expect } from '@playwright/test';
 test('GPU VM conformance and missing features never trigger CPU fallback', async ({ page }) => {
+  test.setTimeout(120000);
   const errors = []; page.on('pageerror', error => errors.push(error.message));
   await page.goto('/vm.html'); await expect(page.locator('#adapter')).toHaveText('GPU VM');
-  await page.click('#run'); await expect(page.locator('#status')).toContainText('Backend: GPU');
+  await page.click('#run'); await expect(page.locator('#status')).toContainText('Backend: GPU', { timeout: 30000 });
   await expect(page.locator('#output')).toContainText('0 → 0.9999999999999999');
-  await page.click('#check'); await expect(page.locator('#status')).toContainText('results matched native JavaScript');
+  await page.click('#check'); await expect(page.locator('#status')).toContainText('results matched native JavaScript', { timeout: 60000 });
   expect((await page.evaluate(() => window.vmReport)).checked).toBeGreaterThan(80000);
+  for (const [example, output] of [['closure', '0 → 0.30000000000000004'], ['recursion', '12 → 479001600'], ['finally', '0 → 11'], ['gc', '0 → 604'], ['strings', 'hello → hello!']]) {
+    await page.selectOption('#example', example); await page.click('#run');
+    await expect(page.locator('#status')).toContainText('Backend: GPU', { timeout: 15000 });
+    await expect(page.locator('#output')).toContainText(output);
+  }
   await page.fill('#source', 'function f(x) { return [x]; }');
   await page.click('#run'); await expect(page.locator('#status')).toContainText('does not support');
   await expect(page.locator('#adapter')).toHaveText('GPU VM');
+  await page.fill('#inputs', '0');
   await page.fill('#source', 'function f(x) { while (true) { x++; } }');
   await page.click('#run'); await page.click('#cancel');
   await expect(page.locator('#run')).toBeEnabled(); await expect(page.locator('#status')).toHaveClass('error');

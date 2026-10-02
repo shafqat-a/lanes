@@ -9,6 +9,14 @@ test('GPU VM: software binary64 and primitive conformance', async () => {
   try {
     console.log('VM adapter:', context.adapter.info.device);
     console.log(await runVMConformance(vm));
+    await assert.rejects(vm.run(vm.compile('function f(x) { return f(x); }'), [0], { budget: 4096 }), /resource limit/);
+    await assert.rejects(vm.run(vm.compile('function f(x) { return y; let y = 1; }'), [0]), /ReferenceError/);
+    await assert.rejects(vm.run(vm.compile('function f(x) { throw x; }'), [0]), /Uncaught/);
+    await assert.rejects(vm.run(vm.compile('function f(x) { return () => x; }'), [0]), /host boundary/);
+    await assert.rejects(vm.run(vm.compile('function f(x) { return x; }'), ['a'.repeat(257)]), /string limit/);
+    await assert.rejects(vm.run(vm.compile('function f(x) { return x + x; }'), ['a'.repeat(129)]), /resource limit/);
+    await assert.rejects(vm.run(vm.compile('function f(x) { return x + 1; }'), ['2']), /does not support/);
+    await assert.rejects(vm.run(vm.compile('function f(x) { try { x(); } catch (e) { return e; } }'), [0]), /host boundary/);
     const programs = [vm.compile('function f(x) { return x + 0.1; }'), vm.compile('function f(x) { return x * 1.5; }')];
     const parallel = await Promise.all(programs.map(p => vm.run(p, [1, -0, true])));
     assert.deepEqual(parallel[0].values, [1.1, 0.1, 1.1]);

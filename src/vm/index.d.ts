@@ -1,7 +1,10 @@
-export type Primitive = number | boolean | null | undefined;
+export type Primitive = number | boolean | string | null | undefined;
 export interface Program {
   readonly source: string;
   readonly registers: number;
+  readonly functions: number;
+  readonly calls: boolean;
+  readonly strings: boolean;
   readonly instructions: readonly number[];
   readonly constants: readonly Primitive[];
 }
@@ -10,6 +13,7 @@ export interface Result {
   values: Primitive[];
   statuses: Uint32Array;
   steps: Uint32Array;
+  collections: Uint32Array;
   done: boolean;
 }
 export interface Job {
@@ -17,7 +21,7 @@ export interface Job {
   step(budget?: number): Promise<Result>;
   dispose(): Promise<void>;
 }
-export declare const VM_STATUS: Readonly<{ RUNNING: 0; DONE: 1; INVALID: 2 }>;
+export declare const VM_STATUS: Readonly<{ RUNNING: 0; DONE: 1; INVALID: 2; RESOURCE: 3; TYPE: 4; REFERENCE: 5; UNSUPPORTED: 6; THROWN: 7 }>;
 export declare function compileVM(source: string | ((input: any) => any)): Program;
 export declare class JavaScriptVM {
   private constructor();

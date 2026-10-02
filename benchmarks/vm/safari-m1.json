@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-02T02:03:59.910Z",
+  "date": "2026-10-02T04:34:35.901Z",
   "site": "http://127.0.0.1:4173/vm.html",
   "capabilities": {
     "safari:platformVersion": "26.4",
@@ -22,12 +22,29 @@
     "safari:diagnose": false
   },
   "report": {
-    "checked": 90836,
+    "checked": 110254,
     "adaptedTest262Predicates": 44,
-    "durationMs": 303,
+    "gc": {
+      "programs": 6,
+      "checked": 8,
+      "collections": 26
+    },
+    "programs": 328,
+    "durationMs": 6908,
     "seed": "0x6c616e65",
     "backend": "gpu",
     "fullTest262": false,
-    "programs": 216
+    "functions": {
+      "programs": 16,
+      "checked": 48
+    },
+    "strings": {
+      "programs": 18,
+      "checked": 72
+    },
+    "control": {
+      "programs": 36,
+      "checked": 66
+    }
   }
 }

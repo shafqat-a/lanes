@@ -109,6 +109,23 @@ fn divide(a: Pair, b: Pair) -> Pair {
   if (any(sa != Pair(0u))) { q.x |= 1u; }
   return pack(sign, e, q);
 }
+fn remainder(a: Pair, b: Pair) -> Pair {
+  if (nan(a) || nan(b) || inf(a) || zero(b)) { return qnan(); }
+  if (zero(a) || inf(b)) { return a; }
+  var sa = sig(a); var sb = sig(b); var ea = exponent(a); var eb = exponent(b);
+  while ((sa.y & 0x100000u) == 0u) { sa = left(sa, 1u); ea--; }
+  while ((sb.y & 0x100000u) == 0u) { sb = left(sb, 1u); eb--; }
+  if (ea < eb) { return a; }
+  let distance = u32(ea - eb);
+  for (var i = 0u; i <= distance; i++) {
+    if (!less64(sa, sb)) { sa = sub64(sa, sb); }
+    if (i < distance) { sa = left(sa, 1u); }
+  }
+  let sign = a.y & 0x80000000u;
+  if (all(sa == Pair(0u))) { return Pair(0u, sign); }
+  while ((sa.y & 0x100000u) == 0u) { sa = left(sa, 1u); eb--; }
+  return pack(sign, eb, left(sa, 3u));
+}
 fn equalNumber(a: Pair, b: Pair) -> bool { return !nan(a) && !nan(b) && (all(a == b) || (zero(a) && zero(b))); }
 fn lessNumber(a: Pair, b: Pair) -> bool {
   if (nan(a) || nan(b) || (zero(a) && zero(b))) { return false; }

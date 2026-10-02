@@ -9,7 +9,7 @@ const context = await openDevice(), vm = await JavaScriptVM.create({ device: con
 try {
   const report = { date: new Date().toISOString(), node: process.version, cpu: cpus()[0]?.model,
     adapter: Object.fromEntries(['vendor', 'device', 'description', 'isFallbackAdapter'].map(k => [k, context.adapter.info[k]])),
-    methodology: 'Single 32-iteration Number workload, 5 warm samples. GPU includes allocations, transfers, software binary64 VM, state readback between 256-instruction dispatches and cleanup. Not a production workload or a speedup claim.', rows: [] };
+    methodology: 'Single 32-iteration Number workload, 5 warm samples. GPU includes allocations, transfers, software binary64 VM, result/status readback between 256-instruction dispatches (registers and heap remain GPU-resident) and cleanup. Not a production workload or a speedup claim.', rows: [] };
   const program = vm.compile(workload);
   for (const count of [1, 64, 1024]) {
     const inputs = Array.from({ length: count }, (_, i) => i / 10 - 5);
