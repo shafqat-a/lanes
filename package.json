@@ -1,16 +1,28 @@
 {
   "name": "lanes-webgpu",
-  "version": "0.0.1",
-  "private": true,
-  "description": "An experimental JavaScript bytecode interpreter on WebGPU",
+  "version": "0.1.0-alpha.1",
+  "private": false,
+  "description": "An experimental JavaScript-to-WGSL JIT for batched i32 computation",
   "type": "module",
-  "exports": "./src/index.js",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./browser": "./dist/lanes.js"
+  },
   "scripts": {
-    "test": "node --test test/cpu.test.js",
-    "test:gpu": "node --test test/gpu.test.js",
+    "test": "node --test test/cpu.test.js test/jit.test.js",
+    "test:gpu": "node --test test/gpu.test.js test/jit-gpu.test.js",
     "bench": "node scripts/bench.js",
     "test:experiment": "node --test test/experiment.test.js",
-    "bench:experiment": "node experiments/bench.js"
+    "bench:experiment": "node experiments/bench.js",
+    "build": "node scripts/build.js",
+    "dev": "npm run build && node scripts/serve.js",
+    "test:browser": "npm run build && playwright test",
+    "prepack": "npm run build",
+    "bench:jit": "node scripts/bench-jit.js",
+    "test:types": "tsc --noEmit --strict --target es2023 --module nodenext --moduleResolution nodenext test/types.ts"
   },
   "engines": {
     "node": ">=22"
@@ -20,6 +32,29 @@
     "acorn": "^8.18.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2",
     "webgpu": "^0.6.1"
-  }
+  },
+  "files": [
+    "src",
+    "dist/lanes.js",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "types": "./src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shafqat-a/lanes.git"
+  },
+  "homepage": "https://shafqat-a.github.io/lanes/",
+  "keywords": [
+    "webgpu",
+    "wgsl",
+    "jit",
+    "gpu",
+    "javascript"
+  ]
 }

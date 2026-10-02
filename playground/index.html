@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lanes — JavaScript to GPU</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a class="brand" href="./">≋ Lanes <span>ALPHA</span></a><a href="https://github.com/shafqat-a/lanes">Source ↗</a></header>
+<main>
+<p class="eyebrow">JAVASCRIPT → WGSL → YOUR GPU</p>
+<h1>One function.<br>Thousands of inputs.</h1>
+<p class="intro">Compile a small numeric JavaScript function for parallel execution. Everything runs locally in your browser.</p>
+<div class="notice"><strong>Explicit i32 semantics.</strong> Values are signed 32-bit integers; arithmetic wraps on overflow. This alpha supports a restricted subset, not arbitrary JavaScript.</div>
+<div class="workspace">
+<section class="editor"><div class="panel-heading"><h2>Your function</h2><label>Example <select id="example"><option value="simulation">Simulation</option><option value="hash">Integer hash</option><option value="rules">Rule evaluation</option></select></label></div>
+<label class="sr-only" for="source">JavaScript source</label><textarea id="source" spellcheck="false" autocapitalize="off"></textarea>
+<div class="controls"><label>Inputs <select id="size"><option>1024</option><option selected>16384</option><option>65536</option></select></label><button id="run" disabled>Run & compare →</button></div>
+<p class="hint">One argument, one final return. Pure integer expressions, let/const, if/else, and constant-bound for loops. No calls, closures, objects, or while loops.</p></section>
+<section class="results"><div class="panel-heading"><h2>Execution</h2><span id="adapter" class="badge">Initializing</span></div>
+<p id="status" role="status" aria-live="polite">Checking available backends…</p>
+<table><thead><tr><th>Path</th><th>Time</th></tr></thead><tbody id="timings"><tr><td colspan="2">Run a function to see results.</td></tr></tbody></table>
+<p class="hint">GPU timings include upload and readback. First call includes compilation if uncached. CPU fallback is Lanes’ interpreter, not a native JavaScript speed baseline.</p>
+<h3>Output preview</h3><pre id="output">—</pre>
+<details><summary>Inspect generated WGSL</summary><pre id="wgsl">—</pre></details>
+</section></div>
+<footer>Experimental numeric JIT · <a href="https://github.com/shafqat-a/lanes/blob/main/docs/compatibility.md">Compatibility & limits</a> · <a href="https://github.com/shafqat-a/lanes/blob/main/docs/performance.md">Benchmark methodology</a></footer>
+</main><script type="module" src="app.js"></script>
+</body></html>

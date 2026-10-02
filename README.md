@@ -1,109 +1,101 @@
 # Lanes
 
-**An experimental JavaScript bytecode interpreter on WebGPU.**
+**JavaScript → WGSL, compiled when you need it.**
 
-Lanes explores running many independent instances of one JavaScript program on a GPU. The CPU compiles source once; each GPU invocation interprets shared bytecode with its own registers and program counter.
+Lanes is an experimental numeric JIT for applying one function to many independent inputs. It validates a restricted JavaScript subset, lowers it to typed integer IR, generates WGSL, and caches the GPU pipeline. A CPU backend implements the same integer semantics without `eval`.
 
-**Status: research prototype.** The first milestone implements an explicitly opt-in, signed 32-bit integer mode. It is not a complete JavaScript engine, does not preserve general JavaScript Number semantics, and makes no general GPU speedup claim.
+**v0.1.0-alpha.1** · [Playground](https://shafqat-a.github.io/lanes/) · [Compatibility](docs/compatibility.md) · [API](docs/api.md) · [Benchmarks](docs/performance.md)
 
-## Run it
+The alpha uses **explicit wrapping signed 32-bit arithmetic**, not general JavaScript `Number` semantics. Objects, closures, floating point, arbitrary function calls, and browser APIs are outside its supported language. Check the compatibility contract before adopting it.
 
-Requires Node.js 22+ for the scripts. GPU checks require a WebGPU adapter through Dawn's `webgpu` package (a software adapter works for correctness).
+## Try it
+
+Clone and run locally (Node.js 22+):
 
 ```sh
+git clone https://github.com/shafqat-a/lanes.git
+cd lanes
 npm ci
-npm test
-npm run test:gpu
-npm run bench
+npm run dev
 ```
 
-`test:gpu` fails if no adapter is available; it does not silently skip. The benchmark prints adapter details and writes `results/latest.json`. The core modules accept a browser `GPUDevice` too, but browser integration has not yet been tested. Nothing has been published to npm.
+Open `http://127.0.0.1:4173`. The playground runs locally in your browser and shows source, generated WGSL, timings, and correctness checks. Its CPU comparison is the Lanes fallback, not native JavaScript; the standalone benchmark supplies native/worker baselines.
+
+The installable tarball is attached to the [GitHub alpha release](https://github.com/shafqat-a/lanes/releases/tag/v0.1.0-alpha.1). npm registry publication is pending maintainer authentication. After downloading the release asset:
+
+```sh
+npm install ./lanes-webgpu-0.1.0-alpha.1.tgz
+```
+
+## Use the JIT
 
 ```js
-import { compile, runCPU, createGPU, STATUS } from './src/index.js';
+import { Lanes } from 'lanes-webgpu';
 
-const program = compile(`
-  function step(x) {
-    let result = x;
-    for (let i = 0; i < 10; i++) {
-      result = result ^ (result << 3);
-    }
-    return result;
-  }
-`, { numericMode: 'i32' });
+const lanes = await Lanes.create({ backend: 'auto' });
+const transform = lanes.compile(
+  function transform(x) {
+    return (x ^ (x << 3)) + 1;
+  },
+  { numericMode: 'i32' }
+);
 
-const inputs = new Int32Array([1, 2, 3, 4]);
-const reference = runCPU(program, inputs);
-
-// Supply a GPUDevice from a browser or Dawn. Caller owns its lifetime.
-const runtime = await createGPU(device);
-const { values, statuses } = await runtime.run(program, inputs, { budget: 10000 });
-// A value is valid only when its status is STATUS.DONE.
+const output = await transform.run(new Int32Array([1, 2, 3, 4]));
+console.log(output); // Int32Array [10, 19, 28, 37]
+await lanes.dispose();
 ```
 
-## Supported today
+`auto` selects GPU when available and CPU otherwise. It does not predict which backend is faster for a batch. Use `backend: 'cpu'` or `'gpu'` for explicit control. In Node, pass a `GPUDevice` from a WebGPU implementation; the package does not implicitly load a native GPU binding.
 
-- One synchronous function declaration with one integer parameter and an integer result.
-- Integer literals, initialized `let`/`const`, blocks, `if`/`else`, `for`, `while`, and `return`.
-- `+`, `-`, `*`, signed comparisons, `===`, `!==`, `&`, `|`, `^`, `<<`, `>>`, unary `-`, `~`, `!`.
-- `=`, `+=`, `-=`, `*=`, prefix/postfix `++` and `--`.
-- CPU reference execution and a WGSL interpreter with independent state per input.
-- Instruction budgets and explicit completion, budget-exhaustion, or invalid-execution statuses.
+## Keep data on the GPU
 
-All arithmetic wraps to signed 32 bits; multiplication keeps the low 32 bits (like `Math.imul`). Comparisons and `!` produce integer 0 or 1. This intentionally differs from JavaScript's Number and Boolean semantics. For example, `2147483647 + 1` becomes `-2147483648` in this mode. Division, unsigned shifts, floating-point literals, implicit conversions, strings, objects, arrays, calls, closures, async functions, DOM APIs, and `eval` are unsupported. Unsupported constructs fail compilation.
-
-There are at most 128 virtual registers per program. Each lexical declaration needs an initializer; shadowing is rejected. A path reaching the end without returning is invalid. Budgets count bytecode instructions per invocation, not milliseconds; exhausted tasks do not yet support resumption. This runtime is not an audited sandbox for hostile programs.
-
-## Architecture
-
-```text
-Source → Acorn parser → subset compiler → immutable bytecode
-                                              ├── CPU reference interpreter
-                                              └── WGSL interpreter
-                                                  one invocation per input
-                                                  private registers + PC
-                                                  result + status buffers
+```js
+const batch = await lanes.batch(new Int32Array([1, 2, 3]));
+try {
+  await batch.run(firstKernel);
+  await batch.run(secondKernel); // consumes firstKernel's output; no readback
+  const output = await batch.read();
+} finally {
+  await batch.dispose();
+}
 ```
 
-Bytecode uses four 32-bit words per instruction: opcode, destination, operand A, operand B. Branch operands address instructions; constants encode signed integer bits. The shader is compiled once per runtime. Initial runs allocate and upload fresh buffers, execute, read back, and release resources. No guest code is passed to host `eval`.
+Batches reuse two GPU buffers and a readback buffer. Calls on one batch are ordered. A GPU `batch.run()` resolves after submission; `read()` waits for the result. Dispose batches and runtimes explicitly. User-supplied devices remain owned by the caller.
 
-## Measurement
+## What is implemented
 
-`npm run bench` compares warmed-up native JavaScript, the CPU bytecode interpreter, and WebGPU on a synthetic integer state-update workload at 64, 1,024, and 16,384 inputs. Every measured result is checked against an independent native implementation. Five repetitions are summarized by the median.
+- Source validation, lexical scope checks, explicit i32 typed IR, constant folding, and source-located errors.
+- Pure integer expressions, assignment statements, `if`/`else`, bounded `for` loops, and a final return.
+- Predicated WGSL conditionals; validated static loop bounds.
+- Lazy compilation with cached/in-flight pipeline reuse per runtime/device.
+- Persistent batches, resident kernel chaining, CPU fallback, and device-loss handling.
+- TypeScript declarations, a self-contained browser bundle, and a browser playground.
 
-GPU totals include buffer allocation, uploads, dispatch, readback, output decoding, and cleanup. Source compilation and pipeline creation are reported separately. These totals are **not kernel-only timings**. Native JavaScript gets explicit warm-up; no worker-pool or Wasm baseline exists yet.
+## Measurements
 
-Initial validation used Mesa llvmpipe, a **software adapter**. This proves the shader executes through WebGPU, not that Lanes is faster on physical GPUs. See [the recorded baseline](benchmarks/initial-software.json).
+On the tested RTX 2060/NVK setup, warm end-to-end runs at 65,536 inputs were approximately **17–44× faster than native JavaScript** across three numeric workload models. That timing includes fresh batch buffers, upload, execution, readback, and cleanup, with the pipeline cached. Small batches often lose. See [raw data, worker comparisons, and limitations](docs/performance.md); these are not general JavaScript speedup claims.
 
-## Performance experiment
+A previous branched shader produced intermittent wrong output on RTX/NVK. This compiler uses predicated assignments and uniform bounded loops; cross-adapter tests and the repeated regression pass. The original failure's root cause remains unresolved and its [reproducer is preserved](experiments/README.md).
 
-The follow-up experiment compares interpreter execution with direct WGSL generation on Intel UHD and RTX 2060 hardware. It separates GPU timestamps from host overhead and measures persistent buffers with and without new input uploads. See [results and limitations](experiments/README.md).
+## Development
 
 ```sh
-npm run test:experiment
-LANES_ADAPTER='NVIDIA GeForce RTX 2060 (NVK TU106)' npm run bench:experiment
+npm test                 # compiler, CPU semantics, fallback, lifecycle
+npm run test:types
+npm run test:gpu         # requires a WebGPU adapter; fails if none exists
+npx playwright install chromium
+npm run test:browser     # browser GPU and unavailable-GPU paths
+npm run bench:jit        # native JS / persistent workers / GPU
+npm pack                # builds the browser bundle and alpha tarball
 ```
 
-The direct compiler is an experiment under `experiments/`, with a smaller supported subset than the interpreter. It does not yet replace the public runtime. A branched shader showed intermittent incorrect results on the RTX/NVK configuration; the report includes a reproducer and the checked branch-free alternative.
+For Dawn adapter selection and hardware stress testing:
 
-## Next milestones
+```sh
+LANES_ADAPTER='NVIDIA GeForce RTX 2060 (NVK TU106)' LANES_STRESS=1 npm run test:gpu
+LANES_ADAPTER='Intel(R) UHD Graphics (CML GT2)' npm run bench:jit
+```
 
-1. Measure on physical GPUs and browsers, add worker-pool/Wasm baselines, and sweep divergence and batch size.
-2. Benchmark software binary64 arithmetic before choosing a Number compatibility strategy.
-3. Add resumable instruction slices and persistent GPU buffers.
-4. Add function frames, tagged values, objects, and closures with differential correctness tests.
-5. Publish an explicit compatibility matrix and selected Test262 results.
-6. Investigate specialization to WGSL only after interpreter measurements identify worthwhile workloads.
+The original bytecode `compile`, `runCPU`, and `createGPU` exports remain for research and have a different supported subset. New integrations should use `Lanes`.
 
-## Research foundations
-
-- [GVM / tinyBee](https://users.ece.utexas.edu/~gligoric/papers/CelikETAL19GVM.pdf): batched GPU bytecode interpreters and the importance of memory layout and divergence.
-- [LateralJS](https://www.slideshare.net/slideshow/javascript-on-the-gpu/12292189): historical JavaScript-on-GPU experiment, including poor performance from an early AST interpreter.
-- [WGSL](https://www.w3.org/TR/WGSL/) and [WebGPU](https://gpuweb.github.io/gpuweb/): execution model and API constraints.
-- [ECMAScript Number](https://tc39.es/ecma262/2022/#sec-ecmascript-language-types-number-type): binary64 semantics the integer prototype does not implement.
-- [QuickJS](https://bellard.org/quickjs/quickjs.html): reference engine; its bytecode is version-specific. Lanes does not use QuickJS bytecode.
-- [Test262](https://github.com/tc39/test262): future conformance testing; no conformance claim yet.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+MIT licensed. See [LICENSE](LICENSE).
