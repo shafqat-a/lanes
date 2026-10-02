@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-02T00:25:02.204Z",
+  "node": "v26.9.0",
+  "platform": "linux",
+  "adapter": {
+    "vendor": "mesa",
+    "architecture": "software",
+    "device": "llvmpipe-llvm-21-1-8-256-bits-",
+    "description": "llvmpipe: Mesa 26.0.3-1ubuntu1 (LLVM 21.1.8)",
+    "isFallbackAdapter": true
+  },
+  "numericMode": "i32",
+  "compileMs": 6.482222,
+  "pipelineMs": 27.075136999999984,
+  "repetitions": 5,
+  "statistic": "median",
+  "rows": [
+    {
+      "size": 64,
+      "nativeMs": 0.009420000000005757,
+      "cpuInterpreterMs": 4.499634999999984,
+      "gpuTotalMs": 10.25631899999999,
+      "speedupOverNative": 0.0009184581719821474
+    },
+    {
+      "size": 1024,
+      "nativeMs": 0.12931600000001708,
+      "cpuInterpreterMs": 67.89027199999998,
+      "gpuTotalMs": 11.306629000000044,
+      "speedupOverNative": 0.011437184327885578
+    },
+    {
+      "size": 16384,
+      "nativeMs": 1.634999999999991,
+      "cpuInterpreterMs": 1083.2239069999998,
+      "gpuTotalMs": 58.92326000000048,
+      "speedupOverNative": 0.027747955561182078
+    }
+  ],
+  "caveats": [
+    "Single synthetic workload; not a general JavaScript benchmark.",
+    "GPU run includes fresh buffers and bytecode upload; pipeline creation is separate.",
+    "No worker-pool or Wasm baseline yet. No kernel-only GPU timestamps.",
+    "i32 arithmetic is not full ECMAScript Number semantics."
+  ]
+}

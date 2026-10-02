@@ -1,0 +1,23 @@
+{
+  "name": "lanes-webgpu",
+  "version": "0.0.1",
+  "private": true,
+  "description": "An experimental JavaScript bytecode interpreter on WebGPU",
+  "type": "module",
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": "node --test test/cpu.test.js",
+    "test:gpu": "node --test test/gpu.test.js",
+    "bench": "node scripts/bench.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "acorn": "^8.18.0"
+  },
+  "devDependencies": {
+    "webgpu": "^0.6.1"
+  }
+}
