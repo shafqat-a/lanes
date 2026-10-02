@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/tc39/test262",
+  "commit": "7ab7fafa0003f73fc85c1b95d88094d33f7eb8bd",
+  "directory": "test/language/expressions/addition",
+  "adaptation": "Arithmetic failure predicates extracted into standalone functions. Number constants substituted with numeric literals; isNaN of a pure addition replaced with self-inequality. Original harness stays on host."
+}

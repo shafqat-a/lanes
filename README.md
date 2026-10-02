@@ -8,6 +8,8 @@ Lanes is an experimental numeric JIT for applying one function to many independe
 
 The alpha uses **explicit wrapping signed 32-bit arithmetic**, not general JavaScript `Number` semantics. Objects, closures, floating point, arbitrary function calls, and browser APIs are outside its supported language. Check the compatibility contract before adopting it.
 
+**New experimental direction:** the separate [GPU VM lab](https://shafqat-a.github.io/lanes/vm.html) executes a primitive JavaScript subset with software double-precision Number arithmetic and resumable bytecode on GPU. It chooses a whole-job CPU backend only when WebGPU is unavailable; unsupported features never trigger CPU fallback. This is the first stage toward ES2025 on M1/Safari, **not full JavaScript support yet**. See [implemented features, measurements, and remaining work](docs/gpu-vm.md). The existing i32 JIT and its performance claims are separate.
+
 ## Try it
 
 Clone and run locally (Node.js 22+):

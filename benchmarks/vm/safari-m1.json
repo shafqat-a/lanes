@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-02T02:03:59.910Z",
+  "site": "http://127.0.0.1:4173/vm.html",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "checked": 90836,
+    "adaptedTest262Predicates": 44,
+    "durationMs": 303,
+    "seed": "0x6c616e65",
+    "backend": "gpu",
+    "fullTest262": false,
+    "programs": 216
+  }
+}

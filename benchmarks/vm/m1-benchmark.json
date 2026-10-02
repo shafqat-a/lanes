@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-02T02:04:00.240Z",
+  "node": "v24.4.1",
+  "cpu": "Apple M1",
+  "adapter": {
+    "vendor": "apple",
+    "device": "apple-m1",
+    "description": "Metal driver on macOS Version 26.4 (Build 25E246)",
+    "isFallbackAdapter": false
+  },
+  "methodology": "Single 32-iteration Number workload, 5 warm samples. GPU includes allocations, transfers, software binary64 VM, state readback between 256-instruction dispatches and cleanup. Not a production workload or a speedup claim.",
+  "rows": [
+    {
+      "count": 1,
+      "firstGpuMs": 15.041707999999993,
+      "nativeMs": 0.0009159999999894808,
+      "gpuMs": 5.780957999999998,
+      "nativeSamples": [
+        0.002125000000006594,
+        0.0009159999999894808,
+        0.0005830000000059954,
+        0.0009159999999894808,
+        0.0007499999999964757
+      ],
+      "gpuSamples": [
+        5.987667000000002,
+        5.814458999999999,
+        5.6726249999999965,
+        5.780957999999998,
+        5.616040999999996
+      ]
+    },
+    {
+      "count": 64,
+      "firstGpuMs": 5.9566250000000025,
+      "nativeMs": 0.0030000000000001137,
+      "gpuMs": 5.940124999999995,
+      "nativeSamples": [
+        0.0030000000000001137,
+        0.0030410000000102855,
+        0.0028340000000071086,
+        0.004958000000002016,
+        0.0029169999999965057
+      ],
+      "gpuSamples": [
+        6.388041000000001,
+        5.8940000000000055,
+        6.038708,
+        5.902791999999991,
+        5.940124999999995
+      ]
+    },
+    {
+      "count": 1024,
+      "firstGpuMs": 8.030417,
+      "nativeMs": 0.04291700000001697,
+      "gpuMs": 7.605209000000002,
+      "nativeSamples": [
+        0.04025000000001455,
+        0.044083999999998014,
+        0.04054200000001629,
+        0.04291700000001697,
+        0.04316599999998516
+      ],
+      "gpuSamples": [
+        7.594750000000005,
+        8.227542,
+        7.421333000000004,
+        7.605209000000002,
+        9.179249999999996
+      ]
+    }
+  ]
+}

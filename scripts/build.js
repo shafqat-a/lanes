@@ -4,5 +4,7 @@ await mkdir('dist/playground', { recursive: true });
 await build({ entryPoints: ['src/index.js'], outfile: 'dist/lanes.js', bundle: true, format: 'esm', target: 'es2023', minify: true });
 await build({ entryPoints: ['playground/app.js'], outfile: 'dist/playground/app.js', bundle: true, format: 'esm', target: 'es2023', minify: true });
 await build({ entryPoints: ['playground/simulation.js', 'playground/simulation-worker.js'], outdir: 'dist/playground', bundle: true, format: 'esm', target: 'es2023', minify: true });
-for (const name of ['index.html', 'style.css', 'simulation.html', 'simulation.css']) await copyFile(`playground/${name}`, `dist/playground/${name}`);
+await build({ entryPoints: ['playground/vm.js'], outdir: 'dist/playground', bundle: true, format: 'esm', target: 'es2023', minify: true });
+for (const name of ['index.html', 'style.css', 'simulation.html', 'simulation.css', 'vm.html']) await copyFile(`playground/${name}`, `dist/playground/${name}`);
+await copyFile('test/fixtures/test262/LICENSE', 'dist/playground/test262-LICENSE.txt');
 console.error('Built browser library and playground in dist/');

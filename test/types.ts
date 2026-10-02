@@ -10,3 +10,15 @@ void ir;
 lanes.compile('function f(x) { return x; }');
 // @ts-expect-error Number arrays are not accepted as typed inputs.
 kernel.run([1, 2]);
+
+// The experimental VM is a separate API with ordinary Number semantics.
+import { JavaScriptVM, type Primitive } from 'lanes-webgpu/experimental/vm';
+const vm = await JavaScriptVM.create({ backend: 'cpu' });
+const vp = vm.compile('function f(x) { return x + 0.1; }');
+const vr = await vm.run(vp, [0, true, null, undefined]);
+const vv: Primitive | undefined = vr.values[0];
+void vv;
+const vj = await vm.start(vp, new Float64Array([1]));
+await vj.step(16);
+await vj.dispose();
+await vm.dispose();

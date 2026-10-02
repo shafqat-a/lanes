@@ -9,11 +9,15 @@
       "types": "./src/index.d.ts",
       "import": "./src/index.js"
     },
-    "./browser": "./dist/lanes.js"
+    "./browser": "./dist/lanes.js",
+    "./experimental/vm": {
+      "types": "./src/vm/index.d.ts",
+      "import": "./src/vm/runtime.js"
+    }
   },
   "scripts": {
-    "test": "node --test test/cpu.test.js test/jit.test.js test/native-demo.test.js",
-    "test:gpu": "node --test test/gpu.test.js test/jit-gpu.test.js",
+    "test": "node --test test/cpu.test.js test/jit.test.js test/native-demo.test.js test/vm.test.js",
+    "test:gpu": "node --test test/gpu.test.js test/jit-gpu.test.js test/vm-gpu.test.js",
     "bench": "node scripts/bench.js",
     "test:experiment": "node --test test/experiment.test.js",
     "bench:experiment": "node experiments/bench.js",
@@ -21,6 +25,7 @@
     "dev": "npm run build && node scripts/serve.js",
     "test:browser": "npm run build && playwright test",
     "test:safari": "node scripts/test-safari.js",
+    "test:safari:vm": "node scripts/test-safari-vm.js",
     "prepack": "npm run build",
     "bench:jit": "node scripts/bench-jit.js",
     "test:types": "tsc --noEmit --strict --target es2023 --module nodenext --moduleResolution nodenext test/types.ts"
