@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-04T01:06:44.277Z",
+  "browser": "148.0.7778.96",
+  "adapter": {
+    "vendor": "intel",
+    "architecture": "gen-9",
+    "device": "",
+    "description": "",
+    "isFallbackAdapter": false,
+    "smokeValue": 42
+  },
+  "args": [
+    "--enable-unsafe-webgpu",
+    "--use-angle=vulkan",
+    "--enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan",
+    "--disable-vulkan-surface",
+    "--disable-gpu-watchdog"
+  ],
+  "suite": "shader-compile",
+  "error": "runtime-metal-pipeline: GPUPipelineError: A valid external Instance reference no longer exists."
+}

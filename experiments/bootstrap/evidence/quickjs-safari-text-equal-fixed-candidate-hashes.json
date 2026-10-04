@@ -1,0 +1,18 @@
+{
+  "archive": "/tmp/lanes-m1-text-equal-fixed-candidate.tgz",
+  "archiveSha256": "60e9cd018bd52433515fda39b70f5e324ee8cf645cd9103066485130cc0828fa",
+  "modules": {
+    "main": {
+      "sha256": "f8e8c998c166f005b1efb10ad642b6ea94fb5d25cccde3285e83ec700d83e189",
+      "bytes": 218635
+    },
+    "call": {
+      "sha256": "f48171a2efd9d49e8aad8bdd145650df2e6c0567f7f1bb40cb0454e69464bf9b",
+      "bytes": 102688
+    },
+    "native": {
+      "sha256": "b096602faa64083f73f9c1d32f78f20278a3846a1fb1e8adee4e250dace42375",
+      "bytes": 156059
+    }
+  }
+}

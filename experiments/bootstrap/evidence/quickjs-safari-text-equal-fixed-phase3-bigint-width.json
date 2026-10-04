@@ -1,0 +1,284 @@
+{
+  "date": "2026-10-04T12:30:57.330Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 23,
+    "checked": 89,
+    "resourceLimited": 1,
+    "requiredGC": 1,
+    "resumptionDispatches": 1652,
+    "elapsedMs": 3921,
+    "results": [
+      {
+        "feature": "bigint-width-public-metadata",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 114
+      },
+      {
+        "feature": "bigint-width-unsigned-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 398
+      },
+      {
+        "feature": "bigint-width-signed-edges",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 598
+      },
+      {
+        "feature": "bigint-width-signed-negative-wrap",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 398
+      },
+      {
+        "feature": "bigint-width-zero-width",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 374
+      },
+      {
+        "feature": "bigint-width-width-coercion",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 774
+      },
+      {
+        "feature": "bigint-width-width-before-value",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 697
+      },
+      {
+        "feature": "bigint-width-invalid-width-skips-value",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 307
+      },
+      {
+        "feature": "bigint-width-bigint-width-type",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 207
+      },
+      {
+        "feature": "bigint-width-width-infinity-range",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 289
+      },
+      {
+        "feature": "bigint-width-width-over-safe-range",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 300
+      },
+      {
+        "feature": "bigint-width-number-value-type",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 350
+      },
+      {
+        "feature": "bigint-width-zero-width-still-converts-value",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 338
+      },
+      {
+        "feature": "bigint-width-boolean-and-string-values",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 833
+      },
+      {
+        "feature": "bigint-width-invalid-string-syntax",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 630
+      },
+      {
+        "feature": "bigint-width-wide-word-edges",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 399
+      },
+      {
+        "feature": "bigint-width-2048-width",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 410
+      },
+      {
+        "feature": "bigint-width-huge-width-fitting-result",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 400
+      },
+      {
+        "feature": "bigint-width-object-bigint-value",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 245
+      },
+      {
+        "feature": "bigint-width-exception-identity",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 199
+      },
+      {
+        "feature": "bigint-width-private-helper-immunity",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 208
+      },
+      {
+        "feature": "bigint-width-retained-gc",
+        "checked": 4,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "maxSteps": 14414
+      }
+    ],
+    "boundaries": [
+      {
+        "feature": "bigint-width-negative-unsigned-2049-resource",
+        "status": "resourceLimited",
+        "message": "Resource limit in lane 0, instruction 20890; no CPU fallback"
+      }
+    ],
+    "method": "Fixed native oracles for asIntN/asUintN, ordered ToIndex/ToBigInt, signed two-complement truncation, huge widths, explicit overflow resources and retained-result GC. Guest conversion uses only WGSL and guest bytecode."
+  }
+}

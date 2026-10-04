@@ -1,0 +1,453 @@
+{
+  "date": "2026-10-03T21:11:16.360Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 37,
+    "checked": 145,
+    "resourceLimited": 4,
+    "requiredGC": 1,
+    "resumptionDispatches": 381,
+    "elapsedMs": 2206,
+    "results": [
+      {
+        "feature": "bigint-bitwise-and-positive",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-or-positive",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-xor-positive",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-and-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-or-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-xor-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-and-both-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-or-both-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-xor-both-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-not-zero",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 5
+      },
+      {
+        "feature": "bigint-bitwise-not-minus-one",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 5
+      },
+      {
+        "feature": "bigint-bitwise-not-u32-growth",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-not-negative-power",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-left-word-boundary",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-left-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-right-round-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-right-negative-exact",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-right-negative-remainder",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-left-negative-count",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-right-negative-count",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-negative-left-negative-count",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-right-words",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-right-negative-words",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 8
+      },
+      {
+        "feature": "bigint-bitwise-huge-right-positive",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-huge-right-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-huge-left-negative-count",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 7
+      },
+      {
+        "feature": "bigint-bitwise-zero-huge-left",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-zero-huge-right-negative-count",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 7
+      },
+      {
+        "feature": "bigint-bitwise-max-width-and",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-max-width-or",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-max-width-xor",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-max-width-left",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 6
+      },
+      {
+        "feature": "bigint-bitwise-max-width-negative-right",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 7
+      },
+      {
+        "feature": "bigint-bitwise-unsigned-right-typeerror",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 21
+      },
+      {
+        "feature": "bigint-bitwise-mixed-typeerror",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 37
+      },
+      {
+        "feature": "bigint-bitwise-retain-gc",
+        "checked": 4,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "maxSteps": 14043
+      }
+    ],
+    "boundaries": [
+      {
+        "feature": "left-shift-over-cap",
+        "status": "resourceLimited",
+        "message": "Resource limit in lane 0, instruction 2; no CPU fallback"
+      },
+      {
+        "feature": "reversed-right-shift-over-cap",
+        "status": "resourceLimited",
+        "message": "Resource limit in lane 0, instruction 2; no CPU fallback"
+      },
+      {
+        "feature": "not-over-cap",
+        "status": "resourceLimited",
+        "message": "Resource limit in lane 0, instruction 1; no CPU fallback"
+      },
+      {
+        "feature": "xor-negative-over-cap",
+        "status": "resourceLimited",
+        "message": "Resource limit in lane 0, instruction 2; no CPU fallback"
+      }
+    ],
+    "method": "Fixed native oracles for infinite two-complement bitwise operations, signed arithmetic shifts, negative/huge counts, unsigned-right-shift TypeError, exact2048bit boundary, explicit overflow resources and retained-result GC. Guest arithmetic uses only WGSL."
+  }
+}

@@ -18959,6 +18959,12 @@ static JSValue JS_CallInternal(JSContext *caller_ctx, JSValueConst func_obj,
                     if (!var_ref)
                         goto exception;
                 }
+                /* LANES: retain immutable binding metadata on a reference;
+                   do not read its value until GetValue/PutValue. */
+                if (opcode == OP_make_loc_ref)
+                    var_ref->is_const = b->vardefs[b->arg_count + idx].is_const;
+                else if (opcode == OP_make_var_ref_ref)
+                    var_ref->is_const = b->closure_var[idx].is_const;
                 pr = add_property(ctx, JS_VALUE_GET_OBJ(sp[-1]), atom,
                                   JS_PROP_WRITABLE | JS_PROP_VARREF);
                 if (!pr) {
@@ -19764,6 +19770,25 @@ static JSValue JS_CallInternal(JSContext *caller_ctx, JSValueConst func_obj,
                 atom = JS_ValueToAtom(ctx, sp[-2]);
                 if (unlikely(atom == JS_ATOM_NULL))
                     goto exception;
+                /* A local/captured Reference resolves its binding before RHS
+                   but checks TDZ/immutability here, irrespective of strictness. */
+                if (JS_IsObject(sp[-3])) {
+                    JSProperty *ref_property;
+                    JSShapeProperty *ref_shape = find_own_property(&ref_property,
+                        JS_VALUE_GET_OBJ(sp[-3]), atom);
+                    if (ref_shape && (ref_shape->flags & JS_PROP_TMASK) == JS_PROP_VARREF) {
+                        if (JS_IsUninitialized(*ref_property->u.var_ref->pvalue)) {
+                            JS_ThrowReferenceErrorUninitialized(ctx, atom);
+                            JS_FreeAtom(ctx, atom);
+                            goto exception;
+                        }
+                        if (ref_property->u.var_ref->is_const) {
+                            JS_ThrowTypeErrorReadOnly(ctx, JS_PROP_THROW, atom);
+                            JS_FreeAtom(ctx, atom);
+                            goto exception;
+                        }
+                    }
+                }
                 if (unlikely(JS_IsUndefined(sp[-3]))) {
                     if (is_strict_mode(ctx)) {
                         JS_ThrowReferenceErrorNotDefined(ctx, atom);
@@ -20639,9 +20664,11 @@ static JSValue JS_CallInternal(JSContext *caller_ctx, JSValueConst func_obj,
             }
             BREAK;
 
-#if 0
+        /* LANES: enabled for template substitutions. JS_ToString uses
+           ToPrimitive hint string for objects and throws on Symbol. */
         CASE(OP_to_string):
             if (JS_VALUE_GET_TAG(sp[-1]) != JS_TAG_STRING) {
+                sf->cur_pc = pc;
                 ret_val = JS_ToString(ctx, sp[-1]);
                 if (JS_IsException(ret_val))
                     goto exception;
@@ -20649,7 +20676,7 @@ static JSValue JS_CallInternal(JSContext *caller_ctx, JSValueConst func_obj,
                 sp[-1] = ret_val;
             }
             BREAK;
-#endif
+
         CASE(OP_with_get_var):
         CASE(OP_with_put_var):
         CASE(OP_with_delete_var):
@@ -24669,6 +24696,7 @@ static __exception int js_parse_template(JSParseState *s, int call, int *argc)
     JSValue raw_array, template_object;
     JSToken cooked;
     int depth, ret;
+    BOOL has_prefix = FALSE; /* LANES: untagged: a string is on the stack */
 
     raw_array = JS_UNDEFINED; /* avoid warning */
     template_object = JS_UNDEFINED; /* avoid warning */
@@ -24723,7 +24751,14 @@ static __exception int js_parse_template(JSParseState *s, int call, int *argc)
             if (js_parse_string(s, '`', TRUE, p, &cooked, &p))
                 return -1;
             str = JS_VALUE_GET_STRING(cooked.u.str.str);
-            if (str->len != 0 || depth == 0) {
+            /* LANES: untagged templates are lowered to string additions
+               instead of "head".concat(...) (mutable, and it delays
+               ToString until all substitutions are evaluated):
+                 [head] (<expr> to_string [add] [cooked add])*
+               Every addition has two string operands, so it never calls
+               user code. An empty head is omitted (`${x}` is ToString(x));
+               a template without substitutions still pushes its string. */
+            if (str->len != 0 || (depth == 0 && s->token.u.str.sep == '`')) {
                 ret = emit_push_const(s, cooked.u.str.str, 1);
                 JS_FreeValue(s->ctx, cooked.u.str.str);
                 if (ret)
@@ -24731,10 +24766,10 @@ static __exception int js_parse_template(JSParseState *s, int call, int *argc)
                 if (depth == 0) {
                     if (s->token.u.str.sep == '`')
                         goto done1;
-                    emit_op(s, OP_get_field2);
-                    emit_atom(s, JS_ATOM_concat);
+                    has_prefix = TRUE;
+                } else {
+                    emit_op(s, OP_add);
                 }
-                depth++;
             } else {
                 JS_FreeValue(s->ctx, cooked.u.str.str);
             }
@@ -24749,7 +24784,13 @@ static __exception int js_parse_template(JSParseState *s, int call, int *argc)
         if (s->token.val != '}') {
             return js_parse_error(s, "expected '}' after template expression");
         }
-        /* XXX: should convert to string at this stage? */
+        if (!call) {
+            /* LANES: ToString each substitution right after evaluating it */
+            emit_op(s, OP_to_string);
+            if (has_prefix)
+                emit_op(s, OP_add);
+            has_prefix = TRUE;
+        }
         free_token(s, &s->token);
         /* Resume TOK_TEMPLATE parsing (s->token.line_num and
          * s->token.ptr are OK) */
@@ -24765,10 +24806,8 @@ static __exception int js_parse_template(JSParseState *s, int call, int *argc)
         seal_template_obj(ctx, raw_array);
         seal_template_obj(ctx, template_object);
         *argc = depth + 1;
-    } else {
-        emit_op(s, OP_call_method);
-        emit_u16(s, depth - 1);
     }
+    /* LANES: no trailing concat call for untagged templates */
  done1:
     return next_token(s);
 }
@@ -25683,8 +25722,12 @@ static __exception int js_parse_class(JSParseState *s, BOOL is_class_expr,
 
             /* class field */
 
-            /* XXX: spec: not consistent with method name checks */
-            if (name == JS_ATOM_constructor || name == JS_ATOM_prototype) {
+            /* LANES phase4-next w2: ES2025 15.7.1 early errors: a field named
+               "constructor" (static or not) or a static field named
+               "prototype" is a SyntaxError; an instance field named
+               "prototype" is valid. */
+            if (name == JS_ATOM_constructor ||
+                (is_static && name == JS_ATOM_prototype)) {
                 js_parse_error(s, "invalid field name");
                 goto fail;
             }
@@ -26128,11 +26171,10 @@ static __exception int get_lvalue(JSParseState *s, int *popcode, int *pscope,
         }
         if (name == JS_ATOM_this || name == JS_ATOM_new_target)
             goto invalid_lvalue;
-        if (has_with_scope(fd, scope)) {
-            depth = 2;  /* will generate OP_get_ref_value */
-        } else {
-            depth = 0;
-        }
+        /* LANES: resolve identifier references before evaluating the RHS.
+           Locals/captures are optimized after scope resolution; globals retain
+           make_var_ref so an unresolvable reference cannot be rebound by RHS. */
+        depth = 2;
         break;
     case OP_get_field:
         name = get_u32(fd->byte_code.buf + fd->last_opcode_pos + 1);
@@ -26378,6 +26420,10 @@ static void put_lvalue(JSParseState *s, int opcode, int scope,
         break;
     case OP_get_ref_value:
         emit_op(s, OP_put_ref_value);
+        /* Reserve space for a deferred scope_put_var after local-reference
+           elimination. This keeps const/TDZ errors at PutValue, after RHS. */
+        for (int padding = 0; padding < 8; padding++)
+            emit_op(s, OP_nop);
         break;
     case OP_get_super_value:
         emit_op(s, OP_put_super_value);
@@ -29235,8 +29281,17 @@ static __exception int js_parse_statement_or_decl(JSParseState *s,
             else
                 mask = DECL_MASK_FUNC; /* Annex B.3.4 */
 
+            /* LANES: ES2025 Annex B.3.3 (B.3.4 before ES2022): a
+               FunctionDeclaration clause behaves as the sole item of its
+               own Block. A shared scope for both
+               clauses made `if(c)function g(){}else function g(){}` a
+               same-scope redeclaration and dropped the else-clause var
+               copy. Each clause gets its own scope (no code is emitted
+               for a scope without declarations). */
+            push_scope(s);
             if (js_parse_statement_or_decl(s, mask))
                 goto fail;
+            pop_scope(s);
 
             if (s->token.val == TOK_ELSE) {
                 label2 = emit_goto(s, OP_goto, -1);
@@ -29244,8 +29299,10 @@ static __exception int js_parse_statement_or_decl(JSParseState *s,
                     goto fail;
 
                 emit_label(s, label1);
+                push_scope(s);
                 if (js_parse_statement_or_decl(s, mask))
                     goto fail;
+                pop_scope(s);
 
                 label1 = label2;
             }
@@ -29324,7 +29381,7 @@ static __exception int js_parse_statement_or_decl(JSParseState *s,
         break;
     case TOK_FOR:
         {
-            int label_cont, label_break, label_body, label_test;
+            int label_cont, label_break, label_body, label_test, label_close;
             int pos_cont, pos_body, block_scope_level;
             BlockEnv break_entry;
             int tok, bits;
@@ -29395,9 +29452,10 @@ static __exception int js_parse_statement_or_decl(JSParseState *s,
             label_cont = new_label(s);
             label_body = new_label(s);
             label_break = new_label(s);
+            label_close = new_label(s);
 
             push_break_entry(s->cur_func, &break_entry,
-                             label_name, label_break, label_cont, 0);
+                             label_name, label_break, label_close, 0);
 
             /* test expression */
             if (s->token.val == ';') {
@@ -29414,7 +29472,7 @@ static __exception int js_parse_statement_or_decl(JSParseState *s,
 
             if (s->token.val == ')') {
                 /* no end expression */
-                break_entry.label_cont = label_cont = label_test;
+                label_cont = label_test;
                 pos_cont = 0; /* avoid warning */
             } else {
                 /* skip the end expression */
@@ -29437,7 +29495,10 @@ static __exception int js_parse_statement_or_decl(JSParseState *s,
                 goto fail;
 
             /* close the closures before the next iteration */
-            /* XXX: check continue case */
+            /* LANES: 'continue' targets label_close so that it runs the
+               per-iteration close_loc before the increment/test. emit_break
+               only closes the scopes nested inside the loop head scope. */
+            emit_label(s, label_close);
             close_scopes(s, s->cur_func->scope_level, block_scope_level);
 
             if (OPTIMIZE && label_test != label_body && label_cont != label_test) {
@@ -33003,7 +33064,8 @@ static BOOL can_opt_put_global_ref_value(const uint8_t *bc_buf, int pos)
 static int optimize_scope_make_ref(JSContext *ctx, JSFunctionDef *s,
                                    DynBuf *bc, uint8_t *bc_buf,
                                    LabelSlot *ls, int pos_next,
-                                   int get_op, int var_idx)
+                                   int get_op, int var_idx,
+                                   JSAtom var_name, int scope_level)
 {
     int label_pos, end_pos, pos;
 
@@ -33032,12 +33094,16 @@ static int optimize_scope_make_ref(JSContext *ctx, JSFunctionDef *s,
        - rot3l / put_ref_value
        - nop / put_ref_value
      */
-    end_pos = label_pos + 2;
+    end_pos = label_pos + 10;
     if (bc_buf[label_pos] == OP_insert3)
         bc_buf[pos++] = OP_dup;
-    bc_buf[pos] = get_op + 1;
-    put_u16(bc_buf + pos + 1, var_idx);
-    pos += 3;
+    /* Resolve the write when pass 2 reaches its original position, not while
+       processing the pre-RHS reference. Especially important for const TDZ. */
+    bc_buf[pos++] = OP_scope_put_var;
+    put_u32(bc_buf + pos, JS_DupAtom(ctx, var_name));
+    pos += 4;
+    put_u16(bc_buf + pos, scope_level);
+    pos += 2;
     /* pad with OP_nop */
     while (pos < end_pos)
         bc_buf[pos++] = OP_nop;
@@ -33132,6 +33198,7 @@ static int resolve_scope_var(JSContext *ctx, JSFunctionDef *s,
                              LabelSlot *ls, int pos_next)
 {
     int idx, var_idx, is_put;
+    const int reference_scope_level = scope_level;
     int label_done;
     JSFunctionDef *fd;
     JSVarDef *vd;
@@ -33151,8 +33218,15 @@ static int resolve_scope_var(JSContext *ctx, JSFunctionDef *s,
     for (idx = s->scopes[scope_level].first; idx >= 0;) {
         vd = &s->vars[idx];
         if (vd->var_name == var_name) {
-            if (op == OP_scope_put_var || op == OP_scope_make_ref) {
+            if (op == OP_scope_put_var) {
                 if (vd->is_const) {
+                    /* LANES: an uninitialized const is a ReferenceError
+                       (SetMutableBinding), checked before the TypeError */
+                    if (vd->is_lexical) {
+                        dbuf_putc(bc, OP_get_loc_check);
+                        dbuf_put_u16(bc, idx);
+                        dbuf_putc(bc, OP_drop);
+                    }
                     dbuf_putc(bc, OP_throw_error);
                     dbuf_put_u32(bc, JS_DupAtom(ctx, var_name));
                     dbuf_putc(bc, JS_THROW_VAR_RO);
@@ -33191,11 +33265,17 @@ static int resolve_scope_var(JSContext *ctx, JSFunctionDef *s,
         }
     }
     if (var_idx >= 0) {
-        if ((op == OP_scope_put_var || op == OP_scope_make_ref) &&
+        if (op == OP_scope_put_var &&
             !(var_idx & ARGUMENT_VAR_OFFSET) &&
             s->vars[var_idx].is_const) {
             /* only happens when assigning a function expression name
                in strict mode */
+            if (s->vars[var_idx].is_lexical) {
+                /* LANES: TDZ check before the read-only error */
+                dbuf_putc(bc, OP_get_loc_check);
+                dbuf_put_u16(bc, var_idx);
+                dbuf_putc(bc, OP_drop);
+            }
             dbuf_putc(bc, OP_throw_error);
             dbuf_put_u32(bc, JS_DupAtom(ctx, var_name));
             dbuf_putc(bc, JS_THROW_VAR_RO);
@@ -33207,7 +33287,9 @@ static int resolve_scope_var(JSContext *ctx, JSFunctionDef *s,
         switch (op) {
         case OP_scope_make_ref:
             if (!(var_idx & ARGUMENT_VAR_OFFSET) &&
-                s->vars[var_idx].var_kind == JS_VAR_FUNCTION_NAME) {
+                s->vars[var_idx].var_kind == JS_VAR_FUNCTION_NAME &&
+                !s->vars[var_idx].is_const &&
+                !(label_done == -1 && can_opt_put_ref_value(bc_buf, ls->pos))) {
                 /* Create a dummy object reference for the func_var */
                 dbuf_putc(bc, OP_object);
                 dbuf_putc(bc, OP_get_loc);
@@ -33229,7 +33311,7 @@ static int resolve_scope_var(JSContext *ctx, JSFunctionDef *s,
                         get_op = OP_get_loc;
                 }
                 pos_next = optimize_scope_make_ref(ctx, s, bc, bc_buf, ls,
-                                                   pos_next, get_op, var_idx);
+                                                   pos_next, get_op, var_idx, var_name, reference_scope_level);
             } else {
                 /* Create a dummy object with a named slot that is
                    a reference to the local variable */
@@ -33323,7 +33405,9 @@ static int resolve_scope_var(JSContext *ctx, JSFunctionDef *s,
             vd = &fd->vars[idx];
             if (vd->var_name == var_name) {
                 if (op == OP_scope_put_var || op == OP_scope_make_ref) {
-                    if (vd->is_const) {
+                    /* LANES: a captured lexical const falls through to
+                       has_idx, which emits the TDZ check */
+                    if (vd->is_const && !vd->is_lexical) {
                         dbuf_putc(bc, OP_throw_error);
                         dbuf_put_u32(bc, JS_DupAtom(ctx, var_name));
                         dbuf_putc(bc, JS_THROW_VAR_RO);
@@ -33463,14 +33547,8 @@ static int resolve_scope_var(JSContext *ctx, JSFunctionDef *s,
         /* global variable access */
         switch (op) {
         case OP_scope_make_ref:
-            if (label_done == -1 && can_opt_put_global_ref_value(bc_buf, ls->pos)) {
-                pos_next = optimize_scope_make_ref(ctx, s, bc, bc_buf, ls,
-                                                   pos_next,
-                                                   OP_get_var, idx);
-            } else {
-                dbuf_putc(bc, OP_make_var_ref);
-                dbuf_put_u32(bc, JS_DupAtom(ctx, var_name));
-            }
+            dbuf_putc(bc, OP_make_var_ref);
+            dbuf_put_u32(bc, JS_DupAtom(ctx, var_name));
             break;
         case OP_scope_get_ref:
             /* XXX: should create a dummy object with a named slot that is
@@ -33512,8 +33590,14 @@ static int resolve_scope_var(JSContext *ctx, JSFunctionDef *s,
         }
         if (idx >= 0) {
         has_idx:
-            if ((op == OP_scope_put_var || op == OP_scope_make_ref) &&
+            if (op == OP_scope_put_var &&
                 s->closure_var[idx].is_const) {
+                if (s->closure_var[idx].is_lexical) {
+                    /* LANES: TDZ check before the read-only error */
+                    dbuf_putc(bc, OP_get_var_ref_check);
+                    dbuf_put_u16(bc, idx);
+                    dbuf_putc(bc, OP_drop);
+                }
                 dbuf_putc(bc, OP_throw_error);
                 dbuf_put_u32(bc, JS_DupAtom(ctx, var_name));
                 dbuf_putc(bc, JS_THROW_VAR_RO);
@@ -33521,7 +33605,9 @@ static int resolve_scope_var(JSContext *ctx, JSFunctionDef *s,
             }
             switch (op) {
             case OP_scope_make_ref:
-                if (s->closure_var[idx].var_kind == JS_VAR_FUNCTION_NAME) {
+                if (s->closure_var[idx].var_kind == JS_VAR_FUNCTION_NAME &&
+                    !s->closure_var[idx].is_const &&
+                    !(label_done == -1 && can_opt_put_ref_value(bc_buf, ls->pos))) {
                     /* Create a dummy object reference for the func_var */
                     dbuf_putc(bc, OP_object);
                     dbuf_putc(bc, OP_get_var_ref);
@@ -33540,7 +33626,7 @@ static int resolve_scope_var(JSContext *ctx, JSFunctionDef *s,
                         get_op = OP_get_var_ref;
                     pos_next = optimize_scope_make_ref(ctx, s, bc, bc_buf, ls,
                                                        pos_next,
-                                                       get_op, idx);
+                                                       get_op, idx, var_name, reference_scope_level);
                 } else {
                     /* Create a dummy object with a named slot that is
                        a reference to the closure variable */
@@ -33787,6 +33873,21 @@ static int resolve_scope_private_field(JSContext *ctx, JSFunctionDef *s,
         }
         break;
     case OP_scope_in_private_field:
+        /* LANES phase4-next w5: ES2025 13.10.1 `#x in o` for a setter-only
+           private accessor. The `#x` slot is only written by a getter, so it
+           stays in its TDZ; load the `#x<set>` closure instead, which shares
+           the [[HomeObject]] and therefore carries the same brand. */
+        if (var_kind == JS_VAR_PRIVATE_SETTER) {
+            JSAtom setter_name = get_private_setter_name(ctx, var_name);
+            if (setter_name == JS_ATOM_NULL)
+                return -1;
+            idx = resolve_scope_private_field1(ctx, &is_ref, &var_kind, s,
+                                               setter_name, scope_level);
+            JS_FreeAtom(ctx, setter_name);
+            if (idx < 0)
+                return -1;
+            assert(var_kind == JS_VAR_PRIVATE_SETTER);
+        }
         get_loc_or_ref(bc, is_ref, idx);
         dbuf_putc(bc, OP_private_in);
         break;
@@ -36821,8 +36922,10 @@ static __exception int js_parse_function_decl2(JSParseState *s,
         if (!(fd->js_mode & JS_MODE_STRICT)
         && func_kind == JS_FUNC_NORMAL
         &&  find_lexical_decl(ctx, fd, func_name, fd->scope_first, FALSE) < 0
-        &&  !((func_idx = find_var(ctx, fd, func_name)) >= 0 && (func_idx & ARGUMENT_VAR_OFFSET))
-        &&  !(func_name == JS_ATOM_arguments && fd->has_arguments_binding)) {
+        &&  !((func_idx = find_var(ctx, fd, func_name)) >= 0 && (func_idx & ARGUMENT_VAR_OFFSET))) {
+            /* LANES: Annex B.3.2.1 step iii also applies to F = "arguments":
+               evaluating the block declaration assigns the function's
+               `arguments` binding (no separate var is created). */
             create_func_var = TRUE;
         }
         /* Create the lexical name here so that the function closure
@@ -37244,6 +37347,13 @@ static __exception int js_parse_function_decl2(JSParseState *s,
                 } else {
                     /* do not call define_var to bypass lexical scope check */
                     func_idx = find_var(ctx, s->cur_func, func_name);
+                    /* LANES: reuse the arguments-object binding (Annex B.3.2.1). */
+                    if (func_idx < 0 && func_name == JS_ATOM_arguments &&
+                        s->cur_func->has_arguments_binding) {
+                        func_idx = add_arguments_var(ctx, s->cur_func);
+                        if (func_idx < 0)
+                            goto fail;
+                    }
                     if (func_idx < 0) {
                         func_idx = add_var(ctx, s->cur_func, func_name);
                         if (func_idx < 0)

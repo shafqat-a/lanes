@@ -1,0 +1,831 @@
+{
+  "date": "2026-10-03T21:55:47.705Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "nativeReferenceDifferences": [
+      {
+        "feature": "invalid-string-6",
+        "input": 7,
+        "native": false,
+        "nativeDiagnostic": "bigint:0",
+        "normative": true,
+        "reason": "Safari does not produce expected SyntaxError for sign-only BigInt string; ES2025 SignedInteger requires DecimalDigits",
+        "specification": "https://tc39.es/ecma262/2025/multipage/abstract-operations.html#sec-stringtobigint"
+      },
+      {
+        "feature": "invalid-string-6",
+        "input": 0,
+        "native": false,
+        "nativeDiagnostic": "bigint:0",
+        "normative": true,
+        "reason": "Safari does not produce expected SyntaxError for sign-only BigInt string; ES2025 SignedInteger requires DecimalDigits",
+        "specification": "https://tc39.es/ecma262/2025/multipage/abstract-operations.html#sec-stringtobigint"
+      },
+      {
+        "feature": "invalid-string-6",
+        "input": 1,
+        "native": false,
+        "nativeDiagnostic": "bigint:0",
+        "normative": true,
+        "reason": "Safari does not produce expected SyntaxError for sign-only BigInt string; ES2025 SignedInteger requires DecimalDigits",
+        "specification": "https://tc39.es/ecma262/2025/multipage/abstract-operations.html#sec-stringtobigint"
+      },
+      {
+        "feature": "invalid-string-6",
+        "input": -1,
+        "native": false,
+        "nativeDiagnostic": "bigint:0",
+        "normative": true,
+        "reason": "Safari does not produce expected SyntaxError for sign-only BigInt string; ES2025 SignedInteger requires DecimalDigits",
+        "specification": "https://tc39.es/ecma262/2025/multipage/abstract-operations.html#sec-stringtobigint"
+      },
+      {
+        "feature": "invalid-string-6",
+        "input": 17,
+        "native": false,
+        "nativeDiagnostic": "bigint:0",
+        "normative": true,
+        "reason": "Safari does not produce expected SyntaxError for sign-only BigInt string; ES2025 SignedInteger requires DecimalDigits",
+        "specification": "https://tc39.es/ecma262/2025/multipage/abstract-operations.html#sec-stringtobigint"
+      }
+    ],
+    "programs": 68,
+    "checked": 269,
+    "resourceLimited": 2,
+    "requiredGC": 1,
+    "resumptionDispatches": 6467,
+    "elapsedMs": 64143.00000000001,
+    "results": [
+      {
+        "feature": "decimal-signed-leading-zero",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 1489
+      },
+      {
+        "feature": "prefix-grammars",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 1461
+      },
+      {
+        "feature": "empty-and-es-whitespace",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 526
+      },
+      {
+        "feature": "boolean-and-identity",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 172
+      },
+      {
+        "feature": "large-decimal-exact",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 1292
+      },
+      {
+        "feature": "number-integral-53",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 139
+      },
+      {
+        "feature": "number-integral-1024",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 74
+      },
+      {
+        "feature": "number-fraction-range",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 220
+      },
+      {
+        "feature": "number-nan-range",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 220
+      },
+      {
+        "feature": "number-infinity-range",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 220
+      },
+      {
+        "feature": "number-subnormal-range",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 220
+      },
+      {
+        "feature": "undefined-type",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 214
+      },
+      {
+        "feature": "null-type",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 205
+      },
+      {
+        "feature": "symbol-type",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 216
+      },
+      {
+        "feature": "invalid-string-0",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 575
+      },
+      {
+        "feature": "invalid-string-1",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 579
+      },
+      {
+        "feature": "invalid-string-2",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 518
+      },
+      {
+        "feature": "invalid-string-3",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 582
+      },
+      {
+        "feature": "invalid-string-4",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 570
+      },
+      {
+        "feature": "invalid-string-5",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 562
+      },
+      {
+        "feature": "invalid-string-6",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 480
+      },
+      {
+        "feature": "invalid-string-7",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 566
+      },
+      {
+        "feature": "invalid-string-8",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 562
+      },
+      {
+        "feature": "invalid-string-9",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 623
+      },
+      {
+        "feature": "invalid-string-10",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 526
+      },
+      {
+        "feature": "invalid-string-11",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 526
+      },
+      {
+        "feature": "ordinary-valueof-order",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 500
+      },
+      {
+        "feature": "ordinary-tostring-fallback",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 539
+      },
+      {
+        "feature": "coercion-exception-identity",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 74
+      },
+      {
+        "feature": "text-radices",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 484
+      },
+      {
+        "feature": "text-default-and-truncated-radix",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 187
+      },
+      {
+        "feature": "text-boxed-receiver",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 43
+      },
+      {
+        "feature": "valueof-invalid-receiver",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 74
+      },
+      {
+        "feature": "text-receiver-before-radix",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 94
+      },
+      {
+        "feature": "radix-bigint-type",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 218
+      },
+      {
+        "feature": "radix-range",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 290
+      },
+      {
+        "feature": "number-nearest-even",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 249
+      },
+      {
+        "feature": "number-rounded-carry",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 81
+      },
+      {
+        "feature": "number-large-infinity",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 170
+      },
+      {
+        "feature": "number-boxed-bigint",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 375
+      },
+      {
+        "feature": "number-implicit-type",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 210
+      },
+      {
+        "feature": "sort-comparator-implicit-type",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 415
+      },
+      {
+        "feature": "bigint-string-conversion",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 144
+      },
+      {
+        "feature": "bigint-constructor-not-constructible",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 72
+      },
+      {
+        "feature": "private-conversion-prototype-immunity",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 490
+      },
+      {
+        "feature": "decimal-output-256-boundary",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 30
+      },
+      {
+        "feature": "radix-output-256-boundary",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 163
+      },
+      {
+        "feature": "conversion-retained-gc",
+        "checked": 4,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "maxSteps": 15840
+      },
+      {
+        "feature": "object-bigint-divmod",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 336
+      },
+      {
+        "feature": "object-bigint-binary-order",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 237
+      },
+      {
+        "feature": "object-bigint-bits",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 360
+      },
+      {
+        "feature": "object-bigint-unary",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 235
+      },
+      {
+        "feature": "object-bigint-plus-type",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 172
+      },
+      {
+        "feature": "object-bigint-increment",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 248
+      },
+      {
+        "feature": "object-bigint-mixed-type-order",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 389
+      },
+      {
+        "feature": "numeric-overflow-rounding-midpoint",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 260
+      },
+      {
+        "feature": "text-conversion-consumers",
+        "checked": 4,
+        "collections": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "maxSteps": 28694
+      },
+      {
+        "feature": "string-method-bigint-inputs",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 1174
+      },
+      {
+        "feature": "bigint-property-key",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 208
+      },
+      {
+        "feature": "symbol-bigint-description",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 19
+      },
+      {
+        "feature": "bigint-prototype-invalid-this",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 75
+      },
+      {
+        "feature": "object-bigint-addition",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 149
+      },
+      {
+        "feature": "primitive-bigint-updates",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 51
+      },
+      {
+        "feature": "discarded-bigint-local-updates",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 18
+      },
+      {
+        "feature": "object-postfix-number-regression",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 428
+      },
+      {
+        "feature": "object-postfix-bigint-once",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 129
+      },
+      {
+        "feature": "bigint-compound-string",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 96
+      }
+    ],
+    "boundaries": [
+      {
+        "feature": "radix-output-257",
+        "status": "resourceLimited",
+        "message": "Resource limit in lane 0, instruction 20451; no CPU fallback"
+      },
+      {
+        "feature": "negative-output-sign-overflow",
+        "status": "resourceLimited",
+        "message": "Resource limit in lane 0, instruction 20452; no CPU fallback"
+      }
+    ],
+    "method": "Fixed native oracles for constructor grammar, binary64 rounding, radix formatting, strict implicit ToNumber, text resources and retained-result GC. Guest conversions use only WGSL and guest bytecode."
+  }
+}

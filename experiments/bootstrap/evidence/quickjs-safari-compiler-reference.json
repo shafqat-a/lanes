@@ -1,0 +1,880 @@
+{
+  "date": "2026-10-02T19:52:02.991Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "baseMismatches": 1,
+    "gpuExecuted": false,
+    "backend": "native-reference",
+    "fixturePrograms": 46,
+    "identities": [
+      {
+        "feature": "captured-tdz-throwing-rhs-identity",
+        "native": [
+          {
+            "value": ":object:false:true:false"
+          },
+          {
+            "value": ":object:false:true:false"
+          }
+        ],
+        "source": "function f(x){let trace=\"\";function rhs(){trace+=\"r\";throw x;}function write(){k=rhs();}try{write();}catch(e){return trace+\":\"+typeof e+\":\"+(e===x)+\":\"+(e instanceof ReferenceError)+\":\"+(e instanceof TypeError);}const k=1;return \"missed\";}",
+        "inputs": [
+          7,
+          8
+        ]
+      },
+      {
+        "feature": "local-tdz-throwing-rhs-identity",
+        "native": [
+          {
+            "value": "r:number:true:false:false"
+          },
+          {
+            "value": "r:number:true:false:false"
+          }
+        ],
+        "source": "function f(x){let trace=\"\";function rhs(){trace+=\"r\";throw x;}try{k=rhs();}catch(e){return trace+\":\"+typeof e+\":\"+(e===x)+\":\"+(e instanceof ReferenceError)+\":\"+(e instanceof TypeError);}const k=1;return \"missed\";}",
+        "inputs": [
+          7,
+          8
+        ]
+      },
+      {
+        "feature": "captured-tdz-successful-rhs-identity",
+        "native": [
+          {
+            "value": ":object:false:true:false"
+          },
+          {
+            "value": ":object:false:true:false"
+          }
+        ],
+        "source": "function f(x){let trace=\"\";function rhs(){trace+=\"r\";return x;}function write(){k=rhs();}try{write();}catch(e){return trace+\":\"+typeof e+\":\"+(e===x)+\":\"+(e instanceof ReferenceError)+\":\"+(e instanceof TypeError);}const k=1;return \"missed\";}",
+        "inputs": [
+          7,
+          8
+        ]
+      },
+      {
+        "feature": "captured-initialized-const-throwing-rhs-identity",
+        "native": [
+          {
+            "value": "r:number:true:false:false"
+          },
+          {
+            "value": "r:number:true:false:false"
+          }
+        ],
+        "source": "function f(x){const k=1;let trace=\"\";function rhs(){trace+=\"r\";throw x;}function write(){k=rhs();}try{write();}catch(e){return trace+\":\"+typeof e+\":\"+(e===x)+\":\"+(e instanceof ReferenceError)+\":\"+(e instanceof TypeError);}return \"missed\";}",
+        "inputs": [
+          7,
+          8
+        ]
+      }
+    ],
+    "diagnostic": true,
+    "records": [
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-plain-assign",
+        "native": [
+          {
+            "value": "plain-ref1"
+          },
+          {
+            "value": "plain-ref2"
+          }
+        ],
+        "inputs": [
+          1,
+          2
+        ],
+        "fixedExpected": "plain-ref1"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-compound-add",
+        "native": [
+          {
+            "value": "add-ref2"
+          },
+          {
+            "value": "add-ref3"
+          }
+        ],
+        "inputs": [
+          2,
+          3
+        ],
+        "fixedExpected": "add-ref2"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-postfix-inc",
+        "native": [
+          {
+            "value": "post-ref3"
+          },
+          {
+            "value": "post-ref4"
+          }
+        ],
+        "inputs": [
+          3,
+          4
+        ],
+        "fixedExpected": "post-ref3"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-prefix-inc",
+        "native": [
+          {
+            "value": "pre-ref4"
+          },
+          {
+            "value": "pre-ref5"
+          }
+        ],
+        "inputs": [
+          4,
+          5
+        ],
+        "fixedExpected": "pre-ref4"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-inner-block",
+        "native": [
+          {
+            "value": "block-ref5"
+          },
+          {
+            "value": "block-ref6"
+          }
+        ],
+        "inputs": [
+          5,
+          6
+        ],
+        "fixedExpected": "block-ref5"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-arrow-closure-before-init",
+        "native": [
+          {
+            "value": "arrow-ref6"
+          },
+          {
+            "value": "arrow-ref7"
+          }
+        ],
+        "inputs": [
+          6,
+          7
+        ],
+        "fixedExpected": "arrow-ref6"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-funcexpr-closure-before-init",
+        "native": [
+          {
+            "value": "fexpr-ref7"
+          },
+          {
+            "value": "fexpr-ref8"
+          }
+        ],
+        "inputs": [
+          7,
+          8
+        ],
+        "fixedExpected": "fexpr-ref7"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-closure-two-levels",
+        "native": [
+          {
+            "value": "deep-ref8"
+          },
+          {
+            "value": "deep-ref9"
+          }
+        ],
+        "inputs": [
+          8,
+          9
+        ],
+        "fixedExpected": "deep-ref8"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-closure-after-init-typeerror",
+        "native": [
+          {
+            "value": "late-type18"
+          },
+          {
+            "value": "late-type20"
+          }
+        ],
+        "inputs": [
+          9,
+          10
+        ],
+        "fixedExpected": "late-type18"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-closure-before-and-after-init",
+        "native": [
+          {
+            "value": "ref:type10"
+          },
+          {
+            "value": "ref:type11"
+          }
+        ],
+        "inputs": [
+          10,
+          11
+        ],
+        "fixedExpected": "ref:type10"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-local-after-init-typeerror",
+        "native": [
+          {
+            "value": "init-type11"
+          },
+          {
+            "value": "init-type12"
+          }
+        ],
+        "inputs": [
+          11,
+          12
+        ],
+        "fixedExpected": "init-type11"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-rhs-side-effect-first",
+        "native": [
+          {
+            "value": "rhs-ref13"
+          },
+          {
+            "value": "rhs-ref14"
+          }
+        ],
+        "inputs": [
+          12,
+          13
+        ],
+        "fixedExpected": "rhs-ref13"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-switch-fallthrough",
+        "native": [
+          {
+            "value": "sw-ref13"
+          },
+          {
+            "value": "nomatch14"
+          }
+        ],
+        "inputs": [
+          13,
+          14
+        ],
+        "fixedExpected": "sw-ref13"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-for-body",
+        "native": [
+          {
+            "value": "loop-ref0ref114"
+          },
+          {
+            "value": "loop-ref0ref115"
+          }
+        ],
+        "inputs": [
+          14,
+          15
+        ],
+        "fixedExpected": "loop-ref0ref114"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-tdz-error-name",
+        "native": [
+          {
+            "value": "name-ReferenceError15"
+          },
+          {
+            "value": "name-ReferenceError16"
+          }
+        ],
+        "inputs": [
+          15,
+          16
+        ],
+        "fixedExpected": "name-ReferenceError15"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "const-init-error-name",
+        "native": [
+          {
+            "value": "iname-TypeError16"
+          },
+          {
+            "value": "iname-TypeError17"
+          }
+        ],
+        "inputs": [
+          16,
+          17
+        ],
+        "fixedExpected": "iname-TypeError16"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "strict-funcexpr-name-assign-typeerror",
+        "native": [
+          {
+            "value": "fn-TypeError17"
+          },
+          {
+            "value": "fn-TypeError18"
+          }
+        ],
+        "inputs": [
+          17,
+          18
+        ],
+        "fixedExpected": "fn-TypeError17"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-per-iteration",
+        "native": [
+          {
+            "value": "1,2,3"
+          },
+          {
+            "value": "2,3,4"
+          }
+        ],
+        "inputs": [
+          1,
+          2
+        ],
+        "fixedExpected": "1,2,3"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-unconditional",
+        "native": [
+          {
+            "value": "u024"
+          },
+          {
+            "value": "u036"
+          }
+        ],
+        "inputs": [
+          2,
+          3
+        ],
+        "fixedExpected": "u024"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-conditional-mixed",
+        "native": [
+          {
+            "value": "10-11-12-13"
+          },
+          {
+            "value": "11-12-13-14"
+          }
+        ],
+        "inputs": [
+          10,
+          11
+        ],
+        "fixedExpected": "10-11-12-13"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-no-update",
+        "native": [
+          {
+            "value": "nu3,6,9|4,5,6"
+          },
+          {
+            "value": "nu4,8,12|5,6,7"
+          }
+        ],
+        "inputs": [
+          3,
+          4
+        ],
+        "fixedExpected": "nu3,6,9|4,5,6"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-no-test-break",
+        "native": [
+          {
+            "value": "ib567"
+          },
+          {
+            "value": "ib678"
+          }
+        ],
+        "inputs": [
+          5,
+          6
+        ],
+        "fixedExpected": "ib567"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-no-test-no-update",
+        "native": [
+          {
+            "value": "nn6,7,8"
+          },
+          {
+            "value": "nn7,8,9"
+          }
+        ],
+        "inputs": [
+          6,
+          7
+        ],
+        "fixedExpected": "nn6,7,8"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-labeled-continue-same-loop",
+        "native": [
+          {
+            "value": "ls432"
+          },
+          {
+            "value": "ls543"
+          }
+        ],
+        "inputs": [
+          4,
+          5
+        ],
+        "fixedExpected": "ls432"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-labeled-continue-from-inner-for-let",
+        "native": [
+          {
+            "value": "lo7:00 10 11 20 21 22 "
+          },
+          {
+            "value": "lo8:00 10 11 20 21 22 "
+          }
+        ],
+        "inputs": [
+          7,
+          8
+        ],
+        "fixedExpected": "lo7:00 10 11 20 21 22 "
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-labeled-continue-from-inner-while",
+        "native": [
+          {
+            "value": "lw1,8,15"
+          },
+          {
+            "value": "lw1,9,17"
+          }
+        ],
+        "inputs": [
+          6,
+          7
+        ],
+        "fixedExpected": "lw1,8,15"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-in-try-finally",
+        "native": [
+          {
+            "value": "tf012:345"
+          },
+          {
+            "value": "tf012:456"
+          }
+        ],
+        "inputs": [
+          3,
+          4
+        ],
+        "fixedExpected": "tf012:345"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-labeled-continue-through-finally",
+        "native": [
+          {
+            "value": "lf01:2,3"
+          },
+          {
+            "value": "lf01:3,4"
+          }
+        ],
+        "inputs": [
+          2,
+          3
+        ],
+        "fixedExpected": "lf01:2,3"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-in-catch",
+        "native": [
+          {
+            "value": "c0:0/2:8/4:16"
+          },
+          {
+            "value": "c0:0/2:9/4:18"
+          }
+        ],
+        "inputs": [
+          8,
+          9
+        ],
+        "fixedExpected": "c0:0/2:8/4:16"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-from-nested-block",
+        "native": [
+          {
+            "value": "bk0.0,9.1,18.2"
+          },
+          {
+            "value": "bk0.0,10.1,20.2"
+          }
+        ],
+        "inputs": [
+          9,
+          10
+        ],
+        "fixedExpected": "bk0.0,9.1,18.2"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-closure-in-update",
+        "native": [
+          {
+            "value": "up1,2,3|11,21,31"
+          },
+          {
+            "value": "up2,3,4|12,22,32"
+          }
+        ],
+        "inputs": [
+          1,
+          2
+        ],
+        "fixedExpected": "up1,2,3|11,21,31"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-two-vars",
+        "native": [
+          {
+            "value": "tv2/10,3/9,4/8"
+          },
+          {
+            "value": "tv3/10,4/9,5/8"
+          }
+        ],
+        "inputs": [
+          2,
+          3
+        ],
+        "fixedExpected": "tv2/10,3/9,4/8"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-closure-mutates-copy",
+        "native": [
+          {
+            "value": "m3226"
+          },
+          {
+            "value": "m3227"
+          }
+        ],
+        "inputs": [
+          5,
+          6
+        ],
+        "fixedExpected": "m3226"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-let-continue-no-capture-control",
+        "native": [
+          {
+            "value": "nc18"
+          },
+          {
+            "value": "nc24"
+          }
+        ],
+        "inputs": [
+          3,
+          4
+        ],
+        "fixedExpected": "nc18"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-var-continue-shared-control",
+        "native": [
+          {
+            "value": "v12,12,12"
+          },
+          {
+            "value": "v15,15,15"
+          }
+        ],
+        "inputs": [
+          4,
+          5
+        ],
+        "fixedExpected": "v12,12,12"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-of-const-continue-per-iteration",
+        "native": [
+          {
+            "value": "of2,4,6"
+          },
+          {
+            "value": "of3,6,9"
+          }
+        ],
+        "inputs": [
+          2,
+          3
+        ],
+        "fixedExpected": "of2,4,6"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "for-in-const-continue-per-iteration",
+        "native": [
+          {
+            "value": "inp3,q3,r3"
+          },
+          {
+            "value": "inp4,q4,r4"
+          }
+        ],
+        "inputs": [
+          3,
+          4
+        ],
+        "fixedExpected": "inp3,q3,r3"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "review-const-tdz-throwing-rhs-wins",
+        "native": [
+          {
+            "value": "rhs:7"
+          },
+          {
+            "value": "rhs:8"
+          }
+        ],
+        "inputs": [
+          7,
+          8
+        ],
+        "fixedExpected": "rhs:7"
+      },
+      {
+        "baseMatchesFixed": false,
+        "feature": "review-captured-const-tdz-throwing-rhs-wins",
+        "native": [
+          {
+            "value": "wrong"
+          },
+          {
+            "value": "wrong"
+          }
+        ],
+        "inputs": [
+          7,
+          8
+        ],
+        "fixedExpected": "captured:7"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "review-initialized-const-logical-short-circuit",
+        "native": [
+          {
+            "value": "0,1,7|dT|7"
+          },
+          {
+            "value": "0,1,8|dT|8"
+          }
+        ],
+        "inputs": [
+          7,
+          8
+        ],
+        "fixedExpected": "0,1,7|dT|7"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "review-continue-without-update",
+        "native": [
+          {
+            "value": "8,9,10"
+          },
+          {
+            "value": "9,10,11"
+          }
+        ],
+        "inputs": [
+          7,
+          8
+        ],
+        "fixedExpected": "8,9,10"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "review-continue-without-test",
+        "native": [
+          {
+            "value": "7,8,9"
+          },
+          {
+            "value": "8,9,10"
+          }
+        ],
+        "inputs": [
+          7,
+          8
+        ],
+        "fixedExpected": "7,8,9"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "review-continue-outer-label-from-nested-loop",
+        "native": [
+          {
+            "value": "7,8,9|0:0;1:0;2:0;"
+          },
+          {
+            "value": "8,9,10|0:0;1:0;2:0;"
+          }
+        ],
+        "inputs": [
+          7,
+          8
+        ],
+        "fixedExpected": "7,8,9|0:0;1:0;2:0;"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "review-continue-finally-mutates-head",
+        "native": [
+          {
+            "value": "8,10,12|012"
+          },
+          {
+            "value": "9,11,13|012"
+          }
+        ],
+        "inputs": [
+          7,
+          8
+        ],
+        "fixedExpected": "8,10,12|012"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "review-continue-head-and-block-captures",
+        "native": [
+          {
+            "value": "7:7,8:17,9:27"
+          },
+          {
+            "value": "8:8,9:18,10:28"
+          }
+        ],
+        "inputs": [
+          7,
+          8
+        ],
+        "fixedExpected": "7:7,8:17,9:27"
+      },
+      {
+        "baseMatchesFixed": true,
+        "feature": "review-continue-test-and-update-captures",
+        "native": [
+          {
+            "value": "7,8,9,10|8,9,10"
+          },
+          {
+            "value": "8,9,10,11|9,10,11"
+          }
+        ],
+        "inputs": [
+          7,
+          8
+        ],
+        "fixedExpected": "7,8,9,10|8,9,10"
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{"date":"2026-10-04T15:21:10.035Z","stage":"Starting…"}
+{"date":"2026-10-04T15:21:10.307Z","stage":"flatten:flatmap-callback-gc: budget 31"}
+Read from remote host home.cloudlabs.live: Connection reset by peer
+client_loop: send disconnect: Broken pipe

@@ -1,0 +1,299 @@
+{
+  "date": "2026-10-03T06:09:47.058Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 44,
+    "checked": 173,
+    "syntaxIdentityPrograms": 31,
+    "unsupportedChecks": 1,
+    "resourceLimited": 1,
+    "resumptionDispatches": 19137,
+    "elapsedMs": 14090,
+    "results": [
+      {
+        "feature": "json-phase5-scalars",
+        "checked": 4,
+        "maxSteps": 9758,
+        "collections": 1
+      },
+      {
+        "feature": "json-phase5-numbers",
+        "checked": 4,
+        "maxSteps": 13303,
+        "collections": 1
+      },
+      {
+        "feature": "json-phase5-nested",
+        "checked": 4,
+        "maxSteps": 11403,
+        "collections": 1
+      },
+      {
+        "feature": "json-phase5-duplicate",
+        "checked": 4,
+        "maxSteps": 26813,
+        "collections": 2
+      },
+      {
+        "feature": "json-phase5-proto-data",
+        "checked": 4,
+        "maxSteps": 19910,
+        "collections": 1
+      },
+      {
+        "feature": "json-phase5-setter-bypass",
+        "checked": 4,
+        "maxSteps": 10197,
+        "collections": 1
+      },
+      {
+        "feature": "json-phase5-descriptor",
+        "checked": 4,
+        "maxSteps": 9417,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase5-unicode",
+        "checked": 4,
+        "maxSteps": 2120,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase5-escapes",
+        "checked": 4,
+        "maxSteps": 1358,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase5-coercion",
+        "checked": 4,
+        "maxSteps": 26804,
+        "collections": 2
+      },
+      {
+        "feature": "json-phase5-whitespace",
+        "checked": 4,
+        "maxSteps": 9113,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase5-mutation-immunity",
+        "checked": 4,
+        "maxSteps": 9184,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-0",
+        "checked": 4,
+        "maxSteps": 185,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-1",
+        "checked": 4,
+        "maxSteps": 207,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-2",
+        "checked": 4,
+        "maxSteps": 262,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-3",
+        "checked": 4,
+        "maxSteps": 262,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-4",
+        "checked": 4,
+        "maxSteps": 262,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-5",
+        "checked": 4,
+        "maxSteps": 258,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-6",
+        "checked": 4,
+        "maxSteps": 868,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-7",
+        "checked": 4,
+        "maxSteps": 859,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-8",
+        "checked": 4,
+        "maxSteps": 366,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-9",
+        "checked": 4,
+        "maxSteps": 400,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-10",
+        "checked": 4,
+        "maxSteps": 416,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-11",
+        "checked": 4,
+        "maxSteps": 273,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-12",
+        "checked": 4,
+        "maxSteps": 8935,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-13",
+        "checked": 4,
+        "maxSteps": 405,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-14",
+        "checked": 4,
+        "maxSteps": 8931,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-15",
+        "checked": 4,
+        "maxSteps": 9070,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-16",
+        "checked": 4,
+        "maxSteps": 368,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-17",
+        "checked": 4,
+        "maxSteps": 516,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-18",
+        "checked": 4,
+        "maxSteps": 324,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-19",
+        "checked": 4,
+        "maxSteps": 310,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-20",
+        "checked": 4,
+        "maxSteps": 361,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-21",
+        "checked": 4,
+        "maxSteps": 320,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-22",
+        "checked": 4,
+        "maxSteps": 502,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-23",
+        "checked": 4,
+        "maxSteps": 372,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-24",
+        "checked": 4,
+        "maxSteps": 258,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-25",
+        "checked": 4,
+        "maxSteps": 262,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-26",
+        "checked": 4,
+        "maxSteps": 262,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-27",
+        "checked": 4,
+        "maxSteps": 258,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-28",
+        "checked": 4,
+        "maxSteps": 297,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-29",
+        "checked": 4,
+        "maxSteps": 298,
+        "collections": 0
+      },
+      {
+        "feature": "json-syntax-30",
+        "checked": 4,
+        "maxSteps": 295,
+        "collections": 0
+      }
+    ],
+    "method": "JSON grammar and guest SyntaxError compared with fresh native realms and fixed expectations; data-property creation, UTF-16 escapes/lone surrogates, early unsupported reviver, and one-instruction resumption.",
+    "gaps": [
+      "Callable reviver and source context unsupported before source coercion",
+      "JSON.stringify pending",
+      "Guest string, heap and frame limits remain resource boundaries"
+    ]
+  }
+}

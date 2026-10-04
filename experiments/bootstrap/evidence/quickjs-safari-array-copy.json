@@ -1,0 +1,557 @@
+{
+  "date": "2026-10-03T06:04:04.160Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "compiler": "QuickJS/Wasm",
+    "programs": 37,
+    "checked": 181,
+    "resourceChecks": 1,
+    "inputs": [
+      0,
+      1,
+      -1,
+      3,
+      17
+    ],
+    "methods": [
+      "toReversed",
+      "toSpliced",
+      "with"
+    ],
+    "resumptionDispatches": 3240,
+    "resumptionExpected": "lcbaisd:3:3:1",
+    "elapsedMs": 11051,
+    "results": [
+      {
+        "index": 0,
+        "feature": "reversed-dense-holes-original-unchanged",
+        "checked": 5,
+        "expected": [
+          "3:number=2:undefined=undefined:number=0|3:number=0:hole:number=2",
+          "3:number=2:undefined=undefined:number=1|3:number=1:hole:number=2",
+          "3:number=2:undefined=undefined:number=-1|3:number=-1:hole:number=2",
+          "3:number=2:undefined=undefined:number=3|3:number=3:hole:number=2",
+          "3:number=2:undefined=undefined:number=17|3:number=17:hole:number=2"
+        ],
+        "maxSteps": 1797,
+        "collections": 0
+      },
+      {
+        "index": 1,
+        "feature": "reversed-inherited-index",
+        "checked": 5,
+        "expected": [
+          "3:undefined=undefined:number=0:number=1",
+          "3:undefined=undefined:number=1:number=1",
+          "3:undefined=undefined:number=-1:number=1",
+          "3:undefined=undefined:number=3:number=1",
+          "3:undefined=undefined:number=17:number=1"
+        ],
+        "maxSteps": 1295,
+        "collections": 0
+      },
+      {
+        "index": 2,
+        "feature": "reversed-get-order",
+        "checked": 5,
+        "expected": [
+          "cba:021",
+          "cba:121",
+          "cba:-121",
+          "cba:321",
+          "cba:1721"
+        ],
+        "maxSteps": 969,
+        "collections": 0
+      },
+      {
+        "index": 3,
+        "feature": "reversed-getter-mutation-length-snapshot",
+        "checked": 5,
+        "expected": [
+          "3:number=4:undefined=undefined:number=0",
+          "3:number=4:undefined=undefined:number=1",
+          "3:number=4:undefined=undefined:number=-1",
+          "3:number=4:undefined=undefined:number=3",
+          "3:number=4:undefined=undefined:number=17"
+        ],
+        "maxSteps": 1468,
+        "collections": 0
+      },
+      {
+        "index": 4,
+        "feature": "reversed-ignores-constructor",
+        "checked": 5,
+        "expected": [
+          0,
+          1,
+          -1,
+          3,
+          17
+        ],
+        "maxSteps": 468,
+        "collections": 0
+      },
+      {
+        "index": 5,
+        "feature": "reversed-string-boxing",
+        "checked": 5,
+        "expected": [
+          "2:string=b:string=a",
+          "2:string=b:string=a",
+          "2:string=b:string=a",
+          "2:string=b:string=a",
+          "2:string=b:string=a"
+        ],
+        "maxSteps": 765,
+        "collections": 0
+      },
+      {
+        "index": 6,
+        "feature": "reversed-length-coercion",
+        "checked": 5,
+        "expected": [
+          "0:lng",
+          "1:lng",
+          "-1:lng",
+          "3:lng",
+          "17:lng"
+        ],
+        "maxSteps": 537,
+        "collections": 0
+      },
+      {
+        "index": 7,
+        "feature": "reversed-create-range-before-get",
+        "checked": 5,
+        "expected": [
+          "R",
+          "R",
+          "R",
+          "R",
+          "R"
+        ],
+        "maxSteps": 116,
+        "collections": 0
+      },
+      {
+        "index": 8,
+        "feature": "reversed-getter-abrupt-identity",
+        "checked": 5,
+        "expected": [
+          "true:",
+          "true:",
+          "true:",
+          "true:",
+          "true:"
+        ],
+        "maxSteps": 219,
+        "collections": 0
+      },
+      {
+        "index": 9,
+        "feature": "with-dense-holes-original-unchanged",
+        "checked": 5,
+        "expected": [
+          "3:number=9:undefined=undefined:number=2|3:number=0:hole:number=2",
+          "3:number=9:undefined=undefined:number=2|3:number=1:hole:number=2",
+          "3:number=9:undefined=undefined:number=2|3:number=-1:hole:number=2",
+          "3:number=9:undefined=undefined:number=2|3:number=3:hole:number=2",
+          "3:number=9:undefined=undefined:number=2|3:number=17:hole:number=2"
+        ],
+        "maxSteps": 1901,
+        "collections": 0
+      },
+      {
+        "index": 10,
+        "feature": "with-skips-replaced-getter",
+        "checked": 5,
+        "expected": [
+          "c:170",
+          "c:171",
+          "c:17-1",
+          "c:173",
+          "c:1717"
+        ],
+        "maxSteps": 1400,
+        "collections": 0
+      },
+      {
+        "index": 11,
+        "feature": "with-negative-fractional-and-nan",
+        "checked": 5,
+        "expected": [
+          "3:number=1:number=2:number=8|3:number=9:number=2:number=0|3:number=7:number=2:number=0",
+          "3:number=1:number=2:number=8|3:number=9:number=2:number=1|3:number=7:number=2:number=1",
+          "3:number=1:number=2:number=8|3:number=9:number=2:number=-1|3:number=7:number=2:number=-1",
+          "3:number=1:number=2:number=8|3:number=9:number=2:number=3|3:number=7:number=2:number=3",
+          "3:number=1:number=2:number=8|3:number=9:number=2:number=17|3:number=7:number=2:number=17"
+        ],
+        "maxSteps": 4166,
+        "collections": 2
+      },
+      {
+        "index": 12,
+        "feature": "with-length-before-index-coercion",
+        "checked": 5,
+        "expected": [
+          "lia:10",
+          "lia:11",
+          "lia:1-1",
+          "lia:13",
+          "lia:117"
+        ],
+        "maxSteps": 927,
+        "collections": 0
+      },
+      {
+        "index": 13,
+        "feature": "with-index-coercion-mutates-original",
+        "checked": 5,
+        "expected": [
+          "3:number=1:number=0:undefined=undefined|1:number=1",
+          "3:number=1:number=1:undefined=undefined|1:number=1",
+          "3:number=1:number=-1:undefined=undefined|1:number=1",
+          "3:number=1:number=3:undefined=undefined|1:number=1",
+          "3:number=1:number=17:undefined=undefined|1:number=1"
+        ],
+        "maxSteps": 1795,
+        "collections": 0
+      },
+      {
+        "index": 14,
+        "feature": "with-out-of-range-before-get",
+        "checked": 5,
+        "expected": [
+          "R",
+          "R",
+          "R",
+          "R",
+          "R"
+        ],
+        "maxSteps": 313,
+        "collections": 0
+      },
+      {
+        "index": 15,
+        "feature": "with-range-infinities-and-empty",
+        "checked": 5,
+        "expected": [
+          "RRR",
+          "RRR",
+          "RRR",
+          "RRR",
+          "RRR"
+        ],
+        "maxSteps": 933,
+        "collections": 0
+      },
+      {
+        "index": 16,
+        "feature": "with-ignores-constructor",
+        "checked": 5,
+        "expected": [
+          0,
+          1,
+          -1,
+          3,
+          17
+        ],
+        "maxSteps": 566,
+        "collections": 0
+      },
+      {
+        "index": 17,
+        "feature": "with-generic-string",
+        "checked": 5,
+        "expected": [
+          "3:string=a:number=0:string=c",
+          "3:string=a:number=1:string=c",
+          "3:string=a:number=-1:string=c",
+          "3:string=a:number=3:string=c",
+          "3:string=a:number=17:string=c"
+        ],
+        "maxSteps": 1245,
+        "collections": 0
+      },
+      {
+        "index": 18,
+        "feature": "with-abrupt-index-identity",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 206,
+        "collections": 0
+      },
+      {
+        "index": 19,
+        "feature": "with-create-range-after-index",
+        "checked": 5,
+        "expected": [
+          "iR",
+          "iR",
+          "iR",
+          "iR",
+          "iR"
+        ],
+        "maxSteps": 336,
+        "collections": 0
+      },
+      {
+        "index": 20,
+        "feature": "spliced-no-args-vs-undefined",
+        "checked": 5,
+        "expected": [
+          "3:number=0:undefined=undefined:number=2|0|3:number=0:undefined=undefined:number=2",
+          "3:number=1:undefined=undefined:number=2|0|3:number=1:undefined=undefined:number=2",
+          "3:number=-1:undefined=undefined:number=2|0|3:number=-1:undefined=undefined:number=2",
+          "3:number=3:undefined=undefined:number=2|0|3:number=3:undefined=undefined:number=2",
+          "3:number=17:undefined=undefined:number=2|0|3:number=17:undefined=undefined:number=2"
+        ],
+        "maxSteps": 3266,
+        "collections": 1
+      },
+      {
+        "index": 21,
+        "feature": "spliced-insertion-and-original",
+        "checked": 5,
+        "expected": [
+          "4:number=1:number=0:number=8:number=3|3:number=1:hole:number=3",
+          "4:number=1:number=1:number=8:number=3|3:number=1:hole:number=3",
+          "4:number=1:number=-1:number=8:number=3|3:number=1:hole:number=3",
+          "4:number=1:number=3:number=8:number=3|3:number=1:hole:number=3",
+          "4:number=1:number=17:number=8:number=3|3:number=1:hole:number=3"
+        ],
+        "maxSteps": 2415,
+        "collections": 1
+      },
+      {
+        "index": 22,
+        "feature": "spliced-skips-deleted-getters",
+        "checked": 5,
+        "expected": [
+          "1:0:3",
+          "1:1:3",
+          "1:-1:3",
+          "1:3:3",
+          "1:17:3"
+        ],
+        "maxSteps": 1498,
+        "collections": 0
+      },
+      {
+        "index": 23,
+        "feature": "spliced-coercion-and-copy-order",
+        "checked": 5,
+        "expected": [
+          "lsdac:1:0:3",
+          "lsdac:1:1:3",
+          "lsdac:1:-1:3",
+          "lsdac:1:3:3",
+          "lsdac:1:17:3"
+        ],
+        "maxSteps": 1625,
+        "collections": 0
+      },
+      {
+        "index": 24,
+        "feature": "spliced-negative-start-skip-clamping",
+        "checked": 5,
+        "expected": [
+          "2:number=1:number=0|4:number=0:number=1:number=2:number=3|4:number=1:number=2:number=3:number=0",
+          "2:number=1:number=1|4:number=1:number=1:number=2:number=3|4:number=1:number=2:number=3:number=1",
+          "2:number=1:number=-1|4:number=-1:number=1:number=2:number=3|4:number=1:number=2:number=3:number=-1",
+          "2:number=1:number=3|4:number=3:number=1:number=2:number=3|4:number=1:number=2:number=3:number=3",
+          "2:number=1:number=17|4:number=17:number=1:number=2:number=3|4:number=1:number=2:number=3:number=17"
+        ],
+        "maxSteps": 4956,
+        "collections": 2
+      },
+      {
+        "index": 25,
+        "feature": "spliced-length-snapshot-during-coercion",
+        "checked": 5,
+        "expected": [
+          "4:number=1:number=0:undefined=undefined:undefined=undefined",
+          "4:number=1:number=1:undefined=undefined:undefined=undefined",
+          "4:number=1:number=-1:undefined=undefined:undefined=undefined",
+          "4:number=1:number=3:undefined=undefined:undefined=undefined",
+          "4:number=1:number=17:undefined=undefined:undefined=undefined"
+        ],
+        "maxSteps": 2003,
+        "collections": 0
+      },
+      {
+        "index": 26,
+        "feature": "spliced-max-safe-removal-insertion-exact",
+        "checked": 5,
+        "expected": [
+          "2:0:2",
+          "2:1:2",
+          "2:-1:2",
+          "2:3:2",
+          "2:17:2"
+        ],
+        "maxSteps": 991,
+        "collections": 0
+      },
+      {
+        "index": 27,
+        "feature": "spliced-max-safe-overflow-typeerror",
+        "checked": 5,
+        "expected": [
+          "T",
+          "T",
+          "T",
+          "T",
+          "T"
+        ],
+        "maxSteps": 408,
+        "collections": 0
+      },
+      {
+        "index": 28,
+        "feature": "spliced-array-length-range-error",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 312,
+        "collections": 0
+      },
+      {
+        "index": 29,
+        "feature": "spliced-ignores-constructor",
+        "checked": 5,
+        "expected": [
+          0,
+          1,
+          -1,
+          3,
+          17
+        ],
+        "maxSteps": 712,
+        "collections": 0
+      },
+      {
+        "index": 30,
+        "feature": "spliced-generic-string",
+        "checked": 5,
+        "expected": [
+          "3:string=a:number=0:string=d",
+          "3:string=a:number=1:string=d",
+          "3:string=a:number=-1:string=d",
+          "3:string=a:number=3:string=d",
+          "3:string=a:number=17:string=d"
+        ],
+        "maxSteps": 1380,
+        "collections": 0
+      },
+      {
+        "index": 31,
+        "feature": "spliced-abrupt-skip-after-start",
+        "checked": 5,
+        "expected": [
+          "true:sd",
+          "true:sd",
+          "true:sd",
+          "true:sd",
+          "true:sd"
+        ],
+        "maxSteps": 540,
+        "collections": 0
+      },
+      {
+        "index": 32,
+        "feature": "all-copy-frozen-original",
+        "checked": 5,
+        "expected": [
+          "3:number=2:undefined=undefined:number=0|3:number=0:number=7:number=2|4:number=0:number=9:undefined=undefined:number=2|3:number=0:hole:number=2",
+          "3:number=2:undefined=undefined:number=1|3:number=1:number=7:number=2|4:number=1:number=9:undefined=undefined:number=2|3:number=1:hole:number=2",
+          "3:number=2:undefined=undefined:number=-1|3:number=-1:number=7:number=2|4:number=-1:number=9:undefined=undefined:number=2|3:number=-1:hole:number=2",
+          "3:number=2:undefined=undefined:number=3|3:number=3:number=7:number=2|4:number=3:number=9:undefined=undefined:number=2|3:number=3:hole:number=2",
+          "3:number=2:undefined=undefined:number=17|3:number=17:number=7:number=2|4:number=17:number=9:undefined=undefined:number=2|3:number=17:hole:number=2"
+        ],
+        "maxSteps": 5241,
+        "collections": 2
+      },
+      {
+        "index": 33,
+        "feature": "copy-own-descriptors-bypass-prototype-setter",
+        "checked": 5,
+        "expected": [
+          "0:000:truetruetrue",
+          "0:111:truetruetrue",
+          "0:-1-1-1:truetruetrue",
+          "0:333:truetruetrue",
+          "0:171717:truetruetrue"
+        ],
+        "maxSteps": 1959,
+        "collections": 1
+      },
+      {
+        "index": 34,
+        "feature": "copy-nullish-receiver-typeerror",
+        "checked": 5,
+        "expected": [
+          "TTT",
+          "TTT",
+          "TTT",
+          "TTT",
+          "TTT"
+        ],
+        "maxSteps": 111,
+        "collections": 0
+      },
+      {
+        "index": 35,
+        "feature": "copy-method-metadata",
+        "checked": 5,
+        "expected": [
+          "toReversed:0:toSpliced:2:with:2",
+          "toReversed:0:toSpliced:2:with:2",
+          "toReversed:0:toSpliced:2:with:2",
+          "toReversed:0:toSpliced:2:with:2",
+          "toReversed:0:toSpliced:2:with:2"
+        ],
+        "maxSteps": 271,
+        "collections": 0
+      }
+    ],
+    "gaps": [
+      "toSorted is pending; this wave implements only toReversed, toSpliced and with.",
+      "Existing heap, frame, instruction, string and argument-count limits remain explicit resource failures; no CPU replay.",
+      "These methods do not read constructor, Symbol.species or iterators. Numeric coercion inherits existing Symbol/BigInt/custom @@toPrimitive admission limits."
+    ],
+    "nativeReference": "Fresh isolated iframe per program/input; no host guest execution in the GPU path."
+  }
+}

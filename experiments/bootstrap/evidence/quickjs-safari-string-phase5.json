@@ -1,0 +1,184 @@
+{
+  "date": "2026-10-03T05:52:41.101Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 25,
+    "checked": 97,
+    "fixedExpectations": 25,
+    "resourceLimited": 3,
+    "resumptionDispatches": 1249,
+    "elapsedMs": 1307,
+    "results": [
+      {
+        "feature": "string-phase5-indices",
+        "checked": 4,
+        "maxSteps": 1277,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-points",
+        "checked": 4,
+        "maxSteps": 1607,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-repeat",
+        "checked": 4,
+        "maxSteps": 951,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-padding",
+        "checked": 4,
+        "maxSteps": 1620,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-trim-boundaries",
+        "checked": 4,
+        "maxSteps": 1715,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-wellformed",
+        "checked": 4,
+        "maxSteps": 740,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-coercion-order",
+        "checked": 4,
+        "maxSteps": 672,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-fill-shortcircuit",
+        "checked": 4,
+        "maxSteps": 575,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-boxed",
+        "checked": 4,
+        "maxSteps": 1830,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-prototype-immunity",
+        "checked": 4,
+        "maxSteps": 1141,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-repeat-range",
+        "checked": 4,
+        "maxSteps": 1189,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-receiver-before-index",
+        "checked": 4,
+        "maxSteps": 391,
+        "collections": 0
+      },
+      {
+        "feature": "string-phase5-exact256",
+        "checked": 4,
+        "maxSteps": 2271,
+        "collections": 1
+      },
+      {
+        "feature": "null-receiver-0",
+        "checked": 4,
+        "maxSteps": 117,
+        "collections": 0
+      },
+      {
+        "feature": "null-receiver-1",
+        "checked": 4,
+        "maxSteps": 118,
+        "collections": 0
+      },
+      {
+        "feature": "null-receiver-2",
+        "checked": 4,
+        "maxSteps": 118,
+        "collections": 0
+      },
+      {
+        "feature": "null-receiver-3",
+        "checked": 4,
+        "maxSteps": 122,
+        "collections": 0
+      },
+      {
+        "feature": "null-receiver-4",
+        "checked": 4,
+        "maxSteps": 122,
+        "collections": 0
+      },
+      {
+        "feature": "null-receiver-5",
+        "checked": 4,
+        "maxSteps": 119,
+        "collections": 0
+      },
+      {
+        "feature": "null-receiver-6",
+        "checked": 4,
+        "maxSteps": 118,
+        "collections": 0
+      },
+      {
+        "feature": "null-receiver-7",
+        "checked": 4,
+        "maxSteps": 118,
+        "collections": 0
+      },
+      {
+        "feature": "null-receiver-8",
+        "checked": 4,
+        "maxSteps": 115,
+        "collections": 0
+      },
+      {
+        "feature": "null-receiver-9",
+        "checked": 4,
+        "maxSteps": 116,
+        "collections": 0
+      },
+      {
+        "feature": "full-whitespace-table",
+        "checked": 4,
+        "maxSteps": 10626,
+        "collections": 0
+      }
+    ],
+    "gaps": [
+      "Unicode casing and normalization pending",
+      "Custom Symbol.toPrimitive depends on separate Symbol integration",
+      "BigInt string formatting unsupported"
+    ],
+    "method": "Native fresh realms and fixed expectations; exact whitespace, UTF-16 surrogate handling, receiver/argument ordering, prototype immunity and resumable guest execution. Resource-limited cases counted separately."
+  }
+}

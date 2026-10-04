@@ -1,0 +1,18 @@
+{
+  "archive": "/tmp/lanes-m1-prototype-candidate.tgz",
+  "archiveSha256": "017beebdef1500fb6c3b1e971831bd5c76bf7ca4e57c96b5b47d8d3854dc019e",
+  "modules": {
+    "main": {
+      "sha256": "1fc615e469999f703c7dd0644061f25de52bc372154b66404a7710ae69d9619e",
+      "bytes": 217819
+    },
+    "call": {
+      "sha256": "cf28e117b0927517ccaa5df4e8eed194de6bcb57eb0992ac532b1ac7361b1e5d",
+      "bytes": 101946
+    },
+    "native": {
+      "sha256": "8d99fabb881f4bf1312ea2d812fa001b730020e6179ce256919fbf377566f22d",
+      "bytes": 155430
+    }
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "date": "2026-10-04T12:31:01.925Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 27,
+    "checked": 105,
+    "unsupported": 0,
+    "requiredGC": 1,
+    "resumptionDispatches": 532,
+    "elapsedMs": 3138,
+    "results": [
+      {
+        "feature": "bigint-divmod-positive",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-negative-dividend",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-negative-divisor",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-both-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-zero",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-quotient-zero",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-negative-quotient-zero",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-exact",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-u32-carry",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-u64-all-ones",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-u64-borrow",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-wide-high-bit-divisor",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-intermediate-carry",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-equal-wide",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-divisor-larger",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-max-width-transient-carry",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-max-width-negative",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 17
+      },
+      {
+        "feature": "bigint-divmod-max-width-div-one",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-divmod-multiword-zero-limbs",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 14
+      },
+      {
+        "feature": "bigint-division-zero-rangeerror",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 173
+      },
+      {
+        "feature": "bigint-division-mixed-typeerror",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 71
+      },
+      {
+        "feature": "bigint-remainder-zero-rangeerror",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 173
+      },
+      {
+        "feature": "bigint-remainder-mixed-typeerror",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 71
+      },
+      {
+        "feature": "bigint-divmod-zero-truth",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 28
+      },
+      {
+        "feature": "bigint-divmod-retain-after-gc",
+        "checked": 4,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "maxSteps": 14051
+      },
+      {
+        "feature": "bigint-divmod-object-ToNumeric",
+        "checked": 4,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxSteps": 165
+      }
+    ],
+    "boundaries": [],
+    "method": "Fixed native oracles for signed multiword division/remainder, truncation toward zero, zero-divisor RangeError identity, mixed-number TypeError, canonical zero truth, max2048bit operands, transient carry and retained result GC. Guest arithmetic uses only WGSL."
+  }
+}

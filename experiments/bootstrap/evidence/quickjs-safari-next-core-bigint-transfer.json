@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-03T21:11:09.279Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 8,
+    "checked": 51,
+    "inputLimitChecks": 2,
+    "resumptionDispatches": 6,
+    "results": [
+      {
+        "feature": "identity",
+        "checked": 8,
+        "collections": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "addition",
+        "checked": 8,
+        "collections": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "subtraction",
+        "checked": 8,
+        "collections": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "multiplication",
+        "checked": 8,
+        "collections": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "negation",
+        "checked": 8,
+        "collections": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "retained after GC",
+        "checked": 8,
+        "collections": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "method": "Host BigInt used only to marshal API values and as independent test oracle; all guest arithmetic executes through WGSL."
+  }
+}

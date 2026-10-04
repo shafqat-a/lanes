@@ -1,0 +1,42 @@
+{
+  "capturedAt": "2026-10-04T03:13:21.828268+00:00",
+  "qualification": "Latest metadata candidate passes host checks; GPU qualification pending because M1 SSH authentication is rejected. Previous shared-dispatch candidate aborted for memory pressure.",
+  "guestProgramsExecuted": 0,
+  "staticEstimate": {
+    "method": "Recursive textual body-size sum weighted by static call-site multiplicity; no optimizer/loop-unrolling model, no GPU execution",
+    "before": 1793008775,
+    "after": "18609325",
+    "notMeasuredCompilerIR": true
+  },
+  "checks": {
+    "callPostconditions": 1232,
+    "requestLifecycle": 219,
+    "finishOrdering": 91,
+    "finishStructural": 7,
+    "sourceDriftAndAcyclicGraph": "pass",
+    "collectionHeapComparisons": 2032,
+    "collectionInvalidBounds": 3,
+    "dispatchBoundary": {
+      "programs": 10,
+      "nativeValues": 20,
+      "packedNativeWasmParity": 10,
+      "gpuExecuted": false,
+      "includesNestedIteratorCloseOriginalThrow": true
+    },
+    "builtinMetadataComparisons": 16200,
+    "builtinMetadataRows": 142
+  },
+  "sha256": {
+    "experiments/quickjs-runtime/shader.js": "6522a0c9207349efafd3fdd28d09a2df60d9ec3f304fbe3e7531801a913f466b",
+    "experiments/quickjs-runtime/shared-call-dispatch.js": "a74af6263c3bbcbacc6793817c241d5629e1b043cebd9ab4aca8e4cbd39e82b8",
+    "experiments/quickjs-runtime/shared-finish-dispatch.js": "44d0887373ee8aa46c27e1e996bdff29aa7992f7c06693161f43c2a1d09519b7",
+    "experiments/quickjs-runtime/stdlib-collections-core.js": "df3f4383312f7a11b88d0e0d9f76883fd00562ad59b2fc1c52e4f28b9378e47e",
+    "experiments/quickjs-runtime/builtin-metadata-wgsl.js": "b15d1b62e43e283f3b2e04b1e0f7a5d2b8383b71e5771e8171495f968e1b5467"
+  },
+  "candidate": {
+    "path": "/tmp/lanes-m1-metadata-candidate.tgz",
+    "sha256": "dee040055a4506ebecd44ff7d31cf86b82b3bc037a1a762bafa7e0a56641b569",
+    "build": "passed",
+    "gpuLaunch": "not started; SSH authentication rejected on port 5322"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "createdAt": "2026-10-03T04:48:24.774Z",
+  "hostOnly": true,
+  "compiler": {
+    "programs": 1185,
+    "validationPrograms": 29,
+    "nativeWasmAgreement": true,
+    "guestExecution": false,
+    "nativeReferenceDifferences": [
+      {
+        "source": "function f(x){const a=[];Object.seal(a);return Object.isFrozen(a);}",
+        "actual": true,
+        "expected": false
+      }
+    ]
+  },
+  "checks": {
+    "boxing": {
+      "programs": 111,
+      "typeErrorPrograms": 46,
+      "rangeErrorPrograms": 6,
+      "unsupportedPrograms": 28,
+      "compilerPrograms": 243,
+      "compilerRejectedPrograms": 2,
+      "nativeWasmAgreement": true,
+      "nativePositiveChecks": 440,
+      "nativeNegativeChecks": 208,
+      "normativeExpectations": 3,
+      "resumptionExpected": "tvgstringsobjecttrue5mobjectk:3:12:18:ab17|17|17:TT:4:4",
+      "gpuChecks": false
+    },
+    "boxing-sources": {
+      "fields": [
+        "stringCharCodeAt",
+        "stringCharAt",
+        "stringSlice",
+        "numberToString",
+        "stringConstruct",
+        "numberConstruct"
+      ],
+      "intrinsics": {
+        "stringCharCodeAt": [
+          "__lanesPrimitive",
+          "__lanesUnsupported",
+          "__lanesText",
+          "__lanesNumber",
+          "__lanesCharCodeAt"
+        ],
+        "stringCharAt": [
+          "__lanesPrimitive",
+          "__lanesUnsupported",
+          "__lanesText",
+          "__lanesNumber",
+          "__lanesCharAt"
+        ],
+        "stringSlice": [
+          "__lanesPrimitive",
+          "__lanesUnsupported",
+          "__lanesText",
+          "__lanesNumber",
+          "__lanesSlice"
+        ],
+        "numberToString": [
+          "__lanesPrimitive",
+          "__lanesUnsupported",
+          "__lanesText",
+          "__lanesNumber",
+          "__lanesThisNumber"
+        ],
+        "stringConstruct": [
+          "__lanesToText",
+          "__lanesWrap"
+        ],
+        "numberConstruct": [
+          "__lanesNumber",
+          "__lanesWrap"
+        ]
+      },
+      "intrinsicIds": {
+        "__lanesUnsupported": 141,
+        "__lanesPrimitive": 129,
+        "__lanesText": 111,
+        "__lanesNumber": 122,
+        "__lanesToText": 134,
+        "__lanesThisNumber": 927,
+        "__lanesCharCodeAt": 931,
+        "__lanesCharAt": 932,
+        "__lanesSlice": 933,
+        "__lanesWrap": 934
+      },
+      "lengths": {
+        "stringCharCodeAt": 1,
+        "stringCharAt": 1,
+        "stringSlice": 2,
+        "numberToString": 1,
+        "stringConstruct": 1,
+        "numberConstruct": 1
+      },
+      "hostAlgorithmChecks": 43976,
+      "perField": {
+        "stringCharCodeAt": 1283,
+        "stringCharAt": 1283,
+        "stringSlice": 39723,
+        "numberToString": 704,
+        "stringConstruct": 96,
+        "numberConstruct": 95
+      },
+      "orderChecks": 550,
+      "unsupportedRadixChecks": 144,
+      "intrinsicCalls": {
+        "charCodeAt": 1121,
+        "charAt": 1121,
+        "slice": 32796,
+        "wrap": 188,
+        "thisNumber": 985
+      },
+      "knownDivergences": [
+        "new Number(10n): native 10, guest TypeError (Number constructor BigInt branch not implemented)",
+        "new String(10n) and bigint receivers: native decimal text, guest unsupported completion"
+      ],
+      "packed": {
+        "stringCharCodeAt": {
+          "functions": 6,
+          "code": 676,
+          "image": 11856
+        },
+        "stringCharAt": {
+          "functions": 6,
+          "code": 676,
+          "image": 11824
+        },
+        "stringSlice": {
+          "functions": 6,
+          "code": 724,
+          "image": 11816
+        },
+        "numberToString": {
+          "functions": 5,
+          "code": 592,
+          "image": 11756
+        },
+        "stringConstruct": {
+          "functions": 1,
+          "code": 68,
+          "image": 10600
+        },
+        "numberConstruct": {
+          "functions": 1,
+          "code": 68,
+          "image": 10604
+        }
+      },
+      "nativeWasmAgreement": true,
+      "gpuChecks": false
+    },
+    "string-extract": {
+      "runtimeUnsupportedPrograms": 2,
+      "compilerRejectedPrograms": 6,
+      "helpers": [
+        "concat",
+        "substring",
+        "substr"
+      ],
+      "metadata": [
+        {
+          "name": "concat",
+          "id": 805,
+          "length": 1,
+          "expectedArity": 1,
+          "field": "stringConcat",
+          "legacy": false,
+          "annex": null
+        },
+        {
+          "name": "substring",
+          "id": 806,
+          "length": 2,
+          "expectedArity": 2,
+          "field": "stringSubstring",
+          "legacy": false,
+          "annex": null
+        },
+        {
+          "name": "substr",
+          "id": 807,
+          "length": 2,
+          "expectedArity": 2,
+          "field": "stringSubstr",
+          "legacy": true,
+          "annex": "B"
+        }
+      ],
+      "directIntrinsics": {
+        "__lanesUnsupported": 141,
+        "__lanesPrimitive": 129,
+        "__lanesText": 111,
+        "__lanesNumber": 122,
+        "__lanesSlice": 933
+      },
+      "indirectIntrinsics": {
+        "__lanesCall": 113,
+        "__lanesDescriptor": 112,
+        "__lanesFromBits": 123,
+        "__lanesNumberWord": 135
+      },
+      "numberIntrinsicOn": [
+        "substring",
+        "substr"
+      ],
+      "unusedFusedToText": "__lanesToText",
+      "expectedArity": {
+        "concat": 1,
+        "substring": 2,
+        "substr": 2
+      },
+      "compiledLength": {
+        "concat": 1,
+        "substring": 2,
+        "substr": 2
+      },
+      "stringOps": [
+        "slice"
+      ],
+      "programs": 19,
+      "negativePrograms": 8,
+      "hostGapPrograms": 13,
+      "knownPins": 43,
+      "hostAlgorithmChecks": 23979,
+      "fuzzSeed": 3237998103,
+      "nativeWasmAgreement": true,
+      "resumptionBudget": 1,
+      "resumptionExpected": "tstabncgueqrG:abcaYZ-17:bc:c:bc:bca:bc:abca::\ud83d\ude00:\ude00:4",
+      "templateLiteral": "QuickJS emits get_field2 \"concat\" and call_method. `a${x}b` is \"a\".concat(x, \"b\"). An empty head is still a primitive string. Empty middle and tail parts are not pushed. This lowering observes mutable concat and delays conversion, so entrySource rejects every template substitution pending a compiler correction. Templates without substitutions remain admitted.",
+      "wiring": [
+        "Add each metadata field and name to program.js FIELDS, in that order, the way stringSearchMetadata is spread.",
+        "Map bootstrapSources[field] to stringExtractSources[name].",
+        "Install each method on String.prototype so primitive and boxed receivers share lookup.",
+        "getProperty of the intrinsic id returns metadata.name and metadata.expectedArity.",
+        "The call redirect loads the bootstrap closure from FIELDS[field] before stringMethod, same as ids 800 through 804.",
+        "Do not handle these ids inside stringMethod. That path only receives two arguments and an already-primitive receiver.",
+        "substr is annex B and may be left unwired without dropping concat or substring."
+      ],
+      "gaps": [
+        "BigInt ToString exits with an uncatchable unsupported runtime completion, not a guest TypeError. The spec formats the decimal digits; __lanesText cannot. ToNumber(bigint) still throws TypeError, which matches the spec. The host shim throws Error named UnsupportedOperation so the message is visible; that shim is not a TypeError, and on the GPU the completion does not enter a guest catch.",
+        "Symbol ToString and ToNumber throw TypeError, including when OrdinaryToPrimitive yields a symbol. The runtime does not admit symbols today.",
+        "Custom @@toPrimitive is not observed. Conversions use OrdinaryToPrimitive through __lanesPrimitive.",
+        "__lanesToText is not used. It would collapse the symbol TypeError and the bigint unsupported completion into one path.",
+        "Null and undefined receivers throw TypeError inside the helper before any argument or index conversion. Do not pre-box. Primitive receivers stay primitive because the functions are strict. String.prototype methods are installed by the boxing integration; preserve the original receiver for strict guest helpers.",
+        "Template substitutions are compiler-rejected: pinned QuickJS lowers them through mutable concat and delays substitution conversions. Explicit concat remains supported.",
+        "Dispatch must enter the guest bootstrap with the full argument list and the original receiver. stringMethod only forwards two values and requires an already-primitive receiver, so it cannot implement concat or this coercion order.",
+        "slice and string + share the existing makeText limit: a result longer than 256 code units is a runtime failure. The helpers do not clamp to that limit.",
+        "A call frame admits at most 16 arguments (LIMITS.args). The concat loop itself is not capped; a template with more pieces than the frame still cannot be called.",
+        "Object ToString is only as correct as that object's toString/valueOf plus __lanesText. RegExp.prototype.toString, Function.prototype.toString, and Array.prototype.toString are not part of this module.",
+        "substr is optional Annex B legacy and has its own source, so concat and substring can be wired without it."
+      ],
+      "gpuChecks": false,
+      "cpuFallback": false
+    },
+    "number-pow": {
+      "exactChecks": 57,
+      "finiteAndSpecialDifferentialChecks": 60192,
+      "randomCount": 20000,
+      "maxUlp": 1,
+      "worst": {
+        "base": 1.000000286985877,
+        "exponent": 2293732666.8761673,
+        "actual": 7.629598254593467e+285,
+        "expected": 7.629598254593468e+285
+      },
+      "compilerPrograms": 69,
+      "nativeWasmAgreement": true,
+      "maxLocals": 46,
+      "maxRefs": 7,
+      "maxStack": 12,
+      "bigIntUnsupportedChecks": 3,
+      "gpuChecks": false,
+      "resumptionExpected": "abc:2:8"
+    },
+    "property-key": {
+      "helperChecks": 18,
+      "nativeChecks": 220,
+      "compilerPrograms": 55,
+      "nativeWasmAgreement": true,
+      "gpuExecuted": false
+    }
+  },
+  "boxingIntegration": {
+    "programs": 10,
+    "nativeChecks": 50,
+    "nativeWasmAgreement": true,
+    "gpuChecks": false
+  },
+  "nodeRegressionTests": {
+    "passed": 26
+  },
+  "npmTests": {
+    "passed": 49
+  },
+  "independentReview": {
+    "confirmedRegressions": 0,
+    "privateBuiltinIds": 35,
+    "uniqueFields": 186,
+    "templateGuardCases": 8,
+    "scope": [
+      "wrapper GC roots",
+      "sparse array indices",
+      "raw computed Reference keys",
+      "Number pow dispatch",
+      "private String span extraction"
+    ]
+  }
+}

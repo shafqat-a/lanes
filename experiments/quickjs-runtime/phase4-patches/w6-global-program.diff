@@ -1,0 +1,54 @@
+--- program.js
++++ program.js
+@@ -14,6 +14,7 @@
+ import { phase4Opcodes, phase4BootstrapSources, phase4Lowering } from './phase4-registry.js';
+ import { classProgramLowering, classRejectNode } from './phase4-classes.js';
+ import { templateConstant, templateProgramLowering } from './phase4-templates.js';
++import { GLOBAL_MODE_BIT, globalFieldNames, globalProgramPlan, globalRefSpec, globalProgramLowering } from './phase4-global.js';
+ export const REVISION = '535a7c250ff4a577ec36c3e103daab6dadeea650';
+ export const OP = Object.freeze(Object.fromEntries([
+   'push', 'closure', 'object', 'drop', 'dup', 'dup1', 'dup2', 'swap', 'nip', 'insert2', 'insert3', 'perm3', 'rot3l', 'rot3r',
+@@ -42,6 +43,7 @@
+ for(const name of [...stringPhase5Aliases.map(m=>m.name),'Math','[object Math]',...arrayPhase5Metadata.flatMap(m=>[m.name,m.field]),...stringPhase5Metadata.flatMap(m=>[m.name,m.field]),...numericPhase5Metadata.flatMap(m=>[m.name,m.field]),...Object.keys(numberPhase5Constants),...Object.keys(mathPhase5Constants),...numberPhase5Pending,...mathPhase5Pending])if(!fieldNames.includes(name))fieldNames.push(name);
+ for(const name of ['JSON','[object JSON]','stringify',...[...arrayCopyMetadata,...numberParseMetadata,...jsonPhase5Metadata].flatMap(m=>[m.name,m.field])])if(!fieldNames.includes(name))fieldNames.push(name);
+ for(const name of Object.keys(phase4BootstrapSources))if(!fieldNames.includes(name))fieldNames.push(name);
++for(const name of globalFieldNames)if(!fieldNames.includes(name))fieldNames.push(name);
+ export const FIELDS = Object.freeze(Object.fromEntries(fieldNames.map((n,i)=>[n,i])));
+ if(Object.keys(FIELDS).length!==fieldNames.length)throw new Error("Duplicate FIELDS name");
+ const valid = new WeakSet();
+@@ -75,6 +77,8 @@
+   // An unpatched compiler lowers template substitutions through mutable concat.
+   if (!raw.features?.includes('template-to-string')) throw new Error('Rebuild the compiler bridge: template-to-string lowering is missing');
+   const functions = raw.functions, image = functions.flatMap(() => [[0, 0, 0, 0], [0, 0, 0, 0]]), code = [], strings = new Map();
++  // Global-object mode (phase4-global.js): sloppy this, free global names, delete x.
++  const globalPlan = globalProgramPlan(raw, name);
+   const add = value => { image.push(value); return image.length - 1; };
+   const text = value => {
+     if (value.length > 256) throw new RangeError('GPU string limit: 256 UTF-16 code units');
+@@ -98,6 +102,8 @@
+     const refOffset = image.length;
+     const root = f === 0 || fn.intrinsicRoot === true;
+     for (const ref of fn.refs) {
++      const globalSpec = globalRefSpec(globalPlan, f, ref);
++      if (globalSpec) { add(globalSpec); continue; }
+       if(root && ref.name===(f===0?name:fn.name)){add([3,ref.index,0,0]);continue;}
+       if(fn.intrinsicRoot && Object.hasOwn(privateBuiltins,ref.name)){add([4,privateBuiltins[ref.name],0,0]);continue;}
+       const errorType = ['Error','TypeError','ReferenceError','RangeError','SyntaxError','URIError','EvalError'].indexOf(ref.name);
+@@ -121,7 +127,7 @@
+       add([!root && ref.type === 3 ? 2 : ref.type, ref.index, 0, 0]);
+     }
+     if (fn.hasPrototype !== 0 && fn.hasPrototype !== 1) throw new Error('Rebuild the compiler bridge: function prototype metadata is missing');
+-    image[f * 2] = [entry[f], fn.args, fn.locals, fn.refs.length | (fn.hasPrototype << 16)];
++    image[f * 2] = [entry[f], fn.args, fn.locals, fn.refs.length | (fn.hasPrototype << 16) | (f === 0 && globalPlan.mode ? GLOBAL_MODE_BIT : 0)];
+     if (typeof fn.name !== 'string') throw new Error('Rebuild the compiler bridge: function name metadata is missing');
+     image[f * 2 + 1] = [refOffset, fn.strict, fn.length, text(fn.name)];
+     const constants = fn.constants.map(c => {
+@@ -139,6 +145,8 @@
+       if (classLowered) ({ op, a, b } = classLowered);
+       const templateLowered = templateProgramLowering(op, instruction, { constants });
+       if (templateLowered) ({ op, a, b } = templateLowered);
++      const globalLowered = globalProgramLowering(globalPlan, f, op, instruction, { text });
++      if (globalLowered) ({ op, a, b } = globalLowered);
+       if (op === 'get_var' || op === 'get_var_undef') op = 'get_var_ref';
+       if (op === 'put_var') op = 'put_var_ref';
+       if (op === 'get_length') { op = 'get_field'; a = 'length'; }

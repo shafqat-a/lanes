@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-03T21:35:26.136Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "exotic": "TypeError:anumber",
+    "backend": "native-safari-diagnostic",
+    "checked": 263,
+    "mismatches": [
+      {
+        "feature": "bigint-symbol-relational-abrupt-order",
+        "actual": false,
+        "expected": true
+      },
+      {
+        "feature": "bigint-exotic-right-even-after-symbol",
+        "actual": false,
+        "expected": true
+      }
+    ]
+  }
+}

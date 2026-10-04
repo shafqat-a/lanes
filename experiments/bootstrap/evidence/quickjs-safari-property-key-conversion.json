@@ -1,0 +1,395 @@
+{
+  "date": "2026-10-02T23:23:06.622Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "method": "Ordinary ToPropertyKey and primitive conversion on GPU, fresh-native differential checks, callback and GC retention plus single-instruction resumption.",
+    "backend": "gpu",
+    "gaps": [
+      "Symbols/BigInt and custom @@toPrimitive"
+    ],
+    "unsupportedChecks": 0,
+    "programs": 54,
+    "elapsedMs": 13480,
+    "results": [
+      {
+        "checked": 4,
+        "index": 0,
+        "collections": 0,
+        "maxSteps": 102
+      },
+      {
+        "checked": 4,
+        "index": 1,
+        "collections": 0,
+        "maxSteps": 99
+      },
+      {
+        "checked": 4,
+        "index": 2,
+        "collections": 0,
+        "maxSteps": 99
+      },
+      {
+        "checked": 4,
+        "index": 3,
+        "collections": 0,
+        "maxSteps": 99
+      },
+      {
+        "checked": 4,
+        "index": 4,
+        "collections": 0,
+        "maxSteps": 101
+      },
+      {
+        "checked": 4,
+        "index": 5,
+        "collections": 0,
+        "maxSteps": 102
+      },
+      {
+        "checked": 4,
+        "index": 6,
+        "collections": 0,
+        "maxSteps": 109
+      },
+      {
+        "checked": 4,
+        "index": 7,
+        "collections": 0,
+        "maxSteps": 108
+      },
+      {
+        "checked": 4,
+        "index": 8,
+        "collections": 0,
+        "maxSteps": 109
+      },
+      {
+        "checked": 4,
+        "index": 9,
+        "collections": 0,
+        "maxSteps": 120
+      },
+      {
+        "checked": 4,
+        "index": 10,
+        "collections": 0,
+        "maxSteps": 98
+      },
+      {
+        "checked": 4,
+        "index": 11,
+        "collections": 0,
+        "maxSteps": 110
+      },
+      {
+        "checked": 4,
+        "index": 12,
+        "collections": 0,
+        "maxSteps": 107
+      },
+      {
+        "checked": 4,
+        "index": 13,
+        "collections": 0,
+        "maxSteps": 232
+      },
+      {
+        "checked": 4,
+        "index": 14,
+        "collections": 0,
+        "maxSteps": 342
+      },
+      {
+        "checked": 4,
+        "index": 15,
+        "collections": 0,
+        "maxSteps": 12536
+      },
+      {
+        "checked": 4,
+        "index": 16,
+        "collections": 1,
+        "maxSteps": 15722
+      },
+      {
+        "checked": 4,
+        "index": 17,
+        "collections": 0,
+        "maxSteps": 44
+      },
+      {
+        "checked": 4,
+        "index": 18,
+        "collections": 0,
+        "maxSteps": 299
+      },
+      {
+        "checked": 4,
+        "index": 19,
+        "collections": 0,
+        "maxSteps": 232
+      },
+      {
+        "checked": 4,
+        "index": 20,
+        "collections": 0,
+        "maxSteps": 342
+      },
+      {
+        "checked": 4,
+        "index": 21,
+        "collections": 0,
+        "maxSteps": 232
+      },
+      {
+        "checked": 4,
+        "index": 22,
+        "collections": 0,
+        "maxSteps": 342
+      },
+      {
+        "checked": 4,
+        "index": 23,
+        "collections": 0,
+        "maxSteps": 236
+      },
+      {
+        "checked": 4,
+        "index": 24,
+        "collections": 0,
+        "maxSteps": 347
+      },
+      {
+        "checked": 4,
+        "index": 25,
+        "collections": 0,
+        "maxSteps": 232
+      },
+      {
+        "checked": 4,
+        "index": 26,
+        "collections": 0,
+        "maxSteps": 342
+      },
+      {
+        "checked": 4,
+        "index": 27,
+        "collections": 0,
+        "maxSteps": 232
+      },
+      {
+        "checked": 4,
+        "index": 28,
+        "collections": 0,
+        "maxSteps": 342
+      },
+      {
+        "checked": 4,
+        "index": 29,
+        "collections": 0,
+        "maxSteps": 192
+      },
+      {
+        "checked": 4,
+        "index": 30,
+        "collections": 0,
+        "maxSteps": 292
+      },
+      {
+        "checked": 4,
+        "index": 31,
+        "collections": 0,
+        "maxSteps": 232
+      },
+      {
+        "checked": 4,
+        "index": 32,
+        "collections": 0,
+        "maxSteps": 342
+      },
+      {
+        "checked": 4,
+        "index": 33,
+        "collections": 0,
+        "maxSteps": 11640
+      },
+      {
+        "checked": 4,
+        "index": 34,
+        "collections": 1,
+        "maxSteps": 14602
+      },
+      {
+        "checked": 4,
+        "index": 35,
+        "collections": 1,
+        "maxSteps": 17480
+      },
+      {
+        "checked": 4,
+        "index": 36,
+        "collections": 1,
+        "maxSteps": 21902
+      },
+      {
+        "checked": 4,
+        "index": 37,
+        "collections": 0,
+        "maxSteps": 200
+      },
+      {
+        "checked": 4,
+        "index": 38,
+        "collections": 0,
+        "maxSteps": 3312
+      },
+      {
+        "checked": 4,
+        "index": 39,
+        "collections": 0,
+        "maxSteps": 123
+      },
+      {
+        "checked": 4,
+        "index": 40,
+        "collections": 0,
+        "maxSteps": 199
+      },
+      {
+        "checked": 4,
+        "index": 41,
+        "collections": 0,
+        "maxSteps": 200
+      },
+      {
+        "checked": 4,
+        "index": 42,
+        "collections": 0,
+        "maxSteps": 299
+      },
+      {
+        "checked": 4,
+        "index": 43,
+        "collections": 0,
+        "maxSteps": 276
+      },
+      {
+        "checked": 4,
+        "index": 44,
+        "collections": 0,
+        "maxSteps": 337
+      },
+      {
+        "checked": 4,
+        "index": 45,
+        "collections": 0,
+        "maxSteps": 279
+      },
+      {
+        "checked": 4,
+        "index": 46,
+        "collections": 0,
+        "maxSteps": 237
+      },
+      {
+        "checked": 4,
+        "index": 47,
+        "collections": 0,
+        "maxSteps": 200
+      },
+      {
+        "checked": 4,
+        "index": 48,
+        "collections": 0,
+        "maxSteps": 241
+      },
+      {
+        "checked": 4,
+        "index": 49,
+        "collections": 0,
+        "maxSteps": 33
+      },
+      {
+        "checked": 4,
+        "index": 50,
+        "collections": 0,
+        "maxSteps": 293
+      },
+      {
+        "checked": 4,
+        "index": 51,
+        "collections": 0,
+        "maxSteps": 452
+      },
+      {
+        "checked": 4,
+        "index": 52,
+        "collections": 2,
+        "maxSteps": 32428
+      }
+    ],
+    "resumptionDispatches": 693,
+    "compiler": "QuickJS/Wasm",
+    "nativeReferenceDifferences": [
+      {
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-object-initializer-runtime-semantics-propertydefinitionevaluation",
+        "native": [
+          "rk:0",
+          "rk:1",
+          "rk:-1",
+          "rk:17"
+        ],
+        "source": "function f(x){let log=\"\";const key={toString(){log+=\"k\";return \"p\";}};function rhs(){log+=\"r\";return x;}const o={[key]:rhs()};return log+\":\"+o.p;}",
+        "expected": [
+          "kr:0",
+          "kr:1",
+          "kr:-1",
+          "kr:17"
+        ],
+        "note": "ComputedPropertyName evaluation invokes ToPropertyKey before the value expression is evaluated.",
+        "index": 41
+      },
+      {
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-data-types-and-values.html#sec-getvalue",
+        "native": [
+          "4:1",
+          "4:1",
+          "4:1",
+          "4:1"
+        ],
+        "source": "function f(x){let n=0;const key={toString(){n++;return \"a\";}};let errors=0;try{null[key];}catch(e){if(e instanceof TypeError)errors++;}try{undefined[key]=x;}catch(e){if(e instanceof TypeError)errors++;}try{delete null[key];}catch(e){if(e instanceof TypeError)errors++;}try{key in 1;}catch(e){if(e instanceof TypeError)errors++;}return errors+\":\"+n;}",
+        "expected": [
+          "4:0",
+          "4:0",
+          "4:0",
+          "4:0"
+        ],
+        "note": "GetValue, PutValue and delete apply ToObject before ToPropertyKey; in checks its object operand before converting its key. None invokes key conversion with these invalid bases.",
+        "index": 48
+      }
+    ],
+    "checked": 213,
+    "resumptionExpected": "gkrgkw18gkgk:true:true"
+  }
+}

@@ -1,0 +1,493 @@
+{
+  "outcome": "completed-with-failures",
+  "candidateHashes": "quickjs-safari-prototype-candidate-hashes.json",
+  "harnessBundleSha256": "86ff68bc05129219e0a70e102f7cbb38e48abf334fcea95d61f3cb307c172988",
+  "report": {
+    "failures": [
+      {
+        "group": "protocol-integration",
+        "name": "protocol-integration:original-math-phase5-sin-boundary",
+        "message": "input 4: GPU -0.7568024953079282, expected -0.7568024953079283"
+      },
+      {
+        "group": "protocol-integration",
+        "name": "protocol-integration:original-validation-sin-boundary",
+        "message": "input 4: GPU -0.7568024953079282, expected -0.7568024953079283"
+      },
+      {
+        "group": "map-core",
+        "name": "map-core:methods-not-constructors",
+        "message": "Unsupported runtime operation in lane 0, instruction 11887; no CPU fallback"
+      },
+      {
+        "group": "map-core",
+        "name": "map-core:ctor-from-map-instance",
+        "message": "expected Unsupported/no CPU fallback rejection, got value 2"
+      },
+      {
+        "group": "map-core",
+        "name": "map-core:ctor-from-user-iterable",
+        "message": "expected Unsupported/no CPU fallback rejection, got value 9"
+      },
+      {
+        "group": "map-extra",
+        "name": "map-extra:for-of-over-map",
+        "message": "expected Unsupported/no CPU fallback rejection, got value 2"
+      },
+      {
+        "group": "map-extra",
+        "name": "map-extra:new-Map-from-map",
+        "message": "expected Unsupported/no CPU fallback rejection, got value 1"
+      },
+      {
+        "group": "map-extra",
+        "name": "map-extra:async-callback-source",
+        "message": "expected compile-time rejection, got Expected one synchronous named function declaration"
+      },
+      {
+        "group": "set-core",
+        "name": "set-core:boundary-0",
+        "message": "expected Unsupported/no CPU fallback rejection, got value true"
+      },
+      {
+        "group": "set-core",
+        "name": "set-core:boundary-1",
+        "message": "expected Unsupported/no CPU fallback rejection, got value false"
+      },
+      {
+        "group": "set-core",
+        "name": "set-core:boundary-2",
+        "message": "expected Unsupported/no CPU fallback rejection, got value true"
+      },
+      {
+        "group": "set-extra",
+        "name": "set-extra:composition-brand",
+        "message": "QuickJS GPU input currently accepts Number, BigInt, Boolean, String, null, undefined"
+      },
+      {
+        "group": "set-extra",
+        "name": "set-extra:record-order-has-noncallable",
+        "message": "QuickJS GPU input currently accepts Number, BigInt, Boolean, String, null, undefined"
+      },
+      {
+        "group": "set-extra",
+        "name": "set-extra:has-result-ToBoolean",
+        "message": "QuickJS GPU input currently accepts Number, BigInt, Boolean, String, null, undefined"
+      },
+      {
+        "group": "set-extra",
+        "name": "set-extra:done-ToBoolean",
+        "message": "QuickJS GPU input currently accepts Number, BigInt, Boolean, String, null, undefined"
+      },
+      {
+        "group": "set-extra",
+        "name": "set-extra:isSupersetOf-return-called",
+        "message": "QuickJS GPU input currently accepts Number, BigInt, Boolean, String, null, undefined"
+      },
+      {
+        "group": "set-extra",
+        "name": "set-extra:isSupersetOf-return-noncallable",
+        "message": "QuickJS GPU input currently accepts Number, BigInt, Boolean, String, null, undefined"
+      },
+      {
+        "group": "set-extra",
+        "name": "set-extra:boundary-0",
+        "message": "expected Unsupported/no CPU fallback rejection, got value 1"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:numeric-not-constructors",
+        "message": "Unsupported runtime operation in lane 0, instruction 74; no CPU fallback"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.cbrt",
+        "message": "input 710.4: GPU 8.92279641790248, expected 8.922796417902479"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.expm1",
+        "message": "input 0.75: GPU 1.1170000166126748, expected 1.1170000166126746"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.expm1",
+        "message": "input 1: GPU 1.718281828459045, expected 1.7182818284590453"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.log",
+        "message": "input 3: GPU 1.0986122886681096, expected 1.0986122886681098"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.log1p",
+        "message": "input 2: GPU 1.0986122886681096, expected 1.0986122886681098"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.log10",
+        "message": "input 0.75: GPU -0.12493873660829993, expected -0.12493873660829995"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.cos",
+        "message": "input 0.1: GPU 0.9950041652780257, expected 0.9950041652780258"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input 0.1: GPU 0.10033467208545055, expected 0.10033467208545054"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input 0.75: GPU 0.9315964599440725, expected 0.9315964599440724"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input 1: GPU 1.5574077246549023, expected 1.557407724654902"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input -1: GPU -1.5574077246549023, expected -1.557407724654902"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input 1.5: GPU 14.101419947171719, expected 14.10141994717172"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input 10: GPU 0.6483608274590866, expected 0.6483608274590867"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input -745.2: GPU -0.7485010638245828, expected -0.7485010638245829"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input 1e+22: GPU -1.628778225606899, expected -1.6287782256068988"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input 1e+300: GPU 1.4214488238747245, expected 1.4214488238747243"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input -1.7976931348623157e+308: GPU 0.004962015874444895, expected 0.004962015874444894"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input 4294967295: GPU -0.5722513701805472, expected -0.5722513701805473"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.tan",
+        "message": "input 4294967296: GPU 0.5209081018077579, expected 0.520908101807758"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.atan",
+        "message": "input -0.5: GPU -0.4636476090008061, expected -0.46364760900080615"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.atan",
+        "message": "input 0.5: GPU 0.4636476090008061, expected 0.46364760900080615"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.atan",
+        "message": "input 2: GPU 1.1071487177940904, expected 1.1071487177940906"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.atan",
+        "message": "input -2: GPU -1.1071487177940904, expected -1.1071487177940906"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.atan",
+        "message": "input 10: GPU 1.4711276743037347, expected 1.4711276743037345"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.asin",
+        "message": "input -0.5: GPU -0.5235987755982989, expected -0.5235987755982988"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.asin",
+        "message": "input 0.5: GPU 0.5235987755982989, expected 0.5235987755982988"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.acos",
+        "message": "input 0.5: GPU 1.0471975511965979, expected 1.0471975511965976"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.sinh",
+        "message": "input 2: GPU 3.626860407847019, expected 3.6268604078470186"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.sinh",
+        "message": "input -2: GPU -3.626860407847019, expected -3.6268604078470186"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.sinh",
+        "message": "input 710.4: GPU 1.6663642832806494e+308, expected 1.6663642832806496e+308"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.cosh",
+        "message": "input 10: GPU 11013.232920103324, expected 11013.232920103323"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.cosh",
+        "message": "input 710.4: GPU 1.6663642832806494e+308, expected 1.6663642832806496e+308"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.acosh",
+        "message": "input 3: GPU 1.7627471740390859, expected 1.762747174039086"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.atanh",
+        "message": "input -0.5: GPU -0.5493061443340548, expected -0.5493061443340549"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:Math.atanh",
+        "message": "input 0.5: GPU 0.5493061443340548, expected 0.5493061443340549"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:hypot-special",
+        "message": "input -3: GPU \"0,0,0,Infinity,NaN,5,3,1.4142135623730952e+300,5e-324,25.495097567963924:true\", expected \"0,0,0,Infinity,NaN,5,3,1.4142135623730952e+300,5e-324,25.49509756796392:true\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:hypot-special",
+        "message": "input -0: GPU \"0,0,0,Infinity,NaN,5,0,1.4142135623730952e+300,5e-324,25.495097567963924:true\", expected \"0,0,0,Infinity,NaN,5,0,1.4142135623730952e+300,5e-324,25.49509756796392:true\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:hypot-special",
+        "message": "input Infinity: GPU \"0,0,0,Infinity,Infinity,5,Infinity,1.4142135623730952e+300,5e-324,25.495097567963924:true\", expected \"0,0,0,Infinity,Infinity,5,Infinity,1.4142135623730952e+300,5e-324,25.49509756796392:true\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:hypot-pairs",
+        "message": "input 1.5: GPU \"1.8027756377319948:2.1794494717703365\", expected \"1.8027756377319946:2.179449471770337\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:hypot-pairs",
+        "message": "input 100: GPU \"100.00499987500623:141.42224011802386\", expected \"100.00499987500625:141.42224011802386\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:hypot-pairs",
+        "message": "input 1e+22: GPU \"1e+22:1.4142135623730952e+22\", expected \"1e+22:1.414213562373095e+22\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:hypot-pairs",
+        "message": "input 65520: GPU \"65520.00000763126:92659.27260803423\", expected \"65520.00000763126:92659.27260803421\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:hypot-pairs",
+        "message": "input 4294967295: GPU \"4294967295:6074000998.537887\", expected \"4294967295:6074000998.537886\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:atan2-pairs",
+        "message": "input 10: GPU \"1.5707963267948966:0:3.141592653589793:1.5707963267948966:1.2793395323170296:-0.19739555984988078\", expected \"1.5707963267948966:0:3.141592653589793:1.5707963267948966:1.2793395323170296:-0.19739555984988075\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:atan2-pairs",
+        "message": "input 100: GPU \"1.5707963267948966:0:3.141592653589793:1.5707963267948966:1.5408053219380187:-0.019997333973150535\", expected \"1.5707963267948966:0:3.141592653589793:1.5707963267948966:1.5408053219380187:-0.01999733397315053\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:unary-coercion",
+        "message": "Resource limit in lane 3, instruction 16896; no CPU fallback"
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:unary-string-inputs",
+        "message": "input \"0b11\": GPU \"1.7320508075688772:3:30:1.4422495703074083:20.085536923187668:1.0986122886681096:0.1411200080598672\", expected \"1.7320508075688772:3:30:1.4422495703074083:20.085536923187668:1.0986122886681098:0.1411200080598672\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:trig-large-reduction",
+        "message": "input 1e+22: GPU \"-0.8522008497671888:0.523214785395139:-1.628778225606899\", expected \"-0.8522008497671888:0.523214785395139:-1.6287782256068988\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:trig-large-reduction",
+        "message": "input 1e+300: GPU \"-0.8178819121159085:-0.5753861119575491:1.4214488238747245\", expected \"-0.8178819121159085:-0.5753861119575491:1.4214488238747243\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:trig-large-reduction",
+        "message": "input -1.7976931348623157e+308: GPU \"-0.004961954789184062:-0.9999876894265599:0.004962015874444895\", expected \"-0.004961954789184062:-0.9999876894265599:0.004962015874444894\""
+      },
+      {
+        "group": "numeric",
+        "name": "numeric:decimal-worst-case-digits",
+        "message": "Resource limit in lane 1, instruction 17; no CPU fallback"
+      },
+      {
+        "group": "conformance",
+        "name": "conformance-reflect:reflect-ownKeys-map-prototype-set",
+        "message": "Unsupported runtime operation in lane 0, instruction 29; no CPU fallback"
+      },
+      {
+        "group": "conformance",
+        "name": "conformance-reflect:reflect-ownKeys-set-prototype-set",
+        "message": "Unsupported runtime operation in lane 0, instruction 29; no CPU fallback"
+      },
+      {
+        "group": "conformance",
+        "name": "conformance-reflect:reflect-ownKeys-map-ctor",
+        "message": "Unsupported runtime operation in lane 0, instruction 4; no CPU fallback"
+      },
+      {
+        "group": "conformance",
+        "name": "conformance-cross:cross-object-keys-names",
+        "message": "Unsupported runtime operation in lane 0, instruction 70; no CPU fallback"
+      },
+      {
+        "group": "conformance",
+        "name": "conformance-cross:cross-spread-and-assign-copy-nothing",
+        "message": "Unsupported runtime operation in lane 0, instruction 19; no CPU fallback"
+      },
+      {
+        "group": "conformance",
+        "name": "conformance:unsupported-map-non-iterable-primitive",
+        "message": "expected Unsupported/no CPU fallback rejection, got value true"
+      }
+    ],
+    "groups": {
+      "protocol-integration": {
+        "cases": 8,
+        "values": 13,
+        "gc": 0,
+        "unsupported": 0,
+        "resumption": 0,
+        "skipped": 0,
+        "failed": 2
+      },
+      "map-core": {
+        "cases": 71,
+        "values": 131,
+        "gc": 0,
+        "unsupported": 2,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 3
+      },
+      "map-extra": {
+        "cases": 54,
+        "values": 114,
+        "gc": 0,
+        "unsupported": 1,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 3
+      },
+      "set-core": {
+        "cases": 63,
+        "values": 122,
+        "gc": 2,
+        "unsupported": 1,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 3
+      },
+      "set-extra": {
+        "cases": 65,
+        "values": 118,
+        "gc": 0,
+        "unsupported": 1,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 7
+      },
+      "collection-iterators": {
+        "cases": 82,
+        "values": 82,
+        "gc": 0,
+        "unsupported": 0,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 0
+      },
+      "reflect": {
+        "cases": 107,
+        "values": 181,
+        "gc": 0,
+        "unsupported": 4,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 0
+      },
+      "numeric": {
+        "cases": 118,
+        "values": 1147,
+        "gc": 0,
+        "unsupported": 2,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 52
+      },
+      "conformance": {
+        "cases": 138,
+        "values": 289,
+        "gc": 19,
+        "unsupported": 4,
+        "resumption": 5,
+        "skipped": 0,
+        "failed": 6
+      }
+    },
+    "gaps": [
+      "conformance-reflect:reflect-ownKeys-map-prototype-order: intrinsic property order differs from the ES2025 clause order (implementation-defined; not counted as passed)",
+      "Subclassing (class extends Map/Set, Reflect.construct with another NewTarget) remains a status 6 boundary."
+    ]
+  },
+  "stderrPath": "/tmp/lanes-qualified-stdlib.stderr",
+  "failureCategories": {
+    "numeric-exact-value-mismatch": 51,
+    "runtime-unsupported": 7,
+    "stale-runtime-negative": 9,
+    "compile-rejection-message-mismatch": 1,
+    "host-object-input-unsupported": 6,
+    "resource-limit": 2
+  },
+  "aggregateCounts": {
+    "cases": 706,
+    "values": 2197,
+    "gc": 21,
+    "unsupported": 15,
+    "resumption": 12,
+    "failed": 76
+  }
+}

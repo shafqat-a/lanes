@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-10-03T18:11:31.949534+00:00",
+  "scope": "Previously GPU-qualified generated artifacts, before JSON reviver and external phase3/phase4 integration. Current source has advanced.",
+  "artifacts": {
+    "experiments/bootstrap/evidence/phase4-builtins-qualified.tgz": "960fa4a310f39c9bcc8d8558ad8729062ec1add6b183a6120fbc8f23590d30fc",
+    "experiments/bootstrap/evidence/quickjs-safari-phase4-builtins-integrated.json": "639e7791fc381942989ecdb14a2827b02dbb295ea33e59e46a621ef5aff991cb",
+    "experiments/bootstrap/evidence/quickjs-safari-phase4-integrated.json": "d5ac7e39d421977c8a4277696ec0073c8005fe14db7fcca50d45ead7d5ceadc8",
+    "experiments/bootstrap/evidence/quickjs-safari-phase4-integration.json": "7fccdd6fc4f5ee265336fa3662a55363e7d32b9ddb4b674ca7ff5ea92aa80fb5",
+    "experiments/bootstrap/evidence/quickjs-safari-array-sort.json": "24021acf37b7bc58cf5213101178c6266baf46576e0eaaab5fa99692e406c02f",
+    "experiments/bootstrap/evidence/quickjs-safari-string-case.json": "532b79305707bfb86c75ef4b290227e14016bbf4e0ae4c1f2103740eda93f28e",
+    "experiments/quickjs-runtime/generated/compiler.mjs": "489320cd588ebb95e73c02af5d52aac5496496831d519f0d7d4804b154e7725f",
+    "experiments/quickjs-runtime/generated/compiler.wasm": "47200ddef1403f6140f9bcd131a111ef68679b35ffba44f4b072874fe5a5123a",
+    "experiments/quickjs-runtime/generated/browser.js": "a0cddb80723cf4bc5f150d65c124da6f5604ae33988cd989073c9335289b4de8",
+    "experiments/quickjs-runtime/generated/browser-phase4.js": "93da1afff2f205beb14aaa399bb07513630c33ac926e9ef9c066b0612f44133d",
+    "experiments/quickjs-runtime/generated/browser-phase4-integration.js": "deeddb0f4860f1c1c622e645f9a67c746063c4e212c679baea79d7949beb5059",
+    "experiments/quickjs-runtime/generated/browser-array-sort.js": "6934eb3ea6aee7a364a1e5ca0007c4f3ef52d05c1f45eed7ab302f2904889b93",
+    "experiments/quickjs-runtime/generated/string-case-browser.js": "2aff8de681515c21fff7a6c0a129051106161b02b7ec24cded9e794c487c5f3e"
+  }
+}

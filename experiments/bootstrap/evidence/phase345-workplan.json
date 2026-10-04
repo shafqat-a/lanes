@@ -1,0 +1,234 @@
+{
+  "createdAt": "2026-10-03T05:37:04.970Z",
+  "baseline": "quickjs-foundations-integration-manifest.json",
+  "phase3": {
+    "owner": "grok",
+    "job": {
+      "provider": "grok",
+      "id": "grok-20261003094416-e8b8086a",
+      "worktree": "/home/shafqat/.local/state/lanes-external-agents/worktrees/grok-20261003094416-e8b8086a",
+      "phase": 3,
+      "requestedSubagents": 8,
+      "replaces": "grok-20261003093854-30f3e770"
+    },
+    "milestones": [
+      "Symbols and symbol keys",
+      "well-known symbols and coercion hooks",
+      "BigInt representation and guest limb algorithms",
+      "object-model and GC conformance"
+    ],
+    "status": "Corrected subset integrated and M1/Safari verified:30 semantic cases,10 runtime boundaries,2 output-transfer boundaries. Full phase3 incomplete."
+  },
+  "phase4": {
+    "owner": "claude",
+    "job": {
+      "provider": "claude",
+      "id": "claude-20261003101822-bc72ce3c",
+      "worktree": "/home/shafqat/.local/state/lanes-external-agents/worktrees/claude-20261003101822-bc72ce3c",
+      "phase": 4,
+      "wave": 2,
+      "requestedSubagents": 8,
+      "replaces": "claude-20261003094215-c874c45b",
+      "cumulativeBaseSnapshot": "bf1b3e1f008ce64b9f4994eb546f58a868e3a570"
+    },
+    "milestones": [
+      "Correct template lowering",
+      "rest/spread and destructuring",
+      "classes/new.target/super",
+      "enumeration and synchronous scope semantics"
+    ],
+    "reviewFindings": [
+      "Claude fixed helper placement before @compute and added lint; real shader compile pending",
+      "Require exact guest exception identity and fail required-value rejection in browser harness",
+      "Rebuild both compilers and verify parity before M1; preserve phase5 roots/fields"
+    ],
+    "reviewArtifacts": {
+      "runtimeReview": "/tmp/lanes-phase4-review/runtime-review.md",
+      "correctedBrowserHarness": "/tmp/lanes-phase4-review/browser-phase4.js",
+      "harnessPatch": "/tmp/lanes-phase4-review/browser-phase4.patch",
+      "harnessTests": "/tmp/lanes-phase4-review/check-harness.mjs",
+      "harnessReport": "/tmp/lanes-phase4-review/REPORT.md"
+    },
+    "status": "Wave2 integrated;869-case GPU suite has811 passes and zero unexpected failures. Independent265-case suite retains2 normative failures.",
+    "hostResults": {
+      "suiteRecords": 565,
+      "admitted": 533,
+      "v8ChecksPassed": 1104,
+      "v8ChecksTotal": 1104,
+      "existingProgramsPacked": 1329
+    },
+    "firstWaveGpu": {
+      "programs": 565,
+      "semanticPassed": 508,
+      "failed": 0,
+      "unsupported": 22,
+      "rejected": 32,
+      "resourceLimited": 3,
+      "resumptionsPassed": 5,
+      "failures": [],
+      "followupFullRegression": {
+        "programs": 1201,
+        "values": 10809,
+        "negativeChecks": 119,
+        "report": "quickjs-safari-phase4-builtins-integrated.json"
+      },
+      "report": "quickjs-safari-phase4-integrated.json"
+    },
+    "nextWaveGpu": {
+      "mainReport": "quickjs-safari-phase345-final-phase4.json",
+      "independentReport": "quickjs-safari-phase345-final-phase4-next.json",
+      "knownFailures": [
+        {
+          "id": "n-global-known:strict-unresolvable-created-by-rhs",
+          "area": "global",
+          "outcome": "value",
+          "inputs": [
+            3
+          ],
+          "requiresGC": false,
+          "oracleKind": "ecmascript2025",
+          "diagnostics": {
+            "mode": "global",
+            "spec": "6.2.5.6 PutValue step 3.a (reference resolved before rhs)",
+            "engines": "stored3"
+          },
+          "status": "failed",
+          "input": 3,
+          "actual": "\"stored3\"",
+          "expected": "\"ReferenceError3\""
+        },
+        {
+          "id": "n-w8:compound assignment on a private method reads then throws",
+          "area": "class-private-methods",
+          "outcome": "value",
+          "inputs": [
+            2
+          ],
+          "requiresGC": false,
+          "oracleKind": "ecmascript2025",
+          "diagnostics": {
+            "status": "required"
+          },
+          "status": "failed",
+          "observedStatus": "unsupported",
+          "stage": "runtime",
+          "error": "Unsupported runtime operation in lane 0, instruction 16341; no CPU fallback",
+          "asDeclared": false
+        }
+      ]
+    }
+  },
+  "phase5": {
+    "owner": "codex",
+    "activeWorkers": 0,
+    "milestones": [
+      "Array join/toString/map/filter/slice",
+      "String UTF16/padding/trimming/well-formedness",
+      "Number predicates and software-binary64 Math subset"
+    ],
+    "firstWave": {
+      "methodsImplemented": 28,
+      "mainCompilerPrograms": 1200,
+      "validationCompilerPrograms": 29,
+      "gpuVerification": "Four focused suites passed on M1/Safari"
+    },
+    "secondWave": {
+      "status": "Integrated and M1/Safari verified: Arraycopy37/181, Numberparsers66/72, JSON44/173; full1200programs/10800values/104negativechecks pass",
+      "features": [
+        "Array toReversed/toSpliced/with",
+        "JSON.parse without reviver",
+        "Number.parseInt/parseFloat"
+      ],
+      "reviewGpu": {
+        "programs": 15,
+        "values": 60,
+        "jsonResourceProbe": 1,
+        "manifest": "quickjs-phase5-second-wave-manifest.json"
+      }
+    },
+    "status": "JSON revivers, stringify, sorting and Unicode casing integrated and verified on combined M1 build; full standard library incomplete.",
+    "nextWave": {
+      "feature": "JSON.stringify",
+      "status": "Integrated; M1/Safari48programs236values,1007resumptiondispatches,1resourceboundary pass; JSON.parse44/173 regressionpassed",
+      "ids": [
+        1820,
+        1821,
+        1822
+      ]
+    },
+    "inProgress": [],
+    "mainCompilerPrograms": 1201,
+    "qualifiedAdditionalFeatures": [
+      "Array.sort/toSorted:58 programs/286 values",
+      "Unicode casing:65 programs/321 values"
+    ],
+    "reviver": {
+      "status": "M1/Safari passed in phase4 wave2 candidate",
+      "programs": 48,
+      "values": 236,
+      "report": "quickjs-safari-wave2-json-reviver.json"
+    }
+  },
+  "coordination": {
+    "owner": "root",
+    "externalSubagentsRequestedPerProvider": 8,
+    "nativeSlots": 4,
+    "nativeCoordinatorSlots": 1,
+    "actualExternalDelegations": {
+      "grokCurrentJobSuccessfulLaunches": 8,
+      "claudeCurrentJobLaunchesObserved": 1,
+      "requestedPerCurrentExternalJob": 8,
+      "observedAt": "2026-10-03T10:04:59.388684+00:00"
+    },
+    "reservedBuiltinIds": {
+      "phase3": [
+        1000,
+        1199
+      ],
+      "phase4": [
+        1200,
+        1399
+      ],
+      "phase5Array": [
+        1400,
+        1499
+      ],
+      "phase5String": [
+        1500,
+        1599
+      ],
+      "phase5NumberMath": [
+        1600,
+        1699
+      ],
+      "phase5NextWave": [
+        1700,
+        1819
+      ],
+      "phase4NextWave": [
+        2000,
+        2199
+      ]
+    },
+    "verification": "Review and integrate coherent patches; host compiler/algorithm checks followed by M1/Safari GPU qualification. Phase completion requires its acceptance gate, not worker exit.",
+    "currentlyRunningExternalJobs": 0,
+    "reservedFixedIntrinsicNodes": {
+      "phase3": [
+        26,
+        63
+      ],
+      "phase4Next": [
+        64,
+        79
+      ]
+    },
+    "activeNativeWorkers": 0,
+    "latestFullGpu": {
+      "programs": 1206,
+      "values": 10854,
+      "negativeChecks": 119,
+      "report": "quickjs-safari-phase345-final-index.json"
+    }
+  },
+  "updatedAt": "2026-10-03T18:39:13.094609+00:00"
+}

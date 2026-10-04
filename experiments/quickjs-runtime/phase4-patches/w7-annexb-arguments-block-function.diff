@@ -1,0 +1,29 @@
+--- a/experiments/quickjs-runtime/vendor/quickjs.c
++++ b/experiments/quickjs-runtime/vendor/quickjs.c
+@@ -36860,8 +36860,10 @@
+         if (!(fd->js_mode & JS_MODE_STRICT)
+         && func_kind == JS_FUNC_NORMAL
+         &&  find_lexical_decl(ctx, fd, func_name, fd->scope_first, FALSE) < 0
+-        &&  !((func_idx = find_var(ctx, fd, func_name)) >= 0 && (func_idx & ARGUMENT_VAR_OFFSET))
+-        &&  !(func_name == JS_ATOM_arguments && fd->has_arguments_binding)) {
++        &&  !((func_idx = find_var(ctx, fd, func_name)) >= 0 && (func_idx & ARGUMENT_VAR_OFFSET))) {
++            /* LANES: Annex B.3.2.1 step iii also applies to F = "arguments":
++               evaluating the block declaration assigns the function's
++               `arguments` binding (no separate var is created). */
+             create_func_var = TRUE;
+         }
+         /* Create the lexical name here so that the function closure
+@@ -37283,6 +37285,13 @@
+                 } else {
+                     /* do not call define_var to bypass lexical scope check */
+                     func_idx = find_var(ctx, s->cur_func, func_name);
++                    /* LANES: reuse the arguments-object binding (Annex B.3.2.1). */
++                    if (func_idx < 0 && func_name == JS_ATOM_arguments &&
++                        s->cur_func->has_arguments_binding) {
++                        func_idx = add_arguments_var(ctx, s->cur_func);
++                        if (func_idx < 0)
++                            goto fail;
++                    }
+                     if (func_idx < 0) {
+                         func_idx = add_var(ctx, s->cur_func, func_name);
+                         if (func_idx < 0)

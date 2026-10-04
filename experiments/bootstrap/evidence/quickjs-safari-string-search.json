@@ -1,0 +1,332 @@
+{
+  "date": "2026-10-02T19:34:50.380Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "method": "GPU guest string search and method metadata/call/apply/bind compared with fresh native realms; explicit guest exception and uncatchable unsupported checks; callback resumption at one instruction per dispatch.",
+    "backend": "gpu",
+    "gaps": [
+      "String.prototype object",
+      "RegExp and Symbol.match",
+      "Custom Symbol.toPrimitive",
+      "Builtin descriptors and mutation"
+    ],
+    "unsupportedChecks": 5,
+    "programs": 49,
+    "negativeChecks": 15,
+    "typeErrorIdentityPrograms": 5,
+    "elapsedMs": 5512,
+    "results": [
+      {
+        "checked": 4,
+        "index": 0,
+        "collections": 0,
+        "maxSteps": 1700
+      },
+      {
+        "checked": 4,
+        "index": 1,
+        "collections": 1,
+        "maxSteps": 3219
+      },
+      {
+        "checked": 4,
+        "index": 2,
+        "collections": 1,
+        "maxSteps": 4613
+      },
+      {
+        "checked": 4,
+        "index": 3,
+        "collections": 2,
+        "maxSteps": 5958
+      },
+      {
+        "checked": 4,
+        "index": 4,
+        "collections": 1,
+        "maxSteps": 5468
+      },
+      {
+        "checked": 4,
+        "index": 5,
+        "collections": 2,
+        "maxSteps": 5175
+      },
+      {
+        "checked": 4,
+        "index": 6,
+        "collections": 4,
+        "maxSteps": 31544
+      },
+      {
+        "checked": 4,
+        "index": 7,
+        "collections": 1,
+        "maxSteps": 6836
+      },
+      {
+        "checked": 4,
+        "index": 8,
+        "collections": 0,
+        "maxSteps": 1365
+      },
+      {
+        "checked": 4,
+        "index": 9,
+        "collections": 0,
+        "maxSteps": 642
+      },
+      {
+        "checked": 4,
+        "index": 10,
+        "collections": 0,
+        "maxSteps": 1593
+      },
+      {
+        "checked": 4,
+        "index": 11,
+        "collections": 0,
+        "maxSteps": 9153
+      },
+      {
+        "checked": 4,
+        "index": 12,
+        "collections": 0,
+        "maxSteps": 1170
+      },
+      {
+        "checked": 4,
+        "index": 13,
+        "collections": 0,
+        "maxSteps": 307
+      },
+      {
+        "checked": 4,
+        "index": 14,
+        "collections": 0,
+        "maxSteps": 243
+      },
+      {
+        "checked": 4,
+        "index": 15,
+        "collections": 0,
+        "maxSteps": 773
+      },
+      {
+        "checked": 4,
+        "index": 16,
+        "collections": 0,
+        "maxSteps": 125
+      },
+      {
+        "checked": 4,
+        "index": 17,
+        "collections": 0,
+        "maxSteps": 370
+      },
+      {
+        "checked": 4,
+        "index": 18,
+        "collections": 0,
+        "maxSteps": 4
+      },
+      {
+        "checked": 4,
+        "index": 19,
+        "collections": 0,
+        "maxSteps": 4
+      },
+      {
+        "checked": 4,
+        "index": 20,
+        "collections": 0,
+        "maxSteps": 389
+      },
+      {
+        "checked": 4,
+        "index": 21,
+        "collections": 0,
+        "maxSteps": 491
+      },
+      {
+        "checked": 4,
+        "index": 22,
+        "collections": 0,
+        "maxSteps": 655
+      },
+      {
+        "checked": 4,
+        "index": 23,
+        "collections": 0,
+        "maxSteps": 4
+      },
+      {
+        "checked": 4,
+        "index": 24,
+        "collections": 0,
+        "maxSteps": 4
+      },
+      {
+        "checked": 4,
+        "index": 25,
+        "collections": 0,
+        "maxSteps": 340
+      },
+      {
+        "checked": 4,
+        "index": 26,
+        "collections": 0,
+        "maxSteps": 499
+      },
+      {
+        "checked": 4,
+        "index": 27,
+        "collections": 0,
+        "maxSteps": 606
+      },
+      {
+        "checked": 4,
+        "index": 28,
+        "collections": 0,
+        "maxSteps": 4
+      },
+      {
+        "checked": 4,
+        "index": 29,
+        "collections": 0,
+        "maxSteps": 4
+      },
+      {
+        "checked": 4,
+        "index": 30,
+        "collections": 0,
+        "maxSteps": 409
+      },
+      {
+        "checked": 4,
+        "index": 31,
+        "collections": 0,
+        "maxSteps": 511
+      },
+      {
+        "checked": 4,
+        "index": 32,
+        "collections": 0,
+        "maxSteps": 675
+      },
+      {
+        "checked": 4,
+        "index": 33,
+        "collections": 0,
+        "maxSteps": 4
+      },
+      {
+        "checked": 4,
+        "index": 34,
+        "collections": 0,
+        "maxSteps": 4
+      },
+      {
+        "checked": 4,
+        "index": 35,
+        "collections": 0,
+        "maxSteps": 317
+      },
+      {
+        "checked": 4,
+        "index": 36,
+        "collections": 0,
+        "maxSteps": 502
+      },
+      {
+        "checked": 4,
+        "index": 37,
+        "collections": 0,
+        "maxSteps": 583
+      },
+      {
+        "checked": 4,
+        "index": 38,
+        "collections": 0,
+        "maxSteps": 4
+      },
+      {
+        "checked": 4,
+        "index": 39,
+        "collections": 0,
+        "maxSteps": 4
+      },
+      {
+        "checked": 4,
+        "index": 40,
+        "collections": 0,
+        "maxSteps": 251
+      },
+      {
+        "checked": 4,
+        "index": 41,
+        "collections": 0,
+        "maxSteps": 441
+      },
+      {
+        "checked": 4,
+        "index": 42,
+        "collections": 0,
+        "maxSteps": 517
+      },
+      {
+        "checked": 4,
+        "index": 43,
+        "collections": 0,
+        "maxSteps": 134
+      },
+      {
+        "checked": 4,
+        "index": 44,
+        "collections": 0,
+        "maxSteps": 136
+      },
+      {
+        "checked": 4,
+        "index": 45,
+        "collections": 0,
+        "maxSteps": 134
+      },
+      {
+        "checked": 4,
+        "index": 46,
+        "collections": 0,
+        "maxSteps": 133
+      },
+      {
+        "checked": 4,
+        "index": 47,
+        "collections": 0,
+        "maxSteps": 135
+      }
+    ],
+    "resumptionDispatches": 4277,
+    "compiler": "QuickJS/Wasm",
+    "checked": 193,
+    "resumptionExpected": "tsptlupzefgh:1:3:true:true:true:0:1:3"
+  }
+}

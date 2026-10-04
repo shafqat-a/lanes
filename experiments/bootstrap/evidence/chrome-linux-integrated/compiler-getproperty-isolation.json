@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-04T03:07:10.876Z",
+  "browser": "149.0.7827.55",
+  "adapter": {
+    "vendor": "intel",
+    "architecture": "gen-9",
+    "device": "",
+    "description": "",
+    "isFallbackAdapter": false,
+    "smokeValue": 42
+  },
+  "args": [
+    "--enable-unsafe-webgpu",
+    "--use-angle=vulkan",
+    "--enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan",
+    "--disable-vulkan-surface",
+    "--disable-gpu-watchdog"
+  ],
+  "suite": "shader-compile",
+  "lastProgress": "runtime-compute-pipeline",
+  "diagnostics": {
+    "diagnosticOnly": true,
+    "isolation": {
+      "diagnosticOnly": true,
+      "variant": "getProperty-returns-undefined",
+      "guestProgramsExecuted": 0,
+      "productionSemantics": false,
+      "omittedSemantics": [
+        "ALL getProperty behavior"
+      ],
+      "baselineShaderSha256": "d8a8dbc7e7e1e64380e0b2633d724fd9903b34b1c47c868fe25c75ba5caa209f",
+      "shaderSha256": "5713cb131632e8351994439a822bcf9b532adb05c8a901ba36a75efc03e55d58",
+      "baselineShaderBytes": 340013,
+      "shaderBytes": 306248,
+      "replacedBodyBytes": 33855,
+      "createdAt": "2026-10-04T03:07:07.100Z"
+    },
+    "guestProgramsExecuted": 0,
+    "shaderBytes": 306248,
+    "timings": {
+      "control-pipeline": 8.099999904632568,
+      "runtime-wgsl-validation": 121.39999985694885
+    },
+    "adapter": {
+      "vendor": "intel",
+      "architecture": "gen-9",
+      "description": "",
+      "isFallbackAdapter": false
+    },
+    "stage": "runtime-compute-pipeline"
+  },
+  "error": "page.waitForFunction: Timeout 240000ms exceeded.",
+  "outcome": "compile-timeout",
+  "timeoutMs": 240000,
+  "guestSemanticQualification": false,
+  "productionModified": false,
+  "cleanup": {
+    "browserPid": 761781,
+    "gpuPid": 761810,
+    "bothExited": true,
+    "browserExitObserved": "2026-10-04T03:11:13.420Z"
+  },
+  "rssSamples": [
+    {
+      "elapsedSeconds": 25,
+      "rssKiB": 5408984
+    },
+    {
+      "elapsedSeconds": 57,
+      "rssKiB": 5777608
+    },
+    {
+      "elapsedSeconds": 109,
+      "rssKiB": 5784144
+    },
+    {
+      "elapsedSeconds": 152,
+      "rssKiB": 5859824
+    },
+    {
+      "elapsedSeconds": 208,
+      "rssKiB": 5949596
+    }
+  ],
+  "isolationContract": {
+    "targetFunction": "getProperty",
+    "matchedDefinitions": 1,
+    "replacementBody": "return undef();",
+    "allOtherShaderBytesPreserved": true
+  },
+  "rawArtifacts": {
+    "remoteDirectory": "/tmp/lanes-property-compile-diagnostic",
+    "localDirectory": "/tmp/lanes-property-compile-diagnostic",
+    "remoteLog": "/tmp/lanes-property-compile-diagnostic/chrome.log"
+  },
+  "interpretation": "Removing all property lookup behavior avoided the prior approximately64-second PartitionAlloc crash and greatly reduced observed resident memory, but compilation still did not finish within240seconds. This identifies a substantial cost contributor, not a sufficient fix or a semantics-preserving implementation.",
+  "artifactSha256": {
+    "baseline.wgsl": "d8a8dbc7e7e1e64380e0b2633d724fd9903b34b1c47c868fe25c75ba5caa209f",
+    "shader.wgsl": "5713cb131632e8351994439a822bcf9b532adb05c8a901ba36a75efc03e55d58"
+  }
+}

@@ -1,0 +1,6076 @@
+{
+  "date": "2026-10-03T18:32:25.556Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "compiler": "QuickJS/Wasm (generated/compiler.mjs)",
+    "suite": "phase4-next-independent",
+    "programs": 265,
+    "totalSuitePrograms": 265,
+    "selection": {
+      "ids": [],
+      "areas": [],
+      "resumption": true
+    },
+    "resumptionRequested": 4,
+    "counts": {
+      "passed": 225,
+      "failed": 3,
+      "unsupported": 9,
+      "rejected": 28,
+      "resource-limited": 0
+    },
+    "checkedValues": 225,
+    "gcRequiredPrograms": 6,
+    "outcomeViolations": 3,
+    "perArea": {
+      "global": {
+        "passed": 119,
+        "failed": 2,
+        "unsupported": 5,
+        "rejected": 8
+      },
+      "tagged-template": {
+        "passed": 11
+      },
+      "class-fields": {
+        "passed": 14,
+        "rejected": 4
+      },
+      "class-static": {
+        "passed": 11,
+        "rejected": 5
+      },
+      "class-private": {
+        "passed": 18,
+        "rejected": 5,
+        "unsupported": 2
+      },
+      "class-private-methods": {
+        "passed": 14,
+        "failed": 1,
+        "rejected": 3
+      },
+      "metadata": {
+        "passed": 28,
+        "rejected": 3,
+        "unsupported": 2
+      },
+      "probe": {
+        "passed": 10
+      }
+    },
+    "pendingIntegration": 0,
+    "resumptionPrograms": 4,
+    "resumptionFailures": 0,
+    "elapsedMs": 10702,
+    "outcomeViolationDetails": [
+      {
+        "id": "n-global:reference-reflect",
+        "reason": "expected value; got unsupported"
+      },
+      {
+        "id": "n-global-known:strict-unresolvable-created-by-rhs",
+        "reason": "GPU result/exception identity mismatch"
+      },
+      {
+        "id": "n-w8:compound assignment on a private method reads then throws",
+        "reason": "expected value; got unsupported"
+      }
+    ],
+    "resumptions": [
+      {
+        "id": "n-w8:probe resumption private accessors in derived field initializers",
+        "input": 1,
+        "expected": "\"BgsgsD:22\"",
+        "actual": "\"BgsgsD:22\"",
+        "dispatches": 306,
+        "status": "passed"
+      },
+      {
+        "id": "n-w8:probe resumption getter tag forwarding to String.raw",
+        "input": 2,
+        "expected": "\"a4b6c\"",
+        "actual": "\"a4b6c\"",
+        "dispatches": 1240,
+        "status": "passed"
+      },
+      {
+        "id": "n-w8:probe resumption computed static key with toString and private in",
+        "input": 3,
+        "expected": "\"k3,r:true\"",
+        "actual": "\"k3,r:true\"",
+        "dispatches": 601,
+        "status": "passed"
+      },
+      {
+        "id": "n-w8:probe resumption sloppy global this",
+        "input": 4,
+        "expected": "\"true:4\"",
+        "actual": "\"true:4\"",
+        "dispatches": 312,
+        "status": "passed"
+      }
+    ],
+    "failures": [
+      {
+        "id": "n-global:reference-reflect",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global"
+        },
+        "status": "failed",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 1; no CPU fallback",
+        "asDeclared": false
+      },
+      {
+        "id": "n-global-known:strict-unresolvable-created-by-rhs",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.6 PutValue step 3.a (reference resolved before rhs)",
+          "engines": "stored3"
+        },
+        "status": "failed",
+        "input": 3,
+        "actual": "\"stored3\"",
+        "expected": "\"ReferenceError3\""
+      },
+      {
+        "id": "n-w8:compound assignment on a private method reads then throws",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          2
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "failed",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 16341; no CPU fallback",
+        "asDeclared": false
+      }
+    ],
+    "records": [
+      {
+        "id": "n-global:global-dynamic-unimplemented-get",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global"
+        },
+        "status": "passed",
+        "values": [
+          "function3"
+        ],
+        "maxSteps": 88,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-descriptor-unimplemented",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 233,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:reference-symbol",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "classic"
+        },
+        "status": "passed",
+        "values": [
+          "function3"
+        ],
+        "maxSteps": 84,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:reference-symbol-in-global-mode",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global"
+        },
+        "status": "passed",
+        "values": [
+          "function3"
+        ],
+        "maxSteps": 88,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:reference-reflect",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global"
+        },
+        "status": "failed",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 1; no CPU fallback",
+        "asDeclared": false
+      },
+      {
+        "id": "n-global:sloppy-entry-this-is-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 step 6.a"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 173,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-plain-call-this-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 step 6.a"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 177,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-plain-call-typeof-this",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 (w7 u1 now admitted)"
+        },
+        "status": "passed",
+        "values": [
+          "u1:object3"
+        ],
+        "maxSteps": 93,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-entry-arrow-this-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 (w7 u2)"
+        },
+        "status": "passed",
+        "values": [
+          "u2:object3"
+        ],
+        "maxSteps": 94,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-arrow-this-identity",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2; 15.3 arrow lexical this"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 178,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-call-null-this-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 step 6.a"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 179,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-call-undefined-this-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 step 6.a"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 179,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-apply-null-this-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 step 6.a"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 281,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-bind-undefined-this-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.4.1.1; 10.2.1.2"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 260,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-bind-null-typeof",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 (w7 u6)"
+        },
+        "status": "passed",
+        "values": [
+          "u6:object3"
+        ],
+        "maxSteps": 176,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-call-number-boxed",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 step 6.b ToObject"
+        },
+        "status": "passed",
+        "values": [
+          "object:true:true:3"
+        ],
+        "maxSteps": 447,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-call-string-boxed",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 step 6.b ToObject"
+        },
+        "status": "passed",
+        "values": [
+          "object:true:2:3"
+        ],
+        "maxSteps": 344,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-call-boolean-boxed",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 step 6.b ToObject"
+        },
+        "status": "passed",
+        "values": [
+          "object:true:3"
+        ],
+        "maxSteps": 181,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-boxed-this-stable",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 (ToObject once per call)"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 179,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-global-this-stable",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.3 realm [[GlobalObject]]"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 184,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:strict-plain-call-this-undefined",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "classic",
+          "spec": "10.2.1.2 step 5 (strict)"
+        },
+        "status": "passed",
+        "values": [
+          "undefined:3"
+        ],
+        "maxSteps": 92,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:strict-call-null-this-null",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "classic",
+          "spec": "10.2.1.2 step 5"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 178,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:strict-call-number-unboxed",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "classic",
+          "spec": "10.2.1.2 step 5"
+        },
+        "status": "passed",
+        "values": [
+          "number:3"
+        ],
+        "maxSteps": 94,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-callback-this-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "23.1.3.21 Array.prototype.map (thisArg undefined)"
+        },
+        "status": "passed",
+        "values": [
+          3
+        ],
+        "maxSteps": 350,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-callback-thisarg-boxed",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "23.1.3.21; 10.2.1.2"
+        },
+        "status": "passed",
+        "values": [
+          "object3"
+        ],
+        "maxSteps": 429,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-detached-method-this-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "13.3.6.2 (w7 u7)"
+        },
+        "status": "passed",
+        "values": [
+          "u7:true3"
+        ],
+        "maxSteps": 177,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-this-unreached-still-bound",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2 (w7 u5)"
+        },
+        "status": "passed",
+        "values": [
+          "u5:3"
+        ],
+        "maxSteps": 91,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-this-property-becomes-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.2.1.2; 9.1.1.2.6 GetBindingValue (object record)"
+        },
+        "status": "passed",
+        "values": [
+          3
+        ],
+        "maxSteps": 12,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-this-reads-global-binding",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.1; 16.1.7 CreateGlobalFunctionBinding"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 185,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:globalthis-self",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.1.1 globalThis"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 172,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:globalthis-equals-sloppy-this",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.1 (w7 u10)"
+        },
+        "status": "passed",
+        "values": [
+          "u10:true3"
+        ],
+        "maxSteps": 168,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:globalthis-math-json-identity",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.4"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 476,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:globalthis-constructor-identity",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.3"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 207,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:globalthis-error-identity",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.3"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 215,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:globalthis-parse-functions",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.2.4, 19.2.5"
+        },
+        "status": "passed",
+        "values": [
+          56
+        ],
+        "maxSteps": 8830,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:globalthis-value-properties",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.1.2-19.1.4"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 195,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-descriptor-math",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19 (writable, non-enumerable, configurable)"
+        },
+        "status": "passed",
+        "values": [
+          "true,true,false,true3"
+        ],
+        "maxSteps": 583,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-descriptor-globalthis",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.1.1"
+        },
+        "status": "passed",
+        "values": [
+          "true,true,false,true3"
+        ],
+        "maxSteps": 583,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-descriptor-nan-undefined",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.1.2, 19.1.4"
+        },
+        "status": "passed",
+        "values": [
+          "false,false,false|false,false,false3"
+        ],
+        "maxSteps": 917,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-descriptor-entry-function",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "16.1.7 step 5 / 9.1.1.4.18 CreateGlobalFunctionBinding"
+        },
+        "status": "passed",
+        "values": [
+          "true,true,true,false3"
+        ],
+        "maxSteps": 583,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-entry-named-like-intrinsic",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.4.18 (configurable existing property is redefined)"
+        },
+        "status": "passed",
+        "values": [
+          "true,function,true,false3"
+        ],
+        "maxSteps": 584,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-own-and-inherited",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "7.3.12 HasProperty"
+        },
+        "status": "passed",
+        "values": [
+          "true,true,false,true3"
+        ],
+        "maxSteps": 706,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-in-operator",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "13.10.1"
+        },
+        "status": "passed",
+        "values": [
+          "true,true,false3"
+        ],
+        "maxSteps": 438,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-in-unimplemented-name",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.3.33 (exists; HasProperty does not read it)"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 173,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-is-extensible",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.3.2 (ordinary extensible global)"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 172,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-property-is-enumerable",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19; 9.1.1.4.18"
+        },
+        "status": "passed",
+        "values": [
+          "false,true3"
+        ],
+        "maxSteps": 495,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:typeof-undeclared",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "13.5.3.1 (w7 u8)"
+        },
+        "status": "passed",
+        "values": [
+          "u8:undefined3"
+        ],
+        "maxSteps": 86,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:typeof-intrinsics-global-mode",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "13.5.3"
+        },
+        "status": "passed",
+        "values": [
+          "object,object,function,function3"
+        ],
+        "maxSteps": 519,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:undeclared-read-caught",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.5 GetValue step 3.a"
+        },
+        "status": "passed",
+        "values": [
+          "ReferenceError:true3"
+        ],
+        "maxSteps": 174,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:implicit-global-assignment",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.6 PutValue step 3.b (w7 u11)"
+        },
+        "status": "passed",
+        "values": [
+          "u11:3"
+        ],
+        "maxSteps": 87,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:implicit-global-visible-on-object",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.6 step 3.b Set(globalObj)"
+        },
+        "status": "passed",
+        "values": [
+          "3:3"
+        ],
+        "maxSteps": 174,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:implicit-global-descriptor",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.1.9.2 OrdinarySetWithOwnDescriptor (CreateDataProperty)"
+        },
+        "status": "passed",
+        "values": [
+          "3,true,true,true"
+        ],
+        "maxSteps": 503,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:implicit-global-from-nested-function",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.6"
+        },
+        "status": "passed",
+        "values": [
+          4
+        ],
+        "maxSteps": 12,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:implicit-global-from-callback",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.6; 13.5.3.1"
+        },
+        "status": "passed",
+        "values": [
+          6
+        ],
+        "maxSteps": 178,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:implicit-global-compound",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "13.15.2; 13.4.2.1"
+        },
+        "status": "passed",
+        "values": [
+          5
+        ],
+        "maxSteps": 16,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:implicit-global-for-in-target",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "14.7.5.7 ForIn/OfBodyEvaluation (lhs PutValue)"
+        },
+        "status": "passed",
+        "values": [
+          "b3"
+        ],
+        "maxSteps": 406,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:implicit-global-destructuring",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "13.15.5.5 IteratorDestructuringAssignmentEvaluation"
+        },
+        "status": "passed",
+        "values": [
+          "3:4"
+        ],
+        "maxSteps": 361,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-object-write-visible-as-binding",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.6 GetBindingValue"
+        },
+        "status": "passed",
+        "values": [
+          3
+        ],
+        "maxSteps": 5,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:intrinsic-binding-write-through",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.4.5 SetMutableBinding (object record)"
+        },
+        "status": "passed",
+        "values": [
+          "3:3"
+        ],
+        "maxSteps": 174,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:intrinsic-object-write-through",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.6"
+        },
+        "status": "passed",
+        "values": [
+          3
+        ],
+        "maxSteps": 5,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:entry-binding-reassign",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.4.5"
+        },
+        "status": "passed",
+        "values": [
+          "3:3"
+        ],
+        "maxSteps": 174,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:entry-binding-object-write",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.6"
+        },
+        "status": "passed",
+        "values": [
+          3
+        ],
+        "maxSteps": 5,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-readonly-assignment-ignored",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "classic",
+          "spec": "10.1.9.2 (Set returns false; sloppy PutValue ignores)"
+        },
+        "status": "passed",
+        "values": [
+          "true,true,true3"
+        ],
+        "maxSteps": 451,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-readonly-assignment-ignored-global-mode",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.1.9.2 (non-writable global object property)"
+        },
+        "status": "passed",
+        "values": [
+          "true,true,true3"
+        ],
+        "maxSteps": 452,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:strict-readonly-assignment-typeerror",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "classic",
+          "spec": "9.1.1.2.5 SetMutableBinding step 5 (S true)"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError3"
+        ],
+        "maxSteps": 91,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:strict-readonly-assignment-typeerror-global-mode",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.5 step 5"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError3"
+        ],
+        "maxSteps": 91,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:strict-undeclared-assignment-referenceerror",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.6 PutValue step 3.a"
+        },
+        "status": "passed",
+        "values": [
+          "ReferenceError:undefined3"
+        ],
+        "maxSteps": 96,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:strict-assignment-existing-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.5"
+        },
+        "status": "passed",
+        "values": [
+          3
+        ],
+        "maxSteps": 12,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-assignment-inherited-binding",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.5"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 238,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:inherited-binding-read",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.1 / 9.1.1.2.6 (prototype chain of the global object)"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 173,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:delete-implicit-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "13.5.1.2 delete (environment record DeleteBinding)"
+        },
+        "status": "passed",
+        "values": [
+          "true:undefined3"
+        ],
+        "maxSteps": 177,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:delete-entry-binding-false",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.4.7 DeleteBinding; non-configurable"
+        },
+        "status": "passed",
+        "values": [
+          "false:false:function3"
+        ],
+        "maxSteps": 257,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:delete-undeclared-true",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "13.5.1.2 step 3 (unresolvable -> true)"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 169,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:delete-intrinsic-then-referenceerror",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.4.7; 6.2.5.5"
+        },
+        "status": "passed",
+        "values": [
+          "true:ReferenceError:undefined3"
+        ],
+        "maxSteps": 184,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:delete-via-object-then-binding-gone",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.1"
+        },
+        "status": "passed",
+        "values": [
+          "undefined3"
+        ],
+        "maxSteps": 92,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-getter-binding",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.6 Get(bindingObject, N)"
+        },
+        "status": "passed",
+        "values": [
+          3
+        ],
+        "maxSteps": 185,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-getter-typeof",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "13.5.3.1"
+        },
+        "status": "passed",
+        "values": [
+          "number3"
+        ],
+        "maxSteps": 261,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-setter-binding",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.5 Set(bindingObject, N, V)"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 359,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-readonly-defined-sloppy-ignored",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.1.9.2"
+        },
+        "status": "passed",
+        "values": [
+          3
+        ],
+        "maxSteps": 170,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-readonly-defined-strict-typeerror",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.5"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError3"
+        ],
+        "maxSteps": 255,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-prevent-extensions-sloppy",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.1.9.2 (CreateDataProperty fails; sloppy ignore)"
+        },
+        "status": "passed",
+        "values": [
+          "undefined3"
+        ],
+        "maxSteps": 93,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:global-prevent-extensions-strict",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.6 step 3.a"
+        },
+        "status": "passed",
+        "values": [
+          "ReferenceError3"
+        ],
+        "maxSteps": 96,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:object-keys-global-filtered",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "20.1.2.18 Object.keys (intrinsic globals are non-enumerable)"
+        },
+        "status": "passed",
+        "values": [
+          "f,w6k1,w6k23"
+        ],
+        "maxSteps": 1231,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:for-in-global-filtered",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "14.7.5.9 EnumerateObjectProperties"
+        },
+        "status": "passed",
+        "values": [
+          "f,w6q3"
+        ],
+        "maxSteps": 941,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:nested-closures-global-access",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.2.1 GetIdentifierReference (outer chain to the global record)"
+        },
+        "status": "passed",
+        "values": [
+          "true:4:object"
+        ],
+        "maxSteps": 192,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:parse-int-in-global-mode",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19.2.5"
+        },
+        "status": "passed",
+        "values": [
+          "undefined:13"
+        ],
+        "maxSteps": 8695,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:local-shadows-globalthis",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "classic",
+          "spec": "9.1.2.1 (function scope binding first)"
+        },
+        "status": "passed",
+        "values": [
+          3
+        ],
+        "maxSteps": 3,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:classic-intrinsics-only",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "classic",
+          "spec": "classic packing unchanged"
+        },
+        "status": "passed",
+        "values": [
+          4
+        ],
+        "maxSteps": 1126,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:classic-entry-recursion",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "classic",
+          "spec": "classic packing unchanged"
+        },
+        "status": "passed",
+        "values": [
+          6
+        ],
+        "maxSteps": 42,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global:sloppy-tag-this-global",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "13.3.11 tagged template (undefined thisValue)"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 179,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global-error:uncaught-undeclared-read",
+        "area": "global",
+        "outcome": "error:ReferenceError",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.5 step 3.a"
+        },
+        "status": "passed",
+        "values": [
+          true
+        ],
+        "maxSteps": 33,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ],
+        "errorNameVerified": true,
+        "exceptionClass": "ReferenceError"
+      },
+      {
+        "id": "n-global-error:uncaught-undeclared-call",
+        "area": "global",
+        "outcome": "error:ReferenceError",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.5"
+        },
+        "status": "passed",
+        "values": [
+          true
+        ],
+        "maxSteps": 33,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ],
+        "errorNameVerified": true,
+        "exceptionClass": "ReferenceError"
+      },
+      {
+        "id": "n-global-error:uncaught-undeclared-postfix",
+        "area": "global",
+        "outcome": "error:ReferenceError",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "13.4.2.1 (GetValue first)"
+        },
+        "status": "passed",
+        "values": [
+          true
+        ],
+        "maxSteps": 33,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ],
+        "errorNameVerified": true,
+        "exceptionClass": "ReferenceError"
+      },
+      {
+        "id": "n-global-error:uncaught-strict-undeclared-assignment",
+        "area": "global",
+        "outcome": "error:ReferenceError",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.6 step 3.a"
+        },
+        "status": "passed",
+        "values": [
+          true
+        ],
+        "maxSteps": 35,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ],
+        "errorNameVerified": true,
+        "exceptionClass": "ReferenceError"
+      },
+      {
+        "id": "n-global-error:uncaught-deleted-intrinsic-read",
+        "area": "global",
+        "outcome": "error:ReferenceError",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.5"
+        },
+        "status": "passed",
+        "values": [
+          true
+        ],
+        "maxSteps": 37,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ],
+        "errorNameVerified": true,
+        "exceptionClass": "ReferenceError"
+      },
+      {
+        "id": "n-global-host:global-prototype-is-object-prototype",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "host-policy",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "19 (host-defined [[Prototype]])"
+        },
+        "status": "passed",
+        "values": [
+          "true3"
+        ],
+        "maxSteps": 175,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global-host:global-to-string-tag",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "host-policy",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "20.1.3.6 (no @@toStringTag in ES2025)",
+          "quickjs": "[object global]3"
+        },
+        "status": "passed",
+        "values": [
+          "[object Object]3"
+        ],
+        "maxSteps": 88,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global-host:global-set-prototype",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "host-policy",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "10.1.2 OrdinarySetPrototypeOf; 9.1.1.2.1 HasBinding"
+        },
+        "status": "passed",
+        "values": [
+          3
+        ],
+        "maxSteps": 10,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global-normative:strict-assignment-inherited-hasownproperty",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.1 HasBinding uses HasProperty (inherited from %Object.prototype%); 9.1.1.2.5",
+          "v8": "ReferenceError (V8 strict global store ignores the prototype chain)"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 238,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global-normative:strict-assignment-inherited-binding",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "9.1.1.2.1 HasBinding = HasProperty (inherited); 10.1.9.2",
+          "v8": "ReferenceError"
+        },
+        "status": "passed",
+        "values": [
+          "true:3"
+        ],
+        "maxSteps": 238,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-global-known:strict-unresolvable-created-by-rhs",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "spec": "6.2.5.6 PutValue step 3.a (reference resolved before rhs)",
+          "engines": "stored3"
+        },
+        "status": "failed",
+        "input": 3,
+        "actual": "\"stored3\"",
+        "expected": "\"ReferenceError3\""
+      },
+      {
+        "id": "n-global-boundary:global-has-own-unimplemented",
+        "area": "global",
+        "outcome": "unsupported",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "normative": "true3",
+          "mechanism": "ownGap(65)"
+        },
+        "status": "unsupported",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 11753; no CPU fallback",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-boundary:global-assign-unimplemented-name",
+        "area": "global",
+        "outcome": "unsupported",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "normative": "false3",
+          "mechanism": "putProperty ownGap(65)"
+        },
+        "status": "unsupported",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 5; no CPU fallback",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-boundary:global-delete-unimplemented-name",
+        "area": "global",
+        "outcome": "unsupported",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "normative": "true3",
+          "mechanism": "delete ownGap(65)"
+        },
+        "status": "unsupported",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 4; no CPU fallback",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-boundary:global-own-property-names",
+        "area": "global",
+        "outcome": "unsupported",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "normative": 3,
+          "mechanism": "ownKeys(65) full list"
+        },
+        "status": "unsupported",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 3; no CPU fallback",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-boundary:global-object-spread",
+        "area": "global",
+        "outcome": "unsupported",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "mode": "global",
+          "normative": 3,
+          "mechanism": "ownKeys(65) via __lanesOwnPropertyKeys"
+        },
+        "status": "unsupported",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 19018; no CPU fallback",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-rejected:top-level-let",
+        "area": "global",
+        "outcome": "rejected",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "reason": "/Expected one synchronous named function declaration/",
+          "normative": 4
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Expected one synchronous named function declaration",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-rejected:top-level-var",
+        "area": "global",
+        "outcome": "rejected",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "reason": "/Expected one synchronous named function declaration/",
+          "normative": 4
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Expected one synchronous named function declaration",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-rejected:top-level-class",
+        "area": "global",
+        "outcome": "rejected",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "reason": "/Expected one synchronous named function declaration/",
+          "normative": "function3"
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Expected one synchronous named function declaration",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-rejected:top-level-this",
+        "area": "global",
+        "outcome": "rejected",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "reason": "/Expected one synchronous named function declaration/",
+          "normative": 4
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Expected one synchronous named function declaration",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-rejected:reference-isnan",
+        "area": "global",
+        "outcome": "rejected",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "reason": "/Unsupported global or module reference: isNaN/",
+          "normative": "false3"
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Unsupported global or module reference: isNaN",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-rejected:reference-indirect-eval",
+        "area": "global",
+        "outcome": "rejected",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "reason": "/Unsupported global or module reference: eval/",
+          "normative": 4
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Unsupported global or module reference: eval",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-rejected:entry-named-nan",
+        "area": "global",
+        "outcome": "rejected",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "reason": "/CanDeclareGlobalFunction/",
+          "normative": {
+            "error": "TypeError"
+          },
+          "v8": {
+            "error": "SyntaxError"
+          }
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Unsupported global function declaration: NaN (CanDeclareGlobalFunction is false)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-global-rejected:entry-named-undefined",
+        "area": "global",
+        "outcome": "rejected",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "reason": "/CanDeclareGlobalFunction/",
+          "normative": {
+            "error": "TypeError"
+          },
+          "v8": {
+            "error": "SyntaxError"
+          }
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Unsupported global function declaration: undefined (CanDeclareGlobalFunction is false)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8:template object shared across default-parameter evaluations",
+        "area": "tagged-template",
+        "outcome": "value",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:d:1"
+        ],
+        "maxSteps": 219,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:class field initializer site is shared across instances",
+        "area": "tagged-template",
+        "outcome": "value",
+        "inputs": [
+          2
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:f:2"
+        ],
+        "maxSteps": 251,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:tagged template inside a static block",
+        "area": "tagged-template",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "blk3:true"
+        ],
+        "maxSteps": 390,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:empty template has one empty string",
+        "area": "tagged-template",
+        "outcome": "value",
+        "inputs": [
+          4
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "1::1:1:4"
+        ],
+        "maxSteps": 352,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:abrupt substitution skips the call and keeps the site object",
+        "area": "tagged-template",
+        "outcome": "value",
+        "inputs": [
+          5
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "boom:0:true:5"
+        ],
+        "maxSteps": 405,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:frozen template object rejects Array.prototype.reverse",
+        "area": "tagged-template",
+        "outcome": "value",
+        "inputs": [
+          6
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError:a,b:6"
+        ],
+        "maxSteps": 517,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:invalid escape cooked element is an own undefined",
+        "area": "tagged-template",
+        "outcome": "value",
+        "inputs": [
+          7
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:true:7"
+        ],
+        "maxSteps": 267,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:JSON.stringify of a template object",
+        "area": "tagged-template",
+        "outcome": "value",
+        "inputs": [
+          8
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "[\"a\",\"b\"]:[\"a\",\"b\"]:8"
+        ],
+        "maxSteps": 2292,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:String.raw stringifies numeric raw entries",
+        "area": "tagged-template",
+        "outcome": "value",
+        "inputs": [
+          9
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "1x2y3:9"
+        ],
+        "maxSteps": 445,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:tag call has undefined new.target",
+        "area": "tagged-template",
+        "outcome": "value",
+        "inputs": [
+          10
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:10"
+        ],
+        "maxSteps": 178,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:template object passed through a private field keeps identity",
+        "area": "tagged-template",
+        "outcome": "value",
+        "inputs": [
+          11
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:p:11"
+        ],
+        "maxSteps": 281,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:instance field shadows a prototype method of the same name",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "number:function:1"
+        ],
+        "maxSteps": 134,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:initializer sees the inner class binding",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          2
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:2"
+        ],
+        "maxSteps": 214,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:initializer does not see constructor parameters",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "outer:inner:3"
+        ],
+        "maxSteps": 136,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:super() inside an arrow initializes fields once",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          4
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "1:4:true"
+        ],
+        "maxSteps": 337,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:second super() throws ReferenceError without re-running fields",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          5
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "ReferenceError:2:1:5"
+        ],
+        "maxSteps": 360,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:field named __proto__ is an own data property",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          6
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:true:6"
+        ],
+        "maxSteps": 357,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:computed key is converted at definition without instances",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          7
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "1:7"
+        ],
+        "maxSteps": 290,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:numeric computed field keys are canonical strings",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          8
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "8|1e+21:8"
+        ],
+        "maxSteps": 3349,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:super property assignment in an initializer targets the instance",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          9
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "own:9:undefined"
+        ],
+        "maxSteps": 301,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:ordinary function in an initializer has strict call this",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          10
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:undefined:10"
+        ],
+        "maxSteps": 226,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:all computed keys are evaluated before any initializer",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          11
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "k1,k2,i1,i2:11"
+        ],
+        "maxSteps": 1461,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:base constructor sees derived fields uninitialised",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          12
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "undefined:12"
+        ],
+        "maxSteps": 201,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:instance field named prototype is valid",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          14
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "14:true:object"
+        ],
+        "maxSteps": 274,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:string and numeric literal field function names",
+        "area": "class-fields",
+        "outcome": "value",
+        "inputs": [
+          13
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "a b|42|13"
+        ],
+        "maxSteps": 137,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:static field defines over an inherited non-writable property",
+        "area": "class-static",
+        "outcome": "value",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "1:true:0"
+        ],
+        "maxSteps": 519,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:static private method is installed before static fields",
+        "area": "class-static",
+        "outcome": "value",
+        "inputs": [
+          2
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          3
+        ],
+        "maxSteps": 47,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:static block sees private names",
+        "area": "class-static",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:false:3"
+        ],
+        "maxSteps": 315,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:closure created in a static block keeps block bindings",
+        "area": "class-static",
+        "outcome": "value",
+        "inputs": [
+          4
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "blk4"
+        ],
+        "maxSteps": 120,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:named class expression binding in static initializers",
+        "area": "class-static",
+        "outcome": "value",
+        "inputs": [
+          5
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "Named:true:5"
+        ],
+        "maxSteps": 204,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:ordinary function in a static initializer has strict call this",
+        "area": "class-static",
+        "outcome": "value",
+        "inputs": [
+          6
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "undefined:true:6"
+        ],
+        "maxSteps": 209,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:static initializer this reads inherited statics",
+        "area": "class-static",
+        "outcome": "value",
+        "inputs": [
+          7
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "1:8"
+        ],
+        "maxSteps": 224,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:static fields run once per class evaluation",
+        "area": "class-static",
+        "outcome": "value",
+        "inputs": [
+          8
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "1,2:8"
+        ],
+        "maxSteps": 319,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:static field on a class extending null",
+        "area": "class-static",
+        "outcome": "value",
+        "inputs": [
+          9
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "9:true"
+        ],
+        "maxSteps": 200,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:static field and method own key order",
+        "area": "class-static",
+        "outcome": "value",
+        "inputs": [
+          10
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "length,name,prototype,b,a,c|a,c|10"
+        ],
+        "maxSteps": 985,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:inner class private name shadows the outer one",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError:2:1"
+        ],
+        "maxSteps": 287,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:reading a private field before it is added throws TypeError",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          2
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError:2"
+        ],
+        "maxSteps": 129,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:logical assignment on private fields short-circuits",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "3,4,7,3"
+        ],
+        "maxSteps": 631,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:exponent and shift compound assignment on private fields",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          4
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "16,4,8"
+        ],
+        "maxSteps": 1433,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private fields as destructuring assignment targets",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          5
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "5,6,7"
+        ],
+        "maxSteps": 788,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private field as a for-of target",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          6
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "6:3"
+        ],
+        "maxSteps": 548,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private access on null throws TypeError",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          7
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError:TypeError:7"
+        ],
+        "maxSteps": 706,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:detached method uses the call receiver for private access",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          8
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "8:TypeError"
+        ],
+        "maxSteps": 168,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private field stamped on a function and an Error",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          9
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:true:9:9"
+        ],
+        "maxSteps": 565,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private field stamped on a bound function and a class",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          10
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:true:10"
+        ],
+        "maxSteps": 480,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private field stamped on an intrinsic object",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          11
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:11:false"
+        ],
+        "maxSteps": 346,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private field added to a frozen object",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          12
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:12:true"
+        ],
+        "maxSteps": 416,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:optional chain continues through a private member",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          13
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "undefined:13"
+        ],
+        "maxSteps": 235,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:derived constructor sees private fields right after super()",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          14
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "false:true:14"
+        ],
+        "maxSteps": 755,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private static access through a reassigned outer binding",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          15
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError:15"
+        ],
+        "maxSteps": 143,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:outer private name in a nested class computed key",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          16
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "16:16"
+        ],
+        "maxSteps": 177,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private in inside a computed key before the declaration",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          17
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict2": "bytecode: object; get_loc3 (set_loc_uninitialized, tag 6); private_in -> privateName() status 2"
+        },
+        "status": "passed",
+        "values": [
+          "false:17"
+        ],
+        "maxSteps": 212,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private read inside a computed key before the declaration",
+        "area": "class-private",
+        "outcome": "value",
+        "inputs": [
+          18
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict2": "bytecode: object; get_var_ref0 (uninitialized #p cell); get_private_field -> privateName() status 2 (not a catchable TypeError)"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError:18"
+        ],
+        "maxSteps": 141,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:setter-only private accessor in operator",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "quickjsDeviation": "pinned QuickJS returns false:false (resolve_scope_private_field loads the never-initialized `#s` local instead of `#s<set>`)",
+          "predict2": "bytecode: get_arg0; get_var_ref0 (uninitialized `#s` cell); private_in -> privateName() status 2"
+        },
+        "status": "passed",
+        "values": [
+          "true:false:1"
+        ],
+        "maxSteps": 314,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:compound assignment on a private method reads then throws",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          2
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "failed",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 16341; no CPU fallback",
+        "asDeclared": false
+      },
+      {
+        "id": "n-w8:assignment to a private method evaluates the right side first",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError:r:3"
+        ],
+        "maxSteps": 158,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:getter-only compound assignment calls the getter then throws",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          4
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError:gr:4"
+        ],
+        "maxSteps": 170,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:setter-only compound assignment throws before the right side",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          5
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError::5"
+        ],
+        "maxSteps": 151,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:extracted private method has strict call this",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          6
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:true:6"
+        ],
+        "maxSteps": 324,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private method length and name",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          7
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "2:#m:7"
+        ],
+        "maxSteps": 233,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private method is not a constructor",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          8
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError8"
+        ],
+        "maxSteps": 149,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:brand is installed before the base constructor body",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          9
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          9
+        ],
+        "maxSteps": 55,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:derived private method before super() is a this ReferenceError",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          10
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "ReferenceError:10"
+        ],
+        "maxSteps": 176,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private getter/setter pair through compound and update",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          11
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          23
+        ],
+        "maxSteps": 144,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:private methods are not own properties",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          12
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "0:0:12"
+        ],
+        "maxSteps": 309,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:super property inside a static private method",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          13
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "P13"
+        ],
+        "maxSteps": 145,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:each class evaluation has a distinct method brand",
+        "area": "class-private-methods",
+        "outcome": "value",
+        "inputs": [
+          14
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError:1:14"
+        ],
+        "maxSteps": 296,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:sloppy plain call this is the global object",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "true:1"
+        ],
+        "maxSteps": 177,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:sloppy entry function this is an object",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          2
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "shader.js push_this: sloppy receiver undefined/null -> status 6 (no global object yet)"
+        },
+        "status": "passed",
+        "values": [
+          "object:2"
+        ],
+        "maxSteps": 88,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:call apply bind with null or undefined this",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "true,true,true:3"
+        ],
+        "maxSteps": 566,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:detached sloppy method this",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          4
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "true:4"
+        ],
+        "maxSteps": 185,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:strict function this stays undefined (control)",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          5
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "undefined:5"
+        ],
+        "maxSteps": 92,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:globalThis self reference and descriptor",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          6
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "true:true,false,true:6"
+        ],
+        "maxSteps": 592,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:standard constructors are global object properties",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          7
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "true:7"
+        ],
+        "maxSteps": 536,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:undefined NaN Infinity are non-writable non-configurable",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          8
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "false,false,false|false,false,false|false,false,false|8"
+        ],
+        "maxSteps": 1743,
+        "collections": 1,
+        "laneCollections": [
+          1
+        ]
+      },
+      {
+        "id": "n-w8:sloppy write to global undefined is ignored",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          9
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "undefined:9"
+        ],
+        "maxSteps": 89,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:strict write to global NaN throws TypeError",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          10
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError10"
+        ],
+        "maxSteps": 92,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:global property is visible as an identifier",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          11
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "11:true"
+        ],
+        "maxSteps": 174,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:sloppy implicit global assignment creates a deletable property",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          12
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "12:true:true:false"
+        ],
+        "maxSteps": 414,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:strict implicit global assignment throws ReferenceError",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          13
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "ReferenceError13"
+        ],
+        "maxSteps": 92,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:typeof an undeclared identifier",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          14
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "undefined14"
+        ],
+        "maxSteps": 84,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:reading an undeclared identifier throws ReferenceError",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          15
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "ReferenceError15"
+        ],
+        "maxSteps": 90,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:global object is an extensible object",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          16
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "true:object:16"
+        ],
+        "maxSteps": 177,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:global this identity is stable",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          17
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "shader.js push_this: sloppy receiver undefined/null -> status 6 (no global object yet)"
+        },
+        "status": "passed",
+        "values": [
+          "true:true:17"
+        ],
+        "maxSteps": 277,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:sloppy tag function this is the global object",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          18
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "true:18"
+        ],
+        "maxSteps": 178,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:sloppy callback this from a builtin is the global object",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          19
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "true:19"
+        ],
+        "maxSteps": 515,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:sloppy this property write lands on the global object",
+        "area": "global",
+        "outcome": "value",
+        "inputs": [
+          20
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "20:true"
+        ],
+        "maxSteps": 241,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:class constructor own property order",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "length,name,prototype,m,s|1"
+        ],
+        "maxSteps": 627,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:class name and length descriptors",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          2
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "A:1:false,false,true:false,false,true:2"
+        ],
+        "maxSteps": 1022,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:anonymous class expression names",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "C||true|3"
+        ],
+        "maxSteps": 255,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:class prototype property descriptor",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          4
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "false,false,false:4"
+        ],
+        "maxSteps": 513,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:prototype constructor descriptor",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          5
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true,false,true:true:5"
+        ],
+        "maxSteps": 600,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:class methods and accessors are non-enumerable and named",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          6
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "0:get v:set v:6"
+        ],
+        "maxSteps": 279,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:class methods have no prototype and are not constructors",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          7
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "false:TypeError:7"
+        ],
+        "maxSteps": 267,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:computed numeric method names",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          8
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "1|2.5|8"
+        ],
+        "maxSteps": 6678,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:static method named name overrides the class name",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          9
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "function:9"
+        ],
+        "maxSteps": 103,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:bound class name length and construct new.target",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          10
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "bound A:1:true:true:10"
+        ],
+        "maxSteps": 475,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:new.target in a base constructor is the most derived class",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          11
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:true:11"
+        ],
+        "maxSteps": 321,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:new.target inside an arrow",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          12
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:undefined:12"
+        ],
+        "maxSteps": 202,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:super property lookup follows a changed home prototype",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          13
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "13:5"
+        ],
+        "maxSteps": 213,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:detached method keeps its home object",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          14
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "B14"
+        ],
+        "maxSteps": 131,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:super in an object literal method with __proto__",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          15
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "base15"
+        ],
+        "maxSteps": 109,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:super property set defines on the receiver",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          16
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "own:16:none"
+        ],
+        "maxSteps": 281,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:super in a static method is the parent constructor",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          17
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "P17"
+        ],
+        "maxSteps": 129,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:class extending null",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          18
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true:true:TypeError:18"
+        ],
+        "maxSteps": 296,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:inner class binding is immutable",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          19
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError19"
+        ],
+        "maxSteps": 114,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:outer class declaration binding is mutable",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          20
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "number20"
+        ],
+        "maxSteps": 97,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:class declaration temporal dead zone",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          21
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "ReferenceError21"
+        ],
+        "maxSteps": 91,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:heritage is evaluated before computed keys",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          22
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "h,k:22"
+        ],
+        "maxSteps": 632,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:non-constructor heritage throws TypeError",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          23
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError23"
+        ],
+        "maxSteps": 95,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:heritage prototype must be an object or null",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          24
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "TypeError24"
+        ],
+        "maxSteps": 99,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:function name is configurable and falls back to Function.prototype",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          25
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "true::25"
+        ],
+        "maxSteps": 181,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:object literal accessor function names",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          26
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "get s|set s|26"
+        ],
+        "maxSteps": 164,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:derived default constructor forwards arguments",
+        "area": "metadata",
+        "outcome": "value",
+        "inputs": [
+          27
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          "1,2,27"
+        ],
+        "maxSteps": 399,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8-error:uncaught brand check failure",
+        "area": "class-private-methods",
+        "outcome": "error:TypeError",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          true
+        ],
+        "maxSteps": 66,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ],
+        "errorNameVerified": true,
+        "exceptionClass": "TypeError"
+      },
+      {
+        "id": "n-w8-error:uncaught static block error",
+        "area": "class-static",
+        "outcome": "error:RangeError",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          true
+        ],
+        "maxSteps": 221,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ],
+        "errorNameVerified": true,
+        "exceptionClass": "RangeError"
+      },
+      {
+        "id": "n-w8-error:uncaught derived constructor missing super",
+        "area": "metadata",
+        "outcome": "error:ReferenceError",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required"
+        },
+        "status": "passed",
+        "values": [
+          true
+        ],
+        "maxSteps": 61,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ],
+        "errorNameVerified": true,
+        "exceptionClass": "ReferenceError"
+      },
+      {
+        "id": "n-w8-early:instance field named constructor",
+        "area": "class-fields",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Classes can't have a field named 'constructor' (1:25)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:string literal field named constructor",
+        "area": "class-fields",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Classes can't have a field named 'constructor' (1:25)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:static field named prototype",
+        "area": "class-static",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Classes can't have a static field named 'prototype' (1:32)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:static field named constructor",
+        "area": "class-static",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Classes can't have a field named 'constructor' (1:32)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:arguments in a field initializer",
+        "area": "class-fields",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Cannot use 'arguments' in class field initializer (1:29)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:super call in a field initializer",
+        "area": "class-fields",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: super() call outside constructor of a subclass (1:44)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:return in a static block",
+        "area": "class-static",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: 'return' outside of function (1:34)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:arguments in a static block",
+        "area": "class-static",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Cannot use arguments in class static initialization block (1:34)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:await binding in a static block",
+        "area": "class-static",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Cannot use await in class static initialization block (1:38)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:duplicate private field",
+        "area": "class-private",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Identifier '#x' has already been declared (1:29)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:delete of a private reference",
+        "area": "class-private",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Private fields can not be deleted (1:34)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:undeclared private name",
+        "area": "class-private",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Private field '#y' must be declared in an enclosing class (1:42)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:private name #constructor",
+        "area": "class-private",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Classes can't have an element named '#constructor' (1:25)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:private in outside a class",
+        "area": "class-private",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Unexpected token (1:22)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:duplicate private getter",
+        "area": "class-private-methods",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Identifier '#a' has already been declared (1:40)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:static and instance accessor halves",
+        "area": "class-private-methods",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Identifier '#a' has already been declared (1:47)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:duplicate constructors",
+        "area": "metadata",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Duplicate constructor in the same class (1:41)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:super call outside a derived constructor",
+        "area": "metadata",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: super() call outside constructor of a subclass (1:40)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-early:super property in an ordinary function",
+        "area": "metadata",
+        "outcome": "rejected",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "earlyError": true
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: 'super' keyword outside a method (1:36)",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-boundary:private field on an arguments object return override",
+        "area": "class-private",
+        "outcome": "unsupported",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "unsupported",
+          "normative": 1,
+          "declaredBy": "PHASE-4-NEXT-STATUS.md \"Explicit class boundaries\": private elements on arrays/arguments/wrappers/unmapped built-in functions -> status 6"
+        },
+        "status": "unsupported",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 82; no CPU fallback",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-boundary:private field on a builtin function return override",
+        "area": "class-private",
+        "outcome": "unsupported",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "unsupported",
+          "normative": 1,
+          "declaredBy": "PHASE-4-NEXT-STATUS.md \"Explicit class boundaries\""
+        },
+        "status": "unsupported",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 80; no CPU fallback",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-boundary:class source text",
+        "area": "metadata",
+        "outcome": "unsupported",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "unsupported",
+          "normative": "class1",
+          "declaredBy": "phase4-class-elements.js classElementNotes.gaps: Function.prototype.toString of classes/methods not implemented (status 6 expected; verify)"
+        },
+        "status": "unsupported",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 14; no CPU fallback",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-boundary:async private method",
+        "area": "class-private-methods",
+        "outcome": "unsupported",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "rejected",
+          "normative": true,
+          "reason": "/Unsupported async or generator class method/",
+          "declaredBy": "phase4-class-elements.js classElementRejectNode (Phase 6 function kinds)"
+        },
+        "status": "rejected",
+        "observedStatus": "rejected",
+        "stage": "compile",
+        "error": "SyntaxError: Unsupported async or generator class method",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8-boundary:Reflect.construct new.target",
+        "area": "metadata",
+        "outcome": "unsupported",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "unsupported",
+          "normative": "true:1",
+          "declaredBy": "PHASE-4-STATUS.md \"Remaining Phase 4 gaps\": Reflect.construct new.target"
+        },
+        "status": "unsupported",
+        "observedStatus": "unsupported",
+        "stage": "runtime",
+        "error": "Unsupported runtime operation in lane 0, instruction 25; no CPU fallback",
+        "asDeclared": true
+      },
+      {
+        "id": "n-w8:probe private fields brands and static private state across collections",
+        "area": "probe",
+        "outcome": "value",
+        "inputs": [
+          1
+        ],
+        "requiresGC": true,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "group": "probe"
+        },
+        "status": "passed",
+        "values": [
+          "k1:300:301"
+        ],
+        "maxSteps": 49875,
+        "collections": 20,
+        "laneCollections": [
+          20
+        ]
+      },
+      {
+        "id": "n-w8:probe discarded class evaluations release private names",
+        "area": "probe",
+        "outcome": "value",
+        "inputs": [
+          2
+        ],
+        "requiresGC": true,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "group": "probe"
+        },
+        "status": "passed",
+        "values": [
+          301
+        ],
+        "maxSteps": 8445,
+        "collections": 4,
+        "laneCollections": [
+          4
+        ]
+      },
+      {
+        "id": "n-w8:probe stale method brand home is never reused",
+        "area": "probe",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": true,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "group": "probe"
+        },
+        "status": "passed",
+        "values": [
+          "80:3"
+        ],
+        "maxSteps": 6631,
+        "collections": 2,
+        "laneCollections": [
+          2
+        ]
+      },
+      {
+        "id": "n-w8:probe stale private name is never reused",
+        "area": "probe",
+        "outcome": "value",
+        "inputs": [
+          4
+        ],
+        "requiresGC": true,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "group": "probe"
+        },
+        "status": "passed",
+        "values": [
+          "80:4"
+        ],
+        "maxSteps": 6307,
+        "collections": 2,
+        "laneCollections": [
+          2
+        ]
+      },
+      {
+        "id": "n-w8:probe template registry with many sites survives collections",
+        "area": "probe",
+        "outcome": "value",
+        "inputs": [
+          5
+        ],
+        "requiresGC": true,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "group": "probe"
+        },
+        "status": "passed",
+        "values": [
+          "10:s9:5"
+        ],
+        "maxSteps": 32025,
+        "collections": 17,
+        "laneCollections": [
+          17
+        ]
+      },
+      {
+        "id": "n-w8:probe template object reachable only from a private field",
+        "area": "probe",
+        "outcome": "value",
+        "inputs": [
+          6
+        ],
+        "requiresGC": true,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "group": "probe"
+        },
+        "status": "passed",
+        "values": [
+          "true:p6:true"
+        ],
+        "maxSteps": 30830,
+        "collections": 16,
+        "laneCollections": [
+          16
+        ]
+      },
+      {
+        "id": "n-w8:probe resumption private accessors in derived field initializers",
+        "area": "probe",
+        "outcome": "value",
+        "inputs": [
+          1
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "group": "probe",
+          "resumption": true
+        },
+        "status": "passed",
+        "values": [
+          "BgsgsD:22"
+        ],
+        "maxSteps": 306,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:probe resumption getter tag forwarding to String.raw",
+        "area": "probe",
+        "outcome": "value",
+        "inputs": [
+          2
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "group": "probe",
+          "resumption": true
+        },
+        "status": "passed",
+        "values": [
+          "a4b6c"
+        ],
+        "maxSteps": 1240,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:probe resumption computed static key with toString and private in",
+        "area": "probe",
+        "outcome": "value",
+        "inputs": [
+          3
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "group": "probe",
+          "resumption": true
+        },
+        "status": "passed",
+        "values": [
+          "k3,r:true"
+        ],
+        "maxSteps": 601,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      },
+      {
+        "id": "n-w8:probe resumption sloppy global this",
+        "area": "probe",
+        "outcome": "value",
+        "inputs": [
+          4
+        ],
+        "requiresGC": false,
+        "oracleKind": "ecmascript2025",
+        "diagnostics": {
+          "status": "required",
+          "group": "probe",
+          "resumption": true,
+          "predict6": "program.js: free identifier -> \"Unsupported global or module reference\" (compiler rejection)"
+        },
+        "status": "passed",
+        "values": [
+          "true:4"
+        ],
+        "maxSteps": 312,
+        "collections": 0,
+        "laneCollections": [
+          0
+        ]
+      }
+    ],
+    "method": "Fixed value expectations; guest try/catch verifies exact expected exception prototype; unexpected compiler/runtime boundaries fail. Explicit unsupported/rejected/resource records remain separate from semantic passes. Required callback records resume one instruction per dispatch; collection-pressure probes require a positive collection count in every lane."
+  }
+}

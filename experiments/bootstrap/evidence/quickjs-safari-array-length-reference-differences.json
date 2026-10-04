@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-02T12:47:46.668Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "rows": [
+      {
+        "source": "function f(x){let a=[x];a.length={valueOf(){Object.defineProperty(a,\"length\",{writable:false});return 1;}};return a.length;}",
+        "values": [
+          1
+        ],
+        "native": 1
+      },
+      {
+        "source": "function f(x){\"use strict\";let a=[x];a.length={valueOf(){Object.defineProperty(a,\"length\",{writable:false});return 1;}};return a.length;}",
+        "values": [
+          1
+        ],
+        "native": {
+          "threw": "TypeError",
+          "message": "Attempted to assign to readonly property."
+        }
+      },
+      {
+        "source": "function f(x){let a=[x,1];a.length={valueOf(){Object.defineProperty(a,\"length\",{writable:false});return 1;}};return a.length;}",
+        "values": [
+          2
+        ],
+        "native": 2
+      },
+      {
+        "source": "function f(x){\"use strict\";let a=[x,1];try{a.length={valueOf(){Object.defineProperty(a,\"length\",{writable:false});return 1;}};}catch(e){return e instanceof TypeError&&a.length===2;}return false;}",
+        "values": [
+          true
+        ],
+        "native": true
+      }
+    ]
+  }
+}

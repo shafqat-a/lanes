@@ -1,0 +1,415 @@
+{
+ "gpuChecks": false,
+ "nativeReferenceExecution": true,
+ "productionCPUFallback": false,
+ "nativeQuickJSReference": true,
+ "wasmBuild": true,
+ "counts": {
+  "cases": 37,
+  "oracle": 37,
+  "inputSensitivity": 37,
+  "sharedBindingDiscrimination": 20,
+  "nativeInterpreter": 74,
+  "nativeWasmRaw": 37,
+  "packedParity": 35,
+  "tdzInvariant": 16,
+  "admitted": 35,
+  "rejected": 2
+ },
+ "regressionCases": 26,
+ "baseline": {
+  "regressionFailuresBeforePatch": 26,
+  "baselineFailures": [
+   {
+    "feature": "const-tdz-plain-assign",
+    "got": {
+     "value": "plain-type1"
+    }
+   },
+   {
+    "feature": "const-tdz-inner-block",
+    "got": {
+     "value": "block-type5"
+    }
+   },
+   {
+    "feature": "const-tdz-arrow-closure-before-init",
+    "got": {
+     "value": "arrow-type6"
+    }
+   },
+   {
+    "feature": "const-tdz-funcexpr-closure-before-init",
+    "got": {
+     "value": "fexpr-type7"
+    }
+   },
+   {
+    "feature": "const-tdz-closure-two-levels",
+    "got": {
+     "value": "deep-type8"
+    }
+   },
+   {
+    "feature": "const-closure-before-and-after-init",
+    "got": {
+     "value": "type:type10"
+    }
+   },
+   {
+    "feature": "const-tdz-rhs-side-effect-first",
+    "got": {
+     "value": "rhs-type13"
+    }
+   },
+   {
+    "feature": "const-tdz-switch-fallthrough",
+    "got": {
+     "value": "sw-type13"
+    }
+   },
+   {
+    "feature": "const-tdz-for-body",
+    "got": {
+     "value": "loop-type0type114"
+    }
+   },
+   {
+    "feature": "const-tdz-error-name",
+    "got": {
+     "value": "name-TypeError15"
+    }
+   },
+   {
+    "feature": "for-let-continue-per-iteration",
+    "got": {
+     "value": "4,4,4"
+    }
+   },
+   {
+    "feature": "for-let-continue-unconditional",
+    "got": {
+     "value": "u666"
+    }
+   },
+   {
+    "feature": "for-let-continue-conditional-mixed",
+    "got": {
+     "value": "11-11-13-13"
+    }
+   },
+   {
+    "feature": "for-let-continue-no-update",
+    "got": {
+     "value": "nu9,9,9|6,6,6"
+    }
+   },
+   {
+    "feature": "for-let-continue-no-test-break",
+    "got": {
+     "value": "ib777"
+    }
+   },
+   {
+    "feature": "for-let-continue-no-test-no-update",
+    "got": {
+     "value": "nn8,8,8"
+    }
+   },
+   {
+    "feature": "for-let-labeled-continue-same-loop",
+    "got": {
+     "value": "ls111"
+    }
+   },
+   {
+    "feature": "for-let-labeled-continue-from-inner-for-let",
+    "got": {
+     "value": "lo7:30 30 31 30 31 32 "
+    }
+   },
+   {
+    "feature": "for-let-labeled-continue-from-inner-while",
+    "got": {
+     "value": "lw19,20,21"
+    }
+   },
+   {
+    "feature": "for-let-continue-in-try-finally",
+    "got": {
+     "value": "tf012:666"
+    }
+   },
+   {
+    "feature": "for-let-labeled-continue-through-finally",
+    "got": {
+     "value": "lf01:4,4"
+    }
+   },
+   {
+    "feature": "for-let-continue-in-catch",
+    "got": {
+     "value": "c0:24/2:24/4:24"
+    }
+   },
+   {
+    "feature": "for-let-continue-from-nested-block",
+    "got": {
+     "value": "bk0.3,9.3,18.3"
+    }
+   },
+   {
+    "feature": "for-let-continue-closure-in-update",
+    "got": {
+     "value": "up4,4,4|31,31,31"
+    }
+   },
+   {
+    "feature": "for-let-continue-two-vars",
+    "got": {
+     "value": "tv5/7,5/7,5/7"
+    }
+   },
+   {
+    "feature": "for-let-continue-closure-mutates-copy",
+    "got": {
+     "value": "m7659"
+    }
+   }
+  ],
+  "otherFixtureSources": 1304,
+  "skippedNul": 0,
+  "unchangedBytecode": 1299,
+  "changedBytecode": [
+   "function f(x) { try { const a=x; a=3; } catch(e) { return 19; } }",
+   "function check(x){return (function f(x){const c=x;try{c=c+1;}catch(e){return (e instanceof TypeError)+\":\"+c;}return \"mutated\";})(7);}",
+   "function f(x){const c=x;try{c=c+1;}catch(e){return (e instanceof TypeError)+\":\"+c;}return \"mutated\";}",
+   "function f(x){try{k=x;}catch(e){return (e instanceof ReferenceError?\"ref\":e instanceof TypeError?\"type\":\"other\")+x;}const k=1;return \"none\";}",
+   "function f(x){const a=[];for(let i=0;i<3;i++){a[i]=function(){return i+x;};if(i<3)continue;}return a[0]()+\",\"+a[1]()+\",\"+a[2]();}"
+  ]
+ },
+ "results": [
+  {
+   "feature": "const-tdz-plain-assign",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-tdz-compound-add",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-tdz-postfix-inc",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-tdz-prefix-inc",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-tdz-inner-block",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-tdz-arrow-closure-before-init",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-tdz-funcexpr-closure-before-init",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-tdz-closure-two-levels",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-closure-after-init-typeerror",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-closure-before-and-after-init",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-local-after-init-typeerror",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-tdz-rhs-side-effect-first",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-tdz-switch-fallthrough",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-tdz-for-body",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-tdz-error-name",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "const-init-error-name",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "strict-funcexpr-name-assign-typeerror",
+   "bug": "const-tdz",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "for-let-continue-per-iteration",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-unconditional",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-conditional-mixed",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-no-update",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-no-test-break",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-no-test-no-update",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-labeled-continue-same-loop",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-labeled-continue-from-inner-for-let",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-labeled-continue-from-inner-while",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-in-try-finally",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-labeled-continue-through-finally",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-in-catch",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-from-nested-block",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-closure-in-update",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-two-vars",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-closure-mutates-copy",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": true
+  },
+  {
+   "feature": "for-let-continue-no-capture-control",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "for-var-continue-shared-control",
+   "bug": "for-let-continue",
+   "admission": "admitted",
+   "closeLoc": false
+  },
+  {
+   "feature": "for-of-const-continue-per-iteration",
+   "bug": "for-let-continue",
+   "admission": "rejected",
+   "reason": "Unsupported QuickJS instruction: for_of_start"
+  },
+  {
+   "feature": "for-in-const-continue-per-iteration",
+   "bug": "for-let-continue",
+   "admission": "rejected",
+   "reason": "Unsupported QuickJS instruction: for_in_start"
+  }
+ ]
+}

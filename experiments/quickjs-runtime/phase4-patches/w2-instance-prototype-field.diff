@@ -1,0 +1,17 @@
+--- a/experiments/quickjs-runtime/vendor/quickjs.c
++++ b/experiments/quickjs-runtime/vendor/quickjs.c
+@@ -25698,7 +25698,12 @@
+             /* class field */
+
+-            /* XXX: spec: not consistent with method name checks */
+-            if (name == JS_ATOM_constructor || name == JS_ATOM_prototype) {
++            /* LANES w2: ES2025 15.7.1 early errors: a FieldDefinition named
++               "constructor" (static or not) and a static one named
++               "prototype" are SyntaxErrors; an instance field named
++               "prototype" is valid. (Static "prototype" is already rejected
++               above as "invalid method name".) */
++            if (name == JS_ATOM_constructor ||
++                (is_static && name == JS_ATOM_prototype)) {
+                 js_parse_error(s, "invalid field name");
+                 goto fail;
+             }

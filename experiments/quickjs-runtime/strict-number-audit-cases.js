@@ -1,0 +1,36 @@
+const cases=[];const c=(feature,body,expected=true)=>cases.push({feature:'strict-number-'+feature,source:`function f(x){${body}}`,input:3,expected});
+c('public-call-bigint','return Number(9007199254740993n)===9007199254740992;');
+c('public-construct-bigint','return new Number(9007199254740993n).valueOf()===9007199254740992;');
+c('public-object-bigint-once','let calls=0;const o={valueOf(){calls++;return 3n;}};return Number(o)===3&&calls===1;');
+c('public-construct-object-bigint-once','let calls=0;const o={valueOf(){calls++;return 3n;}};return new Number(o).valueOf()===3&&calls===1;');
+c('public-number-symbol','try{Number(Symbol());}catch(e){return e instanceof TypeError;}return false;');
+c('math-bigint','try{Math.abs(1n);}catch(e){return e instanceof TypeError;}return false;');
+c('math-object-bigint-once','let calls=0;const o={valueOf(){calls++;return 1n;}};try{Math.floor(o);}catch(e){return e instanceof TypeError&&calls===1;}return false;');
+c('math-max-nan-still-converts','let log="";const a={valueOf(){log+="a";return NaN;}},b={valueOf(){log+="b";return 1n;}};try{Math.max(a,b);}catch(e){return e instanceof TypeError&&log==="ab";}return false;');
+c('math-pow-bigint-stops-exponent-coercion','let calls=0;const b={valueOf(){calls++;return 1;}};try{Math.pow(1n,b);}catch(e){return e instanceof TypeError&&calls===0;}return false;');
+c('isfinite-no-coercion','const o={valueOf(){throw 9;}};return !Number.isFinite(1n)&&!Number.isFinite(o)&&!Number.isNaN(1n);');
+c('parseint-bigint-radix','let log="";const s={toString(){log+="s";return "12";}},r={valueOf(){log+="r";return 10n;}};try{parseInt(s,r);}catch(e){return e instanceof TypeError&&log==="sr";}return false;');
+c('array-length-bigint','const a=[1,2,3];let calls=0;try{a.length={valueOf(){calls++;return 1n;}};}catch(e){return e instanceof TypeError&&calls===1&&a.length===3;}return false;');
+c('array-descriptor-length-bigint','const a=[1,2,3];let calls=0;try{Object.defineProperty(a,"length",{value:{valueOf(){calls++;return 1n;}}});}catch(e){return e instanceof TypeError&&calls===1&&a.length===3;}return false;');
+c('array-length-two-conversions','const a=[1,2,3];let calls=0;try{a.length={valueOf(){calls++;return calls===1?1:1n;}};}catch(e){return e instanceof TypeError&&calls===2&&a.length===3;}return false;');
+c('array-sort-comparator-bigint','try{[2,1].sort(function(){return 1n;});}catch(e){return e instanceof TypeError;}return false;');
+c('array-tosorted-comparator-object-bigint','let calls=0;try{[2,1].toSorted(function(){return {valueOf(){calls++;return 1n;}};});}catch(e){return e instanceof TypeError&&calls===1;}return false;');
+c('array-map-length-before-callback','let calls=0;const o={length:{valueOf(){calls++;return 1n;}}};try{Array.prototype.map.call(o,function(){throw 9;});}catch(e){return e instanceof TypeError&&calls===1;}return false;');
+c('array-at-empty-coerces-index','try{[].at(1n);}catch(e){return e instanceof TypeError;}return false;');
+c('array-indexof-empty-skips-index','return [].indexOf(1,1n)===-1;');
+c('array-includes-empty-skips-index','return ![].includes(1,1n);');
+c('array-slice-empty-coerces-start','try{[].slice(1n);}catch(e){return e instanceof TypeError;}return false;');
+c('array-fill-empty-coerces-start','try{[].fill(1,1n);}catch(e){return e instanceof TypeError;}return false;');
+c('string-repeat-bigint','try{"a".repeat(1n);}catch(e){return e instanceof TypeError;}return false;');
+c('string-indexof-coercion-order','let log="";const s={toString(){log+="s";return "a";}},p={valueOf(){log+="p";return 0n;}};try{"abc".indexOf(s,p);}catch(e){return e instanceof TypeError&&log==="sp";}return false;');
+c('string-slice-bigint','try{"abc".slice(1n);}catch(e){return e instanceof TypeError;}return false;');
+c('string-at-bigint','try{"abc".at(1n);}catch(e){return e instanceof TypeError;}return false;');
+c('number-tostring-bigint-radix','try{(2).toString(10n);}catch(e){return e instanceof TypeError;}return false;');
+c('json-number-wrapper-bigint','const o=new Number(1);o.valueOf=function(){return 1n;};try{JSON.stringify(o);}catch(e){return e instanceof TypeError;}return false;');
+c('json-space-bigint-before-tojson','let log="";const value={toJSON(){log+="j";return 1;}},space=new Number(1);space.valueOf=function(){log+="s";return 2n;};try{JSON.stringify(value,null,space);}catch(e){return e instanceof TypeError&&log==="s";}return false;');
+c('function-apply-bigint-length','let calls=0;const args={length:{valueOf(){calls++;return 1n;}}};try{function g(){}g.apply(null,args);}catch(e){return e instanceof TypeError&&calls===1;}return false;');
+c('object-primitive-abrupt-preserved','const token={};try{[].at({valueOf(){throw token;}});}catch(e){return e===token;}return false;');
+export const strictNumberAuditCases=Object.freeze(cases);
+export const strictNumberAuditPendingCases=Object.freeze([
+ {feature:'obsolete-string-iterator-bigint-text-guard',source:'function f(){const s=new String("x");s.toString=function(){return 12n;};let out="";for(const c of s)out+=c;return out;}',input:3,expected:'12',currentBoundary:'Unsupported runtime operation',reason:'iteratorOpen retains obsolete BigInt ToString guard although primitiveText now formats BigInt'},
+]);

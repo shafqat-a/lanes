@@ -1,0 +1,363 @@
+{
+  "date": "2026-10-03T06:04:29.150Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 66,
+    "checked": 72,
+    "resumptionDispatches": 10848,
+    "elapsedMs": 24222,
+    "results": [
+      {
+        "feature": "global-parser-aliases",
+        "checked": 1,
+        "maxSteps": 20614
+      },
+      {
+        "feature": "Number-parser-property-descriptors",
+        "checked": 1,
+        "maxSteps": 625
+      },
+      {
+        "feature": "global-alias-retains-original-after-property-write",
+        "checked": 1,
+        "maxSteps": 8639
+      },
+      {
+        "feature": "parseInt-0",
+        "checked": 1,
+        "maxSteps": 286
+      },
+      {
+        "feature": "parseInt-1",
+        "checked": 1,
+        "maxSteps": 685
+      },
+      {
+        "feature": "parseInt-2",
+        "checked": 1,
+        "maxSteps": 8292
+      },
+      {
+        "feature": "parseInt-3",
+        "checked": 1,
+        "maxSteps": 9428
+      },
+      {
+        "feature": "parseInt-4",
+        "checked": 1,
+        "maxSteps": 578
+      },
+      {
+        "feature": "parseInt-5",
+        "checked": 1,
+        "maxSteps": 578
+      },
+      {
+        "feature": "parseInt-6",
+        "checked": 1,
+        "maxSteps": 410
+      },
+      {
+        "feature": "parseInt-7",
+        "checked": 1,
+        "maxSteps": 570
+      },
+      {
+        "feature": "parseInt-8",
+        "checked": 1,
+        "maxSteps": 8886
+      },
+      {
+        "feature": "parseInt-9",
+        "checked": 1,
+        "maxSteps": 324
+      },
+      {
+        "feature": "parseInt-10",
+        "checked": 1,
+        "maxSteps": 328
+      },
+      {
+        "feature": "parseInt-11",
+        "checked": 1,
+        "maxSteps": 8040
+      },
+      {
+        "feature": "parseInt-12",
+        "checked": 1,
+        "maxSteps": 9251
+      },
+      {
+        "feature": "parseInt-13",
+        "checked": 1,
+        "maxSteps": 10213
+      },
+      {
+        "feature": "parseInt-14",
+        "checked": 1,
+        "maxSteps": 10300
+      },
+      {
+        "feature": "parseInt-15",
+        "checked": 1,
+        "maxSteps": 15911
+      },
+      {
+        "feature": "parseInt-16",
+        "checked": 1,
+        "maxSteps": 51647
+      },
+      {
+        "feature": "parseInt-17",
+        "checked": 1,
+        "maxSteps": 48764
+      },
+      {
+        "feature": "parseInt-18",
+        "checked": 1,
+        "maxSteps": 65591
+      },
+      {
+        "feature": "parseInt-19",
+        "checked": 1,
+        "maxSteps": 100652
+      },
+      {
+        "feature": "parseInt-20",
+        "checked": 1,
+        "maxSteps": 190771
+      },
+      {
+        "feature": "parseInt-21",
+        "checked": 1,
+        "maxSteps": 9359
+      },
+      {
+        "feature": "parseInt-22",
+        "checked": 1,
+        "maxSteps": 422
+      },
+      {
+        "feature": "parseInt-23",
+        "checked": 1,
+        "maxSteps": 422
+      },
+      {
+        "feature": "parseInt-24",
+        "checked": 1,
+        "maxSteps": 1973
+      },
+      {
+        "feature": "parseFloat-0",
+        "checked": 1,
+        "maxSteps": 122
+      },
+      {
+        "feature": "parseFloat-1",
+        "checked": 1,
+        "maxSteps": 910
+      },
+      {
+        "feature": "parseFloat-2",
+        "checked": 1,
+        "maxSteps": 837
+      },
+      {
+        "feature": "parseFloat-3",
+        "checked": 1,
+        "maxSteps": 8717
+      },
+      {
+        "feature": "parseFloat-4",
+        "checked": 1,
+        "maxSteps": 9203
+      },
+      {
+        "feature": "parseFloat-5",
+        "checked": 1,
+        "maxSteps": 8385
+      },
+      {
+        "feature": "parseFloat-6",
+        "checked": 1,
+        "maxSteps": 8385
+      },
+      {
+        "feature": "parseFloat-7",
+        "checked": 1,
+        "maxSteps": 12349
+      },
+      {
+        "feature": "parseFloat-8",
+        "checked": 1,
+        "maxSteps": 795
+      },
+      {
+        "feature": "parseFloat-9",
+        "checked": 1,
+        "maxSteps": 795
+      },
+      {
+        "feature": "parseFloat-10",
+        "checked": 1,
+        "maxSteps": 203
+      },
+      {
+        "feature": "parseFloat-11",
+        "checked": 1,
+        "maxSteps": 212
+      },
+      {
+        "feature": "parseFloat-12",
+        "checked": 1,
+        "maxSteps": 207
+      },
+      {
+        "feature": "parseFloat-13",
+        "checked": 1,
+        "maxSteps": 236
+      },
+      {
+        "feature": "parseFloat-14",
+        "checked": 1,
+        "maxSteps": 8353
+      },
+      {
+        "feature": "parseFloat-15",
+        "checked": 1,
+        "maxSteps": 9982
+      },
+      {
+        "feature": "parseFloat-16",
+        "checked": 1,
+        "maxSteps": 236
+      },
+      {
+        "feature": "parseFloat-17",
+        "checked": 1,
+        "maxSteps": 236
+      },
+      {
+        "feature": "parseFloat-18",
+        "checked": 1,
+        "maxSteps": 193177
+      },
+      {
+        "feature": "parseFloat-19",
+        "checked": 1,
+        "maxSteps": 206326
+      },
+      {
+        "feature": "parseFloat-20",
+        "checked": 1,
+        "maxSteps": 209575
+      },
+      {
+        "feature": "parseFloat-21",
+        "checked": 1,
+        "maxSteps": 295267
+      },
+      {
+        "feature": "parseFloat-22",
+        "checked": 1,
+        "maxSteps": 296506
+      },
+      {
+        "feature": "parseFloat-23",
+        "checked": 1,
+        "maxSteps": 1157
+      },
+      {
+        "feature": "parseFloat-24",
+        "checked": 1,
+        "maxSteps": 1120
+      },
+      {
+        "feature": "parseFloat-25",
+        "checked": 1,
+        "maxSteps": 11091
+      },
+      {
+        "feature": "parseInt-coercion-order",
+        "checked": 1,
+        "maxSteps": 8481
+      },
+      {
+        "feature": "parseInt-radix-even-empty",
+        "checked": 1,
+        "maxSteps": 479
+      },
+      {
+        "feature": "parseInt-string-throw-skips-radix",
+        "checked": 1,
+        "maxSteps": 186
+      },
+      {
+        "feature": "parseInt-radix-throw",
+        "checked": 1,
+        "maxSteps": 392
+      },
+      {
+        "feature": "parseFloat-object-string-hint",
+        "checked": 1,
+        "maxSteps": 13995
+      },
+      {
+        "feature": "parseInt-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "parseFloat-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "parseInt-missing",
+        "checked": 1,
+        "maxSteps": 427
+      },
+      {
+        "feature": "parseFloat-missing",
+        "checked": 1,
+        "maxSteps": 235
+      },
+      {
+        "feature": "parse-numbers-to-text",
+        "checked": 7,
+        "maxSteps": 36463
+      },
+      {
+        "feature": "parser-borrowing",
+        "checked": 1,
+        "maxSteps": 28309
+      }
+    ],
+    "method": "Exact integer limb accumulation with one binary64 rounding; parseFloat longest decimal prefix and existing guest number parser; fresh native references on directed fixtures; one-instruction callback resumption.",
+    "gaps": [
+      "Primitive BigInt ToString currently unsupported",
+      "Existing string, heap and frame limits",
+      "Global aliases require same identity as Number methods when wired"
+    ]
+  }
+}

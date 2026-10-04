@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-10-04T01:08:35.110919+00:00",
+  "target": {
+    "host": "home.cloudlabs.live",
+    "sshPort": 1122,
+    "hostname": "Annihilator",
+    "os": "Linux",
+    "gpu": "Intel UHD Graphics (Comet Lake / gen-9)",
+    "driver": "Mesa 26.0.3-1ubuntu1"
+  },
+  "artifact": {
+    "path": "/tmp/lanes-integrated-final-candidate.tgz",
+    "sha256": "78444ae4bbde41d98de9be7f375182c092534b40ca7f4657421ac4a7f08bf421"
+  },
+  "status": "hardware smoke passed; integrated runtime pipeline compilation failed",
+  "softwareFallback": false,
+  "guestProgramsExecuted": 0,
+  "fullES2025": false,
+  "M1Verification": false,
+  "observations": [
+    "Chromium149 hardware dispatch/readback returned42; adapter vendor intel, architecture gen-9, isFallbackAdapter false",
+    "WGSL validation completed; full compute-pipeline creation failed before guest execution",
+    "Retry with GPU watchdog disabled failed; Chrome GPU process exit133",
+    "Chromium148 retry failed at same stage with GPU process exit133"
+  ],
+  "pipelineError": "A valid external Instance reference no longer exists.",
+  "suiteProgressLabelNote": "runtime-metal-pipeline is the historical diagnostic label; these Chrome runs used Vulkan, not Metal",
+  "reports": {
+    "system-info.json": "23634cdbc4ba8b81cabf79d8f79e49594f69b389d54d29e066d0f4a30b5dc427",
+    "shader-compile.json": "86df9c8b7f797cd3861416e0a7e5d6a9c24cbf0c7c681bdd9f59bf18309f4ebb",
+    "shader-compile-failure.json": "a3d756ad63171bfc197d7f1ecd3e5d1b8ca9cc70ec033830c5f6df97d0a796ad",
+    "environment.json": "bc9da2181d2b34177b866cc324925245f00baa00405fe46f5e3226b867cfa3d0",
+    "alternate/system-info.json": "bfa440a3d275871a460d3b6d0212798f6174768c2a2530d6396ca5c8c354496e",
+    "alternate/shader-compile.json": "2ae55281b6532181df0891fbe6a2160901613e4deddd741c369c0d3b6095caf8",
+    "alternate/shader-compile-failure.json": "a91faa8ed494eaafa03f7ab126629cda3e5c5fa1a7f434ec010f6d110a4dc156",
+    "alternate/environment.json": "97c4b0dd0b3fe2f0ca6b793ff7365f0ce9226db0888f862a71119f538525704a",
+    "no-watchdog/system-info.json": "3f40561026d2571edbe5c6559be6d9939b9027cfdd9dfce11404d84b4b379643",
+    "no-watchdog/shader-compile.json": "4baba28109118086fec7d8f9178aacf3bb773c3ae11eb6e0a67cdddf6a784acc",
+    "no-watchdog/shader-compile-failure.json": "161f4c70c2f3387183001aaa89eca5aee442bb35041826be61b936720b1a6777",
+    "no-watchdog/environment.json": "ae360150b47287c2c002f1c3d4cd007710051b7dedf422cb9f475a7a29d85cc1"
+  },
+  "runner": "experiments/quickjs-runtime/chrome.mjs",
+  "remoteArtifacts": "/tmp/lanes-chrome-aXfN8H",
+  "rootCause": "Not established; browser/driver/compiler failure during full runtime pipeline creation."
+}

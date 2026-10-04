@@ -1,0 +1,646 @@
+{
+  "date": "2026-10-03T05:52:45.159Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "compiler": "QuickJS/Wasm",
+    "programs": 43,
+    "checked": 211,
+    "unsupportedChecks": 3,
+    "resourceChecks": 1,
+    "inputs": [
+      0,
+      1,
+      -1,
+      3,
+      17
+    ],
+    "methods": [
+      "join",
+      "toString",
+      "map",
+      "filter",
+      "slice"
+    ],
+    "resumptionDispatches": 3403,
+    "resumptionExpected": "m0gm1m2f0f1f2sej:4|4",
+    "elapsedMs": 3137.0000000000005,
+    "results": [
+      {
+        "index": 0,
+        "feature": "join-holes-null-undefined",
+        "checked": 5,
+        "expected": [
+          "0||||false|z",
+          "1||||false|z",
+          "-1||||false|z",
+          "3||||false|z",
+          "17||||false|z"
+        ],
+        "maxSteps": 485,
+        "collections": 0
+      },
+      {
+        "index": 1,
+        "feature": "join-default-undefined-separator",
+        "checked": 5,
+        "expected": [
+          "0,2:0,2:0null2",
+          "1,2:1,2:1null2",
+          "-1,2:-1,2:-1null2",
+          "3,2:3,2:3null2",
+          "17,2:17,2:17null2"
+        ],
+        "maxSteps": 840,
+        "collections": 0
+      },
+      {
+        "index": 2,
+        "feature": "join-nested-arrays",
+        "checked": 5,
+        "expected": [
+          "0,2||,|4",
+          "1,2||,|4",
+          "-1,2||,|4",
+          "3,2||,|4",
+          "17,2||,|4"
+        ],
+        "maxSteps": 1142,
+        "collections": 0
+      },
+      {
+        "index": 3,
+        "feature": "join-receiver-boxing",
+        "checked": 5,
+        "expected": [
+          "a:b:",
+          "a:b:",
+          "a:b:",
+          "a:b:",
+          "a:b:"
+        ],
+        "maxSteps": 425,
+        "collections": 0
+      },
+      {
+        "index": 4,
+        "feature": "join-length-separator-get-order",
+        "checked": 5,
+        "expected": [
+          "lsab:0-2",
+          "lsab:1-2",
+          "lsab:-1-2",
+          "lsab:3-2",
+          "lsab:17-2"
+        ],
+        "maxSteps": 403,
+        "collections": 0
+      },
+      {
+        "index": 5,
+        "feature": "join-separator-converts-even-empty",
+        "checked": 5,
+        "expected": [
+          "s:",
+          "s:",
+          "s:",
+          "s:",
+          "s:"
+        ],
+        "maxSteps": 199,
+        "collections": 0
+      },
+      {
+        "index": 6,
+        "feature": "join-mutation-and-length-snapshot",
+        "checked": 5,
+        "expected": [
+          "0||:1",
+          "1||:1",
+          "-1||:1",
+          "3||:1",
+          "17||:1"
+        ],
+        "maxSteps": 543,
+        "collections": 0
+      },
+      {
+        "index": 7,
+        "feature": "join-inherited-index",
+        "checked": 5,
+        "expected": [
+          "1-0-3",
+          "1-1-3",
+          "1--1-3",
+          "1-3-3",
+          "1-17-3"
+        ],
+        "maxSteps": 414,
+        "collections": 0
+      },
+      {
+        "index": 8,
+        "feature": "join-element-string-hint",
+        "checked": 5,
+        "expected": [
+          "tv:0",
+          "tv:1",
+          "tv:-1",
+          "tv:3",
+          "tv:17"
+        ],
+        "maxSteps": 282,
+        "collections": 0
+      },
+      {
+        "index": 9,
+        "feature": "join-abrupt-separator-before-elements",
+        "checked": 5,
+        "expected": [
+          "s0",
+          "s1",
+          "s-1",
+          "s3",
+          "s17"
+        ],
+        "maxSteps": 246,
+        "collections": 0
+      },
+      {
+        "index": 10,
+        "feature": "toString-custom-join-receiver-args",
+        "checked": 5,
+        "expected": [
+          "true:0:0",
+          "true:0:1",
+          "true:0:-1",
+          "true:0:3",
+          "true:0:17"
+        ],
+        "maxSteps": 280,
+        "collections": 0
+      },
+      {
+        "index": 11,
+        "feature": "toString-custom-join-nonstring-result",
+        "checked": 5,
+        "expected": [
+          0,
+          1,
+          -1,
+          3,
+          17
+        ],
+        "maxSteps": 32,
+        "collections": 0
+      },
+      {
+        "index": 12,
+        "feature": "toString-intrinsic-fallback-ignores-public-mutation",
+        "checked": 5,
+        "expected": [
+          "[object Array]",
+          "[object Array]",
+          "[object Array]",
+          "[object Array]",
+          "[object Array]"
+        ],
+        "maxSteps": 31,
+        "collections": 0
+      },
+      {
+        "index": 13,
+        "feature": "toString-generic-fallback",
+        "checked": 5,
+        "expected": [
+          "[object Object]:[object String]:[object Number]",
+          "[object Object]:[object String]:[object Number]",
+          "[object Object]:[object String]:[object Number]",
+          "[object Object]:[object String]:[object Number]",
+          "[object Object]:[object String]:[object Number]"
+        ],
+        "maxSteps": 81,
+        "collections": 0
+      },
+      {
+        "index": 14,
+        "feature": "toString-getter-abrupt",
+        "checked": 5,
+        "expected": [
+          1,
+          2,
+          0,
+          4,
+          18
+        ],
+        "maxSteps": 31,
+        "collections": 0
+      },
+      {
+        "index": 15,
+        "feature": "map-holes-and-descriptors",
+        "checked": 5,
+        "expected": [
+          "3:v1:hole:v6:truetruetrue",
+          "3:v2:hole:v6:truetruetrue",
+          "3:v0:hole:v6:truetruetrue",
+          "3:v4:hole:v6:truetruetrue",
+          "3:v18:hole:v6:truetruetrue"
+        ],
+        "maxSteps": 1217,
+        "collections": 0
+      },
+      {
+        "index": 16,
+        "feature": "map-callback-this-arg",
+        "checked": 5,
+        "expected": [
+          "4|5",
+          "5|6",
+          "3|4",
+          "7|8",
+          "21|22"
+        ],
+        "maxSteps": 885,
+        "collections": 0
+      },
+      {
+        "index": 17,
+        "feature": "map-strict-undefined-this",
+        "checked": 5,
+        "expected": [
+          0,
+          1,
+          -1,
+          3,
+          17
+        ],
+        "maxSteps": 351,
+        "collections": 0
+      },
+      {
+        "index": 18,
+        "feature": "map-mutation-snapshot",
+        "checked": 5,
+        "expected": [
+          "3:v1:hole:v0:4",
+          "3:v1:hole:v1:4",
+          "3:v1:hole:v-1:4",
+          "3:v1:hole:v3:4",
+          "3:v1:hole:v17:4"
+        ],
+        "maxSteps": 994,
+        "collections": 0
+      },
+      {
+        "index": 19,
+        "feature": "map-inherited-index",
+        "checked": 5,
+        "expected": [
+          "3:v3:v1:hole",
+          "3:v3:v2:hole",
+          "3:v3:v0:hole",
+          "3:v3:v4:hole",
+          "3:v3:v18:hole"
+        ],
+        "maxSteps": 895,
+        "collections": 0
+      },
+      {
+        "index": 20,
+        "feature": "map-string-boxing",
+        "checked": 5,
+        "expected": [
+          "2:va0object:vb1object",
+          "2:va0object:vb1object",
+          "2:va0object:vb1object",
+          "2:va0object:vb1object",
+          "2:va0object:vb1object"
+        ],
+        "maxSteps": 849,
+        "collections": 0
+      },
+      {
+        "index": 21,
+        "feature": "map-creates-own-property-bypassing-setter",
+        "checked": 5,
+        "expected": [
+          "0:1:true",
+          "0:2:true",
+          "0:0:true",
+          "0:4:true",
+          "0:18:true"
+        ],
+        "maxSteps": 838,
+        "collections": 0
+      },
+      {
+        "index": 22,
+        "feature": "map-constructor-get-after-callback-validation",
+        "checked": 5,
+        "expected": [
+          "Tcm:0",
+          "Tcm:1",
+          "Tcm:-1",
+          "Tcm:3",
+          "Tcm:17"
+        ],
+        "maxSteps": 809,
+        "collections": 0
+      },
+      {
+        "index": 23,
+        "feature": "map-length-range-before-element-get",
+        "checked": 5,
+        "expected": [
+          "R",
+          "R",
+          "R",
+          "R",
+          "R"
+        ],
+        "maxSteps": 136,
+        "collections": 0
+      },
+      {
+        "index": 24,
+        "feature": "map-length-and-callback-validation-order",
+        "checked": 5,
+        "expected": [
+          "lnT",
+          "lnT",
+          "lnT",
+          "lnT",
+          "lnT"
+        ],
+        "maxSteps": 336,
+        "collections": 0
+      },
+      {
+        "index": 25,
+        "feature": "map-callback-abrupt",
+        "checked": 5,
+        "expected": [
+          "12:0",
+          "12:1",
+          "12:-1",
+          "12:3",
+          "12:17"
+        ],
+        "maxSteps": 628,
+        "collections": 0
+      },
+      {
+        "index": 26,
+        "feature": "filter-compacts-holes",
+        "checked": 5,
+        "expected": [
+          "2:v0:v4",
+          "2:v1:v4",
+          "2:v-1:v4",
+          "2:v3:v4",
+          "2:v17:v4"
+        ],
+        "maxSteps": 909,
+        "collections": 0
+      },
+      {
+        "index": 27,
+        "feature": "filter-preserves-original-value-before-callback-mutation",
+        "checked": 5,
+        "expected": [
+          "2:v0:v2:9",
+          "2:v1:v2:9",
+          "2:v-1:v2:9",
+          "2:v3:v2:9",
+          "2:v17:v2:9"
+        ],
+        "maxSteps": 955,
+        "collections": 0
+      },
+      {
+        "index": 28,
+        "feature": "filter-visits-added-inherited-index",
+        "checked": 5,
+        "expected": [
+          "2:v1:v0",
+          "2:v1:v1",
+          "2:v1:v-1",
+          "2:v1:v3",
+          "2:v1:v17"
+        ],
+        "maxSteps": 890,
+        "collections": 0
+      },
+      {
+        "index": 29,
+        "feature": "filter-this-arg-truthiness",
+        "checked": 5,
+        "expected": [
+          "1:v2",
+          "1:v2",
+          "1:v2",
+          "1:v2",
+          "1:v2"
+        ],
+        "maxSteps": 628,
+        "collections": 0
+      },
+      {
+        "index": 30,
+        "feature": "filter-boxed-string",
+        "checked": 5,
+        "expected": [
+          "2:va:vc",
+          "2:va:vc",
+          "2:va:vc",
+          "2:va:vc",
+          "2:va:vc"
+        ],
+        "maxSteps": 778,
+        "collections": 0
+      },
+      {
+        "index": 31,
+        "feature": "filter-array-constructor-read",
+        "checked": 5,
+        "expected": [
+          "cf:0",
+          "cf:1",
+          "cf:-1",
+          "cf:3",
+          "cf:17"
+        ],
+        "maxSteps": 619,
+        "collections": 0
+      },
+      {
+        "index": 32,
+        "feature": "slice-holes-negative-indices",
+        "checked": 5,
+        "expected": [
+          "3:v0:hole:v3",
+          "3:v1:hole:v3",
+          "3:v-1:hole:v3",
+          "3:v3:hole:v3",
+          "3:v17:hole:v3"
+        ],
+        "maxSteps": 1100,
+        "collections": 0
+      },
+      {
+        "index": 33,
+        "feature": "slice-inherited-index",
+        "checked": 5,
+        "expected": [
+          "3:v1:v0:hole",
+          "3:v1:v1:hole",
+          "3:v1:v-1:hole",
+          "3:v1:v3:hole",
+          "3:v1:v17:hole"
+        ],
+        "maxSteps": 982,
+        "collections": 0
+      },
+      {
+        "index": 34,
+        "feature": "slice-string-boxing",
+        "checked": 5,
+        "expected": [
+          "2:vb:vc",
+          "2:vb:vc",
+          "2:vb:vc",
+          "2:vb:vc",
+          "2:vb:vc"
+        ],
+        "maxSteps": 884,
+        "collections": 0
+      },
+      {
+        "index": 35,
+        "feature": "slice-nan-infinity-fractions",
+        "checked": 5,
+        "expected": [
+          "1:v0|3:v0:v2:v3|0",
+          "1:v1|3:v1:v2:v3|0",
+          "1:v-1|3:v-1:v2:v3|0",
+          "1:v3|3:v3:v2:v3|0",
+          "1:v17|3:v17:v2:v3|0"
+        ],
+        "maxSteps": 2418,
+        "collections": 1
+      },
+      {
+        "index": 36,
+        "feature": "slice-coercion-before-constructor",
+        "checked": 5,
+        "expected": [
+          "sec:0",
+          "sec:1",
+          "sec:-1",
+          "sec:3",
+          "sec:17"
+        ],
+        "maxSteps": 1054,
+        "collections": 0
+      },
+      {
+        "index": 37,
+        "feature": "slice-length-snapshot-before-coercion",
+        "checked": 5,
+        "expected": [
+          "3:v0:hole:hole",
+          "3:v1:hole:hole",
+          "3:v-1:hole:hole",
+          "3:v3:hole:hole",
+          "3:v17:hole:hole"
+        ],
+        "maxSteps": 841,
+        "collections": 0
+      },
+      {
+        "index": 38,
+        "feature": "slice-high-index-short-span",
+        "checked": 5,
+        "expected": [
+          "2:hole:v0",
+          "2:hole:v1",
+          "2:hole:v-1",
+          "2:hole:v3",
+          "2:hole:v17"
+        ],
+        "maxSteps": 879,
+        "collections": 0
+      },
+      {
+        "index": 39,
+        "feature": "slice-count-range-error",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 226,
+        "collections": 0
+      },
+      {
+        "index": 40,
+        "feature": "slice-custom-constructor-primitive-typeerror",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 328,
+        "collections": 0
+      },
+      {
+        "index": 41,
+        "feature": "methods-nullish-receiver-typeerror",
+        "checked": 5,
+        "expected": [
+          "TTTTT",
+          "TTTTT",
+          "TTTTT",
+          "TTTTT",
+          "TTTTT"
+        ],
+        "maxSteps": 306,
+        "collections": 0
+      }
+    ],
+    "gaps": [
+      "Array species: only intrinsic Array and undefined constructors are admitted. Custom constructors exit Unsupported after the specified constructor read. Symbol.species must be integrated before admitting symbol-bearing constructors.",
+      "concat is not provided until Symbol.isConcatSpreadable and Symbol.species are implemented.",
+      "Symbols/BigInt conversion and custom @@toPrimitive follow explicit existing runtime limits.",
+      "Cyclic join recursion is subject to explicit runtime frame/resource limits; no cycle-elision extension is claimed.",
+      "Guest string, heap, frame, instruction and array resource bounds still apply. No CPU replay."
+    ],
+    "nativeReference": "Fresh isolated iframe per program/input; no host guest execution in the GPU path."
+  }
+}

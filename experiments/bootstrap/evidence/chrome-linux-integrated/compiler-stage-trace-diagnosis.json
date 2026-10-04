@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "diagnosticOnly": true,
+  "guestProgramsExecuted": 0,
+  "environment": {
+    "date": "2026-10-04T03:03:06.831Z",
+    "browser": "149.0.7827.55",
+    "adapter": {
+      "vendor": "intel",
+      "architecture": "gen-9",
+      "device": "",
+      "description": "",
+      "isFallbackAdapter": false,
+      "smokeValue": 42
+    },
+    "args": [
+      "--enable-unsafe-webgpu",
+      "--use-angle=vulkan",
+      "--enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan",
+      "--disable-vulkan-surface",
+      "--disable-gpu-watchdog"
+    ]
+  },
+  "rawTrace": {
+    "remotePath": "/tmp/lanes-chrome-aXfN8H/results-trace-dispatch/dawn-trace-events.jsonl",
+    "sha256": "511c720a6557eb4cc043dcbe055afc4f03c74f7b6d9475883d60f9de755a8763",
+    "events": 299028
+  },
+  "traceCompletion": {
+    "dataLossOccurred": false
+  },
+  "shaderBundle": {
+    "remotePath": "/tmp/lanes-chrome-aXfN8H/browser-shader-compile.js",
+    "sha256": "8465ab03373b18c390afce79cc06f8930b98ef56ec207186773bf496ba8dd2cf"
+  },
+  "runner": {
+    "remotePath": "/tmp/lanes-chrome-aXfN8H/chrome-trace.mjs",
+    "sha256": "299856ea9b7d887b4cfd61820747c3b6f8f123ae34232b71a74b31ccbad7d768"
+  },
+  "highLevelSpans": [
+    {
+      "args": {
+        "label": "None"
+      },
+      "cat": "disabled-by-default-gpu.dawn",
+      "dur": 94,
+      "name": "DeviceBase::APICreateShaderModule",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 94,
+      "tid": 761205,
+      "ts": 1527656195278,
+      "tts": 466847
+    },
+    {
+      "args": {
+        "label": "None"
+      },
+      "cat": "disabled-by-default-gpu.dawn",
+      "dur": 24,
+      "name": "DeviceBase::APICreateComputePipelineAsync",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 24,
+      "tid": 761205,
+      "ts": 1527656195377,
+      "tts": 466944
+    },
+    {
+      "args": {},
+      "cat": "toplevel",
+      "dur": 911,
+      "name": "DawnPlatformImpl::RunWorkerTask",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 906,
+      "tid": 761245,
+      "ts": 1527656195481,
+      "tts": 1225
+    },
+    {
+      "args": {
+        "label": "None"
+      },
+      "cat": "disabled-by-default-gpu.dawn",
+      "dur": 901,
+      "name": "CreatePipelineAsyncEvent::InitializeImpl",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 898,
+      "tid": 761245,
+      "ts": 1527656195486,
+      "tts": 1229
+    },
+    {
+      "args": {},
+      "cat": "disabled-by-default-gpu.dawn",
+      "dur": 324,
+      "name": "ShaderModuleVk::GetHandleAndSpirv",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 321,
+      "tid": 761245,
+      "ts": 1527656195490,
+      "tts": 1233
+    },
+    {
+      "args": {},
+      "cat": "disabled-by-default-gpu.dawn",
+      "dur": 185,
+      "name": "tint::spirv::writer::Generate()",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 186,
+      "tid": 761245,
+      "ts": 1527656195499,
+      "tts": 1241
+    },
+    {
+      "args": {},
+      "cat": "disabled-by-default-gpu.dawn",
+      "dur": 6,
+      "name": "vkCreateShaderModule",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 5,
+      "tid": 761245,
+      "ts": 1527656195795,
+      "tts": 1537
+    },
+    {
+      "args": {
+        "label": "None"
+      },
+      "cat": "disabled-by-default-gpu.dawn",
+      "dur": 143019,
+      "name": "DeviceBase::APICreateShaderModule",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 142989,
+      "tid": 761205,
+      "ts": 1527656204293,
+      "tts": 467278
+    },
+    {
+      "args": {
+        "label": "None"
+      },
+      "cat": "disabled-by-default-gpu.dawn",
+      "dur": 74,
+      "name": "DeviceBase::APICreateComputePipelineAsync",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 72,
+      "tid": 761205,
+      "ts": 1527656347876,
+      "tts": 610395
+    },
+    {
+      "args": {},
+      "cat": "toplevel",
+      "name": "DawnPlatformImpl::RunWorkerTask",
+      "ph": "B",
+      "pid": 761205,
+      "tid": 761245,
+      "ts": 1527656347988
+    },
+    {
+      "args": {
+        "label": "None"
+      },
+      "cat": "disabled-by-default-gpu.dawn",
+      "name": "CreatePipelineAsyncEvent::InitializeImpl",
+      "ph": "B",
+      "pid": 761205,
+      "tid": 761245,
+      "ts": 1527656347993
+    },
+    {
+      "args": {},
+      "cat": "disabled-by-default-gpu.dawn",
+      "dur": 2280154,
+      "name": "ShaderModuleVk::GetHandleAndSpirv",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 2279990,
+      "tid": 761245,
+      "ts": 1527656347998,
+      "tts": 2157
+    },
+    {
+      "args": {},
+      "cat": "disabled-by-default-gpu.dawn",
+      "dur": 352118,
+      "name": "tint::spirv::writer::Generate()",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 352114,
+      "tid": 761245,
+      "ts": 1527656348039,
+      "tts": 2197
+    },
+    {
+      "args": {},
+      "cat": "disabled-by-default-gpu.dawn",
+      "dur": 634,
+      "name": "vkCreateShaderModule",
+      "ph": "X",
+      "pid": 761205,
+      "tdur": 616,
+      "tid": 761245,
+      "ts": 1527658619989,
+      "tts": 2274002
+    }
+  ],
+  "inference": {
+    "established": [
+      "Runtime shader Tint SPIRV generation completed in352.118ms.",
+      "Runtime vkCreateShaderModule completed in0.634ms.",
+      "Runtime ShaderModuleVk::GetHandleAndSpirv completed in2280.154ms.",
+      "Runtime worker and CreatePipelineAsyncEvent::InitializeImpl remained incomplete when GPU process exited133."
+    ],
+    "likely": "Allocation exhaustion occurs during downstream pipeline initialization, after Tint/SPIRV generation and Vulkan shader-module creation; Vulkan pipeline driver compilation is the leading suspect.",
+    "notEstablished": [
+      "No symbolized stack identifies the exact downstream allocating function.",
+      "The trace does not qualify guest execution or establish a regression: the older baseline also fails this Chrome configuration."
+    ]
+  },
+  "sourceRevision": {
+    "chromium": "149.0.7827.55",
+    "dawn": "1815a06195d9c74ac737a96f87c05111926e04f8"
+  },
+  "sourceUrls": [
+    "https://dawn.googlesource.com/dawn/+/1815a06195d9c74ac737a96f87c05111926e04f8/src/dawn/native/vulkan/ShaderModuleVk.cpp",
+    "https://dawn.googlesource.com/dawn/+/1815a06195d9c74ac737a96f87c05111926e04f8/src/dawn/native/vulkan/ComputePipelineVk.cpp",
+    "https://github.com/chromium/chromium/blob/149.0.7827.55/gpu/command_buffer/service/dawn_platform.cc#L234"
+  ]
+}

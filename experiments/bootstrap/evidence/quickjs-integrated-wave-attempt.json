@@ -1,0 +1,14 @@
+{
+  "recordedAt": "2026-10-04T00:04:46.150868+00:00",
+  "status": "verification failed before any GPU report",
+  "candidate": "/tmp/lanes-stdlib-generator-candidate.tgz",
+  "sha256": "84dafe8539bf191bd5e06550b7634ce2748e7fa18d819c35cfc4786c6efd6d2e",
+  "page": "phase6-review",
+  "lastProgress": "protocol-review-builtin-function-object-rhs",
+  "observations": [
+    "Metal compiler initially active at approximately 100% CPU",
+    "Safari WebDriver request timed out; final session-delete request also timed out",
+    "No guest execution result returned; cannot infer correctness or exact stall stage"
+  ],
+  "nextAction": "Instrument WGSL validation versus Metal pipeline compilation; consolidate repeated constructor dispatch"
+}

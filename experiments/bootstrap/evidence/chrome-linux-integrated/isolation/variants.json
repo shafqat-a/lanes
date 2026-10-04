@@ -1,0 +1,53 @@
+{
+  "diagnosticOnly": true,
+  "guestProgramsExecuted": 0,
+  "createdAt": "2026-10-04T02:57:46.735Z",
+  "baselineSha256": "60f6594d603c73756e1d29fb7c9b8c65c39f06f6ae7d3ada7e631f35deaca0de",
+  "variants": [
+    {
+      "name": "baseline",
+      "omissions": [],
+      "shaderBytes": 339341,
+      "sha256": "60f6594d603c73756e1d29fb7c9b8c65c39f06f6ae7d3ada7e631f35deaca0de",
+      "page": "baseline/shader-compile.html"
+    },
+    {
+      "name": "no-pow",
+      "omissions": [
+        "pow"
+      ],
+      "shaderBytes": 339339,
+      "sha256": "ba325e22c6c05c568a2c0e0836dafea7473dbcaa6119e6fa5299548fdee894ef",
+      "page": "no-pow/shader-compile.html"
+    },
+    {
+      "name": "no-width",
+      "omissions": [
+        "width"
+      ],
+      "shaderBytes": 339317,
+      "sha256": "8cf350febb8d861123c1510899548747b253d0364ec62a8902fef60f4d8782ed",
+      "page": "no-width/shader-compile.html"
+    },
+    {
+      "name": "no-compaction",
+      "omissions": [
+        "collectionCompact"
+      ],
+      "shaderBytes": 339370,
+      "sha256": "9082609d1dee9cfa9be86aacf03d77ccf9c25abdc274e8e911bec6f100e4f379",
+      "page": "no-compaction/shader-compile.html"
+    },
+    {
+      "name": "combined",
+      "omissions": [
+        "pow",
+        "width",
+        "collectionCompact"
+      ],
+      "shaderBytes": 339344,
+      "sha256": "380b7680ce02c9ddb5cb4e1a9af2e25bdad92414249d050833950ca5bc412cf8",
+      "page": "combined/shader-compile.html"
+    }
+  ]
+}

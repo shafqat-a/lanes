@@ -1,0 +1,170 @@
+{
+  "date": "2026-10-04T15:27:50.530Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 49,
+    "checked": 106,
+    "negativeChecks": 1,
+    "resumptions": [
+      {
+        "name": "flatten:flatmap-callback-gc",
+        "runs": [
+          {
+            "budget": 31,
+            "steps": [
+              29040,
+              29040
+            ],
+            "collections": [
+              4,
+              4
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              29040,
+              29040
+            ],
+            "collections": [
+              4,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "name": "flatten:flat-depth-before-species",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              638,
+              638
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              638,
+              638
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "flatten:flatmap-callback-order",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              1869,
+              1869
+            ],
+            "collections": [
+              1,
+              1
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              1869,
+              1869
+            ],
+            "collections": [
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "name": "splice:ordinary",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              1349,
+              1349
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              1349,
+              1349
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "gcProbes": [
+      {
+        "name": "flatten:flatmap-callback-gc",
+        "runs": [
+          {
+            "budget": 31,
+            "steps": [
+              29040,
+              29040
+            ],
+            "collections": [
+              4,
+              4
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              29040,
+              29040
+            ],
+            "collections": [
+              4,
+              4
+            ]
+          }
+        ]
+      }
+    ],
+    "nativeReferenceDifferences": [],
+    "failures": []
+  }
+}

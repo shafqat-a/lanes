@@ -1,0 +1,32 @@
+// Non-writable global value properties are distinct from writable local or
+// parameter bindings with the same spelling. Cases use primitive boundaries.
+export const globalConstantCases = [
+  ...['undefined','NaN','Infinity'].flatMap(name => [
+    {feature:`${name}-sloppy-assignment`,input:17,expected:true,
+      source:`function f(x){const old=${name};const assigned=(${name}=x);return Object.is(${name},old)&&assigned===x;}`},
+    {feature:`${name}-strict-assignment`,input:17,expected:true,
+      source:`function f(x){"use strict";const old=${name};try{${name}=x;}catch(e){return e instanceof TypeError&&Object.is(${name},old);}return false;}`},
+    {feature:`${name}-nested-sloppy-capture`,input:17,expected:true,
+      source:`function f(x){const old=${name};function g(){${name}=x;}g();return Object.is(${name},old);}`},
+    {feature:`${name}-nested-strict-capture`,input:17,expected:true,
+      source:`function f(x){const old=${name};function g(){"use strict";${name}=x;}try{g();}catch(e){return e instanceof TypeError&&Object.is(${name},old);}return false;}`},
+    {feature:`${name}-local-shadow`,input:17,expected:18,
+      source:`function f(x){"use strict";let ${name}=1;function g(){${name}=x;}g();return ++${name};}`},
+    {feature:`${name}-parameter-shadow`,input:17,expected:18,
+      source:`function f(x){"use strict";function g(${name}){${name}=x;return ++${name};}return g(3);}`},
+    {feature:`${name}-strict-update`,input:17,expected:true,
+      source:`function f(x){"use strict";const old=${name};try{${name}++;}catch(e){return e instanceof TypeError&&Object.is(${name},old);}return false;}`},
+    {feature:`${name}-sloppy-compound`,input:17,expected:true,
+      source:`function f(x){const old=${name};${name}+=x;return Object.is(${name},old);}`},
+  ]),
+  {feature:'undefined-postfix',input:17,expected:true,
+    source:`function f(x){const old=undefined++;return old!==old&&undefined===void 0;}`},
+  {feature:'Infinity-compound-nan-result',input:17,expected:true,
+    source:`function f(x){const result=(Infinity-=Infinity);return result!==result&&Infinity===1/0;}`},
+  {feature:'undefined-direct-parameter-shadow',input:17,expected:18,
+    source:`function f(undefined){undefined+=1;return undefined;}`},
+  {feature:'global-capture-survives-gc',input:17,expected:true,
+    source:`function f(x){const old=NaN;let holder;for(let i=0;i<700;i++){holder={a:i,b:i+1};}NaN=x;return Object.is(NaN,old)&&holder.a===699;}`},
+  {feature:'strict-inherited-by-nested-function',input:17,expected:true,
+    source:`function f(x){"use strict";function g(){undefined=x;}try{g();}catch(e){return e instanceof TypeError&&undefined===void 0;}return false;}`},
+];

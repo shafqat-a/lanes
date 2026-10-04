@@ -1,0 +1,321 @@
+{
+  "date": "2026-10-03T21:14:53.529Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 48,
+    "checked": 236,
+    "resourceLimited": 1,
+    "resumptionDispatches": 999,
+    "elapsedMs": 2833,
+    "results": [
+      {
+        "feature": "json-stringify-primitives",
+        "checked": 5,
+        "maxSteps": 2215,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-omitted",
+        "checked": 5,
+        "maxSteps": 1167,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-top-undefined",
+        "checked": 5,
+        "maxSteps": 349,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-top-function",
+        "checked": 5,
+        "maxSteps": 372,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-keys",
+        "checked": 5,
+        "maxSteps": 1752,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-escape",
+        "checked": 5,
+        "maxSteps": 832,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-surrogates",
+        "checked": 5,
+        "maxSteps": 767,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-inherited-array",
+        "checked": 5,
+        "maxSteps": 1061,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-array-length-snapshot",
+        "checked": 5,
+        "maxSteps": 1367,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-object-keys-snapshot",
+        "checked": 5,
+        "maxSteps": 1200,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-tojson-key-this",
+        "checked": 5,
+        "maxSteps": 1088,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-callable-tojson",
+        "checked": 5,
+        "maxSteps": 938,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-noncallable-tojson",
+        "checked": 5,
+        "maxSteps": 1224,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-tojson-once",
+        "checked": 5,
+        "maxSteps": 1056,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-replacer-holder",
+        "checked": 5,
+        "maxSteps": 961,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-root-holder-prototype",
+        "checked": 5,
+        "maxSteps": 417,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-replacer-array-order",
+        "checked": 5,
+        "maxSteps": 2782,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-replacer-inherited",
+        "checked": 5,
+        "maxSteps": 1925,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-replacer-getters",
+        "checked": 5,
+        "maxSteps": 1961,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-pretty",
+        "checked": 5,
+        "maxSteps": 1894,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-space-truncate",
+        "checked": 5,
+        "maxSteps": 852,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-space-fraction",
+        "checked": 5,
+        "maxSteps": 881,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-space-nan",
+        "checked": 5,
+        "maxSteps": 843,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-space-infinity",
+        "checked": 5,
+        "maxSteps": 987,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-empty-pretty",
+        "checked": 5,
+        "maxSteps": 1570,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-cycle",
+        "checked": 5,
+        "maxSteps": 825,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-array-cycle",
+        "checked": 5,
+        "maxSteps": 854,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-shared-not-cycle",
+        "checked": 5,
+        "maxSteps": 2095,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-cycle-replaced",
+        "checked": 5,
+        "maxSteps": 928,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-throw-identity",
+        "checked": 5,
+        "maxSteps": 630,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-boxed",
+        "checked": 5,
+        "maxSteps": 1698,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-boxed-number-override",
+        "checked": 5,
+        "maxSteps": 668,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-boxed-boolean-override",
+        "checked": 5,
+        "maxSteps": 366,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-boxed-options",
+        "checked": 5,
+        "maxSteps": 1820,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-proto-name",
+        "checked": 5,
+        "maxSteps": 1576,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-enumerability-snapshot",
+        "checked": 5,
+        "maxSteps": 1502,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-replacer-before-space",
+        "checked": 5,
+        "maxSteps": 1850,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-tojson-replacer-order",
+        "checked": 5,
+        "maxSteps": 434,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-replacer-returns-function",
+        "checked": 5,
+        "maxSteps": 787,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-root-replacer-undefined",
+        "checked": 5,
+        "maxSteps": 358,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-replacer-array-not-for-arrays",
+        "checked": 5,
+        "maxSteps": 2033,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-throw-tojson-identity",
+        "checked": 5,
+        "maxSteps": 307,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-throw-replacer-identity",
+        "checked": 5,
+        "maxSteps": 712,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-json-global-keys",
+        "checked": 5,
+        "maxSteps": 84,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-fake-number-wrapper",
+        "checked": 5,
+        "maxSteps": 622,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-fake-boolean-wrapper",
+        "checked": 5,
+        "maxSteps": 622,
+        "collections": 0
+      },
+      {
+        "feature": "json-stringify-hidden",
+        "checked": 5,
+        "maxSteps": 1050,
+        "collections": 0
+      }
+    ],
+    "gaps": [
+      "Symbol and BigInt JSON rules use admitted primitive and wrapper operations; Proxy behavior depends on the runtime admission boundary. No host fallback.",
+      "JSON.rawJSON proposal is outside the ECMAScript 2025 target and is not implemented.",
+      "Guest text/heap/frame/instruction limits remain explicit engine resource completions; cycles specifically throw guest TypeError.",
+      "Number decimal formatting inherits the runtime ToString(Number) implementation and its explicit supported bounds."
+    ]
+  }
+}

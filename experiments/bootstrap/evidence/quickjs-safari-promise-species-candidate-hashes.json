@@ -1,0 +1,18 @@
+{
+  "archive": "/tmp/lanes-m1-promise-species-candidate.tgz",
+  "archiveSha256": "1113e03e28b77b93d067047b182478c2ccf18779f3c4c1ac654e8506ed679806",
+  "modules": {
+    "main": {
+      "sha256": "ee4a952c53d96f1c029f7b4ff46bc281fa7a7c082e2cb99733cb3f6ad2bac6c0",
+      "bytes": 220706
+    },
+    "call": {
+      "sha256": "95c8ca3b4449cff5e9ec54cdf0cde04ded77098f98c632783d3e006c1f289c1c",
+      "bytes": 104723
+    },
+    "native": {
+      "sha256": "bbd38b96da1114bf44df0a61bdef42c65ff9ddf7c08652d0fc6da33cde94751a",
+      "bytes": 158538
+    }
+  }
+}

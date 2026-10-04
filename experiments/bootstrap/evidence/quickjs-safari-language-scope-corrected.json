@@ -1,0 +1,308 @@
+{
+  "date": "2026-10-02T19:54:01.799Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "records": [
+      {
+        "feature": "tdz-let-read",
+        "status": "passed",
+        "source": "function f(x){try{const r=y+x;let y=1;return \"read:\"+r;}catch(e){return (e instanceof ReferenceError)+\":tdz\"+x;}}"
+      },
+      {
+        "feature": "tdz-closure-then-initialized",
+        "status": "passed",
+        "source": "function f(x){function g(){return v*2;}try{return \"early:\"+g();}catch(e){if(!(e instanceof ReferenceError))return \"wrong\";}let v=x;return g();}"
+      },
+      {
+        "feature": "tdz-typeof",
+        "status": "passed",
+        "source": "function f(x){try{return typeof z;}catch(e){return e instanceof ReferenceError?-x:x;}let z=0;}"
+      },
+      {
+        "feature": "tdz-let-write",
+        "status": "passed",
+        "source": "function f(x){try{w=x;let w=0;return \"set\";}catch(e){return e instanceof ReferenceError?x*2:-1;}}"
+      },
+      {
+        "feature": "const-assign-typeerror",
+        "status": "passed",
+        "source": "function f(x){const c=x;try{c=c+1;}catch(e){return (e instanceof TypeError)+\":\"+c;}return \"mutated\";}"
+      },
+      {
+        "feature": "const-assign-before-init-referenceerror",
+        "status": "passed",
+        "source": "function f(x){try{k=x;}catch(e){return (e instanceof ReferenceError?\"ref\":e instanceof TypeError?\"type\":\"other\")+x;}const k=1;return \"none\";}"
+      },
+      {
+        "feature": "for-let-per-iteration-closures",
+        "status": "passed",
+        "source": "function f(x){const a=[];for(let i=0;i<3;i++){a[i]=function(){return i*x;};}return a[0]()+\",\"+a[1]()+\",\"+a[2]();}"
+      },
+      {
+        "feature": "for-var-shared-binding",
+        "status": "passed",
+        "source": "function f(x){const a=[];for(var i=0;i<3;i++){a[i]=function(){return i*x;};}return a[0]()+\",\"+a[1]()+\",\"+a[2]();}"
+      },
+      {
+        "feature": "for-let-copy-before-increment",
+        "status": "passed",
+        "source": "function f(x){const a=[];let n=0;for(let i=0;i<6;i++){a[n++]=function(){return i;};i++;}return a[0]()+a[1]()*10+a[2]()*100+x;}"
+      },
+      {
+        "feature": "for-let-head-closure-not-iteration-copy",
+        "status": "passed",
+        "source": "function f(x){let g;for(let i=x,h=(g=function(){return i;});i<x+2;i++){if(i===x){i=i+10;}}return g();}"
+      },
+      {
+        "feature": "for-let-continue-per-iteration",
+        "status": "passed",
+        "source": "function f(x){const a=[];for(let i=0;i<3;i++){a[i]=function(){return i+x;};if(i<3)continue;}return a[0]()+\",\"+a[1]()+\",\"+a[2]();}"
+      },
+      {
+        "feature": "finally-return-overrides-throw",
+        "status": "passed",
+        "source": "function f(x){try{throw x;}finally{return \"fin\"+x;}}"
+      },
+      {
+        "feature": "finally-throw-overrides-return",
+        "status": "passed",
+        "source": "function f(x){try{try{return x;}finally{throw x*2;}}catch(e){return \"caught\"+e;}}"
+      },
+      {
+        "feature": "finally-normal-keeps-evaluated-return",
+        "status": "passed",
+        "source": "function f(x){let log=\"\";function g(){try{log+=\"t\";return log;}finally{log+=\"f\"+x;}}const r=g();return r+\":\"+log;}"
+      },
+      {
+        "feature": "finally-break-discards-throw",
+        "status": "passed",
+        "source": "function f(x){let n=0;for(;;){try{n=x;throw 1;}finally{n++;break;}}return n;}"
+      },
+      {
+        "feature": "nested-finally-order",
+        "status": "passed",
+        "source": "function f(x){let s=\"\";function g(){try{try{s+=\"a\";throw x;}catch(e){s+=\"c\"+e;return s;}finally{s+=\"f\";}}finally{s+=\"g\";}}const r=g();return r+\"|\"+s;}"
+      },
+      {
+        "feature": "sloppy-arguments-mapped",
+        "status": "passed",
+        "source": "function f(x){function g(a,b){arguments[0]=a*10;b=7;return a+\":\"+arguments[1]+\":\"+arguments.length;}return g(x,1,2);}"
+      },
+      {
+        "feature": "strict-arguments-unmapped",
+        "status": "passed",
+        "source": "function f(x){function g(a,b){\"use strict\";arguments[0]=a*10;b=7;return a+\":\"+arguments[1]+\":\"+arguments[0];}return g(x,1);}"
+      },
+      {
+        "feature": "sloppy-arguments-unpassed-not-mapped",
+        "status": "passed",
+        "source": "function f(x){function g(a,b){b=x;return arguments.length+\":\"+arguments[1]+\":\"+b;}return g(x);}"
+      },
+      {
+        "feature": "computed-key-number-string-same",
+        "status": "passed",
+        "source": "function f(x){const o={};o[x]=\"a\";o[\"\"+x]=o[\"\"+x]+\"b\";o[x*1.0]=o[x*1.0]+\"c\";return o[x]+\":\"+o[\"\"+x]+x;}"
+      },
+      {
+        "feature": "computed-key-noncanonical-strings",
+        "status": "passed",
+        "source": "function f(x){const o={[x]:x,[\"0\"+x]:x+1,[x+\".0\"]:x+2};return o[x]+\":\"+o[\"0\"+x]+\":\"+o[x+\".0\"]+\":\"+(o[x]===o[x+\".0\"]);}"
+      },
+      {
+        "status": "unsupported",
+        "feature": "computed-key-object-tostring-first",
+        "source": "function f(x){let log=\"\";const k={toString(){log+=\"s\";return \"k\"+x;},valueOf(){log+=\"v\";return 1;}};const o={[k]:x};return log+\":\"+o[\"k\"+x];}",
+        "error": "Unsupported runtime operation in lane 0, instruction 13; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "status": "unsupported",
+        "feature": "computed-key-object-valueof-fallback",
+        "source": "function f(x){let log=\"\";const k={toString(){log+=\"s\";return {};},valueOf(){log+=\"v\";return x;}};const o={};o[k]=x*3;return log+\":\"+o[x];}",
+        "error": "Unsupported runtime operation in lane 0, instruction 18; no CPU fallback",
+        "stage": "runtime"
+      },
+      {
+        "feature": "constructor-primitive-return-ignored",
+        "status": "passed",
+        "source": "function f(x){function C(v){this.v=v;return 42;}const o=new C(x);return typeof o+\":\"+o.v;}"
+      },
+      {
+        "feature": "constructor-object-return-used",
+        "status": "passed",
+        "source": "function f(x){const other={v:-x};function C(v){this.v=v;return other;}const o=new C(x);return (o===other)+\":\"+o.v;}"
+      },
+      {
+        "feature": "undefined-sloppy-assignment",
+        "status": "passed",
+        "source": "function f(x){const old=undefined;const assigned=(undefined=x);return Object.is(undefined,old)&&assigned===x;}"
+      },
+      {
+        "feature": "undefined-strict-assignment",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";const old=undefined;try{undefined=x;}catch(e){return e instanceof TypeError&&Object.is(undefined,old);}return false;}"
+      },
+      {
+        "feature": "undefined-nested-sloppy-capture",
+        "status": "passed",
+        "source": "function f(x){const old=undefined;function g(){undefined=x;}g();return Object.is(undefined,old);}"
+      },
+      {
+        "feature": "undefined-nested-strict-capture",
+        "status": "passed",
+        "source": "function f(x){const old=undefined;function g(){\"use strict\";undefined=x;}try{g();}catch(e){return e instanceof TypeError&&Object.is(undefined,old);}return false;}"
+      },
+      {
+        "feature": "undefined-local-shadow",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";let undefined=1;function g(){undefined=x;}g();return ++undefined;}"
+      },
+      {
+        "feature": "undefined-parameter-shadow",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";function g(undefined){undefined=x;return ++undefined;}return g(3);}"
+      },
+      {
+        "feature": "undefined-strict-update",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";const old=undefined;try{undefined++;}catch(e){return e instanceof TypeError&&Object.is(undefined,old);}return false;}"
+      },
+      {
+        "feature": "undefined-sloppy-compound",
+        "status": "passed",
+        "source": "function f(x){const old=undefined;undefined+=x;return Object.is(undefined,old);}"
+      },
+      {
+        "feature": "NaN-sloppy-assignment",
+        "status": "passed",
+        "source": "function f(x){const old=NaN;const assigned=(NaN=x);return Object.is(NaN,old)&&assigned===x;}"
+      },
+      {
+        "feature": "NaN-strict-assignment",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";const old=NaN;try{NaN=x;}catch(e){return e instanceof TypeError&&Object.is(NaN,old);}return false;}"
+      },
+      {
+        "feature": "NaN-nested-sloppy-capture",
+        "status": "passed",
+        "source": "function f(x){const old=NaN;function g(){NaN=x;}g();return Object.is(NaN,old);}"
+      },
+      {
+        "feature": "NaN-nested-strict-capture",
+        "status": "passed",
+        "source": "function f(x){const old=NaN;function g(){\"use strict\";NaN=x;}try{g();}catch(e){return e instanceof TypeError&&Object.is(NaN,old);}return false;}"
+      },
+      {
+        "feature": "NaN-local-shadow",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";let NaN=1;function g(){NaN=x;}g();return ++NaN;}"
+      },
+      {
+        "feature": "NaN-parameter-shadow",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";function g(NaN){NaN=x;return ++NaN;}return g(3);}"
+      },
+      {
+        "feature": "NaN-strict-update",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";const old=NaN;try{NaN++;}catch(e){return e instanceof TypeError&&Object.is(NaN,old);}return false;}"
+      },
+      {
+        "feature": "NaN-sloppy-compound",
+        "status": "passed",
+        "source": "function f(x){const old=NaN;NaN+=x;return Object.is(NaN,old);}"
+      },
+      {
+        "feature": "Infinity-sloppy-assignment",
+        "status": "passed",
+        "source": "function f(x){const old=Infinity;const assigned=(Infinity=x);return Object.is(Infinity,old)&&assigned===x;}"
+      },
+      {
+        "feature": "Infinity-strict-assignment",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";const old=Infinity;try{Infinity=x;}catch(e){return e instanceof TypeError&&Object.is(Infinity,old);}return false;}"
+      },
+      {
+        "feature": "Infinity-nested-sloppy-capture",
+        "status": "passed",
+        "source": "function f(x){const old=Infinity;function g(){Infinity=x;}g();return Object.is(Infinity,old);}"
+      },
+      {
+        "feature": "Infinity-nested-strict-capture",
+        "status": "passed",
+        "source": "function f(x){const old=Infinity;function g(){\"use strict\";Infinity=x;}try{g();}catch(e){return e instanceof TypeError&&Object.is(Infinity,old);}return false;}"
+      },
+      {
+        "feature": "Infinity-local-shadow",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";let Infinity=1;function g(){Infinity=x;}g();return ++Infinity;}"
+      },
+      {
+        "feature": "Infinity-parameter-shadow",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";function g(Infinity){Infinity=x;return ++Infinity;}return g(3);}"
+      },
+      {
+        "feature": "Infinity-strict-update",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";const old=Infinity;try{Infinity++;}catch(e){return e instanceof TypeError&&Object.is(Infinity,old);}return false;}"
+      },
+      {
+        "feature": "Infinity-sloppy-compound",
+        "status": "passed",
+        "source": "function f(x){const old=Infinity;Infinity+=x;return Object.is(Infinity,old);}"
+      },
+      {
+        "feature": "undefined-postfix",
+        "status": "passed",
+        "source": "function f(x){const old=undefined++;return old!==old&&undefined===void 0;}"
+      },
+      {
+        "feature": "Infinity-compound-nan-result",
+        "status": "passed",
+        "source": "function f(x){const result=(Infinity-=Infinity);return result!==result&&Infinity===1/0;}"
+      },
+      {
+        "feature": "undefined-direct-parameter-shadow",
+        "status": "passed",
+        "source": "function f(undefined){undefined+=1;return undefined;}"
+      },
+      {
+        "feature": "global-capture-survives-gc",
+        "status": "passed",
+        "source": "function f(x){const old=NaN;let holder;for(let i=0;i<700;i++){holder={a:i,b:i+1};}NaN=x;return Object.is(NaN,old)&&holder.a===699;}"
+      },
+      {
+        "feature": "strict-inherited-by-nested-function",
+        "status": "passed",
+        "source": "function f(x){\"use strict\";function g(){undefined=x;}try{g();}catch(e){return e instanceof TypeError&&undefined===void 0;}return false;}"
+      }
+    ],
+    "backend": "gpu",
+    "diagnostic": true,
+    "counts": {
+      "failed": 0,
+      "passed": 52,
+      "unsupported": 2
+    }
+  }
+}

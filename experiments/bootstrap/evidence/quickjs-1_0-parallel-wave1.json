@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-04T15:37:45.735765+00:00",
+  "status": "first parallel implementation wave verified: Script and Array GPU suites plus main regression passed; dynamic compilation service host-tested only",
+  "candidate": "quickjs-safari-newwave-candidate-hashes.json",
+  "baseline": "quickjs-m1-resumed-integration.json",
+  "platform": "Apple M1 / Safari 26.4",
+  "cpuGuestExecution": false,
+  "tracks": {
+    "scripts": {
+      "status": "fresh-realm Script API implemented and GPU verified",
+      "programs": 36,
+      "checked": 144,
+      "negativeChecks": 8,
+      "evidence": "quickjs-safari-newwave-script-entry.json",
+      "remaining": [
+        "persistent realms",
+        "module linking/evaluation",
+        "dynamic access to global lexical bindings"
+      ]
+    },
+    "arrays": {
+      "status": "flat, flatMap, splice implemented and GPU verified",
+      "programs": 49,
+      "checked": 106,
+      "negativeChecks": 1,
+      "evidence": "quickjs-safari-newwave-array-completion.json",
+      "hostDirectedChecks": 98,
+      "seededDifferentials": 600
+    },
+    "dynamicCompilation": {
+      "status": "compile-only service implemented; GPU Function still Unsupported",
+      "hostTests": 13,
+      "contract": "../../quickjs-runtime/dynamic-compilation-integration.md",
+      "remaining": [
+        "append-only code/image linking",
+        "global lexical record access",
+        "GPU suspension and response publication"
+      ]
+    }
+  },
+  "remainingVerification": [],
+  "fullECMAScript2025": false,
+  "releaseClaim": false,
+  "mainRegression": {
+    "programs": 1209,
+    "checked": 10881,
+    "negativeChecks": 238,
+    "allResumptionsPassed": true,
+    "evidence": "quickjs-safari-newwave-main.json"
+  },
+  "compile": {
+    "mainMs": 10604,
+    "callMs": 4542,
+    "nativeMs": 23385,
+    "evidence": "quickjs-safari-newwave-shader-compile.json",
+    "note": "Single observed compile sample, not a speedup claim"
+  },
+  "verificationScope": "This wave: focused Script/Array GPU suites and full main regression; prior full stdlib/Promise passes remain tied to the baseline candidate, not rerun here.",
+  "remaining1_0Work": "Persistent realms/modules, guest dynamic code integration, missing builtin families, scalable resources/value transfer, fallback, complete ES2025 conformance and release packaging."
+}

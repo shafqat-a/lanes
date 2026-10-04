@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-04T03:05:31.221Z",
+  "diagnosticOnly": true,
+  "guestProgramsExecuted": 0,
+  "outcome": "aborted-resource-pressure",
+  "stage": "runtime-compute-pipeline",
+  "controlPipelineAndWGSLValidationPassed": true,
+  "shaderBytes": 340013,
+  "shaderSHA256": "d8a8dbc7e7e1e64380e0b2633d724fd9903b34b1c47c868fe25c75ba5caa209f",
+  "archive": "/tmp/lanes-m1-linear-compact-candidate.tgz",
+  "remoteDirectory": "/tmp/lanes-gpu-8KyZh0",
+  "ownedPids": {
+    "http": 2335,
+    "driver": 2336,
+    "runner": 2347,
+    "compiler": 2351
+  },
+  "compilerHostLaunchTime": "2026-10-04 09:02:15 +0600",
+  "compilerSampleHostTime": "2026-10-04 09:03:21 +0600",
+  "observations": [
+    {
+      "elapsedSeconds": 30,
+      "compilerPhysicalFootprintMB": 637.7,
+      "systemSwapUsedMB": 1162.88
+    },
+    {
+      "elapsedSeconds": 54,
+      "compilerPhysicalFootprintMB": 703.9,
+      "systemSwapUsedMB": 2725.5
+    },
+    {
+      "elapsedSeconds": 65,
+      "compilerPhysicalFootprintMB": 735.4,
+      "compilerPeakPhysicalFootprintMB": 738.8,
+      "systemSwapUsedMB": 3434.19
+    }
+  ],
+  "systemSwapBaselineMB": 344.56,
+  "systemSwapLastObservedBeforeCompilerExitMB": 5734.31,
+  "systemSwapAfterCleanupMB": 2966.56,
+  "cancellation": {
+    "reason": "rapid system swap growth",
+    "runner": "SIGTERM; own WebDriver session cleaned successfully",
+    "compiler": "SIGTERM did not stop compilation; targeted SIGKILL2351",
+    "cleanupVerified": true,
+    "driverReady": true,
+    "unrelatedProcessesKilled": false
+  },
+  "sample": "quickjs-m1-metal-shared-dispatch-sample.txt",
+  "limitations": [
+    "System swap is global, not attributed exclusively to compiler.",
+    "Physical footprint, resident size, virtual allocations and swap are distinct metrics.",
+    "No focused semantic fixtures ran because pipeline compilation did not complete."
+  ]
+}

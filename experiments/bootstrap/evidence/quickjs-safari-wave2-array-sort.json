@@ -1,0 +1,850 @@
+{
+  "date": "2026-10-03T18:21:51.521Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "compiler": "QuickJS/Wasm",
+    "programs": 58,
+    "checked": 286,
+    "resourceChecks": 1,
+    "inputs": [
+      0,
+      1,
+      -1,
+      3,
+      17
+    ],
+    "methods": [
+      "sort",
+      "toSorted"
+    ],
+    "resumptionDispatches": 2008,
+    "resumptionExpected": "3:4:5:3:true",
+    "elapsedMs": 6157,
+    "results": [
+      {
+        "index": 0,
+        "feature": "sort: numeric order",
+        "checked": 5,
+        "expected": [
+          "-1,0,1,2|true",
+          "0,1,2,3|true",
+          "-2,-1,0,1|true",
+          "2,3,4,5|true",
+          "16,17,18,19|true"
+        ],
+        "maxSteps": 1531,
+        "collections": 0
+      },
+      {
+        "index": 1,
+        "feature": "sort: default lexicographic",
+        "checked": 5,
+        "expected": [
+          "0,1,10,2",
+          "1,1,10,2",
+          "-1,1,10,2",
+          "1,10,2,3",
+          "1,10,17,2"
+        ],
+        "maxSteps": 1522,
+        "collections": 0
+      },
+      {
+        "index": 2,
+        "feature": "sort: stable equality and NaN",
+        "checked": 5,
+        "expected": [
+          "bdac:0,2,1",
+          "bdac:1,2,1",
+          "bdac:-1,2,1",
+          "bdac:3,2,1",
+          "bdac:17,2,1"
+        ],
+        "maxSteps": 3341,
+        "collections": 1
+      },
+      {
+        "index": 3,
+        "feature": "sort: holes undefined dense copy",
+        "checked": 5,
+        "expected": [
+          "number:0;number:1;undefined:undefined;hole;hole;",
+          "number:1;number:1;undefined:undefined;hole;hole;",
+          "number:-1;number:1;undefined:undefined;hole;hole;",
+          "number:1;number:3;undefined:undefined;hole;hole;",
+          "number:1;number:17;undefined:undefined;hole;hole;"
+        ],
+        "maxSteps": 1223,
+        "collections": 0
+      },
+      {
+        "index": 4,
+        "feature": "sort: undefined bypasses comparator",
+        "checked": 5,
+        "expected": [
+          "0,1,,:false",
+          "1,1,,:false",
+          "-1,1,,:false",
+          "1,3,,:false",
+          "1,17,,:false"
+        ],
+        "maxSteps": 1052,
+        "collections": 0
+      },
+      {
+        "index": 5,
+        "feature": "sort: comparator result ToNumber",
+        "checked": 5,
+        "expected": [
+          "0,1:true",
+          "1,2:true",
+          "-1,0:true",
+          "3,4:true",
+          "17,18:true"
+        ],
+        "maxSteps": 887,
+        "collections": 0
+      },
+      {
+        "index": 6,
+        "feature": "sort: strict callback this and arity",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 391,
+        "collections": 0
+      },
+      {
+        "index": 7,
+        "feature": "sort: generic inherited indexed property",
+        "checked": 5,
+        "expected": [
+          "0:2:undefined:false:true",
+          "1:3:undefined:false:true",
+          "-1:1:undefined:false:true",
+          "3:5:undefined:false:true",
+          "17:19:undefined:false:true"
+        ],
+        "maxSteps": 889,
+        "collections": 0
+      },
+      {
+        "index": 8,
+        "feature": "sort: snapshot before comparison",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 419,
+        "collections": 0
+      },
+      {
+        "index": 9,
+        "feature": "sort: comparator validation before length",
+        "checked": 5,
+        "expected": [
+          "true:0",
+          "true:0",
+          "true:0",
+          "true:0",
+          "true:0"
+        ],
+        "maxSteps": 290,
+        "collections": 0
+      },
+      {
+        "index": 10,
+        "feature": "sort: getter changes later presence",
+        "checked": 5,
+        "expected": [
+          "2:0:undefined:false",
+          "2:1:undefined:false",
+          "2:-1:undefined:false",
+          "2:3:undefined:false",
+          "2:17:undefined:false"
+        ],
+        "maxSteps": 965,
+        "collections": 0
+      },
+      {
+        "index": 11,
+        "feature": "sort: comparator throws before writes",
+        "checked": 5,
+        "expected": [
+          "17:1,0",
+          "17:2,1",
+          "17:0,-1",
+          "17:4,3",
+          "17:18,17"
+        ],
+        "maxSteps": 612,
+        "collections": 0
+      },
+      {
+        "index": 12,
+        "feature": "sort: comparator changes length snapshot",
+        "checked": 5,
+        "expected": [
+          "0,1,2:3",
+          "1,2,3:3",
+          "-1,0,1:3",
+          "3,4,5:3",
+          "17,18,19:3"
+        ],
+        "maxSteps": 1182,
+        "collections": 0
+      },
+      {
+        "index": 13,
+        "feature": "sort: default ToString hint",
+        "checked": 5,
+        "expected": [
+          "true:true:true",
+          "true:true:true",
+          "true:true:true",
+          "true:true:true",
+          "true:true:true"
+        ],
+        "maxSteps": 698,
+        "collections": 0
+      },
+      {
+        "index": 14,
+        "feature": "sort: invalid comparator zero length",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 116,
+        "collections": 0
+      },
+      {
+        "index": 15,
+        "feature": "sort: noncallable class comparator invoked",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 226,
+        "collections": 0
+      },
+      {
+        "index": 16,
+        "feature": "sort: default UTF16 order",
+        "checked": 5,
+        "expected": [
+          "97,55296,57343,57344",
+          "97,55296,57343,57344",
+          "97,55296,57343,57344",
+          "97,55296,57343,57344",
+          "97,55296,57343,57344"
+        ],
+        "maxSteps": 2384,
+        "collections": 0
+      },
+      {
+        "index": 17,
+        "feature": "sort: signed zero stability",
+        "checked": 5,
+        "expected": [
+          "-+-+",
+          "-+-+",
+          "-+-+",
+          "-+-+",
+          "-+-+"
+        ],
+        "maxSteps": 2158,
+        "collections": 0
+      },
+      {
+        "index": 18,
+        "feature": "sort: public metadata",
+        "checked": 5,
+        "expected": [
+          "sort:1",
+          "sort:1",
+          "sort:1",
+          "sort:1",
+          "sort:1"
+        ],
+        "maxSteps": 89,
+        "collections": 0
+      },
+      {
+        "index": 19,
+        "feature": "toSorted: numeric order",
+        "checked": 5,
+        "expected": [
+          "-1,0,1,2|false",
+          "0,1,2,3|false",
+          "-2,-1,0,1|false",
+          "2,3,4,5|false",
+          "16,17,18,19|false"
+        ],
+        "maxSteps": 2186,
+        "collections": 1
+      },
+      {
+        "index": 20,
+        "feature": "toSorted: default lexicographic",
+        "checked": 5,
+        "expected": [
+          "0,1,10,2",
+          "1,1,10,2",
+          "-1,1,10,2",
+          "1,10,2,3",
+          "1,10,17,2"
+        ],
+        "maxSteps": 2177,
+        "collections": 0
+      },
+      {
+        "index": 21,
+        "feature": "toSorted: stable equality and NaN",
+        "checked": 5,
+        "expected": [
+          "bdac:0,2,1",
+          "bdac:1,2,1",
+          "bdac:-1,2,1",
+          "bdac:3,2,1",
+          "bdac:17,2,1"
+        ],
+        "maxSteps": 4487,
+        "collections": 2
+      },
+      {
+        "index": 22,
+        "feature": "toSorted: holes undefined dense copy",
+        "checked": 5,
+        "expected": [
+          "number:0;number:1;undefined:undefined;undefined:undefined;undefined:undefined;",
+          "number:1;number:1;undefined:undefined;undefined:undefined;undefined:undefined;",
+          "number:-1;number:1;undefined:undefined;undefined:undefined;undefined:undefined;",
+          "number:1;number:3;undefined:undefined;undefined:undefined;undefined:undefined;",
+          "number:1;number:17;undefined:undefined;undefined:undefined;undefined:undefined;"
+        ],
+        "maxSteps": 2433,
+        "collections": 0
+      },
+      {
+        "index": 23,
+        "feature": "toSorted: undefined bypasses comparator",
+        "checked": 5,
+        "expected": [
+          "0,1,,:false",
+          "1,1,,:false",
+          "-1,1,,:false",
+          "1,3,,:false",
+          "1,17,,:false"
+        ],
+        "maxSteps": 1707,
+        "collections": 0
+      },
+      {
+        "index": 24,
+        "feature": "toSorted: comparator result ToNumber",
+        "checked": 5,
+        "expected": [
+          "0,1:true",
+          "1,2:true",
+          "-1,0:true",
+          "3,4:true",
+          "17,18:true"
+        ],
+        "maxSteps": 1214,
+        "collections": 0
+      },
+      {
+        "index": 25,
+        "feature": "toSorted: strict callback this and arity",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 718,
+        "collections": 0
+      },
+      {
+        "index": 26,
+        "feature": "toSorted: generic inherited indexed property",
+        "checked": 5,
+        "expected": [
+          "0:2:undefined:true:false",
+          "1:3:undefined:true:false",
+          "-1:1:undefined:true:false",
+          "3:5:undefined:true:false",
+          "17:19:undefined:true:false"
+        ],
+        "maxSteps": 1440,
+        "collections": 0
+      },
+      {
+        "index": 27,
+        "feature": "toSorted: snapshot before comparison",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 736,
+        "collections": 0
+      },
+      {
+        "index": 28,
+        "feature": "toSorted: comparator validation before length",
+        "checked": 5,
+        "expected": [
+          "true:0",
+          "true:0",
+          "true:0",
+          "true:0",
+          "true:0"
+        ],
+        "maxSteps": 291,
+        "collections": 0
+      },
+      {
+        "index": 29,
+        "feature": "toSorted: getter changes later presence",
+        "checked": 5,
+        "expected": [
+          "2:0:undefined:true",
+          "2:1:undefined:true",
+          "2:-1:undefined:true",
+          "2:3:undefined:true",
+          "2:17:undefined:true"
+        ],
+        "maxSteps": 1381,
+        "collections": 0
+      },
+      {
+        "index": 30,
+        "feature": "toSorted: comparator throws before writes",
+        "checked": 5,
+        "expected": [
+          "17:1,0",
+          "17:2,1",
+          "17:0,-1",
+          "17:4,3",
+          "17:18,17"
+        ],
+        "maxSteps": 610,
+        "collections": 0
+      },
+      {
+        "index": 31,
+        "feature": "toSorted: comparator changes length snapshot",
+        "checked": 5,
+        "expected": [
+          "0,1,2:0",
+          "1,2,3:0",
+          "-1,0,1:0",
+          "3,4,5:0",
+          "17,18,19:0"
+        ],
+        "maxSteps": 1673,
+        "collections": 0
+      },
+      {
+        "index": 32,
+        "feature": "toSorted: default ToString hint",
+        "checked": 5,
+        "expected": [
+          "true:true:true",
+          "true:true:true",
+          "true:true:true",
+          "true:true:true",
+          "true:true:true"
+        ],
+        "maxSteps": 1025,
+        "collections": 0
+      },
+      {
+        "index": 33,
+        "feature": "toSorted: invalid comparator zero length",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 117,
+        "collections": 0
+      },
+      {
+        "index": 34,
+        "feature": "toSorted: noncallable class comparator invoked",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 224,
+        "collections": 0
+      },
+      {
+        "index": 35,
+        "feature": "toSorted: default UTF16 order",
+        "checked": 5,
+        "expected": [
+          "97,55296,57343,57344",
+          "97,55296,57343,57344",
+          "97,55296,57343,57344",
+          "97,55296,57343,57344",
+          "97,55296,57343,57344"
+        ],
+        "maxSteps": 3039,
+        "collections": 1
+      },
+      {
+        "index": 36,
+        "feature": "toSorted: signed zero stability",
+        "checked": 5,
+        "expected": [
+          "-+-+",
+          "-+-+",
+          "-+-+",
+          "-+-+",
+          "-+-+"
+        ],
+        "maxSteps": 2813,
+        "collections": 1
+      },
+      {
+        "index": 37,
+        "feature": "toSorted: public metadata",
+        "checked": 5,
+        "expected": [
+          "toSorted:1",
+          "toSorted:1",
+          "toSorted:1",
+          "toSorted:1",
+          "toSorted:1"
+        ],
+        "maxSteps": 89,
+        "collections": 0
+      },
+      {
+        "index": 38,
+        "feature": "sort: partial writeback then readonly throws",
+        "checked": 5,
+        "expected": [
+          "true:1,2,1",
+          "true:1,2,1",
+          "true:1,2,1",
+          "true:1,2,1",
+          "true:1,2,1"
+        ],
+        "maxSteps": 1285,
+        "collections": 0
+      },
+      {
+        "index": 39,
+        "feature": "sort: deleting nonconfigurable trailing slot throws",
+        "checked": 5,
+        "expected": [
+          "true:0:0",
+          "true:1:1",
+          "true:-1:-1",
+          "true:3:3",
+          "true:17:17"
+        ],
+        "maxSteps": 590,
+        "collections": 0
+      },
+      {
+        "index": 40,
+        "feature": "sort: empty primitive returns wrapper",
+        "checked": 5,
+        "expected": [
+          "object:0",
+          "object:1",
+          "object:-1",
+          "object:3",
+          "object:17"
+        ],
+        "maxSteps": 217,
+        "collections": 0
+      },
+      {
+        "index": 41,
+        "feature": "sort: string readonly index throws",
+        "checked": 5,
+        "expected": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "maxSteps": 325,
+        "collections": 0
+      },
+      {
+        "index": 42,
+        "feature": "toSorted: string generic copies",
+        "checked": 5,
+        "expected": [
+          "a,b,c",
+          "a,b,c",
+          "a,b,c",
+          "a,b,c",
+          "a,b,c"
+        ],
+        "maxSteps": 1534,
+        "collections": 0
+      },
+      {
+        "index": 43,
+        "feature": "toSorted: frozen source remains unchanged",
+        "checked": 5,
+        "expected": [
+          "0,1:1,0",
+          "1,2:2,1",
+          "-1,0:0,-1",
+          "3,4:4,3",
+          "17,18:18,17"
+        ],
+        "maxSteps": 1489,
+        "collections": 0
+      },
+      {
+        "index": 44,
+        "feature": "toSorted: ArrayCreate range before index reads",
+        "checked": 5,
+        "expected": [
+          "true:0",
+          "true:0",
+          "true:0",
+          "true:0",
+          "true:0"
+        ],
+        "maxSteps": 280,
+        "collections": 0
+      },
+      {
+        "index": 45,
+        "feature": "sort: destructuring comparator phase4 regression",
+        "checked": 5,
+        "expected": [
+          "0,1,2",
+          "1,2,3",
+          "-1,0,1",
+          "3,4,5",
+          "17,18,19"
+        ],
+        "maxSteps": 1876,
+        "collections": 0
+      },
+      {
+        "index": 46,
+        "feature": "sort: temporary list ignores Array prototype setter",
+        "checked": 5,
+        "expected": [
+          "0,1:0",
+          "1,2:0",
+          "-1,0:0",
+          "3,4:0",
+          "17,18:0"
+        ],
+        "maxSteps": 957,
+        "collections": 0
+      },
+      {
+        "index": 47,
+        "feature": "toSorted: fresh properties ignore Array prototype setter",
+        "checked": 5,
+        "expected": [
+          "0,1:0:true",
+          "1,2:0:true",
+          "-1,0:0:true",
+          "3,4:0:true",
+          "17,18:0:true"
+        ],
+        "maxSteps": 1428,
+        "collections": 0
+      },
+      {
+        "index": 48,
+        "feature": "sort: snapshot survives allocation and garbage collection",
+        "checked": 5,
+        "expected": [
+          "0,1,2",
+          "1,2,3",
+          "-1,0,1",
+          "3,4,5",
+          "17,18,19"
+        ],
+        "maxSteps": 70253,
+        "collections": 32
+      },
+      {
+        "index": 49,
+        "feature": "sort-review-sort-getter-abrupt-before-compare",
+        "checked": 5,
+        "expected": [
+          "true:0:0",
+          "true:0:0",
+          "true:0:0",
+          "true:0:0",
+          "true:0:0"
+        ],
+        "maxSteps": 422,
+        "collections": 0
+      },
+      {
+        "index": 50,
+        "feature": "sort-review-sort-comparator-conversion-abrupt",
+        "checked": 5,
+        "expected": [
+          "true:0",
+          "true:0",
+          "true:0",
+          "true:0",
+          "true:0"
+        ],
+        "maxSteps": 512,
+        "collections": 0
+      },
+      {
+        "index": 51,
+        "feature": "sort-review-sort-nan-conversion-stability",
+        "checked": 5,
+        "expected": [
+          "1234",
+          "1234",
+          "1234",
+          "1234",
+          "1234"
+        ],
+        "maxSteps": 2494,
+        "collections": 1
+      },
+      {
+        "index": 52,
+        "feature": "sort-review-toSorted-getter-abrupt-before-compare",
+        "checked": 5,
+        "expected": [
+          "true:0:0",
+          "true:0:0",
+          "true:0:0",
+          "true:0:0",
+          "true:0:0"
+        ],
+        "maxSteps": 420,
+        "collections": 0
+      },
+      {
+        "index": 53,
+        "feature": "sort-review-toSorted-comparator-conversion-abrupt",
+        "checked": 5,
+        "expected": [
+          "true:0",
+          "true:0",
+          "true:0",
+          "true:0",
+          "true:0"
+        ],
+        "maxSteps": 510,
+        "collections": 0
+      },
+      {
+        "index": 54,
+        "feature": "sort-review-toSorted-nan-conversion-stability",
+        "checked": 5,
+        "expected": [
+          "1234",
+          "1234",
+          "1234",
+          "1234",
+          "1234"
+        ],
+        "maxSteps": 3149,
+        "collections": 1
+      },
+      {
+        "index": 55,
+        "feature": "sort-review-partial-delete-order",
+        "checked": 5,
+        "expected": [
+          "true:1:2:false:true:5",
+          "true:1:2:false:true:5",
+          "true:1:2:false:true:5",
+          "true:1:2:false:true:5",
+          "true:1:2:false:true:5"
+        ],
+        "maxSteps": 1112,
+        "collections": 0
+      },
+      {
+        "index": 56,
+        "feature": "sort-review-copy-deleted-index-reads-inherited",
+        "checked": 5,
+        "expected": [
+          "1,2,9",
+          "1,2,9",
+          "1,2,9",
+          "1,2,9",
+          "1,2,9"
+        ],
+        "maxSteps": 1741,
+        "collections": 0
+      }
+    ],
+    "gaps": [
+      "Stable insertion sort uses the existing explicit instruction, heap and frame limits; large inputs can exhaust those limits. No CPU fallback.",
+      "The sequence and count of comparator calls are implementation-defined. Fixtures check normative order constraints and stable results, not a host engine sorting algorithm.",
+      "Proxy traps and custom Symbol coercion depend on future runtime support and must fail closed until integrated; comparator/default-string coercion uses existing guest helpers."
+    ],
+    "nativeReference": "Fresh isolated iframe per program/input; no host guest execution in the GPU path."
+  }
+}

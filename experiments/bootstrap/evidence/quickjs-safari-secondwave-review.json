@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-03T06:09:31.911Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 15,
+    "checked": 60,
+    "fixedExpectations": 15,
+    "elapsedMs": 4356,
+    "results": [
+      {
+        "feature": "secondwave-json-metadata",
+        "checked": 4,
+        "maxSteps": 667,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "secondwave-json-tag-inheritance",
+        "checked": 4,
+        "maxSteps": 183,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "secondwave-json-root-gc",
+        "checked": 4,
+        "maxSteps": 23231,
+        "collections": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "feature": "secondwave-with-skips-replaced-getter",
+        "checked": 4,
+        "maxSteps": 1447,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "secondwave-spliced-skips-deleted",
+        "checked": 4,
+        "maxSteps": 1580,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "secondwave-copy-length-captured",
+        "checked": 4,
+        "maxSteps": 1409,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "secondwave-copy-result-setter-bypass",
+        "checked": 4,
+        "maxSteps": 1065,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "secondwave-copy-no-species",
+        "checked": 4,
+        "maxSteps": 2806,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "secondwave-parse-order-empty",
+        "checked": 4,
+        "maxSteps": 295,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "secondwave-parse-radix-wrap",
+        "checked": 4,
+        "maxSteps": 17469,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "secondwave-parse-prefix-sign",
+        "checked": 4,
+        "maxSteps": 10835,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "secondwave-parse-mutation-immunity",
+        "checked": 4,
+        "maxSteps": 23099,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "secondwave-json-duplicate-proto",
+        "checked": 4,
+        "maxSteps": 36750,
+        "collections": [
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "feature": "secondwave-json-nul-key",
+        "checked": 4,
+        "maxSteps": 18510,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "secondwave-json-top-level-number-boundary",
+        "checked": 4,
+        "maxSteps": 334070,
+        "collections": [
+          5,
+          5,
+          5,
+          5
+        ]
+      }
+    ],
+    "method": "Independent directed native oracles: Array copy getter/deletion boundaries, number-prefix conversion order and rounding, JSON data keys, private parser calls, descriptors and retained JSON roots after verified GC."
+  }
+}

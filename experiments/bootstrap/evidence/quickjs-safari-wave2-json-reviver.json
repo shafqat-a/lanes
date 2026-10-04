@@ -1,0 +1,332 @@
+{
+  "date": "2026-10-03T18:19:32.077Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 48,
+    "checked": 236,
+    "resumptionDispatches": 20011,
+    "elapsedMs": 47790,
+    "results": [
+      {
+        "feature": "json-reviver-postorder",
+        "checked": 5,
+        "maxSteps": 30497,
+        "collections": 3
+      },
+      {
+        "feature": "json-reviver-numeric-order",
+        "checked": 5,
+        "maxSteps": 27186,
+        "collections": 2
+      },
+      {
+        "feature": "json-reviver-root-holder",
+        "checked": 5,
+        "maxSteps": 8565,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-root-undefined",
+        "checked": 5,
+        "maxSteps": 8543,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-root-replaced",
+        "checked": 5,
+        "maxSteps": 402,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-deleted-object",
+        "checked": 5,
+        "maxSteps": 18996,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-deleted-array",
+        "checked": 5,
+        "maxSteps": 18055,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-added-not-visited",
+        "checked": 5,
+        "maxSteps": 10461,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-delete-next-still-visited",
+        "checked": 5,
+        "maxSteps": 19051,
+        "collections": 2
+      },
+      {
+        "feature": "json-reviver-delete-next-inherited-get",
+        "checked": 5,
+        "maxSteps": 18342,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-next-getter",
+        "checked": 5,
+        "maxSteps": 18385,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-enumerability-snapshot",
+        "checked": 5,
+        "maxSteps": 18275,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-array-length-snapshot",
+        "checked": 5,
+        "maxSteps": 26703,
+        "collections": 2
+      },
+      {
+        "feature": "json-reviver-array-inherited",
+        "checked": 5,
+        "maxSteps": 17991,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-array-added-not-visited",
+        "checked": 5,
+        "maxSteps": 9270,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-replace-next-subtree",
+        "checked": 5,
+        "maxSteps": 18229,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-returned-subtree-not-revisited",
+        "checked": 5,
+        "maxSteps": 10458,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-nonconfig-update-ignored",
+        "checked": 5,
+        "maxSteps": 9427,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-nonconfig-delete-ignored",
+        "checked": 5,
+        "maxSteps": 9413,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-frozen-samevalue-ignored",
+        "checked": 5,
+        "maxSteps": 9580,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-nonconfig-accessor-no-set",
+        "checked": 5,
+        "maxSteps": 9625,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-nonextensible-create-ignored",
+        "checked": 5,
+        "maxSteps": 9331,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-readonly-arraylength-ignored",
+        "checked": 5,
+        "maxSteps": 9472,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-define-bypasses-setter",
+        "checked": 5,
+        "maxSteps": 9613,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-throw-identity",
+        "checked": 5,
+        "maxSteps": 9055,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-inherited-getter-throw",
+        "checked": 5,
+        "maxSteps": 18225,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-syntax-before-callback",
+        "checked": 5,
+        "maxSteps": 308,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-coercion-before-callback",
+        "checked": 5,
+        "maxSteps": 8709,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-old-unsupported-promoted",
+        "checked": 5,
+        "maxSteps": 104,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-noncallable-ignored",
+        "checked": 5,
+        "maxSteps": 8332,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-proto-name",
+        "checked": 5,
+        "maxSteps": 9769,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-review-postorder",
+        "checked": 5,
+        "maxSteps": 19255,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-review-object-key-snapshot",
+        "checked": 5,
+        "maxSteps": 19591,
+        "collections": 2
+      },
+      {
+        "feature": "json-reviver-review-array-length-snapshot",
+        "checked": 5,
+        "maxSteps": 19050,
+        "collections": 2
+      },
+      {
+        "feature": "json-reviver-review-array-shrink-still-visits",
+        "checked": 5,
+        "maxSteps": 19008,
+        "collections": 2
+      },
+      {
+        "feature": "json-reviver-review-inherited-get-after-delete",
+        "checked": 5,
+        "maxSteps": 19537,
+        "collections": 2
+      },
+      {
+        "feature": "json-reviver-review-ignore-failed-delete",
+        "checked": 5,
+        "maxSteps": 9639,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-review-ignore-failed-create-readonly",
+        "checked": 5,
+        "maxSteps": 9647,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-review-ignore-failed-create-nonextensible",
+        "checked": 5,
+        "maxSteps": 19257,
+        "collections": 2
+      },
+      {
+        "feature": "json-reviver-review-ignore-failed-create-accessor",
+        "checked": 5,
+        "maxSteps": 9756,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-review-callback-holder-root-empty-key",
+        "checked": 5,
+        "maxSteps": 9786,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-review-exception-identity",
+        "checked": 5,
+        "maxSteps": 18170,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-review-getter-created-before-object-visit",
+        "checked": 5,
+        "maxSteps": 18507,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-review-createdata-bypasses-inherited-setter",
+        "checked": 5,
+        "maxSteps": 18438,
+        "collections": 1
+      },
+      {
+        "feature": "json-reviver-review-root-undefined",
+        "checked": 5,
+        "maxSteps": 9256,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-exact-two-arguments",
+        "checked": 5,
+        "maxSteps": 8546,
+        "collections": 0
+      },
+      {
+        "feature": "json-reviver-review-es2025-two-arguments",
+        "checked": 5,
+        "maxSteps": 9605,
+        "collections": 1
+      }
+    ],
+    "nativeReferenceDifferences": [
+      {
+        "feature": "json-reviver-exact-two-arguments",
+        "native": 3,
+        "ecmascript2025": 2,
+        "reason": "Later JSON.parse source-context extension adds a third callback argument."
+      },
+      {
+        "feature": "json-reviver-review-es2025-two-arguments",
+        "native": "a:3:false;:3:false;",
+        "ecmascript2025": "a:2:true;:2:true;",
+        "reason": "ES2025 InternalizeJSONProperty calls reviver with [name,val]; newer JSON.parse source-context implementations supply a third argument."
+      }
+    ],
+    "gaps": [
+      "Implements the ECMAScript 2025 two-argument reviver contract. Later JSON.parse source/context proposals are outside this target; callbacks receive exactly key and value.",
+      "Exotic objects inserted by callbacks follow runtime admission boundaries; no CPU guest fallback. Deep/cyclic callback-created graphs may hit explicit frame/resource limits."
+    ]
+  }
+}

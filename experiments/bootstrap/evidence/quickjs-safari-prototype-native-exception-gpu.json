@@ -1,0 +1,279 @@
+{
+  "date": "2026-10-04T13:10:25.338Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 4,
+    "checked": 9,
+    "passed": 9,
+    "results": [
+      {
+        "name": "next-result-non-object",
+        "source": "function f(x){const o={size:0,has(){},keys(){return {next(){return x;}};}};let n=\"\";try{new Set([1]).union(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1]).symmetricDifference(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1,2]).intersection(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1,2]).difference(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1]).isSupersetOf(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1]).isDisjointFrom(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}return n;}",
+        "expected": "TTTTTT",
+        "result": {
+          "backend": "gpu",
+          "done": true,
+          "values": [
+            "TTTTTT"
+          ],
+          "statuses": [
+            1
+          ],
+          "steps": [
+            5487
+          ],
+          "collections": [
+            2
+          ],
+          "settlements": [
+            null
+          ]
+        },
+        "pass": true,
+        "elapsedMs": 560
+      },
+      {
+        "name": "next-result-non-object",
+        "source": "function f(x){const o={size:0,has(){},keys(){return {next(){return x;}};}};let n=\"\";try{new Set([1]).union(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1]).symmetricDifference(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1,2]).intersection(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1,2]).difference(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1]).isSupersetOf(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1]).isDisjointFrom(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}return n;}",
+        "input": 1,
+        "expected": "TTTTTT",
+        "result": {
+          "backend": "gpu",
+          "done": true,
+          "values": [
+            "TTTTTT"
+          ],
+          "statuses": [
+            1
+          ],
+          "steps": [
+            5487
+          ],
+          "collections": [
+            2
+          ],
+          "settlements": [
+            null
+          ]
+        },
+        "pass": true,
+        "elapsedMs": 526
+      },
+      {
+        "name": "next-result-non-object",
+        "source": "function f(x){const o={size:0,has(){},keys(){return {next(){return x;}};}};let n=\"\";try{new Set([1]).union(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1]).symmetricDifference(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1,2]).intersection(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1,2]).difference(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1]).isSupersetOf(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}try{new Set([1]).isDisjointFrom(o);}catch(e){n+=e instanceof TypeError?\"T\":e instanceof RangeError?\"R\":\"?\";}return n;}",
+        "input": "s",
+        "expected": "TTTTTT",
+        "result": {
+          "backend": "gpu",
+          "done": true,
+          "values": [
+            "TTTTTT"
+          ],
+          "statuses": [
+            1
+          ],
+          "steps": [
+            5487
+          ],
+          "collections": [
+            2
+          ],
+          "settlements": [
+            null
+          ]
+        },
+        "pass": true,
+        "elapsedMs": 536
+      },
+      {
+        "name": "sync-rejected-close-throw-ignored",
+        "source": "function f(x){let log='';async function g(){const it={i:0,[Symbol.iterator](){return this;},next(){this.i++;return {value:Promise.reject('r'+x),done:false};},return(){log+='R';throw 'closeErr';}};try{for await (const v of it) log+='v';}catch(e){log+='|'+e;}return log;}return g();}",
+        "input": 3,
+        "expected": "R|r3",
+        "settlement": "fulfilled",
+        "result": {
+          "backend": "gpu",
+          "done": true,
+          "values": [
+            "R|r3"
+          ],
+          "statuses": [
+            12
+          ],
+          "steps": [
+            913
+          ],
+          "collections": [
+            0
+          ],
+          "settlements": [
+            "fulfilled"
+          ]
+        },
+        "pass": true,
+        "elapsedMs": 176
+      },
+      {
+        "name": "sync-rejected-close-throw-ignored",
+        "source": "function f(x){let log='';async function g(){const it={i:0,[Symbol.iterator](){return this;},next(){this.i++;return {value:Promise.reject('r'+x),done:false};},return(){log+='R';throw 'closeErr';}};try{for await (const v of it) log+='v';}catch(e){log+='|'+e;}return log;}return g();}",
+        "input": 4,
+        "expected": "R|r4",
+        "settlement": "fulfilled",
+        "result": {
+          "backend": "gpu",
+          "done": true,
+          "values": [
+            "R|r4"
+          ],
+          "statuses": [
+            12
+          ],
+          "steps": [
+            913
+          ],
+          "collections": [
+            0
+          ],
+          "settlements": [
+            "fulfilled"
+          ]
+        },
+        "pass": true,
+        "elapsedMs": 146
+      },
+      {
+        "name": "sync-next-throws-no-close",
+        "source": "function f(x){let log='';async function g(){const it={i:0,[Symbol.iterator](){return this;},next(){this.i++;throw 'n'+x;},return(){log+='R';return {};}};try{for await (const v of it) log+='v';}catch(e){log+='|'+e;}return log;}return g();}",
+        "input": 3,
+        "expected": "|n3",
+        "settlement": "fulfilled",
+        "result": {
+          "backend": "gpu",
+          "done": true,
+          "values": [
+            "|n3"
+          ],
+          "statuses": [
+            12
+          ],
+          "steps": [
+            552
+          ],
+          "collections": [
+            0
+          ],
+          "settlements": [
+            "fulfilled"
+          ]
+        },
+        "pass": true,
+        "elapsedMs": 114
+      },
+      {
+        "name": "sync-next-throws-no-close",
+        "source": "function f(x){let log='';async function g(){const it={i:0,[Symbol.iterator](){return this;},next(){this.i++;throw 'n'+x;},return(){log+='R';return {};}};try{for await (const v of it) log+='v';}catch(e){log+='|'+e;}return log;}return g();}",
+        "input": 4,
+        "expected": "|n4",
+        "settlement": "fulfilled",
+        "result": {
+          "backend": "gpu",
+          "done": true,
+          "values": [
+            "|n4"
+          ],
+          "statuses": [
+            12
+          ],
+          "steps": [
+            552
+          ],
+          "collections": [
+            0
+          ],
+          "settlements": [
+            "fulfilled"
+          ]
+        },
+        "pass": true,
+        "elapsedMs": 116.00000000000045
+      },
+      {
+        "name": "sync-next-non-object-typeerror",
+        "source": "function f(x){let log='';async function g(){const it={i:0,[Symbol.iterator](){return this;},next(){this.i++;return x;},return(){log+='R';return {};}};try{for await (const v of it) log+='v';}catch(e){log+='|'+(e instanceof TypeError);}return log;}return g();}",
+        "input": 3,
+        "expected": "|true",
+        "settlement": "fulfilled",
+        "result": {
+          "backend": "gpu",
+          "done": true,
+          "values": [
+            "|true"
+          ],
+          "statuses": [
+            12
+          ],
+          "steps": [
+            719
+          ],
+          "collections": [
+            0
+          ],
+          "settlements": [
+            "fulfilled"
+          ]
+        },
+        "pass": true,
+        "elapsedMs": 129.99999999999955
+      },
+      {
+        "name": "sync-next-non-object-typeerror",
+        "source": "function f(x){let log='';async function g(){const it={i:0,[Symbol.iterator](){return this;},next(){this.i++;return x;},return(){log+='R';return {};}};try{for await (const v of it) log+='v';}catch(e){log+='|'+(e instanceof TypeError);}return log;}return g();}",
+        "input": 4,
+        "expected": "|true",
+        "settlement": "fulfilled",
+        "result": {
+          "backend": "gpu",
+          "done": true,
+          "values": [
+            "|true"
+          ],
+          "statuses": [
+            12
+          ],
+          "steps": [
+            719
+          ],
+          "collections": [
+            0
+          ],
+          "settlements": [
+            "fulfilled"
+          ]
+        },
+        "pass": true,
+        "elapsedMs": 132.00000000000045
+      }
+    ]
+  }
+}

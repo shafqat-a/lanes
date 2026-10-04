@@ -1,0 +1,248 @@
+{
+  "date": "2026-10-03T22:15:00.095Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "native",
+    "cases": 36,
+    "results": [
+      {
+        "feature": "protocol-review-builtin-function-object-rhs",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-builtin-constructor-hasinstance-inherited",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-builtin-rhs-ordinary-and-bound",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-ordinary-hasinstance-noncallable",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-object-intrinsic-hasinstance",
+        "error": {
+          "name": "TypeError",
+          "message": "{[Symbol.hasInstance]:Function.prototype[Symbol.hasInstance]} is not a function. (evaluating '({}) instanceof {[Symbol.hasInstance]:Function.prototype[Symbol.hasInstance]}')"
+        },
+        "expected": true,
+        "pass": false
+      },
+      {
+        "feature": "protocol-review-hasinstance-descriptor",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-iterator-identity-nullish",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-arrow-prototype-getter",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-arrow-prototype-getter-primitive-skips",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-arrow-prototype-getter-abrupt",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-symbol-name-internal-description",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-throw-close-getter-original-wins",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-throw-close-noncallable-original-wins",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-normal-close-getter-throw",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-step-value-throw-does-not-close",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-nested-throw-close-order",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-review-throw-close-gc-original-retained",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-function-call-descriptors",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-function-call-native-source-mutable-metadata",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-function-call-gc-retention",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-has-instance-descriptors",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-has-instance-native-source-mutable-metadata",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-has-instance-gc-retention",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-string-iterator-descriptors",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-string-iterator-native-source-mutable-metadata",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-string-iterator-gc-retention",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-array-next-descriptors",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-array-next-native-source-mutable-metadata",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-array-next-gc-retention",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-string-next-descriptors",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-string-next-native-source-mutable-metadata",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-string-next-gc-retention",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-iterator-identity-descriptors",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-iterator-identity-native-source-mutable-metadata",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-iterator-identity-gc-retention",
+        "value": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "feature": "protocol-metadata-call-bind-test262-property-helper",
+        "value": true,
+        "expected": true,
+        "pass": true
+      }
+    ]
+  }
+}

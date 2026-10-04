@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-02T18:04:26.458Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "checked": 97,
+    "compiler": "QuickJS/Wasm",
+    "method": "Guest find/findIndex/findLast/findLastIndex/lastIndexOf compared with a fresh native realm. Compiler and host checks are separate and are not a GPU pass.",
+    "numericIndexLimit": "indices at or above 2^31 remain unsupported by the existing numeric key path",
+    "backend": "gpu",
+    "primitiveBoxing": "explicitly unsupported",
+    "results": [
+      {
+        "checked": 4,
+        "maxSteps": 607,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 478,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 803,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 366,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 832,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 487,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 496,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 173,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 313,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 1869,
+        "collections": 1
+      },
+      {
+        "checked": 4,
+        "maxSteps": 1762,
+        "collections": 1
+      },
+      {
+        "checked": 4,
+        "maxSteps": 316,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 478,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 732,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 12199,
+        "collections": 1
+      },
+      {
+        "checked": 4,
+        "maxSteps": 915,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 1049,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 556,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 697,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 166,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 743,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 1157,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 292,
+        "collections": 0
+      },
+      {
+        "checked": 4,
+        "maxSteps": 670,
+        "collections": 0
+      }
+    ],
+    "resumptionExpected": "lvaf05f1ulviclvcb2b1ab0",
+    "resumptionDispatches": 1719,
+    "programs": 25
+  }
+}

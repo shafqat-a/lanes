@@ -1,0 +1,312 @@
+{
+  "date": "2026-10-04T12:27:38.443Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 40,
+    "checked": 157,
+    "resourceChecks": 1,
+    "collectionConsumersIncluded": false,
+    "requiredGC": 1,
+    "resumptionDispatches": 1258,
+    "results": [
+      {
+        "feature": "array-from-dense-array-holes",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 915
+      },
+      {
+        "feature": "array-from-string-codepoints",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 577
+      },
+      {
+        "feature": "array-from-array-like-inherited",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 315
+      },
+      {
+        "feature": "array-from-null-iterator-fallback",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 221
+      },
+      {
+        "feature": "array-from-mapper-validation-first",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 199
+      },
+      {
+        "feature": "array-from-null-source-typeerror",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 92
+      },
+      {
+        "feature": "array-from-primitive-source-empty",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 530
+      },
+      {
+        "feature": "array-from-noncallable-iterator",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 217
+      },
+      {
+        "feature": "array-from-arrow-constructor-fallback",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 219
+      },
+      {
+        "feature": "array-from-constructor-array-like-arguments",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 317
+      },
+      {
+        "feature": "array-from-constructor-iterable-arguments",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 523
+      },
+      {
+        "feature": "array-from-class-constructor",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 309
+      },
+      {
+        "feature": "array-from-bound-constructor",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 400
+      },
+      {
+        "feature": "array-from-getter-constructor-iterator-order",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 235
+      },
+      {
+        "feature": "array-from-array-like-length-before-constructor",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 378
+      },
+      {
+        "feature": "array-from-mapping-receiver-two-arguments",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 1192
+      },
+      {
+        "feature": "array-from-strict-mapper-undefined-this",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 449
+      },
+      {
+        "feature": "array-from-array-like-snapshot-length",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 301
+      },
+      {
+        "feature": "array-from-iterator-next-cached",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 318
+      },
+      {
+        "feature": "array-from-done-skips-value",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 186
+      },
+      {
+        "feature": "array-from-mapper-throw-closes-original-wins",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 281
+      },
+      {
+        "feature": "array-from-close-getter-throw-original-wins",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 255
+      },
+      {
+        "feature": "array-from-close-primitive-result-original-wins",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 373
+      },
+      {
+        "feature": "array-from-define-failure-closes",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 430
+      },
+      {
+        "feature": "array-from-define-bypasses-inherited-setter",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 685
+      },
+      {
+        "feature": "array-from-next-throw-does-not-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 169
+      },
+      {
+        "feature": "array-from-value-getter-throw-does-not-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 193
+      },
+      {
+        "feature": "array-from-done-getter-throw-does-not-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 186
+      },
+      {
+        "feature": "array-from-length-set-failure-after-done-no-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 419
+      },
+      {
+        "feature": "array-from-length-coercion-bigint-typeerror",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 248
+      },
+      {
+        "feature": "array-from-negative-and-nan-length",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 342
+      },
+      {
+        "feature": "array-from-oversize-default-array-rangeerror",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 227
+      },
+      {
+        "feature": "array-from-public-helper-mutation-immunity",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 455
+      },
+      {
+        "feature": "array-from-symbol-and-bigint-construct-throws",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 367
+      },
+      {
+        "feature": "array-from-constructor-throw-before-open",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 95
+      },
+      {
+        "feature": "array-from-next-not-callable-no-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 309
+      },
+      {
+        "feature": "array-from-primitive-step-no-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 331
+      },
+      {
+        "feature": "array-from-poisoned-descriptor-prototype",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 601
+      },
+      {
+        "feature": "array-from-gc-retained-constructor-and-record",
+        "checked": 4,
+        "expected": true,
+        "collections": 2,
+        "maxSteps": 13553
+      }
+    ],
+    "elapsedMs": 9868.000000000002,
+    "gaps": [
+      "Proxy behavior requires the separate Proxy implementation.",
+      "Finite VM heap and execution budgets remain explicit resource boundaries."
+    ]
+  }
+}

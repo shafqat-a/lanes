@@ -1,0 +1,1 @@
+{"programs":1124,"validationPrograms":30,"nativeWasmAgreement":true,"guestExecution":false,"nativeReferenceDifferences":[{"source":"function f(x){const a=[];Object.seal(a);return Object.isFrozen(a);}","actual":true,"expected":false}]}

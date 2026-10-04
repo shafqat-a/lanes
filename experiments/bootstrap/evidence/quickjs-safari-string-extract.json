@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-03T04:44:52.951Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "compiler": "QuickJS/Wasm",
+    "programs": 27,
+    "checked": 105,
+    "exceptionPrograms": 8,
+    "compilerRejected": 6,
+    "unsupportedChecks": 2,
+    "resumptionDispatches": 4815,
+    "resumptionExpected": "tstabncgueqrG:abcaYZ-17:bc:c:bc:bca:bc:abca::😀:\ude00:4",
+    "elapsedMs": 5021,
+    "results": [
+      {
+        "index": 0,
+        "checked": 4,
+        "maxSteps": 1556,
+        "collections": 0
+      },
+      {
+        "index": 1,
+        "checked": 4,
+        "maxSteps": 4038,
+        "collections": 2
+      },
+      {
+        "index": 2,
+        "checked": 4,
+        "maxSteps": 2670,
+        "collections": 1
+      },
+      {
+        "index": 3,
+        "checked": 4,
+        "maxSteps": 75021,
+        "collections": 5
+      },
+      {
+        "index": 4,
+        "checked": 4,
+        "maxSteps": 5354,
+        "collections": 0
+      },
+      {
+        "index": 5,
+        "checked": 4,
+        "maxSteps": 1144,
+        "collections": 0
+      },
+      {
+        "index": 6,
+        "checked": 4,
+        "maxSteps": 1026,
+        "collections": 0
+      },
+      {
+        "index": 7,
+        "checked": 4,
+        "maxSteps": 883,
+        "collections": 0
+      },
+      {
+        "index": 8,
+        "checked": 4,
+        "maxSteps": 1650,
+        "collections": 0
+      },
+      {
+        "index": 9,
+        "checked": 4,
+        "maxSteps": 690,
+        "collections": 0
+      },
+      {
+        "index": 10,
+        "checked": 4,
+        "maxSteps": 666,
+        "collections": 0
+      },
+      {
+        "index": 11,
+        "checked": 4,
+        "maxSteps": 387,
+        "collections": 0
+      },
+      {
+        "index": 12,
+        "checked": 4,
+        "maxSteps": 565,
+        "collections": 0
+      },
+      {
+        "index": 13,
+        "checked": 4,
+        "maxSteps": 1747,
+        "collections": 0
+      },
+      {
+        "index": 14,
+        "checked": 4,
+        "maxSteps": 1653,
+        "collections": 0
+      },
+      {
+        "index": 15,
+        "checked": 4,
+        "maxSteps": 852,
+        "collections": 0
+      },
+      {
+        "index": 16,
+        "checked": 4,
+        "maxSteps": 1024,
+        "collections": 0
+      },
+      {
+        "index": 17,
+        "checked": 4,
+        "maxSteps": 1234,
+        "collections": 0
+      },
+      {
+        "index": 18,
+        "checked": 4,
+        "maxSteps": 124,
+        "collections": 0
+      },
+      {
+        "index": 19,
+        "checked": 4,
+        "maxSteps": 127,
+        "collections": 0
+      },
+      {
+        "index": 20,
+        "checked": 4,
+        "maxSteps": 133,
+        "collections": 0
+      },
+      {
+        "index": 21,
+        "checked": 4,
+        "maxSteps": 139,
+        "collections": 0
+      },
+      {
+        "index": 22,
+        "checked": 4,
+        "maxSteps": 186,
+        "collections": 0
+      },
+      {
+        "index": 23,
+        "checked": 4,
+        "maxSteps": 239,
+        "collections": 0
+      },
+      {
+        "index": 24,
+        "checked": 4,
+        "maxSteps": 242,
+        "collections": 0
+      },
+      {
+        "index": 25,
+        "checked": 4,
+        "maxSteps": 370,
+        "collections": 0
+      }
+    ],
+    "method": "concat, substring and Annex B substr compared with fresh native realms; guest exception identity and thrown values, private span extraction despite prototype mutation, and one-instruction resumption.",
+    "gaps": [
+      "Template substitutions compiler-rejected pending correct lowering",
+      "Symbols, BigInt and custom Symbol.toPrimitive unsupported",
+      "String results limited to256 UTF-16 units"
+    ]
+  }
+}

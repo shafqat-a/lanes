@@ -1,0 +1,4 @@
+import {propertyReferenceSnapshot} from './boxing-reference-snapshot.js';
+const status=document.getElementById('status');
+function oracle(source,input){const frame=document.createElement('iframe');frame.hidden=true;document.body.append(frame);try{return {value:frame.contentWindow.Function(`return (${source})`)()(input)};}catch(e){return {threw:e.name,message:e.message}}finally{frame.remove();}}
+try{const records=propertyReferenceSnapshot.map(item=>{const native=item.inputs.map(x=>oracle(item.source,x));return {...item,native,matches:native.every((v,i)=>!v.threw&&Object.is(v.value,item.nodeExpected[i]))};});window.quickjsReport={backend:'native-reference',gpuExecuted:false,programs:records.length,mismatches:records.filter(r=>!r.matches),records};status.textContent='Reference diagnostics complete';document.getElementById('report').textContent=JSON.stringify(window.quickjsReport,null,2);}catch(e){window.quickjsError=e.stack;status.textContent='Failed';}

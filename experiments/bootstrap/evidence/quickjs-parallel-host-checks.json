@@ -1,0 +1,204 @@
+{
+  "startedAt": "2026-10-02T19:40:13.000629+00:00",
+  "finishedAt": "2026-10-02T19:40:18.723349+00:00",
+  "scope": "Host-only semantic/reference checks and native/Wasm compiler parity. No GPU execution or full ECMAScript conformance claim.",
+  "gpuExecuted": false,
+  "parallelWorkers": 4,
+  "nodeVersion": "v26.9.0",
+  "compilerArtifactsUnchanged": true,
+  "compilerArtifactsSha256": {
+    "experiments/quickjs-runtime/generated/compiler": "fe3a41c7f5a53665b4cf015356b5b1c8ebcc7df2b79ffe33177900a08a43e258",
+    "experiments/quickjs-runtime/generated/compiler.wasm": "2c9c9ddbe100e53a1d766cec62f92653c6cbf29e80d732ffe6695f9af96554fd"
+  },
+  "commands": [
+    {
+      "command": "node experiments/quickjs-runtime/check-array-methods.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 1.845,
+      "status": "passed",
+      "countsAndFlags": {
+        "programs": 33,
+        "hostAlgorithmChecks": 132,
+        "nativeWasmAgreement": true,
+        "gpuChecks": false
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-array-search.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 1.939,
+      "status": "passed",
+      "countsAndFlags": {
+        "programs": 25,
+        "negativePrograms": 12,
+        "hostAlgorithmChecks": 151,
+        "nativeWasmAgreement": true,
+        "gpuChecks": false
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-array-reduce.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 1.779,
+      "status": "passed",
+      "countsAndFlags": {
+        "programs": 18,
+        "negativePrograms": 12,
+        "hostAlgorithmChecks": 125,
+        "nativeWasmAgreement": true,
+        "gpuChecks": false
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-array-mutation.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 2.599,
+      "status": "passed",
+      "countsAndFlags": {
+        "programs": 35,
+        "negativePrograms": 12,
+        "compiledPrograms": 47,
+        "normativeExpectations": 34,
+        "hostAlgorithmChecks": 322,
+        "nativeWasmAgreement": true,
+        "gpuChecks": false
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-array-shift.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 2.549,
+      "status": "passed",
+      "countsAndFlags": {
+        "programs": 35,
+        "negativePrograms": 11,
+        "compiledPrograms": 46,
+        "fixedExpectations": 35,
+        "hostAlgorithmChecks": 194,
+        "nativeWasmAgreement": true,
+        "gpuChecks": false
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-array-adversarial.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 0.131,
+      "status": "passed",
+      "countsAndFlags": {
+        "seedCount": 250,
+        "hostDifferentialChecks": 1750,
+        "gpuChecks": false
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-array-builtin-metadata.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 2.603,
+      "status": "passed",
+      "countsAndFlags": {
+        "identities": 38,
+        "metadataChecks": 76,
+        "compilerPrograms": 78,
+        "gpuExecuted": false
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-object-operations.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 2.276,
+      "status": "passed",
+      "countsAndFlags": {
+        "programs": 39,
+        "negativePrograms": 5,
+        "unsupportedPrograms": 3,
+        "hostAlgorithmChecks": 177,
+        "nativeWasmAgreement": true,
+        "gpuChecks": false,
+        "specDirectedPrograms": 1
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-object-static-descriptors.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 1.168,
+      "status": "passed",
+      "countsAndFlags": {
+        "programs": 21,
+        "nativePredicates": 21,
+        "nativeWasmAgreement": true,
+        "gpuChecks": false
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-string-search.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 1.692,
+      "status": "passed",
+      "countsAndFlags": {
+        "compiledLength": 2,
+        "programs": 19,
+        "negativePrograms": 10,
+        "hostAlgorithmChecks": 42687,
+        "nativeWasmAgreement": true,
+        "gpuChecks": false
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-string-search-integration.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 1.411,
+      "status": "passed",
+      "countsAndFlags": {
+        "metadataChecks": 10,
+        "compilerPrograms": 35,
+        "nativePositiveChecks": 25,
+        "nativeNegativeChecks": 5,
+        "gpuExecuted": false
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-global-constants.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 1.377,
+      "status": "passed",
+      "countsAndFlags": {
+        "programs": 29,
+        "nativeReferenceChecks": 29,
+        "nativeWasmAgreement": true,
+        "gpuChecks": false
+      }
+    },
+    {
+      "command": "node experiments/quickjs-runtime/check-property-key-negatives.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 0.766,
+      "status": "passed",
+      "countsAndFlags": {
+        "programs": 12,
+        "nativeWasmAgreement": true,
+        "nativeReferenceChecks": 12,
+        "gpuChecks": false
+      }
+    }
+  ],
+  "summary": {
+    "passed": 13,
+    "failed": 0
+  },
+  "priorHostTestRun": {
+    "logPath": "/tmp/lanes-phase-tests.log",
+    "rerunInThisBatch": false,
+    "summaryLines": [
+      "\u2714 semantic, device, unknown and misleading partial diagnostics remain failures (0.278554ms)",
+      "\u2714 derived report retains original statuses and provenance without rerunning (153.343144ms)",
+      "\u2139 tests 25",
+      "\u2139 suites 0",
+      "\u2139 pass 25",
+      "\u2139 fail 0",
+      "\u2139 cancelled 0",
+      "\u2139 skipped 0",
+      "\u2139 todo 0",
+      "\u2139 duration_ms 358.138968"
+    ]
+  }
+}

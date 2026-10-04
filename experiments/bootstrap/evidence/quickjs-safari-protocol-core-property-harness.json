@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-03T22:08:55.749Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 12,
+    "checked": 12,
+    "harnessRevision": "7ab7fafa0003f73fc85c1b95d88094d33f7eb8bd",
+    "fullTest262": false,
+    "note": "Directed upstream propertyHelper verification; function-adapted harness, not full Script conformance.",
+    "records": [
+      {
+        "name": "data-descriptor",
+        "strict": false,
+        "status": "passed",
+        "steps": [
+          3179
+        ]
+      },
+      {
+        "name": "data-descriptor",
+        "strict": true,
+        "status": "passed",
+        "steps": [
+          3179
+        ]
+      },
+      {
+        "name": "readonly",
+        "strict": false,
+        "status": "passed",
+        "steps": [
+          3198
+        ]
+      },
+      {
+        "name": "readonly",
+        "strict": true,
+        "status": "passed",
+        "steps": [
+          3198
+        ]
+      },
+      {
+        "name": "restore",
+        "strict": false,
+        "status": "passed",
+        "steps": [
+          3374
+        ]
+      },
+      {
+        "name": "restore",
+        "strict": true,
+        "status": "passed",
+        "steps": [
+          3374
+        ]
+      },
+      {
+        "name": "negative-assertion",
+        "strict": false,
+        "status": "passed",
+        "steps": [
+          3426
+        ]
+      },
+      {
+        "name": "negative-assertion",
+        "strict": true,
+        "status": "passed",
+        "steps": [
+          3426
+        ]
+      },
+      {
+        "name": "symbol-key",
+        "strict": false,
+        "status": "passed",
+        "steps": [
+          3342
+        ]
+      },
+      {
+        "name": "symbol-key",
+        "strict": true,
+        "status": "passed",
+        "steps": [
+          3342
+        ]
+      },
+      {
+        "name": "signed-zero",
+        "strict": false,
+        "status": "passed",
+        "steps": [
+          4306
+        ]
+      },
+      {
+        "name": "signed-zero",
+        "strict": true,
+        "status": "passed",
+        "steps": [
+          4306
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "date": "2026-10-03T21:11:21.252Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 42,
+    "checked": 124,
+    "resumptionDispatches": 1788,
+    "elapsedMs": 3294,
+    "results": [
+      {
+        "feature": "json-bigint-root-replacer-holder",
+        "checked": 3,
+        "maxSteps": 804,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-nested-replacer-rescue",
+        "checked": 3,
+        "maxSteps": 1599,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-prototype-tojson-strict-this",
+        "checked": 3,
+        "maxSteps": 1621,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-prototype-getter-before-replacer",
+        "checked": 3,
+        "maxSteps": 625,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-tojson-getter-abrupt",
+        "checked": 3,
+        "maxSteps": 490,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-tojson-call-abrupt",
+        "checked": 3,
+        "maxSteps": 335,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-replacer-abrupt",
+        "checked": 3,
+        "maxSteps": 339,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-noncallable-tojson-rescue",
+        "checked": 3,
+        "maxSteps": 341,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-tojson-bigint-then-replacer",
+        "checked": 3,
+        "maxSteps": 931,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-replacer-return-not-reprocessed",
+        "checked": 3,
+        "maxSteps": 461,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-tojson-object-not-reprocessed",
+        "checked": 3,
+        "maxSteps": 1068,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-wrapper-replacer-rescue",
+        "checked": 3,
+        "maxSteps": 824,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-wrapper-valueof-never-called",
+        "checked": 3,
+        "maxSteps": 447,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-wrapper-tojson-this",
+        "checked": 3,
+        "maxSteps": 364,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-wrapper-returned-by-replacer",
+        "checked": 3,
+        "maxSteps": 461,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-root-symbol-result",
+        "checked": 3,
+        "maxSteps": 369,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-nested-symbol-result",
+        "checked": 3,
+        "maxSteps": 1474,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-replacer-sees-symbol-after-tojson",
+        "checked": 3,
+        "maxSteps": 772,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-bigint-replacer-list-items-ignored",
+        "checked": 3,
+        "maxSteps": 1486,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-bigint-space-ignored",
+        "checked": 3,
+        "maxSteps": 913,
+        "collections": 0
+      },
+      {
+        "feature": "json-bigint-prototype-getter-mutation-order",
+        "checked": 3,
+        "maxSteps": 1389,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-bigint-replacer-rescue",
+        "checked": 3,
+        "maxSteps": 568,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-bigint-tojson-before-replacer",
+        "checked": 3,
+        "maxSteps": 971,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-bigint-without-rescue-typeerror",
+        "checked": 3,
+        "maxSteps": 446,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-bigint-wrapper-without-rescue-typeerror",
+        "checked": 3,
+        "maxSteps": 436,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-bigint-wrapper-tojson",
+        "checked": 3,
+        "maxSteps": 1071,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-reviver-bigint-result",
+        "checked": 3,
+        "maxSteps": 8554,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-symbol-root",
+        "checked": 3,
+        "maxSteps": 351,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-symbol-array",
+        "checked": 3,
+        "maxSteps": 1014,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-symbol-object-value",
+        "checked": 3,
+        "maxSteps": 1023,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-symbol-key-getter-ignored",
+        "checked": 3,
+        "maxSteps": 1073,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-symbol-replacer-root",
+        "checked": 3,
+        "maxSteps": 823,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-symbol-replacer-results",
+        "checked": 3,
+        "maxSteps": 1514,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-symbol-replacer-list",
+        "checked": 3,
+        "maxSteps": 1491,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-symbol-wrapper-own-strings",
+        "checked": 3,
+        "maxSteps": 913,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-symbol-prototype-tojson-not-called",
+        "checked": 3,
+        "maxSteps": 800,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-symbol-space-ignored",
+        "checked": 3,
+        "maxSteps": 836,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-symbol-parse-typeerror",
+        "checked": 3,
+        "maxSteps": 157,
+        "collections": 0
+      },
+      {
+        "feature": "json-phase3-reviver-add-symbol-key",
+        "checked": 3,
+        "maxSteps": 9552,
+        "collections": 1
+      },
+      {
+        "feature": "json-phase3-reviver-insert-symbol-key-object",
+        "checked": 3,
+        "maxSteps": 18423,
+        "collections": 1
+      },
+      {
+        "feature": "json-phase3-reviver-returns-symbol",
+        "checked": 3,
+        "maxSteps": 9889,
+        "collections": 1
+      }
+    ],
+    "nativeReferenceDifferences": [],
+    "gaps": [
+      "Proxy operations remain outside the admitted runtime; resource limits are explicit"
+    ]
+  }
+}

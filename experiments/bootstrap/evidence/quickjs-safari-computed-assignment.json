@@ -1,0 +1,1195 @@
+{
+  "date": "2026-10-02T23:23:09.946Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "gaps": [
+      "Symbols, BigInt, custom @@toPrimitive and existing key/resource limits remain outside this test scope"
+    ],
+    "backend": "gpu",
+    "resumptionExpected": "GNSGNSGNS:4:6:9:9",
+    "programs": 47,
+    "compilerRejections": 0,
+    "elapsedMs": 2254,
+    "results": [
+      {
+        "checked": 5,
+        "index": 0,
+        "collections": 0,
+        "maxSteps": 5420,
+        "expectedValues": [
+          "1:1",
+          "2:2",
+          "0.5:0.5",
+          "8:8",
+          "131072:131072"
+        ],
+        "nativeValues": [
+          "1:1",
+          "2:2",
+          "0.5:0.5",
+          "8:8",
+          "131072:131072"
+        ],
+        "feature": "computed-exponent-assignment"
+      },
+      {
+        "checked": 5,
+        "index": 1,
+        "collections": 0,
+        "maxSteps": 539,
+        "expectedValues": [
+          "3:1:3:2",
+          "3:1:3:2",
+          "3:1:3:2",
+          "3:1:3:2",
+          "3:1:3:2"
+        ],
+        "nativeValues": [
+          "3:3:10:1",
+          "3:3:10:1",
+          "3:3:10:1",
+          "3:3:10:1",
+          "3:3:10:1"
+        ],
+        "feature": "compound-original-key-second-coercion"
+      },
+      {
+        "checked": 5,
+        "index": 2,
+        "collections": 0,
+        "maxSteps": 538,
+        "expectedValues": [
+          "1:1:2:2",
+          "1:1:2:2",
+          "1:1:2:2",
+          "1:1:2:2",
+          "1:1:2:2"
+        ],
+        "nativeValues": [
+          "1:2:10:1",
+          "1:2:10:1",
+          "1:2:10:1",
+          "1:2:10:1",
+          "1:2:10:1"
+        ],
+        "feature": "postfix-original-key-second-coercion"
+      },
+      {
+        "checked": 5,
+        "index": 3,
+        "collections": 0,
+        "maxSteps": 278,
+        "expectedValues": [
+          "0:1",
+          "0:1",
+          "0:1",
+          "0:1",
+          "0:1"
+        ],
+        "nativeValues": [
+          "0:1",
+          "0:1",
+          "0:1",
+          "0:1",
+          "0:1"
+        ],
+        "feature": "logical-shortcircuit-key-coercion-once"
+      },
+      {
+        "checked": 5,
+        "index": 4,
+        "collections": 0,
+        "maxSteps": 542,
+        "expectedValues": [
+          "0:1:0:2",
+          "1:1:1:2",
+          "-1:1:-1:2",
+          "3:1:3:2",
+          "17:1:17:2"
+        ],
+        "nativeValues": [
+          "0:0:10:1",
+          "1:1:10:1",
+          "-1:-1:10:1",
+          "3:3:10:1",
+          "17:17:10:1"
+        ],
+        "feature": "logical-assignment-key-coercion-twice"
+      },
+      {
+        "checked": 5,
+        "index": 5,
+        "collections": 0,
+        "maxSteps": 507,
+        "expectedValues": [
+          "KGVRK:0",
+          "KGVRK:1",
+          "KGVRK:-1",
+          "KGVRK:3",
+          "KGVRK:17"
+        ],
+        "nativeValues": [
+          "bad",
+          "bad",
+          "bad",
+          "bad",
+          "bad"
+        ],
+        "feature": "second-key-coercion-throws-after-rhs"
+      },
+      {
+        "checked": 5,
+        "index": 6,
+        "collections": 0,
+        "maxSteps": 542,
+        "expectedValues": [
+          "0:0:0:2",
+          "1:0:1:2",
+          "-1:0:-1:2",
+          "3:0:3:2",
+          "17:0:17:2"
+        ],
+        "nativeValues": [
+          "0:0:10:1",
+          "1:1:10:1",
+          "-1:-1:10:1",
+          "3:3:10:1",
+          "17:17:10:1"
+        ],
+        "feature": "logical-or-assignment-key-coercion-twice"
+      },
+      {
+        "checked": 5,
+        "index": 7,
+        "collections": 0,
+        "maxSteps": 533,
+        "expectedValues": [
+          "0:null:0:2",
+          "1:null:1:2",
+          "-1:null:-1:2",
+          "3:null:3:2",
+          "17:null:17:2"
+        ],
+        "nativeValues": [
+          "0:0:10:1",
+          "1:1:10:1",
+          "-1:-1:10:1",
+          "3:3:10:1",
+          "17:17:10:1"
+        ],
+        "feature": "logical-nullish-assignment-key-coercion-twice"
+      },
+      {
+        "checked": 5,
+        "index": 8,
+        "collections": 0,
+        "maxSteps": 448,
+        "expectedValues": [
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1"
+        ],
+        "nativeValues": [
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1"
+        ],
+        "feature": "logical-or-shortcircuit-key-coercion-once"
+      },
+      {
+        "checked": 5,
+        "index": 9,
+        "collections": 0,
+        "maxSteps": 449,
+        "expectedValues": [
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1"
+        ],
+        "nativeValues": [
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1",
+          "1:1:10:1"
+        ],
+        "feature": "logical-nullish-shortcircuit-key-coercion-once"
+      },
+      {
+        "checked": 5,
+        "index": 10,
+        "collections": 0,
+        "maxSteps": 187,
+        "expectedValues": [
+          "12:12",
+          "13:13",
+          "11:11",
+          "15:15",
+          "29:29"
+        ],
+        "nativeValues": [
+          "12:12",
+          "13:13",
+          "11:11",
+          "15:15",
+          "29:29"
+        ],
+        "feature": "compound-+"
+      },
+      {
+        "checked": 5,
+        "index": 11,
+        "collections": 0,
+        "maxSteps": 187,
+        "expectedValues": [
+          "12:12",
+          "11:11",
+          "13:13",
+          "9:9",
+          "-5:-5"
+        ],
+        "nativeValues": [
+          "12:12",
+          "11:11",
+          "13:13",
+          "9:9",
+          "-5:-5"
+        ],
+        "feature": "compound--"
+      },
+      {
+        "checked": 5,
+        "index": 12,
+        "collections": 0,
+        "maxSteps": 187,
+        "expectedValues": [
+          "0:0",
+          "12:12",
+          "-12:-12",
+          "36:36",
+          "204:204"
+        ],
+        "nativeValues": [
+          "0:0",
+          "12:12",
+          "-12:-12",
+          "36:36",
+          "204:204"
+        ],
+        "feature": "compound-*"
+      },
+      {
+        "checked": 5,
+        "index": 13,
+        "collections": 2,
+        "maxSteps": 47761,
+        "expectedValues": [
+          "Infinity:Infinity",
+          "12:12",
+          "-12:-12",
+          "4:4",
+          "0.7058823529411765:0.7058823529411765"
+        ],
+        "nativeValues": [
+          "Infinity:Infinity",
+          "12:12",
+          "-12:-12",
+          "4:4",
+          "0.7058823529411765:0.7058823529411765"
+        ],
+        "feature": "compound-/"
+      },
+      {
+        "checked": 5,
+        "index": 14,
+        "collections": 0,
+        "maxSteps": 187,
+        "expectedValues": [
+          "NaN:NaN",
+          "0:0",
+          "0:0",
+          "0:0",
+          "12:12"
+        ],
+        "nativeValues": [
+          "NaN:NaN",
+          "0:0",
+          "0:0",
+          "0:0",
+          "12:12"
+        ],
+        "feature": "compound-%"
+      },
+      {
+        "checked": 5,
+        "index": 15,
+        "collections": 0,
+        "maxSteps": 187,
+        "expectedValues": [
+          "12:12",
+          "24:24",
+          "0:0",
+          "96:96",
+          "1572864:1572864"
+        ],
+        "nativeValues": [
+          "12:12",
+          "24:24",
+          "0:0",
+          "96:96",
+          "1572864:1572864"
+        ],
+        "feature": "compound-<<"
+      },
+      {
+        "checked": 5,
+        "index": 16,
+        "collections": 0,
+        "maxSteps": 187,
+        "expectedValues": [
+          "12:12",
+          "6:6",
+          "0:0",
+          "1:1",
+          "0:0"
+        ],
+        "nativeValues": [
+          "12:12",
+          "6:6",
+          "0:0",
+          "1:1",
+          "0:0"
+        ],
+        "feature": "compound->>"
+      },
+      {
+        "checked": 5,
+        "index": 17,
+        "collections": 0,
+        "maxSteps": 187,
+        "expectedValues": [
+          "12:12",
+          "6:6",
+          "0:0",
+          "1:1",
+          "0:0"
+        ],
+        "nativeValues": [
+          "12:12",
+          "6:6",
+          "0:0",
+          "1:1",
+          "0:0"
+        ],
+        "feature": "compound->>>"
+      },
+      {
+        "checked": 5,
+        "index": 18,
+        "collections": 0,
+        "maxSteps": 187,
+        "expectedValues": [
+          "0:0",
+          "0:0",
+          "12:12",
+          "0:0",
+          "0:0"
+        ],
+        "nativeValues": [
+          "0:0",
+          "0:0",
+          "12:12",
+          "0:0",
+          "0:0"
+        ],
+        "feature": "compound-&"
+      },
+      {
+        "checked": 5,
+        "index": 19,
+        "collections": 0,
+        "maxSteps": 187,
+        "expectedValues": [
+          "12:12",
+          "13:13",
+          "-1:-1",
+          "15:15",
+          "29:29"
+        ],
+        "nativeValues": [
+          "12:12",
+          "13:13",
+          "-1:-1",
+          "15:15",
+          "29:29"
+        ],
+        "feature": "compound-|"
+      },
+      {
+        "checked": 5,
+        "index": 20,
+        "collections": 0,
+        "maxSteps": 187,
+        "expectedValues": [
+          "12:12",
+          "13:13",
+          "-13:-13",
+          "15:15",
+          "29:29"
+        ],
+        "nativeValues": [
+          "12:12",
+          "13:13",
+          "-13:-13",
+          "15:15",
+          "29:29"
+        ],
+        "feature": "compound-^"
+      },
+      {
+        "checked": 5,
+        "index": 21,
+        "collections": 0,
+        "maxSteps": 186,
+        "expectedValues": [
+          "4:5",
+          "4:5",
+          "4:5",
+          "4:5",
+          "4:5"
+        ],
+        "nativeValues": [
+          "4:5",
+          "4:5",
+          "4:5",
+          "4:5",
+          "4:5"
+        ],
+        "feature": "o[k]++"
+      },
+      {
+        "checked": 5,
+        "index": 22,
+        "collections": 0,
+        "maxSteps": 186,
+        "expectedValues": [
+          "5:5",
+          "5:5",
+          "5:5",
+          "5:5",
+          "5:5"
+        ],
+        "nativeValues": [
+          "5:5",
+          "5:5",
+          "5:5",
+          "5:5",
+          "5:5"
+        ],
+        "feature": "++o[k]"
+      },
+      {
+        "checked": 5,
+        "index": 23,
+        "collections": 0,
+        "maxSteps": 186,
+        "expectedValues": [
+          "4:3",
+          "4:3",
+          "4:3",
+          "4:3",
+          "4:3"
+        ],
+        "nativeValues": [
+          "4:3",
+          "4:3",
+          "4:3",
+          "4:3",
+          "4:3"
+        ],
+        "feature": "o[k]--"
+      },
+      {
+        "checked": 5,
+        "index": 24,
+        "collections": 0,
+        "maxSteps": 186,
+        "expectedValues": [
+          "3:3",
+          "3:3",
+          "3:3",
+          "3:3",
+          "3:3"
+        ],
+        "nativeValues": [
+          "3:3",
+          "3:3",
+          "3:3",
+          "3:3",
+          "3:3"
+        ],
+        "feature": "--o[k]"
+      },
+      {
+        "checked": 5,
+        "index": 25,
+        "collections": 0,
+        "maxSteps": 241,
+        "expectedValues": [
+          "RKGVS:5:5",
+          "RKGVS:6:6",
+          "RKGVS:4:4",
+          "RKGVS:8:8",
+          "RKGVS:22:22"
+        ],
+        "nativeValues": [
+          "RKGVS:5:5",
+          "RKGVS:6:6",
+          "RKGVS:4:4",
+          "RKGVS:8:8",
+          "RKGVS:22:22"
+        ],
+        "feature": "compound-evaluation-order"
+      },
+      {
+        "checked": 5,
+        "index": 26,
+        "collections": 0,
+        "maxSteps": 424,
+        "expectedValues": [
+          "RKGNS:5:6",
+          "RKGNS:5:6",
+          "RKGNS:5:6",
+          "RKGNS:5:6",
+          "RKGNS:5:6"
+        ],
+        "nativeValues": [
+          "RKGNS:5:6",
+          "RKGNS:5:6",
+          "RKGNS:5:6",
+          "RKGNS:5:6",
+          "RKGNS:5:6"
+        ],
+        "feature": "postfix-object-coercion-and-setter-result"
+      },
+      {
+        "checked": 5,
+        "index": 27,
+        "collections": 0,
+        "maxSteps": 406,
+        "expectedValues": [
+          "GNS:6:6",
+          "GNS:6:6",
+          "GNS:6:6",
+          "GNS:6:6",
+          "GNS:6:6"
+        ],
+        "nativeValues": [
+          "GNS:6:6",
+          "GNS:6:6",
+          "GNS:6:6",
+          "GNS:6:6",
+          "GNS:6:6"
+        ],
+        "feature": "prefix-object-coercion"
+      },
+      {
+        "checked": 5,
+        "index": 28,
+        "collections": 0,
+        "maxSteps": 447,
+        "expectedValues": [
+          "GVNS:5:5",
+          "GVNS:6:6",
+          "GVNS:4:4",
+          "GVNS:8:8",
+          "GVNS:22:22"
+        ],
+        "nativeValues": [
+          "GVNS:5:5",
+          "GVNS:6:6",
+          "GVNS:4:4",
+          "GVNS:8:8",
+          "GVNS:22:22"
+        ],
+        "feature": "rhs-before-add-coercion"
+      },
+      {
+        "checked": 5,
+        "index": 29,
+        "collections": 0,
+        "maxSteps": 113,
+        "expectedValues": [
+          "G:0",
+          "G:1",
+          "G:-1",
+          "G:3",
+          "G:17"
+        ],
+        "nativeValues": [
+          "G:0",
+          "G:1",
+          "G:-1",
+          "G:3",
+          "G:17"
+        ],
+        "feature": "getter-throw-before-rhs"
+      },
+      {
+        "checked": 5,
+        "index": 30,
+        "collections": 0,
+        "maxSteps": 124,
+        "expectedValues": [
+          "GV:0",
+          "GV:1",
+          "GV:-1",
+          "GV:3",
+          "GV:17"
+        ],
+        "nativeValues": [
+          "GV:0",
+          "GV:1",
+          "GV:-1",
+          "GV:3",
+          "GV:17"
+        ],
+        "feature": "rhs-throw-before-setter"
+      },
+      {
+        "checked": 5,
+        "index": 31,
+        "collections": 0,
+        "maxSteps": 218,
+        "expectedValues": [
+          "GN:0",
+          "GN:1",
+          "GN:-1",
+          "GN:3",
+          "GN:17"
+        ],
+        "nativeValues": [
+          "GN:0",
+          "GN:1",
+          "GN:-1",
+          "GN:3",
+          "GN:17"
+        ],
+        "feature": "postfix-conversion-throw-before-setter"
+      },
+      {
+        "checked": 5,
+        "index": 32,
+        "collections": 0,
+        "maxSteps": 123,
+        "expectedValues": [
+          "GS:0",
+          "GS:1",
+          "GS:-1",
+          "GS:3",
+          "GS:17"
+        ],
+        "nativeValues": [
+          "GS:0",
+          "GS:1",
+          "GS:-1",
+          "GS:3",
+          "GS:17"
+        ],
+        "feature": "setter-throw-discards-assignment-result"
+      },
+      {
+        "checked": 5,
+        "index": 33,
+        "collections": 0,
+        "maxSteps": 176,
+        "expectedValues": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "nativeValues": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "feature": "strict-readonly-update"
+      },
+      {
+        "checked": 5,
+        "index": 34,
+        "collections": 0,
+        "maxSteps": 423,
+        "expectedValues": [
+          "1:2:1",
+          "1:2:1",
+          "1:2:1",
+          "1:2:1",
+          "1:2:1"
+        ],
+        "nativeValues": [
+          "1:2:1",
+          "1:2:1",
+          "1:2:1",
+          "1:2:1",
+          "1:2:1"
+        ],
+        "feature": "sloppy-readonly-update"
+      },
+      {
+        "checked": 5,
+        "index": 35,
+        "collections": 0,
+        "maxSteps": 596,
+        "expectedValues": [
+          "true:true:true:true:0:2",
+          "true:true:true:true:1:3",
+          "true:true:true:true:-1:1",
+          "true:true:true:true:3:5",
+          "true:true:true:true:17:19"
+        ],
+        "nativeValues": [
+          "true:true:true:true:0:2",
+          "true:true:true:true:1:3",
+          "true:true:true:true:-1:1",
+          "true:true:true:true:3:5",
+          "true:true:true:true:17:19"
+        ],
+        "feature": "inherited-getter-setter-receiver"
+      },
+      {
+        "checked": 5,
+        "index": 36,
+        "collections": 0,
+        "maxSteps": 200,
+        "expectedValues": [
+          "G:0:0",
+          "G:0:0",
+          "G:0:0",
+          "G:0:0",
+          "G:0:0"
+        ],
+        "nativeValues": [
+          "G:0:0",
+          "G:0:0",
+          "G:0:0",
+          "G:0:0",
+          "G:0:0"
+        ],
+        "feature": "logical-0"
+      },
+      {
+        "checked": 5,
+        "index": 37,
+        "collections": 0,
+        "maxSteps": 222,
+        "expectedValues": [
+          "GVS:0:0",
+          "GVS:1:1",
+          "GVS:-1:-1",
+          "GVS:3:3",
+          "GVS:17:17"
+        ],
+        "nativeValues": [
+          "GVS:0:0",
+          "GVS:1:1",
+          "GVS:-1:-1",
+          "GVS:3:3",
+          "GVS:17:17"
+        ],
+        "feature": "logical-1"
+      },
+      {
+        "checked": 5,
+        "index": 38,
+        "collections": 0,
+        "maxSteps": 200,
+        "expectedValues": [
+          "G:2:2",
+          "G:2:2",
+          "G:2:2",
+          "G:2:2",
+          "G:2:2"
+        ],
+        "nativeValues": [
+          "G:2:2",
+          "G:2:2",
+          "G:2:2",
+          "G:2:2",
+          "G:2:2"
+        ],
+        "feature": "logical-2"
+      },
+      {
+        "checked": 5,
+        "index": 39,
+        "collections": 0,
+        "maxSteps": 222,
+        "expectedValues": [
+          "GVS:0:0",
+          "GVS:1:1",
+          "GVS:-1:-1",
+          "GVS:3:3",
+          "GVS:17:17"
+        ],
+        "nativeValues": [
+          "GVS:0:0",
+          "GVS:1:1",
+          "GVS:-1:-1",
+          "GVS:3:3",
+          "GVS:17:17"
+        ],
+        "feature": "logical-3"
+      },
+      {
+        "checked": 5,
+        "index": 40,
+        "collections": 0,
+        "maxSteps": 201,
+        "expectedValues": [
+          "G:0:0",
+          "G:0:0",
+          "G:0:0",
+          "G:0:0",
+          "G:0:0"
+        ],
+        "nativeValues": [
+          "G:0:0",
+          "G:0:0",
+          "G:0:0",
+          "G:0:0",
+          "G:0:0"
+        ],
+        "feature": "logical-4"
+      },
+      {
+        "checked": 5,
+        "index": 41,
+        "collections": 0,
+        "maxSteps": 223,
+        "expectedValues": [
+          "GVS:0:0",
+          "GVS:1:1",
+          "GVS:-1:-1",
+          "GVS:3:3",
+          "GVS:17:17"
+        ],
+        "nativeValues": [
+          "GVS:0:0",
+          "GVS:1:1",
+          "GVS:-1:-1",
+          "GVS:3:3",
+          "GVS:17:17"
+        ],
+        "feature": "logical-5"
+      },
+      {
+        "checked": 5,
+        "index": 42,
+        "collections": 0,
+        "maxSteps": 188,
+        "expectedValues": [
+          "0:1",
+          "1:2",
+          "-1:0",
+          "3:4",
+          "17:18"
+        ],
+        "nativeValues": [
+          "0:1",
+          "1:2",
+          "-1:0",
+          "3:4",
+          "17:18"
+        ],
+        "feature": "nested-member-postfix"
+      },
+      {
+        "checked": 5,
+        "index": 43,
+        "collections": 0,
+        "maxSteps": 8725,
+        "expectedValues": [
+          "number:1:5:6",
+          "number:1:5:6",
+          "number:1:5:6",
+          "number:1:5:6",
+          "number:1:5:6"
+        ],
+        "nativeValues": [
+          "number:1:5:6",
+          "number:1:5:6",
+          "number:1:5:6",
+          "number:1:5:6",
+          "number:1:5:6"
+        ],
+        "feature": "result-old-value-converted-once"
+      },
+      {
+        "checked": 5,
+        "index": 44,
+        "collections": 0,
+        "maxSteps": 93,
+        "expectedValues": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "nativeValues": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "feature": "missing-value-postfix"
+      },
+      {
+        "checked": 5,
+        "index": 45,
+        "collections": 0,
+        "maxSteps": 17,
+        "expectedValues": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "nativeValues": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "feature": "nullish-base"
+      }
+    ],
+    "resumptionDispatches": 1047,
+    "nativeReference": "Fresh isolated iframe per input; only explicitly listed object-key read/write conversion fixtures use ES2025 normative expectations, with native differences retained.",
+    "compiler": "QuickJS/Wasm",
+    "semantics": "Computed compound, prefix/postfix and logical assignments retain the original Reference key; GetValue and PutValue perform separate observable key conversions.",
+    "nativeReferenceDifferences": [
+      {
+        "source": "function f(x){let count=0;const key={toString(){count++;return count===1?\"a\":\"b\";}};const o={a:1,b:10};const result=(o[key]+=2);return result+\":\"+o.a+\":\"+o.b+\":\"+count;}",
+        "inputs": [
+          0,
+          1,
+          -1,
+          3,
+          17
+        ],
+        "note": "Reference creation retains the raw name; GetValue and an executed PutValue separately apply ToPropertyKey. Logical short-circuiting has no PutValue.",
+        "fixedExpected": "3:1:3:2",
+        "fixedInput": 3,
+        "fixedNative": "3:3:10:1",
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-evaluate-property-access-with-expression-key",
+        "normativeValues": [
+          "3:1:3:2",
+          "3:1:3:2",
+          "3:1:3:2",
+          "3:1:3:2",
+          "3:1:3:2"
+        ],
+        "nativeValues": [
+          "3:3:10:1",
+          "3:3:10:1",
+          "3:3:10:1",
+          "3:3:10:1",
+          "3:3:10:1"
+        ],
+        "feature": "compound-original-key-second-coercion"
+      },
+      {
+        "source": "function f(x){let count=0;const key={toString(){count++;return count===1?\"a\":\"b\";}};const o={a:1,b:10};const result=o[key]++;return result+\":\"+o.a+\":\"+o.b+\":\"+count;}",
+        "inputs": [
+          0,
+          1,
+          -1,
+          3,
+          17
+        ],
+        "note": "Reference creation retains the raw name; GetValue and an executed PutValue separately apply ToPropertyKey. Logical short-circuiting has no PutValue.",
+        "fixedExpected": "1:1:2:2",
+        "fixedInput": 3,
+        "fixedNative": "1:2:10:1",
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-evaluate-property-access-with-expression-key",
+        "normativeValues": [
+          "1:1:2:2",
+          "1:1:2:2",
+          "1:1:2:2",
+          "1:1:2:2",
+          "1:1:2:2"
+        ],
+        "nativeValues": [
+          "1:2:10:1",
+          "1:2:10:1",
+          "1:2:10:1",
+          "1:2:10:1",
+          "1:2:10:1"
+        ],
+        "feature": "postfix-original-key-second-coercion"
+      },
+      {
+        "source": "function f(x){let count=0;const key={toString(){count++;return count===1?\"a\":\"b\";}};const o={a:1,b:10};const result=(o[key]&&=x);return result+\":\"+o.a+\":\"+o.b+\":\"+count;}",
+        "inputs": [
+          0,
+          1,
+          -1,
+          3,
+          17
+        ],
+        "note": "Reference creation retains the raw name; GetValue and an executed PutValue separately apply ToPropertyKey. Logical short-circuiting has no PutValue.",
+        "fixedExpected": "3:1:3:2",
+        "fixedInput": 3,
+        "fixedNative": "3:3:10:1",
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-evaluate-property-access-with-expression-key",
+        "normativeValues": [
+          "0:1:0:2",
+          "1:1:1:2",
+          "-1:1:-1:2",
+          "3:1:3:2",
+          "17:1:17:2"
+        ],
+        "nativeValues": [
+          "0:0:10:1",
+          "1:1:10:1",
+          "-1:-1:10:1",
+          "3:3:10:1",
+          "17:17:10:1"
+        ],
+        "feature": "logical-assignment-key-coercion-twice"
+      },
+      {
+        "source": "function f(x){let log=\"\";let count=0;const key={toString(){log+=\"K\";if(count++)throw x;return \"a\";}};const o={get a(){log+=\"G\";return {valueOf(){log+=\"R\";return 1;}};},set a(v){log+=\"S\";}};function rhs(){log+=\"V\";return 2;}try{o[key]+=rhs();}catch(e){return log+\":\"+e;}return \"bad\";}",
+        "inputs": [
+          0,
+          1,
+          -1,
+          3,
+          17
+        ],
+        "note": "Reference creation retains the raw name; GetValue and an executed PutValue separately apply ToPropertyKey. Logical short-circuiting has no PutValue.",
+        "fixedExpected": "KGVRK:3",
+        "fixedInput": 3,
+        "fixedNative": "bad",
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-evaluate-property-access-with-expression-key",
+        "normativeValues": [
+          "KGVRK:0",
+          "KGVRK:1",
+          "KGVRK:-1",
+          "KGVRK:3",
+          "KGVRK:17"
+        ],
+        "nativeValues": [
+          "bad",
+          "bad",
+          "bad",
+          "bad",
+          "bad"
+        ],
+        "feature": "second-key-coercion-throws-after-rhs"
+      },
+      {
+        "source": "function f(x){let count=0;const key={toString(){count++;return count===1?\"a\":\"b\";}};const o={a:0,b:10};const result=(o[key]||=x);return result+\":\"+o.a+\":\"+o.b+\":\"+count;}",
+        "inputs": [
+          0,
+          1,
+          -1,
+          3,
+          17
+        ],
+        "note": "Reference creation retains the raw name; GetValue and an executed PutValue separately apply ToPropertyKey. Logical short-circuiting has no PutValue.",
+        "fixedExpected": "3:0:3:2",
+        "fixedInput": 3,
+        "fixedNative": "3:3:10:1",
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-evaluate-property-access-with-expression-key",
+        "normativeValues": [
+          "0:0:0:2",
+          "1:0:1:2",
+          "-1:0:-1:2",
+          "3:0:3:2",
+          "17:0:17:2"
+        ],
+        "nativeValues": [
+          "0:0:10:1",
+          "1:1:10:1",
+          "-1:-1:10:1",
+          "3:3:10:1",
+          "17:17:10:1"
+        ],
+        "feature": "logical-or-assignment-key-coercion-twice"
+      },
+      {
+        "source": "function f(x){let count=0;const key={toString(){count++;return count===1?\"a\":\"b\";}};const o={a:null,b:10};const result=(o[key]??=x);return result+\":\"+o.a+\":\"+o.b+\":\"+count;}",
+        "inputs": [
+          0,
+          1,
+          -1,
+          3,
+          17
+        ],
+        "note": "Reference creation retains the raw name; GetValue and an executed PutValue separately apply ToPropertyKey. Logical short-circuiting has no PutValue.",
+        "fixedExpected": "3:null:3:2",
+        "fixedInput": 3,
+        "fixedNative": "3:3:10:1",
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-evaluate-property-access-with-expression-key",
+        "normativeValues": [
+          "0:null:0:2",
+          "1:null:1:2",
+          "-1:null:-1:2",
+          "3:null:3:2",
+          "17:null:17:2"
+        ],
+        "nativeValues": [
+          "0:0:10:1",
+          "1:1:10:1",
+          "-1:-1:10:1",
+          "3:3:10:1",
+          "17:17:10:1"
+        ],
+        "feature": "logical-nullish-assignment-key-coercion-twice"
+      }
+    ],
+    "inputs": [
+      0,
+      1,
+      -1,
+      3,
+      17
+    ],
+    "checked": 231
+  }
+}

@@ -1,3 +1,16 @@
+import { boxingPhase5BoundarySources } from './boxing-cases.js';
+import { stringExtractArrayBoundaryCases } from './string-extract-cases.js';
+import { propertyKeyConversionSources, propertyKeyConversionResumptionSource, propertyKeyNormativeExpectations } from './property-key-conversion-cases.js';
+import { languageScopeCases } from './language-scope-cases.js';
+import { stringSearchCases, stringSearchResumptionSource } from './string-search-cases.js';
+import { stringSearchIntegrationSources } from './string-search-integration-cases.js';
+import { globalConstantCases } from './global-constant-cases.js';
+import { objectOperationSources, objectOperationDirectedCases, objectOperationNormativeExpectations, objectOperationNegativeSources } from './object-operation-cases.js';
+import { arrayBuiltinMetadataSources } from './array-builtin-metadata-cases.js';
+import { arrayExtendedSources, arrayExtendedNegativeSources } from './array-extended-cases.js';
+import { arraySearchSources } from './array-search-cases.js';
+import { objectStaticDescriptorSources } from './object-static-descriptor-cases.js';
+import { arrayMethodSources } from './array-method-cases.js';
 export const sources = [
   'function f(x) { return x + 1; }',
   'function f(x) { const o = {value:x}; function inc(v) { return v+1; } return inc(o.value); }',
@@ -356,10 +369,150 @@ export const sources = [
   "function f(x) { const p=arguments;const o=Object.create(p);o[0]=42;return x; }",
   "function f(x) { const p=arguments;const o=Object.create(p);x=42;return o[0]; }",
   "function f(x) { function g(a){return arguments[2];}return g(1,2,x); }",
+  "function f(x){let a=[];Object.defineProperty(a,\"0\",{value:x});return a[0];}",
+  "function f(x){let a=[];Object.defineProperty(a,\"3\",{get(){return x;}});return a.length;}",
+  "function f(x){let a=[];Object.defineProperty(a,\"v\",{value:x});return a.v;}",
+  "function f(x){let a=[x,1,2];Object.defineProperty(a,\"length\",{value:1});return a.length===1&&!(\"1\" in a)&&Object.is(a[0],x);}",
+  "function f(x){let a=[x,1,2];Object.defineProperty(a,\"length\",{value:0});return a.length;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{value:5});return a.length===5&&!(\"4\" in a);}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{writable:false});return Object.getOwnPropertyDescriptor(a,\"length\").writable;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{writable:false});a.length=0;return a.length;}",
+  "function f(x){\"use strict\";let a=[x];Object.defineProperty(a,\"length\",{writable:false});try{a.length=0;}catch(e){return e instanceof TypeError;}return false;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{writable:false});a[1]=42;return a.length===1&&!(\"1\" in a);}",
+  "function f(x){\"use strict\";let a=[x];Object.defineProperty(a,\"length\",{writable:false});try{a[1]=42;}catch(e){return e instanceof TypeError;}return false;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{writable:false});a[0]=42;return a[0];}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{writable:false});try{Object.defineProperty(a,\"1\",{value:42});}catch(e){return e instanceof TypeError;}return false;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{writable:false});Object.defineProperty(a,\"length\",{value:1});return a.length;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{writable:false});try{Object.defineProperty(a,\"length\",{writable:true});}catch(e){return e instanceof TypeError;}return false;}",
+  "function f(x){let a=[x];try{Object.defineProperty(a,\"length\",{enumerable:true});}catch(e){return e instanceof TypeError;}return false;}",
+  "function f(x){let a=[x];try{Object.defineProperty(a,\"length\",{get(){return 0;}});}catch(e){return e instanceof TypeError;}return false;}",
+  "function f(x){let a=[0,1,2,3,4];Object.defineProperty(a,\"2\",{configurable:false});a.length=0;return a.length===3&&!(\"3\" in a)&&!(\"4\" in a)&&(\"1\" in a);}",
+  "function f(x){\"use strict\";let a=[0,1,2,3,4];Object.defineProperty(a,\"2\",{configurable:false});try{a.length=0;}catch(e){return e instanceof TypeError&&a.length===3&&!(\"4\" in a);}return false;}",
+  "function f(x){let a=[0,1,2,3,4];Object.defineProperty(a,\"2\",{configurable:false});try{Object.defineProperty(a,\"length\",{value:0,writable:false});}catch(e){return e instanceof TypeError&&a.length===3&&!Object.getOwnPropertyDescriptor(a,\"length\").writable&&!(\"4\" in a);}return false;}",
+  "function f(x){let a=[];a[4]=4;Object.defineProperty(a,\"1\",{value:1});Object.defineProperty(a,\"3\",{value:3});a.length=0;return a.length===4&&!(\"4\" in a)&&(\"1\" in a);}",
+  "function f(x){let a=[x];Object.preventExtensions(a);try{Object.defineProperty(a,\"2\",{value:3});}catch(e){return e instanceof TypeError&&a.length===1;}return false;}",
+  "function f(x){let a=[x];Object.preventExtensions(a);Object.defineProperty(a,\"length\",{value:5});return a.length;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{value:null});return a.length;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{value:-0});return Object.is(a.length,0);}",
+  "function f(x){let a=[];try{Object.defineProperty(a,\"length\",{value:0.5});}catch(e){return e instanceof RangeError;}return false;}",
+  "function f(x){let a=[];Object.defineProperty(a,\"length\",{writable:false});try{Object.defineProperty(a,\"length\",{value:0.5});}catch(e){return e instanceof RangeError;}return false;}",
+  "function f(x){let a=[];Object.defineProperty(a,\"3\",{get(){return x;},configurable:true});return a[3];}",
+  "function f(x){let a=[];Object.defineProperty(a,\"0\",{set(v){this.v=v;}});a[0]=x;return a.v;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"0\",{writable:false});a[0]=42;return a[0];}",
+  "function f(x){let a=[];Object.defineProperty(a,\"4294967295\",{value:x});return a.length;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{value:0,writable:false});for(let i=0;i<1200;i++){let junk={i:i};}return !Object.getOwnPropertyDescriptor(a,\"length\").writable;}",
+  "function f(x){let a=[x];let o=Object.create(a);return o.length;}",
+  "function f(x){let a=[x];let o=Object.create(a);o.length=5;return o.length===5&&a.length===1;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{writable:false});let o=Object.create(a);o.length=5;return o.length===1&&!Object.hasOwn(o,\"length\");}",
+  "function f(x){\"use strict\";let a=[x];Object.defineProperty(a,\"length\",{writable:false});let o=Object.create(a);try{o.length=5;}catch(e){return e instanceof TypeError;}return false;}",
+  "function f(x){let a=[x];Object.defineProperty(a,\"length\",{writable:false});let o=Object.create(a);Object.defineProperty(o,\"length\",{value:5});return o.length;}",
+  "function f(x){function g(a){return a;}return g.apply(null,{get length(){return 1;},0:x});}",
+  "function f(x){function g(a){return a;}return g.apply(null,{length:1,get 0(){return x;}});}",
+  "function f(x){let order=\"\";function g(a,b){order+=\"c\";return a;}g.apply(null,{get length(){order+=\"l\";return 2;},get 0(){order+=\"0\";return x;},get 1(){order+=\"1\";return x;}});return order;}",
+  "function f(x){let n=0;function g(a){return a;}g.apply(null,{get length(){n++;return 1;},get 0(){n+=10;return x;}});return n;}",
+  "function f(x){function g(a){return a;}const p={get length(){return 1;},get 0(){return this.v;}};const a=Object.create(p);a.v=x;return g.apply(null,a);}",
+  "function f(x){function g(a){return a;}try{return g.apply(null,{get length(){throw x;}});}catch(e){return e;}}",
+  "function f(x){function g(a){return a;}try{return g.apply(null,{length:1,get 0(){throw x;}});}catch(e){return e;}}",
+  "function f(x){let n=0;try{Function.prototype.apply.call({},null,{get length(){n++;return 1;}});}catch(e){return e instanceof TypeError&&n===0;}return false;}",
+  "function f(x){function g(a){return this.v;}return g.apply({v:x},{get length(){return 1;},get 0(){return 42;}});}",
+  "function f(x){function g(a){return a;}const args={get length(){Function.prototype.apply=function(){throw 42;};return 1;},0:x};return g.apply(null,args);}",
+  "function f(x){function g(a){return a;}Object.defineProperty(Array.prototype,\"0\",{set(v){throw 42;}});return g.apply(null,{length:1,0:x});}",
+  "function f(x){function g(a,b){return b;}const args={length:2,get 0(){this[1]=x;return 0;},1:42};return g.apply(null,args);}",
+  "function f(x){function g(){return arguments.length;}return g.apply(null,{get length(){return 1.9;},0:x});}",
+  "function f(x){function g(){return arguments.length;}return g.apply(null,{get length(){return -1;},get 0(){throw 42;}});}",
+  "function f(x){function g(a){return a;}return g.apply(null,{get length(){return true;},0:x});}",
+  "function f(x){function g(a){return a;}return g.apply(null,{length:1,get 0(){for(let i=0;i<1200;i++){let junk={i:i};}return x;}});}",
+  "function f(x){function g(a,b){return b;}const b=g.bind(null,42);return b.apply(null,{length:1,get 0(){return x;}});}",
+  "function f(x){return Object.is.apply(null,{length:2,get 0(){return x;},get 1(){return x;}});}",
+  "function f(x){function g(a){return a;}return g.apply.apply(g,[null,{length:1,get 0(){return x;}}]);}",
+  "function f(x){function g(){return arguments[15];}return g.apply(null,{length:16,get 15(){return x;}});}",
+  "function f(x){function g(){}Object.defineProperty(g,\"name\",{get(){return \"renamed\";}});return g.bind(null).name;}",
+  "function f(x){function g(){}Object.defineProperty(g,\"length\",{get(){return 3;}});return g.bind(null,x).length;}",
+  "function f(x){let order=\"\";function g(){}Object.defineProperty(g,\"length\",{get(){order+=\"l\";return 3;}});Object.defineProperty(g,\"name\",{get(){order+=\"n\";return \"g\";}});g.bind(null,x);return order;}",
+  "function f(x){let n=0;function g(){}Object.defineProperty(g,\"length\",{get(){n++;return 3;}});Object.defineProperty(g,\"name\",{get(){n+=10;return \"g\";}});g.bind(null);return n;}",
+  "function f(x){function g(){}Object.defineProperty(g,\"length\",{get(){throw x;}});try{return g.bind(null).name;}catch(e){return e;}}",
+  "function f(x){function g(){}Object.defineProperty(g,\"name\",{get(){throw x;}});try{return g.bind(null).name;}catch(e){return e;}}",
+  "function f(x){let n=0;function g(){}Object.defineProperty(g,\"length\",{get(){throw x;}});Object.defineProperty(g,\"name\",{get(){n++;return \"g\";}});try{g.bind(null);}catch(e){return n;}return -1;}",
+  "function f(x){function g(){}const p=Object.create(Function.prototype);const q=Object.create(Function.prototype);Object.setPrototypeOf(g,p);Object.defineProperty(g,\"length\",{get(){Object.setPrototypeOf(g,q);return 0;}});const b=g.bind(null);return Object.getPrototypeOf(b)===p;}",
+  "function f(x){function g(){}const p=Object.getPrototypeOf(g);Object.defineProperty(g,\"name\",{get(){Object.setPrototypeOf(g,null);return \"g\";}});const b=g.bind(null);return Object.getPrototypeOf(b)===p;}",
+  "function f(x){function g(){}Object.defineProperty(g,\"length\",{get(){for(let i=0;i<1200;i++){let junk={i:i};}return 3;}});return g.bind(null,x).length;}",
+  "function f(x){function g(a){return a;}Object.defineProperty(g,\"name\",{get(){for(let i=0;i<1200;i++){let junk={i:i};}return \"g\";}});return g.bind(null,x)();}",
+  "function f(x){function g(){}Object.defineProperty(g,\"length\",{get(){return \"3\";}});return g.bind(null).length;}",
+  "function f(x){function g(){}Object.defineProperty(g,\"name\",{get(){return x;}});return g.bind(null).name;}",
+  "function f(x){let n=0;function g(){}delete g.length;Object.defineProperty(Function.prototype,\"length\",{get(){n++;return 10;}});const b=g.bind(null);return n===0&&b.length===0;}",
+  "function f(x){function g(a){return a;}Object.defineProperty(g,\"length\",{get(){return 1;}});const b=g.bind(null,x);return b();}",
+  "function f(x){function C(a){this.v=a;}Object.defineProperty(C,\"name\",{get(){return \"C\";}});const B=C.bind(null,x);return new B().v;}",
+  "function f(x){let n=0;try{Function.prototype.bind.call({get length(){n++;return 1;}});}catch(e){return e instanceof TypeError&&n===0;}return false;}",
+  "function f(x){function g(){}Object.defineProperty(g,\"length\",{get(){return Infinity;}});return g.bind(null,x).length;}",
+  "function f(x){function g(){}Object.defineProperty(g,\"length\",{get(){return -Infinity;}});return g.bind(null,x).length;}",
+  "function f(x){function g(){}Object.defineProperty(g,\"length\",{get(){return 3.9;}});return g.bind(null,x).length;}",
+  "function f(x){function g(){}Object.defineProperty(g,\"name\",{get(){Function.prototype.bind=function(){throw 42;};return \"g\";}});return g.bind(null).name;}",
+  "function f(x){function g(){}const b=g.bind(null);const d=Object.getOwnPropertyDescriptor(b,\"name\");return !d.writable&&!d.enumerable&&d.configurable;}",
+  "function f(x){return Number(\"\");}",
+  "function f(x){return Number(\"0.1\");}",
+  "function f(x){return Number(\"9007199254740993\");}",
+  "function f(x){return Number(\"9007199254740995\");}",
+  "function f(x){return Number(\"1.7976931348623157e308\");}",
+  "function f(x){return Number(\"1.7976931348623159e308\");}",
+  "function f(x){return Number(\"2.2250738585072011e-308\");}",
+  "function f(x){return Number(\"5e-324\");}",
+  "function f(x){return Number(\"2.4703282292062327e-324\");}",
+  "function f(x){return Number(\"2.4703282292062328e-324\");}",
+  "function f(x){return Number(\"-0\");}",
+  "function f(x){return Number(\"-1e-9999\");}",
+  "function f(x){return Number(\"+Infinity\");}",
+  "function f(x){return Number(\"0x1fffffffffffff\");}",
+  "function f(x){return Number(\"0Xffffffffffffffff\");}",
+  "function f(x){return Number(\"0b101\");}",
+  "function f(x){return Number(\"0o777\");}",
+  "function f(x){return Number(\"+0x1\");}",
+  "function f(x){return Number(\"1e\");}",
+  "function f(x){return Number(\"1.2.3\");}",
+  "function f(x){return Number(\"\\ufeff\\u2028-17\\u3000\");}",
+  "function f(x){return Number(\"1.00000000000000011102230246251565404236316680908203125\");}",
+  "function f(x){return Number(\"1.00000000000000011102230246251565404236316680908203126\");}",
+  "function f(x){return Number(x);}",
+  "function f(x){return Number();}",
+  "function f(x){return Number(undefined);}",
+  "function f(x){return Number(null);}",
+  "function f(x){return Number(true);}",
+  "function f(x){return Number({valueOf(){return x;}});}",
+  "function f(x){return Number({valueOf(){return {};},toString(){return \"0.1\";}});}",
+  "function f(x){let order=\"\";const v=Number({get valueOf(){order+=\"v\";return function(){order+=\"c\";return {};};},get toString(){order+=\"s\";return function(){order+=\"t\";return \"1\";};}});return order;}",
+  "function f(x){try{return Number({valueOf(){throw x;}});}catch(e){return e;}}",
+  "function f(x){try{return Number({valueOf(){return {};},toString(){return {};}});}catch(e){return e instanceof TypeError;}}",
+  "function f(x){function g(a){return a;}return g.apply(null,{get length(){return \"1\";},0:x});}",
+  "function f(x){function g(a){return a;}return g.apply(null,{length:{valueOf(){return 1;}},0:x});}",
+  "function f(x){function valueOf(){return \"1\";}valueOf.call=function(){throw 42;};return Number({valueOf:valueOf});}",
+  "function f(x){let a=[x,1,2];a.length=\"1\";return a.length;}",
+  "function f(x){let a=[x,1,2];Object.defineProperty(a,\"length\",{value:\"1\"});return a.length;}",
+  "function f(x){let a=[x,1,2];a.length={valueOf(){return 1;}};return a.length;}",
+  "function f(x){let a=[x,1,2];Object.defineProperty(a,\"length\",{value:{valueOf(){return 1;}}});return a.length;}",
+  "function f(x){let n=0;let a=[x,1,2];a.length={valueOf(){n++;return 1;}};return n;}",
+  "function f(x){let n=0;let a=[x,1,2];Object.defineProperty(a,\"length\",{value:{valueOf(){n++;return 1;}}});return n;}",
+  "function f(x){let n=0;let a=[x,1,2];a.length={valueOf(){n++;return n===1?4294967297:1;}};return a.length;}",
+  "function f(x){let n=0;let a=[x,1,2];try{a.length={valueOf(){return ++n;}};}catch(e){return e instanceof RangeError&&a.length===3&&n===2;}return false;}",
+  "function f(x){let n=0;let a=[x];Object.defineProperty(a,\"length\",{writable:false});a.length={valueOf(){n++;return 0;}};return n;}",
+  "function f(x){\"use strict\";let n=0;let a=[x];Object.defineProperty(a,\"length\",{writable:false});try{a.length={valueOf(){n++;return 0;}};}catch(e){return e instanceof TypeError&&n===0;}return false;}",
+  "function f(x){let a=[0,1,2,3];Object.defineProperty(a,\"2\",{configurable:false});a.length=\"0\";return a.length===3&&!(\"3\" in a);}",
+  "function f(x){\"use strict\";let a=[0,1,2,3];Object.defineProperty(a,\"2\",{configurable:false});try{a.length=\"0\";}catch(e){return e instanceof TypeError&&a.length===3&&!(\"3\" in a);}return false;}",
+  "function f(x){let a=[x];a.length={valueOf(){Object.defineProperty(a,\"length\",{writable:false});return 1;}};return a.length;}",
+  "function f(x){\"use strict\";let a=[x];a.length={valueOf(){Object.defineProperty(a,\"length\",{writable:false});return 1;}};return a.length;}",
+  "function f(x){let a=[x,1];a.length={valueOf(){Object.defineProperty(a,\"length\",{writable:false});return 1;}};return a.length;}",
+  "function f(x){\"use strict\";let a=[x,1];try{a.length={valueOf(){Object.defineProperty(a,\"length\",{writable:false});return 1;}};}catch(e){return e instanceof TypeError&&a.length===2;}return false;}",
+  "function f(x){let a=[x];return a.length=\"0\";}",
+  "function f(x){let a=[x];try{a.length=\"1.5\";}catch(e){return e instanceof RangeError;}return false;}",
+  "function f(x){let a=[x];try{Object.defineProperty(a,\"length\",{value:\"1.5\"});}catch(e){return e instanceof RangeError;}return false;}",
+  "function f(x){let a=[x];try{a.length={valueOf(){throw x;}};}catch(e){return e;}}",
+  "function f(x){let a=[x];a.length={valueOf(){for(let i=0;i<1200;i++){let junk={i:i};}return 0;}};return a.length;}",
+  ...arrayMethodSources,
+  ...arraySearchSources,
+  ...objectStaticDescriptorSources,
 ];
 export const inputs = [-17, -0, 0, 0.1, 2, 100, Number.MIN_VALUE, Infinity, NaN];
 
 export const stringSources = [
+  'function f(x){function g(){} return g.toString();}',
     'function f(x) { return x+"!"; }',
     'function f(x) { return x.charCodeAt(0); }',
     'function f(x) { return x.charAt(0); }',
@@ -368,3 +521,350 @@ export const stringSources = [
     'function f(x) { let o={};o[x]=3;let i=0;while(i<1200){let junk={a:i};i++;}return o[x]; }',
   ];
 export const stringInputs = ['', 'hello', '😀', '\ud800', 'length', 'toString', 'answer', '0', '01'];
+
+// ES2025 checks callability before reading the apply argument list. Safari 26.4
+// currently reads the length getter first; record the discrepancy in reports.
+export const specExpectations = new Map([["function f(x){let n=0;try{Function.prototype.apply.call({},null,{get length(){n++;return 1;}});}catch(e){return e instanceof TypeError&&n===0;}return false;}", {
+  value: true,
+  spec: "https://tc39.es/ecma262/2025/multipage/fundamental-objects.html#sec-function.prototype.apply",
+  note: "Reject a non-callable receiver before reading argument-list getters.",
+}]]);
+
+// BoundFunctionCreate captures the prototype before bind reads length/name.
+specExpectations.set("function f(x){function g(){}const p=Object.create(Function.prototype);const q=Object.create(Function.prototype);Object.setPrototypeOf(g,p);Object.defineProperty(g,\"length\",{get(){Object.setPrototypeOf(g,q);return 0;}});const b=g.bind(null);return Object.getPrototypeOf(b)===p;}", { value: true, spec: 'https://tc39.es/ecma262/2025/multipage/fundamental-objects.html#sec-function.prototype.bind', note: 'Capture the target prototype before running length/name getters.' });
+specExpectations.set("function f(x){function g(){}const p=Object.getPrototypeOf(g);Object.defineProperty(g,\"name\",{get(){Object.setPrototypeOf(g,null);return \"g\";}});const b=g.bind(null);return Object.getPrototypeOf(b)===p;}", { value: true, spec: 'https://tc39.es/ecma262/2025/multipage/fundamental-objects.html#sec-function.prototype.bind', note: 'Capture the target prototype before running length/name getters.' });
+
+specExpectations.set("function f(x){\"use strict\";let a=[x];a.length={valueOf(){Object.defineProperty(a,\"length\",{writable:false});return 1;}};return a.length;}", { value: 1, spec: 'https://tc39.es/ecma262/2025/multipage/ordinary-and-exotic-objects-behaviours.html#sec-arraysetlength', note: 'Read the length descriptor after value conversion; redefining the same length remains valid when conversion makes it nonwritable.' });
+
+// Unary conversion executes guest callbacks and resumes through the normal VM frames.
+sources.push(
+"function f(x){return +\" -0 \";}",
+"function f(x){return +\"3.5\";}",
+"function f(x){return +\"0xff\";}",
+"function f(x){return +\"invalid\";}",
+"function f(x){return +({valueOf(){return x;}});}",
+"function f(x){return +({valueOf(){return {};},toString(){return \"12.5\";}});}",
+"function f(x){let n=0;const v={get valueOf(){n++;return function(){n++;return x;};}};const r=+v;return n===2;}",
+"function f(x){try{return +{valueOf(){throw x;}};}catch(e){return e;}}",
+"function f(x){try{return +{valueOf(){return {};},toString(){return {};}};}catch(e){return e instanceof TypeError;}}",
+"function f(x){return -\" -0 \";}",
+"function f(x){return -\"3.5\";}",
+"function f(x){return -\"0xff\";}",
+"function f(x){return -\"invalid\";}",
+"function f(x){return -({valueOf(){return x;}});}",
+"function f(x){return -({valueOf(){return {};},toString(){return \"12.5\";}});}",
+"function f(x){let n=0;const v={get valueOf(){n++;return function(){n++;return x;};}};const r=-v;return n===2;}",
+"function f(x){try{return -{valueOf(){throw x;}};}catch(e){return e;}}",
+"function f(x){try{return -{valueOf(){return {};},toString(){return {};}};}catch(e){return e instanceof TypeError;}}",
+"function f(x){return ~\" -0 \";}",
+"function f(x){return ~\"3.5\";}",
+"function f(x){return ~\"0xff\";}",
+"function f(x){return ~\"invalid\";}",
+"function f(x){return ~({valueOf(){return x;}});}",
+"function f(x){return ~({valueOf(){return {};},toString(){return \"12.5\";}});}",
+"function f(x){let n=0;const v={get valueOf(){n++;return function(){n++;return x;};}};const r=~v;return n===2;}",
+"function f(x){try{return ~{valueOf(){throw x;}};}catch(e){return e;}}",
+"function f(x){try{return ~{valueOf(){return {};},toString(){return {};}};}catch(e){return e instanceof TypeError;}}"
+);
+
+sources.push(
+  'function f(x){let n=0;for(let i=0;i<80;i++){const v={valueOf(){return x;}};const r=+v;if(Object.is(r,x))n++;}return n;}',
+  'function f(x){let n=0;const v={valueOf(){n++;return "2.5";}};const r=-(+v);return n===1&&r===-2.5;}',
+  'function f(x){Number=function(){throw 99;};return +"2.5";}',
+  'function f(x){function convert(){return "2.5";}convert.call=function(){throw 99;};Function.prototype.call=function(){throw 88;};return -{valueOf:convert};}'
+);
+
+sources.push(
+"function f(x){return \"12.5\"-x;}",
+"function f(x){return x-{valueOf(){return \"2\";}};}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return x;}},b={valueOf(){order+=\"b\";return \"2\";}};const r=a-b;return order===\"ab\"&&Object.is(r,x-2);}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}-{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"12.5\"*x;}",
+"function f(x){return x*{valueOf(){return \"2\";}};}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return x;}},b={valueOf(){order+=\"b\";return \"2\";}};const r=a*b;return order===\"ab\"&&Object.is(r,x*2);}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}*{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"12.5\"/x;}",
+"function f(x){return x/{valueOf(){return \"2\";}};}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return x;}},b={valueOf(){order+=\"b\";return \"2\";}};const r=a/b;return order===\"ab\"&&Object.is(r,x/2);}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}/{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"12.5\"%x;}",
+"function f(x){return x%{valueOf(){return \"2\";}};}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return x;}},b={valueOf(){order+=\"b\";return \"2\";}};const r=a%b;return order===\"ab\"&&Object.is(r,x%2);}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}%{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"12.5\"&x;}",
+"function f(x){return x&{valueOf(){return \"2\";}};}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return x;}},b={valueOf(){order+=\"b\";return \"2\";}};const r=a&b;return order===\"ab\"&&Object.is(r,x&2);}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}&{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"12.5\"|x;}",
+"function f(x){return x|{valueOf(){return \"2\";}};}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return x;}},b={valueOf(){order+=\"b\";return \"2\";}};const r=a|b;return order===\"ab\"&&Object.is(r,x|2);}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}|{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"12.5\"^x;}",
+"function f(x){return x^{valueOf(){return \"2\";}};}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return x;}},b={valueOf(){order+=\"b\";return \"2\";}};const r=a^b;return order===\"ab\"&&Object.is(r,x^2);}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}^{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"12.5\"<<x;}",
+"function f(x){return x<<{valueOf(){return \"2\";}};}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return x;}},b={valueOf(){order+=\"b\";return \"2\";}};const r=a<<b;return order===\"ab\"&&Object.is(r,x<<2);}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}<<{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"12.5\">>x;}",
+"function f(x){return x>>{valueOf(){return \"2\";}};}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return x;}},b={valueOf(){order+=\"b\";return \"2\";}};const r=a>>b;return order===\"ab\"&&Object.is(r,x>>2);}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}>>{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"12.5\">>>x;}",
+"function f(x){return x>>>{valueOf(){return \"2\";}};}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return x;}},b={valueOf(){order+=\"b\";return \"2\";}};const r=a>>>b;return order===\"ab\"&&Object.is(r,x>>>2);}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}>>>{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}"
+);
+
+sources.push(
+"function f(x){let v=\"2.5\";return ++v;}",
+"function f(x){let n=0;let v={valueOf(){n++;return x;}};const old=++v;return n===1&&typeof v===\"number\";}",
+"function f(x){let value=\"2.5\",order=\"\";const o={get v(){order+=\"g\";return value;},set v(n){order+=\"s\";value=n;}};const result=++o.v;return order===\"gs\"&&typeof value===\"number\";}",
+"function f(x){let v={valueOf(){throw x;}};const old=v;try{const n=++v;}catch(e){return v===old&&Object.is(e,x);}return false;}",
+"function f(x){let v=\"2.5\";return v++;}",
+"function f(x){let n=0;let v={valueOf(){n++;return x;}};const old=v++;return n===1&&typeof v===\"number\";}",
+"function f(x){let value=\"2.5\",order=\"\";const o={get v(){order+=\"g\";return value;},set v(n){order+=\"s\";value=n;}};const result=o.v++;return order===\"gs\"&&typeof value===\"number\";}",
+"function f(x){let v={valueOf(){throw x;}};const old=v;try{const n=v++;}catch(e){return v===old&&Object.is(e,x);}return false;}",
+"function f(x){let v=\"2.5\";v++;return v;}",
+"function f(x){let v={valueOf(){v=99;return x;}};v++;return v;}",
+"function f(x){let v=\"2.5\";return --v;}",
+"function f(x){let n=0;let v={valueOf(){n++;return x;}};const old=--v;return n===1&&typeof v===\"number\";}",
+"function f(x){let value=\"2.5\",order=\"\";const o={get v(){order+=\"g\";return value;},set v(n){order+=\"s\";value=n;}};const result=--o.v;return order===\"gs\"&&typeof value===\"number\";}",
+"function f(x){let v={valueOf(){throw x;}};const old=v;try{const n=--v;}catch(e){return v===old&&Object.is(e,x);}return false;}",
+"function f(x){let v=\"2.5\";return v--;}",
+"function f(x){let n=0;let v={valueOf(){n++;return x;}};const old=v--;return n===1&&typeof v===\"number\";}",
+"function f(x){let value=\"2.5\",order=\"\";const o={get v(){order+=\"g\";return value;},set v(n){order+=\"s\";value=n;}};const result=o.v--;return order===\"gs\"&&typeof value===\"number\";}",
+"function f(x){let v={valueOf(){throw x;}};const old=v;try{const n=v--;}catch(e){return v===old&&Object.is(e,x);}return false;}",
+"function f(x){let v=\"2.5\";v--;return v;}",
+"function f(x){let v={valueOf(){v=99;return x;}};v--;return v;}"
+);
+
+sources.push(
+ 'function f(x){let v="2.5";const old=v++;return old===2.5&&v===3.5;}',
+ 'function f(x){let v="2.5";const old=v--;return old===2.5&&v===1.5;}',
+ 'function f(x){let v="2.5";const result=++v;return result===3.5&&v===3.5;}',
+ 'function f(x){let v="2.5";const result=--v;return result===1.5&&v===1.5;}',
+ 'function f(x){let v={valueOf(){for(let i=0;i<180;i++){const trash={i};}return x;}};const old=v++;return Object.is(old,x)&&Object.is(v,x+1);}',
+ 'function f(x){let v={valueOf(){for(let i=0;i<180;i++){const trash={i};}return x;}};v--;return Object.is(v,x-1);}'
+);
+
+sources.push(
+"function f(x){return \"2\"<10;}",
+"function f(x){return \"invalid\"<0;}",
+"function f(x){return null<\"0\";}",
+"function f(x){return undefined<\"0\";}",
+"function f(x){return ({valueOf(){return \"2\";}})<({valueOf(){return \"10\";}});}",
+"function f(x){return ({valueOf(){return x;}})<\"2\";}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return \"2\";}},b={valueOf(){order+=\"b\";return \"10\";}};const result=a<b;return order===\"ab\"&&result===(\"2\"<\"10\");}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}<{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"2\"<=10;}",
+"function f(x){return \"invalid\"<=0;}",
+"function f(x){return null<=\"0\";}",
+"function f(x){return undefined<=\"0\";}",
+"function f(x){return ({valueOf(){return \"2\";}})<=({valueOf(){return \"10\";}});}",
+"function f(x){return ({valueOf(){return x;}})<=\"2\";}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return \"2\";}},b={valueOf(){order+=\"b\";return \"10\";}};const result=a<=b;return order===\"ab\"&&result===(\"2\"<=\"10\");}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}<={valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"2\">10;}",
+"function f(x){return \"invalid\">0;}",
+"function f(x){return null>\"0\";}",
+"function f(x){return undefined>\"0\";}",
+"function f(x){return ({valueOf(){return \"2\";}})>({valueOf(){return \"10\";}});}",
+"function f(x){return ({valueOf(){return x;}})>\"2\";}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return \"2\";}},b={valueOf(){order+=\"b\";return \"10\";}};const result=a>b;return order===\"ab\"&&result===(\"2\">\"10\");}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}>{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return \"2\">=10;}",
+"function f(x){return \"invalid\">=0;}",
+"function f(x){return null>=\"0\";}",
+"function f(x){return undefined>=\"0\";}",
+"function f(x){return ({valueOf(){return \"2\";}})>=({valueOf(){return \"10\";}});}",
+"function f(x){return ({valueOf(){return x;}})>=\"2\";}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return \"2\";}},b={valueOf(){order+=\"b\";return \"10\";}};const result=a>=b;return order===\"ab\"&&result===(\"2\">=\"10\");}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}>={valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){return (\"2\")==(2);}",
+"function f(x){return (\"0\")==(false);}",
+"function f(x){return (\"invalid\")==(NaN);}",
+"function f(x){return (null)==(({valueOf(){throw 99;}}));}",
+"function f(x){return (undefined)==(({valueOf(){throw 99;}}));}",
+"function f(x){return (({valueOf(){return \"2\";}}))==(2);}",
+"function f(x){return (2)==(({valueOf(){return \"2\";}}));}",
+"function f(x){return (({valueOf(){return false;}}))==(false);}",
+"function f(x){return (({valueOf(){throw 99;}}))==(({valueOf(){throw 88;}}));}",
+"function f(x){return (\"-0\")==(0);}",
+"function f(x){return (({valueOf(){return x;}}))==(x);}",
+"function f(x){return (function(){})==(({valueOf(){throw 99;}}));}",
+"function f(x){let n=0;const a={valueOf(){n++;return \"2\";}};const r=a==2;return n===1;}",
+"function f(x){try{const r=({valueOf(){throw x;}})==1;}catch(e){return e;}return 99;}",
+"function f(x){return (\"2\")!=(2);}",
+"function f(x){return (\"0\")!=(false);}",
+"function f(x){return (\"invalid\")!=(NaN);}",
+"function f(x){return (null)!=(({valueOf(){throw 99;}}));}",
+"function f(x){return (undefined)!=(({valueOf(){throw 99;}}));}",
+"function f(x){return (({valueOf(){return \"2\";}}))!=(2);}",
+"function f(x){return (2)!=(({valueOf(){return \"2\";}}));}",
+"function f(x){return (({valueOf(){return false;}}))!=(false);}",
+"function f(x){return (({valueOf(){throw 99;}}))!=(({valueOf(){throw 88;}}));}",
+"function f(x){return (\"-0\")!=(0);}",
+"function f(x){return (({valueOf(){return x;}}))!=(x);}",
+"function f(x){return (function(){})!=(({valueOf(){throw 99;}}));}",
+"function f(x){let n=0;const a={valueOf(){n++;return \"2\";}};const r=a!=2;return n===1;}",
+"function f(x){try{const r=({valueOf(){throw x;}})!=1;}catch(e){return e;}return 99;}"
+);
+
+sources.push(
+"function f(x){return \"v\"+(x|0);}",
+"function f(x){return (x|0)+\"v\";}",
+"function f(x){return null+\"v\";}",
+"function f(x){return true+\"v\";}",
+"function f(x){return undefined+\"v\";}",
+"function f(x){return ({valueOf(){return x;}})+2;}",
+"function f(x){return ({valueOf(){return \"v\";}})+(x|0);}",
+"function f(x){return ({valueOf(){return {};},toString(){return \"v\";}})+false;}",
+"function f(x){let order=\"\";const a={valueOf(){order+=\"a\";return \"v\";}},b={valueOf(){order+=\"b\";return x|0;}};const result=a+b;return order===\"ab\"&&result===\"v\"+(x|0);}",
+"function f(x){let v=\"v\";v+=x|0;return v;}",
+"function f(x){let v={valueOf(){return x;}};v+=2;return v;}",
+"function f(x){let v={valueOf(){v=99;return x;}};v+=2;return v;}",
+"function f(x){let n=0;try{const r={valueOf(){throw x;}}+{valueOf(){n++;return 1;}};}catch(e){return n===0&&Object.is(e,x);}return false;}"
+);
+
+sources.push(
+"function f(x){return new Error(\"message\",{get cause(){return x;}}).cause;}",
+"function f(x){let order=\"\";const e=Error({toString(){order+=\"m\";return \"text\";}},{get cause(){order+=\"c\";return x;}});return order===\"mc\"&&e.message===\"text\"&&Object.is(e.cause,x)&&e instanceof Error;}",
+"function f(x){return new TypeError(\"message\",{get cause(){return x;}}).cause;}",
+"function f(x){let order=\"\";const e=TypeError({toString(){order+=\"m\";return \"text\";}},{get cause(){order+=\"c\";return x;}});return order===\"mc\"&&e.message===\"text\"&&Object.is(e.cause,x)&&e instanceof TypeError;}",
+"function f(x){return new ReferenceError(\"message\",{get cause(){return x;}}).cause;}",
+"function f(x){let order=\"\";const e=ReferenceError({toString(){order+=\"m\";return \"text\";}},{get cause(){order+=\"c\";return x;}});return order===\"mc\"&&e.message===\"text\"&&Object.is(e.cause,x)&&e instanceof ReferenceError;}",
+"function f(x){return new RangeError(\"message\",{get cause(){return x;}}).cause;}",
+"function f(x){let order=\"\";const e=RangeError({toString(){order+=\"m\";return \"text\";}},{get cause(){order+=\"c\";return x;}});return order===\"mc\"&&e.message===\"text\"&&Object.is(e.cause,x)&&e instanceof RangeError;}",
+"function f(x){return new SyntaxError(\"message\",{get cause(){return x;}}).cause;}",
+"function f(x){let order=\"\";const e=SyntaxError({toString(){order+=\"m\";return \"text\";}},{get cause(){order+=\"c\";return x;}});return order===\"mc\"&&e.message===\"text\"&&Object.is(e.cause,x)&&e instanceof SyntaxError;}",
+"function f(x){return new URIError(\"message\",{get cause(){return x;}}).cause;}",
+"function f(x){let order=\"\";const e=URIError({toString(){order+=\"m\";return \"text\";}},{get cause(){order+=\"c\";return x;}});return order===\"mc\"&&e.message===\"text\"&&Object.is(e.cause,x)&&e instanceof URIError;}",
+"function f(x){return new EvalError(\"message\",{get cause(){return x;}}).cause;}",
+"function f(x){let order=\"\";const e=EvalError({toString(){order+=\"m\";return \"text\";}},{get cause(){order+=\"c\";return x;}});return order===\"mc\"&&e.message===\"text\"&&Object.is(e.cause,x)&&e instanceof EvalError;}",
+"function f(x){let n=0;const o=Object.create({get cause(){n++;return x;}});const e=new Error(undefined,o);const d=Object.getOwnPropertyDescriptor(e,\"cause\");return n===1&&Object.is(d.value,x)&&d.writable&&d.configurable&&!d.enumerable&&!Object.hasOwn(e,\"message\");}",
+"function f(x){let n=0;try{new Error({toString(){throw x;}},{get cause(){n++;return 2;}});}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){try{new Error(\"message\",{get cause(){throw x;}});}catch(e){return e;}return 99;}",
+"function f(x){let order=\"\";const e=new Error({toString(){order+=\"s\";return {};},valueOf(){order+=\"v\";return 42;}});return order===\"sv\"&&e.message===\"42\";}",
+"function f(x){let n=0;function options(){}Object.defineProperty(options,\"cause\",{get(){n++;return x;}});return Object.is(new Error(\"m\",options).cause,x)&&n===1;}",
+"function f(x){let order=\"\";const obj={get name(){order+=\"n\";return {toString(){order+=\"s\";return \"N\";}};},get message(){order+=\"m\";return {toString(){order+=\"t\";return \"M\";}};}};const text=Error.prototype.toString.call(obj);return order===\"nsmt\"&&text===\"N: M\";}",
+"function f(x){function obj(){}obj.message=\"hello\";return Error.prototype.toString.call(obj);}",
+"function f(x){let n=0;try{Error.prototype.toString.call({get name(){throw x;},get message(){n++;return \"m\";}});}catch(e){return n===0&&Object.is(e,x);}return false;}",
+"function f(x){try{Error.prototype.toString.call(1);}catch(e){return e instanceof TypeError;}return false;}",
+"function f(x){let e=new Error({toString(){for(let i=0;i<180;i++){const trash={i};}return \"m\";}},{get cause(){for(let i=0;i<180;i++){const trash={i};}return x;}});return e.message===\"m\"&&Object.is(e.cause,x);}",
+"function f(x){Object.defineProperty=function(){throw 99;};return new Error({toString(){return \"m\";}},{get cause(){return x;}}).message;}",
+"function f(x){const C=TypeError.bind(null,{toString(){return \"m\";}});const e=new C({get cause(){return x;}});return e instanceof TypeError&&Object.is(e.cause,x)&&e.message===\"m\";}"
+);
+
+sources.push(
+ 'function f(x){return "v"+x;}',
+ 'function f(x){return x+"v";}',
+ 'function f(x){return new Error(1.25).message;}',
+ 'function f(x){const o={};Object.defineProperty(o,0.125,{value:x});return o["0.125"];}');
+
+sources.push(
+ 'function f(x){return String();}',
+ 'function f(x){return String(undefined);}',
+ 'function f(x){return String(null);}',
+ 'function f(x){return String(x);}',
+ 'function f(x){return String({toString(){return "hello";}});}',
+ 'function f(x){let order="";const v={toString(){order+="s";return {};},valueOf(){order+="v";return x;}};const text=String(v);return order==="sv"&&text===String(x);}',
+ 'function f(x){try{return String({toString(){throw x;}});}catch(e){return e;}}',
+ 'function f(x){return Boolean();}',
+ 'function f(x){return Boolean(x);}',
+ 'function f(x){return Boolean({valueOf(){throw 99;},toString(){throw 88;}});}',
+ 'function f(x){return Boolean("");}',
+ 'function f(x){return Boolean("false");}',
+ 'function f(x){return String.name==="String"&&String.length===1&&Boolean.name==="Boolean"&&Boolean.length===1;}',
+ 'function f(x){const f=String.bind(null,x);return f();}',
+ 'function f(x){return Boolean.call(null,x);}'
+);
+
+// Parallel implementation phase: Object operations, seven Array helpers, and native metadata.
+sources.push(...objectOperationSources, ...arrayBuiltinMetadataSources, ...arrayExtendedSources, ...arrayExtendedNegativeSources);
+for (const source of objectOperationNegativeSources) {
+  sources.push(`function check(x) {try {(${source})(x);} catch(error) {return error instanceof TypeError;} return false;}`);
+}
+for (const { source, expected, spec, note } of objectOperationDirectedCases) {
+  if (!sources.includes(source)) sources.push(source);
+  specExpectations.set(source, { value: expected, spec: spec || 'https://tc39.es/ecma262/2025/multipage/abstract-operations.html#sec-testintegritylevel', allowNodeReferenceDifference: true, note: note || 'A sealed empty array still has a writable own length property and is not frozen.' });
+}
+
+for (const [source, value] of objectOperationNormativeExpectations) specExpectations.set(source, { value, spec: 'https://tc39.es/ecma262/2025/multipage/fundamental-objects.html#sec-objectdefineproperties', note: 'Recheck each descriptor property before reading it; deleted or nonenumerable properties are skipped.' });
+
+sources.push(...globalConstantCases.map(item => item.source));
+
+// String helpers and callable metadata, including the getter/coercion sequence.
+sources.push(...stringSearchCases, ...stringSearchIntegrationSources, stringSearchResumptionSource);
+
+// These language cases passed the M1 diagnostic recorded in
+// evidence/quickjs-safari-language-scope.json. Keep their fixed diagnostic input:
+// some numeric computed-key cases intentionally exercise the supported index
+// range and cannot use the main corpus's NaN/negative lane inputs.
+const validatedLanguageFeatures = new Set([
+  "tdz-let-read",
+  "tdz-closure-then-initialized",
+  "tdz-typeof",
+  "tdz-let-write",
+  "const-assign-typeerror",
+  "for-let-per-iteration-closures",
+  "for-var-shared-binding",
+  "for-let-copy-before-increment",
+  "for-let-head-closure-not-iteration-copy",
+  "finally-return-overrides-throw",
+  "finally-throw-overrides-return",
+  "finally-normal-keeps-evaluated-return",
+  "finally-break-discards-throw",
+  "nested-finally-order",
+  "sloppy-arguments-mapped",
+  "strict-arguments-unmapped",
+  "sloppy-arguments-unpassed-not-mapped",
+  "computed-key-number-string-same",
+  "computed-key-noncanonical-strings",
+  "constructor-primitive-return-ignored",
+  "constructor-object-return-used",
+ ]);
+for (const item of languageScopeCases) {
+  if (!validatedLanguageFeatures.has(item.feature)) continue;
+  const source = `function check(x){return (${item.source})(${JSON.stringify(item.input)});}`;
+  sources.push(source);
+  specExpectations.set(source, { value: item.expected, note: `Validated language fixture: ${item.feature}` });
+}
+
+// Ordinary ToPropertyKey plus previously unsupported key operations.
+for (const source of [...propertyKeyConversionSources, propertyKeyConversionResumptionSource]) {
+  const normative=propertyKeyNormativeExpectations.get(source);
+  if (!normative) { sources.push(source); continue; }
+  const wrapper=`function check(x){return (${source})(17);}`;
+  sources.push(wrapper);
+  specExpectations.set(wrapper,{value:normative.expectedForInput(17),spec:normative.spec,note:normative.note});
+}
+
+// Sparse high array lengths are supported without allocating their elements.
+sources.push('function f(x){return new Array(2147483648).length;}');
+
+// Preserve formerly unsupported boundary coverage as successful GPU programs.
+sources.push(...boxingPhase5BoundarySources,...stringExtractArrayBoundaryCases.map(item=>item.source));
+sources.push(
+ 'function f(x){return [x,,null,undefined,2].join("|");}',
+ 'function f(x){return [x,,2].map(function(v,i){return v+i;}).join(":");}',
+ 'function f(x){return [0,x,2].filter(function(v,i){return i>0;}).join(":");}',
+ 'function f(x){return [0,x,,3].slice(1,3).join(":");}',
+ 'function f(x){const a=[];a.join=0;return a.toString();}',
+ 'function f(x){return Math.abs(x)+":"+Math.sign(x)+":"+Math.floor(x)+":"+Math.ceil(x)+":"+Math.trunc(x)+":"+Math.round(x);}',
+ 'function f(x){return Number.isFinite(x)+":"+Number.isNaN(x)+":"+Number.isInteger(x)+":"+Number.isSafeInteger(x);}',
+ 'function f(x){return Math.max(-1,x)+":"+Math.min(1,x)+":"+Math.pow(2,3)+":"+(Math.PI>3)+":"+(Number.EPSILON>0);}',
+);
+
+// Former unsupported sloppy-global receiver boundary, now implemented.
+sources.push('function f(x){function g(){return typeof this;}return g.call(undefined);}');
+
+// Symbol identity property keys are admitted; absent own/inherited slots yield undefined.
+sources.push('function f(x){return ({})[Symbol()];}');
+
+// Generic Symbol conversion and inherited @@hasInstance protocol regressions.
+sources.push(
+  "function f(x){return ({[Symbol.toPrimitive](){return \"a\";}}) in {};}",
+  "function f(x){let arrow=()=>x;Object.defineProperty(arrow,\"prototype\",{get(){return Object.prototype;}});return {} instanceof arrow;}",
+);

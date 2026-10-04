@@ -1,0 +1,288 @@
+{
+  "outcome": "completed-with-failures",
+  "candidateHashes": "quickjs-safari-prototype-candidate-hashes.json",
+  "harnessBundleSha256": "8b6f241172377c3491eeeb3d95223e503e4209ba6901b249060f49ad277ec7ce",
+  "report": {
+    "failures": [
+      {
+        "name": "promise-resolve-cases/promiseResolveCases:promise-resolve-constructor-mismatch",
+        "message": "Unsupported runtime operation in lane 0, instruction 24513; no CPU fallback"
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:finally-generic-thenable-receiver",
+        "message": "Unsupported runtime operation in lane 0, instruction 24469; no CPU fallback"
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:gc-deep-pending-chain",
+        "message": "Resource limit in lane 0, instruction 24731; no CPU fallback"
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:gc-allocation-inside-handlers",
+        "message": "Resource limit in lane 0, instruction 40; no CPU fallback"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-lookup-throws-before-iterator",
+        "message": "native oracle failed for input 3: undefined: undefined"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-lookup-throws-before-iterator",
+        "message": "native oracle failed for input 4: undefined: undefined"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-not-callable",
+        "message": "native oracle failed for input 3: TypeError: Promise resolve is not a function"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-not-callable",
+        "message": "native oracle failed for input 4: TypeError: Promise resolve is not a function"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-then-getter-throws-closes",
+        "message": "native oracle failed for input 3: undefined: undefined"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-then-getter-throws-closes",
+        "message": "native oracle failed for input 4: undefined: undefined"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-then-not-callable-closes",
+        "message": "native oracle failed for input 3: TypeError: then is not a function"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-then-not-callable-closes",
+        "message": "native oracle failed for input 4: TypeError: then is not a function"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-close-error-suppressed",
+        "message": "native oracle failed for input 3: undefined: undefined"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-close-error-suppressed",
+        "message": "native oracle failed for input 4: undefined: undefined"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-element-functions",
+        "message": "native oracle failed for input 3: NativeOracleTimeout: exceeded 5000ms"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-element-functions",
+        "message": "native oracle failed for input 4: NativeOracleTimeout: exceeded 5000ms"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:allSettled-shared-already-called",
+        "message": "native oracle failed for input 3: NativeOracleTimeout: exceeded 5000ms"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:allSettled-shared-already-called",
+        "message": "native oracle failed for input 4: NativeOracleTimeout: exceeded 5000ms"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-then-getter-throws-closes",
+        "message": "native oracle failed for input 3: undefined: undefined"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-then-getter-throws-closes",
+        "message": "native oracle failed for input 4: undefined: undefined"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:race-passes-capability-functions",
+        "message": "native oracle failed for input 3: NativeOracleTimeout: exceeded 5000ms"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:race-passes-capability-functions",
+        "message": "native oracle failed for input 4: NativeOracleTimeout: exceeded 5000ms"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-gc-pressure-many-pending",
+        "message": "Resource limit in lane 0, instruction 24760; no CPU fallback"
+      },
+      {
+        "name": "async-function-cases/asyncFunctionCases:deep-sync-recursion-resource-limit",
+        "message": "Resource limit in lane 0, instruction 17; no CPU fallback"
+      },
+      {
+        "name": "promise-jobs-cases/promiseJobsCases:500-job-chain-under-gc-pressure",
+        "message": "Resource limit in lane 0, instruction 24713; no CPU fallback"
+      },
+      {
+        "name": "promise-jobs-cases/promiseJobsCases:long-chain-of-thenables",
+        "message": "Resource limit in lane 0, instruction 24694; no CPU fallback"
+      },
+      {
+        "name": "native-oracle",
+        "message": "20 fixture(s) disagree with this browser's engine"
+      }
+    ],
+    "nativeDisagreements": [
+      {
+        "name": "conformance:order-finally-tick-count",
+        "input": 3,
+        "fixture": "fulfilled \"3:1f234a56\"",
+        "native": "fulfilled \"3:1f2a3456\""
+      },
+      {
+        "name": "conformance:order-finally-tick-count",
+        "input": 4,
+        "fixture": "fulfilled \"4:1f234a56\"",
+        "native": "fulfilled \"4:1f2a3456\""
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:order-finally-tick-count",
+        "input": 3,
+        "fixture": "fulfilled \"f,b1,b2,b3,f-after,b4,b5\"",
+        "native": "fulfilled \"f,b1,f-after,b2,b3,b4,b5\""
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:order-finally-tick-count",
+        "input": 4,
+        "fixture": "fulfilled \"f,b1,b2,b3,f-after,b4,b5\"",
+        "native": "fulfilled \"f,b1,f-after,b2,b3,b4,b5\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:resolve-plain-constructor",
+        "input": 3,
+        "fixture": "fulfilled \"true:3\"",
+        "native": "fulfilled \"false:3\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:resolve-plain-constructor",
+        "input": 4,
+        "fixture": "fulfilled \"true:4\"",
+        "native": "fulfilled \"false:4\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:withResolvers-shape",
+        "input": 3,
+        "fixture": "fulfilled \"promise,resolve,reject:true:true:function:1:3\"",
+        "native": "fulfilled \"resolve,reject,promise:true:true:function:1:3\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:withResolvers-shape",
+        "input": 4,
+        "fixture": "fulfilled \"promise,resolve,reject:true:true:function:1:4\"",
+        "native": "fulfilled \"resolve,reject,promise:true:true:function:1:4\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-getter-called-once",
+        "input": 3,
+        "fixture": "fulfilled \"1:1,2,3\"",
+        "native": "fulfilled \"2:1,2,3\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-getter-called-once",
+        "input": 4,
+        "fixture": "fulfilled \"1:1,2,4\"",
+        "native": "fulfilled \"2:1,2,4\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-receives-constructor",
+        "input": 3,
+        "fixture": "fulfilled \"true,true:3,4\"",
+        "native": "fulfilled \"true,true,true,true:3,4\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-receives-constructor",
+        "input": 4,
+        "fixture": "fulfilled \"true,true:4,5\"",
+        "native": "fulfilled \"true,true,true,true:4,5\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-synchronous-then",
+        "input": 3,
+        "fixture": "fulfilled \"6,8\"",
+        "native": "undefined undefined"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-synchronous-then",
+        "input": 4,
+        "fixture": "fulfilled \"8,10\"",
+        "native": "undefined undefined"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-all-rejected-aggregate",
+        "input": 3,
+        "fixture": "fulfilled \"true:true:a,b3:All promises were rejected:0:false\"",
+        "native": "fulfilled \"true:true:a,b3::0:false\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-all-rejected-aggregate",
+        "input": 4,
+        "fixture": "fulfilled \"true:true:a,b4:All promises were rejected:0:false\"",
+        "native": "fulfilled \"true:true:a,b4::0:false\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-resolve-getter-called-once",
+        "input": 3,
+        "fixture": "fulfilled \"1:3\"",
+        "native": "fulfilled \"2:3\""
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-resolve-getter-called-once",
+        "input": 4,
+        "fixture": "fulfilled \"1:4\"",
+        "native": "fulfilled \"2:4\""
+      },
+      {
+        "name": "async-iteration-cases/asyncIterationCases:sync-rejected-value-with-done-true-not-closed",
+        "input": 3,
+        "fixture": "fulfilled \"|d3\"",
+        "native": "fulfilled \"R|d3\""
+      },
+      {
+        "name": "async-iteration-cases/asyncIterationCases:sync-rejected-value-with-done-true-not-closed",
+        "input": 4,
+        "fixture": "fulfilled \"|d4\"",
+        "native": "fulfilled \"R|d4\""
+      }
+    ],
+    "gaps": [
+      "conformance:t262-then-species-constructor-used: depends on promise-subclassing; rejected as Unsupported (not counted)",
+      "promise-core-cases/promiseCoreBoundaryCases:subclass-instance-and-prototype: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)",
+      "promise-core-cases/promiseCoreBoundaryCases:subclass-settles: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)",
+      "promise-core-cases/promiseCoreBoundaryCases:reflect-construct-newtarget-prototype: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)"
+    ],
+    "modules": [
+      {
+        "path": "./promise-core-cases.js",
+        "loaded": true,
+        "records": 48
+      },
+      {
+        "path": "./promise-resolve-cases.js",
+        "loaded": true,
+        "records": 62
+      },
+      {
+        "path": "./promise-then-cases.js",
+        "loaded": true,
+        "records": 66
+      },
+      {
+        "path": "./promise-combinators-cases.js",
+        "loaded": true,
+        "records": 70
+      },
+      {
+        "path": "./async-function-cases.js",
+        "loaded": true,
+        "records": 67
+      },
+      {
+        "path": "./async-generator-cases.js",
+        "loaded": true,
+        "records": 60
+      },
+      {
+        "path": "./promise-jobs-cases.js",
+        "loaded": true,
+        "records": 24
+      },
+      {
+        "path": "./async-iteration-cases.js",
+        "loaded": true,
+        "records": 66
+      }
+    ]
+  },
+  "stderrPath": "/tmp/lanes-qualified-promise.stderr"
+}

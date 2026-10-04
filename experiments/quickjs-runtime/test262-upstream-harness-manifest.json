@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/tc39/test262",
+  "revision": "7ab7fafa0003f73fc85c1b95d88094d33f7eb8bd",
+  "license": "test262-upstream-harness-LICENSE.txt",
+  "sourceTransformations": [],
+  "files": {
+    "sta.js": {
+      "path": "harness/sta.js",
+      "sha256": "1930c54af79455c484799f43e9a28e2b2f15c40d0917c9941ca54e26db243f35",
+      "gitBlob": "d291a94f46234908009a7ee909cf9d66034c73fe",
+      "bytes": 792
+    },
+    "assert.js": {
+      "path": "harness/assert.js",
+      "sha256": "206e274ca325eb8a652e3911c3fbd090e2480d11ed7579dc17a5d17a2360ed48",
+      "gitBlob": "55a0e2a32f2e6259a1b445a9d924f61261e2ca5f",
+      "bytes": 4881
+    },
+    "compareArray.js": {
+      "path": "harness/compareArray.js",
+      "sha256": "3330423fe116cd96db70077d194471319ae9767ba1c8e2f73d7c133c5204509d",
+      "gitBlob": "fa5eae5f4c7c60d6178ef992fe8c2e1dd0c394f3",
+      "bytes": 243
+    },
+    "propertyHelper.js": {
+      "path": "harness/propertyHelper.js",
+      "sha256": "08bc29114d804c4f24f906bac950ee4dc9c93c659d93258e7b44a54283ba9bb8",
+      "gitBlob": "0acccfe87f0c40c94c1d43c315c2d8f1e35d7b52",
+      "bytes": 18956
+    }
+  }
+}

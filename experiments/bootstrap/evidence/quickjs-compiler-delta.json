@@ -1,0 +1,98 @@
+{
+  "startedAt": "2026-10-02T19:48:54.740Z",
+  "finishedAt": "2026-10-02T19:49:33.115Z",
+  "baseline": "/tmp/lanes-pre-correctness-compiler/compiler",
+  "current": "/home/shafqat/git/lanes/experiments/quickjs-runtime/generated/compiler",
+  "compilerSha256": {
+    "baseline": "fe3a41c7f5a53665b4cf015356b5b1c8ebcc7df2b79ffe33177900a08a43e258",
+    "current": "05db5992d502b3b5eb084f5270a628f26f52759da0d76f86a517cccb494010ce"
+  },
+  "artifactsUnchangedDuringComparison": true,
+  "comparison": "Exact packed Uint32 code/image plus name/functions/typeTable and compiler function metadata; each compiler compiles its own bootstrap sources. Raw atom IDs are excluded.",
+  "scope": "Current main corpus plus dedicated exported validation/resumption fixtures. Inline validation.js checks are not an exhaustive second inventory. No guest execution, GPU execution, or conformance claim.",
+  "guestExecuted": false,
+  "gpuExecuted": false,
+  "inventoryCounts": {
+    "main": 1124,
+    "dedicatedValidation": 89,
+    "dedicatedResumption": 7
+  },
+  "uniqueSources": 1219,
+  "comparedPrograms": 1219,
+  "unchangedPrograms": 1217,
+  "changedProgramCount": 2,
+  "changedInventoryCounts": {
+    "main": 2,
+    "dedicatedValidation": 0,
+    "dedicatedResumption": 0
+  },
+  "unchangedRejectedCount": 0,
+  "changedBootstraps": [],
+  "changedPrograms": [
+    {
+      "source": "function f(x) { try { const a=x; a=3; } catch(e) { return 19; } }",
+      "sourceSha256": "c2c1ad0ea540a3b77fdbf64ce5ccef045e491e1e5ea74776c4b05fdd02aeaf61",
+      "locations": [
+        {
+          "group": "main",
+          "index": 216
+        }
+      ],
+      "codeChanged": true,
+      "imageChanged": true,
+      "metadataChanged": true,
+      "code": {
+        "beforeWords": 30732,
+        "afterWords": 30740,
+        "differingWords": 13509,
+        "firstDifference": 1,
+        "beforeSha256": "e654465596f620f4d140d6438091e269615c9d1bb90af9831f601f110cf62b1e",
+        "afterSha256": "7a6e0aef175bf52bd3fe9cb7a95908112608301913332266a6f2532223685a31"
+      },
+      "image": {
+        "beforeWords": 20196,
+        "afterWords": 20196,
+        "differingWords": 111,
+        "firstDifference": 8,
+        "beforeSha256": "450d31a3f27c66362adc86536f0afbc69294540d60fa2564b542cf7bab46c5ac",
+        "afterSha256": "173d006008db7ecfa09e556089289ead56053547b63701b2de3f4c036b31a7e1"
+      },
+      "metadataFieldsChanged": [
+        "functionMetadata"
+      ]
+    },
+    {
+      "source": "function check(x){return (function f(x){const c=x;try{c=c+1;}catch(e){return (e instanceof TypeError)+\":\"+c;}return \"mutated\";})(7);}",
+      "sourceSha256": "99b38e878873b3f12bc9edd0faead8fec50a8f076702e1f3b28281f6b94b61f6",
+      "locations": [
+        {
+          "group": "main",
+          "index": 1101
+        }
+      ],
+      "codeChanged": true,
+      "imageChanged": true,
+      "metadataChanged": true,
+      "code": {
+        "beforeWords": 30776,
+        "afterWords": 30784,
+        "differingWords": 13515,
+        "firstDifference": 25,
+        "beforeSha256": "72db2b9ad4ae4b06587d06928f5cbc18fbf2750de6723d93ccc7fa7828844cd5",
+        "afterSha256": "4f5b73dbd4670c972750258e09d3cedb9cbab87ed183dced1f2f2838a3a80c83"
+      },
+      "image": {
+        "beforeWords": 20244,
+        "afterWords": 20244,
+        "differingWords": 111,
+        "firstDifference": 16,
+        "beforeSha256": "7b156c742e5a707e08607ac7e7c487ce4b01c62ee0734b8e0eb6f0f1408e6b00",
+        "afterSha256": "8d1f126ee2e8113810384f282465eec1a83fb888898be7e67ad3a3c9f898e325"
+      },
+      "metadataFieldsChanged": [
+        "functionMetadata"
+      ]
+    }
+  ],
+  "unchangedRejections": []
+}

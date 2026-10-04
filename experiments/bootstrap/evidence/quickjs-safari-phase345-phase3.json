@@ -1,0 +1,334 @@
+{
+  "date": "2026-10-03T18:29:57.691Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "compiler": "QuickJS/Wasm",
+    "checked": 30,
+    "programs": 42,
+    "unsupported": 12,
+    "phase": 3,
+    "note": "Fixed native-verified expectations. Pending BigInt mixed comparisons/coercion and custom Symbol protocols produce explicit Unsupported; they are not counted as supported execution.",
+    "records": [
+      {
+        "name": "wide-bigint-literal",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "wide-multiply",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "negative-multiply",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "gc-symbol-key-bigint",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          1
+        ]
+      },
+      {
+        "name": "bigint-output-boundary",
+        "status": "rejected",
+        "message": "Unsupported GPU output: BigInt values cannot cross the QuickJS GPU boundary yet"
+      },
+      {
+        "name": "symbol-output-boundary",
+        "status": "rejected",
+        "message": "Unsupported GPU output: Symbol values cannot cross the QuickJS GPU boundary yet"
+      },
+      {
+        "name": "gc-negative-wide-bigint",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          1
+        ]
+      },
+      {
+        "name": "typeof-bigint",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "typeof-symbol",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "bigint-strict-same",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "bigint-strict-cross",
+        "status": "passed",
+        "value": false,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "bigint-add",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "bigint-truth",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "bigint-i32-carry",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "bigint-mul-low-word",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "bigint-mul-carry",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "bigint-mul-stays-bigint",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "symbol-registry",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "symbol-description",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "symbol-tostring",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "tag-math",
+        "status": "passed",
+        "value": "[object Math]",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "tag-json",
+        "status": "passed",
+        "value": "[object JSON]",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "tag-symbol",
+        "status": "passed",
+        "value": "[object Symbol]",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "tag-bigint",
+        "status": "passed",
+        "value": "[object BigInt]",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "reflect-ownkeys-length",
+        "status": "passed",
+        "value": 2,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "getownpropertysymbols-symbol-proto",
+        "status": "passed",
+        "value": 2,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "for-in-skips-symbols",
+        "status": "passed",
+        "value": 1,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "new-symbol-typeerror",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "new-bigint-typeerror",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "symbol-add-typeerror",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "bigint-abstract-eq-pending",
+        "status": "rejected",
+        "message": "Unsupported runtime operation in lane 0, instruction 2; no CPU fallback"
+      },
+      {
+        "name": "template-symbol-typeerror",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "bigint-mixed-relational-pending",
+        "status": "rejected",
+        "message": "Unsupported runtime operation in lane 0, instruction 2; no CPU fallback"
+      },
+      {
+        "name": "bigint-not-pending",
+        "status": "rejected",
+        "message": "Unsupported runtime operation in lane 0, instruction 1; no CPU fallback"
+      },
+      {
+        "name": "custom-toprimitive-pending",
+        "status": "rejected",
+        "message": "Unsupported runtime operation in lane 0, instruction 16235; no CPU fallback"
+      },
+      {
+        "name": "reflect-ownkeys-rejects-primitive",
+        "status": "passed",
+        "value": true,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "name": "inherited-hasinstance-pending",
+        "status": "rejected",
+        "message": "Unsupported runtime operation in lane 0, instruction 16; no CPU fallback"
+      },
+      {
+        "name": "species-key-pending",
+        "status": "rejected",
+        "message": "Unsupported runtime operation in lane 0, instruction 1; no CPU fallback"
+      },
+      {
+        "name": "iterator-override-unsupported",
+        "status": "rejected",
+        "message": "Unsupported runtime operation in lane 0, instruction 19136; no CPU fallback"
+      },
+      {
+        "name": "bigint-call-unsupported",
+        "status": "rejected",
+        "message": "Unsupported runtime operation in lane 0, instruction 2; no CPU fallback"
+      },
+      {
+        "name": "bigint-plus-string-unsupported",
+        "status": "rejected",
+        "message": "Unsupported runtime operation in lane 0, instruction 2; no CPU fallback"
+      },
+      {
+        "name": "json-stringify-bigint-unsupported",
+        "status": "rejected",
+        "message": "Unsupported runtime operation in lane 0, instruction 537; no CPU fallback"
+      }
+    ]
+  }
+}

@@ -1,5 +1,42 @@
+import {SCRIPT_MODE_BIT,scriptEntryLowering} from './script-entry.js';
+import {objectCopyMetadata} from './object-copy-source.js';
+import {prototypeSources} from './prototype-source.js';
+import {generatorFields,GENERATOR_KIND_BIT} from './generator-source.js';
+import {asyncGeneratorFields,ASYNC_GENERATOR_INFO_BITS} from './async-generator-source.js';
+import {promiseCombinatorsFields} from './promise-combinators-source.js';
+import {promiseThenFields} from './promise-then-source.js';
+import {generatorDelegationSources} from './generator-delegation-source.js';
+import { arrayFromMetadata } from './array-from-source.js';
+import { phase3BigintWidthMetadata } from './phase3-bigint-width.js';
+import { phase3BigintConversionSources } from './phase3-bigint-conversion-source.js';
+import { functionSourceFields, packFunctionSource } from './function-source-core.js';
+import { globalReferenceLowering } from './phase4-global-reference.js';
+import { stringCaseMetadata } from './string-case-metadata.js';
+import { arraySortMetadata } from './array-sort-metadata.js';
+import { jsonStringifyMetadata } from './json-stringify-metadata.js';
+import { arrayCopyMetadata } from './array-copy-metadata.js';
+import { numberParseMetadata } from './number-parse-metadata.js';
+import { jsonPhase5Metadata, jsonPhase5NewIntrinsics, jsonPhase5CodeUnitWGSL } from './json-phase5-metadata.js';
+import { arrayPhase5Metadata } from './array-phase5-metadata.js';
+import { stringPhase5Metadata, stringPhase5Aliases } from './string-phase5-metadata.js';
+import { numericPhase5Metadata, numberPhase5Metadata, mathPhase5Metadata, numberPhase5Constants, mathPhase5Constants, numberPhase5Pending, mathPhase5Pending } from './math-phase5-metadata.js';
+import { stringExtractMetadata } from './string-extract-source.js';
+import { propertyKeyOperationSources } from './property-key-conversion-source.js';
+import { stringSearchMetadata } from './string-search-metadata.js';
+import { boxingFields } from './boxing-metadata.js';
 import { parse } from 'acorn';
+import { arraySources, arrayBuiltins } from './array-source.js';
 import { privateBuiltins } from './bootstrap.js';
+import { promiseCoreFields } from './promise-core-source.js';
+import { phase4Opcodes, phase4BootstrapSources, phase4Lowering, protocolBootstrapSources } from './phase4-registry.js';
+import { classProgramLowering, classRejectNode } from './phase4-classes.js';
+import { templateConstant, templateProgramLowering } from './phase4-templates.js';
+import { GLOBAL_MODE_BIT, globalFieldNames, globalProgramPlan, globalRefSpec, globalProgramLowering } from './phase4-global.js';
+import { privateSlotLoad } from './phase4-class-elements.js';
+import { phase3FieldNames, packI32BigInt, packBigIntDecimal } from './phase3-values.js';
+import { stdlibFieldNames, stdlibGlobals } from './stdlib-registry.js';
+const stdlibGlobalIds = new Map(stdlibGlobals.map(g => [g.name, g.builtin]));
+if (stdlibGlobals.length !== 4 || !['Map', 'Set', 'isNaN', 'isFinite'].every(n => stdlibGlobalIds.has(n))) throw new Error('stdlib globals drifted from program.js literal table');
 export const REVISION = '535a7c250ff4a577ec36c3e103daab6dadeea650';
 export const OP = Object.freeze(Object.fromEntries([
   'push', 'closure', 'object', 'drop', 'dup', 'dup1', 'dup2', 'swap', 'nip', 'insert2', 'insert3', 'perm3', 'rot3l', 'rot3r',
@@ -12,29 +49,87 @@ export const OP = Object.freeze(Object.fromEntries([
   'goto', 'if_true', 'if_false', 'nop', 'throw', 'array_from', 'get_length', 'is_undefined', 'is_null', 'is_undefined_or_null',
   'close_loc', 'set_proto', 'catch', 'gosub', 'ret', 'nip_catch', 'throw_error', 'nip1',
   'define_getter', 'define_setter',
-  'delete', 'in', 'typeof', 'typeof_is_function', 'typeof_is_undefined', 'set_name', 'set_name_computed', 'to_propkey', 'define_array_el', 'define_method_computed', 'call_constructor', 'instanceof', 'special_object',
+  'delete', 'in', 'typeof', 'typeof_is_function', 'typeof_is_undefined', 'set_name', 'set_name_computed', 'to_propkey', 'define_array_el', 'define_method_computed', 'call_constructor', 'instanceof', 'special_object', 'get_array_el3', 'perm4', 'pow',
+  // Phase 4 opcodes are appended; earlier indices are stable.
+  ...phase4Opcodes,
 ].map((name, i) => [name, i])));
 export const LIMITS = Object.freeze({ frames: 32, stack: 256, heap: 2048, args: 16, locals: 64, refs: 64 });
 const objectBuiltins = ['constructor','hasOwnProperty','isPrototypeOf','propertyIsEnumerable','toLocaleString','toString','valueOf','__proto__','__defineGetter__','__defineSetter__','__lookupGetter__','__lookupSetter__'];
-const arrayBuiltins = ['at','concat','copyWithin','entries','every','fill','filter','find','findIndex','findLast','findLastIndex','flat','flatMap','forEach','includes','indexOf','join','keys','lastIndexOf','map','pop','push','reduce','reduceRight','reverse','shift','slice','some','sort','splice','toReversed','toSorted','toSpliced','unshift','values','with','toString','toLocaleString'];
-export const FIELDS = Object.freeze(Object.fromEntries(['prototype','defineProperty','getOwnPropertyDescriptor','create','getPrototypeOf','setPrototypeOf','is','hasOwn','preventExtensions','isExtensible','value','writable','get','set','enumerable','configurable','length','name','Object','__proto__','constructor','call','apply','bind','toString','caller','arguments','[object Undefined]','[object Null]','[object Boolean]','[object Number]','[object String]','[object Object]','[object Array]','[object Function]','[object Error]','','Function','bound ','Error','TypeError','ReferenceError','RangeError','SyntaxError','URIError','EvalError','message','cause',': ','true','false','null','undefined','NaN','Infinity','-Infinity','-','Invalid operation','Invalid reference','Invalid array length','Array','isArray','of','from','fromAsync','callee','[object Arguments]'].map((n,i)=>[n,i])));
+
+// Stable callable identities for the implemented Object static subsets.
+export const objectStaticPlaceholders = Object.freeze([
+  ['getOwnPropertyNames',1], ['defineProperties',2], ['seal',1], ['freeze',1],
+  ['isSealed',1], ['isFrozen',1], ['keys',1],
+].map(([name,length],index)=>Object.freeze({name,length,id:710+index})));
+const fieldNames = ['prototype','defineProperty','getOwnPropertyDescriptor','create','getPrototypeOf','setPrototypeOf','is','hasOwn','preventExtensions','isExtensible','value','writable','get','set','enumerable','configurable','length','name','Object','__proto__','constructor','call','apply','bind','toString','caller','arguments','[object Undefined]','[object Null]','[object Boolean]','[object Number]','[object String]','[object Object]','[object Array]','[object Function]','[object Error]','','Function','bound ','Error','TypeError','ReferenceError','RangeError','SyntaxError','URIError','EvalError','message','cause',': ','true','false','null','undefined','NaN','Infinity','-Infinity','-','Invalid operation','Invalid reference','Invalid array length','Array','isArray','of','from','fromAsync','callee','[object Arguments]','toNumber','Number','arrayLengthSet','arrayLengthSetStrict','unaryNumber','binaryNumber','toPrimitive','relational','equality','addition','toText','errorCreate','errorText','numberText','numberPow','stringCall','String','Boolean','toDescriptor',...stringSearchMetadata.flatMap(item => [item.field, item.name]),...Object.keys(arraySources),...objectStaticPlaceholders.map(item=>item.name),...Object.keys(propertyKeyOperationSources),...boxingFields,...stringExtractMetadata.map(item=>item.field)];
+for(const name of [...stringPhase5Aliases.map(m=>m.name),'Math','[object Math]',...arrayPhase5Metadata.flatMap(m=>[m.name,m.field]),...stringPhase5Metadata.flatMap(m=>[m.name,m.field]),...numericPhase5Metadata.flatMap(m=>[m.name,m.field]),...Object.keys(numberPhase5Constants),...Object.keys(mathPhase5Constants),...numberPhase5Pending,...mathPhase5Pending])if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of ['JSON','[object JSON]','stringify',...[...arrayCopyMetadata,...numberParseMetadata,...jsonPhase5Metadata].flatMap(m=>[m.name,m.field])])if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of Object.keys(phase4BootstrapSources).filter(name=>name!=='raw'))if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of jsonStringifyMetadata.flatMap(m=>[m.name,m.field]))if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of arraySortMetadata.flatMap(m=>[m.name,m.field]))if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of stringCaseMetadata.flatMap(m=>[m.name,m.field]))if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of Object.keys(phase4BootstrapSources))if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of globalFieldNames)if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of phase3FieldNames)if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of functionSourceFields)if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of Object.keys(phase3BigintConversionSources))if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of ['comparisonToPrimitive'])if(!fieldNames.includes(name))fieldNames.push(name);
+// Append-only. hasInstance is already a phase-3 name; its helper reuses that slot.
+for(const name of [...Object.keys(protocolBootstrapSources),'next','Array Iterator','String Iterator'])if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of ['[Symbol.hasInstance]','[Symbol.iterator]'])if(!fieldNames.includes(name))fieldNames.push(name);
+// Standard-library wave names (stdlib-registry.js), appended after every earlier index.
+for(const name of stdlibFieldNames)if(!fieldNames.includes(name))fieldNames.push(name);
+for(const {name,field} of arrayFromMetadata)for(const key of [name,field])if(!fieldNames.includes(key))fieldNames.push(key);
+for(const name of [...generatorFields,...Object.keys(generatorDelegationSources)])if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of ['numericPow'])if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of phase3BigintWidthMetadata.flatMap(m=>[m.field,m.name]))if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of promiseCoreFields)if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of ['promiseResolveBody','promiseResolveThenableJob','promiseResolveAbstract'])if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of promiseThenFields)if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of promiseCombinatorsFields)if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of ['promiseRunJob'])if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of ['AsyncFunction','asyncFunctionAwait','asyncFunctionResolveReturn'])if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of asyncGeneratorFields)if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of ['asyncIteratorOpenHelper','asyncIteratorValueDoneHelper','asyncIteratorCloseHelper','asyncIteratorCloseThrowHelper','asyncFromSyncNextHelper','asyncFromSyncReturnHelper','asyncFromSyncThrowHelper','asyncFromSyncContinuationHelper','[Symbol.asyncIterator]'])if(!fieldNames.includes(name))fieldNames.push(name);
+for(const name of Object.keys(prototypeSources))if(!fieldNames.includes(name))fieldNames.push(name);
+for(const m of objectCopyMetadata)for(const name of [m.name,m.field])if(!fieldNames.includes(name))fieldNames.push(name);
+export const FIELDS = Object.freeze(Object.fromEntries(fieldNames.map((n,i)=>[n,i])));
+if(Object.keys(FIELDS).length!==fieldNames.length)throw new Error("Duplicate FIELDS name");
 const valid = new WeakSet();
 export function checkProgram(program) { if (!valid.has(program)) throw new TypeError('Expected a compiled QuickJS GPU program'); }
 export function numberWords(n, tag = 0) {
   const a = new Uint32Array(4); new DataView(a.buffer).setFloat64(0, n, true); a[2] = tag; return [...a];
 }
-export function entrySource(source) {
+export function entrySource(source, options = {}) {
   if (typeof source !== 'string' || source.length > 1000000) throw new TypeError('Expected function source, at most 1 MB');
   const ast = parse(source, { ecmaVersion: 2025 });
+  const nodes=[ast];
+  while(nodes.length){
+    const node=nodes.pop();
+    const classRejection=classRejectNode(node);if(classRejection)throw new SyntaxError(classRejection);
+    // Untagged substitutions use the patched to_string lowering (bridge feature
+    // template-to-string). Tagged templates use per-site frozen template objects
+    // (bridge feature tagged-template-v1, opcode push_template; phase4-templates.js).
+    for(const value of Object.values(node)){
+      if(Array.isArray(value)){for(const child of value)if(child&&typeof child.type==='string')nodes.push(child);}
+      else if(value&&typeof value.type==='string')nodes.push(value);
+    }
+  }
+  if(options.script)return '<eval>';
   const fn = ast.body[0];
   if (ast.body.length !== 1 || fn.type !== 'FunctionDeclaration' || !fn.id || fn.async || fn.generator)
     throw new SyntaxError('Expected one synchronous named function declaration');
   return fn.id.name;
 }
+export function scriptSource(source){return entrySource(source,{script:true});}
 export function packProgram(raw, name) {
   if (raw.error) throw new SyntaxError(raw.error);
   if (raw.format !== 1 || raw.quickjs !== REVISION) throw new Error('QuickJS bridge revision mismatch');
+  // An unpatched compiler lowers template substitutions through mutable concat.
+  if (!raw.features?.includes('template-to-string')) throw new Error('Rebuild the compiler bridge: template-to-string lowering is missing');
   const functions = raw.functions, image = functions.flatMap(() => [[0, 0, 0, 0], [0, 0, 0, 0]]), code = [], strings = new Map();
+  // Global-object mode (phase4-global.js): sloppy this, free global names, delete x.
+  const globalPlan = globalProgramPlan(raw, name);
   const add = value => { image.push(value); return image.length - 1; };
   const text = value => {
     if (value.length > 256) throw new RangeError('GPU string limit: 256 UTF-16 code units');
@@ -44,27 +139,48 @@ export function packProgram(raw, name) {
     const index = add([offset, value.length, 7, image.length]); strings.set(value, index); return index;
   };
   const typeNames = ['number', 'boolean', 'object', 'undefined', 'function', 'string'].map(text);
-  const builtins = [...objectBuiltins.map((s,i) => [text(s), 1, i===0?100:150+i, 0]), ...arrayBuiltins.map((s,i) => [text(s), 2, 300+i, 0])];
+  const builtins = [...objectBuiltins.map((s,i) => [text(s), 1, i===0?100:150+i, 0]), ...arrayBuiltins.map((s,i) => [text(s), 2, [...arrayPhase5Metadata,...arrayCopyMetadata,...arraySortMetadata].find(m=>m.name===s)?.id ?? 300+i, 0])];
   const fieldKeys = Object.keys(FIELDS).map(s=>text(s));
   const typeTable = add(typeNames.slice(0, 4)); add([...typeNames.slice(4), builtins.length, 0]);
   builtins.forEach(add);
   image[typeTable+1][3]=image.length;fieldKeys.forEach(k=>add([k,0,0,0]));
-  if (raw.descriptorBootstrap !== undefined) image[image[typeTable+1][3]+FIELDS.defineProperty][1]=raw.descriptorBootstrap+1;
+  for (const [field, fn] of Object.entries(raw.bootstrapFunctions || {})) image[image[typeTable+1][3]+FIELDS[field]][1]=fn+1;
   const entry = []; let count = 0;
   for (const fn of functions) { entry.push(count); count += fn.instructions.length; }
   for (const [f, fn] of functions.entries()) {
-    if (fn.args > LIMITS.args || fn.locals > LIMITS.locals || fn.refs.length > LIMITS.refs || fn.stack > LIMITS.stack || fn.kind !== 0)
-      throw new RangeError('QuickJS function exceeds GPU limits or uses a generator/async kind');
+    if (fn.args > LIMITS.args || fn.locals > LIMITS.locals || fn.refs.length > LIMITS.refs || fn.stack > LIMITS.stack || (fn.kind !== 0 && fn.kind !== 2 && fn.kind !== 3 && fn.kind !== 1))
+      throw new RangeError('QuickJS function exceeds GPU limits or uses an async kind');
+    packFunctionSource(fn,add,text);
+    const scriptKeys=globalPlan.script&&f===0?new Map(fn.refs.filter(r=>r.type===4&&!r.lexical).map(r=>[r.name,text(r.name)])):null;
     const refOffset = image.length;
     const root = f === 0 || fn.intrinsicRoot === true;
     for (const ref of fn.refs) {
+      const globalSpec = globalRefSpec(globalPlan, f, ref, scriptKeys);
+      if (globalSpec) { add(globalSpec); continue; }
       if(root && ref.name===(f===0?name:fn.name)){add([3,ref.index,0,0]);continue;}
       if(fn.intrinsicRoot && Object.hasOwn(privateBuiltins,ref.name)){add([4,privateBuiltins[ref.name],0,0]);continue;}
       const errorType = ['Error','TypeError','ReferenceError','RangeError','SyntaxError','URIError','EvalError'].indexOf(ref.name);
       if(root && errorType>=0){add([4,600+errorType,0,0]);continue;}
+      if(root && ref.name==='String'){add([4,136,0,0]);continue;}
+      if(root && ref.name==='Boolean'){add([4,137,0,0]);continue;}
+      if(root && ref.name==='JSON'){add([6,25,0,0]);continue;}
+      if(root && ref.name==='parseInt'){add([4,1780,0,0]);continue;}
+      if(root && ref.name==='parseFloat'){add([4,1781,0,0]);continue;}
+      if(root && ref.name==='Math'){add([6,23,0,0]);continue;}
+      if(root && ref.name==='Number'){add([4,122,0,0]);continue;}
       if(root && ref.name==='Array'){add([4,200,0,0]);continue;}
       if(root && ref.name==='Function'){add([4,500,0,0]);continue;}
       if(root && ref.name==='Object'){add([4,100,0,0]);continue;}
+      if(root && ref.name==='Symbol'){add([4,1000,0,0]);continue;}
+      if(root && ref.name==='BigInt'){add([4,1150,0,0]);continue;}
+      if(root && ref.name==='Reflect'){add([6,47,0,0]);continue;}
+      if(root && ref.name==='AggregateError'){add([4,2940,0,0]);continue;}
+      if(root && ref.name==='Promise'){add([4,2800,0,0]);continue;}
+      // Standard-library globals (ids from stdlib-registry.js; literal names for check-phase4-global.mjs).
+      if(root && ref.name==='Map'){add([4,stdlibGlobalIds.get('Map'),0,0]);continue;}
+      if(root && ref.name==='Set'){add([4,stdlibGlobalIds.get('Set'),0,0]);continue;}
+      if(root && ref.name==='isNaN'){add([4,stdlibGlobalIds.get('isNaN'),0,0]);continue;}
+      if(root && ref.name==='isFinite'){add([4,stdlibGlobalIds.get('isFinite'),0,0]);continue;}
       if(root && ['NaN','Infinity','undefined'].includes(ref.name)) {
         const value=ref.name==='undefined'?[0,0x7ff80000,3,0]:numberWords(ref.name==='NaN'?NaN:Infinity);
         // A literal global is stored directly in the capture specification.
@@ -74,18 +190,31 @@ export function packProgram(raw, name) {
       add([!root && ref.type === 3 ? 2 : ref.type, ref.index, 0, 0]);
     }
     if (fn.hasPrototype !== 0 && fn.hasPrototype !== 1) throw new Error('Rebuild the compiler bridge: function prototype metadata is missing');
-    image[f * 2] = [entry[f], fn.args, fn.locals, fn.refs.length | (fn.hasPrototype << 16)];
+    image[f * 2] = [entry[f], fn.args, fn.locals, fn.refs.length | (fn.hasPrototype << 16) | (fn.kind === 1 ? GENERATOR_KIND_BIT : 0) | (fn.kind === 3 ? ASYNC_GENERATOR_INFO_BITS : 0) | (fn.kind === 2 ? 0x80000 /* ASYNC_KIND_BIT */ : 0) | (f === 0 && globalPlan.mode ? GLOBAL_MODE_BIT : 0) | (f === 0 && globalPlan.script ? SCRIPT_MODE_BIT : 0)];
     if (typeof fn.name !== 'string') throw new Error('Rebuild the compiler bridge: function name metadata is missing');
     image[f * 2 + 1] = [refOffset, fn.strict, fn.length, text(fn.name)];
     const constants = fn.constants.map(c => {
       if ('function' in c) return { function: c.function };
       if (c.number) return { literal: add([...c.number, 0, 0]) };
       if ('string' in c) return { literal: text(c.string) };
+      const template = templateConstant(c, raw, { text, add, limit: LIMITS.args });
+      if (template) return template;
+      if ('bigint' in c) return { literal: packBigIntDecimal(image, c.bigint) };
       throw new SyntaxError('Unsupported QuickJS constant type');
     });
     const positions = new Map(fn.instructions.map((i, j) => [i.pc, entry[f] + j]));
-    for (const instruction of fn.instructions) {
+    for (const [index, instruction] of fn.instructions.entries()) {
       let { op, operand: a } = instruction, b = 0;
+      const classLowered = classProgramLowering(op, instruction, { text, constants });
+      if (classLowered) ({ op, a, b } = classLowered);
+      const templateLowered = templateProgramLowering(op, instruction, { constants });
+      if (templateLowered) ({ op, a, b } = templateLowered);
+      const scriptLowered=scriptEntryLowering(globalPlan,f,op,instruction,{text,add});
+      if(scriptLowered)({op,a,b}=scriptLowered);
+      const referenceLowered = scriptLowered?null:globalReferenceLowering(op, instruction, { text });
+      if (referenceLowered) ({ op, a, b } = referenceLowered);
+      const globalLowered = scriptLowered?null:globalProgramLowering(globalPlan, f, op, instruction, { text });
+      if (globalLowered) ({ op, a, b } = globalLowered);
       if (op === 'get_var' || op === 'get_var_undef') op = 'get_var_ref';
       if (op === 'put_var') op = 'put_var_ref';
       if (op === 'get_length') { op = 'get_field'; a = 'length'; }
@@ -94,6 +223,7 @@ export function packProgram(raw, name) {
       if (suffix) { op = suffix[1]; a = Number(suffix[2]); }
       if (op === 'push_minus1' || /^push_[0-7]$/.test(op)) { a = add(numberWords(op === 'push_minus1' ? -1 : Number(op.slice(5)))); op = 'push'; }
       if (['push_i8', 'push_i16', 'push_i32'].includes(op)) { a = add(numberWords(a)); op = 'push'; }
+      if (op === 'push_bigint_i32') { a = packI32BigInt(image, a); op = 'push'; }
       if (['push_const', 'push_const8'].includes(op)) { a = constants[a]?.literal; op = 'push'; }
       if (['fclosure', 'fclosure8'].includes(op)) { a = constants[a]?.function; op = 'closure'; }
       if (['undefined', 'null', 'push_true', 'push_false'].includes(op)) {
@@ -115,7 +245,7 @@ export function packProgram(raw, name) {
         a = kind;
       }
       // Home-object access remains unsupported; this does not alter stack shape.
-      if (['set_home_object', 'nop'].includes(op)) { op = 'nop'; a = 0; }
+      if (op === 'nop') a = 0;
       if (op === 'throw_error') { a = instruction.bytes[5]; }
       if (/^(if_true|if_false|goto)(8|16)?$/.test(op)) {
         op = op.replace(/8|16/g, ''); a = positions.get(a);
@@ -124,7 +254,12 @@ export function packProgram(raw, name) {
       if (op === 'catch' || op === 'gosub') {
         a = positions.get(a); if (a === undefined) throw new SyntaxError('Invalid QuickJS exception target');
       }
-      if (op === 'special_object' && a !== 0 && a !== 1 && a !== 2) throw new SyntaxError(`Unsupported QuickJS special object: ${a}`);
+      if (op === 'special_object' && !(a >= 0 && a <= 4)) throw new SyntaxError(`Unsupported QuickJS special object: ${a}`);
+      const lowered = phase4Lowering(op, instruction, fn.instructions[index - 1]);
+      if (lowered) ({ op, a, b } = lowered);
+      // Unchecked load feeding a private operation: b=1 keeps a TDZ cell as a
+      // value for that operation (phase4-class-elements.js privateSlotLoad).
+      if ((op === 'get_loc' || op === 'get_var_ref') && privateSlotLoad(fn.instructions, index)) b = 1;
       if (!(op in OP)) throw new SyntaxError(`Unsupported QuickJS instruction: ${op}`);
       if (!Number.isInteger(a)) throw new SyntaxError(`Invalid operand for ${op}`);
       code.push([OP[op], a >>> 0, b, f]);

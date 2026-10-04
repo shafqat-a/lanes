@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-04T02:58:31.004Z",
+  "browser": "149.0.7827.55",
+  "adapter": {
+    "vendor": "intel",
+    "architecture": "gen-9",
+    "device": "",
+    "description": "",
+    "isFallbackAdapter": false,
+    "smokeValue": 42
+  },
+  "args": [
+    "--enable-unsafe-webgpu",
+    "--use-angle=vulkan",
+    "--enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan",
+    "--disable-vulkan-surface"
+  ],
+  "suite": "shader-compile",
+  "error": "runtime-compute-pipeline: GPUPipelineError: A valid external Instance reference no longer exists.",
+  "diagnostics": {
+    "diagnosticOnly": true,
+    "variant": "combined",
+    "omittedReachability": [
+      "pow",
+      "width",
+      "collectionCompact"
+    ],
+    "shaderSha256": "380b7680ce02c9ddb5cb4e1a9af2e25bdad92414249d050833950ca5bc412cf8",
+    "guestProgramsExecuted": 0,
+    "shaderBytes": 339344,
+    "timings": {
+      "control-pipeline": 1,
+      "runtime-wgsl-validation": 143
+    },
+    "adapter": {
+      "vendor": "intel",
+      "architecture": "gen-9",
+      "description": "",
+      "isFallbackAdapter": false
+    },
+    "stage": "runtime-compute-pipeline"
+  }
+}

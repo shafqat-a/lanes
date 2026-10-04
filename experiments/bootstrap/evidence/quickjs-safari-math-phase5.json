@@ -1,0 +1,419 @@
+{
+  "date": "2026-10-03T05:52:38.803Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 77,
+    "checked": 360,
+    "unsupportedChecks": 1,
+    "resumptionDispatches": 2046,
+    "elapsedMs": 7644.000000000001,
+    "results": [
+      {
+        "feature": "Math-inherited-tag",
+        "checked": 1,
+        "maxSteps": 19
+      },
+      {
+        "feature": "Math-not-callable-or-constructible",
+        "checked": 1,
+        "maxSteps": 36
+      },
+      {
+        "feature": "numeric-property-descriptors",
+        "checked": 1,
+        "maxSteps": 854
+      },
+      {
+        "feature": "numeric-intrinsic-GC-roots",
+        "checked": 1,
+        "maxSteps": 5781
+      },
+      {
+        "feature": "Number.isFinite-missing-arguments",
+        "checked": 1,
+        "maxSteps": 10
+      },
+      {
+        "feature": "Number.isNaN-missing-arguments",
+        "checked": 1,
+        "maxSteps": 10
+      },
+      {
+        "feature": "Number.isInteger-missing-arguments",
+        "checked": 1,
+        "maxSteps": 12
+      },
+      {
+        "feature": "Number.isSafeInteger-missing-arguments",
+        "checked": 1,
+        "maxSteps": 12
+      },
+      {
+        "feature": "Math.abs-missing-arguments",
+        "checked": 1,
+        "maxSteps": 130
+      },
+      {
+        "feature": "Math.sign-missing-arguments",
+        "checked": 1,
+        "maxSteps": 130
+      },
+      {
+        "feature": "Math.floor-missing-arguments",
+        "checked": 1,
+        "maxSteps": 153
+      },
+      {
+        "feature": "Math.ceil-missing-arguments",
+        "checked": 1,
+        "maxSteps": 153
+      },
+      {
+        "feature": "Math.trunc-missing-arguments",
+        "checked": 1,
+        "maxSteps": 145
+      },
+      {
+        "feature": "Math.round-missing-arguments",
+        "checked": 1,
+        "maxSteps": 163
+      },
+      {
+        "feature": "Math.pow-missing-arguments",
+        "checked": 1,
+        "maxSteps": 507
+      },
+      {
+        "feature": "Number.isFinite",
+        "checked": 23,
+        "maxSteps": 28
+      },
+      {
+        "feature": "Number.isNaN",
+        "checked": 23,
+        "maxSteps": 15
+      },
+      {
+        "feature": "Number.isInteger",
+        "checked": 23,
+        "maxSteps": 86
+      },
+      {
+        "feature": "Number.isSafeInteger",
+        "checked": 23,
+        "maxSteps": 80
+      },
+      {
+        "feature": "Math.abs",
+        "checked": 23,
+        "maxSteps": 124
+      },
+      {
+        "feature": "Math.sign",
+        "checked": 23,
+        "maxSteps": 128
+      },
+      {
+        "feature": "Math.floor",
+        "checked": 23,
+        "maxSteps": 171
+      },
+      {
+        "feature": "Math.ceil",
+        "checked": 23,
+        "maxSteps": 173
+      },
+      {
+        "feature": "Math.trunc",
+        "checked": 23,
+        "maxSteps": 163
+      },
+      {
+        "feature": "Math.round",
+        "checked": 23,
+        "maxSteps": 178
+      },
+      {
+        "feature": "min-zero",
+        "checked": 23,
+        "maxSteps": 441
+      },
+      {
+        "feature": "min-no-arguments",
+        "checked": 1,
+        "maxSteps": 25
+      },
+      {
+        "feature": "min-reverse-zero",
+        "checked": 1,
+        "maxSteps": 299
+      },
+      {
+        "feature": "min-NaN",
+        "checked": 1,
+        "maxSteps": 407
+      },
+      {
+        "feature": "max-zero",
+        "checked": 23,
+        "maxSteps": 446
+      },
+      {
+        "feature": "max-no-arguments",
+        "checked": 1,
+        "maxSteps": 26
+      },
+      {
+        "feature": "max-reverse-zero",
+        "checked": 1,
+        "maxSteps": 299
+      },
+      {
+        "feature": "max-NaN",
+        "checked": 1,
+        "maxSteps": 410
+      },
+      {
+        "feature": "pow-exact",
+        "checked": 10,
+        "maxSteps": 1218
+      },
+      {
+        "feature": "pow-zero",
+        "checked": 11,
+        "maxSteps": 625
+      },
+      {
+        "feature": "pow-NaN-zero",
+        "checked": 1,
+        "maxSteps": 499
+      },
+      {
+        "feature": "Number.isFinite-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Number.isNaN-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Number.isInteger-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Number.isSafeInteger-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Math.abs-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Math.sign-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Math.floor-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Math.ceil-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Math.trunc-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Math.round-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Math.min-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Math.max-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Math.pow-metadata",
+        "checked": 1,
+        "maxSteps": 87
+      },
+      {
+        "feature": "Number.EPSILON",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Number.MAX_SAFE_INTEGER",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Number.MIN_SAFE_INTEGER",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Number.MAX_VALUE",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Number.MIN_VALUE",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Number.NaN",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Number.NEGATIVE_INFINITY",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Number.POSITIVE_INFINITY",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Math.E",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Math.LN10",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Math.LN2",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Math.LOG10E",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Math.LOG2E",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Math.PI",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Math.SQRT1_2",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "Math.SQRT2",
+        "checked": 1,
+        "maxSteps": 3
+      },
+      {
+        "feature": "isFinite-no-coercion",
+        "checked": 1,
+        "maxSteps": 526
+      },
+      {
+        "feature": "isNaN-no-coercion",
+        "checked": 1,
+        "maxSteps": 526
+      },
+      {
+        "feature": "isInteger-no-coercion",
+        "checked": 1,
+        "maxSteps": 534
+      },
+      {
+        "feature": "isSafeInteger-no-coercion",
+        "checked": 1,
+        "maxSteps": 534
+      },
+      {
+        "feature": "min-coerce-all-after-NaN",
+        "checked": 1,
+        "maxSteps": 652
+      },
+      {
+        "feature": "max-throw-after-NaN",
+        "checked": 1,
+        "maxSteps": 339
+      },
+      {
+        "feature": "pow-coercion-order",
+        "checked": 1,
+        "maxSteps": 9419
+      },
+      {
+        "feature": "round-fallback-coercion",
+        "checked": 1,
+        "maxSteps": 8795
+      },
+      {
+        "feature": "constant-immutable",
+        "checked": 1,
+        "maxSteps": 37
+      },
+      {
+        "feature": "Math-identity",
+        "checked": 1,
+        "maxSteps": 173
+      },
+      {
+        "feature": "borrowed-methods",
+        "checked": 1,
+        "maxSteps": 1117
+      }
+    ],
+    "method": "Binary64 Math/Number semantics, exact Object.is comparison including signed zero, fresh Safari references, guest callbacks and one-instruction resumption. General pow approximation evidence is in the existing dedicated pow suite.",
+    "gaps": [
+      "Remaining Math methods",
+      "Number.parseInt/parseFloat",
+      "Resource-bounded argument count"
+    ]
+  }
+}

@@ -184,7 +184,11 @@ DEF(            ret, 1, 1, 0, none) /* used to return from the finally block */
 DEF(      nip_catch, 1, 2, 1, none) /* catch ... a -> a */
 
 DEF(      to_object, 1, 1, 1, none)
-//DEF(      to_string, 1, 1, 1, none)
+/* LANES: enabled for untagged template literals (ES2025 13.2.8.6: ToString
+   of each substitution immediately after its evaluation). It must stay
+   before OP_nop: phase 1 bytecode reuses values above OP_nop for temporary
+   opcodes. This renumbers the later opcodes; consumers use opcode names. */
+DEF(      to_string, 1, 1, 1, none)
 DEF(     to_propkey, 1, 1, 1, none)
 
 DEF(   with_get_var, 10, 1, 0, atom_label_u8)     /* must be in the same order as scope_xxx */

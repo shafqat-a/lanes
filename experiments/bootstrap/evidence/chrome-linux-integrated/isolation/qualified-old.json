@@ -1,0 +1,9 @@
+{
+  "diagnosticOnly": true,
+  "variant": "qualified-old",
+  "baseline": "Previously qualified protocol-era shader supplied as /tmp/lanes-compile-cost/old.mjs; no semantic omissions or current lowering applied",
+  "shaderSha256": "cc7e360846abf81e738de5eefff497fe66fe48b92aa6ea40cc5b39a29ef1dfd7",
+  "shaderBytes": 243261,
+  "sourceModuleSha256": "b104b4e74b4b37edcceff8a0b7c6ab3a12a14208be8f028ebb9499a5f3c67e2c",
+  "guestProgramsExecuted": 0
+}

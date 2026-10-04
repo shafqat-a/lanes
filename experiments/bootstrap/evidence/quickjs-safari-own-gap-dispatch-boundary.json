@@ -1,0 +1,10 @@
+{
+  "outcome": "unsupported-runtime",
+  "suite": "dispatch-boundary",
+  "case": "prototype-getter-constructor",
+  "expected": "pc:7:3",
+  "budget": 1,
+  "error": "Unsupported runtime operation in lane 0, instruction 27491; no CPU fallback",
+  "runnerLog": "{\"date\":\"2026-10-04T07:26:28.242Z\",\"stage\":\"Starting\u2026\"}\n{\"date\":\"2026-10-04T07:26:28.520Z\",\"stage\":\"native-own-property-queries: budget 1\"}\n{\"date\":\"2026-10-04T07:26:29.048Z\",\"stage\":\"native-own-property-queries: budget 4096\"}\n{\"date\":\"2026-10-04T07:26:29.306Z\",\"stage\":\"setter-result-and-update: budget 1\"}\n{\"date\":\"2026-10-04T07:26:29.563Z\",\"stage\":\"computed-key-resume: budget 1\"}\n{\"date\":\"2026-10-04T07:26:29.819Z\",\"stage\":\"constructor-target-bound: budget 1\"}\n{\"date\":\"2026-10-04T07:26:30.335Z\",\"stage\":\"prototype-getter-constructor: budget 1\"}\n{\"date\":\"2026-10-04T07:26:30.592Z\",\"stage\":\"Failed\"}\nfile:///private/tmp/lanes-metadata-verify/lanes-safari-diagnostics.mjs:32\n    if (state.error) throw new Error(state.error);\n                           ^\n\nError: Error: Unsupported runtime operation in lane 0, instruction 27491; no CPU fallback\n@http://127.0.0.1:4178/browser-dispatch-boundary.js:21216:30\n    at file:///private/tmp/lanes-metadata-verify/lanes-safari-diagnostics.mjs:32:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n\nNode.js v24.4.1\n",
+  "candidateHashes": "quickjs-safari-own-gap-candidate-hashes.json"
+}

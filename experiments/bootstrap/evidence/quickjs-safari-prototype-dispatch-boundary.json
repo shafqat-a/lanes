@@ -1,0 +1,1086 @@
+{
+  "date": "2026-10-04T13:02:18.487Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 37,
+    "checked": 148,
+    "requiredGC": 4,
+    "singleInstructionPrograms": 33,
+    "nativeReferenceDifferences": [
+      {
+        "name": "computed-key-resume",
+        "input": 7,
+        "native": "kg:undefined",
+        "normative": "kgks:9",
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-evaluate-property-access-with-expression-key"
+      },
+      {
+        "name": "computed-key-resume",
+        "input": 8,
+        "native": "kg:undefined",
+        "normative": "kgks:10",
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-evaluate-property-access-with-expression-key"
+      }
+    ],
+    "elapsedMs": 23599,
+    "results": [
+      {
+        "name": "prototype-update-cycle-guards",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              1315,
+              1315
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              1315,
+              1315
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "distinct-six-character-function-keys",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              815,
+              815
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              815,
+              815
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "native-own-property-queries",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              741,
+              741
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              741,
+              741
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "setter-result-and-update",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              317,
+              317
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              317,
+              317
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "computed-key-resume",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              350,
+              350
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              350,
+              350
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "constructor-target-bound",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              499,
+              499
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              499,
+              499
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "prototype-getter-constructor",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              662,
+              662
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              662,
+              662
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "iterator-close-throw-precedence",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              395,
+              395
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              395,
+              395
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "nested-iterator-close-original-throw",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              616,
+              616
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              616,
+              616
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "async-job-chain",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              1560,
+              1560
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              1560,
+              1560
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "async-catch-finally",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              1153,
+              1153
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              1153,
+              1153
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gc-setter-receiver",
+        "requiresGC": true,
+        "runs": [
+          {
+            "budget": 31,
+            "steps": [
+              14028,
+              14028
+            ],
+            "collections": [
+              1,
+              1
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              14028,
+              14028
+            ],
+            "collections": [
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gc-async-retained-frame",
+        "requiresGC": true,
+        "runs": [
+          {
+            "budget": 31,
+            "steps": [
+              14717,
+              14717
+            ],
+            "collections": [
+              2,
+              2
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              14717,
+              14717
+            ],
+            "collections": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "name": "constructor-resume-getter-once-after-arguments",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              683,
+              683
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              683,
+              683
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "constructor-resume-getter-throws-original-token",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              651,
+              651
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              651,
+              651
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "constructor-resume-primitive-prototype-fallback",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              743,
+              743
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              743,
+              743
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "constructor-resume-bound-target-observes-explicit-newtarget",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              870,
+              870
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              870,
+              870
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "constructor-resume-bound-default-newtarget-unwrapped",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              390,
+              390
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              390,
+              390
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "constructor-resume-invalid-newtarget-before-argument-get",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              547,
+              547
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              547,
+              547
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "constructor-resume-getter-gc-retains-target-arguments",
+        "requiresGC": true,
+        "runs": [
+          {
+            "budget": 31,
+            "steps": [
+              15027,
+              15027
+            ],
+            "collections": [
+              2,
+              2
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              15027,
+              15027
+            ],
+            "collections": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "name": "constructor-resume-native-newtarget-identity",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              579,
+              579
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              579,
+              579
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "constructor-resume-nested-bound-effective-newtarget",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              876,
+              876
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              876,
+              876
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "constructor-resume-getter-reentrant-construction",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              952,
+              952
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              952,
+              952
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ordinary-write",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              146,
+              146
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              146,
+              146
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "function-setter",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              154,
+              154
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              154,
+              154
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "self-cycle",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              266,
+              266
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              266,
+              266
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "transitive-cycle",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              544,
+              544
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              544,
+              544
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "setter-cycle",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              399,
+              399
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              399,
+              399
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "reflect-cycle-false",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              184,
+              184
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              184,
+              184
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "nonextensible",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              342,
+              342
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              342,
+              342
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "immutable",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              312,
+              312
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              312,
+              312
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "primitive-object-api",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              229,
+              229
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              229,
+              229
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "nullish-before-invalid",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              167,
+              167
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              167,
+              167
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "setter-primitive",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              141,
+              141
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              141,
+              141
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "setter-nullish",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              234,
+              234
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              234,
+              234
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "function-parent",
+        "requiresGC": false,
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              160,
+              160
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              160,
+              160
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "retained-chain-gc",
+        "requiresGC": true,
+        "runs": [
+          {
+            "budget": 31,
+            "steps": [
+              14280,
+              14280
+            ],
+            "collections": [
+              1,
+              1
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              14280,
+              14280
+            ],
+            "collections": [
+              1,
+              1
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "candidateHashes": "quickjs-safari-prototype-candidate-hashes.json"
+}

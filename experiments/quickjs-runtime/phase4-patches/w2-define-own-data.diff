@@ -1,0 +1,29 @@
+--- a/experiments/quickjs-runtime/phase4-class-elements.js
++++ b/experiments/quickjs-runtime/phase4-class-elements.js
+@@ -130,18 +130,25 @@
+ fn defineOwnData(l:u32,original:V,key:u32,value:V) {
+   if(!functionKey(l,original,key)){return;}
+   let obj=objectView(l,original);
+   if(obj.z!=4u){states[l].status=6u;return;}
+   if(ownGap(l,obj.x,key)){return;}
+   let kind=states[l].heap[obj.x].kind;
+-  if(kind==7u&&lengthKey(l,key)){states[l].status=6u;return;}
++  // LANES w2: an Array's length is always non-configurable, so
++  // CreateDataPropertyOrThrow(array, "length", v) always rejects (ES2025
++  // 10.1.6.3 step 4.a via 10.4.2.1 ArraySetLength) -> TypeError.
++  if(kind==7u&&lengthKey(l,key)){states[l].status=4u;return;}
+   if(stringOwn(l,obj.x,key)!=0u){states[l].status=4u;return;}
+   let property=findProperty(l,obj.x,key);
+   if(property!=0u){
+     let node=states[l].heap[property];
++    // LANES w2: mapped arguments element (kind 15). CreateDataProperty's
++    // descriptor is writable, so the mapping stays and the value is written
++    // through to the parameter binding (ES2025 10.4.4.2 steps 7-8).
++    if(node.kind==15u){if((node.marked&8u)==0u){states[l].status=4u;return;}states[l].heap[node.value.x].value=value;states[l].heap[property].marked=14u;return;}
+     if(node.kind!=3u&&node.kind!=9u){states[l].status=6u;return;}
+     if((node.marked&8u)==0u){states[l].status=4u;return;}
+     states[l].heap[property].kind=3u;states[l].heap[property].value=value;states[l].heap[property].marked=14u;
+     return;
+   }
+   let ignored=putProperty(l,original,key,value,true);
+ }

@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-04T13:02:26.665Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 21,
+    "checked": 32,
+    "results": [
+      {
+        "feature": "dispatch-tail-call-guest-step-count",
+        "steps": 6,
+        "collections": 0,
+        "resumptionDispatches": 6
+      },
+      {
+        "feature": "dispatch-getter-setter-continuations",
+        "steps": 207,
+        "collections": 0,
+        "resumptionDispatches": 207
+      },
+      {
+        "feature": "dispatch-native-accessor-inline",
+        "steps": 77,
+        "collections": 0,
+        "resumptionDispatches": 0
+      },
+      {
+        "feature": "dispatch-computed-key-kept-reference",
+        "steps": 425,
+        "collections": 0,
+        "resumptionDispatches": 0
+      },
+      {
+        "feature": "dispatch-bound-call-apply-tail",
+        "steps": 474,
+        "collections": 0,
+        "resumptionDispatches": 474
+      },
+      {
+        "feature": "dispatch-construct-frame-and-inline",
+        "steps": 618,
+        "collections": 0,
+        "resumptionDispatches": 0
+      },
+      {
+        "feature": "dispatch-constructor-return-primitive",
+        "steps": 389,
+        "collections": 0,
+        "resumptionDispatches": 0
+      },
+      {
+        "feature": "dispatch-generator-inline-completed-and-frame",
+        "steps": 465,
+        "collections": 0,
+        "resumptionDispatches": 465
+      },
+      {
+        "feature": "dispatch-generator-throw-finally",
+        "steps": 218,
+        "collections": 0,
+        "resumptionDispatches": 0
+      },
+      {
+        "feature": "dispatch-close-original-throw",
+        "steps": 311,
+        "collections": 0,
+        "resumptionDispatches": 0
+      },
+      {
+        "feature": "dispatch-async-reject-catch-finally",
+        "steps": 414,
+        "collections": 0,
+        "resumptionDispatches": 414
+      },
+      {
+        "feature": "dispatch-promise-thenable-job",
+        "steps": 1055,
+        "collections": 0,
+        "resumptionDispatches": 0
+      },
+      {
+        "feature": "dispatch-async-generator-request-queue",
+        "steps": 4817,
+        "collections": 2,
+        "resumptionDispatches": 0
+      },
+      {
+        "feature": "dispatch-for-await-close-awaits",
+        "steps": 1185,
+        "collections": 0,
+        "resumptionDispatches": 0
+      },
+      {
+        "feature": "dispatch-job-argument-and-result-roots",
+        "steps": 10666,
+        "collections": 1,
+        "resumptionDispatches": 0
+      },
+      {
+        "feature": "finish-native-tail-array-result",
+        "steps": 21,
+        "collections": 0,
+        "resumptionDispatches": 21
+      },
+      {
+        "feature": "finish-native-tail-dynamic-string",
+        "steps": 156,
+        "collections": 0,
+        "resumptionDispatches": 156
+      },
+      {
+        "feature": "finish-completed-generator-native-tail",
+        "steps": 32,
+        "collections": 0,
+        "resumptionDispatches": 32
+      },
+      {
+        "feature": "finish-nested-tail-constructor-result",
+        "steps": 28,
+        "collections": 0,
+        "resumptionDispatches": 28
+      },
+      {
+        "feature": "finish-async-return-native-object",
+        "steps": 391,
+        "collections": 0,
+        "resumptionDispatches": 391
+      },
+      {
+        "feature": "finish-async-generator-suspend-return",
+        "steps": 2603,
+        "collections": 1,
+        "resumptionDispatches": 2603
+      }
+    ],
+    "nativeReferenceDifferences": [
+      {
+        "feature": "dispatch-computed-key-kept-reference",
+        "native": "2:kg",
+        "normative": "2:kgks3",
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-evaluate-property-access-with-expression-key"
+      }
+    ],
+    "elapsedMs": 6891.000000000001
+  },
+  "candidateHashes": "quickjs-safari-prototype-candidate-hashes.json"
+}

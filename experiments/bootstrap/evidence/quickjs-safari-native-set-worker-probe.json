@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-04T12:27:53.327Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "state": "done",
+    "rows": [
+      {
+        "feature": "keys-result-non-object",
+        "input": "undefined",
+        "started": true,
+        "elapsedMs": 9,
+        "value": "TTTTTT"
+      },
+      {
+        "feature": "keys-result-non-object",
+        "input": 1,
+        "started": true,
+        "elapsedMs": 6,
+        "value": "TTTTTT"
+      },
+      {
+        "feature": "keys-result-non-object",
+        "input": "s",
+        "started": true,
+        "elapsedMs": 5,
+        "value": "TTTTTT"
+      },
+      {
+        "feature": "next-result-non-object",
+        "input": "undefined",
+        "started": true,
+        "elapsedMs": 3,
+        "value": "TTTTTT"
+      },
+      {
+        "feature": "next-result-non-object",
+        "input": 1,
+        "started": true,
+        "elapsedMs": 2002,
+        "timeout": true,
+        "timeoutMs": 2000
+      },
+      {
+        "feature": "next-result-non-object",
+        "input": "s",
+        "started": true,
+        "elapsedMs": 2002.0000000000005,
+        "timeout": true,
+        "timeoutMs": 2000
+      }
+    ]
+  }
+}

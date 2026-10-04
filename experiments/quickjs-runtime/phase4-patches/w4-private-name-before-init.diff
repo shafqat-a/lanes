@@ -1,0 +1,30 @@
+--- a/experiments/quickjs-runtime/phase4-class-elements.js
++++ b/experiments/quickjs-runtime/phase4-class-elements.js
+@@ -91,4 +91,13 @@
+ fn privateName(l:u32,v:V)->u32 {
+   if(v.z!=4u||states[l].heap[v.x].kind!=33u){states[l].status=2u;return 0u;}
+   return v.x;
+ }
++// A private-name slot read before its private_symbol ran (a computed key or
++// an earlier static element of the same class body) still holds the TDZ
++// marker (tag 6, set_loc_uninitialized). No object can carry that name yet:
++// it names no element (key 0 never matches), so get/put throw TypeError and
++// private_in answers false (ES2025 PrivateElementFind returns empty).
++fn privateNameOrAbsent(l:u32,v:V)->u32 {
++  if(v.z==6u){return 0u;}
++  return privateName(l,v);
++}
+@@ -105,3 +114,3 @@
+ fn privateFind(l:u32,holder:u32,key:u32,kind:u32)->u32 {
+-  if(holder==0u||holder==PRIVATE_NO_STORAGE){return 0u;}
++  if(holder==0u||holder==PRIVATE_NO_STORAGE||key==0u){return 0u;}
+   var id=states[l].heap[holder].value.y;
+@@ -152,1 +161,1 @@
+-  get_private_field: `let name=pop(l);let objValue=pop(l);let key=privateName(l,name);if(states[l].status!=0u){break;}
++  get_private_field: `let name=pop(l);let objValue=pop(l);let key=privateNameOrAbsent(l,name);if(states[l].status!=0u){break;}
+@@ -156,1 +165,1 @@
+-  put_private_field: `let name=pop(l);let value=pop(l);let objValue=pop(l);let key=privateName(l,name);if(states[l].status!=0u){break;}
++  put_private_field: `let name=pop(l);let value=pop(l);let objValue=pop(l);let key=privateNameOrAbsent(l,name);if(states[l].status!=0u){break;}
+@@ -175,1 +184,1 @@
+-        else{let key=privateName(l,name);if(states[l].status!=0u){break;}found=privateFind(l,holder,key,34u);}
++        else{let key=privateNameOrAbsent(l,name);if(states[l].status!=0u){break;}found=privateFind(l,holder,key,34u);}

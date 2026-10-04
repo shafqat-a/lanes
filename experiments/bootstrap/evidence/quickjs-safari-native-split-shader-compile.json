@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-04T07:02:01.380Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "diagnosticOnly": true,
+    "guestProgramsExecuted": 0,
+    "shaderBytes": {
+      "main": 216222,
+      "call": 102214,
+      "native": 154940
+    },
+    "timings": {
+      "control-pipeline": 7,
+      "main-wgsl-validation": 18,
+      "main-compute-pipeline": 9672,
+      "call-wgsl-validation": 7,
+      "call-compute-pipeline": 4806,
+      "native-wgsl-validation": 11.000000000001819,
+      "native-compute-pipeline": 17993
+    },
+    "adapter": {
+      "vendor": "apple",
+      "architecture": "apple",
+      "description": "apple",
+      "isFallbackAdapter": false
+    },
+    "stage": "native-compute-pipeline"
+  },
+  "modules": {
+    "main": {
+      "sha256": "a89dcb8a3ca78887a6d8fec3e61fe8bb09d264d92b67742d03a80c2249e9891f",
+      "bytes": 216222
+    },
+    "call": {
+      "sha256": "c35b7a11212c99d6d20ba41770420576b3becbf76cb1e4d7e862c0eded562959",
+      "bytes": 102214
+    },
+    "native": {
+      "sha256": "b2375b84f522e9f377babaf7fbea3338dde7d60c5404ae2f0772c3d06640fd51",
+      "bytes": 154940
+    }
+  },
+  "archiveSha256": "71f20029ea6bfa759147025bed5825dcfb91af9cd0358a5b72084d95f53e6bcd",
+  "compilerPeakFootprintMB": 382.7
+}

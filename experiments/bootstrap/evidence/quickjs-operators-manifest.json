@@ -1,0 +1,34 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/browser-test262.html": "edd324fd3e7369b34e468bb93b1d2e82dccb25c6cc7812c24e09bbc1fdf5669a",
+    "experiments/quickjs-runtime/number-source.js": "530bb01c8c10ea76c809c69f1fa60c0ce1703103d5f63bcb3dd9593bf9afb34f",
+    "experiments/quickjs-runtime/cases.js": "d501a38bd6b453fab8e33cef0a0ca17935de1a33905db7520512e04cf5194d25",
+    "experiments/quickjs-runtime/browser-number.js": "f6280d21ae404240a3433986e3a341b9ff0df136a0c440c0efc6e5d1c38d60f6",
+    "experiments/quickjs-runtime/browser-number.html": "8c6e29fdc6bf4d77c0124ad3dd026b42c994390d3fc5c7d896f361961fbed828",
+    "experiments/quickjs-runtime/browser.html": "8a680cf583331dc5db483eff81e32de4d88e9107f9691f89d9916a16e52f7cb2",
+    "experiments/quickjs-runtime/debug.mjs": "45344f6e2d11e5b49adff4faab58d03299dafb133a36e76a409a7a91eb9e5187",
+    "experiments/quickjs-runtime/program.js": "9954bec2f593e260431e81ddee8dfe944dc1215d568e48ff54c6555c6428a7fe",
+    "experiments/quickjs-runtime/export-test262-browser.mjs": "9d1fbbd3c95b561726cac38ed4ca68b6c46df31d76a43ca97d35b29e1d06f158",
+    "experiments/quickjs-runtime/check-compiler.mjs": "ea2e3297cf4bfe5d75f489c90609d67d83f495ac0c50575895b22baa170dddcd",
+    "experiments/quickjs-runtime/validation.js": "a11265332112a0786fac5a04f8cf9a14b8d4b76715abfaeec14b0be7fb2fea96",
+    "experiments/quickjs-runtime/compiler.js": "c6070dc7df623ea63074beb39ff78bc980e7e9db1d92d46102ad77c7585dd6ed",
+    "experiments/quickjs-runtime/shader.js": "ea4e237a44ecb41dffc8bb405f72df352e7eb2cf04e678888b8f8ceda3e9f389",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/browser.js": "a9823f47922254667af7bf8f07f10b3b84d5d3134a87f0b3c176ed2bdd5d8044",
+    "experiments/quickjs-runtime/bridge.c": "a1e3c11ca6de432ef58ec1887c04917f64edf6a242e2d4826dd752925e47154d",
+    "experiments/quickjs-runtime/safari.mjs": "2c32f0f224b90df7874f83fa608982f2d59a8619a6473385d41c0d8f00bd138d",
+    "experiments/quickjs-runtime/test262-harness.js": "fc388ad224ab153522117889955a8de99d7ade24ac5e14673afbc26e6db1396c",
+    "experiments/quickjs-runtime/build.mjs": "b63e650e15f58470a9b49eca8bd24001f1e8a1fe258f4171644f3225e1cd86a4",
+    "experiments/quickjs-runtime/check.mjs": "2a807b6b9bda1b208926ee02466b45b23b0f019401355ea489171973fbc4981b",
+    "experiments/quickjs-runtime/check-number.mjs": "fac9074d5653c9419105abe1cb73374a5061ca0c39b95e1cf0629ff4d17809dc",
+    "experiments/quickjs-runtime/number-cases.js": "0de4c7eca64bfcdf164842298a395982ef73139f980f0c79e4d71256c08641f5",
+    "experiments/quickjs-runtime/browser-test262.js": "64e579a4a3baac0bab6fe7fbacb8327bcc6160933436217a8c7a21cd7c1411d9",
+    "experiments/quickjs-runtime/test262-adapted.mjs": "5611974b1a6ede40d624f10e63cf34902e62087a34ffec86d89c7d989089985a",
+    "experiments/quickjs-runtime/build-browser.mjs": "166c6a9c7a138c0df0298ebd0bbe16aefd08c361e1cb3c3de36d12a7889e2ac0",
+    "experiments/quickjs-runtime/bootstrap.js": "280b19a29e85c8349acdbd3fbdf9907b9f6ea3c640c07a8bca634e0ed4e7c719"
+  },
+  "reports": [
+    "quickjs-safari-5121.json"
+  ],
+  "note": "569 programs; unary plus/minus/not and numeric binary conversion callbacks execute on GPU. Dedicated single-instruction numeric resumption. Adapted inventory last run against preceding array-coercion snapshot."
+}

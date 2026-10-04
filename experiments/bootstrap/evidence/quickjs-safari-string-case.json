@@ -1,0 +1,425 @@
+{
+  "date": "2026-10-03T10:07:41.524Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "unicodeVersion": "17.0.0",
+    "programs": 65,
+    "checked": 321,
+    "resourceLimited": 2,
+    "resumptionDispatches": 3026,
+    "elapsedMs": 13827,
+    "results": [
+      {
+        "feature": "unicode-case-0-toUpperCase",
+        "checked": 5,
+        "maxSteps": 65,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-0-toLowerCase",
+        "checked": 5,
+        "maxSteps": 65,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-1-toUpperCase",
+        "checked": 5,
+        "maxSteps": 967,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-1-toLowerCase",
+        "checked": 5,
+        "maxSteps": 1253,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-2-toUpperCase",
+        "checked": 5,
+        "maxSteps": 591,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-2-toLowerCase",
+        "checked": 5,
+        "maxSteps": 713,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-3-toUpperCase",
+        "checked": 5,
+        "maxSteps": 949,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-3-toLowerCase",
+        "checked": 5,
+        "maxSteps": 849,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-4-toUpperCase",
+        "checked": 5,
+        "maxSteps": 311,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-4-toLowerCase",
+        "checked": 5,
+        "maxSteps": 423,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-5-toUpperCase",
+        "checked": 5,
+        "maxSteps": 147,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-5-toLowerCase",
+        "checked": 5,
+        "maxSteps": 175,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-6-toUpperCase",
+        "checked": 5,
+        "maxSteps": 229,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-6-toLowerCase",
+        "checked": 5,
+        "maxSteps": 255,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-7-toUpperCase",
+        "checked": 5,
+        "maxSteps": 311,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-7-toLowerCase",
+        "checked": 5,
+        "maxSteps": 442,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-8-toUpperCase",
+        "checked": 5,
+        "maxSteps": 311,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-8-toLowerCase",
+        "checked": 5,
+        "maxSteps": 396,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-9-toUpperCase",
+        "checked": 5,
+        "maxSteps": 393,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-9-toLowerCase",
+        "checked": 5,
+        "maxSteps": 583,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-10-toUpperCase",
+        "checked": 5,
+        "maxSteps": 311,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-10-toLowerCase",
+        "checked": 5,
+        "maxSteps": 356,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-11-toUpperCase",
+        "checked": 5,
+        "maxSteps": 311,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-11-toLowerCase",
+        "checked": 5,
+        "maxSteps": 391,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-12-toUpperCase",
+        "checked": 5,
+        "maxSteps": 229,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-12-toLowerCase",
+        "checked": 5,
+        "maxSteps": 257,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-13-toUpperCase",
+        "checked": 5,
+        "maxSteps": 229,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-13-toLowerCase",
+        "checked": 5,
+        "maxSteps": 276,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-14-toUpperCase",
+        "checked": 5,
+        "maxSteps": 311,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-14-toLowerCase",
+        "checked": 5,
+        "maxSteps": 356,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-15-toUpperCase",
+        "checked": 5,
+        "maxSteps": 311,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-15-toLowerCase",
+        "checked": 5,
+        "maxSteps": 396,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-16-toUpperCase",
+        "checked": 5,
+        "maxSteps": 393,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-16-toLowerCase",
+        "checked": 5,
+        "maxSteps": 583,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-17-toUpperCase",
+        "checked": 5,
+        "maxSteps": 337,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-17-toLowerCase",
+        "checked": 5,
+        "maxSteps": 415,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-18-toUpperCase",
+        "checked": 5,
+        "maxSteps": 337,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-18-toLowerCase",
+        "checked": 5,
+        "maxSteps": 389,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-19-toUpperCase",
+        "checked": 5,
+        "maxSteps": 319,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-19-toLowerCase",
+        "checked": 5,
+        "maxSteps": 281,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-20-toUpperCase",
+        "checked": 5,
+        "maxSteps": 393,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-20-toLowerCase",
+        "checked": 5,
+        "maxSteps": 497,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-21-toUpperCase",
+        "checked": 5,
+        "maxSteps": 393,
+        "collections": 0
+      },
+      {
+        "feature": "unicode-case-21-toLowerCase",
+        "checked": 5,
+        "maxSteps": 497,
+        "collections": 0
+      },
+      {
+        "feature": "case-generic-coercion-order",
+        "checked": 5,
+        "maxSteps": 308,
+        "collections": 0
+      },
+      {
+        "feature": "case-null",
+        "checked": 5,
+        "maxSteps": 119,
+        "collections": 0
+      },
+      {
+        "feature": "case-undefined",
+        "checked": 5,
+        "maxSteps": 123,
+        "collections": 0
+      },
+      {
+        "feature": "case-number",
+        "checked": 5,
+        "maxSteps": 232,
+        "collections": 0
+      },
+      {
+        "feature": "case-boxed",
+        "checked": 5,
+        "maxSteps": 744,
+        "collections": 0
+      },
+      {
+        "feature": "case-throw-identity",
+        "checked": 5,
+        "maxSteps": 90,
+        "collections": 0
+      },
+      {
+        "feature": "case-properties",
+        "checked": 5,
+        "maxSteps": 34,
+        "collections": 0
+      },
+      {
+        "feature": "case-review-sigma-ignorable-only-prefix",
+        "checked": 5,
+        "maxSteps": 377,
+        "collections": 0
+      },
+      {
+        "feature": "case-review-sigma-cased-before-ignorable",
+        "checked": 5,
+        "maxSteps": 457,
+        "collections": 0
+      },
+      {
+        "feature": "case-review-sigma-cased-after-ignorable",
+        "checked": 5,
+        "maxSteps": 724,
+        "collections": 0
+      },
+      {
+        "feature": "case-review-sigma-astral-neighbor",
+        "checked": 5,
+        "maxSteps": 587,
+        "collections": 0
+      },
+      {
+        "feature": "case-review-sigma-astral-prefix",
+        "checked": 5,
+        "maxSteps": 309,
+        "collections": 0
+      },
+      {
+        "feature": "case-review-sigma-lone-surrogate-break",
+        "checked": 5,
+        "maxSteps": 869,
+        "collections": 0
+      },
+      {
+        "feature": "case-review-sigma-punctuation-reset",
+        "checked": 5,
+        "maxSteps": 1415,
+        "collections": 0
+      },
+      {
+        "feature": "case-review-multiple-expansions",
+        "checked": 5,
+        "maxSteps": 577,
+        "collections": 0
+      },
+      {
+        "feature": "case-review-private-helper-immunity",
+        "checked": 5,
+        "maxSteps": 752,
+        "collections": 0
+      },
+      {
+        "feature": "case-review-max-expanded-units",
+        "checked": 5,
+        "maxSteps": 15639,
+        "collections": 6
+      },
+      {
+        "feature": "unicode16-cyrillic-tje-upper",
+        "checked": 5,
+        "maxSteps": 147,
+        "collections": 0
+      },
+      {
+        "feature": "unicode16-cyrillic-tje-lower",
+        "checked": 5,
+        "maxSteps": 173,
+        "collections": 0
+      },
+      {
+        "feature": "unicode17-beria-erfe-upper",
+        "checked": 5,
+        "maxSteps": 201,
+        "collections": 0
+      }
+    ],
+    "nativeVersionDifferences": [],
+    "gaps": [
+      "Locale-sensitive toLocaleUpperCase/toLocaleLowerCase are not included.",
+      "Unicode data pinned to vendor17.0.0; browser oracles with older Unicode data may differ for newly assigned mappings. Fixed expectations identify the chosen data version.",
+      "Guest text/heap/frame/instruction limits remain explicit engine resource completions; no host case conversion or ASCII-only fallback.",
+      "BigInt receiver text conversion remains explicitly unsupported until that primitive conversion is integrated."
+    ]
+  }
+}

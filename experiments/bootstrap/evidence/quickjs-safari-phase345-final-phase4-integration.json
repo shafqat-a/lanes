@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-03T18:33:04.594Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 10,
+    "checked": 40,
+    "fixedExpectations": 10,
+    "gcRequiredPrograms": 7,
+    "elapsedMs": 1474.0000000000002,
+    "results": [
+      {
+        "feature": "phase4-integration-gc-derived-instance-super",
+        "requiresGC": true,
+        "checked": 4,
+        "maxSteps": 14339,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "phase4-integration-gc-method-home-object",
+        "requiresGC": true,
+        "checked": 4,
+        "maxSteps": 14059,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "phase4-integration-gc-new-target-arrow",
+        "requiresGC": true,
+        "checked": 4,
+        "maxSteps": 14325,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "phase4-integration-gc-class-closure-super",
+        "requiresGC": true,
+        "checked": 4,
+        "maxSteps": 14374,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "phase4-integration-gc-class-descriptor-static",
+        "requiresGC": true,
+        "checked": 4,
+        "maxSteps": 14507,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "phase4-integration-gc-class-json-toJSON",
+        "requiresGC": true,
+        "checked": 4,
+        "maxSteps": 16566,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "phase4-integration-nested-spread-json-order",
+        "requiresGC": false,
+        "checked": 4,
+        "maxSteps": 1962,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "phase4-integration-destructure-copy-json",
+        "requiresGC": false,
+        "checked": 4,
+        "maxSteps": 6545,
+        "collections": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "feature": "phase4-integration-class-copy-getters-spread",
+        "requiresGC": false,
+        "checked": 4,
+        "maxSteps": 1800,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "phase4-integration-gc-object-spread-retained-accessor",
+        "requiresGC": true,
+        "checked": 4,
+        "maxSteps": 15579,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "method": "Fixed expectations and isolated native realms across class instances, method home objects, super, new.target, closure captures, object spread, JSON.stringify and copying Array methods. Every GC fixture requires a positive collection count in every lane."
+  }
+}

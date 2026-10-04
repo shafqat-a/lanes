@@ -1,0 +1,57 @@
+--- shader.js
++++ shader.js
+@@ -187,6 +187,8 @@
+   let id=alloc(l,5u,V(f,0u,0u,0u),0u,0u); let fnInfo=image[f*2u]; let refs=image[f*2u+1u].x;
+   for (var i=0u;i<(fnInfo.w&0xffffu);i++) {
+     let spec=image[refs+i]; var captured=0u;
++    // Global-object mode binding (phase4-global.js): no capture cell.
++    if(spec.x==7u){continue;}
+     if (spec.x==0u) { captured=cell(l,states[l].env,16u+spec.y,false); }
+     else if (spec.x==1u) { captured=cell(l,states[l].env,spec.y,false); }
+     else if (spec.x==2u) { captured=cell(l,states[l].env,spec.y,true); }
+@@ -325,6 +327,7 @@
+ // ES2025 prototype properties that are not implemented: reaching the owning
+ // prototype without a guest-defined property is unsupported, not a miss.
+ fn prototypeGap(l:u32,id:u32,key:u32)->bool {
++  if(id==GLOBAL_OBJECT){return globalGap(l,key);}
+   if(id==23u){return ${mathPhase5Pending.map(name=>`field(l,key,${F[name]}u)`).join('||')};}
+   if(id==24u){return ${numberPhase5Pending.map(name=>`field(l,key,${F[name]}u)`).join('||')||'false'};}
+   if(id==25u){return field(l,key,${F.stringify}u);}
+@@ -560,6 +563,7 @@
+     }
+   }
+   var property=findProperty(l,obj.x,key);
++  if(property==0u&&obj.x==GLOBAL_OBJECT&&ownGap(l,obj.x,key)){return undef();}
+   if(property==0u && states[l].heap[obj.x].value.w==0u){if(define || image[code[states[l].pc-1u].w*2u+1u].y!=0u){states[l].status=4u;}return undef();}
+   let index=arrayIndex(l,key);
+   if(states[l].heap[obj.x].kind==7u && index!=0xffffffffu){
+@@ -1019,6 +1023,7 @@
+   if(object.z!=4u&&object.z!=7u&&object.z!=0u&&object.z!=1u){states[l].status=6u;return undef();}
+   // The three wrapper prototypes do not have their complete ES2025 key lists.
+   if(object.z==4u&&object.x>=20u&&object.x<=25u){states[l].status=6u;return undef();}
++  if(object.z==4u&&object.x==GLOBAL_OBJECT&&!enumerableOnly){states[l].status=6u;return undef();}
+   // String wrappers list their exotic indices first, then other indices, then
+   // length (created first), then named keys in creation order.
+   var numeric=0u;var named=0u;var arrayLength=false;var exotic=0u;
+@@ -1379,7 +1384,10 @@
+       if(field(l,item.x,${F.__proto__}u)){kind=9u;value=V(0x80000078u,0x80000079u,0u,0u);}
+       let property=alloc(l,kind,value,item.x,states[l].heap[parent].next);states[l].heap[parent].next=property;states[l].heap[property].marked=10u;
+     }
++    // Fixed node 65: global object (phase4-global.js), global-object mode only.
++    if(globalMode()){globalInit(l);}
+     let fnValue=closure(l,0u); let env=environment(l,fnValue.x,1u);
++    if(globalMode()){globalEntryBinding(l,fnValue);}
+     states[l].env=env; states[l].frames[0]=Frame(0u,env,0u,0u,undef());
+     { let c=cell(l,env,0u,false); states[l].heap[c].value=states[l].result; }
+     states[l].result=undef(); states[l].pc=image[0].x;
+@@ -1515,8 +1523,9 @@
+       ${cases('push_this', `let value=states[l].frames[states[l].depth].receiver;
+         if (value.z!=4u&&value.z!=5u&&value.z!=11u&&image[ins.w*2u+1u].y==0u) {
+           // Sloppy this: box a primitive once per call so this===this holds.
+-          // undefined/null would need globalThis, which is unsupported.
++          // undefined/null: the global object in global-object mode (phase4-global.js).
+           if(wrapperPrototype(value)!=0u){let boxed=wrap(l,value);states[l].frames[states[l].depth].receiver=boxed;push(l,boxed);}
++          else if((value.z==2u||value.z==3u)&&globalMode()){push(l,V(GLOBAL_OBJECT,0u,4u,0u));}
+           else{states[l].status=6u;}
+         } else { push(l,value); }`)}
+       ${cases('strict_eq strict_neq', 'let b=pop(l); let a=pop(l); let value=binary(l,op,a,b); push(l,value);')}

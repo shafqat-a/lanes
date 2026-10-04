@@ -1,0 +1,42 @@
+--- a/experiments/quickjs-runtime/phase4-class-elements.js
++++ b/experiments/quickjs-runtime/phase4-class-elements.js
+@@ -83,3 +83,18 @@
+   // of a different function kind; packProgram rejects their kind separately.
+   return null;
+ }
++
++// w5: QuickJS reads private element slots with unchecked get_loc/get_var_ref.
++// A slot is still in its TDZ when the read runs before the element definition
++// (a computed key of the same class). The generic get case turns a TDZ cell
++// into status 5 (guest ReferenceError) before privateNameOrAbsent can see it,
++// so packProgram flags such loads (b=1) and the get case pushes the TDZ cell
++// for the private opcode to answer (TypeError / false). Requires
++// w5-private-in-setter-only.diff: without it a setter-only `#x in o` reads a
++// TDZ cell forever and would answer false.
++export const privateSlotConsumers = Object.freeze(['private_in', 'get_private_field', 'put_private_field', 'check_brand']);
++export function privateSlotLoad(instructions, index) {
++  const next = instructions.slice(index + 1, index + 4).map(i => i.op);
++  // obj value <load #x<set>> swap rot3r check_brand: private setter write.
++  return privateSlotConsumers.includes(next[0]) || (next[0] === 'swap' && next[1] === 'rot3r' && next[2] === 'check_brand');
++}
+--- a/experiments/quickjs-runtime/program.js
++++ b/experiments/quickjs-runtime/program.js
+@@ -15,3 +15,4 @@
+ import { classProgramLowering, classRejectNode } from './phase4-classes.js';
++import { privateSlotLoad } from './phase4-class-elements.js';
+ import { templateConstant, templateProgramLowering } from './phase4-templates.js';
+ export const REVISION = '535a7c250ff4a577ec36c3e103daab6dadeea650';
+@@ -181,3 +182,6 @@
+       const lowered = phase4Lowering(op, instruction, fn.instructions[index - 1]);
+       if (lowered) ({ op, a, b } = lowered);
++      // Unchecked load feeding a private operation: b=1 keeps a TDZ cell as a
++      // value for that operation (phase4-class-elements.js privateSlotLoad).
++      if ((op === 'get_loc' || op === 'get_var_ref') && privateSlotLoad(fn.instructions, index)) b = 1;
+       if (!(op in OP)) throw new SyntaxError(`Unsupported QuickJS instruction: ${op}`);
+--- a/experiments/quickjs-runtime/shader.js
++++ b/experiments/quickjs-runtime/shader.js
+@@ -1448,3 +1448,3 @@
+         let slot=arg+select(0u,16u,op==${OP.get_loc}u || op==${OP.get_loc_check}u);
+         let c=cell(l,states[l].env,slot,isRef); let v=states[l].heap[c].value;
+-        if (v.z==6u) { states[l].status=5u; } else { push(l,v); }`)}
++        if (v.z==6u && ins.z==0u) { states[l].status=5u; } else { push(l,v); }`)}

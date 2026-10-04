@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-04T14:38:41.084Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 44,
+    "checked": 71,
+    "failures": [],
+    "resumptions": [
+      {
+        "name": "concat:spread-before-length",
+        "steps": [
+          591,
+          591
+        ]
+      },
+      {
+        "name": "concat:species-order",
+        "steps": [
+          883,
+          883
+        ]
+      },
+      {
+        "name": "concat:getter-deletes-next",
+        "steps": [
+          745,
+          745
+        ]
+      },
+      {
+        "name": "entries-mutation",
+        "steps": [
+          770
+        ]
+      },
+      {
+        "name": "assign-setter-order",
+        "steps": [
+          208
+        ]
+      }
+    ]
+  },
+  "candidateHashes": "quickjs-safari-promise-species-candidate-hashes.json",
+  "harnessBundleSha256": "8fedb198b6028801e3c92007dd09c56d93b1af0bf32bd8e9b846ee82d4105ce8"
+}

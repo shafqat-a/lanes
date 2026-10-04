@@ -1,0 +1,1 @@
+{"heapCapacity":2048,"resolverClosureNodes":8,"sharedCapturedCells":4,"pendingCapabilityLowerBound":37,"thenableChain50LiveLowerBound":2050,"pendingAll40LiveLowerBound":2162,"gpuExecuted":false,"scope":"Lower bounds for synchronous construction before jobs run; not a general leak-freedom claim."}

@@ -1,0 +1,18 @@
+{
+  "archive": "/tmp/lanes-m1-stdlib-corrections-candidate.tgz",
+  "archiveSha256": "6b9167e2110863080d5b9216b63f643bca061223131bac4b779469abc5c24d8d",
+  "modules": {
+    "main": {
+      "sha256": "d53a98f57a6cd4bf66b52c899ab4b316ae26ecabfd6817c8c50e118927e24e79",
+      "bytes": 220682
+    },
+    "call": {
+      "sha256": "52a9cc5e542e305e6ddbd0af0257e555ae5d6e17f7427ab4afb8266ae2aa83ed",
+      "bytes": 104699
+    },
+    "native": {
+      "sha256": "f4979bc2b5ce2a055bdaa8aca0c5594ec867dc66b38a6881166734e539946e6d",
+      "bytes": 158514
+    }
+  }
+}

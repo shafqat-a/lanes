@@ -1,0 +1,1034 @@
+{
+  "date": "2026-10-04T15:20:30.341Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "scope": "fresh-realm scripts",
+    "programs": 36,
+    "checked": 144,
+    "negativeChecks": 8,
+    "gcProbes": [
+      {
+        "name": "retained-global-lexical-gc",
+        "runs": [
+          {
+            "budget": 31,
+            "steps": [
+              12628,
+              12628
+            ],
+            "collections": [
+              3,
+              3
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              12628,
+              12628
+            ],
+            "collections": [
+              3,
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "resumptions": [
+      {
+        "name": "empty",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              2,
+              2
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              2,
+              2
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "completion-expression",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              5,
+              5
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              5,
+              5
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "completion-declaration-preserves-value",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              7,
+              7
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              7,
+              7
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "completion-loop",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              86,
+              86
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              86,
+              86
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "completion-try-finally",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              21,
+              21
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              21,
+              21
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "strict-top-level-this",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              9,
+              9
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              9,
+              9
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "sloppy-top-level-this",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              7,
+              7
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              7,
+              7
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "no-synthetic-entry",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              60,
+              60
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              60,
+              60
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "no-input-arguments",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              4,
+              4
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              4,
+              4
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "var-hoist",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              95,
+              95
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              95,
+              95
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "function-hoist",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              11,
+              11
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              11,
+              11
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "function-last-declaration",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              10,
+              10
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              10,
+              10
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "declaration-order-functions-first",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              604,
+              604
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              604,
+              604
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "declaration-order-duplicate-functions",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              608,
+              608
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              608,
+              608
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "declaration-order-interleaved",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              882,
+              882
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              882,
+              882
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "global-var-descriptor",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              496,
+              496
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              496,
+              496
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "global-function-descriptor",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              412,
+              412
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              412,
+              412
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "lexical-not-object-property",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              532,
+              532
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              532,
+              532
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "lexical-shadow-intrinsic",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              102,
+              102
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              102,
+              102
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "lexical-delete",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              5,
+              5
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              5,
+              5
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "lexical-tdz-typeof",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              85,
+              85
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              85,
+              85
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "lexical-assignment-before-init",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              88,
+              88
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              88,
+              88
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "const-write",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              259,
+              259
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              259,
+              259
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "const-compound-write",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              261,
+              261
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              261,
+              261
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "captured-const-write",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              80,
+              80
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              80,
+              80
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "nested-global-lexical",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              287,
+              287
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              287,
+              287
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "global-mutable-var",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              14,
+              14
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              14,
+              14
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "implicit-global-configurable",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              66,
+              66
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              66,
+              66
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "strict-unresolved",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              88,
+              88
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              88,
+              88
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "var-existing-readonly",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              6,
+              6
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              6,
+              6
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "function-replaces-intrinsic",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              326,
+              326
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              326,
+              326
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "script-class",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              64,
+              64
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              64,
+              64
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "block-lexical-separate",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              8,
+              8
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              8,
+              8
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "var-and-lexical-same-spelling-property",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              182,
+              182
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              182,
+              182
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "fresh-realm",
+        "runs": [
+          {
+            "budget": 1,
+            "steps": [
+              13,
+              13
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              13,
+              13
+            ],
+            "collections": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "retained-global-lexical-gc",
+        "runs": [
+          {
+            "budget": 31,
+            "steps": [
+              12628,
+              12628
+            ],
+            "collections": [
+              3,
+              3
+            ]
+          },
+          {
+            "budget": 4096,
+            "steps": [
+              12628,
+              12628
+            ],
+            "collections": [
+              3,
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "failures": []
+  }
+}

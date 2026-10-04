@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-04T12:30:51.997Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 45,
+    "checked": 177,
+    "resourceChecks": 1,
+    "requiredGC": 1,
+    "resumptionDispatches": 844,
+    "results": [
+      {
+        "feature": "array-species-map-custom-object-result",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 455
+      },
+      {
+        "feature": "array-species-map-species-null-default",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 260
+      },
+      {
+        "feature": "array-species-map-constructor-object-missing-species",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 252
+      },
+      {
+        "feature": "array-species-map-constructor-null-typeerror",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 324
+      },
+      {
+        "feature": "array-species-map-species-arrow-typeerror",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 345
+      },
+      {
+        "feature": "array-species-map-species-throw-identity",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 186
+      },
+      {
+        "feature": "array-species-map-intrinsic-array-species-observed",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 512
+      },
+      {
+        "feature": "array-species-map-define-bypasses-setter",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 509
+      },
+      {
+        "feature": "array-species-map-nonextensible-result",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 401
+      },
+      {
+        "feature": "array-species-map-nonarray-constructor-not-read",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 238
+      },
+      {
+        "feature": "array-species-filter-custom-object-result",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 458
+      },
+      {
+        "feature": "array-species-filter-species-null-default",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 262
+      },
+      {
+        "feature": "array-species-filter-constructor-object-missing-species",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 254
+      },
+      {
+        "feature": "array-species-filter-constructor-null-typeerror",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 325
+      },
+      {
+        "feature": "array-species-filter-species-arrow-typeerror",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 346
+      },
+      {
+        "feature": "array-species-filter-species-throw-identity",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 187
+      },
+      {
+        "feature": "array-species-filter-intrinsic-array-species-observed",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 514
+      },
+      {
+        "feature": "array-species-filter-define-bypasses-setter",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 511
+      },
+      {
+        "feature": "array-species-filter-nonextensible-result",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 401
+      },
+      {
+        "feature": "array-species-filter-nonarray-constructor-not-read",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 240
+      },
+      {
+        "feature": "array-species-slice-custom-object-result",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 521
+      },
+      {
+        "feature": "array-species-slice-species-null-default",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 390
+      },
+      {
+        "feature": "array-species-slice-constructor-object-missing-species",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 382
+      },
+      {
+        "feature": "array-species-slice-constructor-null-typeerror",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 464
+      },
+      {
+        "feature": "array-species-slice-species-arrow-typeerror",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 485
+      },
+      {
+        "feature": "array-species-slice-species-throw-identity",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 326
+      },
+      {
+        "feature": "array-species-slice-intrinsic-array-species-observed",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 642
+      },
+      {
+        "feature": "array-species-slice-define-bypasses-setter",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 639
+      },
+      {
+        "feature": "array-species-slice-nonextensible-result",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 526
+      },
+      {
+        "feature": "array-species-slice-nonarray-constructor-not-read",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 368
+      },
+      {
+        "feature": "array-species-map-invalid-callback-before-constructor",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 467
+      },
+      {
+        "feature": "array-species-filter-invalid-callback-before-constructor",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 468
+      },
+      {
+        "feature": "array-species-slice-coercion-before-species",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 800
+      },
+      {
+        "feature": "array-species-map-constructor-before-callback-holes",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 739
+      },
+      {
+        "feature": "array-species-filter-no-length-set",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 429
+      },
+      {
+        "feature": "array-species-slice-strict-final-length",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 827
+      },
+      {
+        "feature": "array-species-default-intrinsic-ignores-global-binding",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 241
+      },
+      {
+        "feature": "array-species-constructor-receiver-and-once",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 616
+      },
+      {
+        "feature": "array-species-symbol-bigint-species-construct-throws",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 532
+      },
+      {
+        "feature": "array-species-getter-metadata-and-receiver",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 310
+      },
+      {
+        "feature": "array-species-symbol-species-attributes",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 92
+      },
+      {
+        "feature": "array-species-nonconstructor-holder-with-valid-species",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 339
+      },
+      {
+        "feature": "array-species-species-constructor-returns-distinct-object",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 276
+      },
+      {
+        "feature": "array-species-gc-retained-result-constructor",
+        "checked": 4,
+        "expected": true,
+        "collections": 2,
+        "maxSteps": 13414
+      }
+    ],
+    "elapsedMs": 6579,
+    "gaps": [
+      "Proxy behavior requires the separate Proxy implementation.",
+      "Finite VM heap and execution budgets remain explicit resource boundaries."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "a1e3c11ca6de432ef58ec1887c04917f64edf6a242e2d4826dd752925e47154d",
+    "experiments/quickjs-runtime/compiler.js": "c6070dc7df623ea63074beb39ff78bc980e7e9db1d92d46102ad77c7585dd6ed",
+    "experiments/quickjs-runtime/program.js": "09799eb65f249476cccd71b4f77709ba8600cb68a04748f4631b2cc4731c6b15",
+    "experiments/quickjs-runtime/shader.js": "704bcbe21a39ee9d6cdcb0d98a9762a649b26620aea8dbd7c88d9a0fcd2bdcd1",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "f40239ca84ce9ec6cd37b03dde534571e8d19976da5908b5cc780e60df8e190b",
+    "experiments/quickjs-runtime/validation.js": "5b5bfbf6314e579d90e8f935328cb0aa0750e67364262e1f51c87c39330f69db",
+    "experiments/quickjs-runtime/browser.js": "47c711601ba71a77347eed46ae7d401b1a6b74641d9061043044be4193d96bf2",
+    "experiments/quickjs-runtime/test262-harness.js": "fc388ad224ab153522117889955a8de99d7ade24ac5e14673afbc26e6db1396c",
+    "experiments/quickjs-runtime/browser-test262.js": "64e579a4a3baac0bab6fe7fbacb8327bcc6160933436217a8c7a21cd7c1411d9",
+    "experiments/quickjs-runtime/bootstrap.js": "f48444cb09733269317c222c564235e5ac7b156e2adff1565326f9d5e014b645",
+    "experiments/quickjs-runtime/engine262-LICENSE.txt": "171d63abdb8a993e2c2985ac14a509617d0f18dfb1d97108d5641af2bf82e387",
+    "experiments/quickjs-runtime/check-compiler.mjs": "ea2e3297cf4bfe5d75f489c90609d67d83f495ac0c50575895b22baa170dddcd"
+  },
+  "reports": [
+    "quickjs-safari-3969.json",
+    "quickjs-test262-safari-bind-getters.json"
+  ],
+  "note": "Safari: 441 programs / 3969 values / 26 negative checks. Native/Wasm parity: 441 programs. Three explicit ES2025 expectations document native Safari apply/bind ordering discrepancies; Node agrees with the specification. Latest Node/Dawn suites not completed.",
+  "adaptedCounts": {
+    "passed": 448,
+    "referenceRejected": 0,
+    "failed": 0,
+    "exportedVariants": 1032,
+    "unsupported": 584
+  }
+}

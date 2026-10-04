@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-03T05:54:28.421Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 13,
+    "checked": 52,
+    "fixedExpectations": 13,
+    "elapsedMs": 1637,
+    "results": [
+      {
+        "feature": "phase5-integration-trim-alias-identity",
+        "checked": 4,
+        "maxSteps": 490,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "phase5-integration-array-string-extraction",
+        "checked": 4,
+        "maxSteps": 2011,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "phase5-integration-array-string-padding",
+        "checked": 4,
+        "maxSteps": 1880,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "phase5-integration-array-toString-join-observable",
+        "checked": 4,
+        "maxSteps": 583,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "phase5-integration-math-boxed-array",
+        "checked": 4,
+        "maxSteps": 31190,
+        "collections": [
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "feature": "phase5-integration-number-predicates-no-coercion",
+        "checked": 4,
+        "maxSteps": 658,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "phase5-integration-number-coercion-private-string",
+        "checked": 4,
+        "maxSteps": 17545,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "phase5-integration-math-public-mutation",
+        "checked": 4,
+        "maxSteps": 1710,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "phase5-integration-gc-builtin-roots",
+        "checked": 4,
+        "maxSteps": 38780,
+        "collections": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "feature": "phase5-integration-constant-descriptors",
+        "checked": 4,
+        "maxSteps": 790,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "phase5-integration-constant-readonly",
+        "checked": 4,
+        "maxSteps": 24570,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "feature": "phase5-integration-method-descriptors",
+        "checked": 4,
+        "maxSteps": 741,
+        "collections": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "phase5-integration-array-map-string",
+        "checked": 4,
+        "maxSteps": 2908,
+        "collections": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "method": "Cross-feature fixed native oracles and fresh native realms: Array string coercion, boxed numeric values, public/private mutation, builtin descriptor metadata and retained builtin values after verified GC."
+  }
+}

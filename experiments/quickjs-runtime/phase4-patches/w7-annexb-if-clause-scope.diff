@@ -1,0 +1,31 @@
+--- a/experiments/quickjs-runtime/vendor/quickjs.c
++++ b/experiments/quickjs-runtime/vendor/quickjs.c
+@@ -29249,8 +29249,17 @@
+             else
+                 mask = DECL_MASK_FUNC; /* Annex B.3.4 */
+ 
++            /* LANES: ES2025 Annex B.3.3 (B.3.4 before ES2022): a
++               FunctionDeclaration clause behaves as the sole item of its
++               own Block. A shared scope for both
++               clauses made `if(c)function g(){}else function g(){}` a
++               same-scope redeclaration and dropped the else-clause var
++               copy. Each clause gets its own scope (no code is emitted
++               for a scope without declarations). */
++            push_scope(s);
+             if (js_parse_statement_or_decl(s, mask))
+                 goto fail;
++            pop_scope(s);
+ 
+             if (s->token.val == TOK_ELSE) {
+                 label2 = emit_goto(s, OP_goto, -1);
+@@ -29258,8 +29267,10 @@
+                     goto fail;
+ 
+                 emit_label(s, label1);
++                push_scope(s);
+                 if (js_parse_statement_or_decl(s, mask))
+                     goto fail;
++                pop_scope(s);
+ 
+                 label1 = label2;
+             }

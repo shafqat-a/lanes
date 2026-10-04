@@ -1,0 +1,57 @@
+Worker 3 (static fields / static blocks): proposed lead edits to integrate
+phase4-next-w3-cases.js into the case groups and the strict Phase 4 suite /
+browser page. No WGSL, compiler, vendor or bridge change is required.
+After applying, run `node check-phase4-suite.mjs --write-expected` once to
+record second-input expectations (phase4-suite-expected.js), then
+`node check-phase4-suite.mjs --brief`.
+
+--- a/experiments/quickjs-runtime/phase4-case-groups.js
++++ b/experiments/quickjs-runtime/phase4-case-groups.js
+@@ -12,2 +12,3 @@
+ import { classElementCases, classElementErrorCases, classElementUnsupportedCases, classElementRejectedCases } from './phase4-class-element-cases.js';
++import { w3StaticCases, w3StaticErrorCases, w3StaticEarlyErrorCases, w3StaticUnsupportedCases, w3StaticRejectedCases } from './phase4-next-w3-cases.js';
+ import { compilerCorrectnessCases } from './compiler-correctness-cases.js';
+@@ -37,2 +38,4 @@
+   { area: 'class-elements', admitted: [...classElementCases, ...classElementErrorCases, ...outcome(classElementUnsupportedCases, 'unsupported')], rejected: classElementRejectedCases },
++  { area: 'class-static', admitted: [...w3StaticCases, ...w3StaticErrorCases, ...outcome(w3StaticUnsupportedCases, 'unsupported')],
++    rejected: [...w3StaticEarlyErrorCases, ...w3StaticRejectedCases] },
+   { area: 'for-in-lexical', admitted: [...forInCases, ...forInTypeErrorCases, ...lexicalCases, ...lexicalReferenceErrorCases], rejected: [] },
+--- a/experiments/quickjs-runtime/phase4-suite.js
++++ b/experiments/quickjs-runtime/phase4-suite.js
+@@ -22,2 +22,8 @@
+ import { classElementCases, classElementErrorCases, classElementUnsupportedCases, classElementRejectedCases } from './phase4-class-element-cases.js';
++import { w3StaticCases, w3StaticErrorCases, w3StaticEarlyErrorCases, w3StaticUnsupportedCases, w3StaticRejectedCases } from './phase4-next-w3-cases.js';
++// Independent pre-existing defect: the n-template sources below reference these
++// names but the snapshot never imports them, so phase4-suite.js fails to load
++// ("ReferenceError: taggedTemplateCases is not defined") and with it
++// check-phase4-suite.mjs and browser-phase4.js. Skip if the lead already fixed it.
++import { taggedTemplateCases, taggedTemplateTypeErrorCases, taggedTemplateThrowCases, taggedTemplateUnsupportedCases, taggedTemplateLimitCases, taggedTemplateRejectedCases } from './phase4-template-tagged-cases.js';
+ import { edgeCases, edgeTypeErrorCases, edgeUnsupportedCases } from './phase4-edge-cases.js';
+@@ -69,2 +75,9 @@
+   ['n-class', 'class-fields', 'rejected', classElementRejectedCases],
++  // Next wave worker 3: static fields / static blocks (adversarial). Early
++  // errors carry no normative value (expected undefined): rejected-only.
++  ['n-static', 'class-static', 'value', w3StaticCases],
++  ['n-static', 'class-static', 'value', w3StaticErrorCases],
++  ['n-static', 'class-static', 'unsupported', w3StaticUnsupportedCases],
++  ['n-static', 'class-static', 'rejected', w3StaticEarlyErrorCases],
++  ['n-static', 'class-static', 'rejected', w3StaticRejectedCases],
+   ['w7-edge', 'edge', 'value', edgeCases],
+@@ -77,1 +90,8 @@
+-export const phase4NormativeDifferences = Object.freeze({});
++export const phase4NormativeDifferences = Object.freeze({
++  'n-static:w3: computed static prototype field throws TypeError and earlier statics already ran':
++    'ES2025 15.7.10 ClassFieldDefinitionEvaluation only evaluates the computed key; the TypeError comes from ' +
++    'DefineField -> CreateDataPropertyOrThrow(F, "prototype") during ClassDefinitionEvaluation step 31 (static ' +
++    'elements, in order), so `static a` runs first ("TypeError:a:<x>"). V8 throws while evaluating the key ' +
++    '("TypeError::<x>"); pinned QuickJS follows the spec.',
++});
+@@ -96,2 +116,6 @@
+   'n-class:static fields and blocks run in source order after methods',
+   'n-class:derived fields initialise after super() returns',
++  // Worker 3: super accessor with derived receiver, setter via [[Set]] in a
++  // static block, abrupt static field + outer TDZ.
++  'n-static:w3: super getter in a static field receives the derived constructor as this',
++  'n-static:w3: assignment in a static block uses [[Set]] and runs a static setter',
++  'n-static:w3: abrupt static field leaves the outer class binding in TDZ',
+ ]);

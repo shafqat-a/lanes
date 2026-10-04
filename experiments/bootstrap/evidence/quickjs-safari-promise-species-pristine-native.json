@@ -1,0 +1,409 @@
+{
+  "date": "2026-10-04T13:57:12.755Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "state": "done",
+    "rows": [
+      {
+        "name": "conformance:order-finally-tick-count",
+        "input": 3,
+        "expected": "3:1f234a56",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "3:1f2a3456"
+        }
+      },
+      {
+        "name": "conformance:order-finally-tick-count",
+        "input": 4,
+        "expected": "4:1f234a56",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "4:1f2a3456"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:resolve-plain-constructor",
+        "input": 3,
+        "expected": "true:3",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "false:3"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:resolve-plain-constructor",
+        "input": 4,
+        "expected": "true:4",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "false:4"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:withResolvers-shape",
+        "input": 3,
+        "expected": "promise,resolve,reject:true:true:function:1:3",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "resolve,reject,promise:true:true:function:1:3"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:withResolvers-shape",
+        "input": 4,
+        "expected": "promise,resolve,reject:true:true:function:1:4",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "resolve,reject,promise:true:true:function:1:4"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-lookup-throws-before-iterator",
+        "input": 3,
+        "expected": "rl3:get",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "rl3:get"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-lookup-throws-before-iterator",
+        "input": 4,
+        "expected": "rl4:get",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "rl4:get"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-not-callable",
+        "input": 3,
+        "expected": "true::3",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "true::3"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-not-callable",
+        "input": 4,
+        "expected": "true::4",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "true::4"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-getter-called-once",
+        "input": 3,
+        "expected": "1:1,2,3",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "1:1,2,3"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-getter-called-once",
+        "input": 4,
+        "expected": "1:1,2,4",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "1:1,2,4"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-receives-constructor",
+        "input": 3,
+        "expected": "true,true:3,4",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "true,true:3,4"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-resolve-receives-constructor",
+        "input": 4,
+        "expected": "true,true:4,5",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "true,true:4,5"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-then-getter-throws-closes",
+        "input": 3,
+        "expected": "th3:ret",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "th3:ret"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-then-getter-throws-closes",
+        "input": 4,
+        "expected": "th4:ret",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "th4:ret"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-then-not-callable-closes",
+        "input": 3,
+        "expected": "true:ret:3",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "true:ret:3"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-then-not-callable-closes",
+        "input": 4,
+        "expected": "true:ret:4",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "true:ret:4"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-close-error-suppressed",
+        "input": 3,
+        "expected": "th3:ret",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "th3:ret"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-close-error-suppressed",
+        "input": 4,
+        "expected": "th4:ret",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "th4:ret"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-element-functions",
+        "input": 3,
+        "expected": "1:\"\":false:true|first3,second",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "1:\"\":false:true|first3,second"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-element-functions",
+        "input": 4,
+        "expected": "1:\"\":false:true|first4,second",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "1:\"\":false:true|first4,second"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-synchronous-then",
+        "input": 3,
+        "expected": "6,8",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "6,8"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-synchronous-then",
+        "input": 4,
+        "expected": "8,10",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "8,10"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:allSettled-shared-already-called",
+        "input": 3,
+        "expected": "rejected:no3:11:true",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "rejected:no3:11:true"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:allSettled-shared-already-called",
+        "input": 4,
+        "expected": "rejected:no4:11:true",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "rejected:no4:11:true"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-all-rejected-aggregate",
+        "input": 3,
+        "expected": "true:true:a,b3:All promises were rejected:0:false",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "true:true:a,b3::0:false"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-all-rejected-aggregate",
+        "input": 4,
+        "expected": "true:true:a,b4:All promises were rejected:0:false",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "true:true:a,b4::0:false"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-then-getter-throws-closes",
+        "input": 3,
+        "expected": "th3:ret",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "th3:ret"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-then-getter-throws-closes",
+        "input": 4,
+        "expected": "th4:ret",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "th4:ret"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-resolve-getter-called-once",
+        "input": 3,
+        "expected": "1:3",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "1:3"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:any-resolve-getter-called-once",
+        "input": 4,
+        "expected": "1:4",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "1:4"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:race-passes-capability-functions",
+        "input": 3,
+        "expected": "true:true:v3",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "true:true:v3"
+        }
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:race-passes-capability-functions",
+        "input": 4,
+        "expected": "true:true:v4",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "true:true:v4"
+        }
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:order-finally-tick-count",
+        "input": 3,
+        "expected": "f,b1,b2,b3,f-after,b4,b5",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "f,b1,f-after,b2,b3,b4,b5"
+        }
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:order-finally-tick-count",
+        "input": 4,
+        "expected": "f,b1,b2,b3,f-after,b4,b5",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "f,b1,f-after,b2,b3,b4,b5"
+        }
+      },
+      {
+        "name": "async-iteration-cases/asyncIterationCases:sync-rejected-value-with-done-true-not-closed",
+        "input": 3,
+        "expected": "|d3",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "R|d3"
+        }
+      },
+      {
+        "name": "async-iteration-cases/asyncIterationCases:sync-rejected-value-with-done-true-not-closed",
+        "input": 4,
+        "expected": "|d4",
+        "settlement": "fulfilled",
+        "native": {
+          "settlement": "fulfilled",
+          "value": "R|d4"
+        }
+      }
+    ]
+  },
+  "candidateHashes": "quickjs-safari-promise-species-candidate-hashes.json"
+}

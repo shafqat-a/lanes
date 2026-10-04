@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-02T23:18:18.489Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "checked": 113,
+    "compiler": "QuickJS/Wasm",
+    "method": "Sparse array/object indices compared with fresh native realms and fixed expected values; dynamic string keys, GC workload, maximum lengths, ordering, descriptors, partial truncation and one-instruction resumption.",
+    "constraints": [
+      "Declared lengths remain sparse; heap capacity unchanged",
+      "Methods visiting billions of holes remain execution-budget limited",
+      "Symbols unsupported"
+    ],
+    "programs": 29,
+    "results": [
+      {
+        "checked": 4,
+        "feature": "high-index-constructor-half",
+        "collections": 0,
+        "maxSteps": 7
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-constructor-maximum",
+        "collections": 0,
+        "maxSteps": 8
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-constructor-overflow",
+        "collections": 0,
+        "maxSteps": 174
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-numeric-grow",
+        "collections": 0,
+        "maxSteps": 223
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-maximum-index",
+        "collections": 0,
+        "maxSteps": 223
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-maximum-named",
+        "collections": 0,
+        "maxSteps": 223
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-noncanonical-name",
+        "collections": 0,
+        "maxSteps": 179
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-delete-high",
+        "collections": 0,
+        "maxSteps": 490
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-shrink-high",
+        "collections": 0,
+        "maxSteps": 544
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-partial-shrink",
+        "collections": 0,
+        "maxSteps": 562
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-partial-shrink-readonly",
+        "collections": 0,
+        "maxSteps": 1026
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-readonly-high-growth",
+        "collections": 0,
+        "maxSteps": 615
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-readonly-high-define",
+        "collections": 0,
+        "maxSteps": 563
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-accessor-high",
+        "collections": 0,
+        "maxSteps": 397
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-object-order",
+        "collections": 0,
+        "maxSteps": 301
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-array-own-order",
+        "collections": 0,
+        "maxSteps": 219
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-dynamic-key-gc",
+        "collections": 0,
+        "maxSteps": 5835
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-length-maximum-set",
+        "collections": 0,
+        "maxSteps": 274
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-length-overflow-set",
+        "collections": 0,
+        "maxSteps": 259
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-pop-maximum",
+        "collections": 0,
+        "maxSteps": 558
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-push-high",
+        "collections": 0,
+        "maxSteps": 399
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-inherited-high-setter",
+        "collections": 0,
+        "maxSteps": 556
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-strict-partial-shrink",
+        "collections": 0,
+        "maxSteps": 641
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-enumerability-order",
+        "collections": 0,
+        "maxSteps": 344
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-string-high-absent",
+        "collections": 0,
+        "maxSteps": 217
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-named-preserved-shrink",
+        "collections": 0,
+        "maxSteps": 457
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-numeric-descriptor-alias",
+        "collections": 0,
+        "maxSteps": 389
+      },
+      {
+        "checked": 4,
+        "feature": "high-index-negative-fraction-length",
+        "collections": 0,
+        "maxSteps": 200
+      }
+    ],
+    "backend": "gpu",
+    "elapsedMs": 7605,
+    "fixedNativeExpectations": 29,
+    "resumptionExpected": "true:2147483649:17:false:19:false:2147483648,length,4294967295",
+    "resumptionDispatches": 1255
+  }
+}

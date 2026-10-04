@@ -1,0 +1,2020 @@
+{
+  "date": "2026-10-03T04:37:30.493Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "gaps": [
+      "BigInt exponentiation and custom @@toPrimitive remain unsupported; no claim of exhaustive numerical accuracy."
+    ],
+    "backend": "gpu",
+    "approximateChecks": 60,
+    "programs": 69,
+    "maxUlp": 1,
+    "elapsedMs": 6158,
+    "results": [
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "index": 0,
+        "collections": 0,
+        "maxSteps": 284,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "feature": "pow-exact-0"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "index": 1,
+        "collections": 0,
+        "maxSteps": 285,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "feature": "pow-exact-1"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "index": 2,
+        "collections": 0,
+        "maxSteps": 288,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "feature": "pow-exact-2"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "index": 3,
+        "collections": 0,
+        "maxSteps": 280,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "feature": "pow-exact-3"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "index": 4,
+        "collections": 0,
+        "maxSteps": 280,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "feature": "pow-exact-4"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "index": 5,
+        "collections": 0,
+        "maxSteps": 314,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "feature": "pow-exact-5"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "index": 6,
+        "collections": 0,
+        "maxSteps": 321,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "feature": "pow-exact-6"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "index": 7,
+        "collections": 0,
+        "maxSteps": 315,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "feature": "pow-exact-7"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "index": 8,
+        "collections": 0,
+        "maxSteps": 322,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "feature": "pow-exact-8"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "index": 9,
+        "collections": 0,
+        "maxSteps": 322,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "feature": "pow-exact-9"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "index": 10,
+        "collections": 0,
+        "maxSteps": 323,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "feature": "pow-exact-10"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "index": 11,
+        "collections": 0,
+        "maxSteps": 322,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "feature": "pow-exact-11"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "index": 12,
+        "collections": 0,
+        "maxSteps": 323,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "feature": "pow-exact-12"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "index": 13,
+        "collections": 0,
+        "maxSteps": 329,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "feature": "pow-exact-13"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "index": 14,
+        "collections": 0,
+        "maxSteps": 331,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "feature": "pow-exact-14"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "index": 15,
+        "collections": 0,
+        "maxSteps": 348,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "feature": "pow-exact-15"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "-0",
+          "-0",
+          "-0",
+          "-0",
+          "-0"
+        ],
+        "index": 16,
+        "collections": 0,
+        "maxSteps": 406,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "-0",
+          "-0",
+          "-0",
+          "-0",
+          "-0"
+        ],
+        "feature": "pow-exact-16"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "index": 17,
+        "collections": 0,
+        "maxSteps": 357,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "feature": "pow-exact-17"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "index": 18,
+        "collections": 0,
+        "maxSteps": 371,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "feature": "pow-exact-18"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "index": 19,
+        "collections": 0,
+        "maxSteps": 352,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "feature": "pow-exact-19"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "-Infinity",
+          "-Infinity",
+          "-Infinity",
+          "-Infinity",
+          "-Infinity"
+        ],
+        "index": 20,
+        "collections": 0,
+        "maxSteps": 410,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "-Infinity",
+          "-Infinity",
+          "-Infinity",
+          "-Infinity",
+          "-Infinity"
+        ],
+        "feature": "pow-exact-20"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "index": 21,
+        "collections": 0,
+        "maxSteps": 407,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "feature": "pow-exact-21"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "index": 22,
+        "collections": 0,
+        "maxSteps": 342,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "feature": "pow-exact-22"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "-Infinity",
+          "-Infinity",
+          "-Infinity",
+          "-Infinity",
+          "-Infinity"
+        ],
+        "index": 23,
+        "collections": 0,
+        "maxSteps": 400,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "-Infinity",
+          "-Infinity",
+          "-Infinity",
+          "-Infinity",
+          "-Infinity"
+        ],
+        "feature": "pow-exact-23"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "index": 24,
+        "collections": 0,
+        "maxSteps": 357,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "feature": "pow-exact-24"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "index": 25,
+        "collections": 0,
+        "maxSteps": 365,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "feature": "pow-exact-25"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "index": 26,
+        "collections": 0,
+        "maxSteps": 346,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "feature": "pow-exact-26"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "-0",
+          "-0",
+          "-0",
+          "-0",
+          "-0"
+        ],
+        "index": 27,
+        "collections": 0,
+        "maxSteps": 404,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "-0",
+          "-0",
+          "-0",
+          "-0",
+          "-0"
+        ],
+        "feature": "pow-exact-27"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "index": 28,
+        "collections": 0,
+        "maxSteps": 401,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "feature": "pow-exact-28"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "index": 29,
+        "collections": 0,
+        "maxSteps": 370,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "feature": "pow-exact-29"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "index": 30,
+        "collections": 0,
+        "maxSteps": 360,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "feature": "pow-exact-30"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "index": 31,
+        "collections": 0,
+        "maxSteps": 396,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "feature": "pow-exact-31"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          -8,
+          -8,
+          -8,
+          -8,
+          -8
+        ],
+        "index": 32,
+        "collections": 0,
+        "maxSteps": 1000,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          -8,
+          -8,
+          -8,
+          -8,
+          -8
+        ],
+        "feature": "pow-exact-32"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          -0.125,
+          -0.125,
+          -0.125,
+          -0.125,
+          -0.125
+        ],
+        "index": 33,
+        "collections": 0,
+        "maxSteps": 1003,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          -0.125,
+          -0.125,
+          -0.125,
+          -0.125,
+          -0.125
+        ],
+        "feature": "pow-exact-33"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          8.98846567431158e+307,
+          8.98846567431158e+307,
+          8.98846567431158e+307,
+          8.98846567431158e+307,
+          8.98846567431158e+307
+        ],
+        "index": 34,
+        "collections": 0,
+        "maxSteps": 949,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          8.98846567431158e+307,
+          8.98846567431158e+307,
+          8.98846567431158e+307,
+          8.98846567431158e+307,
+          8.98846567431158e+307
+        ],
+        "feature": "pow-exact-34"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "index": 35,
+        "collections": 0,
+        "maxSteps": 766,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "feature": "pow-exact-35"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324
+        ],
+        "index": 36,
+        "collections": 0,
+        "maxSteps": 970,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324
+        ],
+        "feature": "pow-exact-36"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "index": 37,
+        "collections": 0,
+        "maxSteps": 770,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "feature": "pow-exact-37"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "-0",
+          "-0",
+          "-0",
+          "-0",
+          "-0"
+        ],
+        "index": 38,
+        "collections": 0,
+        "maxSteps": 821,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "-0",
+          "-0",
+          "-0",
+          "-0",
+          "-0"
+        ],
+        "feature": "pow-exact-38"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324
+        ],
+        "index": 39,
+        "collections": 0,
+        "maxSteps": 970,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324
+        ],
+        "feature": "pow-exact-39"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324
+        ],
+        "index": 40,
+        "collections": 0,
+        "maxSteps": 314,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324
+        ],
+        "feature": "pow-exact-40"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "index": 41,
+        "collections": 0,
+        "maxSteps": 316,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity",
+          "Infinity"
+        ],
+        "feature": "pow-exact-41"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          1024,
+          1024,
+          1024,
+          1024,
+          1024
+        ],
+        "index": 42,
+        "collections": 0,
+        "maxSteps": 949,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          1024,
+          1024,
+          1024,
+          1024,
+          1024
+        ],
+        "feature": "pow-exact-42"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "index": 43,
+        "collections": 0,
+        "maxSteps": 316,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "feature": "pow-exact-43"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "index": 44,
+        "collections": 0,
+        "maxSteps": 949,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "feature": "pow-exact-44"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "index": 45,
+        "collections": 0,
+        "maxSteps": 949,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "feature": "pow-exact-45"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "index": 46,
+        "collections": 0,
+        "maxSteps": 396,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "feature": "pow-exact-46"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "index": 47,
+        "collections": 0,
+        "maxSteps": 373,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "feature": "pow-exact-47"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "index": 48,
+        "collections": 0,
+        "maxSteps": 396,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "feature": "pow-exact-48"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "lr:1",
+          "lr:2",
+          "lr:0.5",
+          "lr:8",
+          "lr:131072"
+        ],
+        "index": 49,
+        "collections": 0,
+        "maxSteps": 2955,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "lr:1",
+          "lr:2",
+          "lr:0.5",
+          "lr:8",
+          "lr:131072"
+        ],
+        "feature": "pow-coercion-left-then-right"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "lst:1",
+          "lst:2",
+          "lst:0.5",
+          "lst:8",
+          "lst:131072"
+        ],
+        "index": 50,
+        "collections": 0,
+        "maxSteps": 11079,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "lst:1",
+          "lst:2",
+          "lst:0.5",
+          "lst:8",
+          "lst:131072"
+        ],
+        "feature": "pow-fallback-coercion"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "l:0",
+          "l:1",
+          "l:-1",
+          "l:3",
+          "l:17"
+        ],
+        "index": 51,
+        "collections": 0,
+        "maxSteps": 184,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "l:0",
+          "l:1",
+          "l:-1",
+          "l:3",
+          "l:17"
+        ],
+        "feature": "pow-left-throw-skips-right-coercion"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "lr:0",
+          "lr:1",
+          "lr:-1",
+          "lr:3",
+          "lr:17"
+        ],
+        "index": 52,
+        "collections": 0,
+        "maxSteps": 315,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "lr:0",
+          "lr:1",
+          "lr:-1",
+          "lr:3",
+          "lr:17"
+        ],
+        "feature": "pow-right-throw"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "l:1",
+          "l:1",
+          "l:1",
+          "l:1",
+          "l:1"
+        ],
+        "index": 53,
+        "collections": 0,
+        "maxSteps": 416,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "l:1",
+          "l:1",
+          "l:1",
+          "l:1",
+          "l:1"
+        ],
+        "feature": "pow-zero-exponent-still-coerces-base"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "ABlr:1",
+          "ABlr:2",
+          "ABlr:0.5",
+          "ABlr:8",
+          "ABlr:131072"
+        ],
+        "index": 54,
+        "collections": 0,
+        "maxSteps": 2971,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "ABlr:1",
+          "ABlr:2",
+          "ABlr:0.5",
+          "ABlr:8",
+          "ABlr:131072"
+        ],
+        "feature": "pow-operands-evaluated-before-coercion"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 0,
+        "gpuValues": [
+          "8:1:0:1",
+          "8:1:0:1",
+          "8:1:0:1",
+          "8:1:0:1",
+          "8:1:0:1"
+        ],
+        "index": 55,
+        "collections": 2,
+        "maxSteps": 18578,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          "8:1:0:1",
+          "8:1:0:1",
+          "8:1:0:1",
+          "8:1:0:1",
+          "8:1:0:1"
+        ],
+        "feature": "pow-string-null-boolean"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          7.629598254593467e+285,
+          7.629598254593467e+285,
+          7.629598254593467e+285,
+          7.629598254593467e+285,
+          7.629598254593467e+285
+        ],
+        "index": 56,
+        "collections": 0,
+        "maxSteps": 933,
+        "distances": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "nativeValues": [
+          7.629598254593468e+285,
+          7.629598254593468e+285,
+          7.629598254593468e+285,
+          7.629598254593468e+285,
+          7.629598254593468e+285
+        ],
+        "feature": "pow-approximate-0"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "index": 57,
+        "collections": 0,
+        "maxSteps": 938,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "feature": "pow-approximate-1"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          2.7182818284590446,
+          2.7182818284590446,
+          2.7182818284590446,
+          2.7182818284590446,
+          2.7182818284590446
+        ],
+        "index": 58,
+        "collections": 0,
+        "maxSteps": 945,
+        "distances": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "nativeValues": [
+          2.718281828459045,
+          2.718281828459045,
+          2.718281828459045,
+          2.718281828459045,
+          2.718281828459045
+        ],
+        "feature": "pow-approximate-2"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          0.36787944117144233,
+          0.36787944117144233,
+          0.36787944117144233,
+          0.36787944117144233,
+          0.36787944117144233
+        ],
+        "index": 59,
+        "collections": 0,
+        "maxSteps": 959,
+        "distances": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "nativeValues": [
+          0.3678794411714423,
+          0.3678794411714423,
+          0.3678794411714423,
+          0.3678794411714423,
+          0.3678794411714423
+        ],
+        "feature": "pow-approximate-3"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          7.389056098930649,
+          7.389056098930649,
+          7.389056098930649,
+          7.389056098930649,
+          7.389056098930649
+        ],
+        "index": 60,
+        "collections": 0,
+        "maxSteps": 945,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          7.389056098930649,
+          7.389056098930649,
+          7.389056098930649,
+          7.389056098930649,
+          7.389056098930649
+        ],
+        "feature": "pow-approximate-4"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          2.7182818284590455,
+          2.7182818284590455,
+          2.7182818284590455,
+          2.7182818284590455,
+          2.7182818284590455
+        ],
+        "index": 61,
+        "collections": 0,
+        "maxSteps": 957,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          2.7182818284590455,
+          2.7182818284590455,
+          2.7182818284590455,
+          2.7182818284590455,
+          2.7182818284590455
+        ],
+        "feature": "pow-approximate-5"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          2.2844135865396268e+222,
+          2.2844135865396268e+222,
+          2.2844135865396268e+222,
+          2.2844135865396268e+222,
+          2.2844135865396268e+222
+        ],
+        "index": 62,
+        "collections": 0,
+        "maxSteps": 945,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          2.2844135865396268e+222,
+          2.2844135865396268e+222,
+          2.2844135865396268e+222,
+          2.2844135865396268e+222,
+          2.2844135865396268e+222
+        ],
+        "feature": "pow-approximate-6"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          6.616261056709391e-112,
+          6.616261056709391e-112,
+          6.616261056709391e-112,
+          6.616261056709391e-112,
+          6.616261056709391e-112
+        ],
+        "index": 63,
+        "collections": 0,
+        "maxSteps": 959,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          6.616261056709391e-112,
+          6.616261056709391e-112,
+          6.616261056709391e-112,
+          6.616261056709391e-112,
+          6.616261056709391e-112
+        ],
+        "feature": "pow-approximate-7"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          1.7320508075688772,
+          1.7320508075688772,
+          1.7320508075688772,
+          1.7320508075688772,
+          1.7320508075688772
+        ],
+        "index": 64,
+        "collections": 0,
+        "maxSteps": 950,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          1.7320508075688772,
+          1.7320508075688772,
+          1.7320508075688772,
+          1.7320508075688772,
+          1.7320508075688772
+        ],
+        "feature": "pow-approximate-8"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324
+        ],
+        "index": 65,
+        "collections": 0,
+        "maxSteps": 971,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324,
+          5e-324
+        ],
+        "feature": "pow-approximate-9"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          2.2227587494850775e-162,
+          2.2227587494850775e-162,
+          2.2227587494850775e-162,
+          2.2227587494850775e-162,
+          2.2227587494850775e-162
+        ],
+        "index": 66,
+        "collections": 0,
+        "maxSteps": 955,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          2.2227587494850775e-162,
+          2.2227587494850775e-162,
+          2.2227587494850775e-162,
+          2.2227587494850775e-162,
+          2.2227587494850775e-162
+        ],
+        "feature": "pow-approximate-10"
+      },
+      {
+        "checked": 5,
+        "toleranceUlps": 2,
+        "gpuValues": [
+          1e-75,
+          1e-75,
+          1e-75,
+          1e-75,
+          1e-75
+        ],
+        "index": 67,
+        "collections": 0,
+        "maxSteps": 937,
+        "distances": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeValues": [
+          1e-75,
+          1e-75,
+          1e-75,
+          1e-75,
+          1e-75
+        ],
+        "feature": "pow-approximate-11"
+      }
+    ],
+    "resumptionDispatches": 2199,
+    "nativeReference": "Fresh isolated iframe per input; exact special values/coercion, at most 2 ULP for listed implementation-approximated finite results.",
+    "compiler": "QuickJS/Wasm",
+    "exactChecks": 281,
+    "inputs": [
+      0,
+      1,
+      -1,
+      3,
+      17
+    ],
+    "checked": 341,
+    "resumptionExpected": "abc:2:8"
+  }
+}

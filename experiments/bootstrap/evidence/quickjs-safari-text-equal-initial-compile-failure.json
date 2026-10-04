@@ -1,0 +1,7 @@
+{
+  "outcome": "wgsl-validation-failed",
+  "candidateHashes": "quickjs-safari-text-equal-candidate-hashes.json",
+  "error": "main line1800:7 reserved identifier target in preparedConstruct",
+  "guestProgramsExecuted": 0,
+  "runnerLog": "{\"date\":\"2026-10-04T12:13:40.059Z\",\"stage\":\"control-pipeline\",\"diagnostics\":{\"diagnosticOnly\":true,\"guestProgramsExecuted\":0,\"shaderBytes\":{\"main\":218613,\"call\":102688,\"native\":155938},\"timings\":{},\"adapter\":{\"vendor\":\"apple\",\"architecture\":\"apple\",\"description\":\"apple\",\"isFallbackAdapter\":false},\"stage\":\"control-pipeline\"}}\n{\"date\":\"2026-10-04T12:13:40.328Z\",\"stage\":\"main-wgsl-validation\",\"diagnostics\":{\"diagnosticOnly\":true,\"guestProgramsExecuted\":0,\"shaderBytes\":{\"main\":218613,\"call\":102688,\"native\":155938},\"timings\":{\"control-pipeline\":3,\"main-wgsl-validation\":12.000000000000014},\"adapter\":{\"vendor\":\"apple\",\"architecture\":\"apple\",\"description\":\"apple\",\"isFallbackAdapter\":false},\"stage\":\"main-wgsl-validation\"}}\nfile:///private/tmp/lanes-metadata-verify/lanes-safari-diagnostics.mjs:32\n    if (state.error) throw new Error(state.error);\n                           ^\n\nError: main-wgsl-validation: Error: 1800:7 Expected a Identifier, but got a ReservedWord\n    at file:///private/tmp/lanes-metadata-verify/lanes-safari-diagnostics.mjs:32:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n\nNode.js v24.4.1\n"
+}

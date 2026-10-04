@@ -4,11 +4,17 @@
 
 Lanes is an experimental numeric JIT for applying one function to many independent inputs. It validates a restricted JavaScript subset, lowers it to typed integer IR, generates WGSL, and caches the GPU pipeline. A CPU backend implements the same integer semantics without `eval`.
 
-**v0.1.0-alpha.1** · [Agent field demo](https://shafqat-a.github.io/lanes/simulation.html) · [Playground](https://shafqat-a.github.io/lanes/) · [Compatibility](docs/compatibility.md) · [API](docs/api.md) · [Benchmarks](docs/performance.md)
+**v0.2.0-alpha.1** · [Agent field demo](https://shafqat-a.github.io/lanes/simulation.html) · [Playground](https://shafqat-a.github.io/lanes/) · [Compatibility](docs/compatibility.md) · [API](docs/api.md) · [Benchmarks](docs/performance.md)
 
 The alpha uses **explicit wrapping signed 32-bit arithmetic**, not general JavaScript `Number` semantics. Objects, closures, floating point, arbitrary function calls, and browser APIs are outside its supported language. Check the compatibility contract before adopting it.
 
 **New experimental direction:** the separate [GPU VM lab](https://shafqat-a.github.io/lanes/vm.html) executes a growing JavaScript subset with software double-precision Number arithmetic, functions, recursion, closures, exceptions, basic UTF-16 strings, and garbage collection on GPU. Execution resumes across dispatch boundaries. It chooses a whole-job CPU backend only when WebGPU is unavailable; unsupported features never trigger CPU fallback. This targets ES2025 on M1/Safari, **not full JavaScript support yet**. See [implemented features, measurements, and remaining work](docs/gpu-vm.md). The existing i32 JIT and its performance claims are separate.
+
+Current full-language work reuses QuickJS compilation with direct WGSL execution. The [experimental runtime](experiments/quickjs-runtime/README.md) includes M1/Safari checks for primitive boxing, property keys, sparse arrays, exponentiation and String helpers. This runtime currently requires WebGPU. Latest Apple M1/Safari verification passes 1,209 main-suite programs, 788 standard-library programs and 569 Promise/async programs; the three runtime pipelines compile in about 44 seconds. See the [qualification record](experiments/bootstrap/evidence/quickjs-m1-resumed-integration.json) for exact coverage and remaining verification. A subsequent [parallel implementation wave](experiments/bootstrap/evidence/quickjs-1_0-parallel-wave1.json) adds GPU-verified fresh-realm script execution and Array.flat/flatMap/splice, with the full main regression passing again.
+
+## Current prerelease
+
+See the [v0.2.0-alpha.1 release notes and unsupported-feature list](docs/releases/v0.2.0-alpha.1.md). The npm-format package retains the numeric JIT and older VM APIs. The newer QuickJS/WGSL runtime is supplied in the source checkout and a separate prebuilt browser release asset; it is not exported by that package.
 
 ## Try it
 
@@ -27,10 +33,10 @@ The [agent field](https://shafqat-a.github.io/lanes/simulation.html) animates up
 
 Safari smoke tests can run on a Mac with Safari remote automation enabled: start `safaridriver -p 4445` and `npm run dev` in separate terminals, then run `npm run test:safari`. This exercises the real Safari WebGPU path, all three agent counts, edits, playback, and reset. Override `LANES_WEBDRIVER_URL` or `LANES_DEMO_URL` to test another driver endpoint or the deployed site.
 
-The installable tarball is attached to the [GitHub alpha release](https://github.com/shafqat-a/lanes/releases/tag/v0.1.0-alpha.1). npm registry publication is pending maintainer authentication. After downloading the release asset:
+The installable tarball is attached to the [GitHub alpha release](https://github.com/shafqat-a/lanes/releases/tag/v0.2.0-alpha.1). npm registry publication is pending maintainer authentication. After downloading the release asset:
 
 ```sh
-npm install ./lanes-webgpu-0.1.0-alpha.1.tgz
+npm install ./lanes-webgpu-0.2.0-alpha.1.tgz
 ```
 
 ## Use the JIT
@@ -84,6 +90,10 @@ On the tested RTX 2060/NVK setup, warm end-to-end runs at 65,536 inputs were app
 A previous branched shader produced intermittent wrong output on RTX/NVK. This compiler uses predicated assignments and uniform bounded loops; cross-adapter tests and the repeated regression pass. The original failure's root cause remains unresolved and its [reproducer is preserved](experiments/README.md).
 
 ## Development
+
+For parallel coding work through signed-in Claude Code and Grok Build subscriptions,
+see the [external agent runner and MCP server](tools/external-agents/README.md).
+
 
 ```sh
 npm test                 # compiler, CPU semantics, fallback, lifecycle

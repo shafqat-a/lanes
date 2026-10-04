@@ -1,0 +1,80 @@
+{
+  "outcome": "aborted-resource-pressure",
+  "diagnosticOnly": true,
+  "guestProgramsExecuted": 0,
+  "date": "2026-10-04",
+  "host": "shafqats-MacBook-Air.local",
+  "archive": "/tmp/lanes-m1-split-candidate.tgz",
+  "archiveSha256": "1c68ac21734bf4b27a085793c8648dd0c3c3e98469b7067601ee5448f57a2e4a",
+  "browserBundleSha256": "e2072549456cd5f03dbebc08ca77557877cffee753147f2791f651e3f060e811",
+  "remoteDirectory": "/tmp/lanes-metadata-verify",
+  "stages": {
+    "controlPipeline": "passed",
+    "mainWGSLValidation": "passed",
+    "mainComputePipeline": "passed-before-45-seconds",
+    "callWGSLValidation": "passed",
+    "callComputePipeline": "canceled-before-completion"
+  },
+  "baseline": {
+    "globalSwapMB": 2979.81,
+    "existingCompilerPids": []
+  },
+  "measurements": [
+    {
+      "elapsedSeconds": 60,
+      "physicalFootprintMB": 600.0,
+      "globalSwapMB": 2827.81
+    },
+    {
+      "elapsedSeconds": 72,
+      "physicalFootprintMB": 628.9,
+      "globalSwapMB": 2819.81
+    },
+    {
+      "elapsedSeconds": 103,
+      "physicalFootprintGB": 1.8,
+      "globalSwapMB": 2795.81
+    },
+    {
+      "elapsedSeconds": 119,
+      "physicalFootprintGB": 3.3,
+      "globalSwapMB": 2915.69
+    },
+    {
+      "elapsedSeconds": 130,
+      "physicalFootprintGB": 4.3,
+      "globalSwapMB": 3050.81
+    }
+  ],
+  "cancellation": {
+    "reason": "Owned compiler physical footprint exceeded 4 GB safety cap",
+    "runnerPid": 2565,
+    "runnerSignal": "SIGTERM",
+    "compilerPid": 2570,
+    "compilerSignal": "SIGKILL",
+    "identityVerified": true
+  },
+  "cleanup": {
+    "runnerAbsent": true,
+    "compilerAbsent": true,
+    "safariDriverReady": true,
+    "globalSwapMBAfterCleanup": 3371.44,
+    "unrelatedCompilerProcessesUntouched": true
+  },
+  "sample": "quickjs-m1-metal-split-sample.txt",
+  "limitations": [
+    "Global swap is a system-wide metric, not exclusively attributable to this compiler.",
+    "No semantic or dispatch suites ran because the runtime pipeline did not finish.",
+    "Exact main pipeline milliseconds were retained only in page diagnostics and unavailable after canceled session cleanup; progress established completion before45seconds."
+  ],
+  "modules": {
+    "main": {
+      "sha256": "36f9cfac47db280261a1178476af92c495f26a51f26a344d9f651ec82b947e46",
+      "bytes": 215959
+    },
+    "call": {
+      "sha256": "a4c4bd06435ebf9491b2916de14076fb91e183ae780db05f541217a721caec88",
+      "bytes": 194954
+    }
+  }
+}

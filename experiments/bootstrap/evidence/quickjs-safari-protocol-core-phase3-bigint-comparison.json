@@ -1,0 +1,1631 @@
+{
+  "date": "2026-10-03T21:56:03.607Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 264,
+    "checked": 264,
+    "resumptionDispatches": 1732,
+    "elapsedMs": 13777,
+    "results": [
+      {
+        "feature": "bigint-number-0-0-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-0-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-1-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-1-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-2-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-2-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-3-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-3-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-4-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-4-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-5-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-5-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-6-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-6-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-7-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-0-7-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-0-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-0-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-1-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-1-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-2-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-2-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-3-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-3-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-4-false",
+        "checked": 1,
+        "maxSteps": 1628,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-4-true",
+        "checked": 1,
+        "maxSteps": 1640,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-5-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-5-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-6-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-6-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-7-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-1-7-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-0-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-0-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-1-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-1-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-2-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-2-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-3-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-3-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-4-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-4-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-5-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-5-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-6-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-6-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-7-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-2-7-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-0-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-0-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-1-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-1-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-2-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-2-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-3-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-3-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-4-false",
+        "checked": 1,
+        "maxSteps": 1628,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-4-true",
+        "checked": 1,
+        "maxSteps": 1640,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-5-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-5-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-6-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-6-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-7-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-3-7-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-0-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-0-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-1-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-1-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-2-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-2-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-3-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-3-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-4-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-4-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-5-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-5-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-6-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-6-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-7-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-4-7-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-0-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-0-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-1-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-1-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-2-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-2-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-3-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-3-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-4-false",
+        "checked": 1,
+        "maxSteps": 1628,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-4-true",
+        "checked": 1,
+        "maxSteps": 1640,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-5-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-5-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-6-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-6-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-7-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-5-7-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-0-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-0-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-1-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-1-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-2-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-2-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-3-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-3-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-4-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-4-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-5-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-5-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-6-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-6-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-7-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-6-7-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-0-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-0-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-1-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-1-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-2-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-2-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-3-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-3-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-4-false",
+        "checked": 1,
+        "maxSteps": 1628,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-4-true",
+        "checked": 1,
+        "maxSteps": 1640,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-5-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-5-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-6-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-6-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-7-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-7-7-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-0-false",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-0-true",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-1-false",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-1-true",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-2-false",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-2-true",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-3-false",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-3-true",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-4-false",
+        "checked": 1,
+        "maxSteps": 1583,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-4-true",
+        "checked": 1,
+        "maxSteps": 1583,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-5-false",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-5-true",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-6-false",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-6-true",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-7-false",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-8-7-true",
+        "checked": 1,
+        "maxSteps": 1582,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-0-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-0-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-1-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-1-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-2-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-2-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-3-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-3-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-4-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-4-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-5-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-5-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-6-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-6-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-7-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-9-7-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-0-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-0-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-1-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-1-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-2-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-2-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-3-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-3-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-4-false",
+        "checked": 1,
+        "maxSteps": 1628,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-4-true",
+        "checked": 1,
+        "maxSteps": 1640,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-5-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-5-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-6-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-6-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-7-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-10-7-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-0-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-0-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-1-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-1-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-2-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-2-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-3-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-3-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-4-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-4-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-5-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-5-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-6-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-6-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-7-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-11-7-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-0-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-0-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-1-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-1-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-2-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-2-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-3-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-3-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-4-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-4-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-5-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-5-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-6-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-6-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-7-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-12-7-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-0-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-0-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-1-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-1-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-2-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-2-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-3-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-3-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-4-false",
+        "checked": 1,
+        "maxSteps": 1627,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-4-true",
+        "checked": 1,
+        "maxSteps": 1639,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-5-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-5-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-6-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-6-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-7-false",
+        "checked": 1,
+        "maxSteps": 1626,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-number-13-7-true",
+        "checked": 1,
+        "maxSteps": 1638,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"\"",
+        "checked": 1,
+        "maxSteps": 2437,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\" \"",
+        "checked": 1,
+        "maxSteps": 2837,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"\ufeff\\n0\u2029\"",
+        "checked": 1,
+        "maxSteps": 7157,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"+1\"",
+        "checked": 1,
+        "maxSteps": 5285,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"-1\"",
+        "checked": 1,
+        "maxSteps": 5317,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"0xff\"",
+        "checked": 1,
+        "maxSteps": 6267,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"0o17\"",
+        "checked": 1,
+        "maxSteps": 6067,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"0b101\"",
+        "checked": 1,
+        "maxSteps": 6567,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"1.0\"",
+        "checked": 1,
+        "maxSteps": 5183,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"1e0\"",
+        "checked": 1,
+        "maxSteps": 5383,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"1n\"",
+        "checked": 1,
+        "maxSteps": 5383,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"Infinity\"",
+        "checked": 1,
+        "maxSteps": 4903,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"NaN\"",
+        "checked": 1,
+        "maxSteps": 4903,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"+0x1\"",
+        "checked": 1,
+        "maxSteps": 5313,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"-0x1\"",
+        "checked": 1,
+        "maxSteps": 5353,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"0x\"",
+        "checked": 1,
+        "maxSteps": 4643,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\" 1 2 \"",
+        "checked": 1,
+        "maxSteps": 6003,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"\u0085\"",
+        "checked": 1,
+        "maxSteps": 4823,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-string-\"9007199254740993\"",
+        "checked": 1,
+        "maxSteps": 11497,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-booleans-nullish",
+        "checked": 1,
+        "maxSteps": 1858,
+        "collections": 1
+      },
+      {
+        "feature": "bigint-object-equality-valueof",
+        "checked": 1,
+        "maxSteps": 718,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-object-null-never-converts",
+        "checked": 1,
+        "maxSteps": 273,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-coercion-order-<",
+        "checked": 1,
+        "maxSteps": 430,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-coercion-order-<=",
+        "checked": 1,
+        "maxSteps": 434,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-coercion-order->",
+        "checked": 1,
+        "maxSteps": 438,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-coercion-order->=",
+        "checked": 1,
+        "maxSteps": 438,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-object-first-abrupt",
+        "checked": 1,
+        "maxSteps": 89,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-object-second-abrupt",
+        "checked": 1,
+        "maxSteps": 178,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-invalid-string-after-object",
+        "checked": 1,
+        "maxSteps": 1385,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-symbol-equality",
+        "checked": 1,
+        "maxSteps": 1082,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-symbol-relational-abrupt-order",
+        "checked": 1,
+        "maxSteps": 501,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-symbol-object-equality-abrupt",
+        "checked": 1,
+        "maxSteps": 206,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-exotic-hints",
+        "checked": 1,
+        "maxSteps": 740,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-exotic-getter-once",
+        "checked": 1,
+        "maxSteps": 390,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-exotic-returns-object",
+        "checked": 1,
+        "maxSteps": 250,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-exotic-noncallable",
+        "checked": 1,
+        "maxSteps": 327,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-exotic-null-fallback",
+        "checked": 1,
+        "maxSteps": 290,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-exotic-abrupt-identity",
+        "checked": 1,
+        "maxSteps": 57,
+        "collections": 0
+      },
+      {
+        "feature": "bigint-exotic-right-even-after-symbol",
+        "checked": 1,
+        "maxSteps": 502,
+        "collections": 0
+      }
+    ],
+    "nativeReferenceDifferences": [
+      {
+        "feature": "bigint-symbol-relational-abrupt-order",
+        "native": false,
+        "ecmascript2025": true,
+        "diagnostic": "TypeError:a",
+        "reason": "Safari throws TypeError after left Symbol conversion, before the required right ToPrimitive; ES2025 IsLessThan requires both primitive conversions first",
+        "specification": "https://tc39.es/ecma262/2025/multipage/abstract-operations.html#sec-islessthan"
+      },
+      {
+        "feature": "bigint-exotic-right-even-after-symbol",
+        "native": false,
+        "ecmascript2025": true,
+        "diagnostic": "TypeError:anumber",
+        "reason": "Safari throws TypeError after left Symbol @@toPrimitive(number), before required right ToPrimitive; ES2025 IsLessThan requires both primitive conversions first",
+        "specification": "https://tc39.es/ecma262/2025/multipage/abstract-operations.html#sec-islessthan"
+      }
+    ],
+    "gaps": [
+      "Explicit 2048-bit BigInt,256-unit string and ordinary VM resource bounds; unsupported object types retain their runtime boundary"
+    ]
+  }
+}

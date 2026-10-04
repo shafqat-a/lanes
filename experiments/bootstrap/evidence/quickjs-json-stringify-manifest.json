@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-03T09:55:55.650150+00:00",
+  "scope": "JSON.stringify focused verification in integrated phase4 runtime; fullES2025notclaimed",
+  "reports": {
+    "experiments/bootstrap/evidence/quickjs-safari-json-stringify.json": {
+      "sha256": "a82001278f9916255295477b5000413c7b5c63137e9195cd80faada5d046ea75",
+      "programs": 48,
+      "checked": 236,
+      "backend": "gpu"
+    },
+    "experiments/bootstrap/evidence/quickjs-safari-json-parse-phase4.json": {
+      "sha256": "fbb2c19ab6e6f8fa4a57509b129cc32a2cc6f8a156ebb65e310624b18c86b7a3",
+      "programs": 44,
+      "checked": 173,
+      "backend": "gpu"
+    }
+  },
+  "testedArtifactHashes": {
+    "experiments/quickjs-runtime/generated/browser-json-stringify.js": "fdef6a8383fc669865b7423a966cecce80eb19407b1488f708c402fb91fe4dde",
+    "experiments/quickjs-runtime/generated/browser-json-phase5.js": "fbea6e04ddf7ec187648c188cedfb521466b14273cab2cd8a1281fbedcf39a76",
+    "experiments/quickjs-runtime/generated/compiler.mjs": "489320cd588ebb95e73c02af5d52aac5496496831d519f0d7d4804b154e7725f",
+    "experiments/quickjs-runtime/generated/compiler.wasm": "47200ddef1403f6140f9bcd131a111ef68679b35ffba44f4b072874fe5a5123a"
+  }
+}

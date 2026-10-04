@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-02T19:06:44.690Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "checked": 6,
+    "elapsedMs": 96,
+    "method": "Real GPU execution, cancellation, pending dispatch disposal, and independent buffer readback on caller-owned device. No CPU guest execution.",
+    "backend": "gpu",
+    "compiler": "QuickJS/Wasm",
+    "checks": [
+      "GPU execution and results",
+      "Pre-aborted run",
+      "In-flight and queued steps disposed",
+      "Active run cancellation",
+      "Runtime usable after cancellation",
+      "Caller-owned device retained after runtime disposal"
+    ]
+  }
+}

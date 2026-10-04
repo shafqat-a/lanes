@@ -1,0 +1,401 @@
+{
+  "date": "2026-10-03T05:11:21.916Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "compiler": "QuickJS/Wasm",
+    "programs": 55,
+    "checked": 217,
+    "unsupportedChecks": 0,
+    "resumptionDispatches": 693,
+    "resumptionExpected": "gkrgkw18gkgk:true:true",
+    "elapsedMs": 2332.0000000000005,
+    "results": [
+      {
+        "index": 0,
+        "checked": 4,
+        "maxSteps": 102,
+        "collections": 0
+      },
+      {
+        "index": 1,
+        "checked": 4,
+        "maxSteps": 99,
+        "collections": 0
+      },
+      {
+        "index": 2,
+        "checked": 4,
+        "maxSteps": 99,
+        "collections": 0
+      },
+      {
+        "index": 3,
+        "checked": 4,
+        "maxSteps": 99,
+        "collections": 0
+      },
+      {
+        "index": 4,
+        "checked": 4,
+        "maxSteps": 101,
+        "collections": 0
+      },
+      {
+        "index": 5,
+        "checked": 4,
+        "maxSteps": 102,
+        "collections": 0
+      },
+      {
+        "index": 6,
+        "checked": 4,
+        "maxSteps": 109,
+        "collections": 0
+      },
+      {
+        "index": 7,
+        "checked": 4,
+        "maxSteps": 108,
+        "collections": 0
+      },
+      {
+        "index": 8,
+        "checked": 4,
+        "maxSteps": 109,
+        "collections": 0
+      },
+      {
+        "index": 9,
+        "checked": 4,
+        "maxSteps": 120,
+        "collections": 0
+      },
+      {
+        "index": 10,
+        "checked": 4,
+        "maxSteps": 98,
+        "collections": 0
+      },
+      {
+        "index": 11,
+        "checked": 4,
+        "maxSteps": 110,
+        "collections": 0
+      },
+      {
+        "index": 12,
+        "checked": 4,
+        "maxSteps": 107,
+        "collections": 0
+      },
+      {
+        "index": 13,
+        "checked": 4,
+        "maxSteps": 11,
+        "collections": 0
+      },
+      {
+        "index": 14,
+        "checked": 4,
+        "maxSteps": 232,
+        "collections": 0
+      },
+      {
+        "index": 15,
+        "checked": 4,
+        "maxSteps": 342,
+        "collections": 0
+      },
+      {
+        "index": 16,
+        "checked": 4,
+        "maxSteps": 12536,
+        "collections": 1
+      },
+      {
+        "index": 17,
+        "checked": 4,
+        "maxSteps": 15722,
+        "collections": 1
+      },
+      {
+        "index": 18,
+        "checked": 4,
+        "maxSteps": 44,
+        "collections": 0
+      },
+      {
+        "index": 19,
+        "checked": 4,
+        "maxSteps": 299,
+        "collections": 0
+      },
+      {
+        "index": 20,
+        "checked": 4,
+        "maxSteps": 232,
+        "collections": 0
+      },
+      {
+        "index": 21,
+        "checked": 4,
+        "maxSteps": 342,
+        "collections": 0
+      },
+      {
+        "index": 22,
+        "checked": 4,
+        "maxSteps": 232,
+        "collections": 0
+      },
+      {
+        "index": 23,
+        "checked": 4,
+        "maxSteps": 342,
+        "collections": 0
+      },
+      {
+        "index": 24,
+        "checked": 4,
+        "maxSteps": 236,
+        "collections": 0
+      },
+      {
+        "index": 25,
+        "checked": 4,
+        "maxSteps": 347,
+        "collections": 0
+      },
+      {
+        "index": 26,
+        "checked": 4,
+        "maxSteps": 232,
+        "collections": 0
+      },
+      {
+        "index": 27,
+        "checked": 4,
+        "maxSteps": 342,
+        "collections": 0
+      },
+      {
+        "index": 28,
+        "checked": 4,
+        "maxSteps": 232,
+        "collections": 0
+      },
+      {
+        "index": 29,
+        "checked": 4,
+        "maxSteps": 342,
+        "collections": 0
+      },
+      {
+        "index": 30,
+        "checked": 4,
+        "maxSteps": 192,
+        "collections": 0
+      },
+      {
+        "index": 31,
+        "checked": 4,
+        "maxSteps": 292,
+        "collections": 0
+      },
+      {
+        "index": 32,
+        "checked": 4,
+        "maxSteps": 232,
+        "collections": 0
+      },
+      {
+        "index": 33,
+        "checked": 4,
+        "maxSteps": 342,
+        "collections": 0
+      },
+      {
+        "index": 34,
+        "checked": 4,
+        "maxSteps": 11640,
+        "collections": 0
+      },
+      {
+        "index": 35,
+        "checked": 4,
+        "maxSteps": 14602,
+        "collections": 1
+      },
+      {
+        "index": 36,
+        "checked": 4,
+        "maxSteps": 17480,
+        "collections": 1
+      },
+      {
+        "index": 37,
+        "checked": 4,
+        "maxSteps": 21902,
+        "collections": 1
+      },
+      {
+        "index": 38,
+        "checked": 4,
+        "maxSteps": 200,
+        "collections": 0
+      },
+      {
+        "index": 39,
+        "checked": 4,
+        "maxSteps": 3312,
+        "collections": 0
+      },
+      {
+        "index": 40,
+        "checked": 4,
+        "maxSteps": 123,
+        "collections": 0
+      },
+      {
+        "index": 41,
+        "checked": 4,
+        "maxSteps": 199,
+        "collections": 0
+      },
+      {
+        "index": 42,
+        "checked": 4,
+        "maxSteps": 200,
+        "collections": 0
+      },
+      {
+        "index": 43,
+        "checked": 4,
+        "maxSteps": 299,
+        "collections": 0
+      },
+      {
+        "index": 44,
+        "checked": 4,
+        "maxSteps": 276,
+        "collections": 0
+      },
+      {
+        "index": 45,
+        "checked": 4,
+        "maxSteps": 337,
+        "collections": 0
+      },
+      {
+        "index": 46,
+        "checked": 4,
+        "maxSteps": 279,
+        "collections": 0
+      },
+      {
+        "index": 47,
+        "checked": 4,
+        "maxSteps": 237,
+        "collections": 0
+      },
+      {
+        "index": 48,
+        "checked": 4,
+        "maxSteps": 200,
+        "collections": 0
+      },
+      {
+        "index": 49,
+        "checked": 4,
+        "maxSteps": 241,
+        "collections": 0
+      },
+      {
+        "index": 50,
+        "checked": 4,
+        "maxSteps": 33,
+        "collections": 0
+      },
+      {
+        "index": 51,
+        "checked": 4,
+        "maxSteps": 293,
+        "collections": 0
+      },
+      {
+        "index": 52,
+        "checked": 4,
+        "maxSteps": 452,
+        "collections": 0
+      },
+      {
+        "index": 53,
+        "checked": 4,
+        "maxSteps": 32428,
+        "collections": 3
+      }
+    ],
+    "nativeReferenceDifferences": [
+      {
+        "index": 42,
+        "source": "function f(x){let log=\"\";const key={toString(){log+=\"k\";return \"p\";}};function rhs(){log+=\"r\";return x;}const o={[key]:rhs()};return log+\":\"+o.p;}",
+        "native": [
+          "rk:0",
+          "rk:1",
+          "rk:-1",
+          "rk:17"
+        ],
+        "expected": [
+          "kr:0",
+          "kr:1",
+          "kr:-1",
+          "kr:17"
+        ],
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-object-initializer-runtime-semantics-propertydefinitionevaluation",
+        "note": "ComputedPropertyName evaluation invokes ToPropertyKey before the value expression is evaluated."
+      },
+      {
+        "index": 49,
+        "source": "function f(x){let n=0;const key={toString(){n++;return \"a\";}};let errors=0;try{null[key];}catch(e){if(e instanceof TypeError)errors++;}try{undefined[key]=x;}catch(e){if(e instanceof TypeError)errors++;}try{delete null[key];}catch(e){if(e instanceof TypeError)errors++;}try{key in 1;}catch(e){if(e instanceof TypeError)errors++;}return errors+\":\"+n;}",
+        "native": [
+          "4:1",
+          "4:1",
+          "4:1",
+          "4:1"
+        ],
+        "expected": [
+          "4:0",
+          "4:0",
+          "4:0",
+          "4:0"
+        ],
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-data-types-and-values.html#sec-getvalue",
+        "note": "GetValue, PutValue and delete apply ToObject before ToPropertyKey; in checks its object operand before converting its key. None invokes key conversion with these invalid bases."
+      }
+    ],
+    "method": "Ordinary ToPropertyKey and primitive conversion on GPU, fresh-native differential checks, callback and GC retention plus single-instruction resumption.",
+    "gaps": [
+      "Symbols/BigInt and custom @@toPrimitive"
+    ]
+  }
+}

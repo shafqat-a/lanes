@@ -1,0 +1,8 @@
+--- phase4-fixed-nodes.js
++++ phase4-fixed-nodes.js
+@@ -28,4 +28,4 @@
+ export const GLOBAL_OBJECT_NODE = 65;
+ 
+ // Phase-4 fixed nodes that are initialized and therefore GC roots.
+-export const PHASE4_FIXED_ROOTS = Object.freeze([TEMPLATE_REGISTRY_NODE]);
++export const PHASE4_FIXED_ROOTS = Object.freeze([TEMPLATE_REGISTRY_NODE, GLOBAL_OBJECT_NODE]);

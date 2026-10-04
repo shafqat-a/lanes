@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-03T09:59:26.385325+00:00",
+  "scope": "Full regression after phase4firstwave andJSON stringify; precedessort/Unicode",
+  "testedArtifactHashes": {
+    "experiments/quickjs-runtime/generated/browser.js": "fb417cdbb8afbc9f5ccbe69fdf38be9152d2b405043401a47681b6df2b9bfb13",
+    "experiments/quickjs-runtime/generated/compiler.mjs": "489320cd588ebb95e73c02af5d52aac5496496831d519f0d7d4804b154e7725f",
+    "experiments/quickjs-runtime/generated/compiler.wasm": "47200ddef1403f6140f9bcd131a111ef68679b35ffba44f4b072874fe5a5123a"
+  },
+  "report": {
+    "path": "experiments/bootstrap/evidence/quickjs-safari-phase4-json-full.json",
+    "sha256": "5040acbedd90325985aae47a5ebbcce679a05564709e08836f47f052aec44b07",
+    "summary": {
+      "backend": "gpu",
+      "compiler": "QuickJS/Wasm",
+      "programs": 1200,
+      "checked": 10800,
+      "oneInstructionDispatches": 15,
+      "descriptorDispatches": 233,
+      "applyDispatches": 191,
+      "numericDispatches": 1256,
+      "errorDispatches": 334,
+      "arrayMethodDispatches": 685,
+      "arraySearchDispatches": 1719,
+      "extendedBuiltinDispatches": {
+        "reduce": 1394,
+        "mutation": 2106,
+        "shift": 1412,
+        "stringSearch": 4277,
+        "objectOperations": 1107
+      },
+      "negativeChecks": 117
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "archive": "/tmp/lanes-m1-own-gap-oracle-candidate.tgz",
+  "archiveSha256": "84ff8abbe86e96fb482f5fe6913b11ec64e1f811482f1b53952e6313b665a39f",
+  "bundleHashes": {
+    "browser-dispatch-state-machine.js": "dcfff409b3a37b778f9fbd9b5ee0ee5afb9ffe89971a958f6214ca44189f059b",
+    "browser-dispatch-boundary.js": "a25a13ca689fc7b5e6ec9aa528be2fa74007d058b1f648c749ef30bcf760b352"
+  },
+  "modules": {
+    "main": {
+      "sha256": "98bde65f915f0863c95a50ad73bcf0394b6d9ff792900ff4295ee48868b2a78e",
+      "bytes": 216534
+    },
+    "call": {
+      "sha256": "5359dde8eba0850132edf31ae2dfb1970447f029f8f2df646149f93a3bbc9956",
+      "bytes": 102526
+    },
+    "native": {
+      "sha256": "40975374dbf78766cd19e4f682f0a59ba8df528e6451615f9540b4319eadb536",
+      "bytes": 155252
+    }
+  }
+}

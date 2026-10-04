@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-04T02:52:48.422Z",
+  "host": {
+    "sshHost": "home.cloudlabs.live",
+    "sshPort": 1122,
+    "browser": "149.0.7827.55",
+    "adapterVendor": "intel",
+    "adapterArchitecture": "gen-9",
+    "isFallbackAdapter": false,
+    "smokeValue": 42,
+    "vulkanIcd": "/usr/share/vulkan/icd.d/intel_icd.json"
+  },
+  "test": {
+    "suite": "shader-compile",
+    "artifact": "shared-call + shared-finish generated browser bundle",
+    "phase": "runtime-compute-pipeline",
+    "guestSemanticQualification": false,
+    "diagnosticFlags": [
+      "--disable-gpu-watchdog",
+      "--disable-gpu-sandbox",
+      "--gpu-launcher=/tmp/lanes-chrome-aXfN8H/gpu-gdb-wrapper.sh",
+      "--enable-logging=stderr",
+      "--v=1"
+    ],
+    "systemPolicyOrDriverChanges": false
+  },
+  "artifacts": [
+    {
+      "kind": "rawTrace",
+      "remotePath": "/tmp/lanes-chrome-aXfN8H/gpu-gdb-759631.log",
+      "sha256": "9509abae0eb9c30035adf517505f48572579975a2d99aa96ca30c2314e80f77c"
+    },
+    {
+      "kind": "browserShaderBundle",
+      "remotePath": "/tmp/lanes-chrome-aXfN8H/browser-shader-compile.js",
+      "sha256": "8465ab03373b18c390afce79cc06f8930b98ef56ec207186773bf496ba8dd2cf"
+    },
+    {
+      "kind": "diagnosticRunner",
+      "remotePath": "/tmp/lanes-chrome-aXfN8H/chrome-gdb.mjs",
+      "sha256": "ad304302e00c1da5bcda89fa63fe10d75bb796ecd39147106241097f47c9d66f"
+    },
+    {
+      "kind": "gpuLauncher",
+      "remotePath": "/tmp/lanes-chrome-aXfN8H/gpu-gdb-wrapper.sh",
+      "sha256": "8cf4b63d22cc60d490086b1d4cb32bd3ea06e1d04f2750f02b2ba3cc4287ef54"
+    },
+    {
+      "kind": "chromeBinary",
+      "remotePath": "/home/shafqat/.cache/ms-playwright/chromium-1228/chrome-linux64/chrome",
+      "sha256": "2d18db9d8608b052b6a552ee00ec1e830f93692e928b65ecc67d693bd33fe801"
+    }
+  ],
+  "localRawTrace": "/tmp/lanes-gpu-gdb-759631.log",
+  "excerptFile": "compiler-memory-gdb-excerpt.txt",
+  "observations": {
+    "gpuPid": 759673,
+    "gdbPid": 759631,
+    "signal": "SIGTRAP",
+    "threadNumber": 10,
+    "threadName": "ThreadPoolForeg",
+    "threadLwp": 759685,
+    "programCounter": "0x55555ffabf58",
+    "elfRelativeProgramCounter": "0x0aa57f58",
+    "programCounterModule": "Chrome executable",
+    "instructionSequence": [
+      "int3",
+      "ud2"
+    ],
+    "registers": {
+      "rbx": "0x200000",
+      "rsi": "0x200000",
+      "rcx": "0x400000000",
+      "r8": "0x2000",
+      "rdx": "0x1fff",
+      "r10": "0x1fff"
+    },
+    "writablePartitionAllocMappingCount": 24499,
+    "writablePartitionAllocMappedBytes": 16932896768,
+    "rssSamples": [
+      {
+        "elapsedSeconds": 19,
+        "rssKiB": 4776432
+      },
+      {
+        "elapsedSeconds": 45,
+        "rssKiB": 12103936
+      }
+    ],
+    "shellLimits": {
+      "addressSpace": "unlimited",
+      "data": "unlimited",
+      "residentMemory": "unlimited"
+    },
+    "symbolizedStackAvailable": false
+  },
+  "inference": {
+    "confidence": "high; exact allocating compiler pass remains unproven",
+    "diagnosis": "PartitionAlloc pool exhaustion during pipeline compilation, rather than the normal GPU watchdog timeout.",
+    "basis": [
+      "15.770 GiB of writable PartitionAlloc mappings plus guard and metadata pages approaches exact-version desktop pool maximum of 16 GiB.",
+      "Registers hold 16 GiB, 2 MiB, 8192 and 8191, consistent with maximum pool and superpage counts.",
+      "Crash is explicit int3/ud2 in Chrome worker thread; disassembly and caller structure match PartitionAlloc OOM routines.",
+      "Exact-version normal GPU watchdog terminates with RESULT_CODE_HUNG=2; this run disabled it and stopped at SIGTRAP."
+    ],
+    "limits": [
+      "Chrome binary is stripped; normal unwinding did not provide reliable compiler-pass function names.",
+      "Memory mappings are virtual writable bytes, not measured resident memory at the exact crash.",
+      "Does not establish that Mesa, Tint or another specific compiler stage created the allocation growth.",
+      "GDB and disabled GPU sandbox alter diagnostic process setup; hardware smoke and failure phase were verified."
+    ],
+    "recommendedNextStep": "Reduce or isolate compilation memory growth; do not interpret extending watchdog timeout as a fix."
+  },
+  "sourceUrls": [
+    "https://github.com/chromium/chromium/blob/149.0.7827.55/base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h#L322",
+    "https://github.com/chromium/chromium/blob/149.0.7827.55/base/allocator/partition_allocator/src/partition_alloc/oom.cc#L30",
+    "https://github.com/chromium/chromium/blob/149.0.7827.55/gpu/ipc/service/gpu_init.cc#L423",
+    "https://github.com/chromium/chromium/blob/149.0.7827.55/gpu/ipc/common/result_codes.h#L14"
+  ]
+}

@@ -1,0 +1,960 @@
+{
+  "date": "2026-10-04T13:11:27.034Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 55,
+    "checked": 110,
+    "resumptions": [
+      {
+        "feature": "interleaved-independent-generators",
+        "dispatches": 387,
+        "value": "3:13:4:14"
+      },
+      {
+        "feature": "finally-yield-retains-return",
+        "dispatches": 386,
+        "value": "4:false:5:true"
+      },
+      {
+        "feature": "caught-throw-yields",
+        "dispatches": 384,
+        "value": "3:false:4:true"
+      },
+      {
+        "feature": "delegate-return-done-false-then-next",
+        "dispatches": 595,
+        "value": "4:false:5:true:nrn"
+      },
+      {
+        "feature": "delegate-missing-throw-closes-with-no-argument",
+        "dispatches": 641,
+        "value": "true:true:0:true"
+      }
+    ],
+    "nativeReferenceDifferences": [
+      {
+        "feature": "delegate-preserves-result-identity-with-lazy-value",
+        "input": 3,
+        "native": "false:1:3:1",
+        "normative": "true:0:3:1",
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-functions-and-classes.html#sec-generator-function-definitions-runtime-semantics-evaluation",
+        "evidence": "quickjs-safari-native-generator-worker-probe.json",
+        "note": "Synchronous yield* passes the iterator result directly to GeneratorYield without reading value. Observed Safari instead copies it and eagerly reads value."
+      },
+      {
+        "feature": "delegate-preserves-result-identity-with-lazy-value",
+        "input": 4,
+        "native": "false:1:4:1",
+        "normative": "true:0:4:1",
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-functions-and-classes.html#sec-generator-function-definitions-runtime-semantics-evaluation",
+        "evidence": "quickjs-safari-native-generator-worker-probe.json",
+        "note": "Synchronous yield* passes the iterator result directly to GeneratorYield without reading value. Observed Safari instead copies it and eagerly reads value."
+      }
+    ],
+    "delegationQualified": true,
+    "genericIterationDependency": "included",
+    "results": [
+      {
+        "feature": "next-yield-return",
+        "checked": 2,
+        "expected": [
+          "3:false:4:true:undefined:true",
+          "4:false:5:true:undefined:true"
+        ],
+        "steps": [
+          549,
+          549
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "first-next-argument-ignored",
+        "checked": 2,
+        "expected": [
+          "3:4:true",
+          "4:5:true"
+        ],
+        "steps": [
+          289,
+          289
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "parameter-default-before-body",
+        "checked": 2,
+        "expected": [
+          "p:pb:3",
+          "p:pb:4"
+        ],
+        "steps": [
+          133,
+          133
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "parameter-throw-at-call",
+        "checked": 2,
+        "expected": [
+          true,
+          true
+        ],
+        "steps": [
+          22,
+          22
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "interleaved-independent-generators",
+        "checked": 2,
+        "expected": [
+          "3:13:4:14",
+          "4:14:5:15"
+        ],
+        "steps": [
+          387,
+          387
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "return-before-start-skips-body",
+        "checked": 2,
+        "expected": [
+          "0:4:true:true",
+          "0:5:true:true"
+        ],
+        "steps": [
+          369,
+          369
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "throw-before-start-skips-body",
+        "checked": 2,
+        "expected": [
+          "true:0:true",
+          "true:0:true"
+        ],
+        "steps": [
+          281,
+          281
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "caught-throw-yields",
+        "checked": 2,
+        "expected": [
+          "3:false:4:true",
+          "4:false:5:true"
+        ],
+        "steps": [
+          384,
+          384
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "uncaught-throw-completes-generator",
+        "checked": 2,
+        "expected": [
+          "4:true",
+          "5:true"
+        ],
+        "steps": [
+          202,
+          202
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "finally-yield-retains-return",
+        "checked": 2,
+        "expected": [
+          "4:false:5:true",
+          "5:false:6:true"
+        ],
+        "steps": [
+          386,
+          386
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "finally-yield-retains-throw",
+        "checked": 2,
+        "expected": [
+          "4:false:5:true",
+          "5:false:6:true"
+        ],
+        "steps": [
+          386,
+          386
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "finally-return-overrides-return",
+        "checked": 2,
+        "expected": [
+          7,
+          8
+        ],
+        "steps": [
+          29,
+          29
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "reentrant-next-throws",
+        "checked": 2,
+        "expected": [
+          "true:3",
+          "true:4"
+        ],
+        "steps": [
+          263,
+          263
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "completed-return-and-throw",
+        "checked": 2,
+        "expected": [
+          "4:true:5",
+          "5:true:6"
+        ],
+        "steps": [
+          291,
+          291
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "borrowed-next-brand-check",
+        "checked": 2,
+        "expected": [
+          "true:3",
+          "true:4"
+        ],
+        "steps": [
+          262,
+          262
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "sloppy-this-wrapper-retained",
+        "checked": 2,
+        "expected": [
+          "object:true:3",
+          "object:true:4"
+        ],
+        "steps": [
+          210,
+          210
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "strict-this-retained",
+        "checked": 2,
+        "expected": [
+          "3:3",
+          "4:4"
+        ],
+        "steps": [
+          196,
+          196
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "generator-not-constructible",
+        "checked": 2,
+        "expected": [
+          true,
+          true
+        ],
+        "steps": [
+          73,
+          73
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "generator-result-descriptors",
+        "checked": 2,
+        "expected": [
+          "value,done:truetruetrue:3",
+          "value,done:truetruetrue:4"
+        ],
+        "steps": [
+          760,
+          760
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "freeze-generator-does-not-freeze-state",
+        "checked": 2,
+        "expected": [
+          "3:4:true",
+          "4:5:true"
+        ],
+        "steps": [
+          353,
+          353
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "generator-prototypes",
+        "checked": 2,
+        "expected": [
+          "true:true:true:false:3",
+          "true:true:true:false:4"
+        ],
+        "steps": [
+          521,
+          521
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "modified-generator-prototype",
+        "checked": 2,
+        "expected": [
+          "3:3:0",
+          "4:4:0"
+        ],
+        "steps": [
+          289,
+          289
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "yielded-closure-keeps-local-binding",
+        "checked": 2,
+        "expected": [
+          "4:4",
+          "5:5"
+        ],
+        "steps": [
+          211,
+          211
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "mapped-arguments-remain-linked",
+        "checked": 2,
+        "expected": [
+          "3:4",
+          "4:5"
+        ],
+        "steps": [
+          202,
+          202
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "pending-reference-survives-yield",
+        "checked": 2,
+        "expected": [
+          "4:5",
+          "5:6"
+        ],
+        "steps": [
+          467,
+          467
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "nested-generator-exception-caught-outside",
+        "checked": 2,
+        "expected": [
+          "3:4",
+          "4:5"
+        ],
+        "steps": [
+          219,
+          219
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "suspended-generator-gc-roots",
+        "checked": 2,
+        "expected": [
+          "keep3:keep3",
+          "keep4:keep4"
+        ],
+        "steps": [
+          70125,
+          70125
+        ],
+        "collections": [
+          45,
+          45
+        ]
+      },
+      {
+        "feature": "yielded-bigint-and-symbol-retained",
+        "checked": 2,
+        "expected": [
+          "bigint:true:keep:3",
+          "bigint:true:keep:4"
+        ],
+        "steps": [
+          217,
+          217
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "class-generator-method-super",
+        "checked": 2,
+        "expected": [
+          "3:true",
+          "4:true"
+        ],
+        "steps": [
+          311,
+          311
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "private-generator-method",
+        "checked": 2,
+        "expected": [
+          "3:4",
+          "4:5"
+        ],
+        "steps": [
+          244,
+          244
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "suspended-finally-gc-retains-thrown-object",
+        "checked": 2,
+        "expected": [
+          "true:3",
+          "true:4"
+        ],
+        "steps": [
+          70223,
+          70223
+        ],
+        "collections": [
+          45,
+          45
+        ]
+      },
+      {
+        "feature": "finally-second-return-overrides-pending-return",
+        "checked": 2,
+        "expected": [
+          "4:false:7:true:true",
+          "5:false:8:true:true"
+        ],
+        "steps": [
+          474,
+          474
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "finally-second-throw-overrides-pending-return",
+        "checked": 2,
+        "expected": [
+          "6:true",
+          "7:true"
+        ],
+        "steps": [
+          214,
+          214
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "finally-return-overrides-pending-throw",
+        "checked": 2,
+        "expected": [
+          "6:true:true",
+          "7:true:true"
+        ],
+        "steps": [
+          299,
+          299
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "nested-finally-yields-preserve-completion",
+        "checked": 2,
+        "expected": [
+          "4:5:6:true",
+          "5:6:7:true"
+        ],
+        "steps": [
+          400,
+          400
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "reentrant-return-throw-do-not-close-running-generator",
+        "checked": 2,
+        "expected": [
+          "2:3",
+          "2:4"
+        ],
+        "steps": [
+          350,
+          350
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "defaults-retained-after-caller-mutation",
+        "checked": 2,
+        "expected": [
+          "14:3:4",
+          "15:4:5"
+        ],
+        "steps": [
+          307,
+          307
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "saved-stack-only-gc-roots",
+        "checked": 2,
+        "expected": [
+          "keep3done",
+          "keep4done"
+        ],
+        "steps": [
+          70116,
+          70116
+        ],
+        "collections": [
+          45,
+          45
+        ]
+      },
+      {
+        "feature": "saved-receiver-only-gc-roots",
+        "checked": 2,
+        "expected": [
+          "this3",
+          "this4"
+        ],
+        "steps": [
+          70119,
+          70119
+        ],
+        "collections": [
+          46,
+          46
+        ]
+      },
+      {
+        "feature": "finally-pending-return-only-gc-roots",
+        "checked": 2,
+        "expected": [
+          "return3",
+          "return4"
+        ],
+        "steps": [
+          70128,
+          70128
+        ],
+        "collections": [
+          45,
+          45
+        ]
+      },
+      {
+        "feature": "generator-prototype-can-be-null",
+        "checked": 2,
+        "expected": [
+          "3:[object Generator]",
+          "4:[object Generator]"
+        ],
+        "steps": [
+          118,
+          118
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "yield-star-array",
+        "checked": 2,
+        "expected": [
+          "3:4:5",
+          "4:5:6"
+        ],
+        "steps": [
+          651,
+          651
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "yield-star-generator-return",
+        "checked": 2,
+        "expected": [
+          "3:4",
+          "4:5"
+        ],
+        "steps": [
+          303,
+          303
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "for-of-generator-closes-finally",
+        "checked": 2,
+        "expected": [
+          "3:1",
+          "4:1"
+        ],
+        "steps": [
+          376,
+          376
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "delegate-caches-next-and-passes-argument",
+        "checked": 2,
+        "expected": [
+          "1:undefined;1:4;",
+          "1:undefined;1:5;"
+        ],
+        "steps": [
+          530,
+          530
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "delegate-return-absent-completes",
+        "checked": 2,
+        "expected": [
+          "3:true:true",
+          "4:true:true"
+        ],
+        "steps": [
+          423,
+          423
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "delegate-return-done-false-then-next",
+        "checked": 2,
+        "expected": [
+          "4:false:5:true:nrn",
+          "5:false:6:true:nrn"
+        ],
+        "steps": [
+          595,
+          595
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "delegate-throw-method-recovers",
+        "checked": 2,
+        "expected": [
+          "4:true",
+          "5:true"
+        ],
+        "steps": [
+          364,
+          364
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "delegate-missing-throw-closes-with-no-argument",
+        "checked": 2,
+        "expected": [
+          "true:true:0:true",
+          "true:true:0:true"
+        ],
+        "steps": [
+          641,
+          641
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "delegate-return-getter-throw-runs-finally",
+        "checked": 2,
+        "expected": [
+          "3:1:true",
+          "4:1:true"
+        ],
+        "steps": [
+          417,
+          417
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "delegate-result-done-getter-abrupt-does-not-close",
+        "checked": 2,
+        "expected": [
+          "3:0:true",
+          "4:0:true"
+        ],
+        "steps": [
+          382,
+          382
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "delegate-nonobject-result-typeerror",
+        "checked": 2,
+        "expected": [
+          "true:true",
+          "true:true"
+        ],
+        "steps": [
+          344,
+          344
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "delegate-preserves-result-identity-with-lazy-value",
+        "checked": 2,
+        "expected": [
+          "true:0:3:1",
+          "true:0:4:1"
+        ],
+        "steps": [
+          466,
+          466
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "delegate-suspended-gc-roots",
+        "checked": 2,
+        "expected": [
+          "end3",
+          "end4"
+        ],
+        "steps": [
+          70476,
+          70476
+        ],
+        "collections": [
+          45,
+          45
+        ]
+      },
+      {
+        "feature": "spread-generator",
+        "checked": 2,
+        "expected": [
+          "3:4",
+          "4:5"
+        ],
+        "steps": [
+          673,
+          673
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      }
+    ],
+    "elapsedMs": 51808
+  }
+}

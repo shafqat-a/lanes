@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-03T21:56:10.931Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 32,
+    "checked": 96,
+    "requiredFormerBoundaries": [
+      {
+        "feature": "obsolete-string-iterator-bigint-text-guard",
+        "expected": "12",
+        "status": "required positive"
+      }
+    ],
+    "elapsedMs": 1529,
+    "results": [
+      {
+        "feature": "strict-number-public-call-bigint",
+        "checked": 3,
+        "maxSteps": 81,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-public-construct-bigint",
+        "checked": 3,
+        "maxSteps": 99,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-public-object-bigint-once",
+        "checked": 3,
+        "maxSteps": 292,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-public-construct-object-bigint-once",
+        "checked": 3,
+        "maxSteps": 310,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-public-number-symbol",
+        "checked": 3,
+        "maxSteps": 228,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-math-bigint",
+        "checked": 3,
+        "maxSteps": 210,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-math-object-bigint-once",
+        "checked": 3,
+        "maxSteps": 276,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-math-max-nan-still-converts",
+        "checked": 3,
+        "maxSteps": 522,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-math-pow-bigint-stops-exponent-coercion",
+        "checked": 3,
+        "maxSteps": 224,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-isfinite-no-coercion",
+        "checked": 3,
+        "maxSteps": 48,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-parseint-bigint-radix",
+        "checked": 3,
+        "maxSteps": 533,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-array-length-bigint",
+        "checked": 3,
+        "maxSteps": 280,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-array-descriptor-length-bigint",
+        "checked": 3,
+        "maxSteps": 425,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-array-length-two-conversions",
+        "checked": 3,
+        "maxSteps": 442,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-array-sort-comparator-bigint",
+        "checked": 3,
+        "maxSteps": 415,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-array-tosorted-comparator-object-bigint",
+        "checked": 3,
+        "maxSteps": 522,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-array-map-length-before-callback",
+        "checked": 3,
+        "maxSteps": 290,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-array-at-empty-coerces-index",
+        "checked": 3,
+        "maxSteps": 321,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-array-indexof-empty-skips-index",
+        "checked": 3,
+        "maxSteps": 132,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-array-includes-empty-skips-index",
+        "checked": 3,
+        "maxSteps": 131,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-array-slice-empty-coerces-start",
+        "checked": 3,
+        "maxSteps": 338,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-array-fill-empty-coerces-start",
+        "checked": 3,
+        "maxSteps": 323,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-string-repeat-bigint",
+        "checked": 3,
+        "maxSteps": 256,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-string-indexof-coercion-order",
+        "checked": 3,
+        "maxSteps": 493,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-string-slice-bigint",
+        "checked": 3,
+        "maxSteps": 260,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-string-at-bigint",
+        "checked": 3,
+        "maxSteps": 255,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-number-tostring-bigint-radix",
+        "checked": 3,
+        "maxSteps": 221,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-json-number-wrapper-bigint",
+        "checked": 3,
+        "maxSteps": 644,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-json-space-bigint-before-tojson",
+        "checked": 3,
+        "maxSteps": 415,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-function-apply-bigint-length",
+        "checked": 3,
+        "maxSteps": 301,
+        "collections": 0
+      },
+      {
+        "feature": "strict-number-object-primitive-abrupt-preserved",
+        "checked": 3,
+        "maxSteps": 194,
+        "collections": 0
+      },
+      {
+        "feature": "obsolete-string-iterator-bigint-text-guard",
+        "checked": 3,
+        "maxSteps": 502,
+        "collections": 0
+      }
+    ],
+    "nativeReferenceDifferences": [],
+    "gaps": []
+  }
+}

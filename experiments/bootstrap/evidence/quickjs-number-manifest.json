@@ -1,0 +1,32 @@
+{
+  "files": {
+    "experiments/quickjs-runtime/bridge.c": "a1e3c11ca6de432ef58ec1887c04917f64edf6a242e2d4826dd752925e47154d",
+    "experiments/quickjs-runtime/compiler.js": "c6070dc7df623ea63074beb39ff78bc980e7e9db1d92d46102ad77c7585dd6ed",
+    "experiments/quickjs-runtime/program.js": "09b18a70885e153f085c34295003e58bebdaee885907f3896cf813a0707ff0cb",
+    "experiments/quickjs-runtime/shader.js": "799ae4cfa1c2d24d06a87dda5b2193df852e6e70caf0b543805106bf2c79a457",
+    "experiments/quickjs-runtime/runtime.js": "de4d514dba3a3d043e7ced58803f867e7aa815d31747652a5df4579c5bb82b25",
+    "experiments/quickjs-runtime/cases.js": "750e16737a66ad0d4e3348d06ac8702ac01a8614f5bd2f8e05f9d56d74c124b5",
+    "experiments/quickjs-runtime/validation.js": "9494bf2567e2ea9a1de66cf808492a81c50e6d048c94891f8c55edf80af12c07",
+    "experiments/quickjs-runtime/browser.js": "47c711601ba71a77347eed46ae7d401b1a6b74641d9061043044be4193d96bf2",
+    "experiments/quickjs-runtime/test262-harness.js": "fc388ad224ab153522117889955a8de99d7ade24ac5e14673afbc26e6db1396c",
+    "experiments/quickjs-runtime/browser-test262.js": "64e579a4a3baac0bab6fe7fbacb8327bcc6160933436217a8c7a21cd7c1411d9",
+    "experiments/quickjs-runtime/bootstrap.js": "3fae66feb90382e7bc4a50848d02d5cbbc3d47e7821792bd4844b3a2f6a1b872",
+    "experiments/quickjs-runtime/engine262-LICENSE.txt": "171d63abdb8a993e2c2985ac14a509617d0f18dfb1d97108d5641af2bf82e387",
+    "experiments/quickjs-runtime/check-compiler.mjs": "ea2e3297cf4bfe5d75f489c90609d67d83f495ac0c50575895b22baa170dddcd",
+    "experiments/quickjs-runtime/number-source.js": "530bb01c8c10ea76c809c69f1fa60c0ce1703103d5f63bcb3dd9593bf9afb34f",
+    "experiments/quickjs-runtime/check-number.mjs": "12141bcd74eb1a5a6223b396efd75a25703ee055f905d48f566b555b455d8bc3",
+    "experiments/quickjs-runtime/safari.mjs": "2c32f0f224b90df7874f83fa608982f2d59a8619a6473385d41c0d8f00bd138d"
+  },
+  "reports": [
+    "quickjs-safari-4293.json",
+    "quickjs-test262-safari-number.json"
+  ],
+  "note": "Safari: 477 programs / 4293 values / 28 negative checks. Native/Wasm parity: 477 programs. Exact numeric helper additionally passed 1059 host algorithm checks; Number boxing is unsupported. Three ES2025 expectations document native Safari ordering discrepancies. Longer harness timeout was needed for the expanded suite; no GPU semantic failures. Latest Node/Dawn suites not completed.",
+  "adaptedCounts": {
+    "passed": 448,
+    "referenceRejected": 0,
+    "failed": 0,
+    "exportedVariants": 1032,
+    "unsupported": 584
+  }
+}

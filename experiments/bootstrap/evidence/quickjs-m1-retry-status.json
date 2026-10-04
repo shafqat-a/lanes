@@ -1,0 +1,30 @@
+{
+  "host": "home.cloudlabs.live",
+  "port": 5322,
+  "hardware": "Apple M1",
+  "desktopSession": "shafqat active",
+  "safariAutomation": "session created successfully",
+  "candidateSha256": "78444ae4bbde41d98de9be7f375182c092534b40ca7f4657421ac4a7f08bf421",
+  "status": "Canceled during Metal backend pipeline compilation due to excessive memory/swap pressure; no guest programs executed",
+  "guestProgramsExecuted": 0,
+  "firstRecordedAt": "2026-10-04T02:16:00.914052+00:00",
+  "recordedAt": "2026-10-04T02:18:47.726353+00:00",
+  "controlPipeline": "passed",
+  "wgslValidation": "passed",
+  "fullPipeline": "not completed",
+  "machineMemoryBytes": 8589934592,
+  "compilerSampleFootprint": "8.4G",
+  "compilerCPUPercent": 100,
+  "systemSwapUsedMiBBeforeCleanup": 10040.69,
+  "compilerSample": "quickjs-m1-metal-compiler-sample.txt",
+  "cleanup": {
+    "runnerSIGTERM": "completed; owned Safari session deleted",
+    "compilerPID": 1984,
+    "compilerSIGTERM": "did not stop process",
+    "compilerSIGKILL": "sent to this run compiler only",
+    "compilerExitConfirmed": true,
+    "systemSwapUsedMiBAfterCleanup": 2890.88,
+    "webDriverReadyAfterCleanup": true
+  },
+  "rootCause": "Exact cause unproven; sampled stacks show Metal backend LLVM optimization, not guest execution or WebDriver connection failure"
+}

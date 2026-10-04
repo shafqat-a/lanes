@@ -1,0 +1,400 @@
+{
+  "date": "2026-10-03T21:56:08.183Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "compiler": "QuickJS/Wasm",
+    "checked": 37,
+    "programs": 39,
+    "passes": 37,
+    "throws": 0,
+    "mismatches": 0,
+    "unsupported": 2,
+    "note": "Guest semantics run only on QuickJSGPU. The host packs, uploads, and compares returned strings and numbers. No CPU interpreter and no CPU fallback.",
+    "records": [
+      {
+        "id": "prim-hint-default",
+        "status": "passed",
+        "outcome": "value",
+        "value": "default",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "prim-hint-number-string",
+        "status": "passed",
+        "outcome": "value",
+        "value": "number,string:7:s",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "prim-getter-throw",
+        "status": "passed",
+        "outcome": "throws",
+        "value": "getter",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "prim-returns-object",
+        "status": "passed",
+        "outcome": "throws",
+        "value": "nonprimitive",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "prim-noncallable",
+        "status": "passed",
+        "outcome": "throws",
+        "value": 0,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "prim-ordinary-order",
+        "status": "passed",
+        "outcome": "value",
+        "value": "valueOf,toString:z1",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "iter-custom-for-of",
+        "status": "passed",
+        "outcome": "value",
+        "value": "ab",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "iter-open-order",
+        "status": "passed",
+        "outcome": "value",
+        "value": "get-iter,call-iter,get-next,get-done,get-value",
+        "collections": [
+          1
+        ]
+      },
+      {
+        "id": "iter-next-noncallable",
+        "status": "passed",
+        "outcome": "throws",
+        "value": "next",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "close-break-return",
+        "status": "passed",
+        "outcome": "value",
+        "value": "return",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "close-throw-original",
+        "status": "passed",
+        "outcome": "throws",
+        "value": "return:original",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "iter-destructure-rest",
+        "status": "passed",
+        "outcome": "value",
+        "value": "10,30,40:50",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "spread-arr-values",
+        "status": "passed",
+        "outcome": "value",
+        "value": "1,2",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "str-surrogate",
+        "status": "passed",
+        "outcome": "value",
+        "value": 3,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "arr-iterator-override",
+        "status": "passed",
+        "outcome": "value",
+        "value": "1:X1X2",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "prim-computed-method-key",
+        "status": "passed",
+        "outcome": "value",
+        "value": "yes",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "name-symbol-method",
+        "status": "passed",
+        "outcome": "value",
+        "value": "callable",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "inst-custom-both",
+        "status": "passed",
+        "outcome": "value",
+        "value": "true,false",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "inst-inherited",
+        "status": "passed",
+        "outcome": "value",
+        "value": "true,false",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "inst-ordinary",
+        "status": "passed",
+        "outcome": "value",
+        "value": "true,false",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "inst-bound",
+        "status": "passed",
+        "outcome": "value",
+        "value": "true,true,false",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "iter-gc-chain",
+        "status": "passed",
+        "outcome": "value",
+        "value": 4320,
+        "collections": [
+          11
+        ]
+      },
+      {
+        "id": "iter-resumption-next",
+        "status": "passed",
+        "outcome": "value",
+        "value": 42,
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "close-throw-finally-order",
+        "status": "passed",
+        "outcome": "value",
+        "value": "crf:7",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "close-throw-original-gc-root",
+        "status": "passed",
+        "outcome": "value",
+        "value": "saved7:1",
+        "collections": [
+          41
+        ]
+      },
+      {
+        "id": "close-nested-original-throw",
+        "status": "passed",
+        "outcome": "value",
+        "value": "inner,outer:3",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "close-next-done-throw-skips-return",
+        "status": "passed",
+        "outcome": "value",
+        "value": "f:4",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "prim-pow-number-hint-order",
+        "status": "passed",
+        "outcome": "value",
+        "value": "lnumber,rnumber:8",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "inst-intrinsic-noncallable",
+        "status": "passed",
+        "outcome": "value",
+        "value": "false:false",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "inst-intrinsic-descriptor",
+        "status": "passed",
+        "outcome": "value",
+        "value": "false:false:false",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "iter-identity-nullish",
+        "status": "passed",
+        "outcome": "value",
+        "value": "true:true",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "prim-symbol-descriptive-string",
+        "status": "passed",
+        "outcome": "value",
+        "value": "Symbol(s):2",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "prim-symbol-error-message",
+        "status": "passed",
+        "outcome": "value",
+        "value": "TypeError",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "prim-bigint-template-text",
+        "status": "passed",
+        "outcome": "value",
+        "value": "123",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "inst-prototype-accessor-resumes",
+        "status": "passed",
+        "outcome": "value",
+        "value": "true:1",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "gap-symbol-match",
+        "status": "unsupported",
+        "outcome": "unsupported",
+        "expected": "custom",
+        "message": "Unsupported runtime operation in lane 0, instruction 6; no CPU fallback"
+      },
+      {
+        "id": "gap-symbol-species",
+        "status": "unsupported",
+        "outcome": "unsupported",
+        "expected": "1:2,3",
+        "message": "Unsupported runtime operation in lane 0, instruction 9; no CPU fallback"
+      },
+      {
+        "id": "json-stringify-symbol",
+        "status": "passed",
+        "outcome": "value",
+        "value": "undefined",
+        "collections": [
+          0
+        ]
+      },
+      {
+        "id": "bigint-tostring-decimal",
+        "status": "passed",
+        "outcome": "value",
+        "value": "255",
+        "collections": [
+          0
+        ]
+      }
+    ],
+    "resumptions": [
+      {
+        "id": "iter-resumption-next",
+        "dispatches": 404,
+        "value": 42
+      },
+      {
+        "id": "close-throw-finally-order",
+        "dispatches": 307,
+        "value": "crf:7"
+      },
+      {
+        "id": "inst-prototype-accessor-resumes",
+        "dispatches": 419,
+        "value": "true:1"
+      }
+    ]
+  }
+}

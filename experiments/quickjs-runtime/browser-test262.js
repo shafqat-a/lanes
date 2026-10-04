@@ -1,3 +1,4 @@
+import { classifyTest262Outcome } from './test262-outcome.js';
 import { createCompiler } from './compiler.js';
 import { QuickJSGPU } from './runtime.js';
 
@@ -8,11 +9,13 @@ function nativeReference(source) {
   finally { frame.remove(); }
 }
 try {
-  const response = await fetch('./test262-suite.json');
+  const suiteFile = new URLSearchParams(location.search).get('suite') ?? 'test262-suite.json';
+  if (!/^test262-[a-z0-9-]+\.json$/.test(suiteFile)) throw new Error('Invalid Test262 suite filename');
+  const response = await fetch(`./${suiteFile}`);
   if (!response.ok) throw new Error('Export the browser Test262 fixture first');
   const suite = await response.json();
   const compiler = await createCompiler(), vm = await QuickJSGPU.create();
-  const records = [], counts = { exportedVariants: suite.cases.length, passed: 0, failed: 0, unsupported: 0, referenceRejected: 0 };
+  const records = [], counts = { exportedVariants: suite.cases.length, passed: 0, failed: 0, unsupported: 0, resourceLimited: 0, referenceRejected: 0 };
   try {
     for (const { file, strict, source } of suite.cases) {
       try {
@@ -27,7 +30,7 @@ try {
         if (result.values[0] !== true || result.backend !== 'gpu') throw new Error('Expected true on GPU');
         counts.passed++; records.push({ file, strict, status: 'passed' });
       } catch (error) {
-        const outcome = /Unsupported|Resource limit|exceeds GPU limits/.test(error.message) ? 'unsupported' : 'failed';
+        const outcome = classifyTest262Outcome(error, stage);
         counts[outcome]++; records.push({ file, strict, status: outcome, stage, error: error.message });
       }
       status.textContent = `Checked ${records.length}/${suite.cases.length} adapted variants`;
@@ -35,7 +38,7 @@ try {
     const { cases, ...provenance } = suite;
     window.quickjsReport = { ...provenance, backend: 'gpu', compiler: 'QuickJS/Wasm',
       nativeReference: 'Fresh Safari iframe realm per adapted variant', counts, records };
-    status.textContent = counts.failed || counts.referenceRejected ? 'Completed with failures' : 'Completed';
+    status.textContent = counts.failed || counts.referenceRejected ? 'Completed with failures' : counts.resourceLimited ? 'Completed with resource limits' : 'Completed';
     document.getElementById('report').textContent = JSON.stringify(window.quickjsReport, null, 2);
   } finally { await vm.dispose(); }
 } catch (error) {

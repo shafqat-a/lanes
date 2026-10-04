@@ -1,0 +1,720 @@
+{
+  "date": "2026-10-04T12:46:49.667Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "results": [
+      {
+        "name": "self-cycle-name",
+        "source": "function f(x){const o={};try{Object.setPrototypeOf(o,o);return \"no-error\";}catch(e){return e.name+\":\"+(e instanceof TypeError);}}",
+        "code": [
+          {
+            "pc": 0,
+            "op": "set_loc_uninitialized",
+            "words": [
+              20,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 1,
+            "op": "object",
+            "words": [
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 2,
+            "op": "put_loc",
+            "words": [
+              18,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 3,
+            "op": "catch",
+            "words": [
+              87,
+              13,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 4,
+            "op": "get_var_ref",
+            "words": [
+              25,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 5,
+            "op": "get_field2",
+            "words": [
+              32,
+              1954,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 6,
+            "op": "get_loc_check",
+            "words": [
+              21,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 7,
+            "op": "get_loc_check",
+            "words": [
+              21,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 8,
+            "op": "call_method",
+            "words": [
+              40,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 9,
+            "op": "drop",
+            "words": [
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 10,
+            "op": "push",
+            "words": [
+              0,
+              9239,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 11,
+            "op": "nip_catch",
+            "words": [
+              90,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 12,
+            "op": "return",
+            "words": [
+              42,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 13,
+            "op": "put_loc",
+            "words": [
+              18,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 14,
+            "op": "catch",
+            "words": [
+              87,
+              25,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 15,
+            "op": "get_loc",
+            "words": [
+              17,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 16,
+            "op": "get_field",
+            "words": [
+              31,
+              2054,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 17,
+            "op": "push",
+            "words": [
+              0,
+              9241,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 18,
+            "op": "add",
+            "words": [
+              45,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 19,
+            "op": "get_loc",
+            "words": [
+              17,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 20,
+            "op": "get_var_ref",
+            "words": [
+              25,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 21,
+            "op": "instanceof",
+            "words": [
+              106,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 22,
+            "op": "add",
+            "words": [
+              45,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 23,
+            "op": "nip_catch",
+            "words": [
+              90,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 24,
+            "op": "return",
+            "words": [
+              42,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 25,
+            "op": "throw",
+            "words": [
+              79,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 26,
+            "op": "push_this",
+            "words": [
+              44,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "pc": 27,
+            "op": "put_loc",
+            "words": [
+              18,
+              19,
+              0,
+              1
+            ]
+          },
+          {
+            "pc": 28,
+            "op": "set_loc_uninitialized",
+            "words": [
+              20,
+              15,
+              0,
+              1
+            ]
+          },
+          {
+            "pc": 29,
+            "op": "set_loc_uninitialized",
+            "words": [
+              20,
+              14,
+              0,
+              1
+            ]
+          },
+          {
+            "pc": 30,
+            "op": "set_loc_uninitialized",
+            "words": [
+              20,
+              13,
+              0,
+              1
+            ]
+          },
+          {
+            "pc": 31,
+            "op": "set_loc_uninitialized",
+            "words": [
+              20,
+              2,
+              0,
+              1
+            ]
+          }
+        ],
+        "result": {
+          "backend": "gpu",
+          "done": true,
+          "values": [
+            "no-error"
+          ],
+          "statuses": [
+            1
+          ],
+          "steps": [
+            13
+          ],
+          "collections": [
+            0
+          ],
+          "settlements": [
+            null
+          ]
+        },
+        "elapsedMs": 143
+      },
+      {
+        "name": "two-cycle-name",
+        "source": "function f(x){const a={},b={};Object.setPrototypeOf(a,b);try{Object.setPrototypeOf(b,a);return \"no-error\";}catch(e){return e.name+\":\"+(e instanceof TypeError);}}",
+        "code": [
+          {
+            "pc": 0,
+            "op": "set_loc_uninitialized",
+            "words": [
+              20,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 1,
+            "op": "set_loc_uninitialized",
+            "words": [
+              20,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 2,
+            "op": "object",
+            "words": [
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 3,
+            "op": "put_loc",
+            "words": [
+              18,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 4,
+            "op": "object",
+            "words": [
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 5,
+            "op": "put_loc",
+            "words": [
+              18,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 6,
+            "op": "get_var_ref",
+            "words": [
+              25,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 7,
+            "op": "get_field2",
+            "words": [
+              32,
+              1954,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 8,
+            "op": "get_loc_check",
+            "words": [
+              21,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 9,
+            "op": "get_loc_check",
+            "words": [
+              21,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 10,
+            "op": "call_method",
+            "words": [
+              40,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 11,
+            "op": "drop",
+            "words": [
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 12,
+            "op": "catch",
+            "words": [
+              87,
+              22,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 13,
+            "op": "get_var_ref",
+            "words": [
+              25,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 14,
+            "op": "get_field2",
+            "words": [
+              32,
+              1954,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 15,
+            "op": "get_loc_check",
+            "words": [
+              21,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 16,
+            "op": "get_loc_check",
+            "words": [
+              21,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 17,
+            "op": "call_method",
+            "words": [
+              40,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 18,
+            "op": "drop",
+            "words": [
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 19,
+            "op": "push",
+            "words": [
+              0,
+              9271,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 20,
+            "op": "nip_catch",
+            "words": [
+              90,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 21,
+            "op": "return",
+            "words": [
+              42,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 22,
+            "op": "put_loc",
+            "words": [
+              18,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 23,
+            "op": "catch",
+            "words": [
+              87,
+              34,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 24,
+            "op": "get_loc",
+            "words": [
+              17,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 25,
+            "op": "get_field",
+            "words": [
+              31,
+              2054,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 26,
+            "op": "push",
+            "words": [
+              0,
+              9273,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 27,
+            "op": "add",
+            "words": [
+              45,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 28,
+            "op": "get_loc",
+            "words": [
+              17,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 29,
+            "op": "get_var_ref",
+            "words": [
+              25,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 30,
+            "op": "instanceof",
+            "words": [
+              106,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "pc": 31,
+            "op": "add",
+            "words": [
+              45,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "result": {
+          "backend": "gpu",
+          "done": true,
+          "values": [
+            "no-error"
+          ],
+          "statuses": [
+            1
+          ],
+          "steps": [
+            22
+          ],
+          "collections": [
+            0
+          ],
+          "settlements": [
+            null
+          ]
+        },
+        "elapsedMs": 69
+      }
+    ]
+  }
+}

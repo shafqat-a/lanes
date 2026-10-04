@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-04T12:46:18.707Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "state": "done",
+    "rows": [
+      {
+        "feature": "sync-rejected-close-throw-ignored",
+        "input": 3,
+        "nativeError": "NativeWorkerError: closeErr",
+        "name": "NativeWorkerError",
+        "timeout": false,
+        "elapsedMs": 4
+      },
+      {
+        "feature": "sync-rejected-close-throw-ignored",
+        "input": 4,
+        "nativeError": "NativeWorkerError: closeErr",
+        "name": "NativeWorkerError",
+        "timeout": false,
+        "elapsedMs": 3
+      },
+      {
+        "feature": "sync-next-throws-no-close",
+        "input": 3,
+        "settlement": "fulfilled",
+        "value": "|n3",
+        "elapsedMs": 3
+      },
+      {
+        "feature": "sync-next-throws-no-close",
+        "input": 4,
+        "settlement": "fulfilled",
+        "value": "|n4",
+        "elapsedMs": 3
+      },
+      {
+        "feature": "sync-next-non-object-typeerror",
+        "input": 3,
+        "nativeError": "NativeOracleTimeout: exceeded 2000ms",
+        "name": "NativeOracleTimeout",
+        "timeout": true,
+        "elapsedMs": 2002
+      },
+      {
+        "feature": "sync-next-non-object-typeerror",
+        "input": 4,
+        "nativeError": "NativeOracleTimeout: exceeded 2000ms",
+        "name": "NativeOracleTimeout",
+        "timeout": true,
+        "elapsedMs": 2001.9999999999995
+      }
+    ]
+  }
+}

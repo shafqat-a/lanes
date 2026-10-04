@@ -1,0 +1,911 @@
+{
+  "date": "2026-10-02T19:11:50.941Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "methods": [
+      "reduce",
+      "reduceRight",
+      "fill",
+      "copyWithin",
+      "reverse",
+      "shift",
+      "unshift"
+    ],
+    "backend": "gpu",
+    "programs": 123,
+    "numericIndexLimit": "indices at or above 2^31 remain unsupported",
+    "semanticPrograms": 85,
+    "resumptions": [
+      {
+        "dispatches": 1394,
+        "checked": 1,
+        "expected": "lvacr2lvcR2aR0eT",
+        "name": "reduce"
+      },
+      {
+        "dispatches": 2106,
+        "checked": 1,
+        "expected": "lvsD7|lvfd|34|lvadA4D1|trueundefined",
+        "name": "mutation"
+      },
+      {
+        "dispatches": 1412,
+        "checked": 1,
+        "expected": "Lvaw0=undefinedcw1=9S2Lvaw1=5w0=17S4|54",
+        "name": "shift"
+      }
+    ],
+    "results": [
+      {
+        "checked": 4,
+        "index": 0,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1423
+      },
+      {
+        "checked": 4,
+        "index": 1,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 811
+      },
+      {
+        "checked": 4,
+        "index": 2,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 562
+      },
+      {
+        "checked": 4,
+        "index": 3,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1024
+      },
+      {
+        "checked": 4,
+        "index": 4,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 629
+      },
+      {
+        "checked": 4,
+        "index": 5,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1030
+      },
+      {
+        "checked": 4,
+        "index": 6,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 777
+      },
+      {
+        "checked": 4,
+        "index": 7,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 856
+      },
+      {
+        "checked": 4,
+        "index": 8,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1186
+      },
+      {
+        "checked": 4,
+        "index": 9,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 995
+      },
+      {
+        "checked": 4,
+        "index": 10,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1163
+      },
+      {
+        "checked": 4,
+        "index": 11,
+        "kind": "semantic",
+        "collections": 1,
+        "maxSteps": 2607
+      },
+      {
+        "checked": 4,
+        "index": 12,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 8654
+      },
+      {
+        "checked": 4,
+        "index": 13,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 368
+      },
+      {
+        "checked": 4,
+        "index": 14,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 690
+      },
+      {
+        "checked": 4,
+        "index": 15,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 844
+      },
+      {
+        "checked": 4,
+        "index": 16,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 749
+      },
+      {
+        "checked": 4,
+        "index": 17,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 961
+      },
+      {
+        "checked": 4,
+        "index": 18,
+        "kind": "semantic",
+        "collections": 1,
+        "maxSteps": 2808
+      },
+      {
+        "checked": 4,
+        "index": 19,
+        "kind": "semantic",
+        "collections": 2,
+        "maxSteps": 4131
+      },
+      {
+        "checked": 4,
+        "index": 20,
+        "kind": "semantic",
+        "collections": 3,
+        "maxSteps": 27137
+      },
+      {
+        "checked": 4,
+        "index": 21,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1158
+      },
+      {
+        "checked": 4,
+        "index": 22,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1454
+      },
+      {
+        "checked": 4,
+        "index": 23,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 488
+      },
+      {
+        "checked": 4,
+        "index": 24,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 413
+      },
+      {
+        "checked": 4,
+        "index": 25,
+        "kind": "semantic",
+        "collections": 1,
+        "maxSteps": 2069
+      },
+      {
+        "checked": 4,
+        "index": 26,
+        "kind": "semantic",
+        "collections": 1,
+        "maxSteps": 9179
+      },
+      {
+        "checked": 4,
+        "index": 27,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 229
+      },
+      {
+        "checked": 4,
+        "index": 28,
+        "kind": "semantic",
+        "collections": 2,
+        "maxSteps": 4680
+      },
+      {
+        "checked": 4,
+        "index": 29,
+        "kind": "semantic",
+        "collections": 2,
+        "maxSteps": 4820
+      },
+      {
+        "checked": 4,
+        "index": 30,
+        "kind": "semantic",
+        "collections": 3,
+        "maxSteps": 13816
+      },
+      {
+        "checked": 4,
+        "index": 31,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1283
+      },
+      {
+        "checked": 4,
+        "index": 32,
+        "kind": "semantic",
+        "collections": 1,
+        "maxSteps": 2507
+      },
+      {
+        "checked": 4,
+        "index": 33,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1180
+      },
+      {
+        "checked": 4,
+        "index": 34,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 688
+      },
+      {
+        "checked": 4,
+        "index": 35,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1059
+      },
+      {
+        "checked": 4,
+        "index": 36,
+        "kind": "semantic",
+        "collections": 1,
+        "maxSteps": 1620
+      },
+      {
+        "checked": 4,
+        "index": 37,
+        "kind": "semantic",
+        "collections": 1,
+        "maxSteps": 2869
+      },
+      {
+        "checked": 4,
+        "index": 38,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 915
+      },
+      {
+        "checked": 4,
+        "index": 39,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 699
+      },
+      {
+        "checked": 4,
+        "index": 40,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1639
+      },
+      {
+        "checked": 4,
+        "index": 41,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1770
+      },
+      {
+        "checked": 4,
+        "index": 42,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 348
+      },
+      {
+        "checked": 4,
+        "index": 43,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1269
+      },
+      {
+        "checked": 4,
+        "index": 44,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1046
+      },
+      {
+        "checked": 4,
+        "index": 45,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1003
+      },
+      {
+        "checked": 4,
+        "index": 46,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 2436
+      },
+      {
+        "checked": 4,
+        "index": 47,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 548
+      },
+      {
+        "checked": 4,
+        "index": 48,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 953
+      },
+      {
+        "checked": 4,
+        "index": 49,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 122
+      },
+      {
+        "checked": 4,
+        "index": 50,
+        "kind": "semantic",
+        "collections": 1,
+        "maxSteps": 1918
+      },
+      {
+        "checked": 4,
+        "index": 51,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 204
+      },
+      {
+        "checked": 4,
+        "index": 52,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 432
+      },
+      {
+        "checked": 4,
+        "index": 53,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 865
+      },
+      {
+        "checked": 4,
+        "index": 54,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 681
+      },
+      {
+        "checked": 4,
+        "index": 55,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 559
+      },
+      {
+        "checked": 4,
+        "index": 56,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 643
+      },
+      {
+        "checked": 4,
+        "index": 57,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 615
+      },
+      {
+        "checked": 4,
+        "index": 58,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 500
+      },
+      {
+        "checked": 4,
+        "index": 59,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 706
+      },
+      {
+        "checked": 4,
+        "index": 60,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 691
+      },
+      {
+        "checked": 4,
+        "index": 61,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 553
+      },
+      {
+        "checked": 4,
+        "index": 62,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 11960
+      },
+      {
+        "checked": 4,
+        "index": 63,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 50
+      },
+      {
+        "checked": 4,
+        "index": 64,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 128
+      },
+      {
+        "checked": 4,
+        "index": 65,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 373
+      },
+      {
+        "checked": 4,
+        "index": 66,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 944
+      },
+      {
+        "checked": 4,
+        "index": 67,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 251
+      },
+      {
+        "checked": 4,
+        "index": 68,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 652
+      },
+      {
+        "checked": 4,
+        "index": 69,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 353
+      },
+      {
+        "checked": 4,
+        "index": 70,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 662
+      },
+      {
+        "checked": 4,
+        "index": 71,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 550
+      },
+      {
+        "checked": 4,
+        "index": 72,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 552
+      },
+      {
+        "checked": 4,
+        "index": 73,
+        "kind": "semantic",
+        "collections": 1,
+        "maxSteps": 24661
+      },
+      {
+        "checked": 4,
+        "index": 74,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 459
+      },
+      {
+        "checked": 4,
+        "index": 75,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 262
+      },
+      {
+        "checked": 4,
+        "index": 76,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 693
+      },
+      {
+        "checked": 4,
+        "index": 77,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 491
+      },
+      {
+        "checked": 4,
+        "index": 78,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 835
+      },
+      {
+        "checked": 4,
+        "index": 79,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 540
+      },
+      {
+        "checked": 4,
+        "index": 80,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 603
+      },
+      {
+        "checked": 4,
+        "index": 81,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 579
+      },
+      {
+        "checked": 4,
+        "index": 82,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 169
+      },
+      {
+        "checked": 4,
+        "index": 83,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1164
+      },
+      {
+        "checked": 4,
+        "index": 84,
+        "kind": "semantic",
+        "collections": 0,
+        "maxSteps": 1393
+      },
+      {
+        "checked": 4,
+        "index": 0,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 29
+      },
+      {
+        "checked": 4,
+        "index": 1,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 30
+      },
+      {
+        "checked": 4,
+        "index": 2,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 204
+      },
+      {
+        "checked": 4,
+        "index": 3,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 250
+      },
+      {
+        "checked": 4,
+        "index": 4,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 209
+      },
+      {
+        "checked": 4,
+        "index": 5,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 191
+      },
+      {
+        "checked": 4,
+        "index": 6,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 189
+      },
+      {
+        "checked": 4,
+        "index": 7,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 168
+      },
+      {
+        "checked": 4,
+        "index": 8,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 144
+      },
+      {
+        "checked": 4,
+        "index": 9,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 39
+      },
+      {
+        "checked": 4,
+        "index": 10,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 142
+      },
+      {
+        "checked": 4,
+        "index": 11,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 133
+      },
+      {
+        "checked": 4,
+        "index": 12,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 27
+      },
+      {
+        "checked": 4,
+        "index": 13,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 31
+      },
+      {
+        "checked": 4,
+        "index": 14,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 25
+      },
+      {
+        "checked": 4,
+        "index": 15,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 332
+      },
+      {
+        "checked": 4,
+        "index": 16,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 458
+      },
+      {
+        "checked": 4,
+        "index": 17,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 296
+      },
+      {
+        "checked": 4,
+        "index": 18,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 459
+      },
+      {
+        "checked": 4,
+        "index": 19,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 37
+      },
+      {
+        "checked": 4,
+        "index": 20,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 200
+      },
+      {
+        "checked": 4,
+        "index": 21,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 395
+      },
+      {
+        "checked": 4,
+        "index": 22,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 157
+      },
+      {
+        "checked": 4,
+        "index": 23,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 209
+      },
+      {
+        "checked": 4,
+        "index": 24,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 25
+      },
+      {
+        "checked": 4,
+        "index": 25,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 25
+      },
+      {
+        "checked": 4,
+        "index": 26,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 28
+      },
+      {
+        "checked": 4,
+        "index": 27,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 27
+      },
+      {
+        "checked": 4,
+        "index": 28,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 203
+      },
+      {
+        "checked": 4,
+        "index": 29,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 262
+      },
+      {
+        "checked": 4,
+        "index": 30,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 250
+      },
+      {
+        "checked": 4,
+        "index": 31,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 35
+      },
+      {
+        "checked": 4,
+        "index": 32,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 38
+      },
+      {
+        "checked": 4,
+        "index": 33,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 131
+      },
+      {
+        "checked": 4,
+        "index": 34,
+        "kind": "negative",
+        "collections": 0,
+        "maxSteps": 156
+      }
+    ],
+    "primitiveBoxing": "explicitly unsupported",
+    "negativePrograms": 35,
+    "nativeReference": "Fresh isolated Safari iframe per input; negative completions caught and checked inside guest code",
+    "compiler": "QuickJS/Wasm",
+    "inputs": [
+      0,
+      1,
+      -1,
+      17
+    ],
+    "checked": 483
+  }
+}

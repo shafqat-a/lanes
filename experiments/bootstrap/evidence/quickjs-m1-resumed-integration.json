@@ -1,0 +1,333 @@
+{
+  "date": "2026-10-04T14:39:51.236060+00:00",
+  "status": "current integration GPU qualification completed: final main, full stdlib, full Promise, and new-feature focused suites passed",
+  "platform": "Apple M1 / Safari 26.4",
+  "cpuGuestFallback": false,
+  "previousCandidate": {
+    "candidate": "quickjs-safari-text-equal-fixed-candidate-hashes.json",
+    "passed": {
+      "dispatch-state-machine": {
+        "backend": "gpu",
+        "programs": 21,
+        "checked": 32
+      },
+      "dispatch-boundary": {
+        "backend": "gpu",
+        "programs": 21,
+        "checked": 84,
+        "requiredGC": 3
+      },
+      "object-operations": {
+        "backend": "gpu",
+        "programs": 38,
+        "checked": 152,
+        "negativeChecks": 8,
+        "resumptionDispatches": 1105
+      },
+      "global-reference": {
+        "backend": "gpu",
+        "programs": 32,
+        "checked": 64
+      },
+      "array-from": {
+        "backend": "gpu",
+        "programs": 40,
+        "checked": 157
+      },
+      "group-by": {
+        "backend": "gpu",
+        "programs": 32,
+        "checked": 125
+      },
+      "array-species": {
+        "backend": "gpu",
+        "programs": 45,
+        "checked": 177
+      },
+      "phase3-bigint-width": {
+        "backend": "gpu",
+        "programs": 23,
+        "checked": 89
+      },
+      "phase3-bigint-ops": {
+        "backend": "gpu",
+        "programs": 27,
+        "checked": 105
+      },
+      "generators": {
+        "backend": "gpu",
+        "programs": 55,
+        "checked": 110,
+        "resumptions": 5,
+        "evidence": "quickjs-safari-worker-oracle-generators.json"
+      }
+    }
+  },
+  "fixes": [
+    "Three GPU pipelines with persistent call/completion state",
+    "Ordinary own-property guard",
+    "String equality early mismatch return",
+    "Alternate ordinary/base Reflect.construct with prototype getter and tagged new.target GC roots",
+    "Guest-bytecode prototype validation and private GPU commit; cycles and nonextensible behavior qualified"
+  ],
+  "nativeReferenceIssues": {
+    "stdlib": "Bounded native worker prevents hangs; fixed primitive-next-result GPU regression passed on prototype candidate. Full suite completed with independently recorded failures.",
+    "generators": "Exact Safari eager-copy discrepancy recorded with fixed ES2025 GPU expectations; bounded-worker rerun passed."
+  },
+  "remainingObservedFailure": null,
+  "remainingVerification": [],
+  "releaseClaim": false,
+  "fullSuiteOutcomes": {
+    "stdlib": {
+      "outcome": "completed-with-failures",
+      "failureRecords": 76,
+      "evidence": "quickjs-safari-qualified-stdlib.json",
+      "aggregateCounts": {
+        "cases": 706,
+        "values": 2197,
+        "gc": 21,
+        "unsupported": 15,
+        "resumption": 12,
+        "failed": 76
+      }
+    },
+    "promise": {
+      "outcome": "completed-with-failures",
+      "failureRecords": 27,
+      "nativeMismatchRecords": 20,
+      "evidence": "quickjs-safari-qualified-promise.json",
+      "note": "Failure harness retains failure and native-reference records, not total passing counts."
+    }
+  },
+  "correctionsCandidate": "quickjs-safari-stdlib-corrections-candidate-hashes.json",
+  "correctionVerification": {
+    "candidate": "quickjs-safari-stdlib-corrections-candidate-hashes.json",
+    "focusedStdlib": {
+      "programs": 69,
+      "checked": 730,
+      "compileRejected": 1,
+      "evidence": "quickjs-safari-stdlib-corrections-focused.json"
+    },
+    "newFeatures": {
+      "successfulExecutions": 43,
+      "checked": 69,
+      "failures": 1,
+      "evidence": "quickjs-safari-stdlib-corrections-new-features.json",
+      "note": "Inherited concat failure corrected by next Object species candidate."
+    },
+    "speciesCandidate": "quickjs-safari-promise-species-candidate-hashes.json",
+    "speciesAndBoundedGC": {
+      "checked": 26,
+      "failures": 0,
+      "evidence": "quickjs-safari-final-species-only.json"
+    },
+    "capacityDiagnostic": "quickjs-safari-promise-species-incremental-fixed.json"
+  },
+  "finalCandidate": {
+    "candidate": "quickjs-safari-promise-species-candidate-hashes.json",
+    "main": {
+      "programs": 1209,
+      "checked": 10881,
+      "negativeChecks": 238,
+      "evidence": "quickjs-safari-final-main.json"
+    },
+    "stdlib": {
+      "programs": 788,
+      "checked": 2425,
+      "negativeChecks": {
+        "runtimeUnsupported": 13,
+        "resourceLimit": 2,
+        "compileRejected": 1
+      },
+      "qualificationScope": "full",
+      "gaps": [
+        "conformance-reflect:reflect-ownKeys-map-prototype-order: intrinsic property order differs from the ES2025 clause order (implementation-defined; not counted as passed)",
+        "Subclassing (class extends Map/Set, Reflect.construct with another NewTarget) remains a status 6 boundary."
+      ],
+      "evidence": "quickjs-safari-final-stdlib.json",
+      "gcProbes": 21,
+      "resumptions": 12,
+      "approximationRecords": 56
+    },
+    "promise": {
+      "programs": 569,
+      "checked": 1159,
+      "settlements": {
+        "fulfilled": 972,
+        "rejected": 114,
+        "pending": 22,
+        "sync": 30
+      },
+      "gaps": [
+        "conformance:t262-then-species-constructor-used: depends on promise-subclassing; rejected as Unsupported (not counted)",
+        "promise-core-cases/promiseCoreBoundaryCases:subclass-instance-and-prototype: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)",
+        "promise-core-cases/promiseCoreBoundaryCases:subclass-settles: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)",
+        "promise-core-cases/promiseCoreBoundaryCases:reflect-construct-newtarget-prototype: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)"
+      ],
+      "evidence": "quickjs-safari-final-promise.json",
+      "gcProbes": 25,
+      "resumptions": 10,
+      "resourceLimits": 10,
+      "nativeReferenceDifferences": 14,
+      "nativeDisagreements": 0
+    },
+    "newFeatures": {
+      "sourcePrograms": 39,
+      "executionsIncludingResumption": 44,
+      "checked": 71,
+      "resumptionPrograms": 5,
+      "evidence": "quickjs-safari-final-new-features.json"
+    }
+  },
+  "qualificationScope": "Current integrated functionality only; explicit Unsupported and resource boundaries remain. This is not full ECMAScript 2025 conformance or a 1.0 release claim.",
+  "historicalFailures": "fullSuiteOutcomes preserves the earlier76 stdlib and27 Promise failure records; these are superseded for this integration by finalCandidate passing evidence, not erased.",
+  "historicalPrototypeCandidate": {
+    "candidate": "quickjs-safari-prototype-candidate-hashes.json",
+    "compileEvidence": "quickjs-safari-prototype-shader-compile.json",
+    "pipelineCompileMs": {
+      "main": 15180,
+      "call": 4504,
+      "native": 21518
+    },
+    "passed": {
+      "dispatch-state-machine": {
+        "backend": "gpu",
+        "programs": 21,
+        "checked": 32
+      },
+      "dispatch-boundary": {
+        "backend": "gpu",
+        "programs": 37,
+        "checked": 148,
+        "requiredGC": 4
+      },
+      "object-operations": {
+        "backend": "gpu",
+        "programs": 38,
+        "checked": 152,
+        "negativeChecks": 8,
+        "resumptionDispatches": 1105
+      },
+      "global-reference": {
+        "backend": "gpu",
+        "programs": 32,
+        "checked": 64
+      },
+      "main": {
+        "backend": "gpu",
+        "programs": 1209,
+        "checked": 10881,
+        "negativeChecks": 238,
+        "evidence": "quickjs-safari-prototype-main-qualified.json"
+      },
+      "generators": {
+        "backend": "gpu",
+        "programs": 55,
+        "checked": 110,
+        "resumptions": [
+          {
+            "feature": "interleaved-independent-generators",
+            "dispatches": 387,
+            "value": "3:13:4:14"
+          },
+          {
+            "feature": "finally-yield-retains-return",
+            "dispatches": 386,
+            "value": "4:false:5:true"
+          },
+          {
+            "feature": "caught-throw-yields",
+            "dispatches": 384,
+            "value": "3:false:4:true"
+          },
+          {
+            "feature": "delegate-return-done-false-then-next",
+            "dispatches": 595,
+            "value": "4:false:5:true:nrn"
+          },
+          {
+            "feature": "delegate-missing-throw-closes-with-no-argument",
+            "dispatches": 641,
+            "value": "true:true:0:true"
+          }
+        ],
+        "evidence": "quickjs-safari-prototype-generators.json"
+      },
+      "native-exception-regressions": {
+        "backend": "gpu",
+        "programs": 4,
+        "checked": 9,
+        "evidence": "quickjs-safari-prototype-native-exception-gpu.json"
+      }
+    }
+  },
+  "candidate": "quickjs-safari-promise-species-candidate-hashes.json",
+  "compileEvidence": "quickjs-safari-promise-species-compile.json",
+  "pipelineCompileMs": {
+    "main": 16016,
+    "call": 4588,
+    "native": 23423
+  },
+  "pipelineCompileTotalMs": 44027,
+  "passed": {
+    "main": {
+      "programs": 1209,
+      "checked": 10881,
+      "negativeChecks": 238,
+      "evidence": "quickjs-safari-final-main.json"
+    },
+    "stdlib": {
+      "programs": 788,
+      "checked": 2425,
+      "negativeChecks": {
+        "runtimeUnsupported": 13,
+        "resourceLimit": 2,
+        "compileRejected": 1
+      },
+      "qualificationScope": "full",
+      "gaps": [
+        "conformance-reflect:reflect-ownKeys-map-prototype-order: intrinsic property order differs from the ES2025 clause order (implementation-defined; not counted as passed)",
+        "Subclassing (class extends Map/Set, Reflect.construct with another NewTarget) remains a status 6 boundary."
+      ],
+      "evidence": "quickjs-safari-final-stdlib.json",
+      "gcProbes": 21,
+      "resumptions": 12,
+      "approximationRecords": 56
+    },
+    "promise": {
+      "programs": 569,
+      "checked": 1159,
+      "settlements": {
+        "fulfilled": 972,
+        "rejected": 114,
+        "pending": 22,
+        "sync": 30
+      },
+      "gaps": [
+        "conformance:t262-then-species-constructor-used: depends on promise-subclassing; rejected as Unsupported (not counted)",
+        "promise-core-cases/promiseCoreBoundaryCases:subclass-instance-and-prototype: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)",
+        "promise-core-cases/promiseCoreBoundaryCases:subclass-settles: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)",
+        "promise-core-cases/promiseCoreBoundaryCases:reflect-construct-newtarget-prototype: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)"
+      ],
+      "evidence": "quickjs-safari-final-promise.json",
+      "gcProbes": 25,
+      "resumptions": 10,
+      "resourceLimits": 10,
+      "nativeReferenceDifferences": 14,
+      "nativeDisagreements": 0
+    },
+    "newFeatures": {
+      "sourcePrograms": 39,
+      "executionsIncludingResumption": 44,
+      "checked": 71,
+      "resumptionPrograms": 5,
+      "evidence": "quickjs-safari-final-new-features.json"
+    }
+  },
+  "remaining1_0Gaps": [
+    "Full ECMAScript2025 Test262 qualification remains incomplete.",
+    "Explicit Unsupported boundaries include collection and Promise subclass/alternate-newTarget scenarios.",
+    "Per-lane heap/string/dispatch resource limits remain; resource-stop checks are not full-language passes.",
+    "Some transcendental Math comparisons use reviewed approximate contracts, not identical host binary64 results."
+  ]
+}

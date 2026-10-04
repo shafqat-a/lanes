@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-02T12:24:49.847Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "rows": [
+      {
+        "source": "function f(x){function g(){}const p=Object.create(Function.prototype);const q=Object.create(Function.prototype);Object.setPrototypeOf(g,p);Object.defineProperty(g,\"length\",{get(){Object.setPrototypeOf(g,q);return 0;}});const b=g.bind(null);return Object.getPrototypeOf(b)===p;}",
+        "values": [
+          true
+        ],
+        "native": false
+      },
+      {
+        "source": "function f(x){function g(){}const p=Object.getPrototypeOf(g);Object.defineProperty(g,\"name\",{get(){Object.setPrototypeOf(g,null);return \"g\";}});const b=g.bind(null);return Object.getPrototypeOf(b)===p;}",
+        "values": [
+          true
+        ],
+        "native": false
+      }
+    ]
+  }
+}

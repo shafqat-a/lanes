@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-10-03T21:40:15.195Z",
+  "scope": "Read-only strict ToNumber/public Number integration audit",
+  "gpuChecks": false,
+  "host": {
+    "positiveNativeExpectations": 31,
+    "pendingNativeExpectations": 1,
+    "packedNativeWasmParity": 32
+  },
+  "aliases": {
+    "__lanesNumber": 1164,
+    "__lanesNumberConstructor": 122,
+    "__lanesPow": 960
+  },
+  "findings": [
+    {
+      "kind": "verified-routing",
+      "detail": "Conversion intrinsic spread is last; strict ToNumber1164 overrides old122 alias. Number call/construct intentionally use122 and permit BigInt; numberConstruct uses __lanesNumberConstructor."
+    },
+    {
+      "kind": "verified-capture-policy",
+      "detail": "Private bootstrap roots resolve final privateBuiltins map. Per-module legacy metadata exports advertising122 are not the runtime capture authority."
+    },
+    {
+      "kind": "positive-regressions",
+      "detail": "New fixtures cover array lengths/two conversions/sort callbacks/index early returns, Math argument order, String indices, parseInt radix, JSON boxed Number and spacing, apply length, and token identity."
+    },
+    {
+      "kind": "obsolete-explicit-boundary",
+      "field": "iteratorOpen",
+      "source": "function f(){const s=new String(\"x\");s.toString=function(){return 12n;};let out=\"\";for(const c of s)out+=c;return out;}",
+      "nativeExpected": "12",
+      "currentSourceBehavior": "BigInt ToString explicitly Unsupported",
+      "fix": "Remove the obsolete typeof primitive bigint guard; __lanesText now formats BigInt. General protocol integration may replace this helper."
+    },
+    {
+      "kind": "intentional-private-boundary",
+      "field": "numberPow",
+      "detail": "960 remains Number-only fdlibm helper. Pending1168 exponentiation dispatcher will preserve BigInt and route1169; Number operands still call960. Do not reinterpret960 as public Number conversion."
+    },
+    {
+      "kind": "existing-protocol-dependency",
+      "detail": "General Number/ToNumber still explicitly reject nonnull @@toPrimitive through old primitive helper; comparison1167 supports hooks independently. General protocol agent owns this dependency."
+    }
+  ],
+  "pendingExponentPatch": "/tmp/lanes-bigint-pow-integration.patch"
+}

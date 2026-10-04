@@ -1,0 +1,41 @@
+const c=(feature,body,expected)=>({feature,input:3,expected,source:`function f(x){${body}}`});
+export const globalReferenceCases=[
+ c('strict-unresolved-created-by-rhs',`'use strict';try{w6r=(globalThis.w6r=0,x);return 'stored'+w6r;}catch(e){return e.name+x;}`,'ReferenceError3'),
+ c('strict-unresolved-created-in-callback',`'use strict';let trace='';function rhs(){trace+='r';globalThis.refA=0;return x;}try{refA=rhs();}catch(e){return e.name+':'+trace+':'+globalThis.refA+':'+x;}return 'wrong';`,'ReferenceError:r:0:3'),
+ c('strict-unresolved-rhs-throw-wins',`'use strict';function rhs(){globalThis.refA=0;throw x;}try{refA=rhs();}catch(e){return e===x?'rhs'+x:'wrong';}return 'wrong';`,'rhs3'),
+ c('strict-resolved-deleted-by-rhs',`'use strict';globalThis.refA=1;try{refA=(delete globalThis.refA,x);}catch(e){return e.name+':'+('refA' in globalThis)+':'+x;}return 'wrong';`,'ReferenceError:false:3'),
+ c('strict-resolved-deleted-recreated-by-rhs',`'use strict';globalThis.refA=1;refA=(delete globalThis.refA,globalThis.refA=2,x);return refA;`,3),
+ c('sloppy-unresolved-created-by-rhs',`refA=(globalThis.refA=0,x);return refA;`,3),
+ c('sloppy-unresolved-rhs-adds-setter',`let seen=0;refA=(Object.defineProperty(globalThis,'refA',{set(v){seen=v+1;},configurable:true}),x);return seen;`,4),
+ c('strict-unresolved-rhs-adds-setter',`'use strict';let seen=0;try{refA=(Object.defineProperty(globalThis,'refA',{set(v){seen=v;},configurable:true}),x);}catch(e){return e.name+':'+seen+':'+x;}return 'wrong';`,'ReferenceError:0:3'),
+ c('strict-resolved-rhs-adds-setter',`'use strict';globalThis.refA=0;let seen=0;refA=(Object.defineProperty(globalThis,'refA',{set(v){seen=v+1;},configurable:true}),x);return seen;`,4),
+ c('sloppy-resolved-rhs-deletes',`globalThis.refA=0;refA=(delete globalThis.refA,x);return refA;`,3),
+ c('compound-read-before-rhs-and-write-current-binding',`let log='';Object.defineProperty(globalThis,'refA',{get(){log+='g';return x;},set(v){log+='s'+v;},configurable:true});refA+=(log+='r',2);return log;`,'grs5'),
+ c('postfix-read-and-write-callback',`let log='';Object.defineProperty(globalThis,'refA',{get(){log+='g';return x;},set(v){log+='s'+v;},configurable:true});const before=refA++;return before+':'+log;`,'3:gs4'),
+ c('strict-unresolved-logical-assignment-throws-before-rhs',`'use strict';let n=0;try{refA||=(n++,x);}catch(e){return e.name+':'+n+':'+x;}return 'wrong';`,'ReferenceError:0:3'),
+ c('logical-short-circuit-has-no-write',`globalThis.refA=x;let n=0;refA||=(n++,x+1);return refA+':'+n;`,'3:0'),
+ c('nested-global-references-preserve-both-bases',`'use strict';let log='';try{refA=(globalThis.refA=0,refB=(globalThis.refB=0,x));}catch(e){log=e.name;}return log+':'+globalThis.refA+':'+globalThis.refB+':'+x;`,'ReferenceError:0:0:3'),
+ c('local-const-rhs-throw-wins',`const y=1;try{y=(()=>{throw x;})();}catch(e){return e===x?'rhs'+x:'wrong';}return 'wrong';`,'rhs3'),
+ c('captured-const-rhs-throw-wins',`const y=1;function g(){try{y=(()=>{throw x;})();}catch(e){return e===x?'rhs'+x:'wrong';}}return g();`,'rhs3'),
+ c('captured-const-tdz-rhs-throw-wins',`function g(){try{y=(()=>{throw x;})();}catch(e){return e===x?'rhs'+x:'wrong';}}return g();const y=1;`,'rhs3'),
+ c('local-const-tdz-rhs-value-referenceerror',`try{y=x;}catch(e){return e.name+x;}const y=1;return 'wrong';`,'ReferenceError3'),
+ c('captured-const-tdz-rhs-value-referenceerror',`function g(){try{y=x;}catch(e){return e.name+x;}}return g();const y=1;`,'ReferenceError3'),
+ c('function-name-sloppy-assignment-rhs',`const g=function inner(){let n=0;inner=(n++,x);return typeof inner+':'+n+':'+x;};return g();`,'function:1:3'),
+ c('reference-survives-gc-in-rhs',`'use strict';globalThis.refA=0;function rhs(){for(let i=0;i<450;i++){const o={a:[i],b:'v'+i};}return x;}refA=rhs();return refA;`,3),
+ c('local-destructuring-reference',`let a=1,b=2;[a,b]=[b,a];return a+':'+b+':'+x;`,'2:1:3'),
+ c('sloppy-const-destructuring-throws',`const a=0;try{[a]=[x];}catch(e){return e.name+':'+a+':'+x;}return 'wrong';`,'TypeError:0:3'),
+ c('local-tdz-destructuring-rhs-throw-wins',`try{[a]=(()=>{throw x;})();}catch(e){return e===x?'rhs'+x:'wrong';}let a;return 'wrong';`,'rhs3'),
+ c('local-tdz-destructuring-throws',`try{[a]=[x];}catch(e){return e.name+x;}let a;return 'wrong';`,'ReferenceError3'),
+ c('captured-const-logical-throws',`const a=0;function g(){try{a||=x;}catch(e){return e.name+x;}}return g();`,'TypeError3'),
+ c('const-logical-shortcircuit-does-not-write',`const a=1;return (a||=x)+':'+x;`,'1:3'),
+ c('local-logical-callback-updates-same-binding',`let a=0;function rhs(){a=2;return x;}a||=rhs();return a;`,3),
+ c('function-name-logical-shortcircuit',`const g=function inner(){return (inner||=x)===inner?x:-1;};return g();`,3),
+ c('strict-function-name-logical-write',`const g=function inner(){'use strict';try{inner&&=x;}catch(e){return e.name+x;}return 'wrong';};return g();`,'TypeError3'),
+ c('sloppy-function-name-logical-write-ignored',`const g=function inner(){inner&&=x;return typeof inner+':'+x;};return g();`,'function:3'),
+];
+const nextValues=['ReferenceError4','ReferenceError:r:0:4','rhs4','ReferenceError:false:4',4,4,5,'ReferenceError:0:4',5,4,'grs6','4:gs5','ReferenceError:0:4','4:0','ReferenceError:0:0:4','rhs4','rhs4','rhs4','ReferenceError4','ReferenceError4','function:1:4',4,'2:1:4','TypeError:0:4','rhs4','ReferenceError4','TypeError4','1:4',4,4,'TypeError4','function:4'];
+for(let i=0;i<globalReferenceCases.length;i++)globalReferenceCases[i].expectedNext=nextValues[i];
+export const globalReferenceSpec=[
+ 'https://tc39.es/ecma262/2025/multipage/ecmascript-data-types-and-values.html#sec-putvalue',
+ 'https://tc39.es/ecma262/2025/multipage/executable-code-and-execution-contexts.html#sec-object-environment-records-setmutablebinding-n-v-s',
+];

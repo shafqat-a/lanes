@@ -1,0 +1,639 @@
+{
+  "date": "2026-10-04T14:37:07.097Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "compiler": "QuickJS/Wasm",
+    "coreOnly": false,
+    "qualified": true,
+    "programs": 569,
+    "checked": 1159,
+    "settlements": {
+      "fulfilled": 972,
+      "rejected": 114,
+      "pending": 22,
+      "sync": 30
+    },
+    "gcProbes": [
+      {
+        "name": "conformance:gc-pending-reaction-only-root",
+        "collections": [
+          46,
+          46
+        ],
+        "steps": [
+          70611,
+          70611
+        ],
+        "passed": true
+      },
+      {
+        "name": "conformance:gc-suspended-async-only-reachable-from-reaction",
+        "collections": [
+          46,
+          46
+        ],
+        "steps": [
+          70369,
+          70369
+        ],
+        "passed": true
+      },
+      {
+        "name": "conformance:gc-job-queue-only-root",
+        "collections": [
+          47,
+          47
+        ],
+        "steps": [
+          71127,
+          71127
+        ],
+        "passed": true
+      },
+      {
+        "name": "conformance:gc-settled-value-only-in-header",
+        "collections": [
+          45,
+          45
+        ],
+        "steps": [
+          70615,
+          70615
+        ],
+        "passed": true
+      },
+      {
+        "name": "conformance:gc-rejection-reason-retained",
+        "collections": [
+          47,
+          47
+        ],
+        "steps": [
+          70901,
+          70901
+        ],
+        "passed": true
+      },
+      {
+        "name": "conformance:gc-thenable-job-payload-only-root",
+        "collections": [
+          46,
+          46
+        ],
+        "steps": [
+          70300,
+          70300
+        ],
+        "passed": true
+      },
+      {
+        "name": "conformance:gc-collect-inside-job-with-queued-jobs",
+        "collections": [
+          54,
+          54
+        ],
+        "steps": [
+          71965,
+          71965
+        ],
+        "passed": true
+      },
+      {
+        "name": "conformance:gc-promise-all-values-retained",
+        "collections": [
+          52,
+          52
+        ],
+        "steps": [
+          72378,
+          72378
+        ],
+        "passed": true
+      },
+      {
+        "name": "conformance:gc-async-generator-suspended-with-request",
+        "collections": [
+          53,
+          53
+        ],
+        "steps": [
+          72449,
+          72449
+        ],
+        "passed": true
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:gc-bounded-pending-chain",
+        "collections": [
+          4,
+          4
+        ],
+        "steps": [
+          15209,
+          15209
+        ],
+        "passed": true
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:gc-bounded-allocation-inside-handlers",
+        "collections": [
+          5,
+          5
+        ],
+        "steps": [
+          26342,
+          26342
+        ],
+        "passed": true
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-gc-bounded-pending",
+        "collections": [
+          86,
+          86
+        ],
+        "steps": [
+          34531,
+          34531
+        ],
+        "passed": true
+      },
+      {
+        "name": "async-function-cases/asyncFunctionCases:gc-saved-operand-stack",
+        "collections": [
+          45,
+          45
+        ],
+        "steps": [
+          70487,
+          70487
+        ],
+        "passed": true
+      },
+      {
+        "name": "async-function-cases/asyncFunctionCases:gc-saved-receiver",
+        "collections": [
+          46,
+          46
+        ],
+        "steps": [
+          70410,
+          70410
+        ],
+        "passed": true
+      },
+      {
+        "name": "async-function-cases/asyncFunctionCases:gc-saved-locals-and-awaited-object",
+        "collections": [
+          45,
+          45
+        ],
+        "steps": [
+          70504,
+          70504
+        ],
+        "passed": true
+      },
+      {
+        "name": "async-function-cases/asyncFunctionCases:gc-pending-finally-return",
+        "collections": [
+          46,
+          46
+        ],
+        "steps": [
+          70614,
+          70614
+        ],
+        "passed": true
+      },
+      {
+        "name": "async-function-cases/asyncFunctionCases:gc-between-resumptions",
+        "collections": [
+          47,
+          47
+        ],
+        "steps": [
+          70710,
+          70710
+        ],
+        "passed": true
+      },
+      {
+        "name": "async-generator-cases/asyncGeneratorCases:gc-queued-requests-retain-records",
+        "collections": [
+          52,
+          52
+        ],
+        "steps": [
+          73908,
+          73908
+        ],
+        "passed": true
+      },
+      {
+        "name": "async-generator-cases/asyncGeneratorCases:gc-suspended-await-activation",
+        "collections": [
+          49,
+          49
+        ],
+        "steps": [
+          72148,
+          72148
+        ],
+        "passed": true
+      },
+      {
+        "name": "async-generator-cases/asyncGeneratorCases:gc-saved-operand-stack",
+        "collections": [
+          51,
+          51
+        ],
+        "steps": [
+          72453,
+          72453
+        ],
+        "passed": true
+      },
+      {
+        "name": "async-generator-cases/asyncGeneratorCases:gc-saved-receiver",
+        "collections": [
+          52,
+          52
+        ],
+        "steps": [
+          72456,
+          72456
+        ],
+        "passed": true
+      },
+      {
+        "name": "async-generator-cases/asyncGeneratorCases:gc-pending-return-request",
+        "collections": [
+          53,
+          53
+        ],
+        "steps": [
+          72790,
+          72790
+        ],
+        "passed": true
+      },
+      {
+        "name": "async-generator-cases/asyncGeneratorCases:gc-yield-star-delegation-state",
+        "collections": [
+          52,
+          52
+        ],
+        "steps": [
+          73002,
+          73002
+        ],
+        "passed": true
+      },
+      {
+        "name": "promise-jobs-cases/promiseJobsCases:bounded-job-chain-under-gc-pressure",
+        "collections": [
+          29,
+          29
+        ],
+        "steps": [
+          92917,
+          92917
+        ],
+        "passed": true
+      },
+      {
+        "name": "promise-jobs-cases/promiseJobsCases:bounded-chain-of-thenables",
+        "collections": [
+          6,
+          6
+        ],
+        "steps": [
+          7430,
+          7430
+        ],
+        "passed": true
+      }
+    ],
+    "resumptions": [
+      {
+        "name": "conformance:order-await-native-promise-one-tick",
+        "dispatches": 4933,
+        "steps": 4933,
+        "collections": 3
+      },
+      {
+        "name": "conformance:reent-async-function-recursion",
+        "dispatches": 2342,
+        "steps": 2342,
+        "collections": 1
+      },
+      {
+        "name": "conformance:reent-generator-driven-by-async",
+        "dispatches": 752,
+        "steps": 752,
+        "collections": 0
+      },
+      {
+        "name": "conformance:reent-async-generator-queued-requests",
+        "dispatches": 6524,
+        "steps": 6524,
+        "collections": 4
+      },
+      {
+        "name": "conformance:gc-suspended-async-only-reachable-from-reaction",
+        "dispatches": 70369,
+        "steps": 70369,
+        "collections": 46
+      },
+      {
+        "name": "conformance:t262-async-generator-yield-star-async",
+        "dispatches": 4922,
+        "steps": 4922,
+        "collections": 3
+      },
+      {
+        "name": "conformance:t262-for-await-over-async-generator",
+        "dispatches": 2197,
+        "steps": 2197,
+        "collections": 1
+      },
+      {
+        "name": "async-generator-cases/asyncGeneratorCases:next-sequence-fifo",
+        "dispatches": 5321,
+        "steps": 5321,
+        "collections": 3
+      },
+      {
+        "name": "async-generator-cases/asyncGeneratorCases:await-in-body",
+        "dispatches": 1623,
+        "steps": 1623,
+        "collections": 0
+      },
+      {
+        "name": "async-generator-cases/asyncGeneratorCases:next-argument-sent-to-yield",
+        "dispatches": 2382,
+        "steps": 2382,
+        "collections": 1
+      }
+    ],
+    "resourceLimits": [
+      {
+        "name": "conformance:resource-heap-10000-deep-promise-chain",
+        "resource": "heap",
+        "message": "Resource limit in lane 0, instruction 25042; no CPU fallback"
+      },
+      {
+        "name": "conformance:resource-heap-3000-pending-promises",
+        "resource": "heap",
+        "message": "Resource limit in lane 0, instruction 15151; no CPU fallback"
+      },
+      {
+        "name": "conformance:resource-frames-sync-async-recursion-40",
+        "resource": "frames",
+        "message": "Resource limit in lane 0, instruction 15; no CPU fallback"
+      },
+      {
+        "name": "conformance:resource-stack-pending-operands-across-async-calls",
+        "resource": "stack",
+        "message": "Resource limit in lane 0, instruction 33; no CPU fallback"
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:gc-deep-pending-chain",
+        "resource": "declared GPU resource bound",
+        "message": "Resource limit in lane 0, instruction 25086; no CPU fallback"
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:gc-allocation-inside-handlers",
+        "resource": "declared GPU resource bound",
+        "message": "Resource limit in lane 0, instruction 40; no CPU fallback"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:all-gc-pressure-many-pending",
+        "resource": "declared GPU resource bound",
+        "message": "Resource limit in lane 0, instruction 25115; no CPU fallback"
+      },
+      {
+        "name": "async-function-cases/asyncFunctionCases:deep-sync-recursion-resource-limit",
+        "resource": "declared GPU resource bound",
+        "message": "Resource limit in lane 0, instruction 17; no CPU fallback"
+      },
+      {
+        "name": "promise-jobs-cases/promiseJobsCases:500-job-chain-under-gc-pressure",
+        "resource": "declared GPU resource bound",
+        "message": "Resource limit in lane 0, instruction 25067; no CPU fallback"
+      },
+      {
+        "name": "promise-jobs-cases/promiseJobsCases:long-chain-of-thenables",
+        "resource": "declared GPU resource bound",
+        "message": "Resource limit in lane 0, instruction 25048; no CPU fallback"
+      }
+    ],
+    "gaps": [
+      "conformance:t262-then-species-constructor-used: depends on promise-subclassing; rejected as Unsupported (not counted)",
+      "promise-core-cases/promiseCoreBoundaryCases:subclass-instance-and-prototype: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)",
+      "promise-core-cases/promiseCoreBoundaryCases:subclass-settles: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)",
+      "promise-core-cases/promiseCoreBoundaryCases:reflect-construct-newtarget-prototype: depends on promise-core-cases/promiseCoreBoundaryCases boundary; rejected as Unsupported (not counted)"
+    ],
+    "modules": [
+      {
+        "path": "./promise-core-cases.js",
+        "loaded": true,
+        "records": 48
+      },
+      {
+        "path": "./promise-resolve-cases.js",
+        "loaded": true,
+        "records": 62
+      },
+      {
+        "path": "./promise-then-cases.js",
+        "loaded": true,
+        "records": 68
+      },
+      {
+        "path": "./promise-combinators-cases.js",
+        "loaded": true,
+        "records": 71
+      },
+      {
+        "path": "./async-function-cases.js",
+        "loaded": true,
+        "records": 67
+      },
+      {
+        "path": "./async-generator-cases.js",
+        "loaded": true,
+        "records": 60
+      },
+      {
+        "path": "./promise-jobs-cases.js",
+        "loaded": true,
+        "records": 26
+      },
+      {
+        "path": "./async-iteration-cases.js",
+        "loaded": true,
+        "records": 66
+      }
+    ],
+    "nativeDisagreements": [],
+    "nativeReferenceDifferences": [
+      {
+        "name": "conformance:order-finally-tick-count",
+        "input": 3,
+        "fixture": "fulfilled \"3:1f234a56\"",
+        "native": "fulfilled \"3:1f2a3456\"",
+        "reason": "Observed Safari finally fast path omits required PromiseResolve/then reaction jobs; GPU must preserve ES2025 finally job ordering.",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-promise.prototype.finally",
+        "evidence": "quickjs-safari-promise-species-pristine-native.json"
+      },
+      {
+        "name": "conformance:order-finally-tick-count",
+        "input": 4,
+        "fixture": "fulfilled \"4:1f234a56\"",
+        "native": "fulfilled \"4:1f2a3456\"",
+        "reason": "Observed Safari finally fast path omits required PromiseResolve/then reaction jobs; GPU must preserve ES2025 finally job ordering.",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-promise.prototype.finally",
+        "evidence": "quickjs-safari-promise-species-pristine-native.json"
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:order-finally-tick-count",
+        "input": 3,
+        "fixture": "fulfilled \"f,b1,b2,b3,f-after,b4,b5\"",
+        "native": "fulfilled \"f,b1,f-after,b2,b3,b4,b5\"",
+        "reason": "Observed Safari finally fast path schedules continuation early; GPU must preserve ES2025 finally PromiseResolve and then reaction jobs.",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-promise.prototype.finally",
+        "evidence": "quickjs-safari-promise-species-pristine-native.json"
+      },
+      {
+        "name": "promise-then-cases/promiseThenCases:order-finally-tick-count",
+        "input": 4,
+        "fixture": "fulfilled \"f,b1,b2,b3,f-after,b4,b5\"",
+        "native": "fulfilled \"f,b1,f-after,b2,b3,b4,b5\"",
+        "reason": "Observed Safari finally fast path schedules continuation early; GPU must preserve ES2025 finally PromiseResolve and then reaction jobs.",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-promise.prototype.finally",
+        "evidence": "quickjs-safari-promise-species-pristine-native.json"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:resolve-plain-constructor",
+        "input": 3,
+        "fixture": "fulfilled \"true:3\"",
+        "native": "fulfilled \"false:3\"",
+        "reason": "PromiseResolve may return its argument only when its constructor is SameValue to C; this plain alternate constructor requires a new capability.",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-promise-resolve",
+        "evidence": "quickjs-safari-promise-species-pristine-native.json"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:resolve-plain-constructor",
+        "input": 4,
+        "fixture": "fulfilled \"true:4\"",
+        "native": "fulfilled \"false:4\"",
+        "reason": "PromiseResolve may return its argument only when its constructor is SameValue to C; this plain alternate constructor requires a new capability.",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-promise-resolve",
+        "evidence": "quickjs-safari-promise-species-pristine-native.json"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:withResolvers-shape",
+        "input": 3,
+        "fixture": "fulfilled \"promise,resolve,reject:true:true:function:1:3\"",
+        "native": "fulfilled \"resolve,reject,promise:true:true:function:1:3\"",
+        "reason": "ES2025 creates withResolvers own properties in promise, resolve, reject order; observed Safari uses resolve, reject, promise.",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-promise.withResolvers",
+        "evidence": "quickjs-safari-promise-species-pristine-native.json"
+      },
+      {
+        "name": "promise-combinators-cases/promiseCombinatorCases:withResolvers-shape",
+        "input": 4,
+        "fixture": "fulfilled \"promise,resolve,reject:true:true:function:1:4\"",
+        "native": "fulfilled \"resolve,reject,promise:true:true:function:1:4\"",
+        "reason": "ES2025 creates withResolvers own properties in promise, resolve, reject order; observed Safari uses resolve, reject, promise.",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-promise.withResolvers",
+        "evidence": "quickjs-safari-promise-species-pristine-native.json"
+      },
+      {
+        "name": "async-iteration-cases/asyncIterationCases:sync-rejected-value-with-done-true-not-closed",
+        "input": 3,
+        "fixture": "fulfilled \"|d3\"",
+        "native": "fulfilled \"R|d3\"",
+        "reason": "AsyncFromSyncIteratorContinuation does not close an already-done sync iterator when its value rejects; observed Safari calls return.",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-asyncfromsynciteratorcontinuation",
+        "evidence": "quickjs-safari-promise-species-pristine-native.json"
+      },
+      {
+        "name": "async-iteration-cases/asyncIterationCases:sync-rejected-value-with-done-true-not-closed",
+        "input": 4,
+        "fixture": "fulfilled \"|d4\"",
+        "native": "fulfilled \"R|d4\"",
+        "reason": "AsyncFromSyncIteratorContinuation does not close an already-done sync iterator when its value rejects; observed Safari calls return.",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-asyncfromsynciteratorcontinuation",
+        "evidence": "quickjs-safari-promise-species-pristine-native.json"
+      },
+      {
+        "name": "async-iteration-cases/asyncIterationCases:sync-rejected-close-throw-ignored",
+        "input": 3,
+        "fixture": "fulfilled \"R|r3\"",
+        "nativeError": "NativeWorkerError: closeErr",
+        "timeout": false,
+        "evidence": "quickjs-safari-native-promise-worker-probe.json",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-asyncfromsynciteratorcontinuation",
+        "reason": "Observed Safari worker emits closeErr; ES2025 retains the original rejection when IteratorClose throws."
+      },
+      {
+        "name": "async-iteration-cases/asyncIterationCases:sync-rejected-close-throw-ignored",
+        "input": 4,
+        "fixture": "fulfilled \"R|r4\"",
+        "nativeError": "NativeWorkerError: closeErr",
+        "timeout": false,
+        "evidence": "quickjs-safari-native-promise-worker-probe.json",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-asyncfromsynciteratorcontinuation",
+        "reason": "Observed Safari worker emits closeErr; ES2025 retains the original rejection when IteratorClose throws."
+      },
+      {
+        "name": "async-iteration-cases/asyncIterationCases:sync-next-non-object-typeerror",
+        "input": 3,
+        "fixture": "fulfilled \"|true\"",
+        "nativeError": "NativeOracleTimeout: exceeded 5000ms",
+        "timeout": true,
+        "evidence": "quickjs-safari-native-promise-worker-probe.json",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-%asyncfromsynciteratorprototype%.next",
+        "reason": "Observed Safari hangs on primitive next result (2s diagnostic, 5s harness deadline); ES2025 rejects with TypeError without closing."
+      },
+      {
+        "name": "async-iteration-cases/asyncIterationCases:sync-next-non-object-typeerror",
+        "input": 4,
+        "fixture": "fulfilled \"|true\"",
+        "nativeError": "NativeOracleTimeout: exceeded 5000ms",
+        "timeout": true,
+        "evidence": "quickjs-safari-native-promise-worker-probe.json",
+        "spec": "https://tc39.es/ecma262/2025/multipage/control-abstraction-objects.html#sec-%asyncfromsynciteratorprototype%.next",
+        "reason": "Observed Safari hangs on primitive next result (2s diagnostic, 5s harness deadline); ES2025 rejects with TypeError without closing."
+      }
+    ],
+    "elapsedMs": 446340,
+    "method": "Exact Object.is comparison of GPU value and settlement (statuses 12/13/14 via promiseResults:\"settle\") against fixed ES2025 expectations, cross-checked with a native iframe oracle; gc fixtures need per-lane collections > 0; resource fixtures must stop with status 3; resumption fixtures re-run with job.step(1)."
+  },
+  "candidateHashes": "quickjs-safari-promise-species-candidate-hashes.json",
+  "harnessBundleSha256": "38da5374a50b7bdb64937512886bc63e39653d9b221c8557f00c292e6d589f7a",
+  "oracleMetadata": "bounded native worker; report.method iframe wording is stale"
+}

@@ -1,0 +1,68 @@
+--- bridge.c
++++ bridge.c
+@@ -32,6 +32,48 @@
+     double d; uint64_t bits; JS_ToFloat64(ctx, &d, v); memcpy(&bits, &d, 8);
+     dbuf_printf(&output, "{\"number\":[%u,%u]}", (unsigned)bits, (unsigned)(bits >> 32));
+ }
++/* LANES (tagged-template-v1): js_parse_template(call=1) stores the template
++   object of one tagged template site as a cpool constant: a sealed array of
++   cooked strings (undefined for an invalid escape) whose own non-enumerable
++   "raw" property is a sealed array of raw strings. Exported as
++   {"template":{"cooked":[string|null,...],"raw":[string,...]}}; the GPU VM
++   creates the frozen arrays once per site (GetTemplateObject). Only plain
++   compile-time data properties are read: no guest code runs. Returns 0
++   (caller exports {"unsupported":true}) for any other shape. */
++static int template_constant(JSContext *ctx, JSValueConst v) {
++    JSValue raw, item;
++    uint32_t count, raw_count, i;
++    int ok = 0;
++    if (JS_VALUE_GET_TAG(v) != JS_TAG_OBJECT || JS_IsArray(ctx, v) != 1) return 0;
++    raw = JS_GetProperty(ctx, v, JS_ATOM_raw);
++    if (JS_IsArray(ctx, raw) != 1 || js_get_length32(ctx, &count, v) || js_get_length32(ctx, &raw_count, raw) ||
++        count == 0 || count != raw_count) goto done;
++    for (i = 0; i < count; i++) {
++        item = JS_GetPropertyUint32(ctx, raw, i);
++        ok = JS_IsString(item); JS_FreeValue(ctx, item);
++        if (!ok) goto done;
++        item = JS_GetPropertyUint32(ctx, v, i);
++        ok = JS_IsString(item) || JS_IsUndefined(item); JS_FreeValue(ctx, item);
++        if (!ok) goto done;
++    }
++    dbuf_putstr(&output, "{\"template\":{\"cooked\":[");
++    for (i = 0; i < count; i++) {
++        if (i) dbuf_putc(&output, ',');
++        item = JS_GetPropertyUint32(ctx, v, i);
++        if (JS_IsString(item)) json_string(ctx, item); else dbuf_putstr(&output, "null");
++        JS_FreeValue(ctx, item);
++    }
++    dbuf_putstr(&output, "],\"raw\":[");
++    for (i = 0; i < count; i++) {
++        if (i) dbuf_putc(&output, ',');
++        item = JS_GetPropertyUint32(ctx, raw, i);
++        json_string(ctx, item); JS_FreeValue(ctx, item);
++    }
++    dbuf_putstr(&output, "]}}");
++ done:
++    JS_FreeValue(ctx, raw);
++    return ok;
++}
+ EMSCRIPTEN_KEEPALIVE const char *lanes_compile(const char *source) {
+     dbuf_free(&output); dbuf_init(&output); function_count = 0;
+     JSRuntime *rt = JS_NewRuntime();
+@@ -60,7 +102,7 @@
+             }
+     }
+     /* LANES: "features" lists compiler patches program.js may require. */
+-    dbuf_printf(&output, "{\"format\":1,\"quickjs\":\"%s\",\"features\":[\"template-to-string\"],\"functions\":[", REVISION);
++    dbuf_printf(&output, "{\"format\":1,\"quickjs\":\"%s\",\"features\":[\"template-to-string\",\"tagged-template-v1\"],\"functions\":[", REVISION);
+     for (int f = 0; f < function_count; f++) {
+         JSFunctionBytecode *b = functions[f];
+         dbuf_printf(&output, "%s{\"name\":", f ? "," : "");
+@@ -79,6 +121,7 @@
+             if (JS_VALUE_GET_TAG(v) == JS_TAG_FUNCTION_BYTECODE) dbuf_printf(&output, "{\"function\":%d}", add_function(JS_VALUE_GET_PTR(v)));
+             else if (JS_IsNumber(v)) number_value(ctx, v);
+             else if (JS_IsString(v)) { dbuf_putstr(&output, "{\"string\":"); json_string(ctx, v); dbuf_putc(&output, '}'); }
++            else if (template_constant(ctx, v)) continue;
+             else dbuf_putstr(&output, "{\"unsupported\":true}");
+         }
+         dbuf_putstr(&output, "],\"instructions\":[");

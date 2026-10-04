@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';
-import { verifyFailures, verifyDescriptorResumption } from './validation.js';
+import { verifyExtendedBuiltinResumption, verifyFailures, verifyDescriptorResumption, verifyApplyResumption, verifyNumericResumption, verifyErrorResumption, verifyArrayMethodResumption, verifyArraySearchResumption } from './validation.js';
 import { createCompiler } from './compiler.js';
 import { QuickJSGPU } from './runtime.js';
 import { openDevice } from '../../scripts/device.js';
 import { Script } from 'node:vm';
 const compiler = await createCompiler(), context = await openDevice();
 const vm = await QuickJSGPU.create({ device: context.device });
-import { sources, inputs, stringSources, stringInputs } from './cases.js';
+import { sources, inputs, stringSources, stringInputs, specExpectations } from './cases.js';
 const results = [];
 try {
   for (const source of [...sources,...stringSources]) compiler.compile(source);
@@ -18,6 +18,8 @@ try {
     console.error(source);
     const program = compiler.compile(source), oracle = new Script(`(${source})`);
     const expected = inputs.map(x => oracle.runInNewContext()(x));
+    const normative = specExpectations.get(source);
+    if (normative) for (const value of expected) assert(Object.is(value,normative.value), 'Node reference differs from documented specification expectation');
     const result = await vm.run(program, inputs, { budget: 4096 });
     assert.equal(result.backend, 'gpu');
     result.values.forEach((value, i) => assert(Object.is(value, expected[i]), `${source}: input ${inputs[i]}, got ${value}, expected ${expected[i]}`));
@@ -30,6 +32,12 @@ try {
   assert.deepEqual(last.values, [3]); assert(dispatches > 1);
   const negativeChecks = await verifyFailures(compiler, vm);
   const descriptorDispatches = await verifyDescriptorResumption(compiler, vm);
+  const applyDispatches = await verifyApplyResumption(compiler, vm);
+    const numericDispatches = await verifyNumericResumption(compiler, vm);
+    const errorDispatches = await verifyErrorResumption(compiler, vm);
+    const arrayMethodDispatches = await verifyArrayMethodResumption(compiler, vm);
+    const arraySearchDispatches = await verifyArraySearchResumption(compiler, vm);
+    const extendedBuiltinDispatches = await verifyExtendedBuiltinResumption(compiler, vm);
   for (const source of stringSources) {
     const strings = stringInputs;
     const oracle = new Script(`(${source})`);
@@ -39,5 +47,5 @@ try {
   }
   const info = context.adapter.info;
   console.log(JSON.stringify({ adapter: { vendor: info.vendor, device: info.device, description: info.description },
-    programs: results.length, checked: results.reduce((sum,r)=>sum+r.checked,0), oneInstructionDispatches: dispatches, descriptorDispatches, negativeChecks, results }, null, 2));
+    programs: results.length, checked: results.reduce((sum,r)=>sum+r.checked,0), oneInstructionDispatches: dispatches, descriptorDispatches, applyDispatches, numericDispatches, errorDispatches, arrayMethodDispatches, arraySearchDispatches, extendedBuiltinDispatches, negativeChecks, results }, null, 2));
 } finally { await vm.dispose(); context.device.destroy(); }

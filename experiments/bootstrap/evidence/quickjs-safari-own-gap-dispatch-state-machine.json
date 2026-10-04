@@ -1,0 +1,10 @@
+{
+  "outcome": "reference-oracle-mismatch",
+  "suite": "dispatch-state-machine",
+  "candidate": "lanes-m1-own-gap-candidate.tgz",
+  "case": "dispatch-computed-key-kept-reference",
+  "expected": "2:kgks3",
+  "gpuExecutedForFailingCase": false,
+  "runnerLog": "{\"date\":\"2026-10-04T07:18:35.181Z\",\"stage\":\"Starting\"}\n{\"date\":\"2026-10-04T07:18:35.440Z\",\"stage\":\"dispatch-tail-call-guest-step-count\"}\n{\"date\":\"2026-10-04T07:18:35.696Z\",\"stage\":\"dispatch-getter-setter-continuations\"}\n{\"date\":\"2026-10-04T07:18:35.954Z\",\"stage\":\"Failed\"}\nfile:///private/tmp/lanes-metadata-verify/lanes-safari-diagnostics.mjs:32\n    if (state.error) throw new Error(state.error);\n                           ^\n\nError: Error: dispatch-computed-key-kept-reference: fixed native oracle\ncheck@http://127.0.0.1:4178/browser-dispatch-state-machine.js:21310:26\nmodule code@http://127.0.0.1:4178/browser-dispatch-state-machine.js:21330:10\n    at file:///private/tmp/lanes-metadata-verify/lanes-safari-diagnostics.mjs:32:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n\nNode.js v24.4.1\n",
+  "stoppedAfterFirstFailure": true
+}

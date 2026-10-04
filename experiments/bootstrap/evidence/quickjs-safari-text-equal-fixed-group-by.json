@@ -1,0 +1,255 @@
+{
+  "date": "2026-10-04T12:30:44.026Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 32,
+    "checked": 125,
+    "resourceChecks": 1,
+    "requiredGC": 1,
+    "resumptionDispatches": 2308,
+    "results": [
+      {
+        "feature": "group-by-Map-counter-args-this",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 1242
+      },
+      {
+        "feature": "group-by-Map-receiver-ignored",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 474
+      },
+      {
+        "feature": "group-by-Map-callback-validation",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 193
+      },
+      {
+        "feature": "group-by-Map-arraylike-not-iterable",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 211
+      },
+      {
+        "feature": "group-by-Map-null-input",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 170
+      },
+      {
+        "feature": "group-by-Map-callback-throw-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 278
+      },
+      {
+        "feature": "group-by-Map-step-throw-no-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 176
+      },
+      {
+        "feature": "group-by-Map-value-throw-no-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 198
+      },
+      {
+        "feature": "group-by-Map-holes-dense",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 743
+      },
+      {
+        "feature": "group-by-Map-string-codepoints",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 512
+      },
+      {
+        "feature": "group-by-Map-numeric-prototype-setter",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 525
+      },
+      {
+        "feature": "group-by-Object-counter-args-this",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 1304
+      },
+      {
+        "feature": "group-by-Object-receiver-ignored",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 505
+      },
+      {
+        "feature": "group-by-Object-callback-validation",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 193
+      },
+      {
+        "feature": "group-by-Object-arraylike-not-iterable",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 211
+      },
+      {
+        "feature": "group-by-Object-null-input",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 170
+      },
+      {
+        "feature": "group-by-Object-callback-throw-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 277
+      },
+      {
+        "feature": "group-by-Object-step-throw-no-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 175
+      },
+      {
+        "feature": "group-by-Object-value-throw-no-close",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 197
+      },
+      {
+        "feature": "group-by-Object-holes-dense",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 819
+      },
+      {
+        "feature": "group-by-Object-string-codepoints",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 588
+      },
+      {
+        "feature": "group-by-Object-numeric-prototype-setter",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 556
+      },
+      {
+        "feature": "group-by-object-null-prototype-dangerous-keys",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 1021
+      },
+      {
+        "feature": "group-by-object-symbol-propertykey",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 884
+      },
+      {
+        "feature": "group-by-object-key-order-and-attributes",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 1737
+      },
+      {
+        "feature": "group-by-object-key-conversion-closes",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 335
+      },
+      {
+        "feature": "group-by-map-key-identity-no-coercion",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 914
+      },
+      {
+        "feature": "group-by-map-nan-and-negative-zero",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 1529
+      },
+      {
+        "feature": "group-by-map-symbol-and-bigint-keys",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 1146
+      },
+      {
+        "feature": "group-by-private-intrinsic-mutation-immunity",
+        "checked": 4,
+        "expected": true,
+        "collections": 0,
+        "maxSteps": 1007
+      },
+      {
+        "feature": "group-by-map-gc-retained-keys-values",
+        "checked": 4,
+        "expected": true,
+        "collections": 2,
+        "maxSteps": 14184
+      }
+    ],
+    "elapsedMs": 21826.000000000004,
+    "gaps": [
+      "Proxy behavior requires the separate Proxy implementation.",
+      "Finite VM heap and execution budgets remain explicit resource boundaries."
+    ]
+  }
+}

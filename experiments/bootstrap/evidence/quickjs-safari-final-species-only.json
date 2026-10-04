@@ -1,0 +1,293 @@
+{
+  "date": "2026-10-04T14:01:25.114Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "checked": 26,
+    "failures": [],
+    "records": [
+      {
+        "name": "concat-inherited-object-species",
+        "budget": 1,
+        "values": [
+          7,
+          7
+        ],
+        "settlements": [
+          null,
+          null
+        ],
+        "steps": [
+          450,
+          450
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "concat-inherited-object-species",
+        "budget": 4096,
+        "values": [
+          7,
+          7
+        ],
+        "settlements": [
+          null,
+          null
+        ],
+        "steps": [
+          450,
+          450
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "object-species-absent",
+        "budget": 1,
+        "values": [
+          true,
+          true
+        ],
+        "settlements": [
+          null,
+          null
+        ],
+        "steps": [
+          7,
+          7
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "object-species-absent",
+        "budget": 4096,
+        "values": [
+          true,
+          true
+        ],
+        "settlements": [
+          null,
+          null
+        ],
+        "steps": [
+          7,
+          7
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "object-species-inherited-getter",
+        "budget": 1,
+        "values": [
+          true,
+          true
+        ],
+        "settlements": [
+          null,
+          null
+        ],
+        "steps": [
+          196,
+          196
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "object-species-inherited-getter",
+        "budget": 4096,
+        "values": [
+          true,
+          true
+        ],
+        "settlements": [
+          null,
+          null
+        ],
+        "steps": [
+          196,
+          196
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "finally-generic-object-constructor",
+        "budget": 1,
+        "values": [
+          "function:function:1:3",
+          "function:function:1:4"
+        ],
+        "settlements": [
+          null,
+          null
+        ],
+        "steps": [
+          261,
+          261
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "finally-generic-object-constructor",
+        "budget": 4096,
+        "values": [
+          "function:function:1:3",
+          "function:function:1:4"
+        ],
+        "settlements": [
+          null,
+          null
+        ],
+        "steps": [
+          261,
+          261
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "resolve-object-constructor-mismatch",
+        "budget": 1,
+        "values": [
+          "1:false:3:2",
+          "1:false:4:2"
+        ],
+        "settlements": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "steps": [
+          1648,
+          1648
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "resolve-object-constructor-mismatch",
+        "budget": 4096,
+        "values": [
+          "1:false:3:2",
+          "1:false:4:2"
+        ],
+        "settlements": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "steps": [
+          1648,
+          1648
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "gc-bounded-pending-chain",
+        "budget": 4096,
+        "values": [
+          11,
+          12
+        ],
+        "settlements": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "steps": [
+          15209,
+          15209
+        ],
+        "collections": [
+          4,
+          4
+        ]
+      },
+      {
+        "name": "gc-bounded-allocation-inside-handlers",
+        "budget": 4096,
+        "values": [
+          7,
+          8
+        ],
+        "settlements": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "steps": [
+          26342,
+          26342
+        ],
+        "collections": [
+          5,
+          5
+        ]
+      },
+      {
+        "name": "bounded-job-chain-under-gc-pressure",
+        "budget": 4096,
+        "values": [
+          11,
+          12
+        ],
+        "settlements": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "steps": [
+          92917,
+          92917
+        ],
+        "collections": [
+          29,
+          29
+        ]
+      }
+    ],
+    "capacity": []
+  },
+  "candidateHashes": "quickjs-safari-promise-species-candidate-hashes.json",
+  "harnessBundleSha256": "703418155bad8f3a2e98887be9bde53b7734cf90c304f975e22e28a28d3c7f9e"
+}

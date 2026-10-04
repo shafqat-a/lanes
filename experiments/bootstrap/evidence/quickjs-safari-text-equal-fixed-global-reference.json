@@ -1,0 +1,862 @@
+{
+  "date": "2026-10-04T12:17:39.305Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 32,
+    "checked": 64,
+    "resumptions": [
+      {
+        "feature": "strict-unresolved-created-in-callback",
+        "dispatches": 203,
+        "value": "ReferenceError:r:0:3"
+      },
+      {
+        "feature": "compound-read-before-rhs-and-write-current-binding",
+        "dispatches": 301,
+        "value": "grs5"
+      },
+      {
+        "feature": "captured-const-tdz-rhs-throw-wins",
+        "dispatches": 103,
+        "value": "rhs3"
+      }
+    ],
+    "nativeDifferences": [
+      {
+        "feature": "strict-unresolved-created-by-rhs",
+        "input": 3,
+        "native": "stored3",
+        "normative": "ReferenceError3"
+      },
+      {
+        "feature": "strict-unresolved-created-by-rhs",
+        "input": 4,
+        "native": "stored4",
+        "normative": "ReferenceError4"
+      },
+      {
+        "feature": "strict-unresolved-created-in-callback",
+        "input": 3,
+        "native": "wrong",
+        "normative": "ReferenceError:r:0:3"
+      },
+      {
+        "feature": "strict-unresolved-created-in-callback",
+        "input": 4,
+        "native": "wrong",
+        "normative": "ReferenceError:r:0:4"
+      },
+      {
+        "feature": "strict-unresolved-rhs-adds-setter",
+        "input": 3,
+        "native": "wrong",
+        "normative": "ReferenceError:0:3"
+      },
+      {
+        "feature": "strict-unresolved-rhs-adds-setter",
+        "input": 4,
+        "native": "wrong",
+        "normative": "ReferenceError:0:4"
+      },
+      {
+        "feature": "nested-global-references-preserve-both-bases",
+        "input": 3,
+        "native": ":3:3:3",
+        "normative": "ReferenceError:0:0:3"
+      },
+      {
+        "feature": "nested-global-references-preserve-both-bases",
+        "input": 4,
+        "native": ":4:4:4",
+        "normative": "ReferenceError:0:0:4"
+      },
+      {
+        "feature": "captured-const-tdz-rhs-throw-wins",
+        "input": 3,
+        "native": "wrong",
+        "normative": "rhs3"
+      },
+      {
+        "feature": "captured-const-tdz-rhs-throw-wins",
+        "input": 4,
+        "native": "wrong",
+        "normative": "rhs4"
+      },
+      {
+        "feature": "sloppy-function-name-logical-write-ignored",
+        "input": 3,
+        "native": "number:3",
+        "normative": "function:3"
+      },
+      {
+        "feature": "sloppy-function-name-logical-write-ignored",
+        "input": 4,
+        "native": "number:4",
+        "normative": "function:4"
+      }
+    ],
+    "spec": [
+      "https://tc39.es/ecma262/2025/multipage/ecmascript-data-types-and-values.html#sec-putvalue",
+      "https://tc39.es/ecma262/2025/multipage/executable-code-and-execution-contexts.html#sec-object-environment-records-setmutablebinding-n-v-s"
+    ],
+    "results": [
+      {
+        "feature": "strict-unresolved-created-by-rhs",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "ReferenceError3",
+          "ReferenceError4"
+        ],
+        "observed": [
+          "stored3",
+          "stored4"
+        ],
+        "steps": [
+          97,
+          97
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "strict-unresolved-created-in-callback",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "ReferenceError:r:0:3",
+          "ReferenceError:r:0:4"
+        ],
+        "observed": [
+          "wrong",
+          "wrong"
+        ],
+        "steps": [
+          203,
+          203
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "strict-unresolved-rhs-throw-wins",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "rhs3",
+          "rhs4"
+        ],
+        "observed": [
+          "rhs3",
+          "rhs4"
+        ],
+        "steps": [
+          104,
+          104
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "strict-resolved-deleted-by-rhs",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "ReferenceError:false:3",
+          "ReferenceError:false:4"
+        ],
+        "observed": [
+          "ReferenceError:false:3",
+          "ReferenceError:false:4"
+        ],
+        "steps": [
+          190,
+          190
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "strict-resolved-deleted-recreated-by-rhs",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          3,
+          4
+        ],
+        "observed": [
+          3,
+          4
+        ],
+        "steps": [
+          17,
+          17
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "sloppy-unresolved-created-by-rhs",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          3,
+          4
+        ],
+        "observed": [
+          3,
+          4
+        ],
+        "steps": [
+          10,
+          10
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "sloppy-unresolved-rhs-adds-setter",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          4,
+          5
+        ],
+        "observed": [
+          4,
+          5
+        ],
+        "steps": [
+          190,
+          190
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "strict-unresolved-rhs-adds-setter",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "ReferenceError:0:3",
+          "ReferenceError:0:4"
+        ],
+        "observed": [
+          "wrong",
+          "wrong"
+        ],
+        "steps": [
+          358,
+          358
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "strict-resolved-rhs-adds-setter",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          4,
+          5
+        ],
+        "observed": [
+          4,
+          5
+        ],
+        "steps": [
+          193,
+          193
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "sloppy-resolved-rhs-deletes",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          3,
+          4
+        ],
+        "observed": [
+          3,
+          4
+        ],
+        "steps": [
+          14,
+          14
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "compound-read-before-rhs-and-write-current-binding",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "grs5",
+          "grs6"
+        ],
+        "observed": [
+          "grs5",
+          "grs6"
+        ],
+        "steps": [
+          301,
+          301
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "postfix-read-and-write-callback",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "3:gs4",
+          "4:gs5"
+        ],
+        "observed": [
+          "3:gs4",
+          "4:gs5"
+        ],
+        "steps": [
+          387,
+          387
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "strict-unresolved-logical-assignment-throws-before-rhs",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "ReferenceError:0:3",
+          "ReferenceError:0:4"
+        ],
+        "observed": [
+          "ReferenceError:0:3",
+          "ReferenceError:0:4"
+        ],
+        "steps": [
+          182,
+          182
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "logical-short-circuit-has-no-write",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "3:0",
+          "4:0"
+        ],
+        "observed": [
+          "3:0",
+          "4:0"
+        ],
+        "steps": [
+          186,
+          186
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "nested-global-references-preserve-both-bases",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "ReferenceError:0:0:3",
+          "ReferenceError:0:0:4"
+        ],
+        "observed": [
+          ":3:3:3",
+          ":4:4:4"
+        ],
+        "steps": [
+          281,
+          281
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "local-const-rhs-throw-wins",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "rhs3",
+          "rhs4"
+        ],
+        "observed": [
+          "rhs3",
+          "rhs4"
+        ],
+        "steps": [
+          101,
+          101
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "captured-const-rhs-throw-wins",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "rhs3",
+          "rhs4"
+        ],
+        "observed": [
+          "rhs3",
+          "rhs4"
+        ],
+        "steps": [
+          105,
+          105
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "captured-const-tdz-rhs-throw-wins",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "rhs3",
+          "rhs4"
+        ],
+        "observed": [
+          "wrong",
+          "wrong"
+        ],
+        "steps": [
+          103,
+          103
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "local-const-tdz-rhs-value-referenceerror",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "ReferenceError3",
+          "ReferenceError4"
+        ],
+        "observed": [
+          "ReferenceError3",
+          "ReferenceError4"
+        ],
+        "steps": [
+          94,
+          94
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "captured-const-tdz-rhs-value-referenceerror",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "ReferenceError3",
+          "ReferenceError4"
+        ],
+        "observed": [
+          "ReferenceError3",
+          "ReferenceError4"
+        ],
+        "steps": [
+          98,
+          98
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "function-name-sloppy-assignment-rhs",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "function:1:3",
+          "function:1:4"
+        ],
+        "observed": [
+          "function:1:3",
+          "function:1:4"
+        ],
+        "steps": [
+          191,
+          191
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "reference-survives-gc-in-rhs",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          3,
+          4
+        ],
+        "observed": [
+          3,
+          4
+        ],
+        "steps": [
+          45022,
+          45022
+        ],
+        "collections": [
+          29,
+          29
+        ]
+      },
+      {
+        "feature": "local-destructuring-reference",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "2:1:3",
+          "2:1:4"
+        ],
+        "observed": [
+          "2:1:3",
+          "2:1:4"
+        ],
+        "steps": [
+          670,
+          670
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "sloppy-const-destructuring-throws",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "TypeError:0:3",
+          "TypeError:0:4"
+        ],
+        "observed": [
+          "TypeError:0:3",
+          "TypeError:0:4"
+        ],
+        "steps": [
+          440,
+          440
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "local-tdz-destructuring-rhs-throw-wins",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "rhs3",
+          "rhs4"
+        ],
+        "observed": [
+          "rhs3",
+          "rhs4"
+        ],
+        "steps": [
+          100,
+          100
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "local-tdz-destructuring-throws",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "ReferenceError3",
+          "ReferenceError4"
+        ],
+        "observed": [
+          "ReferenceError3",
+          "ReferenceError4"
+        ],
+        "steps": [
+          351,
+          351
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "captured-const-logical-throws",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "TypeError3",
+          "TypeError4"
+        ],
+        "observed": [
+          "TypeError3",
+          "TypeError4"
+        ],
+        "steps": [
+          105,
+          105
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "const-logical-shortcircuit-does-not-write",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "1:3",
+          "1:4"
+        ],
+        "observed": [
+          "1:3",
+          "1:4"
+        ],
+        "steps": [
+          181,
+          181
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "local-logical-callback-updates-same-binding",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          3,
+          4
+        ],
+        "observed": [
+          3,
+          4
+        ],
+        "steps": [
+          24,
+          24
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "function-name-logical-shortcircuit",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          3,
+          4
+        ],
+        "observed": [
+          3,
+          4
+        ],
+        "steps": [
+          21,
+          21
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "strict-function-name-logical-write",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "TypeError3",
+          "TypeError4"
+        ],
+        "observed": [
+          "TypeError3",
+          "TypeError4"
+        ],
+        "steps": [
+          105,
+          105
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "feature": "sloppy-function-name-logical-write-ignored",
+        "inputs": [
+          3,
+          4
+        ],
+        "expected": [
+          "function:3",
+          "function:4"
+        ],
+        "observed": [
+          "number:3",
+          "number:4"
+        ],
+        "steps": [
+          108,
+          108
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      }
+    ],
+    "elapsedMs": 8123
+  }
+}

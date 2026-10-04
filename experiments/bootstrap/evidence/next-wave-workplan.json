@@ -1,0 +1,172 @@
+{
+  "updatedAt": "2026-10-04T00:10:34.907641+00:00",
+  "baseline": "quickjs-phase345-integration-manifest.json",
+  "objective": "Continue remaining ES2025 GPU engine and 1.0 roadmap; no phase completion inferred from focused tests.",
+  "externalJobs": [
+    {
+      "provider": "grok",
+      "id": "grok-20261003204528-8a4505d5",
+      "worktree": "/home/shafqat/.local/state/lanes-external-agents/worktrees/grok-20261003204528-8a4505d5",
+      "snapshotCommit": "04773b2f72a64936e331f281e1bd5259b65d4bc6",
+      "requestedSubagents": 8,
+      "state": "succeeded; protocol merge in progress"
+    },
+    {
+      "provider": "claude",
+      "id": "claude-20261003204528-d686771f",
+      "worktree": "/home/shafqat/.local/state/lanes-external-agents/worktrees/claude-20261003204528-d686771f",
+      "snapshotCommit": "93dd29b544f9ea2b78f9df3c57367dfb3425e4e0",
+      "requestedSubagents": 8,
+      "state": "succeeded; isolated stdlib merge in progress"
+    }
+  ],
+  "externalDelegationsObserved": {
+    "grok": 8,
+    "claude": 8
+  },
+  "nativeWork": {
+    "globalReferenceAndFunctionSource": "Integrated; focused and regression M1 Safari suites passed",
+    "bigIntArithmeticAndTransfer": "Division/remainder/bitwise/shifts/API transfer integrated and GPU verified",
+    "bigIntConversions": "68programs269values GPU passed on protocol candidate",
+    "bigIntJSON": "Integrated; 42 focused programs and JSON regressions passed on GPU",
+    "generators": "Integrated;55 packed parity; GPU pending",
+    "bigIntComparisons": "264programs264values GPU passed;2exactSafari nativecoercion differences recorded",
+    "bigIntExponentiation": "Integrated;46 packed parity; GPU pending",
+    "test262Harness": "propertyHelper integrated;39 host tests passed; directedGPU pending",
+    "protocolIntegration": "37 focused GPU semantic passes +2boundaries; broadphase4 found1Function instanceofregression nowfixed; rerunpending",
+    "bigIntWidths": "Integrated;24 packed parity; GPU pending",
+    "protocolMetadata": "Sixbuiltinbackingobjects integrated;Function instanceof regressionfixed; M1pending",
+    "arrayFrom": "Integrated;42 packed parity; GPU pending",
+    "species": "Integrated;45 packed parity; GPU pending",
+    "groupBy": "Integrated;32 packed parity; GPU pending",
+    "async": "Integrated;578 packed parity; GPU pending"
+  },
+  "reservations": {
+    "functionSourceBuiltin": 404,
+    "collectionsBuiltin": [
+      2200,
+      2399
+    ],
+    "protocolBuiltin": [
+      2400,
+      2499
+    ],
+    "generatorBuiltin": [
+      2500,
+      2599
+    ],
+    "collectionHeapKinds": [
+      40,
+      47
+    ],
+    "protocolHeapKinds": [
+      48,
+      55
+    ],
+    "generatorHeapKinds": [
+      56,
+      63
+    ],
+    "collectionFixedNodes": [
+      66,
+      73
+    ],
+    "protocolContinuations": [
+      72,
+      87
+    ],
+    "collectionContinuations": [
+      88,
+      103
+    ],
+    "generatorContinuations": [
+      104,
+      119
+    ],
+    "generatorFixedNodes": [
+      74,
+      76
+    ],
+    "protocolFixedNodes": [
+      77,
+      79
+    ],
+    "protocolBuiltinBackingNodes": [
+      80,
+      85
+    ],
+    "regexpBuiltin": [
+      2600,
+      2799
+    ],
+    "regexpHeapKinds": [
+      80,
+      95
+    ],
+    "regexpFixedNodes": [
+      86,
+      89
+    ],
+    "regexpContinuations": [
+      120,
+      135
+    ],
+    "asyncBuiltin": [
+      2800,
+      2999
+    ],
+    "asyncHeapKinds": [
+      64,
+      79
+    ],
+    "asyncFixedNodes": [
+      90,
+      105
+    ],
+    "asyncContinuations": [
+      136,
+      167
+    ]
+  },
+  "GPUCandidate": "experiments/bootstrap/evidence/next-core-integrated.tgz",
+  "qualifiedCoreManifest": "quickjs-next-core-integration-manifest.json",
+  "conformanceInventory": {
+    "report": "quickjs-full-test262-inventory.json",
+    "tests": 53597,
+    "fixtures": 294,
+    "executed": 0,
+    "scope": "All committed upstream files; ES2025 applicability unreviewed",
+    "propertyHelperInventory": "quickjs-full-test262-property-inventory.json",
+    "afterPropertyHelper": {
+      "eligibleFiles": 33611,
+      "eligibleVariants": 65209,
+      "harnessBlockedFiles": 19986,
+      "executed": 0
+    }
+  },
+  "nextExternalJobs": [
+    {
+      "provider": "claude",
+      "id": "claude-20261003222100-94e3d826",
+      "worktree": "/home/shafqat/.local/state/lanes-external-agents/worktrees/claude-20261003222100-94e3d826",
+      "snapshotCommit": "dc7fea153ce2522cf3defd5d2eb4727bcde5d3e9",
+      "requestedSubagents": 8,
+      "state": "succeeded; reviewed and integrated, GPU pending"
+    },
+    {
+      "provider": "grok",
+      "id": "grok-20261003222105-aa50f092",
+      "worktree": "/home/shafqat/.local/state/lanes-external-agents/worktrees/grok-20261003222105-aa50f092",
+      "snapshotCommit": "62a5d48225c476921a94b3457533cacb4c438470",
+      "requestedSubagents": 8,
+      "state": "failed PROVIDER_EXIT 1; contract-only output, no regex implementation to integrate"
+    }
+  ],
+  "integrationStatus": "stdlib, generators, Array.from, groupBy, species, BigInt pow/width, promises/async integrated in working tree; GPU qualification pending",
+  "activeGPUVerification": {
+    "candidate": "experiments/bootstrap/evidence/integrated-unqualified-candidate.tgz",
+    "includesAsync": true,
+    "status": "blocked: Safari automation session creation times out; no combined GPU report",
+    "evidence": "quickjs-integrated-source-status.json"
+  }
+}

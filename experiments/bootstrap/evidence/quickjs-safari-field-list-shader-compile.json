@@ -1,0 +1,68 @@
+{
+  "outcome": "aborted-resource-pressure",
+  "diagnosticOnly": true,
+  "guestProgramsExecuted": 0,
+  "date": "2026-10-04",
+  "host": "shafqats-MacBook-Air.local",
+  "archive": "/tmp/lanes-m1-field-list-candidate.tgz",
+  "archiveSha256": "17383a7265fb2c33e13351abda14bc2402c8f76bce181076b9b43d3b22e7494a",
+  "browserBundleSha256": "81cf9e9273bc495112b72fe1eb37eeef4bdbd28bfae4883c4f54bd765e061b51",
+  "remoteDirectory": "/tmp/lanes-metadata-verify",
+  "stages": {
+    "controlPipeline": "passed",
+    "runtimeWGSLValidation": "passed",
+    "runtimeComputePipeline": "canceled-before-completion"
+  },
+  "baseline": {
+    "globalSwapMB": 2188.44,
+    "existingCompilerPids": [
+      1413,
+      1568,
+      1569
+    ]
+  },
+  "measurements": [
+    {
+      "elapsedSeconds": 37,
+      "physicalFootprintMB": 612.5,
+      "globalSwapMB": 2052.44
+    },
+    {
+      "elapsedSeconds": 78,
+      "physicalFootprintMB": 689.7,
+      "globalSwapMB": 2059.88
+    },
+    {
+      "elapsedSeconds": 107,
+      "physicalFootprintGB": 3.0,
+      "globalSwapMB": 2636.75
+    },
+    {
+      "elapsedSeconds": 125,
+      "physicalFootprintGB": 4.8,
+      "globalSwapMB": 2970.31
+    }
+  ],
+  "cancellation": {
+    "reason": "Owned compiler physical footprint exceeded 4 GB safety cap",
+    "runnerPid": 2335,
+    "runnerSignal": "SIGTERM",
+    "compilerPid": 2340,
+    "compilerSignal": "SIGKILL",
+    "identityVerified": true
+  },
+  "cleanup": {
+    "runnerAbsent": true,
+    "compilerAbsent": true,
+    "safariDriverReady": true,
+    "globalSwapMBAfterCleanup": 3300.75,
+    "unrelatedCompilerProcessesUntouched": true
+  },
+  "sample": "quickjs-m1-metal-field-list-sample.txt",
+  "limitations": [
+    "Global swap is a system-wide metric, not exclusively attributable to this compiler.",
+    "No semantic or dispatch suites ran because the runtime pipeline did not finish."
+  ],
+  "shaderSha256": "daf791ff374a0a3582cde8f7b484689793bfeb8b378893feed6532e3e6960599",
+  "shaderBytes": 323688
+}

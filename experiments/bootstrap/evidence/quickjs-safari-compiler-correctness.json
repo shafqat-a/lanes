@@ -1,0 +1,1193 @@
+{
+  "date": "2026-10-02T19:53:26.640Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "method": "Fixed semantic expectations validated by fresh Safari realms; admitted fixtures compared on GPU for input and input+1; unsupported iteration remains compiler-rejected; representative TDZ and for-continue closures resumed one instruction per dispatch. Only explicitly flagged fixtures use a documented normative oracle; native differences are retained. Two compiler-delta main-corpus sources are guarded by exact text and rechecked on all nine main inputs.",
+    "backend": "gpu",
+    "nativeReferenceDifferences": [
+      {
+        "feature": "review-captured-const-tdz-throwing-rhs-wins",
+        "native": "wrong",
+        "input": 7,
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-assignment-operators-runtime-semantics-evaluation",
+        "normative": "captured:7"
+      },
+      {
+        "feature": "review-captured-const-tdz-throwing-rhs-wins",
+        "native": "wrong",
+        "input": 8,
+        "spec": "https://tc39.es/ecma262/2025/multipage/ecmascript-language-expressions.html#sec-assignment-operators-runtime-semantics-evaluation",
+        "normative": "captured:8"
+      }
+    ],
+    "checked": 94,
+    "records": [
+      {
+        "status": "passed",
+        "inputs": [
+          1,
+          2
+        ],
+        "values": [
+          "plain-ref1",
+          "plain-ref2"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 96,
+        "expectedValues": [
+          "plain-ref1",
+          "plain-ref2"
+        ],
+        "nativeValues": [
+          "plain-ref1",
+          "plain-ref2"
+        ],
+        "feature": "const-tdz-plain-assign"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          2,
+          3
+        ],
+        "values": [
+          "add-ref2",
+          "add-ref3"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 94,
+        "expectedValues": [
+          "add-ref2",
+          "add-ref3"
+        ],
+        "nativeValues": [
+          "add-ref2",
+          "add-ref3"
+        ],
+        "feature": "const-tdz-compound-add"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          3,
+          4
+        ],
+        "values": [
+          "post-ref3",
+          "post-ref4"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 94,
+        "expectedValues": [
+          "post-ref3",
+          "post-ref4"
+        ],
+        "nativeValues": [
+          "post-ref3",
+          "post-ref4"
+        ],
+        "feature": "const-tdz-postfix-inc"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          4,
+          5
+        ],
+        "values": [
+          "pre-ref4",
+          "pre-ref5"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 94,
+        "expectedValues": [
+          "pre-ref4",
+          "pre-ref5"
+        ],
+        "nativeValues": [
+          "pre-ref4",
+          "pre-ref5"
+        ],
+        "feature": "const-tdz-prefix-inc"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          5,
+          6
+        ],
+        "values": [
+          "block-ref5",
+          "block-ref6"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 104,
+        "expectedValues": [
+          "block-ref5",
+          "block-ref6"
+        ],
+        "nativeValues": [
+          "block-ref5",
+          "block-ref6"
+        ],
+        "feature": "const-tdz-inner-block"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          6,
+          7
+        ],
+        "values": [
+          "arrow-ref6",
+          "arrow-ref7"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 102,
+        "expectedValues": [
+          "arrow-ref6",
+          "arrow-ref7"
+        ],
+        "nativeValues": [
+          "arrow-ref6",
+          "arrow-ref7"
+        ],
+        "feature": "const-tdz-arrow-closure-before-init"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          7,
+          8
+        ],
+        "values": [
+          "fexpr-ref7",
+          "fexpr-ref8"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 102,
+        "expectedValues": [
+          "fexpr-ref7",
+          "fexpr-ref8"
+        ],
+        "nativeValues": [
+          "fexpr-ref7",
+          "fexpr-ref8"
+        ],
+        "feature": "const-tdz-funcexpr-closure-before-init"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          8,
+          9
+        ],
+        "values": [
+          "deep-ref8",
+          "deep-ref9"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 106,
+        "expectedValues": [
+          "deep-ref8",
+          "deep-ref9"
+        ],
+        "nativeValues": [
+          "deep-ref8",
+          "deep-ref9"
+        ],
+        "feature": "const-tdz-closure-two-levels"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          9,
+          10
+        ],
+        "values": [
+          "late-type18",
+          "late-type20"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 112,
+        "expectedValues": [
+          "late-type18",
+          "late-type20"
+        ],
+        "nativeValues": [
+          "late-type18",
+          "late-type20"
+        ],
+        "feature": "const-closure-after-init-typeerror"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          10,
+          11
+        ],
+        "values": [
+          "ref:type10",
+          "ref:type11"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 137,
+        "expectedValues": [
+          "ref:type10",
+          "ref:type11"
+        ],
+        "nativeValues": [
+          "ref:type10",
+          "ref:type11"
+        ],
+        "feature": "const-closure-before-and-after-init"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          11,
+          12
+        ],
+        "values": [
+          "init-type11",
+          "init-type12"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 106,
+        "expectedValues": [
+          "init-type11",
+          "init-type12"
+        ],
+        "nativeValues": [
+          "init-type11",
+          "init-type12"
+        ],
+        "feature": "const-local-after-init-typeerror"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          12,
+          13
+        ],
+        "values": [
+          "rhs-ref13",
+          "rhs-ref14"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 102,
+        "expectedValues": [
+          "rhs-ref13",
+          "rhs-ref14"
+        ],
+        "nativeValues": [
+          "rhs-ref13",
+          "rhs-ref14"
+        ],
+        "feature": "const-tdz-rhs-side-effect-first"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          13,
+          14
+        ],
+        "values": [
+          "sw-ref13",
+          "nomatch14"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 101,
+        "expectedValues": [
+          "sw-ref13",
+          "nomatch14"
+        ],
+        "nativeValues": [
+          "sw-ref13",
+          "nomatch14"
+        ],
+        "feature": "const-tdz-switch-fallthrough"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          14,
+          15
+        ],
+        "values": [
+          "loop-ref0ref114",
+          "loop-ref0ref115"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 309,
+        "expectedValues": [
+          "loop-ref0ref114",
+          "loop-ref0ref115"
+        ],
+        "nativeValues": [
+          "loop-ref0ref114",
+          "loop-ref0ref115"
+        ],
+        "feature": "const-tdz-for-body"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          15,
+          16
+        ],
+        "values": [
+          "name-ReferenceError15",
+          "name-ReferenceError16"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 92,
+        "expectedValues": [
+          "name-ReferenceError15",
+          "name-ReferenceError16"
+        ],
+        "nativeValues": [
+          "name-ReferenceError15",
+          "name-ReferenceError16"
+        ],
+        "feature": "const-tdz-error-name"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          16,
+          17
+        ],
+        "values": [
+          "iname-TypeError16",
+          "iname-TypeError17"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 96,
+        "expectedValues": [
+          "iname-TypeError16",
+          "iname-TypeError17"
+        ],
+        "nativeValues": [
+          "iname-TypeError16",
+          "iname-TypeError17"
+        ],
+        "feature": "const-init-error-name"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          17,
+          18
+        ],
+        "values": [
+          "fn-TypeError17",
+          "fn-TypeError18"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 98,
+        "expectedValues": [
+          "fn-TypeError17",
+          "fn-TypeError18"
+        ],
+        "nativeValues": [
+          "fn-TypeError17",
+          "fn-TypeError18"
+        ],
+        "feature": "strict-funcexpr-name-assign-typeerror"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          1,
+          2
+        ],
+        "values": [
+          "1,2,3",
+          "2,3,4"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 333,
+        "expectedValues": [
+          "1,2,3",
+          "2,3,4"
+        ],
+        "nativeValues": [
+          "1,2,3",
+          "2,3,4"
+        ],
+        "feature": "for-let-continue-per-iteration"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          2,
+          3
+        ],
+        "values": [
+          "u024",
+          "u036"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 314,
+        "expectedValues": [
+          "u024",
+          "u036"
+        ],
+        "nativeValues": [
+          "u024",
+          "u036"
+        ],
+        "feature": "for-let-continue-unconditional"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          10,
+          11
+        ],
+        "values": [
+          "10-11-12-13",
+          "11-12-13-14"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 447,
+        "expectedValues": [
+          "10-11-12-13",
+          "11-12-13-14"
+        ],
+        "nativeValues": [
+          "10-11-12-13",
+          "11-12-13-14"
+        ],
+        "feature": "for-let-continue-conditional-mixed"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          3,
+          4
+        ],
+        "values": [
+          "nu3,6,9|4,5,6",
+          "nu4,8,12|5,6,7"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 603,
+        "expectedValues": [
+          "nu3,6,9|4,5,6",
+          "nu4,8,12|5,6,7"
+        ],
+        "nativeValues": [
+          "nu3,6,9|4,5,6",
+          "nu4,8,12|5,6,7"
+        ],
+        "feature": "for-let-continue-no-update"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          5,
+          6
+        ],
+        "values": [
+          "ib567",
+          "ib678"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 306,
+        "expectedValues": [
+          "ib567",
+          "ib678"
+        ],
+        "nativeValues": [
+          "ib567",
+          "ib678"
+        ],
+        "feature": "for-let-continue-no-test-break"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          6,
+          7
+        ],
+        "values": [
+          "nn6,7,8",
+          "nn7,8,9"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 319,
+        "expectedValues": [
+          "nn6,7,8",
+          "nn7,8,9"
+        ],
+        "nativeValues": [
+          "nn6,7,8",
+          "nn7,8,9"
+        ],
+        "feature": "for-let-continue-no-test-no-update"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          4,
+          5
+        ],
+        "values": [
+          "ls432",
+          "ls543"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 314,
+        "expectedValues": [
+          "ls432",
+          "ls543"
+        ],
+        "nativeValues": [
+          "ls432",
+          "ls543"
+        ],
+        "feature": "for-let-labeled-continue-same-loop"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          7,
+          8
+        ],
+        "values": [
+          "lo7:00 10 11 20 21 22 ",
+          "lo8:00 10 11 20 21 22 "
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 1326,
+        "expectedValues": [
+          "lo7:00 10 11 20 21 22 ",
+          "lo8:00 10 11 20 21 22 "
+        ],
+        "nativeValues": [
+          "lo7:00 10 11 20 21 22 ",
+          "lo8:00 10 11 20 21 22 "
+        ],
+        "feature": "for-let-labeled-continue-from-inner-for-let"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          6,
+          7
+        ],
+        "values": [
+          "lw1,8,15",
+          "lw1,9,17"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 399,
+        "expectedValues": [
+          "lw1,8,15",
+          "lw1,9,17"
+        ],
+        "nativeValues": [
+          "lw1,8,15",
+          "lw1,9,17"
+        ],
+        "feature": "for-let-labeled-continue-from-inner-while"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          3,
+          4
+        ],
+        "values": [
+          "tf012:345",
+          "tf012:456"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 585,
+        "expectedValues": [
+          "tf012:345",
+          "tf012:456"
+        ],
+        "nativeValues": [
+          "tf012:345",
+          "tf012:456"
+        ],
+        "feature": "for-let-continue-in-try-finally"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          2,
+          3
+        ],
+        "values": [
+          "lf01:2,3",
+          "lf01:3,4"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 413,
+        "expectedValues": [
+          "lf01:2,3",
+          "lf01:3,4"
+        ],
+        "nativeValues": [
+          "lf01:2,3",
+          "lf01:3,4"
+        ],
+        "feature": "for-let-labeled-continue-through-finally"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          8,
+          9
+        ],
+        "values": [
+          "c0:0/2:8/4:16",
+          "c0:0/2:9/4:18"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 606,
+        "expectedValues": [
+          "c0:0/2:8/4:16",
+          "c0:0/2:9/4:18"
+        ],
+        "nativeValues": [
+          "c0:0/2:8/4:16",
+          "c0:0/2:9/4:18"
+        ],
+        "feature": "for-let-continue-in-catch"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          9,
+          10
+        ],
+        "values": [
+          "bk0.0,9.1,18.2",
+          "bk0.0,10.1,20.2"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 588,
+        "expectedValues": [
+          "bk0.0,9.1,18.2",
+          "bk0.0,10.1,20.2"
+        ],
+        "nativeValues": [
+          "bk0.0,9.1,18.2",
+          "bk0.0,10.1,20.2"
+        ],
+        "feature": "for-let-continue-from-nested-block"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          1,
+          2
+        ],
+        "values": [
+          "up1,2,3|11,21,31",
+          "up2,3,4|12,22,32"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 603,
+        "expectedValues": [
+          "up1,2,3|11,21,31",
+          "up2,3,4|12,22,32"
+        ],
+        "nativeValues": [
+          "up1,2,3|11,21,31",
+          "up2,3,4|12,22,32"
+        ],
+        "feature": "for-let-continue-closure-in-update"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          2,
+          3
+        ],
+        "values": [
+          "tv2/10,3/9,4/8",
+          "tv3/10,4/9,5/8"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 596,
+        "expectedValues": [
+          "tv2/10,3/9,4/8",
+          "tv3/10,4/9,5/8"
+        ],
+        "nativeValues": [
+          "tv2/10,3/9,4/8",
+          "tv3/10,4/9,5/8"
+        ],
+        "feature": "for-let-continue-two-vars"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          5,
+          6
+        ],
+        "values": [
+          "m3226",
+          "m3227"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 193,
+        "expectedValues": [
+          "m3226",
+          "m3227"
+        ],
+        "nativeValues": [
+          "m3226",
+          "m3227"
+        ],
+        "feature": "for-let-continue-closure-mutates-copy"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          3,
+          4
+        ],
+        "values": [
+          "nc18",
+          "nc24"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 187,
+        "expectedValues": [
+          "nc18",
+          "nc24"
+        ],
+        "nativeValues": [
+          "nc18",
+          "nc24"
+        ],
+        "feature": "for-let-continue-no-capture-control"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          4,
+          5
+        ],
+        "values": [
+          "v12,12,12",
+          "v15,15,15"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 303,
+        "expectedValues": [
+          "v12,12,12",
+          "v15,15,15"
+        ],
+        "nativeValues": [
+          "v12,12,12",
+          "v15,15,15"
+        ],
+        "feature": "for-var-continue-shared-control"
+      },
+      {
+        "feature": "for-of-const-continue-per-iteration",
+        "status": "rejected-as-expected",
+        "error": "Unsupported QuickJS instruction: for_of_start"
+      },
+      {
+        "feature": "for-in-const-continue-per-iteration",
+        "status": "rejected-as-expected",
+        "error": "Unsupported QuickJS instruction: for_in_start"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          7,
+          8
+        ],
+        "values": [
+          "rhs:7",
+          "rhs:8"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 99,
+        "expectedValues": [
+          "rhs:7",
+          "rhs:8"
+        ],
+        "nativeValues": [
+          "rhs:7",
+          "rhs:8"
+        ],
+        "feature": "review-const-tdz-throwing-rhs-wins"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          7,
+          8
+        ],
+        "values": [
+          "captured:7",
+          "captured:8"
+        ],
+        "collections": 0,
+        "normativeOverride": true,
+        "maxSteps": 103,
+        "expectedValues": [
+          "captured:7",
+          "captured:8"
+        ],
+        "nativeValues": [
+          "wrong",
+          "wrong"
+        ],
+        "feature": "review-captured-const-tdz-throwing-rhs-wins"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          7,
+          8
+        ],
+        "values": [
+          "0,1,7|dT|7",
+          "0,1,8|dT|8"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 395,
+        "expectedValues": [
+          "0,1,7|dT|7",
+          "0,1,8|dT|8"
+        ],
+        "nativeValues": [
+          "0,1,7|dT|7",
+          "0,1,8|dT|8"
+        ],
+        "feature": "review-initialized-const-logical-short-circuit"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          7,
+          8
+        ],
+        "values": [
+          "8,9,10",
+          "9,10,11"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 692,
+        "expectedValues": [
+          "8,9,10",
+          "9,10,11"
+        ],
+        "nativeValues": [
+          "8,9,10",
+          "9,10,11"
+        ],
+        "feature": "review-continue-without-update"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          7,
+          8
+        ],
+        "values": [
+          "7,8,9",
+          "8,9,10"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 693,
+        "expectedValues": [
+          "7,8,9",
+          "8,9,10"
+        ],
+        "nativeValues": [
+          "7,8,9",
+          "8,9,10"
+        ],
+        "feature": "review-continue-without-test"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          7,
+          8
+        ],
+        "values": [
+          "7,8,9|0:0;1:0;2:0;",
+          "8,9,10|0:0;1:0;2:0;"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 1242,
+        "expectedValues": [
+          "7,8,9|0:0;1:0;2:0;",
+          "8,9,10|0:0;1:0;2:0;"
+        ],
+        "nativeValues": [
+          "7,8,9|0:0;1:0;2:0;",
+          "8,9,10|0:0;1:0;2:0;"
+        ],
+        "feature": "review-continue-outer-label-from-nested-loop"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          7,
+          8
+        ],
+        "values": [
+          "8,10,12|012",
+          "9,11,13|012"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 981,
+        "expectedValues": [
+          "8,10,12|012",
+          "9,11,13|012"
+        ],
+        "nativeValues": [
+          "8,10,12|012",
+          "9,11,13|012"
+        ],
+        "feature": "review-continue-finally-mutates-head"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          7,
+          8
+        ],
+        "values": [
+          "7:7,8:17,9:27",
+          "8:8,9:18,10:28"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 969,
+        "expectedValues": [
+          "7:7,8:17,9:27",
+          "8:8,9:18,10:28"
+        ],
+        "nativeValues": [
+          "7:7,8:17,9:27",
+          "8:8,9:18,10:28"
+        ],
+        "feature": "review-continue-head-and-block-captures"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          7,
+          8
+        ],
+        "values": [
+          "7,8,9,10|8,9,10",
+          "8,9,10,11|9,10,11"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 1560,
+        "expectedValues": [
+          "7,8,9,10|8,9,10",
+          "8,9,10,11|9,10,11"
+        ],
+        "nativeValues": [
+          "7,8,9,10|8,9,10",
+          "8,9,10,11|9,10,11"
+        ],
+        "feature": "review-continue-test-and-update-captures"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          1,
+          2
+        ],
+        "values": [
+          "ref1",
+          "ref2"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 94,
+        "expectedValues": [
+          "ref1",
+          "ref2"
+        ],
+        "nativeValues": [
+          "ref1",
+          "ref2"
+        ],
+        "feature": "original:const-assign-before-init-referenceerror"
+      },
+      {
+        "status": "passed",
+        "inputs": [
+          1,
+          2
+        ],
+        "values": [
+          "1,2,3",
+          "2,3,4"
+        ],
+        "collections": 0,
+        "normativeOverride": false,
+        "maxSteps": 333,
+        "expectedValues": [
+          "1,2,3",
+          "2,3,4"
+        ],
+        "nativeValues": [
+          "1,2,3",
+          "2,3,4"
+        ],
+        "feature": "original:for-let-continue-per-iteration"
+      }
+    ],
+    "gpuPrograms": 46,
+    "elapsedMs": 1050,
+    "resumptions": [
+      {
+        "dispatches": 137,
+        "feature": "const-closure-before-and-after-init",
+        "input": 11,
+        "expected": "ref:type11"
+      },
+      {
+        "dispatches": 333,
+        "feature": "for-let-continue-per-iteration",
+        "input": 2,
+        "expected": "2,3,4"
+      }
+    ],
+    "compilerRejectedPrograms": 2,
+    "originalRegressionPrograms": 2,
+    "compiler": "QuickJS/Wasm with local correctness patches",
+    "resumptionPrograms": 2,
+    "fixturePrograms": 48,
+    "deltaValues": 18,
+    "deltaResults": [
+      {
+        "checked": 9,
+        "index": 216,
+        "source": "function f(x) { try { const a=x; a=3; } catch(e) { return 19; } }",
+        "inputs": [
+          -17,
+          0,
+          0,
+          0.1,
+          2,
+          100,
+          5e-324,
+          null,
+          null
+        ],
+        "values": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ]
+      },
+      {
+        "checked": 9,
+        "index": 1101,
+        "source": "function check(x){return (function f(x){const c=x;try{c=c+1;}catch(e){return (e instanceof TypeError)+\":\"+c;}return \"mutated\";})(7);}",
+        "inputs": [
+          -17,
+          0,
+          0,
+          0.1,
+          2,
+          100,
+          5e-324,
+          null,
+          null
+        ],
+        "values": [
+          "true:7",
+          "true:7",
+          "true:7",
+          "true:7",
+          "true:7",
+          "true:7",
+          "true:7",
+          "true:7",
+          "true:7"
+        ]
+      }
+    ],
+    "deltaPrograms": 2
+  }
+}

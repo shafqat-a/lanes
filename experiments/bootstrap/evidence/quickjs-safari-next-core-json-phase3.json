@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-03T21:14:56.402Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "programs": 20,
+    "checked": 60,
+    "unsupportedChecks": 4,
+    "results": [
+      {
+        "feature": "json-phase3-bigint-replacer-rescue",
+        "checked": 3,
+        "maxSteps": 568
+      },
+      {
+        "feature": "json-phase3-bigint-tojson-before-replacer",
+        "checked": 3,
+        "maxSteps": 971
+      },
+      {
+        "feature": "json-phase3-bigint-without-rescue-typeerror",
+        "checked": 3,
+        "maxSteps": 446
+      },
+      {
+        "feature": "json-phase3-bigint-wrapper-without-rescue-typeerror",
+        "checked": 3,
+        "maxSteps": 436
+      },
+      {
+        "feature": "json-phase3-bigint-wrapper-tojson",
+        "checked": 3,
+        "maxSteps": 1071
+      },
+      {
+        "feature": "json-phase3-reviver-bigint-result",
+        "checked": 3,
+        "maxSteps": 8554
+      },
+      {
+        "feature": "json-phase3-symbol-root",
+        "checked": 3,
+        "maxSteps": 351
+      },
+      {
+        "feature": "json-phase3-symbol-array",
+        "checked": 3,
+        "maxSteps": 1014
+      },
+      {
+        "feature": "json-phase3-symbol-object-value",
+        "checked": 3,
+        "maxSteps": 1023
+      },
+      {
+        "feature": "json-phase3-symbol-key-getter-ignored",
+        "checked": 3,
+        "maxSteps": 1073
+      },
+      {
+        "feature": "json-phase3-symbol-replacer-root",
+        "checked": 3,
+        "maxSteps": 823
+      },
+      {
+        "feature": "json-phase3-symbol-replacer-results",
+        "checked": 3,
+        "maxSteps": 1514
+      },
+      {
+        "feature": "json-phase3-symbol-replacer-list",
+        "checked": 3,
+        "maxSteps": 1491
+      },
+      {
+        "feature": "json-phase3-symbol-wrapper-own-strings",
+        "checked": 3,
+        "maxSteps": 913
+      },
+      {
+        "feature": "json-phase3-symbol-prototype-tojson-not-called",
+        "checked": 3,
+        "maxSteps": 800
+      },
+      {
+        "feature": "json-phase3-symbol-space-ignored",
+        "checked": 3,
+        "maxSteps": 836
+      },
+      {
+        "feature": "json-phase3-symbol-parse-typeerror",
+        "checked": 3,
+        "maxSteps": 157
+      },
+      {
+        "feature": "json-phase3-reviver-add-symbol-key",
+        "checked": 3,
+        "maxSteps": 9552
+      },
+      {
+        "feature": "json-phase3-reviver-insert-symbol-key-object",
+        "checked": 3,
+        "maxSteps": 18423
+      },
+      {
+        "feature": "json-phase3-reviver-returns-symbol",
+        "checked": 3,
+        "maxSteps": 9889
+      }
+    ],
+    "boundaries": [
+      {
+        "feature": "json-phase3-parse-symbol-toprimitive",
+        "nativeExpected": 2,
+        "status": "explicitly unsupported; not a conformance pass"
+      },
+      {
+        "feature": "json-phase3-stringify-boxed-string-toprimitive",
+        "nativeExpected": "\"b\"",
+        "status": "explicitly unsupported; not a conformance pass"
+      },
+      {
+        "feature": "json-phase3-stringify-space-toprimitive",
+        "nativeExpected": "[\n  1\n]",
+        "status": "explicitly unsupported; not a conformance pass"
+      },
+      {
+        "feature": "json-phase3-bigint-parse-source",
+        "nativeExpected": 123,
+        "status": "explicitly unsupported; not a conformance pass"
+      }
+    ],
+    "elapsedMs": 1541
+  }
+}

@@ -1,0 +1,11 @@
+--- a/experiments/quickjs-runtime/shader.js
++++ b/experiments/quickjs-runtime/shader.js
+@@ -1396,1 +1396,5 @@
+     if(op==${OP.define_array_el}u||op==${OP.define_method_computed}u||op==${OP.set_name_computed}u||op==${OP.define_class_method_computed}u||op==${OP.put_super_value}u){keySlot=states[l].sp-2u;}
++    // Private field initializers (#f = () => 0): QuickJS names the anonymous
++    // function with set_name_computed over the kind-33 private name. That is
++    // not a property key: never run ToPropertyKey (builtin 900) on it.
++    if(op==${OP.set_name_computed}u&&states[l].sp>=2u){let named=states[l].stack[states[l].sp-2u];if(named.z==4u&&states[l].heap[named.x].kind==33u){keySlot=0xffffffffu;}}
+@@ -1503,1 +1507,1 @@
+-      ${cases('set_name_computed', 'let key=keyOf(l,states[l].stack[states[l].sp-2u]);if(states[l].status!=0u){break;}let name=keyName(l,key);functionName(l,peek(l),name,false);')}
++      ${cases('set_name_computed', 'let named=states[l].stack[states[l].sp-2u];if(named.z==4u&&states[l].heap[named.x].kind==33u){functionName(l,peek(l),image[states[l].heap[named.x].value.x],false);}else{let key=keyOf(l,named);if(states[l].status!=0u){break;}functionName(l,peek(l),keyName(l,key),false);}')}

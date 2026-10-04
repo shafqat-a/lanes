@@ -1,0 +1,48 @@
+const cases=[];
+const add=(feature,body,expected=true,extra={})=>cases.push({feature:'array-from-'+feature,source:`function f(x){${body}}`,input:3,expected,...extra});
+add('dense-array-holes','const a=Array.from([,x,,]);return a.length===3&&Object.hasOwn(a,"0")&&Object.hasOwn(a,"2")&&a[1]===x;');
+add('string-codepoints','const a=Array.from("a\\uD83D\\uDE00\\uD800");return a.length===3&&a[1].length===2&&a[2].charCodeAt(0)===55296;');
+add('array-like-inherited','const a=Object.create({0:x});a.length=2;const r=Array.from(a);return r[0]===x&&r[1]===undefined&&Object.hasOwn(r,"1");');
+add('null-iterator-fallback','const a={0:x,length:1,[Symbol.iterator]:null};return Array.from(a)[0]===x;');
+add('mapper-validation-first','let log="";const a={get [Symbol.iterator](){log+="i";throw 9;}};try{Array.from(a,{});}catch(e){return e instanceof TypeError&&log==="";}return false;');
+add('null-source-typeerror','try{Array.from(null);}catch(e){return e instanceof TypeError;}return false;');
+add('primitive-source-empty','return Array.from(3).length===0&&Array.from(2n).length===0&&Array.from(Symbol()).length===0;');
+add('noncallable-iterator','let calls=0;function C(){calls++;}try{Array.from.call(C,{[Symbol.iterator]:4});}catch(e){return e instanceof TypeError&&calls===0;}return false;');
+add('arrow-constructor-fallback','const a=Array.from.call(()=>{throw 9;},{0:x,length:1});return Array.isArray(a)&&a[0]===x;');
+add('constructor-array-like-arguments','let count=-1,len=-1;function C(n){count=arguments.length;len=n;}const a=Array.from.call(C,{0:x,length:1.9});return count===1&&len===1&&a instanceof C&&a[0]===x&&a.length===1;');
+add('constructor-iterable-arguments','let count=-1;function C(){count=arguments.length;}const a=Array.from.call(C,[x]);return count===0&&a instanceof C&&a[0]===x&&a.length===1;');
+add('class-constructor','class C{constructor(n){this.n=n;}}const a=Array.from.call(C,{0:x,length:1});return a instanceof C&&a.n===1&&a[0]===x;');
+add('bound-constructor','function C(prefix,n){this.v=prefix+n;}const B=C.bind(null,5);const a=Array.from.call(B,{0:x,length:1});return a instanceof C&&a.v===6&&a[0]===x;');
+add('getter-constructor-iterator-order','let log="";const iterator={get next(){log+="n";return function(){log+="s";return {done:true};};}};const a={get [Symbol.iterator](){log+="g";return function(){log+="i";return iterator;};}};function C(){log+="c";a[Symbol.iterator]=null;}Array.from.call(C,a);return log==="gcins";');
+add('array-like-length-before-constructor','let log="";const a={get length(){log+="l";return {valueOf(){log+="v";return 1;}};},get 0(){log+="g";return x;}};function C(n){log+="c"+n;}Array.from.call(C,a);return log==="lvc1g";');
+add('mapping-receiver-two-arguments','const receiver={};let log="";const a=Array.from([x,x+1],function(v,k){"use strict";log+=(this===receiver)+":"+arguments.length+":"+k+";";return v+k;},receiver);return log==="true:2:0;true:2:1;"&&a[1]===x+2;');
+add('strict-mapper-undefined-this','return Array.from([x],function(v){"use strict";return this===undefined&&v===x;})[0];');
+add('array-like-snapshot-length','const a={0:x,1:x+1,length:2};const r=Array.from(a,function(v,k){a.length=0;if(k===0)a[1]=7;return v;});return r.length===2&&r[0]===x&&r[1]===7;');
+add('iterator-next-cached','let i=0;const iterator={next(){this.next=function(){throw 9;};return i++===0?{done:false,value:x}:{done:true};}};const a=Array.from({[Symbol.iterator](){return iterator;}});return a.length===1&&a[0]===x;');
+add('done-skips-value','const a=Array.from({[Symbol.iterator](){return {next(){return {done:true,get value(){throw 9;}};}};}});return a.length===0;');
+add('mapper-throw-closes-original-wins','const token={},other={};let log="";const a={[Symbol.iterator](){return {next(){return {value:x};},get return(){log+="g";return function(){log+="r";throw other;};}};}};try{Array.from(a,function(){throw token;});}catch(e){return e===token&&log==="gr";}return false;');
+add('close-getter-throw-original-wins','const token={};let closed=0;const a={[Symbol.iterator](){return {next(){return {value:x};},get return(){closed++;throw 8;}};}};try{Array.from(a,function(){throw token;});}catch(e){return e===token&&closed===1;}return false;');
+add('close-primitive-result-original-wins','const token={};let closed=0;const a={[Symbol.iterator](){return {next(){return {value:x};},return(){closed++;return 7;}};}};try{Array.from(a,function(){throw token;});}catch(e){return e===token&&closed===1;}return false;');
+add('define-failure-closes','let closed=0;const a={[Symbol.iterator](){return {next(){return {value:x};},return(){closed++;return {};}};}};function C(){Object.preventExtensions(this);}try{Array.from.call(C,a);}catch(e){return e instanceof TypeError&&closed===1;}return false;');
+add('define-bypasses-inherited-setter','let calls=0;function C(){}Object.defineProperty(C.prototype,"0",{set(v){calls++;}});const a=Array.from.call(C,[x]);const d=Object.getOwnPropertyDescriptor(a,"0");return calls===0&&d.value===x&&d.writable&&d.enumerable&&d.configurable;');
+add('next-throw-does-not-close','const token={};let closed=0;const a={[Symbol.iterator](){return {next(){throw token;},return(){closed++;return {};}};}};try{Array.from(a);}catch(e){return e===token&&closed===0;}return false;');
+add('value-getter-throw-does-not-close','const token={};let closed=0;const a={[Symbol.iterator](){return {next(){return {done:false,get value(){throw token;}};},return(){closed++;return {};}};}};try{Array.from(a);}catch(e){return e===token&&closed===0;}return false;');
+add('done-getter-throw-does-not-close','const token={};let closed=0;const a={[Symbol.iterator](){return {next(){return {get done(){throw token;}};},return(){closed++;return {};}};}};try{Array.from(a);}catch(e){return e===token&&closed===0;}return false;');
+add('length-set-failure-after-done-no-close','let closed=0;function C(){Object.defineProperty(this,"length",{value:0,writable:false});}const a={[Symbol.iterator](){return {next(){return {done:true};},return(){closed++;return {};}};}};try{Array.from.call(C,a);}catch(e){return e instanceof TypeError&&closed===0;}return false;');
+add('length-coercion-bigint-typeerror','let calls=0;function C(){calls++;}try{Array.from.call(C,{length:1n});}catch(e){return e instanceof TypeError&&calls===0;}return false;');
+add('negative-and-nan-length','return Array.from({length:-3}).length===0&&Array.from({length:NaN}).length===0;');
+add('oversize-default-array-rangeerror','try{Array.from({length:4294967296});}catch(e){return e instanceof RangeError;}return false;');
+add('public-helper-mutation-immunity','const from=Array.from;Object.defineProperty=function(){throw 9;};Function.prototype.call=function(){throw 8;};const a=from([x],function(v){return v+1;});return a[0]===x+1;');
+add('symbol-and-bigint-construct-throws','let count=0;try{Array.from.call(Symbol,[x]);}catch(e){if(e instanceof TypeError)count++;}try{Array.from.call(BigInt,{0:x,length:1});}catch(e){if(e instanceof TypeError)count++;}return count===2;');
+add('constructor-throw-before-open','const token={};let log="";const a={get [Symbol.iterator](){log+="g";return function(){log+="i";return {};};}};function C(){log+="c";throw token;}try{Array.from.call(C,a);}catch(e){return e===token&&log==="gc";}return false;');
+add('next-not-callable-no-close','let closed=0;const a={[Symbol.iterator](){return {next:7,return(){closed++;return {};}};}};try{Array.from(a);}catch(e){return e instanceof TypeError&&closed===0;}return false;');
+add('primitive-step-no-close','let closed=0;const a={[Symbol.iterator](){return {next(){return 4;},return(){closed++;return {};}};}};try{Array.from(a);}catch(e){return e instanceof TypeError&&closed===0;}return false;');
+add('poisoned-descriptor-prototype','Object.defineProperty(Object.prototype,"get",{get(){throw 9;},configurable:true});const a=Array.from([x]);return a[0]===x;');
+add('resumption','let log="";const input={[Symbol.iterator](){let i=0;return {next(){log+="n";return i<3?{value:++i}:{done:true};},return(){log+="r";return {};}};}};const a=Array.from(input,function(v,k){log+="m"+k;return v+x;});return log+":"+a.join(",");','nm0nm1nm2n:4,5,6',{resumption:true});
+add('gc-retained-constructor-and-record','let i=0;function C(){this.marker=x;}const a=Array.from.call(C,{[Symbol.iterator](){return {next(){return i++<3?{value:i}:{done:true};}};}},function(v){for(let j=0;j<240;j++){const waste={a:j,b:j+1};}return v+x;});return a.marker===x&&a[0]===x+1&&a[2]===x+3&&a.length===3;',true,{requiresGC:true});
+export const arrayFromCases=Object.freeze(cases);
+export const arrayFromResourceCases=Object.freeze([{feature:'array-from-output-heap-limit',source:'function f(){return Array.from({length:100000});}',input:0}]);
+export const arrayFromCollectionsCases=Object.freeze([
+ {feature:'array-from-map-entries',source:'function f(x){const a=Array.from(new Map([["a",x],["b",x+1]]));return a[0][0]==="a"&&a[1][1]===x+1;}',input:3,expected:true},
+ {feature:'array-from-set-values',source:'function f(x){return Array.from(new Set([x,x,x+1])).join(":")===x+":"+(x+1);}',input:3,expected:true},
+]);

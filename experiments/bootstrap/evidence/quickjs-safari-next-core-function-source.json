@@ -1,0 +1,217 @@
+{
+  "date": "2026-10-03T21:11:07.168Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "resourceChecks": 1,
+    "programs": 31,
+    "checked": 151,
+    "resumptionDispatches": 4897,
+    "elapsedMs": 3326,
+    "results": [
+      {
+        "feature": "declaration comments",
+        "checked": 5,
+        "maxSteps": 4,
+        "collections": 0
+      },
+      {
+        "feature": "anonymous expression",
+        "checked": 5,
+        "maxSteps": 3,
+        "collections": 0
+      },
+      {
+        "feature": "arrow expression",
+        "checked": 5,
+        "maxSteps": 3,
+        "collections": 0
+      },
+      {
+        "feature": "arrow block",
+        "checked": 5,
+        "maxSteps": 3,
+        "collections": 0
+      },
+      {
+        "feature": "UTF16 comment",
+        "checked": 5,
+        "maxSteps": 4,
+        "collections": 0
+      },
+      {
+        "feature": "CRLF source",
+        "checked": 5,
+        "maxSteps": 4,
+        "collections": 0
+      },
+      {
+        "feature": "object method",
+        "checked": 5,
+        "maxSteps": 9,
+        "collections": 0
+      },
+      {
+        "feature": "getter",
+        "checked": 5,
+        "maxSteps": 70,
+        "collections": 0
+      },
+      {
+        "feature": "setter",
+        "checked": 5,
+        "maxSteps": 70,
+        "collections": 0
+      },
+      {
+        "feature": "class constructor",
+        "checked": 5,
+        "maxSteps": 17,
+        "collections": 0
+      },
+      {
+        "feature": "implicit class constructor",
+        "checked": 5,
+        "maxSteps": 17,
+        "collections": 0
+      },
+      {
+        "feature": "class static method",
+        "checked": 5,
+        "maxSteps": 20,
+        "collections": 0
+      },
+      {
+        "feature": "class private method",
+        "checked": 5,
+        "maxSteps": 57,
+        "collections": 0
+      },
+      {
+        "feature": "inferred name unchanged",
+        "checked": 5,
+        "maxSteps": 7,
+        "collections": 0
+      },
+      {
+        "feature": "name getter never read",
+        "checked": 5,
+        "maxSteps": 174,
+        "collections": 0
+      },
+      {
+        "feature": "builtin Object",
+        "checked": 5,
+        "maxSteps": 2266,
+        "collections": 0
+      },
+      {
+        "feature": "builtin Array map",
+        "checked": 5,
+        "maxSteps": 2046,
+        "collections": 0
+      },
+      {
+        "feature": "builtin String uppercase",
+        "checked": 5,
+        "maxSteps": 2638,
+        "collections": 0
+      },
+      {
+        "feature": "builtin method",
+        "checked": 5,
+        "maxSteps": 2416,
+        "collections": 0
+      },
+      {
+        "feature": "builtin empty Function prototype",
+        "checked": 5,
+        "maxSteps": 1823,
+        "collections": 0
+      },
+      {
+        "feature": "native name mutation ignored",
+        "checked": 5,
+        "maxSteps": 2435,
+        "collections": 0
+      },
+      {
+        "feature": "bound function native source",
+        "checked": 5,
+        "maxSteps": 1569,
+        "collections": 0
+      },
+      {
+        "feature": "incompatible undefined",
+        "checked": 5,
+        "maxSteps": 14,
+        "collections": 0
+      },
+      {
+        "feature": "incompatible null",
+        "checked": 5,
+        "maxSteps": 14,
+        "collections": 0
+      },
+      {
+        "feature": "incompatible 1",
+        "checked": 5,
+        "maxSteps": 14,
+        "collections": 0
+      },
+      {
+        "feature": "incompatible \"x\"",
+        "checked": 5,
+        "maxSteps": 14,
+        "collections": 0
+      },
+      {
+        "feature": "incompatible {}",
+        "checked": 5,
+        "maxSteps": 14,
+        "collections": 0
+      },
+      {
+        "feature": "method metadata",
+        "checked": 5,
+        "maxSteps": 95,
+        "collections": 0
+      },
+      {
+        "feature": "private method compound reads then throws",
+        "checked": 5,
+        "maxSteps": 318,
+        "collections": 0
+      },
+      {
+        "feature": "256 UTF16 exact boundary",
+        "checked": 5,
+        "maxSteps": 4,
+        "collections": 0
+      }
+    ],
+    "nativeReferenceDifferences": [],
+    "gaps": [
+      "Sources over 256 UTF-16 units explicitly hit Resource limit; source-less synthetic internal functions remain Unsupported"
+    ]
+  }
+}

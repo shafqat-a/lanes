@@ -1,0 +1,367 @@
+{
+  "outcome": "completed-with-failures",
+  "report": {
+    "backend": "gpu",
+    "checked": 10,
+    "failures": [
+      {
+        "name": "concat-inherited-object-species",
+        "budget": 1,
+        "message": "{\"input\":3,\"value\":7,\"expected\":7,\"expectedSettlement\":\"none\"}"
+      },
+      {
+        "name": "concat-inherited-object-species",
+        "budget": 4096,
+        "message": "{\"input\":3,\"value\":7,\"expected\":7,\"expectedSettlement\":\"none\"}"
+      },
+      {
+        "name": "object-species-absent",
+        "budget": 1,
+        "message": "{\"input\":3,\"value\":true,\"expected\":true,\"expectedSettlement\":\"none\"}"
+      },
+      {
+        "name": "object-species-absent",
+        "budget": 4096,
+        "message": "{\"input\":3,\"value\":true,\"expected\":true,\"expectedSettlement\":\"none\"}"
+      },
+      {
+        "name": "object-species-inherited-getter",
+        "budget": 1,
+        "message": "{\"input\":3,\"value\":true,\"expected\":true,\"expectedSettlement\":\"none\"}"
+      },
+      {
+        "name": "object-species-inherited-getter",
+        "budget": 4096,
+        "message": "{\"input\":3,\"value\":true,\"expected\":true,\"expectedSettlement\":\"none\"}"
+      },
+      {
+        "name": "finally-generic-object-constructor",
+        "budget": 1,
+        "message": "{\"input\":3,\"value\":\"function:function:1:3\",\"expected\":\"function:function:1:3\",\"expectedSettlement\":\"none\"}"
+      },
+      {
+        "name": "finally-generic-object-constructor",
+        "budget": 4096,
+        "message": "{\"input\":3,\"value\":\"function:function:1:3\",\"expected\":\"function:function:1:3\",\"expectedSettlement\":\"none\"}"
+      }
+    ],
+    "records": [
+      {
+        "name": "resolve-object-constructor-mismatch",
+        "budget": 1,
+        "values": [
+          "1:false:3:2",
+          "1:false:4:2"
+        ],
+        "settlements": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "steps": [
+          1648,
+          1648
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "resolve-object-constructor-mismatch",
+        "budget": 4096,
+        "values": [
+          "1:false:3:2",
+          "1:false:4:2"
+        ],
+        "settlements": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "steps": [
+          1648,
+          1648
+        ],
+        "collections": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "gc-bounded-pending-chain",
+        "budget": 4096,
+        "values": [
+          11,
+          12
+        ],
+        "settlements": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "steps": [
+          15209,
+          15209
+        ],
+        "collections": [
+          4,
+          4
+        ]
+      },
+      {
+        "name": "gc-bounded-allocation-inside-handlers",
+        "budget": 4096,
+        "values": [
+          7,
+          8
+        ],
+        "settlements": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "steps": [
+          26342,
+          26342
+        ],
+        "collections": [
+          5,
+          5
+        ]
+      },
+      {
+        "name": "bounded-job-chain-under-gc-pressure",
+        "budget": 4096,
+        "values": [
+          11,
+          12
+        ],
+        "settlements": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "steps": [
+          92917,
+          92917
+        ],
+        "collections": [
+          29,
+          29
+        ]
+      }
+    ],
+    "capacity": [
+      {
+        "name": "pending-all-capacity",
+        "input": 4,
+        "outcome": "passed",
+        "values": [
+          "6:4"
+        ],
+        "settlements": [
+          "fulfilled"
+        ],
+        "steps": [
+          6257
+        ],
+        "collections": [
+          4
+        ]
+      },
+      {
+        "name": "pending-all-capacity",
+        "input": 8,
+        "outcome": "passed",
+        "values": [
+          "28:8"
+        ],
+        "settlements": [
+          "fulfilled"
+        ],
+        "steps": [
+          11341
+        ],
+        "collections": [
+          8
+        ]
+      },
+      {
+        "name": "pending-all-capacity",
+        "input": 12,
+        "outcome": "passed",
+        "values": [
+          "66:12"
+        ],
+        "settlements": [
+          "fulfilled"
+        ],
+        "steps": [
+          16425
+        ],
+        "collections": [
+          14
+        ]
+      },
+      {
+        "name": "pending-all-capacity",
+        "input": 16,
+        "outcome": "passed",
+        "values": [
+          "120:16"
+        ],
+        "settlements": [
+          "fulfilled"
+        ],
+        "steps": [
+          21509
+        ],
+        "collections": [
+          31
+        ]
+      },
+      {
+        "name": "pending-all-capacity",
+        "input": 20,
+        "outcome": "resource-limit",
+        "message": "Resource limit in lane 0, instruction 25047; no CPU fallback"
+      },
+      {
+        "name": "pending-all-capacity",
+        "input": 24,
+        "outcome": "resource-limit",
+        "message": "Resource limit in lane 0, instruction 25100; no CPU fallback"
+      },
+      {
+        "name": "pending-all-capacity",
+        "input": 32,
+        "outcome": "resource-limit",
+        "message": "Resource limit in lane 0, instruction 25047; no CPU fallback"
+      },
+      {
+        "name": "pending-all-capacity",
+        "input": 40,
+        "outcome": "resource-limit",
+        "message": "Resource limit in lane 0, instruction 25090; no CPU fallback"
+      },
+      {
+        "name": "thenable-chain-capacity",
+        "input": 4,
+        "outcome": "passed",
+        "values": [
+          4
+        ],
+        "settlements": [
+          "fulfilled"
+        ],
+        "steps": [
+          2006
+        ],
+        "collections": [
+          1
+        ]
+      },
+      {
+        "name": "thenable-chain-capacity",
+        "input": 8,
+        "outcome": "passed",
+        "values": [
+          8
+        ],
+        "settlements": [
+          "fulfilled"
+        ],
+        "steps": [
+          3814
+        ],
+        "collections": [
+          2
+        ]
+      },
+      {
+        "name": "thenable-chain-capacity",
+        "input": 12,
+        "outcome": "passed",
+        "values": [
+          12
+        ],
+        "settlements": [
+          "fulfilled"
+        ],
+        "steps": [
+          5622
+        ],
+        "collections": [
+          4
+        ]
+      },
+      {
+        "name": "thenable-chain-capacity",
+        "input": 16,
+        "outcome": "passed",
+        "values": [
+          16
+        ],
+        "settlements": [
+          "fulfilled"
+        ],
+        "steps": [
+          7430
+        ],
+        "collections": [
+          6
+        ]
+      },
+      {
+        "name": "thenable-chain-capacity",
+        "input": 20,
+        "outcome": "passed",
+        "values": [
+          20
+        ],
+        "settlements": [
+          "fulfilled"
+        ],
+        "steps": [
+          9238
+        ],
+        "collections": [
+          8
+        ]
+      },
+      {
+        "name": "thenable-chain-capacity",
+        "input": 24,
+        "outcome": "passed",
+        "values": [
+          24
+        ],
+        "settlements": [
+          "fulfilled"
+        ],
+        "steps": [
+          11046
+        ],
+        "collections": [
+          12
+        ]
+      },
+      {
+        "name": "thenable-chain-capacity",
+        "input": 32,
+        "outcome": "resource-limit",
+        "message": "Resource limit in lane 0, instruction 25048; no CPU fallback"
+      },
+      {
+        "name": "thenable-chain-capacity",
+        "input": 40,
+        "outcome": "resource-limit",
+        "message": "Resource limit in lane 0, instruction 25048; no CPU fallback"
+      },
+      {
+        "name": "thenable-chain-capacity",
+        "input": 50,
+        "outcome": "resource-limit",
+        "message": "Resource limit in lane 0, instruction 25048; no CPU fallback"
+      }
+    ]
+  },
+  "candidateHashes": "quickjs-safari-promise-species-candidate-hashes.json",
+  "harnessBundleSha256": "2f966889d04885a2b04e4d10e8c1e3217f26317be3cb154f086f96902a095bf4"
+}

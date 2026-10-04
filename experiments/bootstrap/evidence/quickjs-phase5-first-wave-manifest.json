@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-03T06:01:09.010925+00:00",
+  "scope": "Phase5 first wave focused GPU qualification; full ES2025 not claimed",
+  "target": "Apple M1 / Safari 26.4 / WebGPU",
+  "reports": {
+    "experiments/bootstrap/evidence/quickjs-safari-math-phase5.json": {
+      "sha256": "858606da8a1e5a552a1f09fd85791328fe0a0be1c9429c648ce506f7f70e28a4",
+      "programs": 77,
+      "checked": 360,
+      "backend": "gpu"
+    },
+    "experiments/bootstrap/evidence/quickjs-safari-string-phase5.json": {
+      "sha256": "483504c14f1c42d5d03ab614af7f4b8fb2c52e274c2901116a32aeb70cda5400",
+      "programs": 25,
+      "checked": 97,
+      "backend": "gpu"
+    },
+    "experiments/bootstrap/evidence/quickjs-safari-array-phase5.json": {
+      "sha256": "e9106a1bdea9b45e3f3e1434b83162af1ceb6c022dec736434bb25b86f69a663",
+      "programs": 43,
+      "checked": 211,
+      "backend": "gpu"
+    },
+    "experiments/bootstrap/evidence/quickjs-safari-phase5-integration.json": {
+      "sha256": "517b1e9416b50a1be46eb113e18c1d0c7eb414268f3be3a49c6bac46c95d44d7",
+      "programs": 13,
+      "checked": 52,
+      "backend": "gpu"
+    }
+  },
+  "testedArtifactHashes": {
+    "experiments/quickjs-runtime/generated/browser.js": "0d9a9f6adf3416941ae87b12506e9e77eae498b9d58079d351a75352f10df1e0",
+    "experiments/quickjs-runtime/generated/browser-math-phase5.js": "1486633397eb2dba108bc925bc7272c2f0dd627f4600f95897808e0027e8b25e",
+    "experiments/quickjs-runtime/generated/browser-string-phase5.js": "13cfc360878d8fb0716ba5830ed432743e9a456ab9aceb918f0f037ec042991d",
+    "experiments/quickjs-runtime/generated/browser-array-phase5.js": "87a0825c9b1f13bd3346e4aaf19ef5070670851116f3c31dffafecb2aadf8cb9",
+    "experiments/quickjs-runtime/generated/browser-phase5-integration.js": "e91d9ce51e5914831c71efc3f40a3844867e479b3c8c559e9d3faeaecde0cfc6",
+    "experiments/quickjs-runtime/generated/compiler.mjs": "489320cd588ebb95e73c02af5d52aac5496496831d519f0d7d4804b154e7725f",
+    "experiments/quickjs-runtime/generated/compiler.wasm": "111c7e5e11657edc5e7923eecbd4f9dd03eb3df4a449dfbca3df39bc6799eccf"
+  }
+}

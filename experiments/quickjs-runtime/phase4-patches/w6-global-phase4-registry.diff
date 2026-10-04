@@ -1,0 +1,36 @@
+--- phase4-registry.js
++++ phase4-registry.js
+@@ -11,6 +11,7 @@
+ import { templateOpcodeNames, templateBootstrapSources, templateBuiltinFields, templateWGSLFunctions, templateWGSLCases } from './phase4-templates.js';
+ import { classElementOpcodeNames, classElementWGSLCases, classElementWGSLFunctions } from './phase4-class-elements.js';
+ import { lowerObjectSpread, objectSpreadWGSLCases, objectSpreadBootstrapSources, objectSpreadBuiltinFields, objectSpreadPrivateBuiltins, objectSpreadObjectMethodWGSL } from './phase4-object-spread.js';
++import { globalOpcodeNames, globalWGSLFunctions, globalWGSLCases } from './phase4-global.js';
+ 
+ // Spread `append` consumes the worker-4 iteration builtins (1270/1271/1273).
+ const spreadOps = ['rest', 'apply', 'append'];
+@@ -19,7 +20,7 @@
+ // QuickJS opcode names admitted in addition to the original OP table.
+ export const phase4Opcodes = Object.freeze(['to_string', ...spreadOps, ...objectSpreadOps, ...iterationOpcodeNames, ...forInOpcodeNames, ...classOpcodeNames,
+   // Next wave (appended; earlier indices stay stable).
+-  ...classElementOpcodeNames, ...templateOpcodeNames]);
++  ...classElementOpcodeNames, ...templateOpcodeNames, ...globalOpcodeNames]);
+ 
+ if (new Set(phase4Opcodes).size !== phase4Opcodes.length) throw new Error('Duplicate Phase 4 opcode name');
+ 
+@@ -44,7 +45,7 @@
+ }
+ 
+ // WGSL helper functions appended before main().
+-export const phase4WGSLFunctions = context => templateWGSLFunctions(context) + iterationWGSLFunctions(context) + forInWGSLFunctions(context) + classWGSLFunctions(context) + classElementWGSLFunctions(context);
++export const phase4WGSLFunctions = context => globalWGSLFunctions(context) + templateWGSLFunctions(context) + iterationWGSLFunctions(context) + forInWGSLFunctions(context) + classWGSLFunctions(context) + classElementWGSLFunctions(context);
+ 
+ // objectMethod() dispatch lines for WGSL-implemented private builtins.
+ export const phase4ObjectMethods = context => [objectSpreadObjectMethodWGSL, iterationObjectMethodWGSL, forInObjectMethodWGSL(context)];
+@@ -67,6 +68,7 @@
+     ...forInWGSLCases(context),
+     ...classWGSLCases(context),
+     ...classElementWGSLCases(context),
++    ...globalWGSLCases(context),
+   };
+ };
+ 

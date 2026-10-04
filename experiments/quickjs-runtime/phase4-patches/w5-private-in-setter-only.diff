@@ -1,0 +1,30 @@
+--- a/experiments/quickjs-runtime/vendor/quickjs.c
++++ b/experiments/quickjs-runtime/vendor/quickjs.c
+@@ -33840,10 +33840,27 @@
+             abort();
+         }
+         break;
+     case OP_scope_in_private_field:
++        /* LANES: ES2025 13.10.1 `#x in o` for a setter-only private
++           accessor. The setter closure lives in the `#x<set>` slot; the `#x`
++           slot is only written by a getter, so for a setter-only accessor it
++           stays in its TDZ and private_in used to treat that value as a
++           field name (always false; GPU: status 2). Both closures share the
++           [[HomeObject]], so the setter carries the same brand. */
++        if (var_kind == JS_VAR_PRIVATE_SETTER) {
++            JSAtom setter_name = get_private_setter_name(ctx, var_name);
++            if (setter_name == JS_ATOM_NULL)
++                return -1;
++            idx = resolve_scope_private_field1(ctx, &is_ref, &var_kind, s,
++                                               setter_name, scope_level);
++            JS_FreeAtom(ctx, setter_name);
++            if (idx < 0)
++                return -1;
++            assert(var_kind == JS_VAR_PRIVATE_SETTER);
++        }
+         get_loc_or_ref(bc, is_ref, idx);
+         dbuf_putc(bc, OP_private_in);
+         break;
+     default:
+         abort();
+     }

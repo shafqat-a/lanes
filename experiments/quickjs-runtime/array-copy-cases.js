@@ -1,0 +1,43 @@
+const shape='function shape(a){let s=""+a.length;for(let i=0;i<a.length;i++)s+=":"+(Object.hasOwn(a,i)?typeof a[i]+"="+a[i]:"hole");return s;}';
+const test=(feature,body)=>({feature,source:'function f(x){'+body+'}',input:3});
+export const arrayCopyCases=[
+ test('reversed-dense-holes-original-unchanged',shape+'const a=[x,,2];return shape(a.toReversed())+"|"+shape(a);'),
+ test('reversed-inherited-index',shape+'const o=Object.create({1:x});o[0]=1;o.length=3;return shape(Array.prototype.toReversed.call(o));'),
+ test('reversed-get-order','let log="";const o={length:3,get 0(){log+="a";return 1;},get 1(){log+="b";return 2;},get 2(){log+="c";return x;}};const a=Array.prototype.toReversed.call(o);return log+":"+a[0]+a[1]+a[2];'),
+ test('reversed-getter-mutation-length-snapshot',shape+'const a=[1,2,3];Object.defineProperty(a,"2",{get:function(){a[0]=x;a.length=1;return 4;},configurable:true});return shape(a.toReversed());'),
+ test('reversed-ignores-constructor','const a=[x];Object.defineProperty(a,"constructor",{get:function(){throw 99;}});return a.toReversed()[0];'),
+ test('reversed-string-boxing',shape+'return shape(Array.prototype.toReversed.call("ab"));'),
+ test('reversed-length-coercion','let log="";const o={get length(){log+="l";return {valueOf(){log+="n";return 1.9;}};},get 0(){log+="g";return x;}};return Array.prototype.toReversed.call(o)[0]+":"+log;'),
+ test('reversed-create-range-before-get','let log="";try{Array.prototype.toReversed.call({length:4294967296,get 0(){log+="g";return x;}});}catch(e){log+=e instanceof RangeError?"R":"?";}return log;'),
+ test('reversed-getter-abrupt-identity','const token={};let log="";try{Array.prototype.toReversed.call({length:2,get 0(){log+="a";return 1;},get 1(){throw token;}});}catch(e){return (e===token)+":"+log;}return "bad";'),
+ test('with-dense-holes-original-unchanged',shape+'const a=[x,,2];return shape(a.with(0,9))+"|"+shape(a);'),
+ test('with-skips-replaced-getter','let log="";const a=[1,2,3];Object.defineProperty(a,"1",{get:function(){throw 99;}});Object.defineProperty(a,"2",{get:function(){log+="c";return x;}});const b=a.with(1,7);return log+":"+b[0]+b[1]+b[2];'),
+ test('with-negative-fractional-and-nan',shape+'const a=[1,2,x];return shape(a.with(-1.9,8))+"|"+shape(a.with(NaN,9))+"|"+shape(a.with(-0,7));'),
+ test('with-length-before-index-coercion','let log="";const o={get length(){log+="l";return 2;},get 0(){log+="a";return 1;},get 1(){log+="b";return 2;}};const b=Array.prototype.with.call(o,{valueOf(){log+="i";return 1;}},x);return log+":"+b[0]+b[1];'),
+ test('with-index-coercion-mutates-original',shape+'const a=[1,2,3];const b=a.with({valueOf(){a.length=1;return 1;}},x);return shape(b)+"|"+shape(a);'),
+ test('with-out-of-range-before-get','let log="";const o={length:1,get 0(){log+="g";return 1;}};try{Array.prototype.with.call(o,1,x);}catch(e){log+=e instanceof RangeError?"R":"?";}return log;'),
+ test('with-range-infinities-and-empty','let s="";for(let i=0;i<3;i++){try{(i===2?[]:[1]).with(i===0?Infinity:i===1?-Infinity:0,x);s+="n";}catch(e){s+=e instanceof RangeError?"R":"?";}}return s;'),
+ test('with-ignores-constructor','const a=[1];Object.defineProperty(a,"constructor",{get:function(){throw 99;}});return a.with(0,x)[0];'),
+ test('with-generic-string',shape+'return shape(Array.prototype.with.call("abc",-2,x));'),
+ test('with-abrupt-index-identity','const token={};try{[1].with({valueOf(){throw token;}},x);}catch(e){return e===token;}return false;'),
+ test('with-create-range-after-index','let s="";try{Array.prototype.with.call({length:4294967296},{valueOf(){s+="i";return 0;}},x);}catch(e){s+=e instanceof RangeError?"R":"?";}return s;'),
+ test('spliced-no-args-vs-undefined',shape+'const a=[x,,2];return shape(a.toSpliced())+"|"+shape(a.toSpliced(undefined))+"|"+shape(a.toSpliced(undefined,undefined));'),
+ test('spliced-insertion-and-original',shape+'const a=[1,,3];return shape(a.toSpliced(1,1,x,8))+"|"+shape(a);'),
+ test('spliced-skips-deleted-getters','const a=[1,2,3];Object.defineProperty(a,"1",{get:function(){throw 99;}});return a.toSpliced(1,1,x).join(":");'),
+ test('spliced-coercion-and-copy-order','let log="";const o={get length(){log+="l";return 3;},get 0(){log+="a";return 1;},get 1(){throw 99;},get 2(){log+="c";return 3;}};const b=Array.prototype.toSpliced.call(o,{valueOf(){log+="s";return 1;}},{valueOf(){log+="d";return 1;}},x);return log+":"+b.join(":");'),
+ test('spliced-negative-start-skip-clamping',shape+'const a=[1,2,3];return shape(a.toSpliced(-2,Infinity,x))+"|"+shape(a.toSpliced(-Infinity,-3,x))+"|"+shape(a.toSpliced(Infinity,2,x));'),
+ test('spliced-length-snapshot-during-coercion',shape+'const a=[1,2,3];return shape(a.toSpliced({valueOf(){a.length=1;return 1;}},0,x));'),
+ test('spliced-max-safe-removal-insertion-exact','const a=Array.prototype.toSpliced.call({length:9007199254740991},0,9007199254740991,x,2);return a.length+":"+a[0]+":"+a[1];'),
+ test('spliced-max-safe-overflow-typeerror','let log="";try{Array.prototype.toSpliced.call({length:9007199254740991,get 0(){log+="g";return 1;}},0,0,x);}catch(e){log+=e instanceof TypeError?"T":"?";}return log;'),
+ test('spliced-array-length-range-error','try{Array.prototype.toSpliced.call({length:4294967295},0,0,x);return false;}catch(e){return e instanceof RangeError;}'),
+ test('spliced-ignores-constructor','const a=[1];Object.defineProperty(a,"constructor",{get:function(){throw 99;}});return a.toSpliced(0,1,x)[0];'),
+ test('spliced-generic-string',shape+'return shape(Array.prototype.toSpliced.call("abcd",1,2,x));'),
+ test('spliced-abrupt-skip-after-start','const token={};let s="";try{[1].toSpliced({valueOf(){s+="s";return 0;}},{valueOf(){s+="d";throw token;}},x);}catch(e){return (e===token)+":"+s;}return "bad";'),
+ test('all-copy-frozen-original',shape+'const a=Object.freeze([x,,2]);return shape(a.toReversed())+"|"+shape(a.with(1,7))+"|"+shape(a.toSpliced(1,0,9))+"|"+shape(a);'),
+ test('copy-own-descriptors-bypass-prototype-setter','let calls=0;Object.defineProperty(Array.prototype,"0",{set:function(){calls++;},configurable:true});const o={0:x,length:1};const a=Array.prototype.toReversed.call(o),b=Array.prototype.with.call(o,0,x),c=Array.prototype.toSpliced.call(o);const d=Object.getOwnPropertyDescriptor(a,"0");return calls+":"+a[0]+b[0]+c[0]+":"+d.writable+d.enumerable+d.configurable;'),
+ test('copy-nullish-receiver-typeerror','let s="";try{Array.prototype.toReversed.call(null);}catch(e){s+=e instanceof TypeError?"T":"?";}try{Array.prototype.toSpliced.call(undefined);}catch(e){s+=e instanceof TypeError?"T":"?";}try{Array.prototype.with.call(null,0,x);}catch(e){s+=e instanceof TypeError?"T":"?";}return s;'),
+ test('copy-method-metadata','return Array.prototype.toReversed.name+":"+Array.prototype.toReversed.length+":"+Array.prototype.toSpliced.name+":"+Array.prototype.toSpliced.length+":"+Array.prototype.with.name+":"+Array.prototype.with.length;'),
+];
+export const arrayCopyResourceCases=[test('dense-copy-exceeds-heap','return Array.prototype.toReversed.call({length:5000}).length;')];
+export const arrayCopyResumptionSource='function f(x){let log="";const o={get length(){log+="l";return 3;},get 0(){log+="a";return 1;},get 1(){log+="b";return x;},get 2(){log+="c";return 3;}};const a=Array.prototype.toReversed.call(o);const b=a.with({valueOf(){log+="i";return 1;}},7);const c=b.toSpliced({valueOf(){log+="s";return 1;}},{valueOf(){log+="d";return 1;}},x);return log+":"+c.join(":");}';
+export const arrayCopyResumptionExpected='lcbaisd:3:3:1';

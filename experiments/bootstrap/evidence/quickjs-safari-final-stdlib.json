@@ -1,0 +1,1094 @@
+{
+  "date": "2026-10-04T14:29:36.317Z",
+  "capabilities": {
+    "safari:platformVersion": "26.4",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.4",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25E246",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "report": {
+    "backend": "gpu",
+    "compiler": "QuickJS/Wasm",
+    "qualificationScope": "full",
+    "genericIteration": true,
+    "programs": 788,
+    "checked": 2425,
+    "negativeChecks": {
+      "runtimeUnsupported": 13,
+      "resourceLimit": 2,
+      "compileRejected": 1
+    },
+    "resumption": [
+      {
+        "name": "map-core:resumption",
+        "dispatches": 1622,
+        "steps": 1622,
+        "collections": 1
+      },
+      {
+        "name": "map-extra:resumption",
+        "dispatches": 1188,
+        "steps": 1188,
+        "collections": 0
+      },
+      {
+        "name": "set-core:resumption",
+        "dispatches": 2565,
+        "steps": 2565,
+        "collections": 1
+      },
+      {
+        "name": "set-extra:resumption",
+        "dispatches": 3918,
+        "steps": 3918,
+        "collections": 2
+      },
+      {
+        "name": "collection-iterators:resumption",
+        "dispatches": 2417,
+        "steps": 2417,
+        "collections": 1
+      },
+      {
+        "name": "reflect:resumption",
+        "dispatches": 30054,
+        "steps": 30054,
+        "collections": 6
+      },
+      {
+        "name": "numeric:resumption",
+        "dispatches": 33721,
+        "steps": 33721,
+        "collections": 5
+      },
+      {
+        "name": "conformance:resume-map-ctor-getters-and-patched-set",
+        "dispatches": 1357,
+        "steps": 1357,
+        "collections": 0
+      },
+      {
+        "name": "conformance:resume-set-composition-setlike-callbacks",
+        "dispatches": 2682,
+        "steps": 2682,
+        "collections": 1
+      },
+      {
+        "name": "conformance:resume-reflect-get-receiver-getters",
+        "dispatches": 1533,
+        "steps": 1533,
+        "collections": 0
+      },
+      {
+        "name": "conformance:resume-forEach-mutation-and-iterator",
+        "dispatches": 1576,
+        "steps": 1576,
+        "collections": 0
+      },
+      {
+        "name": "conformance:resume-isNaN-valueOf-callback",
+        "dispatches": 1723,
+        "steps": 1723,
+        "collections": 0
+      }
+    ],
+    "gcProbes": [
+      {
+        "name": "set-core:GC-delete-readd-fresh-objects",
+        "collections": [
+          182
+        ],
+        "maxSteps": 363468,
+        "passed": true
+      },
+      {
+        "name": "set-core:GC-delete-readd-primitives",
+        "collections": [
+          90,
+          90
+        ],
+        "maxSteps": 162706,
+        "passed": true
+      },
+      {
+        "name": "conformance-cross:cross-closure-retains-map-across-gc",
+        "collections": [
+          80,
+          80
+        ],
+        "maxSteps": 120390,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-map-retained-contents",
+        "collections": [
+          46,
+          46
+        ],
+        "maxSteps": 63772,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-map-tombstone-churn",
+        "collections": [
+          214,
+          214
+        ],
+        "maxSteps": 342633,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-set-sliding-window",
+        "collections": [
+          77,
+          77
+        ],
+        "maxSteps": 170636,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-iterator-parked-on-deleted",
+        "collections": [
+          40
+        ],
+        "maxSteps": 61508,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-iterator-parked-on-deleted-last",
+        "collections": [
+          40
+        ],
+        "maxSteps": 61553,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-unpinned-last-tombstone-append",
+        "collections": [
+          80
+        ],
+        "maxSteps": 121539,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-clear-then-append-parked-iterators",
+        "collections": [
+          40,
+          40
+        ],
+        "maxSteps": 61635,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-forEach-callback-allocates",
+        "collections": [
+          62
+        ],
+        "maxSteps": 92113,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-object-keys-only-via-map",
+        "collections": [
+          49,
+          49
+        ],
+        "maxSteps": 64456,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-value-cells-deep",
+        "collections": [
+          95
+        ],
+        "maxSteps": 125224,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-many-dropped-iterators",
+        "collections": [
+          65
+        ],
+        "maxSteps": 130235,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-set-composition-under-pressure",
+        "collections": [
+          160,
+          148
+        ],
+        "maxSteps": 169452,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-symbol-bigint-heap-string-keys",
+        "collections": [
+          49
+        ],
+        "maxSteps": 66714,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-delete-current-in-forEach",
+        "collections": [
+          82
+        ],
+        "maxSteps": 121965,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-values-iterator-cell-reuse",
+        "collections": [
+          41
+        ],
+        "maxSteps": 62146,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-map-ctor-getters-churn",
+        "collections": [
+          101
+        ],
+        "maxSteps": 88417,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-class-field-map-and-closure",
+        "collections": [
+          63,
+          62
+        ],
+        "maxSteps": 71584,
+        "passed": true
+      },
+      {
+        "name": "conformance-gc:gc-reflect-get-receiver-churn",
+        "collections": [
+          42
+        ],
+        "maxSteps": 61066,
+        "passed": true
+      }
+    ],
+    "groups": {
+      "protocol-integration": {
+        "cases": 10,
+        "values": 15,
+        "gc": 0,
+        "unsupported": 0,
+        "resumption": 0,
+        "skipped": 0,
+        "failed": 0
+      },
+      "map-core": {
+        "cases": 74,
+        "values": 134,
+        "gc": 0,
+        "unsupported": 2,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 0
+      },
+      "map-extra": {
+        "cases": 56,
+        "values": 116,
+        "gc": 0,
+        "unsupported": 2,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 0
+      },
+      "set-core": {
+        "cases": 66,
+        "values": 125,
+        "gc": 2,
+        "unsupported": 1,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 0
+      },
+      "set-extra": {
+        "cases": 72,
+        "values": 143,
+        "gc": 0,
+        "unsupported": 1,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 0
+      },
+      "collection-iterators": {
+        "cases": 82,
+        "values": 82,
+        "gc": 0,
+        "unsupported": 0,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 0
+      },
+      "reflect": {
+        "cases": 107,
+        "values": 181,
+        "gc": 0,
+        "unsupported": 4,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 0
+      },
+      "numeric": {
+        "cases": 164,
+        "values": 1321,
+        "gc": 0,
+        "unsupported": 2,
+        "resumption": 1,
+        "skipped": 0,
+        "failed": 0
+      },
+      "conformance": {
+        "cases": 144,
+        "values": 296,
+        "gc": 19,
+        "unsupported": 4,
+        "resumption": 5,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    "nativeDisagreements": [
+      {
+        "name": "set-extra:next-result-non-object",
+        "input": "1",
+        "es2025": "\"TTTTTT\"",
+        "native": "NativeOracleTimeout: exceeded 5000ms",
+        "specNote": "ES2025 IteratorNext (7.4.6) throws TypeError when next returns a non-object: https://tc39.es/ecma262/2025/multipage/abstract-operations.html#sec-iteratornext . Safari native worker returns TTTTTT for undefined but times out for 1 and string s (quickjs-safari-native-set-worker-probe.json); GPU must return the fixed normative value."
+      },
+      {
+        "name": "set-extra:next-result-non-object",
+        "input": "\"s\"",
+        "es2025": "\"TTTTTT\"",
+        "native": "NativeOracleTimeout: exceeded 5000ms",
+        "specNote": "ES2025 IteratorNext (7.4.6) throws TypeError when next returns a non-object: https://tc39.es/ecma262/2025/multipage/abstract-operations.html#sec-iteratornext . Safari native worker returns TTTTTT for undefined but times out for 1 and string s (quickjs-safari-native-set-worker-probe.json); GPU must return the fixed normative value."
+      },
+      {
+        "name": "conformance-map:map-es2026-upsert-absent",
+        "input": "3",
+        "es2025": "\"undefined:undefined\"",
+        "native": "\"function:function\"",
+        "specNote": "ES2025 24.1.3 defines no getOrInsert/getOrInsertComputed (upsert proposal is post-ES2025); V8 \u2265 14 ships them, so the native oracle disagrees."
+      },
+      {
+        "name": "conformance-reflect:reflect-ownKeys-map-prototype-set",
+        "input": "3",
+        "es2025": "\"clear,constructor,delete,entries,forEach,get,has,keys,set,size,values,Symbol(Symbol.iterator),Symbol(Symbol.toStringTag)\"",
+        "native": "\"clear,constructor,delete,entries,forEach,get,getOrInsert,getOrInsertComputed,has,keys,set,size,values,Symbol(Symbol.iterator),Symbol(Symbol.toStringTag)\"",
+        "specNote": "ES2025 24.1.3 lists exactly clear, constructor, delete, entries, forEach, get, has, keys, set, size, values, @@iterator, @@toStringTag. V8 \u2265 14 adds getOrInsert/getOrInsertComputed (post-ES2025 upsert), so the native oracle disagrees."
+      },
+      {
+        "name": "conformance-reflect:reflect-ownKeys-map-prototype-order",
+        "input": "3",
+        "es2025": "\"clear,constructor,delete,entries,forEach,get,has,keys,set,size,values,Symbol(Symbol.iterator),Symbol(Symbol.toStringTag)\"",
+        "native": "\"clear,delete,entries,forEach,get,has,keys,set,getOrInsert,getOrInsertComputed,size,values,constructor,Symbol(Symbol.iterator),Symbol(Symbol.toStringTag)\"",
+        "specNote": "ES2025 does not specify the creation order of intrinsic properties; reference order is the 24.1.3 clause order (strings, then symbols per OrdinaryOwnPropertyKeys). V8 installs constructor,get,set,has,\u2026 and JSC differs again; the runtime installs in registry order. Mismatch is reported, not failed."
+      }
+    ],
+    "approximations": [
+      {
+        "name": "protocol-integration:original-math-phase5-sin-boundary",
+        "input": "4",
+        "gpu": "-0.7568024953079282",
+        "native": "-0.7568024953079283",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "protocol-integration:original-validation-sin-boundary",
+        "input": "4",
+        "gpu": "-0.7568024953079282",
+        "native": "-0.7568024953079283",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.cbrt",
+        "input": "710.4",
+        "gpu": "8.92279641790248",
+        "native": "8.922796417902479",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.expm1",
+        "input": "0.75",
+        "gpu": "1.1170000166126748",
+        "native": "1.1170000166126746",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.expm1",
+        "input": "1",
+        "gpu": "1.718281828459045",
+        "native": "1.7182818284590453",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.log",
+        "input": "3",
+        "gpu": "1.0986122886681096",
+        "native": "1.0986122886681098",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.log1p",
+        "input": "2",
+        "gpu": "1.0986122886681096",
+        "native": "1.0986122886681098",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.log10",
+        "input": "0.75",
+        "gpu": "-0.12493873660829993",
+        "native": "-0.12493873660829995",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.cos",
+        "input": "0.1",
+        "gpu": "0.9950041652780257",
+        "native": "0.9950041652780258",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "0.1",
+        "gpu": "0.10033467208545055",
+        "native": "0.10033467208545054",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "0.75",
+        "gpu": "0.9315964599440725",
+        "native": "0.9315964599440724",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "1",
+        "gpu": "1.5574077246549023",
+        "native": "1.557407724654902",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "-1",
+        "gpu": "-1.5574077246549023",
+        "native": "-1.557407724654902",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "1.5",
+        "gpu": "14.101419947171719",
+        "native": "14.10141994717172",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "10",
+        "gpu": "0.6483608274590866",
+        "native": "0.6483608274590867",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "-745.2",
+        "gpu": "-0.7485010638245828",
+        "native": "-0.7485010638245829",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "1e+22",
+        "gpu": "-1.628778225606899",
+        "native": "-1.6287782256068988",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "1e+300",
+        "gpu": "1.4214488238747245",
+        "native": "1.4214488238747243",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "-1.7976931348623157e+308",
+        "gpu": "0.004962015874444895",
+        "native": "0.004962015874444894",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "4294967295",
+        "gpu": "-0.5722513701805472",
+        "native": "-0.5722513701805473",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.tan",
+        "input": "4294967296",
+        "gpu": "0.5209081018077579",
+        "native": "0.520908101807758",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.atan",
+        "input": "-0.5",
+        "gpu": "-0.4636476090008061",
+        "native": "-0.46364760900080615",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.atan",
+        "input": "0.5",
+        "gpu": "0.4636476090008061",
+        "native": "0.46364760900080615",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.atan",
+        "input": "2",
+        "gpu": "1.1071487177940904",
+        "native": "1.1071487177940906",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.atan",
+        "input": "-2",
+        "gpu": "-1.1071487177940904",
+        "native": "-1.1071487177940906",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.atan",
+        "input": "10",
+        "gpu": "1.4711276743037347",
+        "native": "1.4711276743037345",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.asin",
+        "input": "-0.5",
+        "gpu": "-0.5235987755982989",
+        "native": "-0.5235987755982988",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.asin",
+        "input": "0.5",
+        "gpu": "0.5235987755982989",
+        "native": "0.5235987755982988",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.acos",
+        "input": "0.5",
+        "gpu": "1.0471975511965979",
+        "native": "1.0471975511965976",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.sinh",
+        "input": "2",
+        "gpu": "3.626860407847019",
+        "native": "3.6268604078470186",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.sinh",
+        "input": "-2",
+        "gpu": "-3.626860407847019",
+        "native": "-3.6268604078470186",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.sinh",
+        "input": "710.4",
+        "gpu": "1.6663642832806494e+308",
+        "native": "1.6663642832806496e+308",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.cosh",
+        "input": "10",
+        "gpu": "11013.232920103324",
+        "native": "11013.232920103323",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.cosh",
+        "input": "710.4",
+        "gpu": "1.6663642832806494e+308",
+        "native": "1.6663642832806496e+308",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.acosh",
+        "input": "3",
+        "gpu": "1.7627471740390859",
+        "native": "1.762747174039086",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.atanh",
+        "input": "-0.5",
+        "gpu": "-0.5493061443340548",
+        "native": "-0.5493061443340549",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:Math.atanh",
+        "input": "0.5",
+        "gpu": "0.5493061443340548",
+        "native": "0.5493061443340549",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:hypot-special",
+        "input": "-3",
+        "gpu": "\"0,0,0,Infinity,NaN,5,3,1.4142135623730952e+300,5e-324,25.495097567963924:true\"",
+        "native": "\"0,0,0,Infinity,NaN,5,3,1.4142135623730952e+300,5e-324,25.49509756796392:true\"",
+        "ulps": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:hypot-special",
+        "input": "-0",
+        "gpu": "\"0,0,0,Infinity,NaN,5,0,1.4142135623730952e+300,5e-324,25.495097567963924:true\"",
+        "native": "\"0,0,0,Infinity,NaN,5,0,1.4142135623730952e+300,5e-324,25.49509756796392:true\"",
+        "ulps": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:hypot-special",
+        "input": "Infinity",
+        "gpu": "\"0,0,0,Infinity,Infinity,5,Infinity,1.4142135623730952e+300,5e-324,25.495097567963924:true\"",
+        "native": "\"0,0,0,Infinity,Infinity,5,Infinity,1.4142135623730952e+300,5e-324,25.49509756796392:true\"",
+        "ulps": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:hypot-pairs",
+        "input": "1.5",
+        "gpu": "\"1.8027756377319948:2.1794494717703365\"",
+        "native": "\"1.8027756377319946:2.179449471770337\"",
+        "ulps": [
+          "1",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:hypot-pairs",
+        "input": "100",
+        "gpu": "\"100.00499987500623:141.42224011802386\"",
+        "native": "\"100.00499987500625:141.42224011802386\"",
+        "ulps": [
+          "1",
+          "0"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:hypot-pairs",
+        "input": "1e+22",
+        "gpu": "\"1e+22:1.4142135623730952e+22\"",
+        "native": "\"1e+22:1.414213562373095e+22\"",
+        "ulps": [
+          "0",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:hypot-pairs",
+        "input": "65520",
+        "gpu": "\"65520.00000763126:92659.27260803423\"",
+        "native": "\"65520.00000763126:92659.27260803421\"",
+        "ulps": [
+          "0",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:hypot-pairs",
+        "input": "4294967295",
+        "gpu": "\"4294967295:6074000998.537887\"",
+        "native": "\"4294967295:6074000998.537886\"",
+        "ulps": [
+          "0",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:atan2-pairs",
+        "input": "10",
+        "gpu": "\"1.5707963267948966:0:3.141592653589793:1.5707963267948966:1.2793395323170296:-0.19739555984988078\"",
+        "native": "\"1.5707963267948966:0:3.141592653589793:1.5707963267948966:1.2793395323170296:-0.19739555984988075\"",
+        "ulps": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:atan2-pairs",
+        "input": "100",
+        "gpu": "\"1.5707963267948966:0:3.141592653589793:1.5707963267948966:1.5408053219380187:-0.019997333973150535\"",
+        "native": "\"1.5707963267948966:0:3.141592653589793:1.5707963267948966:1.5408053219380187:-0.01999733397315053\"",
+        "ulps": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:unary-coercion-cbrt",
+        "input": "\"2.5\"",
+        "gpu": "\"1.3572088082974532:v\"",
+        "native": "\"1.3572088082974534:v\"",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:unary-coercion-expm1",
+        "input": "true",
+        "gpu": "\"1.718281828459045:v\"",
+        "native": "\"1.7182818284590453:v\"",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:unary-coercion-tan",
+        "input": "\"2.5\"",
+        "gpu": "\"-0.7470222972386603:v\"",
+        "native": "\"-0.7470222972386602:v\"",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:unary-coercion-tan",
+        "input": "true",
+        "gpu": "\"1.5574077246549023:v\"",
+        "native": "\"1.557407724654902:v\"",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:unary-coercion-cosh",
+        "input": "\"0x10\"",
+        "gpu": "\"4443055.260253992:v\"",
+        "native": "\"4443055.260253993:v\"",
+        "ulps": [
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:unary-string-inputs",
+        "input": "\"0b11\"",
+        "gpu": "\"1.7320508075688772:3:30:1.4422495703074083:20.085536923187668:1.0986122886681096:0.1411200080598672\"",
+        "native": "\"1.7320508075688772:3:30:1.4422495703074083:20.085536923187668:1.0986122886681098:0.1411200080598672\"",
+        "ulps": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:trig-large-reduction",
+        "input": "1e+22",
+        "gpu": "\"-0.8522008497671888:0.523214785395139:-1.628778225606899\"",
+        "native": "\"-0.8522008497671888:0.523214785395139:-1.6287782256068988\"",
+        "ulps": [
+          "0",
+          "0",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:trig-large-reduction",
+        "input": "1e+300",
+        "gpu": "\"-0.8178819121159085:-0.5753861119575491:1.4214488238747245\"",
+        "native": "\"-0.8178819121159085:-0.5753861119575491:1.4214488238747243\"",
+        "ulps": [
+          "0",
+          "0",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      },
+      {
+        "name": "numeric:trig-large-reduction",
+        "input": "-1.7976931348623157e+308",
+        "gpu": "\"-0.004961954789184062:-0.9999876894265599:0.004962015874444895\"",
+        "native": "\"-0.004961954789184062:-0.9999876894265599:0.004962015874444894\"",
+        "ulps": [
+          "0",
+          "0",
+          "1"
+        ],
+        "maxUlps": 1,
+        "spec": "https://tc39.es/ecma262/2025/multipage/numbers-and-dates.html#sec-math-object"
+      }
+    ],
+    "orderSensitive": [
+      {
+        "name": "conformance-reflect:reflect-ownKeys-map-prototype-order",
+        "gpu": "\"constructor,get,set,has,delete,clear,forEach,size,entries,keys,values,Symbol(Symbol.iterator),Symbol(Symbol.toStringTag)\"",
+        "es2025ReferenceOrder": "\"clear,constructor,delete,entries,forEach,get,has,keys,set,size,values,Symbol(Symbol.iterator),Symbol(Symbol.toStringTag)\"",
+        "note": "ES2025 does not specify the creation order of intrinsic properties; reference order is the 24.1.3 clause order (strings, then symbols per OrdinaryOwnPropertyKeys). V8 installs constructor,get,set,has,\u2026 and JSC differs again; the runtime installs in registry order. Mismatch is reported, not failed."
+      }
+    ],
+    "gaps": [
+      "conformance-reflect:reflect-ownKeys-map-prototype-order: intrinsic property order differs from the ES2025 clause order (implementation-defined; not counted as passed)",
+      "Subclassing (class extends Map/Set, Reflect.construct with another NewTarget) remains a status 6 boundary."
+    ],
+    "elapsedMs": 1279167.0000000002,
+    "method": "Explicit Math fields allow at most1ULP for finite nonzero implementation-approximated results (reported separately); every other value uses exact Object.is comparison (signed zero, NaN) against fresh bounded Worker native results (5s timeout per input) or ES2025 overrides with recorded spec notes; required-GC probes need per-lane collections > 0; resumption probes run with job.step(1)."
+  },
+  "candidateHashes": "quickjs-safari-promise-species-candidate-hashes.json"
+}

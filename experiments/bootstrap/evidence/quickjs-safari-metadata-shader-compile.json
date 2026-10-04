@@ -1,0 +1,68 @@
+{
+  "outcome": "aborted-resource-pressure",
+  "diagnosticOnly": true,
+  "guestProgramsExecuted": 0,
+  "date": "2026-10-04",
+  "host": "shafqats-MacBook-Air.local",
+  "archive": "/tmp/lanes-m1-metadata-candidate.tgz",
+  "archiveSha256": "dee040055a4506ebecd44ff7d31cf86b82b3bc037a1a762bafa7e0a56641b569",
+  "browserBundleSha256": "e221b62b92eb2d8e044a8b5b6da9c8396d2d072490f7409520ef41951d0e1200",
+  "remoteDirectory": "/tmp/lanes-metadata-verify",
+  "stages": {
+    "controlPipeline": "passed",
+    "runtimeWGSLValidation": "passed",
+    "runtimeComputePipeline": "canceled-before-completion"
+  },
+  "baseline": {
+    "globalSwapMB": 901.62,
+    "existingCompilerPids": [
+      1413,
+      1568,
+      1569
+    ]
+  },
+  "measurements": [
+    {
+      "elapsedSeconds": 36,
+      "physicalFootprintMB": 548.6,
+      "globalSwapMB": 1393.62
+    },
+    {
+      "elapsedSeconds": 73,
+      "physicalFootprintMB": 647.9,
+      "globalSwapMB": 1978.06
+    },
+    {
+      "elapsedSeconds": 107,
+      "physicalFootprintGB": 3,
+      "globalSwapMB": 2498.44
+    },
+    {
+      "elapsedSeconds": 123,
+      "physicalFootprintGB": 4.6,
+      "globalSwapMB": 2793.94
+    }
+  ],
+  "cancellation": {
+    "reason": "Owned compiler physical footprint exceeded 4 GB safety cap",
+    "runnerPid": 2078,
+    "runnerSignal": "SIGTERM",
+    "compilerPid": 2093,
+    "compilerSignal": "SIGKILL",
+    "identityVerified": true
+  },
+  "cleanup": {
+    "runnerAbsent": true,
+    "compilerAbsent": true,
+    "safariDriverReady": true,
+    "globalSwapMBAfterCleanup": 3340.88,
+    "unrelatedCompilerProcessesUntouched": true
+  },
+  "sample": "quickjs-m1-metal-metadata-sample.txt",
+  "limitations": [
+    "Global swap is a system-wide metric, not exclusively attributable to this compiler.",
+    "No semantic or dispatch suites ran because the runtime pipeline did not finish."
+  ],
+  "shaderSha256": "0cd6d108032c6e03545696a93c575ee43ba0fd1c2a39c134c29770c26476b3c8",
+  "shaderBytes": 323732
+}
