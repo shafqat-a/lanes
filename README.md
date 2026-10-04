@@ -2,19 +2,38 @@
 
 **JavaScript → WGSL, compiled when you need it.**
 
-Lanes is an experimental numeric JIT for applying one function to many independent inputs. It validates a restricted JavaScript subset, lowers it to typed integer IR, generates WGSL, and caches the GPU pipeline. A CPU backend implements the same integer semantics without `eval`.
+Lanes runs an expanding subset of JavaScript on WebGPU. The experimental full-engine runtime uses QuickJS to compile source on CPU and executes guest bytecode through WGSL on GPU. Apple M1 / Safari is the verified target. **Full ECMAScript 2025 support is not implemented yet.**
 
-**v0.2.0-alpha.1** · [Agent field demo](https://shafqat-a.github.io/lanes/simulation.html) · [Playground](https://shafqat-a.github.io/lanes/) · [Compatibility](docs/compatibility.md) · [API](docs/api.md) · [Benchmarks](docs/performance.md)
+**[v0.2.0-alpha.1 prerelease](https://github.com/shafqat-a/lanes/releases/tag/v0.2.0-alpha.1)** · [ECMAScript 2025 support table](docs/ecmascript-2025.md) · [Use from a webpage, with examples](docs/webpage-quickstart.md) · [Not yet implemented](docs/releases/v0.2.0-alpha.1.md#not-yet-implemented-or-incomplete)
 
-The alpha uses **explicit wrapping signed 32-bit arithmetic**, not general JavaScript `Number` semantics. Objects, closures, floating point, arbitrary function calls, and browser APIs are outside its supported language. Check the compatibility contract before adopting it.
+The runtime implements subsets of objects, closures, classes, exceptions, software double-precision arithmetic, strings, BigInt, Symbols, collections, generators, promises, async functions, and standard-library operations. Fresh-realm Script execution and Array.flat/flatMap/splice are GPU-verified. Persistent realms, modules, eval/Function execution, Proxy, RegExp, Date, buffers/typed arrays, weak collections, and other gaps remain. The new runtime requires WebGPU; unsupported work never triggers CPU replay.
 
-**New experimental direction:** the separate [GPU VM lab](https://shafqat-a.github.io/lanes/vm.html) executes a growing JavaScript subset with software double-precision Number arithmetic, functions, recursion, closures, exceptions, basic UTF-16 strings, and garbage collection on GPU. Execution resumes across dispatch boundaries. It chooses a whole-job CPU backend only when WebGPU is unavailable; unsupported features never trigger CPU fallback. This targets ES2025 on M1/Safari, **not full JavaScript support yet**. See [implemented features, measurements, and remaining work](docs/gpu-vm.md). The existing i32 JIT and its performance claims are separate.
+The latest M1 candidate passed 1,209 main-suite programs plus focused Script and Array suites. Earlier full standard-library/Promise results apply to an earlier candidate. See the [exact verification scope](experiments/bootstrap/evidence/quickjs-1_0-parallel-wave1.json); these are not full-language conformance results.
 
-Current full-language work reuses QuickJS compilation with direct WGSL execution. The [experimental runtime](experiments/quickjs-runtime/README.md) includes M1/Safari checks for primitive boxing, property keys, sparse arrays, exponentiation and String helpers. This runtime currently requires WebGPU. Latest Apple M1/Safari verification passes 1,209 main-suite programs, 788 standard-library programs and 569 Promise/async programs; the three runtime pipelines compile in about 44 seconds. See the [qualification record](experiments/bootstrap/evidence/quickjs-m1-resumed-integration.json) for exact coverage and remaining verification. A subsequent [parallel implementation wave](experiments/bootstrap/evidence/quickjs-1_0-parallel-wave1.json) adds GPU-verified fresh-realm script execution and Array.flat/flatMap/splice, with the full main regression passing again.
+## Use JavaScript on the GPU from a webpage
 
-## Current prerelease
+Download the **webpage kit** from the prerelease, extract it, run `python3 -m http.server 4178 --bind 127.0.0.1`, then open `http://localhost:4178/web-example.html` in Safari on M1. The kit provides `lanes-quickjs.js`, `compiler.wasm`, and runnable HTML. Initial shader compilation can take around 40 seconds or longer.
 
-See the [v0.2.0-alpha.1 release notes and unsupported-feature list](docs/releases/v0.2.0-alpha.1.md). The npm-format package retains the numeric JIT and older VM APIs. The newer QuickJS/WGSL runtime is supplied in the source checkout and a separate prebuilt browser release asset; it is not exported by that package.
+```js
+import { createCompiler, QuickJSGPU } from './lanes-quickjs.js';
+const compiler = await createCompiler();
+const vm = await QuickJSGPU.create();
+try {
+  const program = compiler.compile('function twice(x) { return x * 2; }');
+  const result = await vm.run(program, [1, 2, 3], { budget: 4096 });
+  console.log(result.values); // [2, 4, 6]
+} finally {
+  await vm.dispose();
+}
+```
+
+Serve over localhost or HTTPS. DOM/networking remain in normal page JavaScript; guest source runs on the GPU. See the [complete HTML example, Script API, build and deployment instructions](docs/webpage-quickstart.md).
+
+## Existing numeric JIT and VM demos
+
+The original numeric JIT is a separate API with explicit wrapping signed 32-bit arithmetic and a restricted JavaScript subset. The npm-format package exports this JIT and the older experimental VM, **not the newer QuickJS/WGSL runtime**. Their compatibility contracts and performance claims are separate.
+
+[Agent field demo](https://shafqat-a.github.io/lanes/simulation.html) · [Numeric playground](https://shafqat-a.github.io/lanes/) · [Numeric compatibility](docs/compatibility.md) · [API](docs/api.md) · [Benchmarks](docs/performance.md) · [Older GPU VM lab](docs/gpu-vm.md)
 
 ## Try it
 

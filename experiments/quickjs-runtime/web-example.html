@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lanes: JavaScript on the GPU</title>
+<style>body{font:18px system-ui;max-width:48rem;margin:3rem auto;padding:0 1rem}pre{white-space:pre-wrap;background:#eee;padding:1rem}button{font:inherit;padding:.5rem 1rem}</style>
+<h1>JavaScript on the GPU</h1>
+<p>Experimental Lanes runtime. Tested target: Apple M1 with Safari 26.4. Initial shader compilation can take around 40 seconds or longer.</p>
+<button id="run">Run GPU example</button>
+<p id="status" role="status">Ready</p>
+<pre id="output">Inputs: [1, 2, 3, 4]
+Expected function results: [3, 5, 7, 9]
+Expected Script result: [42]</pre>
+<script type="module">
+import { createCompiler, QuickJSGPU } from './lanes-quickjs.js';
+const button = document.querySelector('#run');
+const status = document.querySelector('#status');
+const output = document.querySelector('#output');
+async function run() {
+  button.disabled = true;
+  let vm;
+  try {
+    if (!navigator.gpu) throw new Error('WebGPU unavailable. Use Safari on M1 over localhost or HTTPS. This runtime has no CPU fallback.');
+    status.textContent = 'Compiling GPU pipelines…';
+    const compiler = await createCompiler();
+    vm = await QuickJSGPU.create();
+    const program = compiler.compile(`function transform(x) {
+      const record = { value: x * 2 };
+      function addOne(value) { return value + 1; }
+      return addOne(record.value);
+    }`);
+    status.textContent = 'Executing on GPU…';
+    const result = await vm.run(program, [1, 2, 3, 4], { budget: 4096 });
+    const script = compiler.compileScript('const answer = 6 * 7; answer;');
+    const scriptResult = await vm.run(script, [undefined], { budget: 4096 });
+    if (result.values.some((value, i) => value !== [3, 5, 7, 9][i]) || scriptResult.values[0] !== 42) throw new Error('Unexpected GPU result');
+    const report = { backend: result.backend, values: result.values, scriptValues: scriptResult.values };
+    output.textContent = JSON.stringify(report, null, 2);
+    window.quickjsReport = report;
+    status.textContent = 'Passed';
+  } catch (error) {
+    status.textContent = 'Failed';
+    output.textContent = `${error.name}: ${error.message}`;
+    window.quickjsError = output.textContent;
+  } finally {
+    if (vm) await vm.dispose();
+    button.disabled = false;
+  }
+}
+button.addEventListener('click', run);
+// Enables the same example to run in the Safari verification harness.
+if (new URLSearchParams(location.search).has('autorun')) await run();
+</script>
+</html>

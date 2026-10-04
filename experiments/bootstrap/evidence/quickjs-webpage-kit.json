@@ -1,0 +1,18 @@
+{
+  "platform": "Apple M1 / Safari 26.4",
+  "report": "quickjs-safari-web-example.json",
+  "scope": "New web API bundle and unchanged guest runtime; function and fresh Script samples",
+  "files": {
+    "experiments/quickjs-runtime/generated/lanes-quickjs.js": "eb179874040e8912e742f96e40ce42904125537e256a8510590b9981c1deb223",
+    "experiments/quickjs-runtime/generated/compiler.wasm": "feecb028c1dd912e38f3c67da296c21e1897b9a258e1deaa30c5b23ec01aea33",
+    "experiments/quickjs-runtime/generated/web-example.html": "30bd375212dd815270ac7ca0bc2bdaa48000b5f2c944eef47010408fc511632c",
+    "LICENSE": "cb13a216d479e782441136c2b9382a659e4bc0b7f25816c87366767e0bcddc9c",
+    "experiments/quickjs-runtime/vendor/LICENSE": "598fd7fc928e4350abce36e337ba5a1346923c5c692f5be92c3d8e29ddd7c18d",
+    "experiments/quickjs-runtime/engine262-LICENSE.txt": "171d63abdb8a993e2c2985ac14a509617d0f18dfb1d97108d5641af2bf82e387",
+    "experiments/quickjs-runtime/stdlib-numeric.js": "706f687e76595051c1096c1d6a8a02a08baced607341c77e813e68ecb6da34ee",
+    "docs/webpage-quickstart.md": "fb704279a60c8edbaaeadf6849cbc66f5a08c7ea175dd1437ccc473b43fb2fd3",
+    "docs/ecmascript-2025.md": "c0cf454ec2fe74c29b0b93239a9b2b1107deec63e064da7ed3818b18791bed00",
+    "docs/releases/v0.2.0-alpha.1.md": "89233f96e7d16ba7a71e8ebd63ad1ad2f9b7d7f7042a6e787b0b5dbaaddaaa61"
+  },
+  "assetSHA256": "3c38278881b48dfb321686806a9df269b70c7a5375f2748d522e272d2329ddb7"
+}
